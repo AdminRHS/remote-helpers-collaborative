@@ -1,0 +1,117 @@
+{
+  "name": "GetOnboardingFile What is an API?",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "581c39d2-f905-42c1-9412-c7726ffcda14",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "bf3d670b-663d-4568-a381-f3a11ed68d8c",
+      "name": "Webhook",
+      "webhookId": "581c39d2-f905-42c1-9412-c7726ffcda14"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/1UGU5I5Nn3JcDaEpSfdNwFid3l1iknVdSeo7Pfiumhms/view"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "666db70f-5f40-4ba3-98ba-c5267cfdc527",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "u4aaDpAzm6YKZV9W",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "8e57531f-4ecb-42ed-8d43-f4aa390cbe6e",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "157eb9d8-82d5-4053-8e8a-122efe5751f4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bce7fa653659e581ce25e9a76408cecc1db830bd4c16d1cddb638823b7bca87a"
+  },
+  "id": "COIDkFYV2MYNxAKQ",
+  "tags": [
+    {
+      "createdAt": "2025-03-03T14:31:08.720Z",
+      "updatedAt": "2025-03-03T14:31:08.720Z",
+      "id": "HELbjAXco7AikW1p",
+      "name": "Day 2"
+    },
+    {
+      "createdAt": "2025-03-04T15:18:45.103Z",
+      "updatedAt": "2025-03-04T15:18:45.103Z",
+      "id": "Lv0IHVqEPpRYfyh7",
+      "name": "AI Onboarding"
+    },
+    {
+      "createdAt": "2025-03-03T09:06:36.037Z",
+      "updatedAt": "2025-03-03T09:06:36.037Z",
+      "id": "qWJOcf4ehs6iONwh",
+      "name": "Files"
+    },
+    {
+      "createdAt": "2025-02-28T12:15:59.970Z",
+      "updatedAt": "2025-02-28T12:15:59.970Z",
+      "id": "sdWf5s6naE3QVMN8",
+      "name": "Onboarding"
+    }
+  ]
+}

@@ -1,0 +1,7479 @@
+[
+
+    {
+
+        "Responsibilities": "Screening candidate resumes",
+
+        "Objects": "candidates",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Conducting candidate interviews",
+
+        "Objects": "candidates",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Assessing candidate qualifications",
+
+        "Objects": "candidates",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Distributing job offers",
+
+        "Objects": "communications",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing communications",
+
+        "Objects": "communications",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Finalizing employment contracts",
+
+        "Objects": "contracts",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Renewing worker contracts",
+
+        "Objects": "contracts",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Updating candidate databases",
+
+        "Objects": "databases",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Searching recruitment databases",
+
+        "Objects": "databases",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Maintaining database integrity",
+
+        "Objects": "databases",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Scheduling job interviews",
+
+        "Objects": "interviews",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Conducting video interviews",
+
+        "Objects": "interviews",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Debriefing interview outcomes",
+
+        "Objects": "interviews",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Negotiating salary packages",
+
+        "Objects": "negotiations",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Negotiating hiring terms",
+
+        "Objects": "negotiations",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Compiling recruitment reports",
+
+        "Objects": "reports",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Analyzing recruitment reports",
+
+        "Objects": "reports",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Adjusting salaries",
+
+        "Objects": "salaries",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Benchmarking salaries",
+
+        "Objects": "salaries",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Setting salary expectations",
+
+        "Objects": "salaries",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Identifying job vacancies",
+
+        "Objects": "vacancies",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Posting vacancies",
+
+        "Objects": "vacancies",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Closing vacancies",
+
+        "Objects": "vacancies",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Selecting recruitment channels",
+
+        "Objects": "channels",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing recruitment channels",
+
+        "Objects": "channels",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing channel strategies",
+
+        "Objects": "channels",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Creating instructions",
+
+        "Objects": "instructions",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Editing instructions",
+
+        "Objects": "instructions",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Distributing instructions",
+
+        "Objects": "instructions",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Writing scripts",
+
+        "Objects": "scripts",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing scripts",
+
+        "Objects": "scripts",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "planing employee communications",
+
+        "Objects": "communications",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "conducting employee communications ",
+
+        "Objects": "communications",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "drafting contracts",
+
+        "Objects": "contracts",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "renewing contracts",
+
+        "Objects": "contracts",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "entering data into databases",
+
+        "Objects": "databases",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating databases records",
+
+        "Objects": "databases",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating employees profiles",
+
+        "Objects": "employees",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating employees profiles",
+
+        "Objects": "employees",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "planning event agendas",
+
+        "Objects": "events",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "conducting events",
+
+        "Objects": "events",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "identifying faqs",
+
+        "Objects": "faqs",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing faq answers",
+
+        "Objects": "faqs",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating faq content",
+
+        "Objects": "faqs",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "collecting feedback forms",
+
+        "Objects": "feedbacks",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing feedback data",
+
+        "Objects": "feedbacks",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing instruction manuals",
+
+        "Objects": "instructions",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating instruction guidelines",
+
+        "Objects": "instructions",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "distributing instructions to staff",
+
+        "Objects": "instructions",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "scheduling meetings",
+
+        "Objects": "meetings",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "informing employees about meetings",
+
+        "Objects": "meetings",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "conducting meetings",
+
+        "Objects": "meetings",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "summarising meeting information",
+
+        "Objects": "meetings",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "preparing onboarding kits",
+
+        "Objects": "onboarding",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "conducting onboarding sessions",
+
+        "Objects": "onboarding",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "gathering onboarding feedback",
+
+        "Objects": "onboarding",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting performance indicators",
+
+        "Objects": "performance",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring performance progress",
+
+        "Objects": "performance",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "compiling report data",
+
+        "Objects": "reports",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing report summaries",
+
+        "Objects": "reports",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "reviewing video intervies",
+
+        "Objects": "videos",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "planning re-recording video interviews",
+
+        "Objects": "videos",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "informing employees about video interviews ",
+
+        "Objects": "videos",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "databases",
+
+        "Objects": "managing data storage",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "databases",
+
+        "Objects": "ensuring data integrity",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "servers",
+
+        "Objects": "monitoring server health",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "servers",
+
+        "Objects": "optimizing server performance",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "apis",
+
+        "Objects": "developing apis",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "apis",
+
+        "Objects": "maintaining api documentation",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "containers",
+
+        "Objects": "deploying containers",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "containers",
+
+        "Objects": "managing container lifecycles",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "microservices",
+
+        "Objects": "orchestrating microservices",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "microservices",
+
+        "Objects": "scaling microservices",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "logs",
+
+        "Objects": "analyzing log data",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "logs",
+
+        "Objects": "archiving logs",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "transactions",
+
+        "Objects": "processing transactions",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "transactions",
+
+        "Objects": "securing transaction data",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "sessions",
+
+        "Objects": "maintaining user sessions",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "sessions",
+
+        "Objects": "tracking session activities",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "cache",
+
+        "Objects": "optimizing cache usage",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "cache",
+
+        "Objects": "configuring cache parameters",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "threads",
+
+        "Objects": "managing threading issues",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "threads",
+
+        "Objects": "optimizing thread performance",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "requests",
+
+        "Objects": "handling client requests",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "requests",
+
+        "Objects": "validating request data",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "responses",
+
+        "Objects": "generating server responses",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "responses",
+
+        "Objects": "customizing response data",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "configurations",
+
+        "Objects": "configuring systems",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "configurations",
+
+        "Objects": "updating system settings",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "dependencies",
+
+        "Objects": "resolving dependencies",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "dependencies",
+
+        "Objects": "managing dependency updates",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "backups",
+
+        "Objects": "executing data backups",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "backups",
+
+        "Objects": "verifying backup integrity",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "targeting ads ",
+
+        "Objects": "ads",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing ads",
+
+        "Objects": "ads",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing text",
+
+        "Objects": "ads",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting ad copy",
+
+        "Objects": "ads",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "improving ad",
+
+        "Objects": "ads",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing collaborations",
+
+        "Objects": "collaborations",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "making communication",
+
+        "Objects": "communications",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking metrics",
+
+        "Objects": "metrics",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "reporting metrics",
+
+        "Objects": "metrics",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing traffic",
+
+        "Objects": "metrics",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating content",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "refreshing content",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing posts",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "publishing posts",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "drafting text",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing text",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting details",
+
+        "Objects": "posts",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating profiles",
+
+        "Objects": "profiles",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring profiles",
+
+        "Objects": "profiles",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing profiles",
+
+        "Objects": "profiles",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "posting stories",
+
+        "Objects": "stories",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing stories",
+
+        "Objects": "stories",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing strategies",
+
+        "Objects": "strategies",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing strategies",
+
+        "Objects": "strategies",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating a calendar",
+
+        "Objects": "strategies",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "publishing visuals",
+
+        "Objects": "visuals",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating a visual task ",
+
+        "Objects": "visuals",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting media",
+
+        "Objects": "visuals",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing software modules",
+
+        "Objects": "modules",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Integrating module functionality",
+
+        "Objects": "modules",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Testing module performance",
+
+        "Objects": "modules",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Writing database queries",
+
+        "Objects": "queries",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing query efficiency",
+
+        "Objects": "queries",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Creating API endpoints",
+
+        "Objects": "endpoints",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Securing endpoints",
+
+        "Objects": "endpoints",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing user forms",
+
+        "Objects": "forms",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Validating form inputs",
+
+        "Objects": "forms",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Mapping application routes",
+
+        "Objects": "routes",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Configuring route parameters",
+
+        "Objects": "routes",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing data schemas",
+
+        "Objects": "schemas",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Validating schema compliance",
+
+        "Objects": "schemas",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Building HTML templates",
+
+        "Objects": "templates",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Maintaining template libraries",
+
+        "Objects": "templates",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Creating CSS stylesheets",
+
+        "Objects": "stylesheets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing stylesheet performance",
+
+        "Objects": "stylesheets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing interactive widgets",
+
+        "Objects": "widgets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Integrating widgets into interfaces",
+
+        "Objects": "widgets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing network packets",
+
+        "Objects": "packets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Analyzing packet data",
+
+        "Objects": "packets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing user sessions",
+
+        "Objects": "sessions",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Implementing session security",
+
+        "Objects": "sessions",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Implementing cookie tracking",
+
+        "Objects": "cookies",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Ensuring cookie compliance",
+
+        "Objects": "cookies",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing cookie lifecycles",
+
+        "Objects": "cookies",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Implementing code hooks",
+
+        "Objects": "hooks",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Customizing hook logic",
+
+        "Objects": "hooks",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing middleware solutions",
+
+        "Objects": "middleware",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Integrating middleware into applications",
+
+        "Objects": "middleware",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Structuring data payloads",
+
+        "Objects": "payloads",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing payload handling",
+
+        "Objects": "payloads",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing functional modules",
+
+        "Objects": "modules",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Ensuring modular scalability",
+
+        "Objects": "modules",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Constructing efficient queries",
+
+        "Objects": "queries",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing data retrieval",
+
+        "Objects": "queries",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Designing RESTful endpoints",
+
+        "Objects": "endpoints",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Securing API endpoints",
+
+        "Objects": "endpoints",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Validating form inputs",
+
+        "Objects": "forms",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Enhancing form usability",
+
+        "Objects": "forms",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Configuring routing paths",
+
+        "Objects": "routes",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Implementing route guards",
+
+        "Objects": "routes",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Designing data schemas",
+
+        "Objects": "schemas",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Validating schema compliance",
+
+        "Objects": "schemas",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Creating reusable templates",
+
+        "Objects": "templates",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing template performance",
+
+        "Objects": "templates",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Styling responsive interfaces",
+
+        "Objects": "stylesheets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Maintaining style consistency",
+
+        "Objects": "stylesheets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Building interactive widgets",
+
+        "Objects": "widgets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Customizing widget functionality",
+
+        "Objects": "widgets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Monitoring network packets",
+
+        "Objects": "packets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing packet handling",
+
+        "Objects": "packets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Managing user session state",
+
+        "Objects": "sessions",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Ensuring session security",
+
+        "Objects": "sessions",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Implementing cookie management",
+
+        "Objects": "cookies",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Enhancing cookie security",
+
+        "Objects": "cookies",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Utilizing hooks for state management",
+
+        "Objects": "hooks",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Optimizing hooks for performance",
+
+        "Objects": "hooks",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Developing middleware solutions",
+
+        "Objects": "middleware",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Ensuring middleware efficiency",
+
+        "Objects": "middleware",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Structuring payload data",
+
+        "Objects": "payload",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "Ensuring payload security",
+
+        "Objects": "payload",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting ad copy",
+
+        "Objects": "ads",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "improving ad",
+
+        "Objects": "ads",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing audience",
+
+        "Objects": "ads",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "evaluating plan success",
+
+        "Objects": "content plan",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating a calendar",
+
+        "Objects": "content plan",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "content strategy",
+
+        "Objects": "content plan",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing instructions",
+
+        "Objects": "content plan",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting media",
+
+        "Objects": "media",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking metrics",
+
+        "Objects": "metrics",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking audience growth",
+
+        "Objects": "metrics",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing traffic",
+
+        "Objects": "metrics",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "reporting metrics",
+
+        "Objects": "metrics",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating post",
+
+        "Objects": "posts",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating content",
+
+        "Objects": "posts",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "drafting text",
+
+        "Objects": "posts",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing text",
+
+        "Objects": "posts",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing character models",
+
+        "Objects": "characters",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "rigging character motions",
+
+        "Objects": "characters",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating character actions",
+
+        "Objects": "characters",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "painting backgrounds scene",
+
+        "Objects": "backgrounds",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "integrating environmental elements",
+
+        "Objects": "backgrounds",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "layering background textures",
+
+        "Objects": "backgrounds",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating surface textures",
+
+        "Objects": "textures",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying texture details",
+
+        "Objects": "textures",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing texture realism",
+
+        "Objects": "textures",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing layer hierarchy",
+
+        "Objects": "layers",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adjusting layer transparency",
+
+        "Objects": "layers",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "compositing visual elements",
+
+        "Objects": "layers",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing animation props",
+
+        "Objects": "props",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating interactive props",
+
+        "Objects": "props",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "aligning props with scenes",
+
+        "Objects": "props",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "storyboarding sequences",
+
+        "Objects": "animations",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "timing animation frames",
+
+        "Objects": "animations",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "refining animation flow",
+
+        "Objects": "animations",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "rendering high-res frames",
+
+        "Objects": "frames",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "aligning sequential frames",
+
+        "Objects": "frames",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "editing frame compositions",
+
+        "Objects": "frames",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting initial keyframes",
+
+        "Objects": "keyframes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "defining transition points",
+
+        "Objects": "keyframes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adjusting keyframe timing",
+
+        "Objects": "keyframes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "sketching storyboard panels",
+
+        "Objects": "storyboards",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "sequencing narrative flow",
+
+        "Objects": "storyboards",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "detailing visual scripts",
+
+        "Objects": "storyboards",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "scripting dialogue lines",
+
+        "Objects": "scripts",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "defining action cues",
+
+        "Objects": "scripts",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "revising script drafts",
+
+        "Objects": "scripts",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "constructing project timelines",
+
+        "Objects": "timelines",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "synchronizing elements",
+
+        "Objects": "timelines",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking timeline progress",
+
+        "Objects": "timelines",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting color palettes",
+
+        "Objects": "palettes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "matching palette themes",
+
+        "Objects": "palettes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adjusting color balances",
+
+        "Objects": "palettes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying visual effects",
+
+        "Objects": "effects",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "simulating particle systems",
+
+        "Objects": "effects",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating light effects",
+
+        "Objects": "effects",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "choreographing movements",
+
+        "Objects": "motions",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "simulating physics",
+
+        "Objects": "motions",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "refining motion paths",
+
+        "Objects": "motions",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying effects layers",
+
+        "Objects": "visual effects",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing visual quality",
+
+        "Objects": "visual effects",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing effect renderings",
+
+        "Objects": "visual effects",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating facial expressions",
+
+        "Objects": "character animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "rigging character models",
+
+        "Objects": "character animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "synchronizing movements",
+
+        "Objects": "character animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting fonts",
+
+        "Objects": "typography",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting type layout",
+
+        "Objects": "typography",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adjusting kerning",
+
+        "Objects": "typography",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing thematic backdrops",
+
+        "Objects": "background visuals",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "integrating motion elements",
+
+        "Objects": "background visuals",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating background styles",
+
+        "Objects": "background visuals",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting opening shots",
+
+        "Objects": "intro sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "aligning music with visuals",
+
+        "Objects": "intro sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "editing sequence timing",
+
+        "Objects": "intro sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "visualizing product features",
+
+        "Objects": "product animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing product appeal",
+
+        "Objects": "product animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating product usage",
+
+        "Objects": "product animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating 3d simulations",
+
+        "Objects": "3d model animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "texturing 3d models",
+
+        "Objects": "3d model animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "rendering 3d scenes",
+
+        "Objects": "3d model animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing seamless loops",
+
+        "Objects": "loop animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adjusting loop speed",
+
+        "Objects": "loop animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "ensuring loop continuity",
+
+        "Objects": "loop animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "overlaying text graphics",
+
+        "Objects": "animated overlays",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "customizing overlay effects",
+
+        "Objects": "animated overlays",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "integrating interactive elements",
+
+        "Objects": "animated overlays",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "illustrating data visually",
+
+        "Objects": "animated infographics",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating infographic content",
+
+        "Objects": "animated infographics",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating statistical changes",
+
+        "Objects": "animated infographics",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "sketching initial designs",
+
+        "Objects": "animated illustrations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying color schemes",
+
+        "Objects": "animated illustrations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "finalizing illustrations",
+
+        "Objects": "animated illustrations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting digital compositions",
+
+        "Objects": "digital art pieces",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying artistic filters",
+
+        "Objects": "digital art pieces",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "curating digital galleries",
+
+        "Objects": "digital art pieces",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "targeting audience demographics",
+
+        "Objects": "animated advertisements",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "scheduling ad sequences",
+
+        "Objects": "animated advertisements",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "testing ad effectiveness",
+
+        "Objects": "animated advertisements",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "directing scene transitions",
+
+        "Objects": "cinematic sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "coordinating cinematic effects",
+
+        "Objects": "cinematic sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "editing for dramatic impact",
+
+        "Objects": "cinematic sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating digital sculptures",
+
+        "Objects": "digital art",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "experimenting with digital mediums",
+
+        "Objects": "digital art",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "showcasing digital exhibitions",
+
+        "Objects": "digital art",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating natural elements",
+
+        "Objects": "environmental animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "simulating environmental changes",
+
+        "Objects": "environmental animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "integrating soundscapes",
+
+        "Objects": "environmental animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "conceptualizing visual metaphors",
+
+        "Objects": "abstract concepts",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "experimenting with forms",
+
+        "Objects": "abstract concepts",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "abstract rendering",
+
+        "Objects": "abstract concepts",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "modeling building designs",
+
+        "Objects": "architectural animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating walkthroughs",
+
+        "Objects": "architectural animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "simulating lighting effects",
+
+        "Objects": "architectural animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing immersive landscapes",
+
+        "Objects": "vr environments",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "programming interactive features",
+
+        "Objects": "vr environments",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "testing user engagement",
+
+        "Objects": "vr environments",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "constructing stop motion sets",
+
+        "Objects": "stop motion animation",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "capturing frame-by-frame",
+
+        "Objects": "stop motion animation",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "editing sequences together",
+
+        "Objects": "stop motion animation",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "demonstrating tech functionalities",
+
+        "Objects": "technology concept demos",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "simulating tech scenarios",
+
+        "Objects": "technology concept demos",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "narrating technological stories",
+
+        "Objects": "technology concept demos",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "aligning audio tracks",
+
+        "Objects": "audios",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "synchronizing audio with video sequences",
+
+        "Objects": "audios",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adjusting audio levels for balanced output",
+
+        "Objects": "audios",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting backgrounds appropriate for scenes",
+
+        "Objects": "background",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "integrating virtual backgrounds with live footage",
+
+        "Objects": "background",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying green screen effects",
+
+        "Objects": "background",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "color grading to enhance visual aesthetics",
+
+        "Objects": "color",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "correcting color to ensure consistency",
+
+        "Objects": "color",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying filters for mood setting",
+
+        "Objects": "color",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing descriptions for video metadata",
+
+        "Objects": "description",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing video content for search engines",
+
+        "Objects": "description",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "drafting narrative content for story enhancement",
+
+        "Objects": "description",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying visual effects for enhanced realism",
+
+        "Objects": "effects",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adding transitions between clips",
+
+        "Objects": "effects",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing sound effects for scene dynamics",
+
+        "Objects": "effects",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "cutting and editing raw footage",
+
+        "Objects": "footage",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting appropriate stock footage",
+
+        "Objects": "footage",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "ensuring footage continuity across edits",
+
+        "Objects": "footage",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "framing scenes to support narrative flow",
+
+        "Objects": "frame",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "stabilizing footage for professional output",
+
+        "Objects": "frame",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "incorporating dynamic framing techniques",
+
+        "Objects": "frame",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating motion graphics for video intros",
+
+        "Objects": "graphics",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing static graphics for overlay",
+
+        "Objects": "graphics",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing animated graphics for visual appeal",
+
+        "Objects": "graphics",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating video sequences for compelling intros",
+
+        "Objects": "intro",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting thematic intros to engage viewers",
+
+        "Objects": "intro",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting the narrative tone with opening sequences",
+
+        "Objects": "intro",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting background music to enhance mood",
+
+        "Objects": "music",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "composing theme music for brand consistency",
+
+        "Objects": "music",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "integrating incidental music for emotional impact",
+
+        "Objects": "music",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "reducing background noise for clarity",
+
+        "Objects": "noise",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing audio quality with noise suppression",
+
+        "Objects": "noise",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "recording ambient sounds for realism",
+
+        "Objects": "noise",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing outros that summarize the content",
+
+        "Objects": "outro",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating credit sequences for legal compliance",
+
+        "Objects": "outro",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "motivating viewers with call-to-action outros",
+
+        "Objects": "outro",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "writing scripts that guide the filming process",
+
+        "Objects": "script",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing dialogue that enhances character depth",
+
+        "Objects": "script",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "visualizing scenes for storyboard creation",
+
+        "Objects": "script",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "planning visual sequences with storyboards",
+
+        "Objects": "storyboard",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "timing scenes accurately with animatics",
+
+        "Objects": "storyboard",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "detailing camera angles and movement in storyboards",
+
+        "Objects": "storyboard",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "adding subtitles for accessibility",
+
+        "Objects": "subtitles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "translating spoken language for international audiences",
+
+        "Objects": "subtitles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "providing descriptive subtitles for better understanding",
+
+        "Objects": "subtitles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing video templates for quick editing",
+
+        "Objects": "template",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating title templates for consistent branding",
+
+        "Objects": "template",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing transitions templates for smooth cuts",
+
+        "Objects": "template",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating title texts to attract attention",
+
+        "Objects": "titles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "ensuring titles are informative and clear",
+
+        "Objects": "titles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing creatively formatted credit titles",
+
+        "Objects": "titles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying transitions to enhance video flow",
+
+        "Objects": "transitions",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "using fade effects for scene endings",
+
+        "Objects": "transitions",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "implementing creative wipe transitions",
+
+        "Objects": "transitions",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "breaking down videos into manageable parts",
+
+        "Objects": "video breakdown",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing video content for editing refinement",
+
+        "Objects": "video breakdown",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "sequencing shots for optimal narrative impact",
+
+        "Objects": "video breakdown",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating hooks that captivate immediately",
+
+        "Objects": "video hook",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "building narrative hooks to maintain interest",
+
+        "Objects": "video hook",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing promotional hooks for marketing impact",
+
+        "Objects": "video hook",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting the best takes for final editing",
+
+        "Objects": "video take",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "evaluating alternative takes for creative options",
+
+        "Objects": "video take",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "using b-roll effectively to add context",
+
+        "Objects": "video take",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "producing promotional videos to drive engagement",
+
+        "Objects": "videos",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting documentary videos with in-depth content",
+
+        "Objects": "videos",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing instructional videos for education",
+
+        "Objects": "videos",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "recording instructional voiceovers for clarity",
+
+        "Objects": "voiceover",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "delivering narrative voiceovers to tell stories",
+
+        "Objects": "voiceover",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating persuasive voiceovers for promotions",
+
+        "Objects": "voiceover",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing banners",
+
+        "Objects": "banners",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating banners",
+
+        "Objects": "banners",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating headers",
+
+        "Objects": "headers",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing header visuals",
+
+        "Objects": "headers",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing icons",
+
+        "Objects": "icons",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "standardizing icon design",
+
+        "Objects": "icons",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating illustration concepts",
+
+        "Objects": "illustrations",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing illustrations",
+
+        "Objects": "illustrations",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing infographics",
+
+        "Objects": "infographics",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "revising infographics",
+
+        "Objects": "infographics",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting logos",
+
+        "Objects": "logos",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "modifying logos",
+
+        "Objects": "logos",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing presentations",
+
+        "Objects": "presentations",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "animating presentation elements",
+
+        "Objects": "presentations",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating brandbooks",
+
+        "Objects": "brandbooks",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "selecting fonts",
+
+        "Objects": "fonts",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "customizing fonts",
+
+        "Objects": "fonts",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing business cards",
+
+        "Objects": "business cards",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "customizing business cards",
+
+        "Objects": "business cards",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating thumbnails",
+
+        "Objects": "thumbnails",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing thumbnails",
+
+        "Objects": "thumbnails",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating mockups",
+
+        "Objects": "mockups",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "testing mockup usability",
+
+        "Objects": "mockups",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing email templates",
+
+        "Objects": "email templates",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "personalizing template design",
+
+        "Objects": "email templates",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "sketching characters",
+
+        "Objects": "characters",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating portraits",
+
+        "Objects": "portraits",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "editing portraits",
+
+        "Objects": "portraits",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing keyword distribution",
+
+        "Objects": "keywords",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "researching competitive keywords",
+
+        "Objects": "keywords",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking keyword rankings",
+
+        "Objects": "keywords",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing backlink quality",
+
+        "Objects": "backlinks",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "building sustainable backlinks",
+
+        "Objects": "backlinks",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring backlink profiles",
+
+        "Objects": "backlinks",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting informative metatags",
+
+        "Objects": "metatags",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing metatags for search",
+
+        "Objects": "metatags",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating metatags periodically",
+
+        "Objects": "metatags",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating SEO-friendly content",
+
+        "Objects": "content",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "auditing content for SEO improvements",
+
+        "Objects": "content",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating content regularly",
+
+        "Objects": "content",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating automated sitemaps",
+
+        "Objects": "sitemap",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "ensuring sitemap accuracy",
+
+        "Objects": "sitemap",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "submitting sitemaps to search engines",
+
+        "Objects": "sitemap",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing for Google snippets",
+
+        "Objects": "snippets",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating clear meta descriptions",
+
+        "Objects": "snippets",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring snippets' performance",
+
+        "Objects": "snippets",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "structuring headers effectively",
+
+        "Objects": "headers",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing headers with keywords",
+
+        "Objects": "headers",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "revising headers for SEO",
+
+        "Objects": "headers",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "securing domain renewals",
+
+        "Objects": "domains",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing subdomain strategies",
+
+        "Objects": "domains",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing domain architecture",
+
+        "Objects": "domains",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing website traffic sources",
+
+        "Objects": "traffic",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing traffic acquisition",
+
+        "Objects": "traffic",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "segmenting traffic for analysis",
+
+        "Objects": "traffic",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring daily ranking changes",
+
+        "Objects": "rankings",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "strategizing for ranking improvement",
+
+        "Objects": "rankings",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "benchmarking rankings versus competitors",
+
+        "Objects": "rankings",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing pages for user engagement",
+
+        "Objects": "pages",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "conducting regular page audits",
+
+        "Objects": "pages",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing pages for mobile users",
+
+        "Objects": "pages",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "structuring SEO-friendly URLs",
+
+        "Objects": "URLs",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "redirecting old URLs to new ones",
+
+        "Objects": "URLs",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing URL parameters effectively",
+
+        "Objects": "URLs",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing visitor behavior data",
+
+        "Objects": "analytics",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting up advanced tracking metrics",
+
+        "Objects": "analytics",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "interpreting analytics for strategy",
+
+        "Objects": "analytics",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing integrated SEO campaigns",
+
+        "Objects": "campaigns",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking campaigns' SEO impact",
+
+        "Objects": "campaigns",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing campaigns based on analytics",
+
+        "Objects": "campaigns",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "improving landing page conversions",
+
+        "Objects": "conversions",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking micro and macro conversions",
+
+        "Objects": "conversions",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing conversion funnels",
+
+        "Objects": "conversions",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing accounts",
+
+        "Objects": "accounts",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "utilizing accounts",
+
+        "Objects": "accounts",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing calls",
+
+        "Objects": "calls",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "scheduling calls",
+
+        "Objects": "calls",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing clients",
+
+        "Objects": "clients",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating clients",
+
+        "Objects": "clients",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "expanding clients",
+
+        "Objects": "clients",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "directing communications",
+
+        "Objects": "communications",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "improving communications",
+
+        "Objects": "communications",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "reviewing communications",
+
+        "Objects": "communications",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "maintaining databases",
+
+        "Objects": "databases",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating databases",
+
+        "Objects": "databases",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing databases",
+
+        "Objects": "databases",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating documents",
+
+        "Objects": "documents",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "reviewing documents",
+
+        "Objects": "documents",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "presenting employees",
+
+        "Objects": "employees",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "evaluating employees",
+
+        "Objects": "employees",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "selling employees",
+
+        "Objects": "employees",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "collecting feedbacks",
+
+        "Objects": "feedbacks",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing feedbacks",
+
+        "Objects": "feedbacks",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "issuing instructions",
+
+        "Objects": "instructions",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "revising instructions",
+
+        "Objects": "instructions",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating leads",
+
+        "Objects": "leads",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "qualifying leads",
+
+        "Objects": "leads",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "nurturing leads",
+
+        "Objects": "leads",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "negotiating performance",
+
+        "Objects": "performance",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing performance",
+
+        "Objects": "performance",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "overseeing projects",
+
+        "Objects": "projects",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "coordinating projects",
+
+        "Objects": "projects",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "reviewing projects",
+
+        "Objects": "projects",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating reports",
+
+        "Objects": "reports",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing reports",
+
+        "Objects": "reports",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "offerring new services",
+
+        "Objects": "services",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "marketing services",
+
+        "Objects": "services",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "researching keyword",
+
+        "Objects": "keywords",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing keywords usage",
+
+        "Objects": "keywords",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating meta tags",
+
+        "Objects": "meta tags",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing meta tags",
+
+        "Objects": "meta tags",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "auditing internal links",
+
+        "Objects": "links",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing external links quality",
+
+        "Objects": "links",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "structuring headings",
+
+        "Objects": "headings",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing headings",
+
+        "Objects": "headings",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating website sitemap",
+
+        "Objects": "sitemaps",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating HTML sitemaps",
+
+        "Objects": "sitemaps",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing snippet visibility",
+
+        "Objects": "snippets",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating rich snippets",
+
+        "Objects": "snippets",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "interpreting analytics insights",
+
+        "Objects": "analytics",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing traffic analytics",
+
+        "Objects": "analytics",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating SEO reports",
+
+        "Objects": "reports",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "compiling performance reports",
+
+        "Objects": "reports",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "conducting SEO audits",
+
+        "Objects": "audits",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "performing content audits",
+
+        "Objects": "audits",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "evaluating backlink profiles",
+
+        "Objects": "backlink",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "removing toxic backlinks",
+
+        "Objects": "backlink",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring keyword rankings",
+
+        "Objects": "rankings",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing SEO strategy",
+
+        "Objects": "strategy",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "implementing strategy initiatives",
+
+        "Objects": "strategy",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking traffic",
+
+        "Objects": "traffic",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking traffic sources",
+
+        "Objects": "traffic",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing client portfolios",
+
+        "Objects": "accounts",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating account statuses",
+
+        "Objects": "accounts",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring account activities",
+
+        "Objects": "accounts",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing market trends",
+
+        "Objects": "industries",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "identifying growth opportunities",
+
+        "Objects": "industries",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking industry metrics",
+
+        "Objects": "industries",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "developing buyer profiles",
+
+        "Objects": "customer persona",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "customizing engagement strategies",
+
+        "Objects": "customer persona",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "assessing needs analysis",
+
+        "Objects": "customer persona",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating seo keywords",
+
+        "Objects": "search queries",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing search strategies",
+
+        "Objects": "search queries",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring query performance",
+
+        "Objects": "search queries",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating professional profiles",
+
+        "Objects": "profiles",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating profile information",
+
+        "Objects": "profiles",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing profile interactions",
+
+        "Objects": "profiles",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing contact databases",
+
+        "Objects": "contacts",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "validating contact information",
+
+        "Objects": "contacts",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "categorizing contact types",
+
+        "Objects": "contacts",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "researching potential clients",
+
+        "Objects": "companies",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "maintaining company databases",
+
+        "Objects": "companies",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing company needs",
+
+        "Objects": "companies",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating sales leads",
+
+        "Objects": "leads",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "qualifying incoming leads",
+
+        "Objects": "leads",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking lead conversion",
+
+        "Objects": "leads",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "establishing professional connections",
+
+        "Objects": "connections",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "maintaining ongoing relationships",
+
+        "Objects": "connections",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "prioritizing connection outreach",
+
+        "Objects": "connections",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "crafting promotional messages",
+
+        "Objects": "messages",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "sending targeted communications",
+
+        "Objects": "messages",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing message impact",
+
+        "Objects": "messages",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "designing email campaigns",
+
+        "Objects": "emails",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing email responses",
+
+        "Objects": "emails",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "segmenting email lists",
+
+        "Objects": "emails",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "planning promotional events",
+
+        "Objects": "promotions",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "evaluating promotion effectiveness",
+
+        "Objects": "promotions",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "tailoring promotion strategies",
+
+        "Objects": "promotions",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "assessing client requirements",
+
+        "Objects": "needs",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "prioritizing urgent needs",
+
+        "Objects": "needs",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "forecasting future needs",
+
+        "Objects": "needs",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "coordinating communication efforts",
+
+        "Objects": "communications",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "enhancing communication channels",
+
+        "Objects": "communications",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "streamlining internal communications",
+
+        "Objects": "communications",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "organizing networking events",
+
+        "Objects": "events",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "coordinating event logistics",
+
+        "Objects": "events",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "evaluating event success",
+
+        "Objects": "events",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "collecting customer feedback",
+
+        "Objects": "feedbacks",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing feedback data",
+
+        "Objects": "feedbacks",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "implementing feedback improvements",
+
+        "Objects": "feedbacks",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "generating performance reports",
+
+        "Objects": "reports",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing report data",
+
+        "Objects": "reports",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "distributing reports internally",
+
+        "Objects": "reports",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "maintaining data integrity",
+
+        "Objects": "databases",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating database entries",
+
+        "Objects": "databases",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "securing database access",
+
+        "Objects": "databases",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "scheduling appointments",
+
+        "Objects": "appointments",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "confirming appointments",
+
+        "Objects": "appointments",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating calendars",
+
+        "Objects": "calendars",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing schedule conflicts",
+
+        "Objects": "calendars",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating task checklists",
+
+        "Objects": "checklists",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring checklist completion",
+
+        "Objects": "checklists",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "maintaining client records",
+
+        "Objects": "clients",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "following up with clients",
+
+        "Objects": "clients",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "drafting communications",
+
+        "Objects": "communications",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "reviewing communication drafts",
+
+        "Objects": "communications",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating contact details",
+
+        "Objects": "contacts",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "categorizing contacts",
+
+        "Objects": "contacts",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "handling email correspondence",
+
+        "Objects": "correspondence",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "archiving correspondence",
+
+        "Objects": "correspondence",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking expenses",
+
+        "Objects": "costs",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "optimizing cost management",
+
+        "Objects": "costs",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "organizing documents",
+
+        "Objects": "documents",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "securing confidential documents",
+
+        "Objects": "documents",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "sorting incoming emails",
+
+        "Objects": "emails",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "responding to urgent emails",
+
+        "Objects": "emails",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "coordinating event logistics",
+
+        "Objects": "events",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "promoting events",
+
+        "Objects": "events",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "collecting client feedback",
+
+        "Objects": "feedbacks",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing feedback for improvement",
+
+        "Objects": "feedbacks",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "scheduling meetings",
+
+        "Objects": "meetings",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "preparing meeting agendas",
+
+        "Objects": "meetings",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "taking meeting notes",
+
+        "Objects": "notes",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "organizing notes",
+
+        "Objects": "notes",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "processing purchase orders",
+
+        "Objects": "orders",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking order fulfillment",
+
+        "Objects": "orders",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "preparing presentations",
+
+        "Objects": "presentations",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "revising presentations",
+
+        "Objects": "presentations",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting reminders",
+
+        "Objects": "reminders",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "sending reminder notifications",
+
+        "Objects": "reminders",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "compiling reports",
+
+        "Objects": "reports",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "analyzing report data",
+
+        "Objects": "reports",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "providing technical support",
+
+        "Objects": "support",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "managing support tickets",
+
+        "Objects": "support",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "arranging travel itineraries",
+
+        "Objects": "travels",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "booking travel accommodations",
+
+        "Objects": "travels",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating project dashboards",
+
+        "Objects": "dashboards",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "customizing dashboard views",
+
+        "Objects": "dashboards",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "establishing project deadlines",
+
+        "Objects": "deadlines",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring deadline adherence",
+
+        "Objects": "deadlines",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "suggesting project edits",
+
+        "Objects": "edits",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "applying project edits",
+
+        "Objects": "edits",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "collecting customers' feedbacks",
+
+        "Objects": "feedbacks",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting project goals",
+
+        "Objects": "goals",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "scheduling team meetings",
+
+        "Objects": "meetings",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "summarizing meeting results",
+
+        "Objects": "meetings",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "setting project milestones",
+
+        "Objects": "milestones",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "reviewing milestone achievements",
+
+        "Objects": "milestones",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "updating milestone timelines",
+
+        "Objects": "milestones",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "defining project scope",
+
+        "Objects": "projects",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "assigning project roles",
+
+        "Objects": "projects",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "compiling project reports",
+
+        "Objects": "reports",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "formulating project strategies",
+
+        "Objects": "strategies",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "delegating task assignments",
+
+        "Objects": "tasks",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "tracking task progress",
+
+        "Objects": "tasks",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "building project teams",
+
+        "Objects": "teams",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "coordinating team efforts",
+
+        "Objects": "teams",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "establishing project timelines",
+
+        "Objects": "timelines",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "creating project workflow",
+
+        "Objects": "workflows",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Responsibilities": "monitoring workflow progress",
+
+        "Objects": "workflows",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    }
+
+]

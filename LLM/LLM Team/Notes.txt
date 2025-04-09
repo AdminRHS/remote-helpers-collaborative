@@ -1,0 +1,187 @@
+https://habitica.com
+Как пример платформы с геймификацией
+Понравилося процесс создания и кастомизации своего героя\профиля и система поощрения в виде монеток за выполненые таски, 
+которые ты можешь потратить на покупку каких-то вещей в инвентарь
+Можно было бы подсмотреть идеи как для создания нового юзера для нашей СРМ, так и с системой поощрения
+
+НУЖНО
+1. Взять эту платформу, отдать ИИ и попросить поискать похожие
+2. Раскопать тематику платформ, которые смогут делать снепшоты из понравившихся сайтов
+
+=====================================
+
+1.
+Платформа	                        Создание персонажа	Награды за задачи	Виртуальная экономика	Применимость для CRM
+TaskHero	                             Да	                    Да	                       Да	             Высокая
+Do It Now: RPG To Do List	             Да	                    Да	                       Да	              Высокая
+Bounty Tasker	                         Да	                    Да	                        Да	                Средняя
+MagicTask	                            Нет                 	Да	                       Частично	          Средняя
+https://www.taskheroics.com/
+https://play.google.com/store/apps/details?id=com.levor.liferpgtasks&hl=en_US
+https://www.indiegogo.com/projects/bounty-tasker-a-to-do-list-to-gamify-your-life
+https://magictask.io/
+
+Немного другое:
+Starbucks Rewards	                    Нет	                    Да	                        Да	                Высокая
+Duolingo	                            Нет                     Да	                        Нет	                Средняя
+Fitbit	                                Нет	                    Да	                        Нет	                Средняя
+
+
+Рекомендации для вашей CRM
+Для создания нового пользователя в вашей CRM с системой наград, рассмотрите следующие шаги:
+
+Кастомизация профиля: Позвольте клиентам создавать и кастомизировать свои профили или аватары, как в TaskHero или Do 
+It Now.
+Задачи и награды: Предложите задачи или вызовы, которые клиенты могут выполнять для заработка очков, как в Starbucks 
+Rewards или Duolingo.
+Виртуальная экономика: Включите систему, где очки можно обменять на виртуальные предметы, скидки или эксклюзивный 
+контент, как в Steam или Fitbit.
+Прогрессия и уровни: Используйте уровни и лидерборды для мотивации, как в Khan Academy или Agile CRM, чтобы повысить 
+вовлечённость.
+
+2. 
+Расширения браузера: https://nimbusweb.me/screenshot/ , https://getfireshot.com/
+Онлайн-сервисы: https://snapshot-site.com/ , https://url2png.com/ , https://www.stillio.com/ 
+Инструменты для разработчиков: https://evernote.com/
+
+
+*это нужно будет добавить как примеры в файл по геймификации*
+
+PLANS:
+
+- Курсы
+
+## Курсы:
+
+
+Внедрение:
+1. Платформа: специализированная платформа для обучения онлайн нашей разработки.
+   Оценка: Тестирование по завершению курса для оценки усвоенных знаний.
+   Длительность: 1 день на каждый экспресс курс
+   Платформа: Внутренний портал компании или специализированная платформа для онлайн-обучения.
+
+Курсы:
+1. Курс по ИИ экспресс
+   Цель: Обучить сотрудников основам искусственного интеллекта и его применению в нашей компании.
+2. Курс по How to work о принципах работы в нашей компании
+   Цель: Ознакомить новых сотрудников с принципами и культурой работы в нашей компании.
+
+
+
+- Апка
+
+1. Исправить ошибку, что приложение не выгружает JSON
+    1. Анализ текущей ситуации
+    2. Использование ИИ для дебаггинга.
+    3. Решение возникающей проблемы.
+    4. Тестирование и валидация исправлений.
+    5. Внедрение исправлений в рабочую версию приложения.
+    6. Мониторинг и поддержка после внедрения.
+
+- Автоматизации n8n
+
+
+    Проверить, дали ли нам доступ на н8н чат.
+
+    1. Reading Reports from Department Channels
+        1.1. Channel Identification
+            Configure the bot to monitor specific "reports" channels for each department in the Discord server.
+            Ensure the bot has appropriate permissions to read messages in these channels.
+        1.2. Data Collection
+            Use n8n’s Discord node to fetch messages from the "reports" channels in real-time or at scheduled intervals 
+            (e.g., daily).
+            Filter messages to include only relevant report submissions based on predefined keywords or formats (e.g., 
+            "Report:", "Leadgen:").
+    2. Analyzing Department Reports
+        2.1. Content Processing
+            Utilize an AI tool (e.g., OpenAI node in n8n) to process and analyze the text content of the reports.
+            Categorize messages by department based on the channel they originate from.
+        2.2. Summary Generation
+            Generate a concise summary for each department, highlighting key points such as progress, issues, or trends 
+            mentioned in the reports.
+            Format the summary in a clear, readable way (e.g., bullet points or short paragraphs).
+        2.3. Delivery to NikoKar
+            Identify NikoKar’s Discord user ID to send private messages.
+            Use the Discord node to send the summarized report directly to NikoKar’s private messages at a specified time 
+            (e.g., end of day).
+    3. Analyzing Lead Generation Reports
+        3.1. Report Format Validation
+            Define a standard report format (e.g., "Leadgen: [Shift Hours] - [Leads Generated] - [Details]").
+            Check each leadgen report for compliance with the format using text parsing or regex in n8n.
+        3.2. Performance Norms Check
+            Set norms based on shift length:
+            4-hour shift: Minimum expected leads (e.g., 20 leads).
+            8-hour shift: Minimum expected leads (e.g., 40 leads).
+            Extract shift hours and lead counts from the report and compare them against the defined norms.
+        3.3. Error Detection
+            Flag reports as incorrect if:
+            The format is invalid (e.g., missing shift hours or lead count).
+            The reported leads are below the norm for the specified shift length.
+    4. Sending Notifications to Users
+        4.1. Identifying Users
+            Extract the Discord user ID of the person submitting each leadgen report (e.g., from the message author).
+        4.2. Crafting Notification Messages
+            If a report is incorrect or norms are not met, generate a private message including:
+            What’s wrong (e.g., “Your report is missing shift hours” or “You reported 15 leads for an 8-hour shift, which 
+            is below the norm of 40 leads”).
+            How to correctly write a report (e.g., “Please use this format: Leadgen: [Shift Hours] - [Leads Generated] - 
+            [Details]”).
+            The expected norm (e.g., “For an 8-hour shift, you need to generate at least 40 leads”).
+        4.3. Delivery of Notifications
+            Use the Discord node in n8n to send the notification as a private message to the respective user.
+            Ensure the message is polite, clear, and actionable.
+    5. Workflow Implementation in n8n
+        5.1. Trigger Setup
+            Use a schedule node (e.g., run once daily at 6 PM) or a Discord trigger node to initiate the workflow when new 
+            messages are posted in "reports" channels.
+        5.2. Node Configuration
+            Discord Node: Fetch messages from "reports" channels and send private messages.
+            AI Node (e.g., OpenAI): Analyze and summarize department reports; validate leadgen reports.
+            IF Node: Branch the workflow to handle summary generation for NikoKar and notifications for users separately.
+            Set Node: Store and format data (e.g., summaries, user IDs, notification text).
+
+
+
+1. Исправить автоматизацию, которая загружает JSON с курсами на сервер. 
+
+- Опросник для новеньких
+
+Структура задачи:
+	•	Определение ключевых компетенций для каждой профессии (навыки, инструменты, когнитивные качества, стиль работы).
+	•	Разработка общего теста, состоящего из 5 разделов:
+        1.	Оценка личности и стиля работы
+        2.	Когнитивный тест
+        3.	Тест технических знаний
+        4.	Тест ситуационных задач
+        5.	Практическое задание или симуляция
+	•	Примеры вопросов для каждого раздела, адаптированные под разные профессии.
+	•	Система оценки и сопоставления кандидатов с профессиями по весовым коэффициентам для каждого раздела с рекомендацией 
+    топ-3 вариантов.
+
+
+- Дип ресерч планов
+
+    Objective: Refine and process the General Plans file for further development, explore gamification platforms, and identify 
+    tools for website snapshots.
+
+    1. Run the General Plans file through DeeperSearch again.
+        Reprocess the file to make it more detailed, addressing the issue from last Friday when errors occurred (possibly 
+        due to character limits).
+        Check the character count beforehand and split the file into smaller sections if needed to avoid hitting limits.
+        Save the output to the "General_Plans.txt".
+    2. Feed the updated General Plans file into the Cursor program via an AI model.
+        Upload the DeeperSearch output into Cursor.
+        Ensure the AI model integrates the file correctly and troubleshoot any formatting issues.
+    3. Assign employees to each Step in General Plans using Cursor’s AI.
+        For each Step, analyze required skills and match them to an employee with relevant expertise.
+        Add one employee per Step, documenting their name and a brief justification (e.g., "John – skilled in UI design").
+        Export the updated file with assignments as "General_Plans".
+
+- Дискорд сервер выгрузка и анализ
+
+- Дискорд  сервер выгрузка и анализ
+
+- Обучалка по курсор + дропбокс
+
+
+

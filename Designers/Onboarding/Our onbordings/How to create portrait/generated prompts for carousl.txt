@@ -1,0 +1,79 @@
+Slide 1: Mila’s Studio Wall (Title: “AI Portrait Adventure”)
+Scene: Mila is pinning a big colorful poster on her studio wall titled “AI Portrait Adventure.” Around her are tools like a camera, pencil, and laptop. A corkboard has pinned notes like "MidJourney", "Face Swap", and "Retouch Magic."
+Caption: 🎨 Welcome to Mila’s Studio! Today, our favorite bird illustrator is going to show you how to turn a simple photo into a professional AI portrait! Ready to fly into the creative sky? 🕊️
+Prompt: Pixar-style 3D hummingbird named Mila pinning a colorful poster titled “AI Portrait Adventure” on a corkboard in her cozy studio full of artistic tools. Lively lighting, whimsical setup. --ar 9:16
+
+Slide 2: The Perfect Reference (Title: “Reference Photo 📸”)
+Scene: Mila stands next to a lightbox where a headshot photo is being analyzed. The lightbox screen has "REFERENCE PHOTO" stamped like a file tab on the corner.
+Caption: 🖼️ Step 1: Choose a front-facing, well-lit photo of your subject. This will be the soul of your portrait. Mila says: “Clarity is key!”
+Prompt: 3D Pixar hummingbird Mila standing next to a digital lightbox displaying a large headshot photo, with a corner tab labeled “REFERENCE PHOTO”. Studio background, creative atmosphere. --ar 9:16
+
+Slide 3: Login Time! (Title on Screen: “MidJourney Portal”)
+Scene: Mila logs into Discord on a glowing screen that reads “Welcome to MidJourney Portal” in a UI-style overlay.
+Caption: 💻 Step 2: Enter the MidJourney Discord server. This is where your AI magic begins!
+Prompt: 3D hummingbird character Mila sitting at a glowing laptop in a darkened room, with the screen showing a stylized Discord interface and glowing title "MidJourney Portal". --ar 9:16
+
+✅ Slide 4: Craft Your Prompt
+🖼️ Scene Description (revised for safety):Mila, the vibrant Pixar-style hummingbird, is seated at a large cozy desk filled with creative tools — pencils, sticky notes, and an oversized open notebook. She's writing thoughtfully with a comically large pencil. The page in front of her has a visible header that reads "Craft Your Prompt" in playful handwritten lettering. Around her are floating prompt examples, like “photo of a woman in a suit” and “professional background,” shown as hovering speech bubbles or chalkboard-style doodles — these don't represent real people, just stylized placeholders to suggest idea fragments.
+Caption: ✍️ Describe your portrait in detail! Clothing, expression, lighting — everything matters. Mila loves adding personality!
+🎨 Updated Image Prompt (for generation):3D Pixar-style hummingbird character Mila, sitting at a cozy wooden desk filled with art tools, writing in a giant open notebook titled "Craft Your Prompt" in colorful handwriting. Around her are floating speech bubbles with generic text fragments like “photo of a smiling person” and “business background.” Warm lighting, creative and whimsical atmosphere. --ar 9:16
+
+Slide 5: Link Drop Magic (Title on floating tag: “Add Your Link”)
+Scene: Mila drops a glowing link onto a magical sparkly prompt box. A tag hovers over the link saying “Add Your Link.”
+Caption: 🔗 Paste your subject’s photo URL into the prompt to help MidJourney lock in the face!
+Prompt: 3D Pixar-style Mila dropping a sparkling chain link icon into a glowing prompt field, with a floating label saying “Add Your Link”. Bright and playful setting. --ar 9:16
+
+Slide 6: Control Room (Title on dials: “Prompt Settings”)
+Scene: Mila in a sci-fi style control room, adjusting labeled dials: “IW”, “CW”, and “--no”. Each has glowing indicators.
+Caption: 🎛️ Adjust prompt parameters like a pro. Want the AI to focus on the face? Use --cw. Don’t want glasses? Add --no glasses. Mila’s got it!
+Prompt: 3D hummingbird Mila in a command center adjusting dials labeled “IW”, “CW”, “--no”. Brightly lit tech room, Pixar cartoon style. --ar 9:16
+
+Slide 7: Choosing the Best (Title on sticky note: “Pick Your Portrait”)
+Scene: Mila pinning 4 generated portraits on a corkboard. A sticky note reads “Pick Your Portrait.”
+Caption: 🖼️ Choose the most accurate likeness and best quality image. Sometimes you’ll need a few tries—don’t worry!
+Prompt: 3D hummingbird Mila reviewing four portrait images on a corkboard. One is circled, with a sticky note that says “Pick Your Portrait”. Warm studio lighting. --ar 9:16
+
+Slide 8: Enchanted Swap (Title engraved on wand: “Face Swap Spell”)
+Scene: Mila casting a glowing “face swap” spell with a wand engraved with “Face Swap Spell.” Two photos swirl into one.
+Caption: ✨ Use face-swapping to fine-tune likeness. Mila’s wand works wonders when MidJourney misses the mark!
+Prompt: 3D Pixar-style Mila casting a glowing spell using a wand that reads “Face Swap Spell” while two faces (original and AI) swirl into one magical blend. --ar 9:16
+
+Slide 9: Retouch Session (Title on brush: “Final Touches”)
+Scene: Mila painting with a brush that has "Final Touches" etched into the handle. She’s fixing a portrait on an easel.
+Caption: 🖌️ Time for polish! Adjust colors, brightness, and clean edges. Mila’s motto: "Tiny tweaks, huge results."
+Prompt: 3D Pixar hummingbird Mila painting on a large canvas with a brush labeled “Final Touches”. The portrait glows slightly. --ar 9:16
+
+Slide 10: Background Gone! (Title on screen tag: “Transparent Now!”)
+Scene: Mila dragging an eraser tool across a background, revealing a transparent checkerboard. A UI label says “Transparent Now!”
+Caption: 🧽 Remove that background! A clean transparent PNG gives you flexibility across designs.
+Prompt: 3D Mila hummingbird removing a portrait background using a glowing eraser tool. Screen overlay says “Transparent Now!”. Checkerboard pattern revealed. --ar 9:16
+
+Slide 11: Figma Frame-Up (Title on monitor: “Sized & Centered”)
+Scene: Mila reviewing a Figma artboard. The screen shows a frame labeled “Sized & Centered” with guides.
+Caption: 🔲 Drop your transparent portrait into a 1000x1000 frame. Align for perfection!
+Prompt: 3D hummingbird Mila at a large computer screen showing a Figma interface with a highlighted 1000x1000 frame labeled “Sized & Centered”. --ar 9:16
+
+Slide 12: Email Magic (Title on envelope: “Signature Ready”)
+Scene: Mila popping a portrait into an open envelope with glowing text “Signature Ready” printed on the flap.
+Caption: 📧 Export your portrait and integrate it into your email signature. Time to shine in every inbox!
+Prompt: 3D Pixar-style Mila inserting a small portrait into a glowing envelope with text “Signature Ready” on the envelope. --ar 9:16
+
+Slide 13: Outfit Remix (Title stitched on fabric: “Style Swap”)
+Scene: Mila stitching a traditional embroidered shirt onto a digital portrait. The fabric tag reads “Style Swap.”
+Caption: 🎭 Time to dress up! Try a themed version—like a Ukrainian vyshyvanka. Culture meets creativity!
+Prompt: 3D hummingbird Mila sewing an embroidered pattern onto a digital portrait. The shirt has a tag that says “Style Swap”. Bright folkloric colors. --ar 9:16
+
+Slide 14: Before & After Wall (Title engraved in wood: “Your Masterpiece”)
+Scene: Mila reveals a framed split image: left is a plain photo, right is the finished portrait. Carved plaque says “Your Masterpiece.”
+Caption: 🖼️ Look at your transformation! From photo to polished portrait—it’s a masterpiece!
+Prompt: 3D Pixar-style Mila unveiling a split-frame with “Before” and “After” portraits. A wooden plaque beneath reads “Your Masterpiece”. --ar 9:16
+
+Slide 15: Share Time (Title on phone screen: “Posted!”)
+Scene: Mila high-fives the air while her phone screen shows the portrait on a mock Instagram post. Top bar reads “Posted!”
+Caption: 📱 Share it! Post your new portrait, tag your subject, and show off your design powers.
+Prompt: 3D hummingbird Mila celebrating while holding a phone. The screen shows an Instagram post with the caption “Posted!”. --ar 9:16
+
+Slide 16: Final Bow (Title on banner: “Thanks for Flying With Me”)
+Scene: Mila takes a bow under a curtain call banner reading “Thanks for Flying With Me.” Confetti falls around her.
+Caption: 🎉 You made it through the full workflow. Mila hopes you learned something new! Comment if you enjoyed this, and follow for more.
+Prompt: 3D hummingbird Mila taking a bow under a banner that reads “Thanks for Flying With Me”. Confetti in the air. Pixar-style lighting. --ar 9:16

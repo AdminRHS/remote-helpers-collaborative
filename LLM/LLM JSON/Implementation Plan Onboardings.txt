@@ -1,0 +1,224 @@
+Execution Plan list
+Matching Employees System: Giving Match Score
+Identifying missing Skill and 
+System Generats Onboarding and
+Search for Relevant Video Lessons
+
+Envolvement:
+Employees Run General Knowlege Test;
+Generate Exams Based on company LLM
+Parsed XLS format to Json
+feed json to claude Projects
+identify quantity needed
+identify scoring and matching
+Plan User Knowlege information Storage
+Plan Employees Performance history storage
+
+Next Step Lessons matching to Employee
+Missing skills to execute final task.
+Lesson= Step Template
+
+Update CV of Employee with Passed Exam Topic
+Test Task Execution a
+   Gemini LLM JSON Response 
+I. Employee Data Processing
+	•	1a) Conversion from XLS to JSON:
+	•	The system will include a module to handle the conversion of employee data from XLS format to JSON.
+	•	This module will ensure that data fields such as employee IDs, skills, project assignments, and performance history are accurately mapped to the JSON structure.
+	•	Tools or libraries will be used to parse the XLS file and generate the corresponding JSON output.
+	•	1b) JSON Data Validation:
+	•	A validation component will be implemented to check the integrity and correctness of the generated JSON data.
+	•	This component will verify that the JSON structure adheres to the expected schema and that data types are appropriate for each field.
+	•	Any errors or inconsistencies will be logged for review and correction.
+	•	1c) Data Input to Claude Projects:
+	•	The validated JSON data will be fed into the Claude Projects system.
+	•	This step will involve integrating with the Claude Projects API or using appropriate data connectors to transfer the JSON data.
+	•	The system will ensure that the data is correctly ingested and ready for analysis and matching within Claude Projects.
+II. Skill Matching and Scoring
+	•	2a) Project Skill Identification:
+	•	The system will have a mechanism to define the required skills for each project.
+	•	This could involve a database or a configuration file where project managers can specify the necessary skills.
+	•	The system will also allow for defining proficiency levels or specific skill requirements for each project.
+	•	2b) Employee Skill Assessment:
+	•	Employee skills and knowledge will be assessed through a combination of methods:
+	•	Tests: The system will generate and administer general knowledge tests and profession-specific exams.
+	•	CV Analysis: The system will parse and analyze employee CVs to extract relevant skills and experience.
+	•	The results of these assessments will be stored and used for skill matching.
+	•	2c) Match Score Calculation:
+	•	The system will calculate a match score for each employee based on the alignment of their skills with project requirements.
+
+	•	This will involve comparing the employee's skills against the required skills for a project.
+	•	A scoring algorithm will be used to quantify the degree of match, taking into account factors such as skill proficiency and relevance.
+	•	2d) Missing Skill Identification:
+	•	The system will identify any missing skills in employees by comparing their existing skills with the required skills for their assigned projects or potential projects.
+	•	This information will be used to generate personalized onboarding plans.
+III. Onboarding Plan Generation
+	•	The system will automatically generate personalized onboarding plans for employees based on the identified skill gaps.
+	•	These plans will include targeted training, resources, and development activities to help employees acquire the necessary skills.
+	•	The system will also search for relevant video lessons to aid in employee development and task execution.
+IV. Knowledge Assessment
+	•	4a) Test Creation and Administration:
+	•	The system will utilize an LLM to generate general knowledge tests and company-specific exams.
+	•	These tests will be administered to employees to assess their skills and knowledge.
+	•	The system will manage the test-taking process, including scheduling, delivery, and scoring.
+	•	4b) Exam Topic Tracking:
+	•	The system will track the exam topics that employees have passed.
+	•	This information will be used to update employee CVs and maintain a record of employee qualifications.
+V. Resource Matching and Integration
+	•	5a) Lesson Matching:
+	•	The system will match employees with relevant video lessons to address missing skills and facilitate task execution.
+	•	This will involve searching a repository of video lessons and identifying those that align with the employee's skill gaps or task requirements.
+	•	5b) Task Execution Tracking:
+	•	The system will track employee test task execution.
+	•	This could involve monitoring progress, recording results, and providing feedback.
+VI. Performance History and Knowledge Storage
+	•	6a) Storage Systems:
+	•	The system will include storage systems to manage user knowledge and employee performance history.
+	•	These systems will ensure that data is securely stored, easily accessible, and properly maintained.
+	•	6b) CV Updates:
+	•	Employee CVs will be updated with passed exam topics to reflect their current qualifications and skills.
+VII. Project Staffing
+	•	7a) Employee Quantity Determination:
+	•	The system will determine the quantity of employees needed for each project.
+	•	This could involve analyzing project requirements, task dependencies, and resource availability.
+	•	7b) Scoring and Matching Criteria:
+	•	The system will define the scoring and matching criteria used to align employees with projects.
+	•	These criteria will ensure that employees are assigned to projects where their skills and experience are best utilized.
+This execution plan provides a comprehensive framework for developing and managing the employee-project matching system. Each section outlines key functionalities and considerations to ensure the system effectively meets its goals.
+
+let's break down the initial structure of the LLM database based on the files provided. Imagine this as the blueprint for how the LLM organizes and accesses information.
+LLM Core Structure: A Graph-Based Model
+The data appears to be structured in a way that lends itself well to a graph-based model. Here's why and how:
+	•	Nodes: The primary entities in the data can be considered nodes. These include:
+	•	Professions (e.g., "recruiter," "front end developer")
+	•	Departments (e.g., "managers," "developers")
+	•	Objects (e.g., "candidates," "contracts," "workflows")
+	•	Tasks (e.g., "Filter needed candidate resumes," "Conduct interviews")
+	•	Tools (e.g., "CRM," "Trello")
+	•	Types (e.g., "needed candidates," "sequential workflow")
+	•	Parameters (e.g., "skill," "date")
+	•	Responsibilities (e.g., "Screening candidate resumes")
+	•	Actions (e.g., "access," "review")
+	•	Edges: The relationships between these nodes are the edges. These edges define how the different entities connect and relate to each other. Examples:
+	•	A "Professions" node ("recruiter") is connected to a "Departments" node ("managers").
+	•	A "Professions" node ("recruiter") is connected to a "Tasks" node ("Filter needed candidate resumes").
+	•	A "Tasks" node ("Filter needed candidate resumes") is connected to an "Objects" node ("candidates").
+	•	An "Objects" node ("candidates") is connected to a "Types" node ("needed candidates").
+Key Components and Relationships
+	•	Organizational Structure: 
+	•	Professions are grouped under Departments. This establishes the hierarchy within the company. (e.g., "recruiter" -> "managers")
+	•	Job Roles and Responsibilities: 
+	•	Professions are associated with specific Tasks. This defines the activities that each profession is responsible for. (e.g., "front end developer" -> "Develop user interfaces")
+	•	Tasks have associated Responsibilities, providing more detail about the duties involved. (e.g., "Conduct interviews" -> "Conducting candidate interviews") 
+	•	
+	•	Objects and Types: 
+	•	Objects represent the entities that professions work with. (e.g., "candidates," "contracts")
+	•	Objects have Types, which provide further categorization or specification. (e.g., "candidates" -> "needed candidates," "applied candidates")
+	•	Task Details: 
+	•	Tasks can have Steps and Checklists, outlining the steps involved in completing the task.
+	•	Tasks have Parameters, which are the variables or criteria that influence the task. (e.g., "skill," "date")
+	•	Tasks involve Actions, Processes, and Results, describing what is done, how it's done, and the outcome.
+	•	Tasks are performed using specific Tools.
+	•	Workflow and Processes: 
+	•	The data includes information about workflows, their types (e.g., "sequential," "parallel"), and how they are managed.
+	•	Actions and Processes describe the activities involved in various tasks and workflows.
+Overall Conceptual Model
+Think of this as a network where:
+	•	Each job role (profession) has a set of responsibilities (tasks) involving specific items (objects).
+	•	These responsibilities are carried out using certain tools and following particular procedures (workflows).
+	•	All of this happens within a defined organizational context (departments).
+This structure allows the LLM to:
+	•	Understand the relationships between different parts of the company and its operations.
+	•	Retrieve information about specific job roles, tasks, or objects.
+	•	Analyze workflows and processes.
+	•	Ultimately, use this knowledge to perform tasks like skill matching, onboarding plan generation, and resource allocation.
+
+************
+Onboardings:
+Okay, let's outline the structure for examination (onboarding), learning materials, and task execution details with a tracking system, based on the provided data.
+
+1. Examination (Onboarding)
+
+Purpose: To assess employee skills, knowledge, and understanding of company-specific information.
+
+Components:
+
+Tests/Exams:
+General knowledge tests.
+Company-specific exams generated by the LLM.
+Skill-based assessments.
+Onboarding Plans:
+Personalized onboarding plans generated to address identified skill gaps.
+Onboarding instructions.   
+Learning Materials:
+Video lessons.
+Relevant guides/documentation.   
+Process:
+
+Identify missing skills in employees.
+Generate personalized onboarding plans.
+Administer tests/exams.
+Provide learning materials to address skill gaps and aid in task execution.
+Update employee CVs with passed exam topics.
+2. Learning Materials
+
+Types:
+Video lessons.
+Guides.
+Documentation.
+Onboarding scripts.   
+Interview scripts.   
+Purpose:
+To enhance employee skills.
+To aid in task execution.
+To provide onboarding support.
+Delivery:
+Recommended to employees based on missing skills or task requirements.
+Distributed alongside job offers with detailed onboarding instructions.   
+Use CRM to clarify candidate progress and expectations.   
+3. Task Execution Details
+
+Task Definition:
+Tasks are defined with specific responsibilities, objects, checklists, types, parameters, actions, processes, results, complexity, and tools.   
+Task templates provide predefined task structures used in workflows.   
+Checklists:
+Checklists ensure structured workflows, task completion tracking, and quality control.   
+Tasks are broken down into checklist items that must be completed sequentially or in parallel.   
+Checklist items can be assigned to a user, team, or tool.   
+Workflow Integration:
+Task execution is integrated into workflows.
+Project execution and milestone tracking integrate closely with checklists.   
+Automation:
+Automate task classification.   
+AI-based task categorization.   
+4. Tracking System
+
+Purpose:
+To track task completion.
+To monitor employee performance.
+To track test task execution.
+For quality control.
+Components:
+Status Tracking:
+Update status of checklist items as they are completed (is_completed field).   
+Update candidate profiles and statuses in the database.   
+Update account statuses.   
+Logging:
+Checklist completions are logged and linked to task_results for analytics.   
+Reporting:
+Compile daily summaries of recruitment activities.   
+Generate comprehensive monthly recruitment reports.   
+Compile reports on individual employee recruitment status.   
+Compile recruitment reports by department.   
+Document specific recruitment tasks and their outcomes.   
+Generate reports.   
+CRM Integration:
+CRM integration to sync lead data.   
+Processes:
+Progress Tracking: As items are completed, they update their status (is_completed field).   
+Validation: Some items require validation via checklist_item_guide, ensuring they meet quality control standards.   
+Completion & Logging: Checklist completions are logged and linked to task_results for analytics.   
+
+Sources and related content
+
+

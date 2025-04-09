@@ -1,0 +1,861 @@
+﻿Scoring System
+I'll provide a detailed analysis of how to structure the scoring and assessment system for the Lead Generation onboarding program.
+1. Daily Training Structure Analysis The 5-day training program maps to our task management system like this:
+* Project Template = Full Training Program (100% total)
+   * Each Day = Milestone Template (20% of total)
+      * Daily Activities = Task Templates
+         * Individual Exercises = Step Templates
+            * Scoring Criteria = Checklist Items
+2. Scoring Category Weightings The provided scoring breakdown fits our structure:
+A. AI Fundamentals (10%)
+* Maps to Day 1 tasks
+* Evaluate through AI tool usage metrics
+* Track in task_results
+B. Data Entry & Sheets (10%)
+* Maps to Day 2 tasks
+* Measure accuracy and formatting
+* Track through checklist completion
+C. Search & LinkedIn (15%)
+* Spans Days 2-3
+* Evaluate query effectiveness
+* Monitor through step completion
+D. CRM Performance (15%)
+* Primary focus on Day 4
+* Track accuracy and completeness
+* Use checklist_items for verification
+E. Lead Quality (15%)
+* Integrated throughout Days 3-4
+* Verify through quality checks
+* Record in task_results
+F. Communication (15%)
+* Focuses on Day 3 messaging
+* Evaluate through template usage
+* Track message effectiveness
+G. Business Knowledge (10%)
+* Spans all 5 days
+* Test through comprehension checks
+* Record in final assessment
+H. Progress & KPIs (10%)
+* Continuous monitoring
+* Track completion rates
+* Store in learning_metrics
+3. Implementation Instructions
+A. Project Setup:
+1. Create main project template
+2. Set up 5 milestone templates (one per day)
+3. Configure dependencies between milestones
+B. Task Configuration:
+1. Create task templates for each major component
+2. Set expected completion times
+3. Define prerequisites between tasks
+C. Step Templates:
+1. Break down each task into measurable steps
+2. Define completion criteria
+3. Set up verification points
+D. Checklist Integration:
+1. Create detailed evaluation criteria
+2. Set up scoring weights
+3. Define pass/fail conditions
+4. Assessment Strategy
+A. Daily Evaluations:
+* Morning knowledge checks
+* Afternoon practical exercises
+* End-of-day progress reviews
+B. Continuous Assessment:
+* Track task completion rates
+* Monitor quality metrics
+* Record time-to-completion
+C. Final Certification:
+* Comprehensive knowledge test
+* Practical skills demonstration
+* Portfolio review
+5. Progress Tracking
+A. Individual Level:
+* Daily progress updates
+* Skill acquisition tracking
+* Performance metrics
+B. Group Level:
+* Cohort progress tracking
+* Comparative analytics
+* Success rate monitoring
+6. Quality Assurance
+A. Review Points:
+* Daily supervisor checks
+* Peer review integration
+* Quality control gates
+B. Verification Process:
+* Work product validation
+* Knowledge confirmation
+* Skill demonstration
+7. Practical Considerations
+A. Time Management:
+* Allow buffer time between tasks
+* Account for different learning speeds
+* Build in review periods
+B. Support Structure:
+* Define escalation paths
+* Set up help resources
+* Create feedback loops
+C. Adaptability:
+* Allow for task customization
+* Build in flexibility
+* Enable difficulty adjustment
+Would you like me to elaborate on any of these aspects or provide more detailed instructions for a specific component?
+Gemini score structure 
+
+
+Let's design a scoring system for your CRM Academy that effectively tracks user progress and competency.
+Proposed Scoring System
+1. Test Scores
+* Points per question: Assign points to each question in a test.
+* Percentage score: Calculate the percentage of correctly answered questions.
+* Pass/fail threshold: Set a minimum percentage score for passing a test (e.g., 70%).
+* Weighted scoring: Assign different weights to questions based on difficulty or importance.
+2. Tool Proficiency
+* Tool-specific score: Maintain a separate score for each tool.
+* Scoring factors:
+   * Number of topics related to the tool that the user has completed.
+   * Average test score on those topics.
+   * Number of tasks related to the tool that the user has completed.
+   * Quality of completed tasks (based on edit count or other metrics).
+* Proficiency levels: Define levels of proficiency (e.g., beginner, intermediate, advanced) based on score ranges.
+3. Task Completion
+* Task count: Track the number of tasks completed by the user for each topic or tool.
+* Task status: Record the status of each task (e.g., pending, submitted, approved).
+* Task quality:
+   * Edit count: Track the number of edits required for a task to be approved.
+   * Feedback score: Assign a score based on mentor/administrator feedback.
+   * Timeliness: Consider task completion time relative to deadlines.
+4. Overall Score
+* Composite score: Calculate an overall score for each user, combining test scores, tool proficiency, and task completion metrics.
+* Weighting: Adjust the weights of different components based on their importance.
+* Ranking: Create a leaderboard or ranking system based on overall scores to foster competition and motivation.
+Implementation Notes
+* Database: Store scores and related data in the user_test_results, user_task_results, and potentially a new user_scores table.
+* Calculation logic: Implement scoring calculations in your Laravel backend.
+* API endpoints: Expose API endpoints for retrieving user scores and related data.
+* Frontend display: Display scores and progress in the user profile and progress tracking sections of your Next.js frontend.
+Example
+* User completes a test with 8 out of 10 questions correct.
+   * Test score: 80%
+   * If the passing threshold is 70%, the user passes the test.
+* User has completed 3 topics related to "Gmail" and has an average test score of 85% on those topics. They have also completed 2 tasks related to "Gmail" with an average of 2 edits per task.
+   * Gmail proficiency score: Calculated based on these metrics, potentially falling into the "intermediate" level.
+Additional Considerations
+* Score decay: Implement a score decay mechanism where scores decrease over time if the user doesn't engage with the platform.
+* Score normalization: Normalize scores across different topics or tools to ensure fairness.
+* Score visualization: Use charts and graphs to visualize user scores and progress over time.
+Remember to tailor the scoring system to your specific needs and priorities. Regularly review and adjust the system based on user feedback and performance data.
+To further enhance the scoring system and motivate users, let's explore additional parameters and achievement-based awards.
+Additional Scoring Parameters
+1. Consistency:
+   * Daily/weekly streak: Award points for consecutive days/weeks of activity on the platform.
+   * Completion rate: Track the percentage of assigned courses/topics completed within a given timeframe.
+2. Engagement:
+   * Forum participation: Award points for active participation in discussion forums related to courses/topics.
+   * Content contribution: Award points for creating helpful resources (e.g., guides, tutorials) shared with other users.
+   * Feedback quality: Award points for providing constructive feedback on courses, tests, or tasks.
+3. Speed and Efficiency:
+   * Task completion time: Award points for completing tasks within or ahead of schedule.
+   * Test completion time: Award points for completing tests quickly and accurately.
+   * First-time pass rate: Award points for passing tests or completing tasks on the first attempt.
+Achievement-Based Awards
+1. Badges:
+   * Completion badges: Awarded for completing specific courses or learning paths.
+   * Proficiency badges: Awarded for achieving certain levels of proficiency in tools or skills.
+   * Engagement badges: Awarded for active participation and contributions to the learning community.
+   * Challenge badges: Awarded for completing challenging tasks or tests.
+2. Points and Levels:
+   * Award points for various achievements (e.g., completing courses, passing tests, contributing content).
+   * Define levels based on point accumulation (e.g., bronze, silver, gold).
+   * Display user levels and progress towards the next level.
+3. Leaderboards:
+   * Create leaderboards based on overall scores or specific achievements.
+   * Display user rankings and progress over time.
+   * Offer rewards or recognition for top performers.
+Implementation Notes
+* Database: Store achievement data in new tables (e.g., user_achievements, user_badges).
+* Calculation logic: Implement award and achievement calculation logic in your Laravel backend.
+* API endpoints: Expose API endpoints for retrieving achievement data.
+* Frontend display: Display badges, points, levels, and leaderboards in the user profile and progress tracking sections of your Next.js frontend.
+Remember
+* Tailor the awards and achievements to your specific goals and user motivations.
+* Regularly review and update the system to keep users engaged and motivated.
+* Consider offering tangible rewards (e.g., gift cards, company swag) for top performers.
+
+
+
+
+Claude score structure 
+
+
+I've created a comprehensive scoring system with a visualization dashboard. Let me explain each component and the scoring logic:
+1. Test Score Calculation (0-100%):
+sql
+Copy
+WITH test_results AS (
+  SELECT 
+    s.id as step_id,
+    t.id as task_id,
+    t.title,
+    COUNT(c.id) as total_checklists,
+    SUM(CASE WHEN c.is_completed = 1 THEN 1 ELSE 0 END) as completed_checklists
+  FROM steps s
+  JOIN tasks t ON s.task_id = t.id
+  LEFT JOIN checklists c ON s.id = c.step_id
+  GROUP BY s.id, t.id, t.title
+)
+SELECT
+  task_id,
+  title,
+  (completed_checklists * 100.0 / NULLIF(total_checklists, 0)) as score
+FROM test_results;
+2. Tool Proficiency Score (0-100%):
+sql
+Copy
+WITH tool_usage AS (
+  SELECT 
+    t.tool_id,
+    COUNT(DISTINCT t.id) as total_tasks,
+    COUNT(DISTINCT CASE WHEN t.is_completed = 1 THEN t.id END) as completed_tasks,
+    COUNT(DISTINCT CASE WHEN ep.id IS NOT NULL THEN t.id END) as tasks_with_edits
+  FROM tasks t
+  LEFT JOIN edits_progress ep ON t.id = ep.progressable_id 
+    AND ep.progressable_type = 'task'
+  WHERE t.tool_id IS NOT NULL
+  GROUP BY t.tool_id
+)
+SELECT
+  tool_id,
+  ((completed_tasks * 100.0 / NULLIF(total_tasks, 0)) * 
+   (1 - (tasks_with_edits * 0.1))) as proficiency_score
+FROM tool_usage;
+3. Task Completion Tracking:
+sql
+Copy
+WITH milestone_progress AS (
+  SELECT 
+    m.id as milestone_id,
+    m.name as milestone_name,
+    COUNT(t.id) as total_tasks,
+    COUNT(CASE WHEN t.is_completed = 1 THEN 1 END) as completed_tasks,
+    SUM(CASE WHEN t.is_completed = 1 THEN t.total_time ELSE 0 END) as total_time_spent
+  FROM milestones m
+  LEFT JOIN tasks t ON m.id = t.milestone_id
+  GROUP BY m.id, m.name
+)
+SELECT
+  milestone_id,
+  milestone_name,
+  (completed_tasks * 100.0 / NULLIF(total_tasks, 0)) as completion_percentage,
+  total_time_spent
+FROM milestone_progress;
+4. Quality Metrics:
+sql
+Copy
+WITH task_quality AS (
+  SELECT 
+    t.id as task_id,
+    t.title,
+    COUNT(DISTINCT ep.id) as edit_count,
+    COUNT(DISTINCT tr.id) as result_count
+  FROM tasks t
+  LEFT JOIN edits_progress ep ON t.id = ep.progressable_id 
+    AND ep.progressable_type = 'task'
+  LEFT JOIN task_results tr ON t.id = tr.task_id
+  GROUP BY t.id, t.title
+)
+SELECT
+  task_id,
+  title,
+  CASE 
+    WHEN edit_count = 0 AND result_count > 0 THEN 100
+    WHEN edit_count > 0 THEN GREATEST(0, 100 - (edit_count * 5))
+    ELSE 0
+  END as quality_score
+FROM task_quality;
+Key Features of the Scoring System:
+1. Test Scores:
+* Each step in a task represents a test question
+* Correct answers are tracked through completed checklists
+* Final score is weighted based on question difficulty (can be stored in step_templates.hours_planned)
+2. Tool Proficiency:
+* Tracks completion of tasks related to specific tools
+* Considers task complexity (based on task_templates.cost)
+* Factors in edits received for tool-related tasks
+* Progressive scoring based on advanced tool features mastered
+3. Task Completion:
+* Tracks progress through onboarding milestones
+* Considers task dependencies through parent_task relationships
+* Measures completion time against expected_hours
+* Weighs mandatory vs optional tasks differently
+4. Quality Metrics:
+* Tracks edits received on completed tasks
+* Measures time spent vs expected time
+* Considers task complexity when weighing quality
+* Tracks successful implementation through task_results
+The dashboard visualizes these metrics using:
+* Line charts for progress over time
+* Radar charts for tool proficiency
+* Progress bars for milestone completion
+* Quality indicators for task performance
+To implement this system, you'll need to:
+1. Create indexes for performance:
+sql
+Copy
+CREATE INDEX idx_steps_task_id ON steps(task_id);
+CREATE INDEX idx_checklists_step_id ON checklists(step_id);
+CREATE INDEX idx_tasks_milestone_id ON tasks(milestone_id);
+CREATE INDEX idx_edits_progress_task ON edits_progress(progressable_id, progressable_type);
+2. Set up triggers to update scores:
+sql
+Copy
+CREATE TRIGGER update_task_score AFTER UPDATE ON checklists
+FOR EACH ROW
+BEGIN
+  -- Update related task scores
+END;
+3. Add constraints to ensure data integrity:
+sql
+Copy
+ALTER TABLE steps ADD CONSTRAINT valid_checklist_count 
+CHECK (
+  (SELECT COUNT(*) FROM checklists WHERE step_id = id) > 0
+);
+Would you like me to provide more specific implementation details for any part of this scoring system?
+First, let's add the necessary database tables:
+sql
+Copy
+-- Core scoring tables
+CREATE TABLE score_types (
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    category ENUM('test', 'task', 'engagement', 'speed', 'quality'),
+    base_points INT UNSIGNED,
+    multiplier DECIMAL(3,2),
+    description TEXT
+);
+
+
+CREATE TABLE user_scores (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id SMALLINT UNSIGNED,
+    score_type_id SMALLINT UNSIGNED,
+    points INT UNSIGNED,
+    earned_at TIMESTAMP,
+    related_item_type VARCHAR(50),
+    related_item_id INT UNSIGNED,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (score_type_id) REFERENCES score_types(id)
+);
+
+
+-- Achievement system
+CREATE TABLE achievement_categories (
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    description TEXT,
+    icon VARCHAR(255)
+);
+
+
+CREATE TABLE achievements (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    category_id SMALLINT UNSIGNED,
+    name VARCHAR(100),
+    description TEXT,
+    points_required INT UNSIGNED,
+    tier ENUM('bronze', 'silver', 'gold', 'platinum'),
+    icon VARCHAR(255),
+    FOREIGN KEY (category_id) REFERENCES achievement_categories(id)
+);
+
+
+CREATE TABLE user_achievements (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id SMALLINT UNSIGNED,
+    achievement_id INT UNSIGNED,
+    unlocked_at TIMESTAMP,
+    points_earned INT UNSIGNED,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (achievement_id) REFERENCES achievements(id)
+);
+
+
+-- Skill tracking
+CREATE TABLE skill_categories (
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    description TEXT,
+    parent_id SMALLINT UNSIGNED NULL,
+    FOREIGN KEY (parent_id) REFERENCES skill_categories(id)
+);
+
+
+CREATE TABLE user_skills (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id SMALLINT UNSIGNED,
+    skill_category_id SMALLINT UNSIGNED,
+    proficiency_level TINYINT UNSIGNED,
+    last_assessed TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (skill_category_id) REFERENCES skill_categories(id)
+);
+
+
+-- Streak and engagement tracking
+CREATE TABLE user_activity_streaks (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id SMALLINT UNSIGNED,
+    current_streak INT UNSIGNED,
+    longest_streak INT UNSIGNED,
+    last_activity_date DATE,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+Now let's create the visualization components:
+Academy User and Admin Dashboard
+Click to open component
+Now let's break down the key components of this enhanced system:
+  
+
+  
+
+1. User View Features:
+
+
+* Level progress bar with XP tracking
+* Skill mastery radar chart
+* Recent achievements display
+* Active streaks counter
+* Task completion progress
+* Upcoming milestones
+
+
+2. Admin View Features:
+
+
+* User progress overview
+* Achievement distribution analytics
+* Activity timeline
+* Skill assessment tools
+* Performance metrics dashboard
+3. Scoring System Logic:
+sql
+Copy
+-- Calculate overall user score
+WITH user_metrics AS (
+  SELECT 
+    u.id as user_id,
+    -- Test scores (30%)
+    AVG(CASE WHEN tr.task_resultable_type = 'test' 
+        THEN tr.score ELSE NULL END) * 0.3 as test_score,
+    
+    -- Task completion (30%)
+    (COUNT(CASE WHEN t.is_completed = 1 
+        THEN 1 ELSE NULL END) * 100.0 / NULLIF(COUNT(t.id), 0)) * 0.3 as task_score,
+    
+    -- Tool proficiency (20%)
+    AVG(us.proficiency_level) * 0.2 as tool_score,
+    
+    -- Engagement (20%)
+    (uas.current_streak * 100.0 / MAX(uas.longest_streak)) * 0.2 as engagement_score
+  FROM users u
+  LEFT JOIN tasks t ON u.id = t.created_by
+  LEFT JOIN task_results tr ON t.id = tr.task_id
+  LEFT JOIN user_skills us ON u.id = us.user_id
+  LEFT JOIN user_activity_streaks uas ON u.id = uas.user_id
+  GROUP BY u.id
+)
+SELECT 
+  user_id,
+  (test_score + task_score + tool_score + engagement_score) as total_score
+FROM user_metrics;
+4. Achievement Triggers:
+sql
+Copy
+DELIMITER //
+
+
+CREATE TRIGGER check_achievements AFTER UPDATE ON user_scores
+FOR EACH ROW
+BEGIN
+    -- Check for speed achievements
+    IF NEW.score_type = 'speed' AND NEW.points >= 100 THEN
+        INSERT INTO user_achievements (user_id, achievement_id, unlocked_at)
+        SELECT NEW.user_id, a.id, NOW()
+        FROM achievements a
+        WHERE a.category = 'speed' 
+        AND a.points_required <= NEW.points
+        AND NOT EXISTS (
+            SELECT 1 FROM user_achievements ua 
+            WHERE ua.user_id = NEW.user_id 
+            AND ua.achievement_id = a.id
+        );
+    END IF;
+    
+    -- Check for skill mastery achievements
+    IF NEW.score_type = 'skill' THEN
+        -- Add skill-specific achievement checks
+    END IF;
+    
+    -- Check for streak achievements
+    IF NEW.score_type = 'streak' THEN
+        -- Add streak-based achievement checks
+    END IF;
+END //
+
+
+DELIMITER ;
+5. Scoring Categories and Weights:
+sql
+Copy
+INSERT INTO score_types (name, category, base_points, multiplier) VALUES
+-- Test-based scores
+('Perfect Test Score', 'test', 100, 1.5),
+('First Try Success', 'test', 50, 1.2),
+('Quick Completion', 'test', 25, 1.1),
+
+
+-- Task-based scores
+('Task Completion', 'task', 10, 1.0),
+('Zero-Edit Task', 'task', 25, 1.3),
+('Advanced Task', 'task', 50, 1.4),
+
+
+-- Engagement scores
+('Daily Login', 'engagement', 5, 1.0),
+('Week Streak', 'engagement', 50, 1.2),
+('Month Streak', 'engagement', 200, 1.5),
+
+
+-- Speed-based scores
+('Quick Response', 'speed', 10, 1.1),
+('Efficiency Expert', 'speed', 25, 1.3),
+
+
+-- Quality-based scores
+('Perfect Execution', 'quality', 50, 1.4),
+('Mentor Approval', 'quality', 25, 1.2);
+
+
+DB related tables
+
+
+ I'll organize all the additional tables needed for the scoring and achievements system in a clear tabular format:
+Tables
+	Columns
+	Data Type
+	score_types
+	id
+	SMALLINT
+	score_types
+	name
+	VARCHAR(100)
+	score_types
+	category
+	ENUM('test', 'task', 'engagement', 'speed', 'quality')
+	score_types
+	base_points
+	INT
+	score_types
+	multiplier
+	DECIMAL(3,2)
+	score_types
+	description
+	TEXT
+	user_scores
+	id
+	INT
+	user_scores
+	user_id
+	SMALLINT
+	user_scores
+	score_type_id
+	SMALLINT
+	user_scores
+	points
+	INT
+	user_scores
+	earned_at
+	TIMESTAMP
+	user_scores
+	related_item_type
+	VARCHAR(50)
+	user_scores
+	related_item_id
+	INT
+	achievement_categories
+	id
+	SMALLINT
+	achievement_categories
+	name
+	VARCHAR(100)
+	achievement_categories
+	description
+	TEXT
+	achievement_categories
+	icon
+	VARCHAR(255)
+	achievements
+	id
+	INT
+	achievements
+	category_id
+	SMALLINT
+	achievements
+	name
+	VARCHAR(100)
+	achievements
+	description
+	TEXT
+	achievements
+	points_required
+	INT
+	achievements
+	tier
+	ENUM('bronze', 'silver', 'gold', 'platinum')
+	achievements
+	icon
+	VARCHAR(255)
+	user_achievements
+	id
+	INT
+	user_achievements
+	user_id
+	SMALLINT
+	user_achievements
+	achievement_id
+	INT
+	user_achievements
+	unlocked_at
+	TIMESTAMP
+	user_achievements
+	points_earned
+	INT
+	skill_categories
+	id
+	SMALLINT
+	skill_categories
+	name
+	VARCHAR(100)
+	skill_categories
+	description
+	TEXT
+	skill_categories
+	parent_id
+	SMALLINT
+	user_skills
+	id
+	INT
+	user_skills
+	user_id
+	SMALLINT
+	user_skills
+	skill_category_id
+	SMALLINT
+	user_skills
+	proficiency_level
+	TINYINT
+	user_skills
+	last_assessed
+	TIMESTAMP
+	user_activity_streaks
+	id
+	INT
+	user_activity_streaks
+	user_id
+	SMALLINT
+	user_activity_streaks
+	current_streak
+	INT
+	user_activity_streaks
+	longest_streak
+	INT
+	user_activity_streaks
+	last_activity_date
+	DATE
+	test_results
+	id
+	INT
+	test_results
+	user_id
+	SMALLINT
+	test_results
+	test_type_id
+	SMALLINT
+	test_results
+	score
+	DECIMAL(5,2)
+	test_results
+	completion_time
+	TIME
+	test_results
+	attempt_number
+	TINYINT
+	test_results
+	completed_at
+	TIMESTAMP
+	skill_requirements
+	id
+	INT
+	skill_requirements
+	skill_category_id
+	SMALLINT
+	skill_requirements
+	required_score
+	INT
+	skill_requirements
+	minimum_tasks
+	INT
+	skill_requirements
+	minimum_tests
+	INT
+	level_definitions
+	id
+	SMALLINT
+	level_definitions
+	level_number
+	INT
+	level_definitions
+	required_points
+	INT
+	level_definitions
+	title
+	VARCHAR(100)
+	level_definitions
+	benefits
+	TEXT
+	user_levels
+	id
+	INT
+	user_levels
+	user_id
+	SMALLINT
+	user_levels
+	current_level
+	INT
+	user_levels
+	current_points
+	INT
+	user_levels
+	next_level_points
+	INT
+	user_levels
+	updated_at
+	TIMESTAMP
+	scoring_rules
+	id
+	SMALLINT
+	scoring_rules
+	rule_type
+	VARCHAR(50)
+	scoring_rules
+	base_score
+	INT
+	scoring_rules
+	multiplier
+	DECIMAL(3,2)
+	scoring_rules
+	conditions
+	JSON
+	scoring_history
+	id
+	INT
+	scoring_history
+	user_id
+	SMALLINT
+	scoring_history
+	rule_id
+	SMALLINT
+	scoring_history
+	points_earned
+	INT
+	scoring_history
+	source_type
+	VARCHAR(50)
+	scoring_history
+	source_id
+	INT
+	scoring_history
+	earned_at
+	TIMESTAMP
+	Additional indexes that should be created:
+sql
+Copy
+-- User Scores
+CREATE INDEX idx_user_scores_user ON user_scores(user_id);
+CREATE INDEX idx_user_scores_type ON user_scores(score_type_id);
+CREATE INDEX idx_user_scores_earned ON user_scores(earned_at);
+
+
+-- User Achievements
+CREATE INDEX idx_user_achievements_user ON user_achievements(user_id);
+CREATE INDEX idx_user_achievements_unlocked ON user_achievements(unlocked_at);
+
+
+-- User Skills
+CREATE INDEX idx_user_skills_user ON user_skills(user_id);
+CREATE INDEX idx_user_skills_category ON user_skills(skill_category_id);
+CREATE INDEX idx_user_skills_proficiency ON user_skills(proficiency_level);
+
+
+-- Test Results
+CREATE INDEX idx_test_results_user ON test_results(user_id);
+CREATE INDEX idx_test_results_completed ON test_results(completed_at);
+
+
+-- User Levels
+CREATE INDEX idx_user_levels_user ON user_levels(user_id);
+CREATE INDEX idx_user_levels_current ON user_levels(current_level);
+
+
+-- Scoring History
+CREATE INDEX idx_scoring_history_user ON scoring_history(user_id);
+CREATE INDEX idx_scoring_history_earned ON scoring_history(earned_at);
+All FOREIGN KEY relationships should be set with:
+* ON UPDATE CASCADE
+* ON DELETE SET NULL (for optional relationships)
+* ON DELETE CASCADE (for required relationships)
+Would you like me to provide more details about any specific table or its relationships?
+Boards visuals
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+This design includes several gamified elements:
+1. Level and XP System:
+* Visual level indicator with glowing effects
+* XP progress bar with animated fills
+* Current/Next level XP display
+* Available skill points counter
+2. Character Stats Display:
+* Four main stats with percentage bars:
+   * Strength (Task completion)
+   * Agility (Speed metrics)
+   * Intellect (Test scores)
+   * Stamina (Activity streaks)
+3. Achievement System:
+* Rarity-based achievements (Common, Rare, Epic, Legendary)
+* Progress tracking for incomplete achievements
+* Unlocked achievement timestamps
+* Visual indicators for rarity level
+* Hover effects for more details
+4. Badge System:
+* Three-tier badge system (Bronze, Silver, Gold)
+* Tool mastery badges
+* Special achievement badges
+* Glowing effects for high-tier badges
+5. Quest System:
+* Current active quests display
+* Progress tracking
+* XP rewards display
+* Completion objectives
+* Visual progress bars

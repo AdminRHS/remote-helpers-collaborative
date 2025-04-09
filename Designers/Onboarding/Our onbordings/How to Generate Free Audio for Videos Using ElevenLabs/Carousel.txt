@@ -1,0 +1,218 @@
+Chameleon clothers
+
+Hat:
+
+Color: A bright, sunny yellow.
+Style: Baseball cap style, with a curved brim.
+Material: Appears to be a soft, possibly brushed cotton or canvas material. It has a slightly textured look, suggesting a fabric with some weave.
+Details: There's a small, white embroidered detail on the front, but it's too indistinct to identify.
+
+Shirt:
+
+Color: A pale, off-white or cream color.
+Style: Short-sleeved button-down shirt, almost like a safari or utility shirt.
+Collar: A standard shirt collar, neatly folded down.
+Buttons: Small, round buttons, likely a similar off-white or cream tone to the shirt. The buttons are visible down the front.
+Material: Likely a lightweight cotton or linen blend, giving it a slightly rumpled, casual appearance.
+
+Shorts:
+
+Color: A warm, golden yellow or ochre.
+Style: Classic shorts, ending around mid-thigh.
+Waistband: A visible waistband, suggesting a button or snap closure (though not clearly visible).
+Pockets: There are two slanted pockets on the front, typical of casual shorts.
+Material: Appears to be the same material as the shirt, a lightweight cotton or linen blend.
+
+Shoes:
+
+Color: A warm, orangey-brown or tan.
+Style: Sneakers or casual athletic shoes.
+Laces: White laces, threaded through eyelets.
+Soles: Thick, white rubber soles, providing a sporty look.
+Material: Likely a suede or canvas material for the upper part of the shoe.
+Overall Impression:
+
+The chameleon is dressed in a casual, adventure-ready outfit. The warm yellow tones of the hat and shorts create a cheerful and playful look, while the cream shirt provides a neutral base. The sneakers suggest a sense of activity and exploration. The overall style is reminiscent of a young explorer or adventurer, fitting the jungle setting of the image.
+
+------------------------------------------
+
+✅ Slide 1: Jungle Broadcast
+Scene: A scroll hangs in the jungle announcing the beginning of a voiceover adventure.
+
+Prompt:
+
+A 2D Pixar-style vertical illustration of a parchment scroll hanging between jungle trees. The text “Create Free Voiceovers with ElevenLabs” appears in large, bold font. Lush foliage and sunlight surround the scroll. Part of a colorful chameleon’s tail is visible behind a tree. Use the same stylized font throughout the carousel.
+
+------------------------------------------
+
+🎬 Slide 2: “The Jungle Call”
+Scene: Our chameleon, CLIP, receives a magical scroll from a parrot messenger in a jungle hut.
+
+Visual Prompt for Image Generation:
+
+A Pixar-style chameleon in a yellow cap receives a glowing scroll from a parrot in a wooden jungle hut. Tropical leaves and vines frame the scene. Text is handwritten on the scroll.
+
+Text on Scroll:
+
+"Your mission, CLIP: Master the voice of the jungle with ElevenLabs. Begin your quest by unlocking the Gateway Portal!"
+
+------------------------------------------
+
+🧠 Slide 3: “The Gateway Quest”
+Scene: CLIP stands before a glowing jungle portal shaped like a wide-open mouth, surrounded by lush green leaves and tribal carvings. A banana leaf with text rests in front of him.
+
+Visual Prompt for Image Generation:
+
+Pixar-style chameleon explorer in front of a glowing jungle portal shaped like a mouth. Lush vegetation, tribal totems, and soft jungle light in background. A banana leaf lies flat with instructions written on it. Use the same font as in the first image (“Create Free Voiceovers with ElevenLabs”). Font must be consistent across all slides.
+
+Text on Banana Leaf:
+
+"Step 1: Create your ElevenLabs account. Use email or social login. No credit card needed."
+
+------------------------------------------
+
+🧠 Slide 4: “The TTS Workshop”
+Scene: Inside a cozy voice hut, CLIP passes a scroll to a floating glowing spirit who begins to speak. Light beams filter through wooden walls and jungle foliage.
+
+Visual Prompt:
+
+Chameleon in a cozy jungle hut handing a scroll to a glowing speech spirit (semi-transparent being of light and sound). Tropical plants and carved symbols decorate the walls. Text appears on a hanging wooden plank inside. Font must be the same stylized type used in the first carousel slide (“Create Free Voiceovers with ElevenLabs”).
+
+Text on Wooden Plank:
+
+"Type your script. Choose a voice. Generate audio with one click."
+
+------------------------------------------
+
+🧙‍♂️ Slide 5: “Audio Wizardry Lab” (Level 3)
+Scene: In a hidden cave, CLIP casts sound spells, creating effects like “swoosh”, “cat meow”, and “explosion”.
+
+Visual Prompt:
+
+Pixar-style chameleon in a wizard hat casting spells from a leafy book in a sound lab cave. Sound effects visualized. Text floats among sparks.
+
+Text on Spark Effects:
+
+"Describe your sound. Generate up to 60/month. Mix waves and wonders! 🌊💥🐾"
+
+------------------------------------------
+
+🧩 Slide 6: “The Creator’s Forge” (Level 4)
+Scene: CLIP is in a jungle editing shack, dragging voice and effects into a timeline on a bamboo laptop.
+
+Visual Prompt:
+
+Chameleon using a jungle-style video editor on a wooden desk. Tropical tools around. Text appears on an opened bamboo notebook.
+
+Text in Notebook:
+
+"Drag. Drop. Sync. Craft your story. Bring visuals and voice together. 🛠️"
+
+------------------------------------------
+
+🏁 Slide 7: “The Voiceover Challenge” (Final Mission)
+Scene: CLIP presents a tribal ceremony where a jury of animals listens to the final audio.
+
+Visual Prompt:
+
+Jungle council of animals listening to chameleon’s audio on a vine-wrapped speaker. Fireflies carry glowing text on leaves.
+
+Text on Leaves:
+
+"Create a 15–30 sec voiceover. Use emotion. Add one sound effect. Upload your masterpiece! 🎤🎧"
+
+------------------------------------------
+
+Slide 8: 
+
+The chameleon presenting his final mission - ready sounds. The jury which consists of animals listening to him and are haapy with his work. They say "WOW" "AH" "GREAT"
+
+------------------------------------------
+
+Slide 9 : “The Jury Speaks”
+Visual Prompt:
+The jungle council leans forward, their eyes shimmering in the firelight. The vine-wrapped speaker has just gone silent. The owl raises a feathered brow. The jaguar narrows its eyes thoughtfully. One parrot flutters up, holding a glowing question leaf in its beak. Fireflies swirl into question mark shapes above the council.
+
+Text on bubble near one animal: 
+🦉 “Impressive… but we have questions.”
+
+------------------------------------------
+
+Slide 10: Exam – Question 1
+Prompt:
+
+A jungle classroom scene without characters. Wooden blackboard framed with vines and tropical leaves. Text written in chalk-style using the same font from Slide 1.
+
+Question on Blackboard:
+
+What is the monthly character limit for ElevenLabs' free plan?
+a) 1,000
+b) 10,000
+c) 100,000
+d) Unlimited
+
+------------------------------------------
+
+Slide 11: Exam – Question 2
+Prompt:
+
+Scroll pinned between two trees in a shaded jungle reading area. The question appears on the scroll using Slide 1’s font.
+
+Text on Scroll:
+
+Which tool in ElevenLabs allows you to convert written text into spoken audio?
+a) Audio Mixer
+b) Sound Lab
+c) Text-to-Speech
+d) Voice Cloner
+
+------------------------------------------
+
+Slide 12: Exam – Question 3
+
+Prompt:
+
+Jungle stone tablet standing upright with engraved text. Moss and vines grow around it. The same stylized font is used for engraved text.
+
+Text on Stone Tablet:
+
+How many sound effects can you generate per month with the free plan?
+a) 15
+b) 30
+c) 60
+d) Unlimited
+
+
+------------------------------------------
+
+Slide 13: Exam – Question 4
+Prompt:
+
+Open bamboo notebook resting on a large leaf table in the jungle. Jungle birds and butterflies nearby. Use same font as Slide 1.
+
+Text in Notebook:
+
+What format should your final voiceover file be submitted in?
+a) .mp4
+b) .avi
+c) .mp3
+d) .docx
+
+------------------------------------------
+
+Slide 14: Exam – Question 5
+Prompt:
+
+Hanging parchment test sheet on a tree, lit by soft jungle sunlight. Use same consistent font.
+
+Text on Parchment:
+
+What happens if you exceed the 10,000 character limit on a free plan?
+a) You get billed automatically
+b) Your account is locked
+c) You must wait until the next monthly reset
+d) You can request an emergency extension
+
+------------------------------------------
+
+

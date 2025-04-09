@@ -1,0 +1,230 @@
+{
+    "sheet_name": "Actions",
+    "data": [
+        {
+            "Action": "access",
+            "Process": "accessing",
+            "Result": "accessed"
+        },
+        {
+            "Action": "aggregate",
+            "Process": "aggregating",
+            "Result": "aggregated"
+        },
+        {
+            "Action": "analyze",
+            "Process": "analyzing",
+            "Result": "analyzed"
+        },
+        {
+            "Action": "apply",
+            "Process": "applying",
+            "Result": "applied"
+        },
+        {
+            "Action": "archive",
+            "Process": "archiving",
+            "Result": "archived"
+        },
+        {
+            "Action": "collect",
+            "Process": "collecting",
+            "Result": "collected"
+        },
+        {
+            "Action": "compile",
+            "Process": "compiling",
+            "Result": "compiled"
+        },
+        {
+            "Action": "conduct",
+            "Process": "conducting",
+            "Result": "conducted"
+        },
+        {
+            "Action": "create",
+            "Process": "creating",
+            "Result": "created"
+        },
+        {
+            "Action": "cross-verify",
+            "Process": "cross-verifying",
+            "Result": "cross-verified"
+        },
+        {
+            "Action": "define",
+            "Process": "defining",
+            "Result": "defined"
+        },
+        {
+            "Action": "design",
+            "Process": "designing",
+            "Result": "designed"
+        },
+        {
+            "Action": "develop",
+            "Process": "developing",
+            "Result": "developed"
+        },
+        {
+            "Action": "distribute",
+            "Process": "distributing",
+            "Result": "distributed"
+        },
+        {
+            "Action": "document",
+            "Process": "documenting",
+            "Result": "documented"
+        },
+        {
+            "Action": "ensure",
+            "Process": "ensuring",
+            "Result": "ensured"
+        },
+        {
+            "Action": "evaluate",
+            "Process": "evaluating",
+            "Result": "evaluated"
+        },
+        {
+            "Action": "finalize",
+            "Process": "finalizing",
+            "Result": "finalized"
+        },
+        {
+            "Action": "gather",
+            "Process": "gathering",
+            "Result": "gathered"
+        },
+        {
+            "Action": "identify",
+            "Process": "identifying",
+            "Result": "identified"
+        },
+        {
+            "Action": "implement",
+            "Process": "implementing",
+            "Result": "implemented"
+        },
+        {
+            "Action": "log",
+            "Process": "logging",
+            "Result": "logged"
+        },
+        {
+            "Action": "maintain",
+            "Process": "maintaining",
+            "Result": "maintained"
+        },
+        {
+            "Action": "make",
+            "Process": "making",
+            "Result": "made"
+        },
+        {
+            "Action": "monitor",
+            "Process": "monitoring",
+            "Result": "monitored"
+        },
+        {
+            "Action": "note",
+            "Process": "noting",
+            "Result": "noted"
+        },
+        {
+            "Action": "organize",
+            "Process": "organizing",
+            "Result": "organized"
+        },
+        {
+            "Action": "prepare",
+            "Process": "preparing",
+            "Result": "prepared"
+        },
+        {
+            "Action": "propose",
+            "Process": "proposing",
+            "Result": "proposed"
+        },
+        {
+            "Action": "recommend",
+            "Process": "recommending",
+            "Result": "recommended"
+        },
+        {
+            "Action": "record",
+            "Process": "recording",
+            "Result": "recorded"
+        },
+        {
+            "Action": "redesign",
+            "Process": "redesigning",
+            "Result": "redesigned"
+        },
+        {
+            "Action": "refresh",
+            "Process": "refreshing",
+            "Result": "refreshed"
+        },
+        {
+            "Action": "report",
+            "Process": "reporting",
+            "Result": "reported"
+        },
+        {
+            "Action": "review",
+            "Process": "reviewing",
+            "Result": "reviewed"
+        },
+        {
+            "Action": "schedule",
+            "Process": "scheduling",
+            "Result": "scheduled"
+        },
+        {
+            "Action": "select",
+            "Process": "selecting",
+            "Result": "selected"
+        },
+        {
+            "Action": "set up",
+            "Process": "setting up",
+            "Result": "set up"
+        },
+        {
+            "Action": "store",
+            "Process": "storing",
+            "Result": "stored"
+        },
+        {
+            "Action": "summarize",
+            "Process": "summarizing",
+            "Result": "summarized"
+        },
+        {
+            "Action": "track",
+            "Process": "tracking",
+            "Result": "tracked"
+        },
+        {
+            "Action": "train",
+            "Process": "training",
+            "Result": "trained"
+        },
+        {
+            "Action": "update",
+            "Process": "updating",
+            "Result": "updated"
+        },
+        {
+            "Action": "use",
+            "Process": "using",
+            "Result": "used"
+        },
+        {
+            "Action": "verify",
+            "Process": "verifying",
+            "Result": "verified"
+        }
+    ]
+}

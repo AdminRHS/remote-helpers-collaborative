@@ -1,0 +1,588 @@
+
+0:00
+I've tested thousands of AI tools and now I'm going to show you 100 best from
+0:05
+Simple Text editors to full-blown coding apps starting with General writing
+Writing tools
+0:12
+tools for General allpurpose writing with super simple prompts I'd say go with Chad gbt they just updated it to
+0:19
+version 4.5 and we've got an awesome prompting guide for it it also works with images data analysis coding and
+0:26
+other fancy stuff but keep in mind you'll probably need a subscription yeah monthly fees right for slightly fewer
+0:32
+features but better search accuracy and sometimes even more creative writing I'd give Google Gemini 2 a try it can pretty
+0:39
+much do what Chad GPT does but it's free the trade-off is its reasoning skills aren't always quite as sharp every tool
+0:45
+out there charges you for advanced reasoning except deep seek you can run it locally on your own computer and it
+0:51
+reasons about as well as the 01 model just without Vision on the plus side you can upload data files into deep seek
+0:58
+which o1 won't let you do as a balanced option I'd check out Claude 3.7 it just
+1:03
+got an update and now it has great hybrid reasoning solid accuracy a low chance of making stuff up plus it
+1:09
+supports Vision prompting can be a bit tricky though so make sure you watch our full guide we also have a g Academy
+1:15
+course on claud's prompts download it and you can study at your own pace if you want to add some excitement to your
+1:21
+AI routine be a bit different try Gro 3 Elon musk's newest AI is on the same
+1:27
+level as Chad gbt's latest models it can reason generate images analyze data do
+1:32
+searches the whole nine yards all these tools can crank out as much text as you want but sometimes you need that extra
+1:38
+spark of creativity and control that's when I switched to Jasper it's fine-tuned for marketing content and CHS
+1:45
+out results that really sound human for product descriptions where you want a personal feel I like copy AI it's super
+1:51
+creative knows how to be persuasive and can dig up unique selling points for you without much input it's tough to call
+1:58
+Copy AI a real check GPT competitor but I think copy Smith beats it in one area
+2:03
+e-commerce writing copy Smith is practically a whole toolkit focused on online sales product descriptions
+2:10
+research optimizing articles all that good stuff if you'd rather dabble in creative writing with easy controls
+2:16
+there's text effects it's more of a fun experiment than a hardcore writing toll but it's awesome if you just want to
+2:22
+play around with words of course all these options require jumping into a separate website which is why I usually
+2:29
+run word tun in the background it works in Gmail Facebook and crucially in Google Docs it fixes my spelling and
+2:35
+scripts helps me rewrite bits and pieces and just makes life a little simpler text generation can be not only prom
+2:42
+based I have videos that would be great as blog posts so I can use video to blog to transform them they are sponsoring
+2:48
+this video and it's literally the number one video to text converter here's how it all works I just paste a YouTube link
+2:54
+to my video and with just one click the toll generates a clean ready to publish
+3:00
+blog article not only is it fast but the output quality is impressive the whole setup was incredibly simple no credit
+3:07
+card needed so I was able to jump right in and start testing what's cool is that it doesn't limit you to just YouTube
+3:13
+videos you can upload any video file with spoken audio and the toll works with it just as well plus your Target
+3:20
+and international audiences it's multilingual support and 30 plus languages is really useful also there is
+3:27
+built-in SEO optimization automatic visuals like screenshots or AI generate
+3:32
+images I can also turn on Automation and every new video I upload will be
+3:37
+instantly transformed into blog article if you post videos often this saves a
+3:43
+ton of time I really like this toll during my testing and people on G2 and Trust Pilots seem to agree with me try
+3:50
+video to blog AI now no credit card required click the link in the
+3:55
+description to start converting your videos into powerful blog articles the next type of AI tools is image
+Image Generation
+4:04
+generation starting with the easiest AI to prompt and honestly the one with the most predictable results dially 3 it's
+4:11
+basically in dire need of an update but as a quick add-on for Chad gbt it does an okay job for fast simple image
+4:18
+creation just don't expect miracles with text generation here it's pretty middling most of the images you see on
+4:23
+GE Academy that have text in them actually come from mid Journey its text handling is far more accurate Plus gives
+4:30
+you real options for size orientation and all that good stuff and if you're into photo realism mid Journey Nails it
+4:36
+every time it even gets Anatomy right no more weird extra fingers the subscription might feel like a buzzkill
+4:42
+but if you want to avoid that you can always go the local route stability AI AKA stable diffusion has been ruling the
+4:49
+scene for a couple of years now for good reason it's accurate reliable and completely free new free competitors are
+4:55
+popping up left and right though take flux one for instance basically the same idea a but with text to video thrown in
+5:01
+it's a cool way to sharpen your AI skills if you ask me that said flux one struggles with text so for fancy
+5:08
+lettering or custom fonts Adobe Express is a more solid option it also lets you remove objects from photos gives you
+5:14
+plenty of style controls and just makes the whole generation process super user friendly for everyday image needs we
+5:21
+also have an image generator built right into G Academy is for our members and work similarly to Mid Journey just jump
+5:27
+into our AI art studio type Cas imagine followed by your prompt and voila being
+5:33
+a member also gets you access to tons of Education materials prompting guides toll collections audio commentary PDF
+5:40
+guides you name it we're creating a whole video series to teach AI basics in a simple no jargon way to we even have a
+5:47
+built-in toll finder to match you with the perfect AI toll and we drop exclusive deals and popular AI tolls
+5:54
+every week those deals to low and save you more than it costs to join G Academy so go ahead click the Link in the
+6:00
+description become a member and help us build the best AI Learning Hub ever some tools let you generate images from your
+6:06
+own sketches cray a AI for instance I'll scribble something on the left feed it a prompt and it will match the layout from
+6:12
+my sketch while filling in the details cray a AI won't turn your photos into videos though same goes for playground
+6:19
+AI there's simpler tools mainly designed for basic generation but they're dependable and easy to use perfect for
+6:24
+folks who just want quick results without fuss which might describe our moms dads or boss is right and if they
+6:30
+don't Vibe with that show them Leonardo AI it's nice and straightforward but it uses its own older model so sometimes
+6:36
+you get really unexpected but also kind of cool images sometimes weird is wonderful moving on editing your images
+6:42
+removing background upscaling Etc let's focus on the free stuff
+Editing images
+6:49
+because honestly who wants another subscription for quick background removal I'd grab cutout throw it's
+6:54
+straightforward produces decent results and there's no subscription fee the catch you only get five credits to start
+7:01
+once you run out you can just make a new account no biggie if you don't mind paying a bit for better background
+7:06
+removal and integration with tools like canva or photoshop remove background is the way to go its algorithms are A step
+7:13
+above and the price is pretty reasonable for free upscaling big jpeg does the trick it can double or quadruple your
+7:19
+image resolution while boosting quality reliably the interface is simple and impossible to mess up hard to argue with
+7:25
+free right for affordable object removal try cleanup pictures does a solid job with end painting though the free
+7:32
+version kepts you at 720p resolution good enough for blogs or social posts
+7:37
+but if you're doing Pro level photography you might want a subscription that said the most impressive image editing tool I've tried
+7:44
+is magnific AI the upscaling is insane it adds detail refines textures and
+7:49
+basically fills in missing info so photos look like they were taken with a topof the line camera the downside the
+7:55
+subscription cost can be a bit steep for everyday folks now with f pH is covered it only seems appropriate to move on to
+8:02
+video tools both generation editing and repurposing these ones are the tools I
+8:07
+have used myself and some of them I still use pretty often Sora is still one of my go-to
+Video tools
+8:14
+tools we actually put together a giant guide on it packed with tips prompts and other handy info the coolest thing about
+8:20
+Sora is the quality of his output it really sticks to whatever prompt you give it and delivers top-notch results
+8:26
+plus there's a neat storyline feature that's perfect for multi-step motion or more complex sequences Sora can be
+8:33
+pretty picky about prompts though sometimes you just need something super focused like videos about food or
+8:38
+emotion generated by a model trained specifically on those topics hot shot works with that perfectly it offers nine
+8:45
+different video types A userfriendly interface and a subscription that won't break the bank of course creativity
+8:51
+matters in video generation maybe you want everything from nit vids to celebrity Clips hyper can do that and
+8:57
+more it's similar to Sora but that sometimes struggles with fingers and moving objects so keep your expectations
+9:04
+in check if you're trying to generate High action scenes for simpler static scenes hyper is great but if you want to
+9:09
+push the envelope try pabs it has this C Pika frames feature that morphs one
+9:14
+image into another creating some wild transitions super Innovative and fun to play with generating videos isn't the
+9:21
+only game in town you can edit them too my top choice for that is Runway ml this tool is amazing at sinking lips to audio
+9:28
+removing backgrounds adding slow motion color grading you name it you can remove objects blur faces add depth of field
+9:35
+effects it's basically a giant playground for video editing Runway won't generate a full video for you from
+9:41
+scratch though and nid is your best bet in this case it'll take one prompt and
+9:46
+make an entire video complete with a storyline narration subtitles everything
+9:51
+except music and that's pretty standard in AI made videos music usually isn't included clip Fleet is no exception but
+9:58
+it can generate a full video with cuts and a voice over from your description and it also sprinkles in sound effects
+10:04
+to make things more engaging if you do want music in your AI video you can only get it by recycling footage that already
+10:11
+had music in it fortunately repurposing is a breeze with video just droing a link and it'll transcribe the video pick
+10:17
+out the good parts and spit out an edited version perfect for Tik Tok Instagram or shorts Opus Clips is
+10:23
+another popular repurposing toll offering basically the same features picking between these tolls often comes
+10:29
+down to how well they snip and trim your video the same goes for vizard iio
+10:34
+though this one might need some getting used to so that it works best should we make a guide on vizard go to GE Academy
+10:41
+and vote in the sometimes though you'll want to do a few edits on your own like adding subtitles to that AI generated
+10:47
+video that's where V IO comes in handy just use the auto subtitle feature or remove the background lock the eyes on
+10:53
+the camera repurpose the footage whatever you need it's a solid all-around video editor and for that
+10:59
+first pass of basic editing on your own videos cutting out long pauses trimming flubs and removing audio noise gling AI
+11:06
+is my top pick I actually did a full breakdown of it on this channel so go check out our faster video editing video
+11:12
+if you want all the details this brings us nicely to YouTube tools where saving time is everything but not at the cost
+YouTube tools
+11:19
+of creativity instead of coming through endless videos why not get a quick
+11:24
+summary of their key points that's exactly what nopt does and you can even chat with the video to find topics worth
+11:30
+exploring further I use it myself and it's a huge time saer when I'm feeling too lazy to post videos manually I turn
+11:37
+to Taja AI it generates tags a description a neat list of chapters suggests a title optimizes for search
+11:44
+and even creates up some basic thumbnails they might not be breathtaking but hey at least the job's done sometimes though I like rolling up
+11:51
+my sleeves and digging into SEO on my own that's where vid IQ comes in it's so
+11:56
+good I can't keep quiet about it sure it does the usual key word research but it also has a fantastic idea suggestion
+12:02
+system it's basically the Perfect Blend of AI and real world data but wait it gets better sure you can use chat GPT
+12:08
+for your scripts but prompting can be a pain subscriber on the other hand holds your hand through every step from Deep
+12:15
+research to fine-tuning each piece of your script it does all the heavy lifting for titles descriptions hooks
+12:22
+you name it all you have to do is pick what you like super easy and friendly though not free sadly if you decide to
+12:28
+be a YouTuber or just make videos slightly faster you should really look into toes for generating
+Generating Avatars
+12:36
+avatars when it comes to Avatar generation hey Jen is hands down the top dog I just upload a few minutes of video
+12:42
+footage with me talking plus a short consent video and after it processes everything I'm good to go the quality is
+12:48
+actually insane lip sync voice Clarity and even Zoom ins and zoom outs I can even upload my own voice over the
+12:55
+downside is it's pretty pricey if you want to go Allin with serious large scale Avatar creation honestly AI
+13:01
+avatars often feel a bit misleading most tools just animate a generic image and let you overlay it on presentations it's
+13:08
+that very formal corporate Vibe the only other Avatar tools that actually do something interesting are usually more
+13:14
+for fun take deep fakes LOL for example it lets you swap faces in videos which
+13:19
+is hilarious but doesn't necessarily make your workflow any easier it's just a fun gimmick if you're looking for
+13:25
+serious deep fake results I'd suggest deep face lab it's open source and super customizable so you can pull off some
+13:32
+pretty advanced stuff you won't quite get Hollywood level Irishman effects but it's still impressive for something you
+13:38
+can run at home face swapping is probably the most common trick these Avatar tools have up their sleeve check
+13:43
+out un boring for instance you just upload your files wait a minute and boom your face is swapped the results are
+13:49
+decently reliable and it throws in some extra bells and whistles to keep things interesting perfect for spicing up a
+13:56
+video here and there there aren't many use cases for AI avatars however for Speed generators there is far too many
+14:03
+just as there are far too many toasts that are worth your attention obviously the Top Dog in voice
+Speech generators…
+14:10
+cloning is 11 Labs it doesn't just copy your voice it lets you find tune how
+14:15
+every single part of each sentence sounds from the intonation to the emphasis you could seriously spend hours
+14:21
+filling with it at that point you might as well just record the audio yourself but if you're a control freak about your
+14:27
+voice this is your dream come true if you want something simpler but still with great quality and ease of use check
+14:34
+out my vocal AI I've tested it myself and found it perfect for anyone who's new to voice cloning sometimes the
+14:40
+results need a bit of extra tweaking you can't do inside the tool but overall it's super handy listener AI is another
+14:46
+solid Choice I'm mostly just giving you options here they're all good in their own ways with tools like listener AI you
+14:53
+really have to try them for yourself and see which one sounds best to you feature-wise they're pretty similar
+14:59
+across the board need to boost your audio's overall quality or add some finer details maybe tweak it for
+15:05
+streaming videos or production then switch to fine voice it takes under a
+15:10
+minute to improve your audio's Clarity and it's totally worth it if you're a complete newbie with zero professional
+15:16
+needs a simpler and more stripped down toll might be what you're after murf AI
+15:21
+it's super easy to use delivers great Voice output and doesn't overload you with extra features you might never
+15:27
+touch anyway now murf doesn't have celebrity voices in its catalog which might be a deal breaker if you ever need
+15:33
+to mimic your favorite star in that case fake you.com has you covered the quality
+15:38
+is just okay and the selection of voices isn't massive but it gets the job done if you want something a little more fun
+15:44
+or novelty focused finally if you do record your own audio and it comes out well less than Stellar Adobe podcast is
+15:50
+here to save the day it's the simplest audio enhancer out there barely any settings to mess with and the free
+15:56
+version already does a great job the paid plan gives you more control but really it's all about what you need
+16:02
+sometimes free is just fine and music how can we forget about creating
+Music tools
+16:08
+songs it's kind of wild but these days you can actually generate an entire song lyrics Melody instruments the whole
+16:15
+works from a single prompt with sunno you can specify the style BPM and so on it's super simple and the final tracks
+16:22
+sound surprisingly good if you want more control over your music like I do check out beat Hoven it's basically the the
+16:29
+same idea as sunno but you can choose your style from a list add different emotions tweak the exact length and more
+16:35
+it's definitely more customizable though maybe a little less reliable at times if you're more of a feeling person than a
+16:41
+technical one there's sound raw you just pick the mood of the track select the parameters you want and it does the rest
+16:48
+no prompt writing required no describing what you need just point click and you're good to go the F tracks from
+16:54
+these tools are great but sometimes you just want riffs that's where refusion steps in you can enter your lyrics or
+17:00
+describe the sound you're after and it'll generate short riffs with cool visualizations it can even crank Out
+17:06
+lyrics for you a handy sidekick if you're a musician looking for quick inspiration speaking of classical
+17:11
+imagine telling moart that AI can now pump out orchestral pieces on par with what he wrote well Iva might impress
+17:19
+even the Old Masters it's fantastic for classical music and 249 other styles no joke pick a key signature decide how
+17:26
+long you want the piece to be and how many tracks you need you also get three free downloads a month which is a sweet
+17:31
+deal usually once you generate a track that's all you get but Boomie does it differently you can add vocals rearrange
+17:38
+the track even swap out instruments or layer in random sounds like traffic noise if you want it's a really
+17:44
+refreshing approach to AI music and finally one more toe I love but can't really segue into smoothly vocal
+17:51
+remover. Org the name says it all just upload any track and it'll split the vocals from the instrumentals so you can
+17:58
+download them sep separately so far we've been keeping our AIS pretty creative but I really want to get
+18:03
+serious for a second let me put on my serious face and show you a couple of tools for business and
+Business and Productivity
+18:11
+productivity I'm a total notion junkie so it's probably no surprise that I recommend notion AI to just about anyone
+18:18
+who listen it basically acts like Chad GPT inside your notion workspace summarizing notes generating text
+18:25
+creating lists bullet points even analyzing files and documents and writing code if you love notion already
+18:30
+this is the ultimate add-on if you're more of a Google person there's notebook llm you can drop in a video a website
+18:37
+link or any file and it'll analyze everything for you it even generates notes based on your uploaded files lets
+18:43
+you chat with them and can create quizzes you name it now if we suddenly lost Google Calendar or notion motion AI
+18:50
+would be my next go-to it's got built-in AI for managing tasks scheduling reminders and all that good stuff it's
+18:57
+more professional grade and might have a steeper learning curve but it can really streamline your workflow once you get
+19:03
+the hang of it of course there are a 100 AI tools out there literally and it's tough to pick the right one here's what
+19:09
+I usually do head to the AI tool finder in geek cademy describe my situation and let GE academ's AI dig up the best fits
+19:17
+for me saves a ton of time productivity can take many forms like building a website in record time with hokus you
+19:24
+just answer a few questions and boom it generates a fully functional nice looking site text images layout
+19:30
+optimization it does it all alternatively there's framer AI which does pretty much the same thing but has
+19:36
+its own spin on layouts honestly I choose based on which visuals you like best because the text and image
+19:41
+generation part is more or less the same across most of these Site Builders finally a confession I used to dread
+19:47
+taking meeting notes then I found otter it's just a browser extension you connect before your meeting and it
+19:52
+records and transcribes everything in real time it even captures images if you need it to now I can actually pay
+19:59
+attention during meetings without worrying about missing anything generating text is ai's bread and butter
+20:04
+so here are a few more tools for blogging creative writing and text
+Blogging, creative writing, and text editing
+20:10
+editing because sometimes you just need a specialized option like uh pseudo write which has been trained
+20:16
+specifically on creative writing think novels and short stories it can suggest plot tweaks for bigger impact generate
+20:23
+fresh dialogue where it's needed and help polish your style so everything reads smoothly quill goes above and
+20:29
+beyond platforms like chat GPT by offering a built-in paraphraser grammar checker plagiarism Checker and
+20:36
+summarization tool you just paste in your text and edit away keeping full control of the final output if you're
+20:42
+really serious about writing and don't want AI to steal your personal flare you need a toll that suggests changes rather
+20:48
+than autof fixing everything that's where Lex AI comes in you upload your draft it gives feedback and comments and
+20:55
+you decide which suggestions to accept it's optimized for folks who plan on publishing their work so it's ready for
+21:00
+Prime Time a more all-in one toe should not only write but also rewrite reply to
+21:05
+emails edit and do research basically a Chad GPT with all the knobs turned up
+21:11
+I'd go with hyperr right for that reliable straightforward and versatile or you could try writer for more
+21:16
+demanding projects it focuses on sounding human matching a realistic writing style instead of spitting out
+21:22
+words for the sake of it despite having a bunch of features it's still easy to navigate you'll always know where to
+21:28
+click and what to fill in you can even use it without filling with complicated prompts so send it to your mom if you
+21:33
+like if she or you work in the office or at the uni you might need a presentation
+Presentation builders
+21:41
+Builder and you probably want something fast and reliable slides wizard is a great place to start you just type in a
+21:48
+topic and it creates up a structured outline all the text and even images for your slides it's a simple and quick fix
+21:54
+for anyone who's new to making slides I love TOS that play nicely with other and having a chat GPT plugin is usually a
+22:01
+good sign smart slides is the only one on this list that has that it's also got improved built-in charting compared to
+22:07
+other TOS many of them don't do chars at all plus it's pretty flexible when it comes to layouts sometimes even that's
+22:12
+not enough and you need to get really creative with your slides slide flow offers loads of editing options so your
+22:19
+presentation looks and feels One of a Kind the truth is good presentations need good visuals so it's worth picking
+22:26
+a toll based on how the final slides look that's why we have presentation templates slides go for example has a
+22:32
+bunch of AI generated templates you can customize you can tweak Styles set the tone and even use built-in AI to add
+22:39
+images or translate slides I prefer my presentations to be a bit more fun more interactive you know like polls quizzes
+22:46
+and audience q&as that's where send steps comes in it gives your viewers a chance to participate which makes the
+22:53
+info easier to take in I really wish I'd had these TOS when I was a student all I ever did was toss in some animations and
+23:00
+hope for the best but now ai can even do that for you presentations AI doesn't just add animations to whole slides or
+23:06
+specific elements it'll also automatically adjust layouts and movement to fit your content while you
+23:12
+just sit back and chill I want to say every presentation generator is unique but let's be honest they're pretty
+23:17
+similar beautiful AI is another tool that covers most of the same bases AI templates easy editing and automatic
+23:23
+content generation but somehow the slides it generates just look more polished to me I can't explain it they
+23:29
+just do on the flip side sometimes the simplest solution is the best pitch is great if you want to create up something
+23:35
+super fast without paying a ton of money you just describe the presentation and that's it no fancy customization or
+23:42
+extra settings you get what you get and there's a certain charm to that Simplicity if you want to create your own infographics to drop into your
+23:48
+slides try my lens AI it doesn't generate presentations but it does produce a variety of charts graphs and
+23:54
+other visuals you can even have a dig for data on the web and do a bunch of different inputs oh and it's totally
+Dev Tools
+24:00
+free so you've got nothing to lose I feel like I'm forgetting something that's right developers sorry guys my
+24:07
+bad here's some cold toes for you and if that's not enough we've just posted a list of AI toes for developers in GE
+24:13
+Academy all with explanations and tips on building an efficient development
+24:19
+workflow for everyday code and help you can always just stick with Chad GPT or Gro but they don't really integrate with
+24:26
+your development environment if you're using vs code for instance tabn is worth a look it's got predictive autocomplete
+24:32
+filling in entire functions and shaving off keystrokes as you type it also comes with an AI chat feature so you can ask
+24:39
+for explanations debug tips and ideas without leaving your editor GitHub co-pilot X offers a slightly different
+24:46
+experience one feature I love is generate from comments you write a plain English comment and co-pilot turns it
+24:53
+into fully functional code it can also generate entire functions suggest Snippets and finisher code for you
+25:00
+co-pilot is powered by open AI codex but there are other specialized options code T5 for example has a different
+25:07
+architecture and produces slightly different results though still very Solid Source AI also uses codex and
+25:13
+covers the same Basics as co-pilot rewriting bug fixes suggestions just without that Nifty generate from
+25:19
+comments feature most Dev focused AI tools tend to do the same sorts of things so it comes down to what you're
+25:25
+personally comfortable with having more options is always a good thing another Contender is mutable which can refactor
+25:32
+your code generate documentation and even review your code but it's basically like all the other TOS here but Amazon
+25:39
+code whisper might beat them all it supports multiple programming languages integrates with popular idees and offers
+25:45
+realtime code suggestions you can also generate unit tests run security scans and crucially it's a license aware so
+25:52
+you're not accidentally ripping off someone else's code I'm not much of a developer myself but I can appreciate a
+25:58
+good toll though research might be more of my thing my all-time favorite for research
+Research
+26:05
+is perplexity we even did a whole video about it recently it's just amazing super detailed in-depth userfriendly and
+26:13
+best of all free for the majority of your research needs you won't even need a subscription it's hard to top
+26:19
+perplexity though Chad gbt's deep research is catching up it takes about 5 to 10 minutes to generate an answer but
+26:26
+rather than just throwing quotes at it synthesizes everything it finds pair that with its reasoning abilities and
+26:32
+you've got a pretty solid tool these two options are high level but sometimes you just want simple summarizing especially
+26:39
+for academic research scholar C was specially trained on research papers students and teachers will notice how it
+26:45
+digs deeper pulls out key findings and highlights citations in a super useful way elicit does basically the same thing
+26:52
+ask a question and it'll analyze research papers to pull out the major points summarize findings and highlight
+26:59
+citations I'm including it because it works really well and it's always best to cross check your research with
+27:04
+multiple tools right but what about audio don't throw away those lecture recordings feed them to deep gram AI it
+27:11
+transcribes your audio then summarizes it so it's easy to follow and understand you can do the same with videos just
+27:17
+paste a link into summarize Tech wait for it to process and then it gives you a breakdown and neat 5 minute chunks
+27:24
+perfect for getting the gist without investing a bunch of time in watching the whole video at this point you might
+No category
+27:30
+be wondering how can AI TOS be even more categorized I have some thoughts so instead of coming up with the solution
+27:37
+I'm just going to dump a bunch of TOS that didn't fit into any category at least in my
+27:43
+opinion durable creates websites from scratch just enter a few details about your business and within a minute bam
+27:51
+you've got a fully designed site with text images and layout ready to roll they also throw in invoicing CRM and AI
+27:57
+driven marketing tools to help run your whole operation online that shiny new business of yours definitely needs some
+28:03
+branding and if you want a sneak peek of how that branding looks in the real world tailor Brands is your go-to it
+28:09
+pumps out logos brand kits marketing materials and even business cards based on your preferences zero design skills
+28:16
+needed and no need to spend hours tinkering in Photoshop and of course your business is going to need ads
+28:22
+specifically video ads if you're stumped just drop a product description or link into creative ify Ai and it'll generate
+28:29
+video ads complete with visuals voiceovers and background music movie quotes got your attention right get yarn
+28:36
+Dio lets you search and grab clips from TV shows movies and music videos perfect for memes social media or spicing up
+28:43
+your post with just the right moment fun fact that gift you saw in a geek Academy post came straight from there need
+28:49
+another summarization tool for the road adify might be your best friend it's a Chrome extension that with one click
+28:56
+summarizes any video super straightforward great quality plus a decent free version I use it all the
+29:02
+time for social media managers handling post ideas captions or hashtags hoot sweet owy Rider is a solid pick it's
+29:09
+simple but powerful suggesting content and helping you optimize everything for each platform it's kind of like having a
+29:16
+personal assistant but not quite the one with assistant in its name is buffer AI assistant it can write schedule and
+29:23
+optimize your posts so you stay consistent without killing hours every week I just wish it work with Discord
+29:29
+life would be so much easier finally the last toll in the entire internet kidding but it's pretty great Cactus AI it's
+29:36
+perfect for students writing essays generating paragraphs solving math problems detecting AI tons of Handy
+29:42
+stuff even if you're not a student give it a shot it's pretty cool all around have you tried any of these Toes or all
+29:48
+of them I'd love to read your comments about the toes you use that aren't on this list thanks for watching and see
+29:54
+you in the next one
+

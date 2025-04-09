@@ -1,0 +1,4150 @@
+﻿Replit Quick Start Prompt for Remote Work Platform MVP
+Initial Setup Instructions
+1. Go to Replit
+2. Create a new Next.js repl using their template
+3. Use the following steps to build your basic MVP
+Step 1: Install Dependencies
+In the Replit shell, run:
+bash
+Copy
+npm install framer-motion zustand react-hook-form zod @hookform/resolvers @radix-ui/react-icons date-fns
+Also, let's set up Shadcn UI:
+bash
+Copy
+npx shadcn-ui@latest init
+# Then follow the prompts:
+# - Use TypeScript: Yes
+# - Style: Default (or your preference)
+# - Use CSS variables: Yes
+# - Confirm the remaining options with defaults
+After that, install some basic components:
+bash
+Copy
+npx shadcn-ui@latest add button card form input toast tabs textarea avatar
+Step 2: Create Basic File Structure
+Create these folders and files:
+Copy
+- app
+  - page.tsx (landing page)
+  - login/page.tsx (login screen)
+  - dashboard/page.tsx (main dashboard)
+  - assessment/create/page.tsx (create assessment)
+  - assessment/[id]/page.tsx (take or review assessment)
+- components
+  - ui/ (shadcn components will go here)
+  - auth/LoginForm.tsx
+  - dashboard/DashboardStats.tsx
+  - dashboard/ActivityFeed.tsx
+  - assessment/AssessmentForm.tsx
+  - assessment/AssessmentView.tsx
+  - assessment/TimerComponent.tsx
+  - layout/MainNav.tsx
+  - layout/ProjectRoadmap.tsx
+- lib
+  - utils.ts (utility functions)
+  - schema.ts (zod validation schemas)
+- store
+  - auth-store.ts (authentication state)
+  - assessment-store.ts (assessment data)
+- types
+  - index.ts (type definitions)
+Step 3: Create Mock Data Types
+In types/index.ts:
+typescript
+Copy
+// User types
+export type UserRole = "admin" | "employer" | "candidate";
+
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: UserRole;
+}
+
+
+// Assessment types
+export interface Assessment {
+  id: string;
+  title: string;
+  description: string;
+  researchTopic: string;
+  expectedDeliverables: string;
+  timeLimit: number; // in minutes
+  evaluationCriteria: EvaluationCriterion[];
+  createdBy: string;
+  createdAt: Date;
+}
+
+
+export interface EvaluationCriterion {
+  id: string;
+  name: string;
+  description: string;
+  maxScore: number;
+}
+
+
+export interface AssessmentSubmission {
+  id: string;
+  assessmentId: string;
+  candidateId: string;
+  content: string;
+  fileUrls: string[];
+  submittedAt: Date;
+  scores?: {
+    criterionId: string;
+    score: number;
+  }[];
+  feedback?: string;
+  status: "pending" | "reviewed" | "passed" | "failed";
+}
+Step 4: Create Auth Store
+In store/auth-store.ts:
+typescript
+Copy
+import { create } from 'zustand';
+import { User, UserRole } from '@/types';
+
+
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<boolean>;
+  logout: () => void;
+}
+
+
+// Mock users
+const mockUsers = [
+  { id: '1', name: 'Admin User', email: 'admin@example.com', password: 'admin123', role: 'admin' as UserRole },
+  { id: '2', name: 'Employer User', email: 'employer@example.com', password: 'employer123', role: 'employer' as UserRole },
+  { id: '3', name: 'Candidate User', email: 'candidate@example.com', password: 'candidate123', role: 'candidate' as UserRole },
+];
+
+
+export const useAuthStore = create<AuthState>((set) => ({
+  user: null,
+  isAuthenticated: false,
+  login: async (email, password) => {
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    const user = mockUsers.find(u => u.email === email && u.password === password);
+    
+    if (user) {
+      const { password, ...userWithoutPassword } = user;
+      set({ user: userWithoutPassword, isAuthenticated: true });
+      return true;
+    }
+    
+    return false;
+  },
+  logout: () => {
+    set({ user: null, isAuthenticated: false });
+  }
+}));
+Step 5: Create Assessment Store
+In store/assessment-store.ts:
+typescript
+Copy
+import { create } from 'zustand';
+import { Assessment, AssessmentSubmission, EvaluationCriterion } from '@/types';
+
+
+interface AssessmentState {
+  assessments: Assessment[];
+  submissions: AssessmentSubmission[];
+  createAssessment: (assessment: Omit<Assessment, 'id' | 'createdAt'>) => void;
+  getAssessment: (id: string) => Assessment | undefined;
+  submitAssessment: (submission: Omit<AssessmentSubmission, 'id' | 'submittedAt' | 'status'>) => void;
+  reviewSubmission: (id: string, scores: { criterionId: string; score: number }[], feedback: string, status: 'passed' | 'failed') => void;
+}
+
+
+// Initialize with some sample data
+const initialAssessments: Assessment[] = [
+  {
+    id: '1',
+    title: 'AI Ethics Research',
+    description: 'An assessment to evaluate research skills in AI ethics',
+    researchTopic: 'Investigate current ethical frameworks applied to generative AI systems.',
+    expectedDeliverables: 'A 500-word summary of findings with at least 3 cited sources.',
+    timeLimit: 60,
+    evaluationCriteria: [
+      { id: '1', name: 'Research Depth', description: 'Depth of sources and investigation', maxScore: 10 },
+      { id: '2', name: 'Critical Analysis', description: 'Quality of analysis and insight', maxScore: 10 },
+      { id: '3', name: 'Clarity', description: 'Clear communication of findings', maxScore: 5 },
+    ],
+    createdBy: '1',
+    createdAt: new Date('2023-01-01'),
+  },
+];
+
+
+export const useAssessmentStore = create<AssessmentState>((set, get) => ({
+  assessments: initialAssessments,
+  submissions: [],
+  
+  createAssessment: (assessmentData) => {
+    const newAssessment: Assessment = {
+      ...assessmentData,
+      id: Date.now().toString(),
+      createdAt: new Date(),
+    };
+    
+    set(state => ({
+      assessments: [...state.assessments, newAssessment]
+    }));
+  },
+  
+  getAssessment: (id) => {
+    return get().assessments.find(a => a.id === id);
+  },
+  
+  submitAssessment: (submissionData) => {
+    const newSubmission: AssessmentSubmission = {
+      ...submissionData,
+      id: Date.now().toString(),
+      submittedAt: new Date(),
+      status: 'pending'
+    };
+    
+    set(state => ({
+      submissions: [...state.submissions, newSubmission]
+    }));
+  },
+  
+  reviewSubmission: (id, scores, feedback, status) => {
+    set(state => ({
+      submissions: state.submissions.map(sub => 
+        sub.id === id 
+          ? { ...sub, scores, feedback, status } 
+          : sub
+      )
+    }));
+  }
+}));
+Step 6: Create Login Form Component
+In components/auth/LoginForm.tsx:
+tsx
+Copy
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useAuthStore } from '@/store/auth-store';
+
+
+const formSchema = z.object({
+  email: z.string().email({ message: 'Please enter a valid email address' }),
+  password: z.string().min(1, { message: 'Password is required' }),
+});
+
+
+export function LoginForm() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const login = useAuthStore(state => state.login);
+  const router = useRouter();
+
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
+
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    setError('');
+    
+    try {
+      const success = await login(values.email, values.password);
+      
+      if (success) {
+        router.push('/dashboard');
+      } else {
+        setError('Invalid email or password');
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg"
+    >
+      <div className="text-center">
+        <h2 className="text-3xl font-extrabold">Welcome Back</h2>
+        <p className="mt-2 text-sm text-gray-600">Sign in to access the platform</p>
+      </div>
+      
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="you@example.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input type="password" placeholder="********" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          {error && <p className="text-sm font-medium text-red-500">{error}</p>}
+          
+          <Button 
+            type="submit" 
+            className="w-full" 
+            disabled={isLoading}
+          >
+            {isLoading ? 'Signing in...' : 'Sign in'}
+          </Button>
+        </form>
+      </Form>
+      
+      <div className="text-center text-sm text-gray-500">
+        <p>Demo credentials:</p>
+        <p>Admin: admin@example.com / admin123</p>
+        <p>Employer: employer@example.com / employer123</p>
+        <p>Candidate: candidate@example.com / candidate123</p>
+      </div>
+    </motion.div>
+  );
+}
+Step 7: Create Login Page
+In app/login/page.tsx:
+tsx
+Copy
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { LoginForm } from '@/components/auth/LoginForm';
+import { useAuthStore } from '@/store/auth-store';
+
+
+export default function LoginPage() {
+  const isAuthenticated = useAuthStore(state => state.isAuthenticated);
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push('/dashboard');
+    }
+  }, [isAuthenticated, router]);
+  
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <LoginForm />
+    </div>
+  );
+}
+Step 8: Create Timer Component
+In components/assessment/TimerComponent.tsx:
+tsx
+Copy
+'use client';
+
+
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+
+interface TimerProps {
+  durationMinutes: number;
+  onTimeEnd: () => void;
+}
+
+
+export function TimerComponent({ durationMinutes, onTimeEnd }: TimerProps) {
+  const [timeLeft, setTimeLeft] = useState(durationMinutes * 60);
+  const [isWarning, setIsWarning] = useState(false);
+  
+  useEffect(() => {
+    if (timeLeft <= 0) {
+      onTimeEnd();
+      return;
+    }
+    
+    const interval = setInterval(() => {
+      setTimeLeft(prev => prev - 1);
+    }, 1000);
+    
+    // Set warning when 20% time left
+    if (timeLeft <= durationMinutes * 60 * 0.2 && !isWarning) {
+      setIsWarning(true);
+    }
+    
+    return () => clearInterval(interval);
+  }, [timeLeft, durationMinutes, onTimeEnd, isWarning]);
+  
+  const hours = Math.floor(timeLeft / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
+  const seconds = timeLeft % 60;
+  
+  const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  
+  return (
+    <motion.div
+      className={`p-3 rounded-lg ${isWarning ? 'bg-red-50' : 'bg-gray-50'}`}
+      animate={{ scale: isWarning && timeLeft % 2 === 0 ? 1.05 : 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="text-center">
+        <p className="text-sm font-medium text-gray-500">Time Remaining</p>
+        <p className={`text-2xl font-bold ${isWarning ? 'text-red-600' : 'text-gray-800'}`}>
+          {timeString}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+Step 9: Create Root Page with Redirection
+In app/page.tsx:
+tsx
+Copy
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuthStore } from '@/store/auth-store';
+
+
+export default function HomePage() {
+  const isAuthenticated = useAuthStore(state => state.isAuthenticated);
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push('/dashboard');
+    } else {
+      router.push('/login');
+    }
+  }, [isAuthenticated, router]);
+  
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <p className="text-xl">Redirecting...</p>
+    </div>
+  );
+}
+Step 10: Create Layout Component
+In app/layout.tsx:
+tsx
+Copy
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+
+const inter = Inter({ subsets: ['latin'] });
+
+
+export const metadata: Metadata = {
+  title: 'Research Assessment Platform',
+  description: 'Evaluate deep research capabilities of remote candidates',
+};
+
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}
+Step 11: Create Dashboard Page
+In app/dashboard/page.tsx:
+tsx
+Copy
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuthStore } from '@/store/auth-store';
+import { useAssessmentStore } from '@/store/assessment-store';
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+
+
+export default function DashboardPage() {
+  const { user, isAuthenticated, logout } = useAuthStore();
+  const { assessments, submissions } = useAssessmentStore();
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push('/login');
+    }
+  }, [isAuthenticated, router]);
+  
+  if (!isAuthenticated || !user) {
+    return null;
+  }
+  
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <h1 className="text-xl font-bold">Research Assessment Platform</h1>
+            </div>
+            <div className="flex items-center">
+              <p className="mr-4">Hello, {user.name}</p>
+              <Button variant="outline" onClick={logout}>Logout</Button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="px-4 py-6 sm:px-0">
+            <div className="border-4 border-dashed border-gray-200 rounded-lg p-4 h-96">
+              <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
+              
+              {user.role === 'admin' || user.role === 'employer' ? (
+                <div className="mb-6">
+                  <Button onClick={() => router.push('/assessment/create')}>
+                    Create New Assessment
+                  </Button>
+                  
+                  <div className="mt-4">
+                    <h3 className="text-lg font-medium">Existing Assessments</h3>
+                    {assessments.length > 0 ? (
+                      <ul className="mt-2 divide-y divide-gray-200">
+                        {assessments.map(assessment => (
+                          <li key={assessment.id} className="py-3">
+                            <a 
+                              href={`/assessment/${assessment.id}`}
+                              className="block hover:bg-gray-50 transition duration-150 ease-in-out"
+                            >
+                              <div className="px-4 py-2">
+                                <p className="text-sm font-medium text-indigo-600">{assessment.title}</p>
+                                <p className="text-sm text-gray-500">{assessment.description}</p>
+                              </div>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-gray-500 mt-2">No assessments created yet.</p>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className="mb-6">
+                  <h3 className="text-lg font-medium">Available Assessments</h3>
+                  {assessments.length > 0 ? (
+                    <ul className="mt-2 divide-y divide-gray-200">
+                      {assessments.map(assessment => (
+                        <li key={assessment.id} className="py-3">
+                          <a 
+                            href={`/assessment/${assessment.id}`}
+                            className="block hover:bg-gray-50 transition duration-150 ease-in-out"
+                          >
+                            <div className="px-4 py-2">
+                              <p className="text-sm font-medium text-indigo-600">{assessment.title}</p>
+                              <p className="text-sm text-gray-500">{assessment.description}</p>
+                            </div>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-gray-500 mt-2">No assessments available.</p>
+                  )}
+                </div>
+              )}
+              
+              <div>
+                <h3 className="text-lg font-medium">Platform Updates</h3>
+                <div className="mt-2 p-3 bg-blue-50 rounded-md">
+                  <p className="text-sm text-blue-700">
+                    <span className="font-medium">Coming soon:</span> Enhanced analytics, video interviews, and skill assessments. Check back for updates!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </main>
+    </div>
+  );
+}
+Step 12: Create Assessment View Page
+In app/assessment/[id]/page.tsx:
+tsx
+Copy
+'use client';
+
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuthStore } from '@/store/auth-store';
+import { useAssessmentStore } from '@/store/assessment-store';
+import { TimerComponent } from '@/components/assessment/TimerComponent';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { motion } from 'framer-motion';
+
+
+export default function AssessmentPage({ params }: { params: { id: string } }) {
+  const [content, setContent] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const { user, isAuthenticated } = useAuthStore();
+  const { getAssessment, submitAssessment, submissions } = useAssessmentStore();
+  const router = useRouter();
+  
+  const assessment = getAssessment(params.id);
+  
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push('/login');
+    }
+  }, [isAuthenticated, router]);
+  
+  useEffect(() => {
+    if (assessment) {
+      // Check if user has already submitted this assessment
+      const existingSubmission = submissions.find(
+        s => s.assessmentId === assessment.id && s.candidateId === user?.id
+      );
+      
+      if (existingSubmission) {
+        setContent(existingSubmission.content);
+        setIsSubmitted(true);
+      }
+    }
+  }, [assessment, submissions, user]);
+  
+  if (!isAuthenticated || !user || !assessment) {
+    return null;
+  }
+  
+  const handleSubmit = () => {
+    if (!content.trim()) {
+      alert('Please provide your research findings before submitting.');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    // Submit assessment
+    submitAssessment({
+      assessmentId: assessment.id,
+      candidateId: user.id,
+      content,
+      fileUrls: [],
+    });
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+  
+  const handleTimeEnd = () => {
+    if (!isSubmitted) {
+      alert('Time is up! Your assessment will be submitted automatically.');
+      handleSubmit();
+    }
+  };
+  
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <a href="/dashboard" className="text-xl font-bold">Research Assessment Platform</a>
+            </div>
+            <div className="flex items-center">
+              {!isSubmitted && (
+                <TimerComponent 
+                  durationMinutes={assessment.timeLimit} 
+                  onTimeEnd={handleTimeEnd} 
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white shadow-sm rounded-lg p-6"
+        >
+          <h1 className="text-2xl font-bold mb-2">{assessment.title}</h1>
+          <p className="text-gray-600 mb-6">{assessment.description}</p>
+          
+          <div className="border-t border-b border-gray-200 py-4 my-4">
+            <h2 className="text-lg font-medium mb-2">Research Topic</h2>
+            <p className="mb-4">{assessment.researchTopic}</p>
+            
+            <h2 className="text-lg font-medium mb-2">Expected Deliverables</h2>
+            <p>{assessment.expectedDeliverables}</p>
+          </div>
+          
+          {user.role === 'candidate' ? (
+            <div className="mt-6">
+              <h2 className="text-lg font-medium mb-2">Your Research Findings</h2>
+              <Textarea
+                placeholder="Enter your research findings here..."
+                className="min-h-[200px] w-full"
+                value={content}
+                onChange={e => setContent(e.target.value)}
+                disabled={isSubmitted}
+              />
+              
+              {!isSubmitted ? (
+                <Button
+                  className="mt-4"
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit Assessment'}
+                </Button>
+              ) : (
+                <div className="mt-4 p-3 bg-green-50 rounded-md">
+                  <p className="text-green-700 font-medium">Your assessment has been submitted!</p>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="mt-6">
+              <h2 className="text-lg font-medium mb-2">Evaluation Criteria</h2>
+              <ul className="list-disc pl-5">
+                {assessment.evaluationCriteria.map(criterion => (
+                  <li key={criterion.id} className="mb-2">
+                    <span className="font-medium">{criterion.name}</span> ({criterion.maxScore} points) - {criterion.description}
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mt-6">
+                <Button onClick={() => router.push('/dashboard')}>
+                  Back to Dashboard
+                </Button>
+              </div>
+            </div>
+          )}
+        </motion.div>
+      </main>
+    </div>
+  );
+}
+Step 13: Create Assessment Form Page
+tsx
+Copy
+'use client';
+
+
+In app/assessment/create/page.tsx:
+
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useAuthStore } from '@/store/auth-store';
+import { useAssessmentStore } from '@/store/assessment-store';
+import { EvaluationCriterion } from '@/types';
+import { motion } from 'framer-motion';
+
+
+const formSchema = z.object({
+  title: z.string().min(3, { message: 'Title must be at least 3 characters' }),
+  description: z.string().min(10, { message: 'Description must be at least 10 characters' }),
+  researchTopic: z.string().min(10, { message: 'Research topic must be at least 10 characters' }),
+  expectedDeliverables: z.string().min(10, { message: 'Deliverables must be at least 10 characters' }),
+  timeLimit: z.coerce.number().min(10, { message: 'Time limit must be at least 10 minutes' }),
+});
+
+
+export default function CreateAssessmentPage() {
+  const [criteria, setCriteria] = useState<EvaluationCriterion[]>([
+    { id: Date.now().toString(), name: 'Research Depth', description: 'Depth of sources and research', maxScore: 10 }
+  ]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const { user, isAuthenticated } = useAuthStore();
+  const { createAssessment } = useAssessmentStore();
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push('/login');
+    } else if (user && user.role === 'candidate') {
+      router.push('/dashboard');
+    }
+  }, [isAuthenticated, user, router]);
+  
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      title: '',
+      description: '',
+      researchTopic: '',
+      expectedDeliverables: '',
+      timeLimit: 60,
+    },
+  });
+  
+  const addCriterion = () => {
+    setCriteria([
+      ...criteria,
+      { 
+        id: Date.now().toString(), 
+        name: '', 
+        description: '', 
+        maxScore: 5
+      }
+    ]);
+  };
+  
+  const updateCriterion = (id: string, field: keyof EvaluationCriterion, value: any) => {
+    setCriteria(criteria.map(c => 
+      c.id === id ? { ...c, [field]: field === 'maxScore' ? Number(value) : value } : c
+    ));
+  };
+  
+  const removeCriterion = (id: string) => {
+    if (criteria.length > 1) {
+      setCriteria(criteria.filter(c => c.id !== id));
+    }
+  };
+  
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    if (!user) return;
+    
+    // Validate criteria
+    const isValidCriteria = criteria.every(c => 
+      c.name.trim() && c.description.trim() && c.maxScore > 0
+    );
+    
+    if (!isValidCriteria) {
+      alert('Please fill out all evaluation criteria properly.');
+   if (!isValidCriteria) {
+      alert('Please fill out all evaluation criteria properly.');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      createAssessment({
+        ...values,
+        evaluationCriteria: criteria,
+        createdBy: user.id,
+      });
+      
+      router.push('/dashboard');
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
+  if (!isAuthenticated || !user || user.role === 'candidate') {
+    return null;
+  }
+  
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <a href="/dashboard" className="text-xl font-bold">Research Assessment Platform</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white shadow-sm rounded-lg p-6"
+        >
+          <h1 className="text-2xl font-bold mb-6">Create Research Assessment</h1>
+          
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Assessment Title</FormLabel>
+                    <FormControl>
+                      <Input placeholder="e.g., AI Ethics Research Assessment" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="description"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Assessment Description</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Describe the purpose of this assessment" 
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="researchTopic"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Research Topic</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Provide the research topic for candidates" 
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="expectedDeliverables"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Expected Deliverables</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Describe what candidates should submit" 
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="timeLimit"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Time Limit (minutes)</FormLabel>
+                    <FormControl>
+                      <Input type="number" min={10} {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <div>
+                <h2 className="text-lg font-medium mb-2">Evaluation Criteria</h2>
+                
+                <div className="space-y-4">
+                  {criteria.map((criterion, index) => (
+                    <motion.div 
+                      key={criterion.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex flex-col md:flex-row gap-4 p-4 border border-gray-200 rounded-md"
+                    >
+                      <div className="flex-1">
+                        <FormLabel>Criterion Name</FormLabel>
+                        <Input 
+                          value={criterion.name} 
+                          onChange={(e) => updateCriterion(criterion.id, 'name', e.target.value)}
+                          placeholder="e.g., Research Depth"
+                        />
+                      </div>
+                      
+                      <div className="flex-1">
+                        <FormLabel>Description</FormLabel>
+                        <Input 
+                          value={criterion.description} 
+                          onChange={(e) => updateCriterion(criterion.id, 'description', e.target.value)}
+                          placeholder="Describe what you're evaluating"
+                        />
+                      </div>
+                      
+                      <div className="w-24">
+                        <FormLabel>Max Score</FormLabel>
+                        <Input 
+                          type="number" 
+                          min={1}
+                          max={20}
+                          value={criterion.maxScore} 
+                          onChange={(e) => updateCriterion(criterion.id, 'maxScore', e.target.value)}
+                        />
+                      </div>
+                      
+                      <div className="flex items-end">
+                        <Button 
+                          type="button" 
+                          variant="outline" 
+                          size="icon"
+                          onClick={() => removeCriterion(criterion.id)}
+                          disabled={criteria.length <= 1}
+                        >
+                          &times;
+                        </Button>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+                
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  onClick={addCriterion}
+                  className="mt-2"
+                >
+                  Add Criterion
+                </Button>
+              </div>
+              
+              <div className="flex gap-4 pt-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => router.push('/dashboard')}
+                >
+                  Cancel
+                </Button>
+                
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Creating...' : 'Create Assessment'}
+                </Button>
+              </div>
+            </form>
+          </Form>
+        </motion.div>
+      </main>
+    </div>
+  );
+}
+Step 14: Create a Project Roadmap Component
+In components/layout/ProjectRoadmap.tsx:
+tsx
+Copy
+import { motion } from 'framer-motion';
+
+
+export function ProjectRoadmap() {
+  const phases = [
+    {
+      title: "Phase 1: Project Initialization",
+      tasks: ["Project setup", "Database schema design", "Core services"],
+      status: "completed"
+    },
+    {
+      title: "Phase 2: Frontend Foundation",
+      tasks: ["Core UI components", "Authentication UI", "Public pages"],
+      status: "in-progress"
+    },
+    {
+      title: "Phase 3: Candidate Features",
+      tasks: ["Registration", "Dashboard", "Job search"],
+      status: "upcoming"
+    },
+    {
+      title: "Phase 4: Employer Features",
+      tasks: ["Job posting", "Candidate management", "Client management"],
+      status: "upcoming"
+    },
+    {
+      title: "Phase 5: Admin & System",
+      tasks: ["Entity management", "Library data", "User permissions"],
+      status: "upcoming"
+    }
+  ];
+
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white p-4 rounded-lg shadow-sm"
+    >
+      <h2 className="text-xl font-bold mb-4">Project Roadmap</h2>
+      
+      <div className="space-y-4">
+        {phases.map((phase, index) => (
+          <div key={index} className="relative">
+            {index < phases.length - 1 && (
+              <div className="absolute top-6 left-4 w-0.5 h-full bg-gray-200 z-0" />
+            )}
+            
+            <div className="relative z-10 flex items-start gap-3">
+              <div 
+                className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                  phase.status === 'completed' 
+                    ? 'bg-green-100 text-green-700' 
+                    : phase.status === 'in-progress'
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'bg-gray-100 text-gray-500'
+                }`}
+              >
+                {phase.status === 'completed' 
+                  ? '✓' 
+                  : phase.status === 'in-progress'
+                  ? '→'
+                  : (index + 1)}
+              </div>
+              
+              <div>
+                <h3 className={`font-medium ${
+                  phase.status === 'completed' 
+                    ? 'text-green-700' 
+                    : phase.status === 'in-progress'
+                    ? 'text-blue-700'
+                    : 'text-gray-700'
+                }`}>
+                  {phase.title}
+                </h3>
+                
+                <ul className="mt-1 text-sm text-gray-600">
+                  {phase.tasks.map((task, i) => (
+                    <li key={i} className="flex items-center">
+                      <span className="mr-1">•</span> {task}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div className="mt-6 p-3 bg-blue-50 rounded-md text-sm text-blue-700">
+        <p className="font-medium">Current Focus: Research Assessment MVP</p>
+        <p>The current MVP demonstrates core assessment functionality while the full platform is under development.</p>
+      </div>
+    </motion.div>
+  );
+}
+Step 15: Update Dashboard to Include Roadmap
+Update the app/dashboard/page.tsx file to include the roadmap component:
+tsx
+Copy
+// Add this import at the top
+import { ProjectRoadmap } from '@/components/layout/ProjectRoadmap';
+
+
+// Then add this inside the main content area, after the existing content
+<div className="mt-8">
+  <ProjectRoadmap />
+</div>
+Step 16: Create Simulated Real-time Updates
+Add this to app/dashboard/page.tsx after the ProjectRoadmap:
+tsx
+Copy
+<div className="mt-8">
+  <h3 className="text-lg font-medium mb-2">Development Updates</h3>
+  <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.5 }}
+    className="bg-white p-4 rounded-lg shadow-sm"
+  >
+    <div className="flex items-center mb-2">
+      <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+      <p className="text-sm text-gray-500">Backend development in progress</p>
+    </div>
+    
+    <ul className="space-y-2 text-sm">
+      <li className="flex items-center text-green-700">
+        <span className="mr-2">✓</span> Database schema implemented
+      </li>
+      <li className="flex items-center text-green-700">
+        <span className="mr-2">✓</span> Authentication services completed
+      </li>
+      <li className="flex items-center text-blue-700">
+        <span className="mr-2">→</span> Entity services in development
+      </li>
+      <li className="flex items-center text-gray-500">
+        <span className="mr-2">○</span> Workflow engine planned
+      </li>
+    </ul>
+    
+    <p className="mt-3 text-sm text-gray-600">
+      Last updated: {new Date().toLocaleString()}
+    </p>
+  </motion.div>
+</div>
+Running the Application
+You should now be able to click the "Run" button in Replit and see your application running in the built-in browser. The application should have:
+1. A login page with demo credentials
+2. A dashboard showing available assessments
+3. The ability to create new assessments (admin/employer only)
+4. An assessment view/taking page
+5. A project roadmap showing future development plans
+6. Simulated real-time updates on backend development
+
+
+This MVP focuses specifically on the deep research assessment functionality while hinting at the broader platform you're planning to build. You can use this as a starting point and then download the code to continue development in Cursor AI.
+Next Steps After Replit
+Once you're satisfied with the initial version in Replit:
+1. Download the project files from Replit
+2. Import them into your local development environment with Cursor AI
+3. Expand the functionality to integrate with your backend plan
+4. Refine the UI and add more sophisticated animations with Framer Motion
+5. Implement proper data persistence with your database
+Remember to regularly update the project roadmap to reflect your progress and keep track of the development schedule for the full platform.
+Retry
+Claude can make mistakes.
+Please double-check responses.
+
+
+
+
+Okay, this is a comprehensive guide to building a basic MVP for a remote work platform focused on research assessment within Replit. It covers installation, file structure, state management, component creation, and routing. Here's a breakdown of the steps, some observations, and suggestions for clarification and potential improvements.
+Overall Structure and Approach:
+* Good Foundation: The guide provides a solid foundation for a Next.js project with authentication, assessment creation/submission, and basic UI elements.
+* Shadcn UI Integration: The inclusion of Shadcn UI is a smart choice for rapid UI development and a consistent design system.
+* Zustand for State Management: Using Zustand is a good choice for simpler state management, especially for an MVP. It's easier to learn and implement than Redux for smaller projects.
+* Mock Data: The use of mock data is appropriate for the MVP stage.
+* Framer Motion: Adding Framer Motion is a nice touch for subtle animations and improving the user experience.
+Step-by-Step Breakdown with Observations and Suggestions:
+Initial Setup Instructions
+* Clear and straightforward.
+Step 1: Install Dependencies
+* npm install framer-motion zustand react-hook-form zod @hookform/resolvers @radix-ui/react-icons date-fns - Correct and comprehensive.
+* npx shadcn-ui@latest init - Correct. The prompts are listed which is helpful.
+* npx shadcn-ui@latest add button card form input toast tabs textarea avatar - Correct. This will add the basic components needed.
+Step 2: Create Basic File Structure
+* The suggested file structure is well-organized and follows common Next.js best practices. It helps separate concerns and makes the project more maintainable. Good.
+Step 3: Create Mock Data Types
+* The type definitions are clear, well-defined, and cover the core entities of the platform (User, Assessment, EvaluationCriterion, AssessmentSubmission). This is critical for TypeScript's type safety. Excellent.
+Step 4: Create Auth Store
+* The auth-store.ts uses zustand to manage authentication state.
+* Important: It uses a very simplified authentication with hardcoded users and passwords. This is fine for an MVP demonstration, but ABSOLUTELY MUST BE REPLACED with a secure authentication system (e.g., NextAuth.js, Firebase Auth, Supabase Auth) in a real application. Emphasize this security aspect strongly.
+* The login function simulates an API call with setTimeout. This is a good approach for the MVP to demonstrate asynchronous behavior.
+* The store correctly stores user information (excluding the password) and an isAuthenticated flag.
+Step 5: Create Assessment Store
+* assessment-store.ts manages assessment data and submissions using zustand.
+* It includes functions to create, retrieve, submit, and review assessments.
+* The createAssessment function generates a unique ID using Date.now().toString(). While this is simple, it's generally recommended to use a more robust UUID generation library (e.g., uuid) in a production environment to avoid potential collisions.
+* The reviewSubmission function updates the submission with scores, feedback, and status.
+* Includes sample data which is helpful.
+Step 6: Create Login Form Component
+* LoginForm.tsx implements the login form using react-hook-form, zod for validation, and Shadcn UI components.
+* It uses framer-motion for a smooth entrance animation.
+* The onSubmit function calls the login function from the auth-store and redirects to the dashboard on successful login. It also handles error states.
+* It displays demo credentials which is helpful.
+Step 7: Create Login Page
+* LoginPage.tsx redirects the user to the dashboard if they are already authenticated. This prevents authenticated users from accessing the login page. Good.
+Step 8: Create Timer Component
+* TimerComponent.tsx implements a countdown timer using useState and useEffect.
+* It triggers onTimeEnd when the timer reaches zero.
+* It provides a visual warning (background color change and scaling animation) when the time is running low. Nice touch.
+Step 9: Create Root Page with Redirection
+* page.tsx in the app directory redirects the user to the login page if they are not authenticated, and to the dashboard if they are. This acts as the main entry point for the application. Correct.
+Step 10: Create Layout Component
+* layout.tsx defines the root layout of the application, including the metadata (title and description) and the font. Good.
+Step 11: Create Dashboard Page
+* DashboardPage.tsx displays the main dashboard.
+* It fetches user information and assessments from the stores.
+* It provides links to create new assessments (for admin/employer roles) and view existing assessments.
+* It includes a logout button.
+* The use of motion.div for an entrance animation is a nice touch.
+* A section showing platform updates.
+Step 12: Create Assessment View Page
+* AssessmentPage.tsx displays the assessment details and allows candidates to submit their research findings.
+* It uses the TimerComponent to display the remaining time.
+* It disables the submission form if the assessment has already been submitted.
+* Correctly retrieves and displays the assessment.
+Step 13: Create Assessment Form Page
+* CreateAssessmentPage.tsx implements the assessment creation form.
+* It uses react-hook-form and zod for validation.
+* It allows the user to add and remove evaluation criteria.
+* The onSubmit function creates a new assessment and redirects to the dashboard.
+* Includes validation to make sure criteria is filled out.
+Step 14: Create a Project Roadmap Component
+* Provides a visual roadmap of the project. This is useful for demonstrating the future direction of the platform. Good.
+Step 15: Update Dashboard to Include Roadmap
+* Instructions on how to include the roadmap.
+Step 16: Create Simulated Real-time Updates
+* Adds simulated real-time updates on backend development. This enhances the sense of an evolving platform. Good.
+Running the Application
+* The summary of what the application should have is accurate.
+Next Steps After Replit
+* Clear and actionable. Downloading to Cursor AI is a good suggestion.
+Key Improvements and Clarifications:
+1. Security Emphasis: Add a very strong warning about the insecure nature of the mock authentication. Suggest replacing it with a proper authentication library like NextAuth.js immediately after the MVP stage. Provide a link to NextAuth.js documentation.
+2. UUID Generation: Suggest using a UUID library (e.g., uuid) for generating unique assessment IDs instead of Date.now().toString().
+3. Error Handling: Improve error handling in the createAssessment function. Instead of just alert('An error occurred. Please try again.'), log the error to the console for debugging purposes and display a more user-friendly error message.
+4. Code Formatting: Enforce consistent code formatting using Prettier or ESLint to improve code readability. (Often, Replit might already have this configured).
+5. Accessibility: Briefly mention the importance of accessibility (ARIA attributes, keyboard navigation) and encourage the use of accessible components from Shadcn UI.
+6. Deployment: Add a brief note about deploying the application to a platform like Vercel or Netlify after the initial development.
+Example Code Snippet Additions (Illustrative):
+* Security Warning (in 
+// WARNING: This is a VERY INSECURE authentication implementation for demonstration purposes only.
+// DO NOT use this in a production application.
+// Replace this with a secure authentication library like NextAuth.js (https://next-auth.js.org/).
+content_copy
+download
+Use code with caution.TypeScript
+* UUID Generation (in 
+import { v4 as uuidv4 } from 'uuid'; // Install with: npm install uuid
+
+
+// ...
+
+
+createAssessment: (assessmentData) => {
+    const newAssessment: Assessment = {
+      ...assessmentData,
+      id: uuidv4(), // Use UUID for ID generation
+      createdAt: new Date(),
+    };
+// ...
+content_copy
+download
+Use code with caution.TypeScript
+* Improved Error Handling (in 
+try {
+  // ...
+} catch (error) {
+  console.error("Error creating assessment:", error); // Log the error
+  alert('An error occurred while creating the assessment. Please try again.');
+} finally {
+  // ...
+}
+1. Add NextAuth.js for Google Authentication
+First, you'll need to install NextAuth.js in your Replit project:
+bash
+Copy
+npm install next-auth @auth/core @auth/prisma-adapter
+2. Create NextAuth Configuration
+Create a new file at app/api/auth/[...nextauth]/route.ts:
+typescript
+Copy
+import { NextAuthOptions } from "next-auth";
+import NextAuth from "next-auth/next";
+import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import { PrismaClient } from "@prisma/client";
+
+
+const prisma = new PrismaClient();
+
+
+export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+    }),
+  ],
+  session: {
+    strategy: "jwt",
+  },
+  callbacks: {
+    async session({ session, token }) {
+      if (token && session.user) {
+        session.user.id = token.sub as string;
+        session.user.role = token.role as string || "candidate"; // Default role
+      }
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.sub = user.id;
+        // If this is a new Google login, you can assign a default role
+        // You would typically check your database here to see if the user exists
+        token.role = "candidate"; // Default role for new Google users
+      }
+      return token;
+    },
+  },
+  pages: {
+    signIn: "/login",
+    error: "/login",
+  },
+};
+
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
+3. Update Your Environment Variables
+You'll need to add these to your .env file (or Replit environment variables):
+Copy
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+4. Modify Your Login Form Component
+Update your components/auth/LoginForm.tsx to include a Google login button:
+tsx
+Copy
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useAuthStore } from '@/store/auth-store';
+import { signIn } from 'next-auth/react';
+
+
+// Rest of your component as before
+
+
+// Inside your return statement, add this before or after your form:
+<div className="mt-6">
+  <div className="relative">
+    <div className="absolute inset-0 flex items-center">
+      <span className="w-full border-t border-gray-300" />
+    </div>
+    <div className="relative flex justify-center text-sm">
+      <span className="px-2 bg-white text-gray-500">Or continue with</span>
+    </div>
+  </div>
+  
+  <div className="mt-6">
+    <Button 
+      type="button" 
+      variant="outline" 
+      className="w-full" 
+      onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+    >
+      <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
+        <path
+          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+          fill="#4285F4"
+        />
+        <path
+          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+          fill="#34A853"
+        />
+        <path
+          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+          fill="#FBBC05"
+        />
+        <path
+          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+          fill="#EA4335"
+        />
+      </svg>
+      Sign in with Google
+    </Button>
+  </div>
+</div>
+5. Updating Your Login Page
+Update your app/login/page.tsx to use NextAuth:
+tsx
+Copy
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { LoginForm } from '@/components/auth/LoginForm';
+import { useSession } from 'next-auth/react';
+
+
+export default function LoginPage() {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.push('/dashboard');
+    }
+  }, [status, router]);
+  
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <LoginForm />
+    </div>
+  );
+}
+6. Add NextAuth Provider to Your Layout
+In your root layout (app/layout.tsx), wrap your application with the SessionProvider:
+tsx
+Copy
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { SessionProvider } from 'next-auth/react';
+
+
+const inter = Inter({ subsets: ['latin'] });
+
+
+export const metadata: Metadata = {
+  title: 'Research Assessment Platform',
+  description: 'Evaluate deep research capabilities of remote candidates',
+};
+
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <SessionProvider>{children}</SessionProvider>
+      </body>
+    </html>
+  );
+}
+7. Update Auth-Related Pages to Check for NextAuth Session
+Modify your dashboard and protected pages to check for the NextAuth session:
+tsx
+Copy
+'use client';
+
+
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+
+// Rest of your component
+
+
+export default function DashboardPage() {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/login');
+    }
+  }, [status, router]);
+  
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+  
+  if (!session) {
+    return null;
+  }
+  
+  // Your dashboard component content
+}
+8. Add Authentication to Your Project Plan
+Here's how you can update your project management plan to include Gmail authentication:
+Under Phase 1: Project Initialization & Core Architecture, update Milestone 1.3 to include:
+Copy
+Task 1.3.5: Implement Google OAuth Integration
+- [ ] Configure NextAuth.js with Google provider
+- [ ] Set up secure callback handling
+- [ ] Add role assignment for Google-authenticated users
+- [ ] Implement session management for Google logins
+- [ ] Test and verify Google authentication flow
+Under Phase 2: Frontend Foundation & Authentication, update Milestone 2.2 to include:
+Copy
+Task 2.2.4: Enhance Login Interface with OAuth
+- [ ] Create Google login button with appropriate styling
+- [ ] Implement login state management for social logins
+- [ ] Add error handling for OAuth authentication failures
+- [ ] Design user onboarding flow for first-time social login users
+Getting Google OAuth Credentials
+To make this work, you'll need to get Google OAuth credentials:
+1. Go to the Google Cloud Console
+2. Create a new project (or select an existing one)
+3. Go to "APIs & Services" > "Credentials"
+4. Create an "OAuth client ID"
+5. Set the application type to "Web application"
+6. Add authorized JavaScript origins (e.g., http://localhost:3000)
+7. Add authorized redirect URIs (e.g., http://localhost:3000/api/auth/callback/google)
+8. Save and copy your Client ID and Client Secret to your environment variables
+Local Development vs. Production
+Note that when you move from Replit to local development with Cursor AI, you'll need to:
+1. Update the NEXTAUTH_URL environment variable to your local development URL
+2. Update your Google OAuth credentials to include your development redirect URIs
+3. When deploying to production, update these values again to match your production domain
+By integrating Gmail authentication, you provide users with a quick and secure way to sign in without having to remember another password, which will improve your user experience and potentially increase sign-up rates.
+
+
+
+
+Backend Development Plan for Research Assessment MVP
+Core Backend Components
+1. Database Schema for Assessment Module
+Create a minimal version of the Prisma schema that supports the assessment functionality:
+prisma
+Copy
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+// User Management
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  role          String    @default("candidate") // "admin", "employer", "candidate"
+  passwordHash  String?   // Only for password-based auth
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  // Relations
+  accounts      Account[]
+  sessions      Session[]
+  assessments   Assessment[] @relation("CreatedBy")
+  submissions   AssessmentSubmission[]
+}
+
+
+// NextAuth Models
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+
+  @@unique([provider, providerAccountId])
+}
+
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+
+  @@unique([identifier, token])
+}
+
+
+// Research Assessment Models
+model Assessment {
+  id                  String    @id @default(cuid())
+  title               String
+  description         String
+  researchTopic       String    @db.Text
+  expectedDeliverables String    @db.Text
+  timeLimit           Int       // in minutes
+  createdById         String
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  
+  // Relations
+  createdBy           User      @relation("CreatedBy", fields: [createdById], references: [id])
+  criteria            EvaluationCriterion[]
+  submissions         AssessmentSubmission[]
+}
+
+
+model EvaluationCriterion {
+  id           String    @id @default(cuid())
+  assessmentId String
+  name         String
+  description  String
+  maxScore     Int
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  
+  // Relations
+  assessment   Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  scores       CriterionScore[]
+}
+
+
+model AssessmentSubmission {
+  id           String    @id @default(cuid())
+  assessmentId String
+  candidateId  String
+  content      String    @db.Text
+  fileUrls     String[]
+  submittedAt  DateTime  @default(now())
+  status       String    @default("pending") // "pending", "reviewed", "passed", "failed"
+  feedback     String?   @db.Text
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  
+  // Relations
+  assessment   Assessment @relation(fields: [assessmentId], references: [id])
+  candidate    User       @relation(fields: [candidateId], references: [id])
+  scores       CriterionScore[]
+}
+
+
+model CriterionScore {
+  id                  String    @id @default(cuid())
+  submissionId        String
+  criterionId         String
+  score               Int
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  
+  // Relations
+  submission          AssessmentSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  criterion           EvaluationCriterion  @relation(fields: [criterionId], references: [id])
+  
+  @@unique([submissionId, criterionId])
+}
+2. API Route Implementation
+Create the necessary API routes to support the assessment functionality:
+Authentication Endpoints
+typescript
+Copy
+// app/api/auth/[...nextauth]/route.ts
+// (Already implemented in the previous message)
+Assessment Management Endpoints
+typescript
+Copy
+// app/api/assessments/route.ts
+import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { PrismaClient } from '@prisma/client';
+import { authOptions } from '../auth/[...nextauth]/route';
+
+
+const prisma = new PrismaClient();
+
+
+// GET /api/assessments - List assessments
+export async function GET(request: Request) {
+  const session = await getServerSession(authOptions);
+  
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  try {
+    let assessments;
+    
+    // If user is a candidate, only show assessments they haven't submitted yet
+    if (session.user.role === 'candidate') {
+      assessments = await prisma.assessment.findMany({
+        include: {
+          createdBy: {
+            select: {
+              name: true,
+            },
+          },
+          submissions: {
+            where: {
+              candidateId: session.user.id,
+            },
+            select: {
+              id: true,
+            },
+          },
+        },
+      });
+      
+      // Filter out assessments the candidate has already submitted
+      assessments = assessments.filter(assessment => assessment.submissions.length === 0);
+    } else {
+      // Admin/employer can see all assessments
+      assessments = await prisma.assessment.findMany({
+        include: {
+          createdBy: {
+            select: {
+              name: true,
+            },
+          },
+          _count: {
+            select: {
+              submissions: true,
+            },
+          },
+        },
+      });
+    }
+    
+    return NextResponse.json(assessments);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+
+
+// POST /api/assessments - Create new assessment
+export async function POST(request: Request) {
+  const session = await getServerSession(authOptions);
+  
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  // Only admins and employers can create assessments
+  if (session.user.role !== 'admin' && session.user.role !== 'employer') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+  
+  try {
+    const body = await request.json();
+    
+    const assessment = await prisma.assessment.create({
+      data: {
+        title: body.title,
+        description: body.description,
+        researchTopic: body.researchTopic,
+        expectedDeliverables: body.expectedDeliverables,
+        timeLimit: body.timeLimit,
+        createdById: session.user.id,
+        criteria: {
+          create: body.evaluationCriteria.map((criterion: any) => ({
+            name: criterion.name,
+            description: criterion.description,
+            maxScore: criterion.maxScore,
+          })),
+        },
+      },
+      include: {
+        criteria: true,
+      },
+    });
+    
+    return NextResponse.json(assessment);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+typescript
+Copy
+// app/api/assessments/[id]/route.ts
+import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { PrismaClient } from '@prisma/client';
+import { authOptions } from '../../auth/[...nextauth]/route';
+
+
+const prisma = new PrismaClient();
+
+
+// GET /api/assessments/[id] - Get assessment details
+export async function GET(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  const session = await getServerSession(authOptions);
+  
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  try {
+    const assessment = await prisma.assessment.findUnique({
+      where: {
+        id: params.id,
+      },
+      include: {
+        criteria: true,
+        createdBy: {
+          select: {
+            name: true,
+            email: true,
+          },
+        },
+      },
+    });
+    
+    if (!assessment) {
+      return NextResponse.json({ error: 'Assessment not found' }, { status: 404 });
+    }
+    
+    // Check if candidate has already submitted this assessment
+    if (session.user.role === 'candidate') {
+      const submission = await prisma.assessmentSubmission.findFirst({
+        where: {
+          assessmentId: params.id,
+          candidateId: session.user.id,
+        },
+      });
+      
+      if (submission) {
+        return NextResponse.json({ 
+          ...assessment, 
+          submission 
+        });
+      }
+    }
+    
+    return NextResponse.json(assessment);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+Submission Endpoints
+typescript
+Copy
+// app/api/assessments/[id]/submissions/route.ts
+import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { PrismaClient } from '@prisma/client';
+import { authOptions } from '../../../auth/[...nextauth]/route';
+
+
+const prisma = new PrismaClient();
+
+
+// GET /api/assessments/[id]/submissions - List submissions for an assessment
+export async function GET(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  const session = await getServerSession(authOptions);
+  
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  // Only admins and employers can view all submissions
+  if (session.user.role !== 'admin' && session.user.role !== 'employer') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+  
+  try {
+    const submissions = await prisma.assessmentSubmission.findMany({
+      where: {
+        assessmentId: params.id,
+      },
+      include: {
+        candidate: {
+          select: {
+            name: true,
+            email: true,
+          },
+        },
+        scores: {
+          include: {
+            criterion: true,
+          },
+        },
+      },
+      orderBy: {
+        submittedAt: 'desc',
+      },
+    });
+    
+    return NextResponse.json(submissions);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+
+
+// POST /api/assessments/[id]/submissions - Submit an assessment
+export async function POST(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  const session = await getServerSession(authOptions);
+  
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  // Only candidates can submit assessments
+  if (session.user.role !== 'candidate') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+  
+  try {
+    // Check if user has already submitted this assessment
+    const existingSubmission = await prisma.assessmentSubmission.findFirst({
+      where: {
+        assessmentId: params.id,
+        candidateId: session.user.id,
+      },
+    });
+    
+    if (existingSubmission) {
+      return NextResponse.json({ error: 'You have already submitted this assessment' }, { status: 400 });
+    }
+    
+    const body = await request.json();
+    
+    const submission = await prisma.assessmentSubmission.create({
+      data: {
+        assessmentId: params.id,
+        candidateId: session.user.id,
+        content: body.content,
+        fileUrls: body.fileUrls || [],
+      },
+    });
+    
+    return NextResponse.json(submission);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+typescript
+Copy
+// app/api/submissions/[id]/review/route.ts
+import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { PrismaClient } from '@prisma/client';
+import { authOptions } from '../../../auth/[...nextauth]/route';
+
+
+const prisma = new PrismaClient();
+
+
+// POST /api/submissions/[id]/review - Review a submission
+export async function POST(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  const session = await getServerSession(authOptions);
+  
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  // Only admins and employers can review submissions
+  if (session.user.role !== 'admin' && session.user.role !== 'employer') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+  
+  try {
+    const body = await request.json();
+    
+    // Update submission status and feedback
+    const submission = await prisma.assessmentSubmission.update({
+      where: {
+        id: params.id,
+      },
+      data: {
+        status: body.status,
+        feedback: body.feedback,
+      },
+    });
+    
+    // Add scores for each criterion
+    for (const score of body.scores) {
+      await prisma.criterionScore.upsert({
+        where: {
+          submissionId_criterionId: {
+            submissionId: params.id,
+            criterionId: score.criterionId,
+          },
+        },
+        update: {
+          score: score.score,
+        },
+        create: {
+          submissionId: params.id,
+          criterionId: score.criterionId,
+          score: score.score,
+        },
+      });
+    }
+    
+    // Get updated submission with scores
+    const updatedSubmission = await prisma.assessmentSubmission.findUnique({
+      where: {
+        id: params.id,
+      },
+      include: {
+        scores: {
+          include: {
+            criterion: true,
+          },
+        },
+      },
+    });
+    
+    return NextResponse.json(updatedSubmission);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+3. Service Layer Implementation
+3. Service Layer Implementation
+Create service files to handle business logic:
+typescriptCopy// lib/services/assessment-service.ts
+import { PrismaClient } from '@prisma/client';
+
+
+const prisma = new PrismaClient();
+
+
+export async function getAssessments(userId: string, role: string) {
+  if (role === 'candidate') {
+    const assessments = await prisma.assessment.findMany({
+      include: {
+        createdBy: {
+          select: {
+            name: true,
+          },
+        },
+        submissions: {
+          where: {
+            candidateId: userId,
+          },
+          select: {
+            id: true,
+          },
+        },
+      },
+    });
+    
+    // Filter out assessments the candidate has already submitted
+    return assessments.filter(assessment => assessment.submissions.length === 0);
+  } else {
+    // Admin/employer can see all assessments
+    return prisma.assessment.findMany({
+      include: {
+        createdBy: {
+          select: {
+            name: true,
+          },
+        },
+        _count: {
+          select: {
+            submissions: true,
+          },
+        },
+      },
+    });
+  }
+}
+
+
+export async function getAssessmentById(id: string) {
+  return prisma.assessment.findUnique({
+    where: {
+      id,
+    },
+    include: {
+      criteria: true,
+      createdBy: {
+        select: {
+          name: true,
+          email: true,
+        },
+      },
+    },
+  });
+}
+
+
+export async function createAssessment(data: any, userId: string) {
+  return prisma.assessment.create({
+    data: {
+      title: data.title,
+      description: data.description,
+      researchTopic: data.researchTopic,
+      expectedDeliverables: data.expectedDeliverables,
+      timeLimit: data.timeLimit,
+      createdById: userId,
+      criteria: {
+        create: data.evaluationCriteria.map((criterion: any) => ({
+          name: criterion.name,
+          description: criterion.description,
+          maxScore: criterion.maxScore,
+        })),
+      },
+    },
+    include: {
+      criteria: true,
+    },
+  });
+}
+typescriptCopy// lib/services/submission-service.ts
+import { PrismaClient } from '@prisma/client';
+
+
+const prisma = new PrismaClient();
+
+
+export async function getSubmissions(assessmentId: string) {
+  return prisma.assessmentSubmission.findMany({
+    where: {
+      assessmentId,
+    },
+    include: {
+      candidate: {
+        select: {
+          name: true,
+          email: true,
+        },
+      },
+      scores: {
+        include: {
+          criterion: true,
+        },
+      },
+    },
+    orderBy: {
+      submittedAt: 'desc',
+    },
+  });
+}
+
+
+export async function createSubmission(assessmentId: string, candidateId: string, data: any) {
+  return prisma.assessmentSubmission.create({
+    data: {
+      assessmentId,
+      candidateId,
+      content: data.content,
+      fileUrls: data.fileUrls || [],
+    },
+  });
+}
+
+
+export async function reviewSubmission(submissionId: string, data: any) {
+  // Update submission status and feedback
+  const submission = await prisma.assessmentSubmission.update({
+    where: {
+      id: submissionId,
+    },
+    data: {
+      status: data.status,
+      feedback: data.feedback,
+    },
+  });
+  
+  // Add scores for each criterion
+  for (const score of data.scores) {
+    await prisma.criterionScore.upsert({
+      where: {
+        submissionId_criterionId: {
+          submissionId,
+          criterionId: score.criterionId,
+        },
+      },
+      update: {
+        score: score.score,
+      },
+      create: {
+        submissionId,
+        criterionId: score.criterionId,
+        score: score.score,
+      },
+    });
+  }
+  
+  // Get updated submission with scores
+  return prisma.assessmentSubmission.findUnique({
+    where: {
+      id: submissionId,
+    },
+    include: {
+      scores: {
+        include: {
+          criterion: true,
+        },
+      },
+    },
+  });
+}
+4. Update Frontend to Use API
+Update the frontend stores to use the backend API instead of local storage:
+typescriptCopy// store/assessment-store.ts (Updated to use API)
+import { create } from 'zustand';
+import { Assessment, AssessmentSubmission, EvaluationCriterion } from '@/types';
+
+
+interface AssessmentState {
+  assessments: Assessment[];
+  submissions: AssessmentSubmission[];
+  loading: boolean;
+  error: string | null;
+  fetchAssessments: () => Promise<void>;
+  getAssessment: (id: string) => Promise<Assessment | undefined>;
+  createAssessment: (assessment: Omit<Assessment, 'id' | 'createdAt'>) => Promise<void>;
+  submitAssessment: (assessmentId: string, data: { content: string, fileUrls: string[] }) => Promise<void>;
+  reviewSubmission: (submissionId: string, data: { scores: Array<{ criterionId: string, score: number }>, feedback: string, status: 'passed' | 'failed' }) => Promise<void>;
+}
+
+
+export const useAssessmentStore = create<AssessmentState>((set, get) => ({
+  assessments: [],
+  submissions: [],
+  loading: false,
+  error: null,
+  
+  fetchAssessments: async () => {
+    set({ loading: true, error: null });
+    try {
+      const response = await fetch('/api/assessments');
+      if (!response.ok) throw new Error('Failed to fetch assessments');
+      
+      const data = await response.json();
+      set({ assessments: data, loading: false });
+    } catch (error) {
+      console.error('Error fetching assessments:', error);
+      set({ error: (error as Error).message, loading: false });
+    }
+  },
+  
+  getAssessment: async (id: string) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await fetch(`/api/assessments/${id}`);
+      if (!response.ok) throw new Error('Failed to fetch assessment');
+      
+      const data = await response.json();
+      set({ loading: false });
+      return data;
+    } catch (error) {
+      console.error('Error fetching assessment:', error);
+      set({ error: (error as Error).message, loading: false });
+      return undefined;
+    }
+  },
+  
+  createAssessment: async (assessmentData) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await fetch('/api/assessments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(assessmentData),
+      });
+      
+      if (!response.ok) throw new Error('Failed to create assessment');
+      
+      const newAssessment = await response.json();
+      set(state => ({
+        assessments: [...state.assessments, newAssessment],
+        loading: false,
+      }));
+    } catch (error) {
+      console.error('Error creating assessment:', error);
+      set({ error: (error as Error).message, loading: false });
+    }
+  },
+  
+  submitAssessment: async (assessmentId, data) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await fetch(`/api/assessments/${assessmentId}/submissions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) throw new Error('Failed to submit assessment');
+      
+      const submission = await response.json();
+      set(state => ({
+        submissions: [...state.submissions, submission],
+        loading: false,
+      }));
+    } catch (error) {
+      console.error('Error submitting assessment:', error);
+      set({ error: (error as Error).message, loading: false });
+    }
+  },
+  
+  reviewSubmission: async (submissionId, data) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await fetch(`/api/submissions/${submissionId}/review`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) throw new Error('Failed to review submission');
+      
+      const updatedSubmission = await response.json();
+      set(state => ({
+        submissions: state.submissions.map(sub => 
+          sub.id === submissionId ? updatedSubmission : sub
+        ),
+        loading: false,
+      }));
+    } catch (error) {
+      console.error('Error reviewing submission:', error);
+      set({ error: (error as Error).message, loading: false });
+    }
+  },
+}));
+Implementation Steps for Backend
+
+
+Set up Prisma and Database:
+
+
+Initialize Prisma in your project
+Configure PostgreSQL connection string in environment variables
+Create the Prisma schema as shown above
+Run initial migration:
+bashCopynpx prisma migrate dev --name init
+
+
+
+
+
+
+Create API Endpoints:
+
+
+Implement the API routes as shown above
+Add service layer for business logic
+Implement validation using Zod
+
+
+
+
+Connect Frontend to Backend:
+
+
+Update the frontend stores to use the API
+Implement loading states for API calls
+Add error handling for failed requests
+
+
+
+
+Implement Google OAuth:
+
+
+Configure NextAuth.js with Google provider
+Set up database adapters for session persistence
+Implement role assignment for Google-authenticated users
+
+
+
+
+Testing and Debugging:
+
+
+Test authentication flows
+Test assessment creation and submission
+Test review functionality
+Debug any issues that arise
+
+
+
+
+
+
+Final Integration for Full-Stack Application
+After implementing the backend, you'll have a complete full-stack application that:
+
+
+Supports Google OAuth authentication
+Allows admins/employers to create research assessments
+Lets candidates take assessments with time limits
+Enables admins/employers to review and score submissions
+Persists all data in a PostgreSQL database
+Provides a clean separation between frontend and backend concerns
+
+
+
+
+Updated Project Management Plan for Research Assessment MVP
+Core Approach: Simplify Authentication with Role Selection
+Instead of implementing a complex registration and login system with Google OAuth, we'll create a simple role-selection interface where users can choose their role (Admin/Employer or Candidate) at the start of their session.
+Phase 1: Simplified Entry Point
+Milestone 1.1: Create Role Selection Interface
+Target Completion: Day 1
+Tasks:
+1. Design Role Selection Screen
+   * Create a clean, welcoming landing page
+   * Design prominent role selection buttons (Admin/Employer vs. Candidate)
+   * Include brief descriptions of what each role can do
+2. Implement Session Management Without Authentication
+   * Use Zustand store to manage user role throughout the session
+   * Implement a simple session persistence in localStorage
+   * Create "Switch Role" option in the header for easy testing
+3. Adjust Access Controls
+   * Modify route protection to check selected role instead of authentication
+   * Update UI components to conditionally render based on selected role
+   * Create demo users for each role with preset data
+Phase 2: Backend Simplification
+Milestone 2.1: Streamline Database Schema
+Target Completion: Day 2
+Tasks:
+1. Remove Authentication-Related Tables
+   * Remove Account, Session, and VerificationToken tables
+   * Simplify User model to just track role preferences
+Update Prisma Schema
+ prisma
+Copy
+enum UserRole {
+  admin
+  employer
+  candidate
+}
+
+
+model User {
+  id         String    @id @default(cuid())
+  name       String    @default("Demo User")
+  role       UserRole
+  sessionId  String    @unique // To identify users without authentication
+  createdAt  DateTime  @default(now())
+  
+  // Relations
+  assessments        Assessment[] @relation("CreatedBy")
+  submissions        AssessmentSubmission[]
+}
+
+
+2. // Keep other assessment-related models as planned
+
+3. Create Simplified API Routes
+   * Implement /api/session endpoints to manage role selection
+   * Update assessment endpoints to use sessionId instead of authentication
+   * Keep data validation with Zod for form inputs
+Phase 3: Assessment Core Functionality
+Milestone 3.1: Complete Assessment Creation
+Target Completion: Day 3
+Tasks:
+   1. Polish Assessment Creation Interface
+   * Finalize assessment form with all required fields
+   * Implement client-side validation for form inputs
+   * Create visual feedback for successful creation
+   2. Enhance Evaluation Criteria Management
+   * Improve criteria addition/removal with animations
+   * Add templates for common evaluation criteria
+   * Implement validation for criterion scores and weights
+Milestone 3.2: Refine Assessment Taking Experience
+Target Completion: Day 4
+Tasks:
+   1. Polish Assessment Taking Interface
+   * Enhance timer component with additional visual cues
+   * Implement autosave functionality for submissions
+   * Add progress tracking for long assessments
+   2. Improve Research Submission
+   * Add rich text editor for research submissions
+   * Implement file upload component (without actual storage for MVP)
+   * Create confirmation dialog before final submission
+Milestone 3.3: Complete Assessment Review Functionality
+Target Completion: Day 5
+Tasks:
+   1. Enhance Review Interface
+   * Create detailed scoring interface for evaluation criteria
+   * Implement feedback form with formatting options
+   * Add status selection (pass/fail) with visual indicators
+   2. Implement Results Visualization
+   * Create score summary with charts/graphs
+   * Design printable/exportable assessment report
+   * Implement notification system for completed reviews
+Phase 4: Dashboard and Analytics
+Milestone 4.1: Create Dashboard Features
+Target Completion: Day 6
+Tasks:
+   1. Build Admin/Employer Dashboard
+   * Create assessment metrics (completion rates, average scores)
+   * Design assessment list with filtering and sorting
+   * Implement quick actions for common tasks
+   2. Build Candidate Dashboard
+   * Show available and completed assessments
+   * Create progress visualization for ongoing assessments
+   * Implement assessment results display
+Phase 5: Polish and Deployment
+Milestone 5.1: Final Refinements
+Target Completion: Day 7
+Tasks:
+   1. Complete Project Roadmap Component
+   * Update roadmap with revised timeline
+   * Create interactive roadmap with phase details
+   * Add simulated update notifications
+   2. Optimize Performance
+   * Implement code splitting for faster loading
+   * Optimize component rendering
+   * Add loading states and skeleton screens
+   3. Prepare for Deployment
+   * Finalize environment variables
+   * Create build script
+   * Prepare documentation for deployment
+Implementation Details for Role Selection
+Create Landing Page with Role Selection
+tsx
+Copy
+// app/page.tsx
+'use client';
+
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { useUserStore } from '@/store/user-store';
+
+
+export default function HomePage() {
+  const [isSelecting, setIsSelecting] = useState(false);
+  const { setUserRole } = useUserStore();
+  const router = useRouter();
+  
+  const handleRoleSelect = (role: 'admin' | 'employer' | 'candidate') => {
+    setIsSelecting(true);
+    
+    // Set user role in store
+    setUserRole(role);
+    
+    // Redirect to dashboard
+    setTimeout(() => {
+      router.push('/dashboard');
+    }, 500);
+  };
+  
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg text-center"
+      >
+        <h1 className="text-3xl font-bold mb-2">Research Assessment Platform</h1>
+        <p className="text-gray-600 mb-8">Choose your role to continue to the platform</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="p-6 border rounded-lg hover:shadow-md transition-all"
+          >
+            <h2 className="text-xl font-semibold mb-2">Admin/Employer</h2>
+            <p className="text-gray-500 mb-4">Create and review research assessments, evaluate submissions</p>
+            <Button 
+              className="w-full" 
+              onClick={() => handleRoleSelect('employer')}
+              disabled={isSelecting}
+            >
+              Continue as Employer
+            </Button>
+          </motion.div>
+          
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="p-6 border rounded-lg hover:shadow-md transition-all"
+          >
+            <h2 className="text-xl font-semibold mb-2">Candidate</h2>
+            <p className="text-gray-500 mb-4">Take research assessments, submit your findings, view results</p>
+            <Button 
+              className="w-full" 
+              onClick={() => handleRoleSelect('candidate')}
+              disabled={isSelecting}
+            >
+              Continue as Candidate
+            </Button>
+          </motion.div>
+        </div>
+        
+        <div className="p-4 bg-blue-50 rounded-md">
+          <p className="text-sm text-blue-700">
+            <span className="font-medium">MVP Demo:</span> This is a simplified version with role selection instead of authentication.
+            Choose a role to explore the platform's features. Your session will persist until you clear your browser data.
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+Create User Store
+typescript
+Copy
+// store/user-store.ts
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+
+
+type UserRole = 'admin' | 'employer' | 'candidate';
+
+
+interface UserState {
+  role: UserRole | null;
+  sessionId: string;
+  isInitialized: boolean;
+  setUserRole: (role: UserRole) => void;
+  clearUserRole: () => void;
+}
+
+
+export const useUserStore = create<UserState>()(
+  persist(
+    (set) => ({
+      role: null,
+      sessionId: crypto.randomUUID(), // Generate a unique session ID
+      isInitialized: false,
+      setUserRole: (role) => set({ role, isInitialized: true }),
+      clearUserRole: () => set({ role: null }),
+    }),
+    {
+      name: 'user-session',
+    }
+  )
+);
+Update Dashboard Protection
+tsx
+Copy
+// app/dashboard/layout.tsx
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useUserStore } from '@/store/user-store';
+
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { role, isInitialized } = useUserStore();
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (isInitialized && !role) {
+      router.push('/');
+    }
+  }, [isInitialized, role, router]);
+  
+  if (!role) {
+    return null;
+  }
+  
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <h1 className="text-xl font-bold">Research Assessment Platform</h1>
+            </div>
+            <div className="flex items-center">
+              <p className="mr-4">Current Role: {role === 'employer' ? 'Admin/Employer' : 'Candidate'}</p>
+              <button 
+                onClick={() => {
+                  useUserStore.getState().clearUserRole();
+                  router.push('/');
+                }}
+                className="text-sm text-gray-500 hover:text-gray-700"
+              >
+                Switch Role
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        {children}
+      </main>
+    </div>
+  );
+}
+Update Backend to Use Session ID
+typescript
+Copy
+// app/api/assessments/route.ts
+import { NextResponse } from 'next/server';
+import prisma from '@/lib/prisma';
+import { createAssessmentSchema } from '@/lib/schemas/assessment-schemas';
+import { ZodError } from 'zod';
+
+
+// GET /api/assessments - List assessments
+export async function GET(request: Request) {
+  // Get session ID from header or query param instead of authentication
+  const sessionId = request.headers.get('x-session-id') || 
+    new URL(request.url).searchParams.get('sessionId');
+  
+  if (!sessionId) {
+    return NextResponse.json({ error: 'Session ID required' }, { status: 400 });
+  }
+  
+  try {
+    // Get user by session ID
+    const user = await prisma.user.findUnique({
+      where: { sessionId: sessionId as string },
+    });
+    
+    if (!user) {
+      // Create user if doesn't exist yet
+      return NextResponse.json({ assessments: [] });
+    }
+    
+    let assessments;
+    
+    // If user is a candidate, only show assessments they haven't submitted
+    if (user.role === 'candidate') {
+      assessments = await prisma.assessment.findMany({
+        include: {
+          createdBy: {
+            select: {
+              name: true,
+            },
+          },
+          submissions: {
+            where: {
+              candidateId: user.id,
+            },
+            select: {
+              id: true,
+            },
+          },
+        },
+      });
+      
+      // Filter out assessments the candidate has already submitted
+      assessments = assessments.filter(assessment => assessment.submissions.length === 0);
+    } else {
+      // Admin/employer can see all assessments
+      assessments = await prisma.assessment.findMany({
+        include: {
+          createdBy: {
+            select: {
+              name: true,
+            },
+          },
+          _count: {
+            select: {
+              submissions: true,
+            },
+          },
+        },
+      });
+    }
+    
+    return NextResponse.json({ assessments });
+  } catch (error) {
+    console.error('Error fetching assessments:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
+}
+
+
+// Similar updates for other API endpoints
+Backend Development Without Authentication
+With the removal of the authentication system, our backend becomes more straightforward:
+   1. Track users by session ID: Instead of using OAuth or passwords, we'll associate all data with a unique session ID stored in the browser's local storage.
+   2. Simplified Prisma schema: Remove all authentication-related tables and focus on the core assessment functionality.
+   3. Role-based access control: Still implement role-based access control, but based on the user's selected role rather than authenticated permissions.
+   4. Data persistence: Store all data in the database as before, but link it to session IDs instead of authenticated user accounts.
+treamlined Project Plan: Candidate-Only Research Assessment MVP
+Core Approach: Focus Only on Candidate Experience
+Instead of implementing role selection, we'll create a single-purpose application that showcases only the candidate experience of taking research assessments. This approach drastically simplifies development while still demonstrating the core value proposition.
+Phase 1: Simplified Single-User Experience
+Milestone 1.1: Create Direct Entry Interface
+Target Completion: Day 1
+Tasks:
+   1. Design Streamlined Landing Page
+   * Create a clean welcome screen explaining the platform
+   * Include a prominent "Start" button to enter the platform
+   * Add brief explanation of the available assessments
+   2. Implement Basic Session Management
+   * Use localStorage to maintain a simple session
+   * Generate a unique identifier for the current user
+   * No role selection or authentication required
+   3. Create Pre-Populated Assessment Data
+   * Hardcode 2-3 sample research assessments
+   * Include variety in assessment topics and time limits
+   * Create realistic evaluation criteria for each assessment
+Phase 2: Assessment Taking Experience
+Milestone 2.1: Assessment List and Selection
+Target Completion: Day 2
+Tasks:
+   1. Build Assessment Dashboard
+   * Display list of available assessments
+   * Show key details (title, description, time limit)
+   * Implement card-based UI with hover animations
+   2. Create Assessment Detail View
+   * Design detailed view with full assessment information
+   * Include clear "Start Assessment" button
+   * Show preparation instructions and expectations
+Milestone 2.2: Core Assessment Taking Interface
+Target Completion: Day 3
+Tasks:
+   1. Implement Timer Component
+   * Create countdown timer with visual indicators
+   * Add warning states for low time remaining
+   * Implement auto-submission when time expires
+   2. Build Research Submission Interface
+   * Create rich text editor for research content
+   * Add file upload UI (non-functional for MVP)
+   * Implement save draft functionality using localStorage
+   3. Design Assessment Completion Flow
+   * Create submission confirmation dialog
+   * Design success state after submission
+   * Implement redirect to results/dashboard
+Phase 3: Results and Feedback
+Milestone 3.1: Assessment Results View
+Target Completion: Day 4
+Tasks:
+   1. Create Submission History
+   * List completed assessments with submission dates
+   * Show status indicators (pending, reviewed, etc.)
+   * Implement sorting and filtering options
+   2. Build Results View
+   * Display simulated feedback for completed assessments
+   * Show score breakdown by evaluation criteria
+   * Create visual representation of scores (charts/graphs)
+Phase 4: Platform Context and Polish
+Milestone 4.1: Project Roadmap and Simulated Development
+Target Completion: Day 5
+Tasks:
+   1. Implement Project Roadmap
+   * Create visual roadmap showing future features
+   * Include timeline for planned development
+   * Add descriptions of upcoming functionality
+   2. Add Simulated Platform Updates
+   * Create "What's New" section with recent changes
+   * Add simulated real-time development updates
+   * Include placeholder for future feature requests
+Milestone 4.2: Final Polish and Optimization
+Target Completion: Day 6
+Tasks:
+   1. Refine User Experience
+   * Implement smooth transitions between pages
+   * Add loading states and skeleton screens
+   * Ensure responsive design for all screen sizes
+   2. Optimize Performance
+   * Implement code splitting for faster loading
+   * Optimize component rendering
+   * Reduce unnecessary re-renders
+   3. Prepare for Deployment
+   * Finalize all dummy data
+   * Create build script
+   * Document deployment process
+Implementation Details
+Simplified Landing Page
+tsx
+Copy
+// app/page.tsx
+'use client';
+
+
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+
+export default function HomePage() {
+  const router = useRouter();
+  
+  // Generate and store a session ID if not exists
+  useEffect(() => {
+    if (!localStorage.getItem('sessionId')) {
+      localStorage.setItem('sessionId', crypto.randomUUID());
+    }
+  }, []);
+  
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg text-center"
+      >
+        <h1 className="text-3xl font-bold mb-2">Deep Research Assessment Platform</h1>
+        <p className="text-gray-600 mb-8">Showcase your research skills through timed assessments</p>
+        
+        <div className="mb-8">
+          <p className="mb-4">Available assessments include:</p>
+          <ul className="text-left max-w-md mx-auto space-y-2 mb-6">
+            <li className="flex items-start">
+              <span className="text-indigo-500 mr-2">•</span>
+              <span><span className="font-medium">AI Ethics Research:</span> Investigate ethical frameworks in generative AI</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-indigo-500 mr-2">•</span>
+              <span><span className="font-medium">Climate Technology Analysis:</span> Research emerging climate tech solutions</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-indigo-500 mr-2">•</span>
+              <span><span className="font-medium">Remote Work Trends:</span> Analyze the evolution of remote work practices</span>
+            </li>
+          </ul>
+        </div>
+        
+        <Button 
+          size="lg"
+          onClick={() => router.push('/dashboard')}
+          className="px-8"
+        >
+          Enter Platform
+        </Button>
+        
+        <div className="mt-8 p-4 bg-blue-50 rounded-md">
+          <p className="text-sm text-blue-700">
+            <span className="font-medium">MVP Demo:</span> This simplified version showcases the candidate experience
+            of taking research assessments. Your progress will be saved in your browser.
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+Mock Data Store
+typescript
+Copy
+// store/assessment-store.ts
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import { Assessment, AssessmentSubmission } from '@/types';
+
+
+// Sample assessment data
+const sampleAssessments: Assessment[] = [
+  {
+    id: '1',
+    title: 'AI Ethics Research',
+    description: 'An assessment to evaluate research skills in AI ethics',
+    researchTopic: 'Investigate current ethical frameworks applied to generative AI systems. Focus on transparency, bias mitigation, and consent issues.',
+    expectedDeliverables: 'A 500-word summary of findings with at least 3 cited sources. Include examples of best practices and areas for improvement.',
+    timeLimit: 60, // 60 minutes
+    evaluationCriteria: [
+      { id: '1', name: 'Research Depth', description: 'Depth of sources and investigation', maxScore: 10 },
+      { id: '2', name: 'Critical Analysis', description: 'Quality of analysis and insight', maxScore: 10 },
+      { id: '3', name: 'Clarity', description: 'Clear communication of findings', maxScore: 5 },
+    ],
+    createdAt: new Date('2023-01-01'),
+  },
+  {
+    id: '2',
+    title: 'Climate Technology Analysis',
+    description: 'Research assessment on emerging climate technologies',
+    researchTopic: 'Identify and analyze three emerging technologies aimed at carbon capture or reduction. Evaluate their potential impact, scalability, and current adoption barriers.',
+    expectedDeliverables: 'A structured report (600-800 words) comparing the technologies with a conclusion on which shows the most promise and why.',
+    timeLimit: 90, // 90 minutes
+    evaluationCriteria: [
+      { id: '4', name: 'Technology Understanding', description: 'Accurate description of how technologies work', maxScore: 8 },
+      { id: '5', name: 'Impact Assessment', description: 'Realistic analysis of potential climate impact', maxScore: 8 },
+      { id: '6', name: 'Source Quality', description: 'Use of credible and relevant sources', maxScore: 7 },
+      { id: '7', name: 'Comparative Analysis', description: 'Thoughtful comparison between options', maxScore: 7 },
+    ],
+    createdAt: new Date('2023-02-15'),
+  },
+  {
+    id: '3',
+    title: 'Remote Work Trends',
+    description: 'Analysis of remote work evolution and future directions',
+    researchTopic: 'Research how remote work practices have evolved since 2020. Identify emerging trends, tools, and management practices that are shaping the future of distributed teams.',
+    expectedDeliverables: 'A 700-word analysis that includes statistics, case studies, and predictions for future developments in remote work.',
+    timeLimit: 75, // 75 minutes
+    evaluationCriteria: [
+      { id: '8', name: 'Trend Identification', description: 'Recognition of significant trends', maxScore: 10 },
+      { id: '9', name: 'Evidence Quality', description: 'Use of relevant statistics and examples', maxScore: 10 },
+      { id: '10', name: 'Future Insights', description: 'Thoughtful predictions based on evidence', maxScore: 10 },
+    ],
+    createdAt: new Date('2023-03-10'),
+  },
+];
+
+
+// Simulated feedback for submissions
+const simulatedFeedback = [
+  "Your research demonstrates good breadth but could go deeper in analyzing the ethical frameworks. The sources you cited are relevant, but consider including more recent studies in your future work. Your writing is clear and well-structured.",
+  "Excellent analysis of the technologies and their potential impact. Your comparison was thorough and insightful. To improve, consider addressing more of the economic factors that might affect adoption rates.",
+  "Strong identification of key trends with good supporting evidence. Your predictions are well-reasoned and grounded in current developments. More international examples would strengthen your analysis."
+];
+
+
+interface AssessmentState {
+  assessments: Assessment[];
+  submissions: AssessmentSubmission[];
+  getAssessment: (id: string) => Assessment | undefined;
+  submitAssessment: (submission: Omit<AssessmentSubmission, 'id' | 'submittedAt' | 'status'>) => void;
+  getSubmission: (assessmentId: string) => AssessmentSubmission | undefined;
+}
+
+
+export const useAssessmentStore = create<AssessmentState>()(
+  persist(
+    (set, get) => ({
+      assessments: sampleAssessments,
+      submissions: [],
+      
+      getAssessment: (id: string) => {
+        return get().assessments.find(a => a.id === id);
+      },
+      
+      submitAssessment: (submissionData) => {
+        const sessionId = localStorage.getItem('sessionId') || crypto.randomUUID();
+        
+        // Create new submission
+        const newSubmission: AssessmentSubmission = {
+          id: Date.now().toString(),
+          assessmentId: submissionData.assessmentId,
+          candidateId: sessionId,
+          content: submissionData.content,
+          fileUrls: submissionData.fileUrls || [],
+          submittedAt: new Date(),
+          status: 'pending',
+          
+          // Add simulated feedback after 30 seconds
+          scores: [],
+          feedback: '',
+        };
+        
+        set(state => ({
+          submissions: [...state.submissions, newSubmission]
+        }));
+        
+        // Simulate receiving feedback after 30 seconds
+        setTimeout(() => {
+          const assessment = get().getAssessment(submissionData.assessmentId);
+          if (!assessment) return;
+          
+          const scores = assessment.evaluationCriteria.map(criterion => ({
+            criterionId: criterion.id,
+            score: Math.floor(Math.random() * (criterion.maxScore * 0.3)) + (criterion.maxScore * 0.6), // Random score between 60-90% of max
+          }));
+          
+          const feedbackIndex = Math.floor(Math.random() * simulatedFeedback.length);
+          
+          set(state => ({
+            submissions: state.submissions.map(sub => 
+              sub.id === newSubmission.id 
+                ? { 
+                    ...sub, 
+                    scores, 
+                    feedback: simulatedFeedback[feedbackIndex],
+                    status: 'reviewed' 
+                  } 
+                : sub
+            )
+          }));
+        }, 30000);
+      },
+      
+      getSubmission: (assessmentId: string) => {
+        const sessionId = localStorage.getItem('sessionId');
+        return get().submissions.find(
+          s => s.assessmentId === assessmentId && s.candidateId === sessionId
+        );
+      },
+    }),
+    {
+      name: 'assessment-storage',
+    }
+  )
+);
+Simplified Dashboard Page
+tsx
+Copy
+// app/dashboard/page.tsx
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAssessmentStore } from '@/store/assessment-store';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Clock, FileText, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ProjectRoadmap } from '@/components/layout/ProjectRoadmap';
+
+
+export default function DashboardPage() {
+  const { assessments, submissions } = useAssessmentStore();
+  const router = useRouter();
+  
+  const getSubmissionStatus = (assessmentId: string) => {
+    const sessionId = localStorage.getItem('sessionId');
+    const submission = submissions.find(
+      s => s.assessmentId === assessmentId && s.candidateId === sessionId
+    );
+    
+    return submission?.status || null;
+  };
+  
+  return (
+    <div className="container mx-auto py-8 px-4">
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold">Research Assessments</h1>
+          <p className="text-gray-500 mt-1">Available assessments to showcase your research skills</p>
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {assessments.map((assessment, index) => {
+          const status = getSubmissionStatus(assessment.id);
+          
+          return (
+            <motion.div
+              key={assessment.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
+              <Card className="h-full flex flex-col">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <CardTitle>{assessment.title}</CardTitle>
+                    {status && (
+                      <Badge 
+                        className={
+                          status === 'pending' ? 'bg-yellow-500' : 
+                          status === 'reviewed' ? 'bg-green-500' : 
+                          'bg-blue-500'
+                        }
+                      >
+                        {status === 'pending' ? 'Submitted' : 
+                         status === 'reviewed' ? 'Reviewed' : 
+                         status}
+                      </Badge>
+                    )}
+                  </div>
+                  <CardDescription>{assessment.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <div className="flex items-center mb-4 text-sm text-gray-500">
+                    <Clock className="mr-2 h-4 w-4" />
+                    <span>{assessment.timeLimit} minutes</span>
+                  </div>
+                  <div className="flex items-center mb-4 text-sm text-gray-500">
+                    <FileText className="mr-2 h-4 w-4" />
+                    <span>{assessment.evaluationCriteria.length} evaluation criteria</span>
+                  </div>
+                  <p className="text-sm text-gray-700 line-clamp-3">
+                    {assessment.researchTopic}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button 
+                    className="w-full"
+                    variant={status ? "outline" : "default"}
+                    onClick={() => router.push(`/assessment/${assessment.id}`)}
+                  >
+                    {status 
+                      ? 'View Results' 
+                      : 'Start Assessment'}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </motion.div>
+          );
+        })}
+      </div>
+      
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold mb-6">Platform Roadmap</h2>
+        <ProjectRoadmap />
+      </div>
+      
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold mb-6">Development Updates</h2>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="bg-white p-4 rounded-lg shadow-sm"
+        >
+          <div className="flex items-center mb-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+            <p className="text-sm text-gray-500">Platform development in progress</p>
+          </div>
+          
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center text-green-700">
+              <span className="mr-2">✓</span> Research assessment core functionality
+            </li>
+            <li className="flex items-center text-green-700">
+              <span className="mr-2">✓</span> Timed assessment submissions
+            </li>
+            <li className="flex items-center text-blue-700">
+              <span className="mr-2">→</span> Enhanced feedback system
+            </li>
+            <li className="flex items-center text-gray-500">
+              <span className="mr-2">○</span> Video interview integration
+            </li>
+          </ul>
+          
+          <p className="mt-3 text-sm text-gray-600">
+            Last updated: {new Date().toLocaleString()}
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+Backend Simplification
+With this candidate-only approach, we can eliminate the backend API entirely for the MVP:
+   1. Use in-browser storage: Store all data in localStorage, including assessment submissions.
+   2. Mock data: Pre-populate the application with sample assessments and simulate feedback responses.
+   3. Focus on UI/UX: Put all development effort into creating a polished, engaging user experience.
+   4. Simulate backend processes: Add delays and state changes to simulate server-side processing.
+This approach lets you build a convincing prototype extremely quickly, focusing solely on the candidate experience of taking research assessments. It's perfect for demonstrations and initial user testing.
+Timeline and Next Steps
+With this streamlined approach, you should be able to build a functional MVP in about 6 days. Once complete, you can:
+   1. Demonstrate the concept: Show stakeholders the core assessment experience.
+   2. Get feedback on UX: Gather input on the assessment flow and submission process.
+   3. Plan gradual expansion: Add employer view, authentication, and other features incrementally.
+   4. Decide on backend needs: Determine when a real backend is necessary based on feedback.
+This simplified, focused approach gives you a working demonstration much faster while still showcasing the core value proposition of your platform.
+
+
+I agree that the Candidates section doesn't make sense for a Candidate view. Let's revise the dashboard to focus specifically on what a candidate would need to see, and then improve the in-depth candidate assessment view page.
+Improved Candidate Dashboard
+tsx
+Copy
+// app/dashboard/page.tsx
+'use client';
+
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAssessmentStore } from '@/store/assessment-store';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Clock, FileText, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ProjectRoadmap } from '@/components/layout/ProjectRoadmap';
+
+
+export default function DashboardPage() {
+  const { assessments, submissions } = useAssessmentStore();
+  const router = useRouter();
+  
+  const getSubmissionStatus = (assessmentId: string) => {
+    const sessionId = localStorage.getItem('sessionId');
+    const submission = submissions.find(
+      s => s.assessmentId === assessmentId && s.candidateId === sessionId
+    );
+    
+    return submission?.status || null;
+  };
+  
+  const availableAssessments = assessments.filter(assessment => !getSubmissionStatus(assessment.id));
+  const completedAssessments = assessments.filter(assessment => getSubmissionStatus(assessment.id));
+  
+  return (
+    <div className="container mx-auto py-8 px-4">
+      {/* Header with stats */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold">Welcome back, Candidate</h1>
+      </div>
+      
+      {/* Stats cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <Card>
+          <CardContent className="flex items-center p-6">
+            <div className="bg-gray-100 p-4 rounded-full mr-4">
+              <FileText className="h-6 w-6 text-blue-600" />
+            </div>
+            <div>
+              <p className="text-gray-500 text-sm">Available Assessments</p>
+              <h3 className="text-3xl font-bold">{availableAssessments.length}</h3>
+              {availableAssessments.length > 0 && (
+                <p className="text-green-600 text-sm flex items-center">
+                  <span className="mr-1">+{availableAssessments.length}</span> new this month
+                </p>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardContent className="flex items-center p-6">
+            <div className="bg-gray-100 p-4 rounded-full mr-4">
+              <CheckCircle className="h-6 w-6 text-green-600" />
+            </div>
+            <div>
+              <p className="text-gray-500 text-sm">Completed Assessments</p>
+              <h3 className="text-3xl font-bold">{completedAssessments.length}</h3>
+              {completedAssessments.length > 0 && (
+                <p className="text-blue-600 text-sm flex items-center">
+                  View results
+                </p>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardContent className="flex items-center p-6">
+            <div className="bg-gray-100 p-4 rounded-full mr-4">
+              <Clock className="h-6 w-6 text-purple-600" />
+            </div>
+            <div>
+              <p className="text-gray-500 text-sm">Average Completion</p>
+              <h3 className="text-3xl font-bold">48m</h3>
+              <p className="text-gray-500 text-sm">Out of 60m allowed</p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+      
+      {/* Quick Actions */}
+      <div className="mb-12">
+        <h2 className="text-xl font-bold mb-4">Quick Actions</h2>
+        <div className="flex flex-wrap gap-3">
+          <Button onClick={() => router.push('/assessments')}>
+            View Assessments
+          </Button>
+          <Button variant="outline" onClick={() => router.push('/results')}>
+            Review Past Results
+          </Button>
+          <Button variant="outline" onClick={() => router.push('/profile')}>
+            Update Profile
+          </Button>
+        </div>
+      </div>
+      
+      {/* Available Assessments */}
+      <div className="mb-12">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-bold">Available Assessments</h2>
+          {availableAssessments.length > 3 && (
+            <Button variant="ghost" size="sm" onClick={() => router.push('/assessments')}>
+              View All
+            </Button>
+          )}
+        </div>
+        
+        {availableAssessments.length === 0 ? (
+          <Card>
+            <CardContent className="flex flex-col items-center justify-center p-8 text-center">
+              <AlertCircle className="h-12 w-12 text-gray-400 mb-4" />
+              <h3 className="text-lg font-medium mb-2">No available assessments</h3>
+              <p className="text-gray-500 mb-4">You've completed all current assessments. Check back soon for new ones.</p>
+            </CardContent>
+          </Card>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {availableAssessments.slice(0, 3).map((assessment, index) => (
+              <motion.div
+                key={assessment.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-md transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="font-bold">{assessment.title}</h3>
+                      <Badge>{assessment.timeLimit}m</Badge>
+                    </div>
+                    <p className="text-gray-500 text-sm mb-4 line-clamp-2">{assessment.description}</p>
+                    <div className="flex items-center justify-between mt-4">
+                      <span className="text-sm text-gray-500">
+                        {assessment.evaluationCriteria.length} criteria
+                      </span>
+                      <Button size="sm" onClick={() => router.push(`/assessment/${assessment.id}`)}>
+                        Start
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </div>
+      
+      {/* Recent Activity */}
+      <div className="mb-12">
+        <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
+        {completedAssessments.length === 0 ? (
+          <Card>
+            <CardContent className="p-6">
+              <p className="text-gray-500">No recent activity. Start an assessment to see your progress!</p>
+            </CardContent>
+          </Card>
+        ) : (
+          <Card>
+            <CardContent className="p-0">
+              <ul className="divide-y">
+                {completedAssessments.slice(0, 3).map((assessment, index) => {
+                  const submission = submissions.find(s => s.assessmentId === assessment.id);
+                  return (
+                    <li key={assessment.id} className="p-4 hover:bg-gray-50">
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <h4 className="font-medium">{assessment.title}</h4>
+                          <p className="text-sm text-gray-500">
+                            Submitted {submission?.submittedAt.toLocaleDateString()}
+                          </p>
+                        </div>
+                        <Badge 
+                          className={
+                            submission?.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 
+                            submission?.status === 'reviewed' ? 'bg-green-100 text-green-800' : 
+                            'bg-blue-100 text-blue-800'
+                          }
+                        >
+                          {submission?.status === 'pending' ? 'Awaiting Review' : 
+                          submission?.status === 'reviewed' ? 'Reviewed' : 
+                          submission?.status}
+                        </Badge>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+      
+      {/* Project Roadmap */}
+      <div className="mb-8">
+        <h2 className="text-xl font-bold mb-4">Project Roadmap</h2>
+        <ProjectRoadmap />
+      </div>
+      
+      {/* Development Updates */}
+      <div className="mb-8">
+        <h2 className="text-xl font-bold mb-4">Development Updates</h2>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="bg-white p-6 rounded-lg shadow-sm border"
+        >
+          <div className="flex items-center mb-3">
+            <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+            <p className="text-sm font-medium">Platform development in progress</p>
+          </div>
+          
+          <ul className="space-y-3 mb-4">
+            <li className="flex items-center text-green-700 text-sm">
+              <CheckCircle className="h-4 w-4 mr-2" /> Research assessment core functionality
+            </li>
+            <li className="flex items-center text-green-700 text-sm">
+              <CheckCircle className="h-4 w-4 mr-2" /> Timed assessment submissions
+            </li>
+            <li className="flex items-center text-blue-700 text-sm">
+              <Clock className="h-4 w-4 mr-2" /> Enhanced feedback system
+            </li>
+            <li className="flex items-center text-gray-500 text-sm">
+              <AlertCircle className="h-4 w-4 mr-2" /> Video interview integration
+            </li>
+          </ul>
+          
+          <p className="text-xs text-gray-400">
+            Last updated: {new Date().toLocaleString()}
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+Improved Assessment View Page
+Now let's create an improved assessment view page that provides a clear, focused research assessment experience:
+tsx
+Copy
+// app/assessment/[id]/page.tsx
+'use client';
+
+
+import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAssessmentStore } from '@/store/assessment-store';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Separator } from '@/components/ui/separator';
+import { Clock, FileText, AlertCircle, CheckCircle, Info, Upload } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { toast } from '@/components/ui/use-toast';
+import { TimerComponent } from '@/components/assessment/TimerComponent';
+
+
+enum AssessmentStage {
+  INTRO,
+  IN_PROGRESS,
+  SUBMITTING,
+  SUBMITTED
+}
+
+
+export default function AssessmentPage({ params }: { params: { id: string } }) {
+  const [content, setContent] = useState('');
+  const [stage, setStage] = useState<AssessmentStage>(AssessmentStage.INTRO);
+  const [isTimeWarning, setIsTimeWarning] = useState(false);
+  const [autosaveTimer, setAutosaveTimer] = useState<NodeJS.Timeout | null>(null);
+  const contentRef = useRef<HTMLTextAreaElement>(null);
+  
+  const { getAssessment, submitAssessment, getSubmission } = useAssessmentStore();
+  const router = useRouter();
+  
+  const assessment = getAssessment(params.id);
+  const submission = getSubmission(params.id);
+  
+  useEffect(() => {
+    if (!assessment) {
+      router.push('/dashboard');
+    }
+    
+    // Check if there's an existing submission
+    if (submission) {
+      setContent(submission.content);
+      setStage(AssessmentStage.SUBMITTED);
+    } else {
+      // Check for draft in localStorage
+      const savedDraft = localStorage.getItem(`draft_${params.id}`);
+      if (savedDraft) {
+        setContent(savedDraft);
+      }
+    }
+    
+    // Set up autosave
+    const timer = setInterval(() => {
+      if (stage === AssessmentStage.IN_PROGRESS && content) {
+        localStorage.setItem(`draft_${params.id}`, content);
+      }
+    }, 10000); // Autosave every 10 seconds
+    
+    setAutosaveTimer(timer);
+    
+    return () => {
+      if (autosaveTimer) {
+        clearInterval(autosaveTimer);
+      }
+    };
+  }, [assessment, submission, params.id, router, stage, content, autosaveTimer]);
+  
+  const handleStartAssessment = () => {
+    setStage(AssessmentStage.IN_PROGRESS);
+    setTimeout(() => {
+      if (contentRef.current) {
+        contentRef.current.focus();
+      }
+    }, 100);
+  };
+  
+  const handleSubmit = () => {
+    if (!content.trim()) {
+      toast({
+        title: "Empty submission",
+        description: "Please provide your research findings before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setStage(AssessmentStage.SUBMITTING);
+    
+    // Submit assessment
+    submitAssessment({
+      assessmentId: params.id,
+      candidateId: localStorage.getItem('sessionId') || 'unknown',
+      content,
+      fileUrls: [],
+    });
+    
+    // Clear localStorage draft
+    localStorage.removeItem(`draft_${params.id}`);
+    
+    setStage(AssessmentStage.SUBMITTED);
+    
+    toast({
+      title: "Assessment submitted",
+      description: "Your assessment has been submitted successfully.",
+      variant: "default",
+    });
+  };
+  
+  const handleTimeWarning = () => {
+    setIsTimeWarning(true);
+    toast({
+      title: "Time running out",
+      description: "You have less than 5 minutes remaining. Your work will be automatically submitted when time expires.",
+      variant: "warning",
+    });
+  };
+  
+  const handleTimeEnd = () => {
+    if (stage === AssessmentStage.IN_PROGRESS) {
+      toast({
+        title: "Time's up!",
+        description: "Your assessment has been automatically submitted.",
+        variant: "default",
+      });
+      
+      handleSubmit();
+    }
+  };
+  
+  if (!assessment) {
+    return null;
+  }
+  
+  return (
+    <div className="container mx-auto py-6 px-4 max-w-5xl">
+      <div className="mb-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold">{assessment.title}</h1>
+          <p className="text-gray-500">{assessment.description}</p>
+        </div>
+        
+        {stage === AssessmentStage.IN_PROGRESS && (
+          <TimerComponent 
+            durationMinutes={assessment.timeLimit}
+            onTimeWarning={handleTimeWarning}
+            onTimeEnd={handleTimeEnd}
+            isWarning={isTimeWarning}
+          />
+        )}
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <AnimatePresence mode="wait">
+            {stage === AssessmentStage.INTRO && (
+              <motion.div
+                key="intro"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <Card className="mb-6">
+                  <CardHeader>
+                    <CardTitle className="flex items-center">
+                      <Info className="mr-2 h-5 w-5 text-blue-500" />
+                      Assessment Instructions
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="font-medium mb-2">Research Topic</h3>
+                        <p className="text-gray-700">{assessment.researchTopic}</p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-medium mb-2">Expected Deliverables</h3>
+                        <p className="text-gray-700">{assessment.expectedDeliverables}</p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-medium mb-2">Time Limit</h3>
+                        <p className="text-gray-700">You will have {assessment.timeLimit} minutes to complete this assessment once you begin.</p>
+                      </div>
+                      
+                      <div className="p-4 bg-yellow-50 rounded-md">
+                        <h3 className="font-medium flex items-center mb-2">
+                          <AlertCircle className="mr-2 h-5 w-5 text-yellow-600" />
+                          Important Notes
+                        </h3>
+                        <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                          <li>The timer will start as soon as you click "Begin Assessment"</li>
+                          <li>Your work is automatically saved every 10 seconds</li>
+                          <li>If time runs out, your assessment will be submitted automatically</li>
+                          <li>You cannot pause or restart the assessment once begun</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button 
+                      onClick={handleStartAssessment}
+                      size="lg"
+                      className="w-full lg:w-auto"
+                    >
+                      Begin Assessment
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            )}
+            
+            {stage === AssessmentStage.IN_PROGRESS && (
+              <motion.div
+                key="assessment"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <Card className="mb-6">
+                  <CardHeader>
+                    <CardTitle>Research Submission</CardTitle>
+                    <CardDescription>Enter your research findings based on the topic and requirements.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Textarea
+                      ref={contentRef}
+                      placeholder="Enter your research findings here..."
+                      className="min-h-[400px] w-full"
+                      value={content}
+                      onChange={e => setContent(e.target.value)}
+                    />
+                    
+                    <div className="flex items-center mt-2 text-xs text-gray-500">
+                      <CheckCircle className="h-3 w-3 mr-1" />
+                      Autosaving...
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex justify-between">
+                    <div className="flex gap-2">
+                      <Button variant="outline" className="flex items-center">
+                        <Upload className="h-4 w-4 mr-2" />
+                        Attach File
+                      </Button>
+                    </div>
+                    <Button 
+                      onClick={handleSubmit}
+                      className={isTimeWarning ? 'animate-pulse bg-red-600 hover:bg-red-700' : ''}
+                    >
+                      Submit Assessment
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            )}
+            
+            {(stage === AssessmentStage.SUBMITTING || stage === AssessmentStage.SUBMITTED) && (
+              <motion.div
+                key="submitted"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <Card className="mb-6">
+                  <CardHeader>
+                    <CardTitle className="flex items-center">
+                      <CheckCircle className="mr-2 h-5 w-5 text-green-500" />
+                      Assessment Submitted
+                    </CardTitle>
+                    <CardDescription>
+                      {submission && submission.status === 'reviewed' 
+                        ? 'Your assessment has been reviewed' 
+                        : 'Your assessment has been submitted and is awaiting review'}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    {submission && submission.status === 'reviewed' ? (
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="font-medium mb-2">Feedback</h3>
+                          <p className="text-gray-700 bg-gray-50 p-4 rounded-md">{submission.feedback}</p>
+                        </div>
+                        
+                        <div>
+                          <h3 className="font-medium mb-3">Scores</h3>
+                          <div className="space-y-3">
+                            {submission.scores.map(score => {
+                              const criterion = assessment.evaluationCriteria.find(c => c.id === score.criterionId);
+                              if (!criterion) return null;
+                              
+                              const percentage = (score.score / criterion.maxScore) * 100;
+                              
+                              return (
+                                <div key={score.criterionId}>
+                                  <div className="flex justify-between mb-1">
+                                    <span className="text-sm font-medium">{criterion.name}</span>
+                                    <span className="text-sm font-medium">{score.score}/{criterion.maxScore}</span>
+                                  </div>
+                                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div 
+                                      className="bg-blue-600 h-2.5 rounded-full" 
+                                      style={{ width: `${percentage}%` }}
+                                    ></div>
+                                  </div>
+                                  <p className="text-xs text-gray-500 mt-1">{criterion.description}</p>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="p-8 text-center">
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
+                          <CheckCircle className="h-8 w-8 text-green-600" />
+                        </div>
+                        <h3 className="text-lg font-medium mb-2">Thank you for your submission!</h3>
+                        <p className="text-gray-500 mb-6">
+                          Your research assessment has been received and will be reviewed shortly.
+                          You'll receive feedback once the review is complete.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                          <Button onClick={() => router.push('/dashboard')}>
+                            Return to Dashboard
+                          </Button>
+                          <Button variant="outline" onClick={() => router.push('/assessments')}>
+                            View Other Assessments
+                          </Button>
+                        </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        
+        <div className="lg:col-span-1">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Evaluation Criteria</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {assessment.evaluationCriteria.map((criterion) => (
+                  <div key={criterion.id} className="space-y-1">
+                    <h4 className="font-medium text-sm">{criterion.name}</h4>
+                    <p className="text-gray-500 text-xs">{criterion.description}</p>
+                    <p className="text-xs font-medium text-gray-400">{criterion.maxScore} points</p>
+                    <Separator className="mt-2" />
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+          
+          {(stage === AssessmentStage.INTRO || stage === AssessmentStage.IN_PROGRESS) && (
+            <Card className="mt-4">
+              <CardHeader>
+                <CardTitle className="text-lg">Tips for Success</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                    <span>Read the research topic carefully before beginning</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                    <span>Structure your answer with clear sections</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                    <span>Cite sources to strengthen your research</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                    <span>Analyze information rather than just presenting facts</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                    <span>Manage your time - leave time for review</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+Updated TimerComponent with Warning
+tsx
+Copy
+// components/assessment/TimerComponent.tsx
+'use client';
+
+
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Clock, AlertCircle } from 'lucide-react';
+
+
+interface TimerProps {
+  durationMinutes: number;
+  onTimeEnd: () => void;
+  onTimeWarning?: () => void;
+  isWarning?: boolean;
+}
+
+
+export function TimerComponent({ 
+  durationMinutes, 
+  onTimeEnd, 
+  onTimeWarning, 
+  isWarning = false 
+}: TimerProps) {
+  const [timeLeft, setTimeLeft] = useState(durationMinutes * 60);
+  const [localWarning, setLocalWarning] = useState(false);
+  
+  useEffect(() => {
+    if (timeLeft <= 0) {
+      onTimeEnd();
+      return;
+    }
+    
+    const interval = setInterval(() => {
+      setTimeLeft(prev => prev - 1);
+    }, 1000);
+    
+    // Set warning when 5 minutes left (300 seconds)
+    if (timeLeft <= 300 && !localWarning && !isWarning) {
+      setLocalWarning(true);
+      if (onTimeWarning) {
+        onTimeWarning();
+      }
+    }
+    
+    return () => clearInterval(interval);
+  }, [timeLeft, durationMinutes, onTimeEnd, onTimeWarning, localWarning, isWarning]);
+  
+  const hours = Math.floor(timeLeft / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
+  const seconds = timeLeft % 60;
+  
+  const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  
+  const warningActive = isWarning || localWarning;
+  
+  return (
+    <motion.div
+      className={`px-4 py-3 rounded-lg flex items-center ${
+        warningActive ? 'bg-red-50 border border-red-200' : 'bg-gray-50 border border-gray-200'
+      }`}
+      animate={{ 
+        scale: warningActive && timeLeft % 2 === 0 ? 1.05 : 1,
+        borderColor: warningActive ? ['rgba(254, 202, 202, 0.8)', 'rgba(254, 202, 202, 0.2)'] : 'rgba(229, 231, 235, 1)',
+      }}
+      transition={{ 
+        duration: 0.5,
+        repeat: warningActive ? Infinity : 0,
+        repeatType: 'reverse',
+      }}
+    >
+      {warningActive ? (
+        <AlertCircle className="mr-2 h-5 w-5 text-red-500" />
+      ) : (
+        <Clock className="mr-2 h-5 w-5 text-gray-500" />
+      )}
+      <div>
+        <div className="flex items-center">
+          <span className={`font-medium ${warningActive ? 'text-red-700' : 'text-gray-800'}`}>
+            {timeString}
+          </span>
+          {warningActive && (
+            <span className="ml-2 text-xs font-medium text-red-600">Time running out!</span>
+          )}
+        </div>
+        <p className="text-xs text-gray-500">Time Remaining</p>
+      </div>
+    </motion.div>
+  );
+}
+These improvements provide a much more focused and polished experience for candidates. Key enhancements include:
+   1. Streamlined Dashboard:
+   * Removed the irrelevant "Candidates" section
+   * Added relevant statistics (available/completed assessments)
+   * Organized content into clear sections with proper hierarchy
+   * Added quick action buttons for common tasks
+   2. Enhanced Assessment Experience:
+   * Multi-stage assessment flow (intro → in-progress → submitted)
+   * Clear instructions with important notes before starting
+   * Autosave functionality to prevent lost work
+   * Improved timer with warning states
+   * Tips for success to guide candidates

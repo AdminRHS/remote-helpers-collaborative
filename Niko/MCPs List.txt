@@ -1,0 +1,315 @@
+﻿MCP Servers and Their Functionalities
+This list is organized according to the categories presented in the primary source (1 github.com/modelcontextprotocol/servers): Reference Servers, Official Integrations, and Community Servers.
+Reference Servers
+* AWS KB Retrieval: Retrieval from AWS Knowledge Base using Bedrock Agent Runtime.
+* Brave Search: Web and local search using Brave's Search API.
+* EverArt: AI image generation using various models.
+* Everything: Reference/test server with prompts, resources, and tools.
+* Fetch: Web content fetching and conversion for efficient LLM usage.
+* Filesystem: Secure file operations with configurable access controls.
+* Git: Tools to read, search, and manipulate Git repositories.
+* GitHub: Repository management, file operations, and GitHub API integration.
+* GitLab: GitLab API, enabling project management.
+* Google Drive: File access and search capabilities for Google Drive.
+* Google Maps: Location services, directions, and place details.
+* Memory: Knowledge graph-based persistent memory system.
+* PostgreSQL: Read-only database access with schema inspection.
+* Puppeteer: Browser automation and web scraping.
+* Sentry: Retrieving and analyzing issues from Sentry.io.
+* Sequential Thinking: Dynamic and reflective problem-solving through thought sequences.
+* Slack: Channel management and messaging capabilities.
+* Sqlite: Database interaction and business intelligence capabilities.
+* Time: Time and timezone conversion capabilities.
+Official Integrations
+* Axiom: Query and analyze your Axiom logs, traces, and all other event data in natural language.
+* Browserbase: Automate browser interactions in the cloud (e.g., web navigation, data extraction, form filling).
+* Cloudflare: Deploy, configure & interrogate your resources on the Cloudflare developer platform (e.g., Workers/KV/R2/D1).
+* E2B: Run code in secure sandboxes hosted by E2B.
+* Exa: Search Engine made for AIs by Exa.
+* Fireproof: Immutable ledger database with live synchronization.
+* JetBrains: Work on your code with JetBrains IDEs.
+* Kagi Search: Search the web using Kagi's search API.
+* Meilisearch: Interact & query with Meilisearch (Full-text & semantic search API).
+* Metoro: Query and interact with kubernetes environments monitored by Metoro.
+* MotherDuck: Query and analyze data with MotherDuck and local DuckDB.
+* Neo4j: Neo4j graph database server (schema + read/write-cypher) and separate graph database backed memory.
+* Neon: Interact with the Neon serverless Postgres platform.
+* Qdrant: Implement semantic memory layer on top of the Qdrant vector search engine.
+* Raygun: Interact with your crash reporting and real using monitoring data on your Raygun account.
+* Search1API: One API for Search, Crawling, and Sitemaps.
+* Tinybird: Interact with Tinybird serverless ClickHouse platform.
+Community Servers
+* AWS S3: Fetches objects (e.g., PDF documents) from AWS S3.
+* AWS: Perform operations on your AWS resources using an LLM.
+* Airtable: Read and write access to Airtable databases, with schema inspection.
+* AlphaVantage: Provides access to stock market data via the AlphaVantage API.
+* Anki: Interacts with your Anki decks and cards.
+* Any Chat Completions: Interact with any OpenAI SDK Compatible Chat Completions API like OpenAI, Perplexity, Groq, xAI and many more.
+* Atlassian: Interact with Atlassian Cloud products (Confluence and Jira) including searching/reading Confluence spaces/pages, accessing Jira issues, and project metadata.
+* BigQuery: (by LucasHild & ergut) Enables LLMs to inspect database schemas and execute queries on BigQuery.
+* ChatSum: Query and Summarize chat messages with LLM.
+* Chroma: Vector database server for semantic document search and metadata filtering.
+* Cloudinary: Upload media to Cloudinary and get back the media link and details.
+* cognee-mcp: GraphRAG memory server with customizable ingestion, data processing and search.
+* coin_api_mcp: Provides access to coinmarketcap cryptocurrency data.
+* Contentful-mcp: Read, update, delete, publish content in your Contentful space(s).
+* Data Exploration: Autonomous data exploration on .csv-based datasets. Caution: Executes arbitrary Python code.
+* DevRev: Integrate with DevRev APIs to search through your DevRev Knowledge Graph.
+* Docker: Integrate with Docker to manage containers, images, volumes, and networks.
+* Elasticsearch: Provides Elasticsearch interaction.
+* Fetch: Flexibly fetches HTML, JSON, Markdown, or plaintext.
+* FireCrawl: Advanced web scraping with JavaScript rendering, PDF support, and smart rate limiting.
+* FlightRadar24: Tracks flights in real-time using Flightradar24 data.
+* Glean: Uses Glean API to search and chat.
+* Google Calendar: Integration with Google Calendar to check schedules, find time, and add/delete events.
+* Google Tasks: Google Tasks API Model Context Protocol Server.
+* Home Assistant: Interact with Home Assistant including viewing and controlling lights, switches, sensors, and all other Home Assistant entities.
+* HuggingFace Spaces: Server for using HuggingFace Spaces, supporting Open Source Image, Audio, Text Models and more.
+* Inoyu: Interact with an Apache Unomi CDP customer data platform to retrieve and update customer profiles.
+* Keycloak MCP: Enables natural language interaction with Keycloak for user and realm management.
+* Kubernetes: Connect to Kubernetes cluster and manage pods, deployments, and services.
+* Linear: Allows LLM to interact with Linear's API for project management.
+* LlamaCloud: (by marcusschiesser) Integrate the data stored in a managed index on LlamaCloud.
+* MCP Installer: Installs other MCP servers.
+* mcp-k8s-go: Golang-based Kubernetes server for MCP to browse pods and their logs, events, namespaces and more.
+* MSSQL: MSSQL database integration with configurable access controls and schema inspection.
+* Markdownify: MCP to convert almost anything to Markdown (PPTX, HTML, PDF, Youtube Transcripts and more).
+* Minima: MCP server for RAG on local files.
+* MongoDB: A Model Context Protocol Server for MongoDB.
+* MySQL: (by benborla & DesignComputer) MySQL database integration with configurable access controls and schema inspection.
+* NS Travel Information: Access Dutch Railways (NS) real-time train travel information and disruptions through the official NS API.
+* Needle: Production-ready RAG out of the box to search and retrieve data from your own documents.
+* Notion: (by suekou & v-3) Interact with Notion API. Search, Read, Update, and Create pages through Claude chat.
+* oatpp-mcp: C++ MCP integration for Oat++. Use Oat++ to build MCP servers.
+* Obsidian Markdown Notes: Read and search through your Obsidian vault or any directory containing Markdown notes.
+* OpenAPI: Interact with OpenAPI APIs.
+* OpenRPC: Interact with and discover JSON-RPC APIs via OpenRPC.
+* Pandoc: MCP server for seamless document format conversion using Pandoc.
+* Pinecone: MCP server for searching and uploading records to Pinecone. Allows for simple RAG features, leveraging Pinecone's Inference API.
+* Playwright: This MCP Server will help you run browser automation and webscraping using Playwright.
+* RAG Web Browser: An MCP server for Apify's RAG Web Browser Actor to perform web searches, scrape URLs, and return content in Markdown.
+* Rememberizer AI: An MCP server designed for interacting with the Rememberizer data source, facilitating enhanced knowledge retrieval.
+* Salesforce MCP: Interact with Salesforce Data and Metadata.
+* Scholarly: A MCP server to search for scholarly and academic articles.
+* Snowflake: Enables LLMs to interact with Snowflake databases, allowing for secure and controlled data operations.
+* Spotify: This MCP allows an LLM to play and use Spotify.
+* TMDB: Integrates with The Movie Database (TMDB) API to provide movie information, search capabilities, and recommendations.
+* Tavily search: An MCP server for Tavily's search & news API, with explicit site inclusions/exclusions.
+* Todoist: Interact with Todoist to manage your tasks.
+* Vega-Lite: Generate visualizations from fetched data using the VegaLite format and renderer.
+* Windows CLI: MCP server for secure command-line interactions on Windows systems, enabling controlled access to PowerShell, CMD, and Git Bash shells.
+* X (Twitter): (by EnesCinr & vidhupv) Interact with twitter API. Post tweets and search for tweets by query. Create, manage and publish X/Twitter posts directly through Claude chat.
+* XMind: Read and search through your XMind directory containing XMind files.
+
+
+
+
+Key MCP Servers for HR and Recruitment Operations
+1. Memory (Knowledge Graph)
+Relevant Tasks:
+* Maintaining candidate databases and employee profiles
+* Storing historical interview data and interactions
+* Supporting contextual knowledge of past applicants and employees
+Implementation Example: The Memory server could build a persistent knowledge graph of all candidate interactions, enabling recruiters to quickly access previous conversations and assessment notes, even for candidates who applied months or years ago.
+2. Google Drive
+Tasks:
+* Managing document storage for contracts, resumes, and company policies
+* Sharing onboarding materials and instruction manuals
+* Collaborative editing of job descriptions and offer letters
+Implementation: Integration with your extensive use of Google Drive for document management, allowing AI assistants to directly search, retrieve and update HR documents.
+3. Discord
+Tasks:
+* Team communication around hiring decisions
+* Distributing job offers and notification updates
+* Coordinating interviews and recruitment campaigns
+Implementation: Enable AI systems to monitor relevant channels, summarize discussions, and automatically notify team members about hiring updates.
+4. CRM
+Tasks:
+* Tracking candidate pipelines and statuses
+* Managing contact information and communications
+* Recording interview feedback and salary negotiations
+Implementation: The AI could access your CRM to provide real-time updates on candidate status, suggest follow-ups, and ensure consistent communication.
+5. PostgreSQL/MySQL/Sqlite
+Tasks:
+* Querying candidate databases for specific skills or experience
+* Analyzing hiring metrics and recruitment performance
+* Generating reports on hiring funnel analytics
+Implementation: These servers would allow AI systems to directly query your databases for relevant candidate information or to generate complex hiring analytics.
+6. Google Calendar
+Tasks:
+* Scheduling interviews and recruitment events
+* Organizing onboarding sessions
+* Planning recruitment meetings and strategy sessions
+Implementation: Enable AI assistants to automatically schedule interviews based on team availability and candidate preferences.
+7. Google Maps
+Tasks:
+* Supporting location-based recruitment
+* Planning interview locations and office visits
+* Optimizing candidate commute considerations
+Implementation: Assist in identifying candidates within specific geographic areas or planning logistics for in-person interviews.
+8. Time
+Tasks:
+* Managing time zone differences for global recruitment
+* Scheduling appropriate follow-ups and reminders
+* Ensuring compliance with timing requirements in hiring processes
+Implementation: Support in converting meeting times across different time zones for international recruitment efforts.
+9. Fetch/Web Browser
+Tasks:
+* Researching market salary data for benchmarking
+* Gathering industry trends for recruitment strategies
+* Monitoring competitor job postings and offerings
+Implementation: Provide up-to-date market data to inform competitive salary offers and industry-specific recruitment strategies.
+10. Airtable
+Tasks:
+* Creating structured databases for candidate tracking
+* Building custom recruitment workflows
+* Developing visual kanban boards for hiring pipelines
+Implementation: Offer a flexible database solution that can be customized to your specific recruitment processes.
+Expanded List of Valuable MCP Servers
+11. Google Tasks
+Tasks:
+* Managing recruitment to-do lists
+* Assigning follow-up activities to team members
+* Tracking onboarding checkpoints for new hires
+12. Notion
+Tasks:
+* Creating comprehensive recruitment playbooks
+* Developing and sharing interview guidelines
+* Building company wikis for HR policies and procedures
+13. Email Integration (Gmail)
+Tasks:
+* Automating candidate communications
+* Sending personalized follow-ups and updates
+* Managing offer letter distribution
+14. Linear/Jira
+Tasks:
+* Project management for recruitment campaigns
+* Bug tracking for HR software systems
+* Sprint planning for hiring initiatives
+15. Pandoc
+Tasks:
+* Converting resume formats for standardized review
+* Transforming documentation between formats
+* Creating consistent offer letter formats
+16. Markdownify
+Tasks:
+* Converting HR documentation for easier reading
+* Transforming meeting notes into structured formats
+* Standardizing candidate feedback documentation
+17. GitHub
+Tasks:
+* Managing technical assessment code repositories
+* Version controlling HR policy documentation
+* Collaborative development of recruitment tools
+18. Zoom/Google Meet
+Tasks:
+* Conducting and recording video interviews
+* Hosting virtual onboarding sessions
+* Facilitating team interviews and assessments
+19. LinkedIn
+Tasks:
+* Sourcing potential candidates
+* Researching candidate backgrounds
+* Promoting job openings and company culture
+Implementation Recommendations
+1. Start with Core Functionality: Begin integration with Memory, Google Drive, and CRM servers to enhance your existing workflow.
+2. Build Automated Workflows: Use combinations of servers (e.g., CRM + Google Calendar + Gmail) to create end-to-end recruitment automation.
+3. Develop Custom Solutions: Consider specific needs like a specialized candidate matching system using PostgreSQL and Memory servers together.
+4. Measure Impact: Track efficiency gains from server integrations, focusing on metrics like time-to-hire and quality of candidates.
+Would you like me to elaborate on any particular server or use case? I can also recommend specific implementation approaches for your most critical HR or recruitment challenges.
+Advanced HR and Recruitment MCPs
+1. Kagi Search
+Applications:
+* Conducting deep candidate research beyond standard search engines
+* Finding specialized talent in niche fields
+* Researching industry-specific compensation and benefit standards
+2. Neo4j
+Applications:
+* Building complex relationship graphs between candidates, skills, and projects
+* Mapping internal employee networks for referral optimization
+* Creating visual representations of team structures and reporting lines
+3. Meilisearch
+Applications:
+* Implementing fast, relevant search across all candidate profiles
+* Building intuitive search experiences for internal job boards
+* Creating semantic search for skills and qualifications in resumes
+4. Chroma/Qdrant
+Applications:
+* Vector search for finding candidates with similar skill profiles
+* Semantic matching of job descriptions to candidate resumes
+* Identifying internal employees with transferable skills for new positions
+5. Firebase
+Applications:
+* Building real-time candidate tracking dashboards
+* Creating interactive candidate application portals
+* Developing mobile-first recruitment tools for on-the-go hiring managers
+Communication and Collaboration MCPs
+6. WhatsApp/Telegram Integration
+Applications:
+* Enabling direct messaging with candidates via preferred channels
+* Creating automated interview reminder systems
+* Building candidate support chatbots for common questions
+7. Microsoft 365
+Applications:
+* Integration with company-wide Office tools and documents
+* Accessing SharePoint resources for policy and procedure documentation
+* Connecting with Teams for seamless communication
+8. Salesforce
+Applications:
+* Advanced candidate relationship management
+* Pipeline analytics and forecasting
+* Integration with marketing automation for recruitment campaigns
+9. ChatGPT/OpenAI
+Applications:
+* Generating personalized candidate communications
+* Creating initial screening questions based on job requirements
+* Summarizing interview feedback from multiple interviewers
+10. Discourse
+Applications:
+* Building internal knowledge forums for recruitment best practices
+* Creating candidate community platforms for engagement
+* Documenting recruitment processes and learnings
+
+
+Business Process MCPs
+16. Zoho
+Applications:
+* End-to-end HR management systems
+* Contract management and e-signatures
+* Expense management for recruitment activities
+17. HubSpot
+Applications:
+* Marketing automation for recruitment campaigns
+* Candidate engagement tracking and nurturing
+* Building talent community email programs
+18. DocuSign
+Applications:
+* Streamlining offer letter and contract signing processes
+* Creating audit trails for employee agreements
+* Enabling remote document completion for new hires
+19. AWS Services
+Applications:
+* Scalable infrastructure for HR applications
+* Secure document storage with fine-grained permissions
+* Global availability for international recruitment operations
+20. Zendesk
+Applications:
+* Creating candidate help desk systems
+* Tracking and resolving recruitment process issues
+* Building knowledge bases for frequently asked questions
+Industry-Specific MCPs
+21. Greenhouse/Lever
+Applications:
+* Specialized applicant tracking system integration
+* Structured interview process management
+* Collaborative hiring team workflows
+22. LinkedIn Recruiter
+Applications:
+* Advanced candidate sourcing and outreach
+* Talent pool development and management
+* Building employer brand and presence
+23. Indeed/Glassdoor
+Applications:
+* Job posting optimization and management
+* Candidate review and application processing
+* Employer brand monitoring and improvement

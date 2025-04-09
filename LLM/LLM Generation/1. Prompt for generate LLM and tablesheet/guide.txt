@@ -1,0 +1,114 @@
+==================================================================================================================
+                                                Ukrainian Verion:
+==================================================================================================================
+
+1. У Cursor в контекстному меню ШІ обрати Gemini-2.0-flash-thinking-exp (на момент написання це остання, думаюча та 
+безкоштовна розумна модель).
+
+2. Відкрити файл prompt for LLM.txt.
+
+3. Написати в курсорі повідомлення: read this file and remember this prompt (@prompt for LLM.txt)
+
+4. Відправити його. Після отримання відповіді додати наступне: create a file in @tsv files directory named (e.g. AI 
+full stack developer) and fill this file with that: Profession Name: e.g. AI full stack developer Department Name: 
+e.g. developers Condition: 10-15 objects per profession and 1-2 task templates per object.
+
+5. Після чого ШІ згенерує tsv файл з назвою, яку ви вкажете, та розмістить його в папці tsv files, яка знаходиться в 
+тій самій папці, де промпт і гайд з використання та автогенерації професії та департаменту.
+
+6. Зайдіть у файл, який згенерував ШІ, натисніть ctrl+A, виділивши всю таблицю в буфер обміну.
+
+7. Перейдіть до файлу: https://docs.google.com/spreadsheets/d/1Qm1FCj7Peg2UpTXNcLAd1JA9p4bTOL-yqWjNlTlPe2M/edit
+
+8. Створіть нову таблицю з назвою "LLM10 AI (e.g. Full Stack Developer)", перейдіть до неї та натисніть ctrl+V.
+
+9. Потім поверніться назад до Cursor у папку LLM - LLM JSON - LLM10.json та відкрийте контекстне меню.
+
+10. Введіть ось такий промпт: 
+
+За шаблоном файлу @LLM10.json приблизно з рядка ххххх (уточніть, про який рядок йдеться: 
+приблизно за 2 "}}"), додайте @.tsv файл до @LLM10.json, дотримуючись структури файлу. Усі 30 (або скільки згенерував ШІ) 
+рядків треба додати.
+
+11. ШІ почне вносити в Json інформацію, після чого треба перевірити, щоб він додав саме 30 (або скільки рядків згенерував 
+ШІ) і чи не додав він нічого зайвого, після чого натиснути approve і файл оновиться.
+
+12. Таблиця вставлена, JSON готовий, вітаю.
+
+==================================================================================================================
+                                                English Verion:
+==================================================================================================================
+
+1. In Cursor's AI context menu, select Gemini-2.0-flash-thinking-exp (at the time of writing, this is the latest, 
+thinking, and free smart model).
+
+2. Open the file prompt for LLM.txt.
+
+3. Write the following message in Cursor: read this file and remember this prompt (@prompt for LLM.txt)
+
+4. Send it. After receiving a response, send the following: create a file in @tsv files directory named (e.g. AI 
+full stack developer) and fill this file with that: Profession Name: e.g. AI full stack developer Department Name: 
+e.g. developers Condition: 10-15 objects per profession and 1-2 task templates per object.
+
+5. After that, the AI will generate a tsv file with the name you specify and put it in the tsv files folder, which 
+is located in the same folder as the prompt and guide to using and auto-generating the profession and department.
+
+6. Go to the file that the AI generated, press ctrl+A, thereby selecting the entire table into the clipboard.
+
+7. Go to the file: https://docs.google.com/spreadsheets/d/1Qm1FCj7Peg2UpTXNcLAd1JA9p4bTOL-yqWjNlTlPe2M/edit
+
+8. Create a new table named "LLM10 AI (e.g. Full Stack Developer)", go to it, and press ctrl+V.
+
+9. Then, go back to Cursor in the LLM - LLM JSON - LLM10.json folder and open the context menu.
+
+10. Enter this prompt: 
+
+According to the @LLM10.json file template, approximately from line xxxxx (specify which line: 
+approximately after 2 "}}"), add the @.tsv file to @LLM10.json, following the file structure. All 30 (or however many 
+the AI generated) rows must be added.
+
+11. The AI will start entering information into Json, after which you need to check that it has added exactly 30 (or 
+however many lines the AI generated) and that it has not added anything extra, then click approve and the file will be 
+updated.
+
+12. The table is inserted, the JSON is ready, congratulations.
+
+==================================================================================================================
+                                                rusian Verion:
+==================================================================================================================
+
+1. В Cursor в контекстном меню ИИ выбрать Gemini-2.0-flash-thinking-exp (на момент написания это последняя, 
+думающая и бесплатная умная модель)
+
+2. Открыть файл prompt for LLM.txt
+
+3. Написать в курсоре сообщение:
+read this file and remember this prompt (@prompt for LLM.txt)
+
+4. отправить его. после получения ответа закинуть в него следующее:
+
+create a file in @tsv files directory named (e.g. AI full stack developer) and fill this file with that:
+Profession Name: e.g. AI full stack developer
+Department Name: e.g. developers
+Condition: 10-15 objects per profession and 1-2 task templates per object.
+
+5. После чего ИИ сгенерирует tsv файл с названием каким вы укажете и закинет его в папку tsv files, который 
+находится в той же папке где промпт и гайд к использованию и автогенерации профессии и департамента.
+
+6. заходите в файлик который сгенерировал ИИ, нажимаете ctrl+A, тем самым выделив всю таблицу в буфер обмена
+
+7. Отправляетесь в файл https://docs.google.com/spreadsheets/d/1Qm1FCj7Peg2UpTXNcLAd1JA9p4bTOL-yqWjNlTlPe2M/edit 
+
+8. Создаете новую таблицу с названием "LLM10 AI (e.g. Full Stack Developer)", переходите в нее и нажимаете ctrl+V.
+
+9. Затем переходите обратно в Cursor в папку LLM - LLM JSON - LLM10.json и открываете контекстное меню
+
+10. Вписываете вот такой промпт:
+
+По шаблону файла @LLM10.json примерно с ххххх строки (уточнее про какую строку речь: примерно за 2 "}}") 
+добавь @.tsv файл в @LLM10.json соблюдая структуру файла. все 30 (или сколько сгенерировала ИИ) рядков надо добавить
+
+11. ИИ начнет вносить в Json информацию, после чего надо проверить чтобы он добавил именно 30 (или сколько ИИ 
+сгенерировал строк) и ничего лишнего ли он не добавил, после чего нажать approve и файл обновится
+
+12. Таблица вставлена, JSON готов, поздравляю

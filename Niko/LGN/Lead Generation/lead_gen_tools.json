@@ -1,0 +1,309 @@
+{
+    "sheet_name": "Tools",
+    "data": [
+        {
+            "Tools": "quickbooks online",
+            "Tasks": "review financial holdings"
+        },
+        {
+            "Tools": "microsoft excel",
+            "Tasks": "review financial holdings, collect industry data, update contact entries, measure attendance, compile data"
+        },
+        {
+            "Tools": "bloomberg terminal",
+            "Tasks": "assess risk levels, evaluate investment options"
+        },
+        {
+            "Tools": "salesforce financial services cloud",
+            "Tasks": "assess risk levels"
+        },
+        {
+            "Tools": "morningstar direct",
+            "Tasks": "recommend adjustments, evaluate investment options"
+        },
+        {
+            "Tools": "tableau desktop",
+            "Tasks": "recommend adjustments, generate reports, analyze engagement, visualize trends"
+        },
+        {
+            "Tools": "salesforce crm",
+            "Tasks": "review account activities, track lead sources, assess lead viability, monitor sales funnel"
+        },
+        {
+            "Tools": "hubspot crm",
+            "Tasks": "review account activities, update client records, track SEO performance, research market segments, engage through campaigns, monitor sales funnel, segment audience"
+        },
+        {
+            "Tools": "zoho crm",
+            "Tasks": "update client records, refresh contact details, update corporate profiles, add new entries"
+        },
+        {
+            "Tools": "thomson reuters compliance management",
+            "Tasks": "ensure compliance"
+        },
+        {
+            "Tools": "docusign",
+            "Tasks": "ensure compliance, coordinate with vendors"
+        },
+        {
+            "Tools": "microsoft access",
+            "Tasks": "track transaction history, update records as needed"
+        },
+        {
+            "Tools": "google sheets",
+            "Tasks": "track transaction history, measure attendance, compile data, manage schedules"
+        },
+        {
+            "Tools": "google analytics",
+            "Tasks": "analyze account trends, research market segments, track engagement results, analyze search volume, monitor SEO performance, target audience needs, collect response data, gauge interest levels, set campaign goals"
+        },
+        {
+            "Tools": "microsoft power bi",
+            "Tasks": "analyze account trends, generate reports, analyze sector performance, predict market trends, visualize trends"
+        },
+        {
+            "Tools": "nagios xi",
+            "Tasks": "report anomalies"
+        },
+        {
+            "Tools": "splunk",
+            "Tasks": "report anomalies, monitor usage"
+        },
+        {
+            "Tools": "qualtrics",
+            "Tasks": "collect industry data, gather demographic data, conduct surveys, deploy surveys"
+        },
+        {
+            "Tools": "spss",
+            "Tasks": "perform trend analysis, interpret statistics"
+        },
+        {
+            "Tools": "google forms",
+            "Tasks": "collect industry data, conduct surveys, deploy surveys"
+        },
+        {
+            "Tools": "kpi management software",
+            "Tasks": "monitor key performance indicators"
+        },
+        {
+            "Tools": "klipfolio",
+            "Tasks": "update metric dashboards"
+        },
+        {
+            "Tools": "sas analytics",
+            "Tasks": "analyze sector performance"
+        },
+        {
+            "Tools": "customer relationship management software",
+            "Tasks": "identify buying habits"
+        },
+        {
+            "Tools": "hubspot",
+            "Tasks": "create persona outlines, track engagement results, track SEO performance, target audience needs, engage through campaigns, monitor sales funnel, segment audience, personalize messaging, schedule dispatches, measure response rates"
+        },
+        {
+            "Tools": "adobe marketo engage",
+            "Tasks": "adjust messaging"
+        },
+        {
+            "Tools": "surveymonkey",
+            "Tasks": "adjust messaging, measure attendance, gather participant feedback, deploy surveys"
+        },
+        {
+            "Tools": "salesforce marketing cloud",
+            "Tasks": "track engagement results"
+        },
+        {
+            "Tools": "sentiment analysis tools",
+            "Tasks": "analyze customer feedback"
+        },
+        {
+            "Tools": "user feedback tools",
+            "Tasks": "refine product offerings"
+        },
+        {
+            "Tools": "semrush",
+            "Tasks": "research relevant keywords, monitor SEO performance"
+        },
+        {
+            "Tools": "moz pro",
+            "Tasks": "research relevant keywords, track keyword rankings, implement SEO best practices"
+        },
+        {
+            "Tools": "ahrefs",
+            "Tasks": "analyze search volume, adjust strategies as needed, analyze traffic data"
+        },
+        {
+            "Tools": "yoast seo",
+            "Tasks": "optimize content, implement SEO best practices"
+        },
+        {
+            "Tools": "serpstat",
+            "Tasks": "track keyword rankings"
+        },
+        {
+            "Tools": "kissmetrics",
+            "Tasks": "analyze traffic data"
+        },
+        {
+            "Tools": "linkedin",
+            "Tasks": "compile professional histories, revise biography information, confirm contact authenticity"
+        },
+        {
+            "Tools": "plum",
+            "Tasks": "integrate skill assessments"
+        },
+        {
+            "Tools": "gallup strengthsfinder",
+            "Tasks": "integrate skill assessments"
+        },
+        {
+            "Tools": "adobe indesign",
+            "Tasks": "design layout, adapt marketing materials"
+        },
+        {
+            "Tools": "canva",
+            "Tasks": "design layout, network at events, customize event themes"
+        },
+        {
+            "Tools": "facebook insights",
+            "Tasks": "evaluate engagement metrics"
+        },
+        {
+            "Tools": "hootsuite analytics",
+            "Tasks": "evaluate engagement metrics, provide consistent value"
+        },
+        {
+            "Tools": "buffer",
+            "Tasks": "suggest interaction improvements, schedule dispatches"
+        },
+        {
+            "Tools": "sprout social",
+            "Tasks": "suggest interaction improvements, track engagement"
+        },
+        {
+            "Tools": "data ladder",
+            "Tasks": "verify database integrity"
+        },
+        {
+            "Tools": "winpure clean & match",
+            "Tasks": "verify database integrity"
+        },
+        {
+            "Tools": "zapier",
+            "Tasks": "synchronize across platforms"
+        },
+        {
+            "Tools": "syncari",
+            "Tasks": "synchronize across platforms"
+        },
+        {
+            "Tools": "fullcontact",
+            "Tasks": "check accuracy of details"
+        },
+        {
+            "Tools": "clearbit",
+            "Tasks": "check accuracy of details"
+        },
+        {
+            "Tools": "pipedrive",
+            "Tasks": "sort contacts by priority"
+        },
+        {
+            "Tools": "microsoft dynamics 365",
+            "Tasks": "organize for accessibility, identify service gaps"
+        },
+        {
+            "Tools": "linkedin sales navigator",
+            "Tasks": "identify target companies"
+        },
+        {
+            "Tools": "zoominfo",
+            "Tasks": "identify target companies"
+        },
+        {
+            "Tools": "bloomberg",
+            "Tasks": "gather business intelligence"
+        },
+        {
+            "Tools": "ibisworld",
+            "Tasks": "gather business intelligence"
+        },
+        {
+            "Tools": "google docs",
+            "Tasks": "prepare entry strategies, identify client goals"
+        },
+        {
+            "Tools": "microsoft onenote",
+            "Tasks": "prepare entry strategies"
+        },
+        {
+            "Tools": "sap master data governance",
+            "Tasks": "ensure data accuracy"
+        },
+        {
+            "Tools": "informatica",
+            "Tasks": "ensure data accuracy"
+        },
+        {
+            "Tools": "okta",
+            "Tasks": "manage access permissions"
+        },
+        {
+            "Tools": "microsoft azure active directory",
+            "Tasks": "manage access permissions"
+        },
+        {
+            "Tools": "apache hadoop",
+            "Tasks": "implement access controls"
+        },
+        {
+            "Tools": "cassandra",
+            "Tasks": "implement access controls"
+        },
+        {
+            "Tools": "oracle audit vault",
+            "Tasks": "monitor usage"
+        },
+        {
+            "Tools": "sophos",
+            "Tasks": "enforce security protocols"
+        },
+        {
+            "Tools": "norton",
+            "Tasks": "enforce security protocols"
+        },
+        {
+            "Tools": "oracle database",
+            "Tasks": "modify information"
+        },
+        {
+            "Tools": "mysql",
+            "Tasks": "modify information"
+        },
+        {
+            "Tools": "microsoft sql server",
+            "Tasks": "remove outdated data"
+        },
+        {
+            "Tools": "mongodb",
+            "Tasks": "remove outdated data"
+        },
+        {
+            "Tools": "acl analytics",
+            "Tasks": "ensure data accuracy"
+        },
+        {
+            "Tools": "ibm infosphere information server",
+            "Tasks": "ensure data accuracy"
+        },
+        {
+            "Tools": "acronis true image",
+            "Tasks": "perform regular backups"
+        },
+        {
+            "Tools": "veeam",
+            "Tasks": "perform regular backups"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+Step-by-Step Instruction creating video from a photo using Hailuo AI
+Below are 8 steps that will help beginners create their first video from a photo using Hailuo AI:
+
+Sign Up or Log In to Hailuo AI. Go to the official Hailuo AI website and create an account (you can log in quickly using a Google account), or log in if you already have one. Registration is free and takes just a minute. Once you're logged in, you'll be taken to the video creation interface.
+
+Select the Image-to-Video Mode. On the main menu or toolbar, select the option to create a video from an image (the "Image-to-Video" mode). Note: Hailuo AI also has a Text-to-Video mode for generating videos from text descriptions, but here we will focus on static images.
+
+Upload the Static Image. Click the Upload button ("Upload Image") and select the photo or image you want to bring to life. Once chosen, the file will upload to the platform, and a preview (thumbnail) of your image will appear in the workspace.
+(Illustration: The chameleon mascot points its paw to the "Upload" button, encouraging the user to select a file.)
+
+Add a Text Description (Optional). In the provided field, type a brief description of what should happen in the video. For example: "The camera slowly rotates around the object," "Snow falls around the character," etc. This helps the AI understand your idea and generate the appropriate motion or effect. If you're unsure or just want to see a basic animation, you can skip this step — the service will automatically add standard dynamics.
+(Illustration: The chameleon in the yellow cap tilts its head, holding a notepad as if suggesting you write your animation idea.)
+
+Click the "Create Video" Button. Once the image is selected (and, if needed, the description is added), click the Generate button ("Create Video"). After this, Hailuo AI will start processing — you’ll see a progress indicator or a message telling you that the generation process is underway.
+
+Wait for Processing to Finish. Depending on the complexity of the request and the platform's load, the video generation may take anywhere from a few seconds to a few minutes (usually about 3-5 minutes). During this time, do not click anything or close the page. Once the process is finished, the generated video will appear for preview.
+
+Preview the Video. Play the generated video directly in your browser to check if the result is satisfactory. You'll see how your static image "came to life" according to the given prompt. If something doesn't seem right, you can return to previous steps: try a different prompt or image and regenerate the video.
+
+Download the Video and Share It. Once you're happy with the result, click the Download button ("Download Video") to save the file to your device. Now you can share the video with your friends or on social media. Hailuo AI allows quick sharing: after downloading, you can immediately post it on Instagram, Twitter, etc.
+(Illustration: A happy chameleon holds a camera and "film" (or video file icon), suggesting a successful video creation; social media icons might appear nearby to encourage sharing the video.)
+
+Tip: Experiment with different images and descriptions at first. Our chameleon assistant will appear with helpful tips so you can quickly master all the features of Hailuo AI. If needed, pay attention to the interface hints — the system may recommend how to improve the prompt for a better result.

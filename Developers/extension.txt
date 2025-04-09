@@ -1,0 +1,16 @@
+API-інтеграції через:
+
+Perplexity API (на стадії доступу)
+https://docs.perplexity.ai/guides/models/sonar-deep-research
+https://docs.perplexity.ai/guides/pricing
+https://docs.perplexity.ai/api-reference/chat-completions
+https://www.perplexity.ai/account/api
+
+OpenAI (GPT-4 + search plugin) GPT-4 + Bing
+https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview
+
+Grok
+https://docs.x.ai/docs/models?cluster=us-east-1#model-constraints
+
+
+Альтернатива налаштувати вебхуки на n8n

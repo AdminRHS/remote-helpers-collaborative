@@ -1,0 +1,2907 @@
+[
+
+    {
+
+        "Objects": "candidates",
+
+        "Object Types": "needed candidates, applied candidates, found candidates, follow-up candidates",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "communications",
+
+        "Object Types": "first connection, update, follow-up, feedback, faq, onboarding",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "contracts",
+
+        "Object Types": "employees contracts, presale contract, content creator agreement, clients agreements",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "databases",
+
+        "Object Types": "candidates database, employees database, presale database",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "interviews",
+
+        "Object Types": "video interview, project interview",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "negotiations",
+
+        "Object Types": "salary negotiation, contract term negotiation, benefit negotiation",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "reports",
+
+        "Object Types": "daily report, monthly report, employee report, department report,  task report",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "salaries",
+
+        "Object Types": "expected salary, proposed salary, start salary",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "vacancies",
+
+        "Object Types": "open vacancy, closed vacancy, suspended vacancy, planned vacancy",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "channels",
+
+        "Object Types": "job site, social network, messenger",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "instructions",
+
+        "Object Types": "onboarding instruction, job posting instruction, crm instruction, communication instruction, video adding instruction",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "scripts",
+
+        "Object Types": "interview script, outreach script, offer script, onboarding script, message script",
+
+        "Professions": "recruiter",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "communications",
+
+        "Object Types": "text communciation,  voice communication",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "contracts",
+
+        "Object Types": "employees contracts, presale contract",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "databases",
+
+        "Object Types": "candidates database, interviews database, employees database, video database",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "emlpoyees",
+
+        "Object Types": "employee, presale employee, project employee",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "events",
+
+        "Object Types": "holidays event , birthdays event, competitions event, team buildings event",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "faqs",
+
+        "Object Types": "candidates faq, employees faq, before project faq, after project faq",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "feedbacks",
+
+        "Object Types": "management feedback, candidates feedback, employees feedback, project feedback",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "instructions",
+
+        "Object Types": "profession instruction, department instruction, company instruction, project instruction",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "meetings",
+
+        "Object Types": "department meeting, team meeting, project meeting, one-on-one meeting",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "onboarding",
+
+        "Object Types": "company onboarding, department onboarding, project onboarding",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "performance",
+
+        "Object Types": "personal perfomance",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "reports",
+
+        "Object Types": "daily report, monthly report, employee report, profession report, department report, company report",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "videos",
+
+        "Object Types": "video interview, re-record video, greetings video",
+
+        "Professions": "hr manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "databases",
+
+        "Object Types": "sql database, nosql database, graph database, time-series database",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "servers",
+
+        "Object Types": "dedicated server, virtual server, cloud server, file server",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "apis",
+
+        "Object Types": "internal api, external api, public api, private api, partner api",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "containers",
+
+        "Object Types": "docker container, kubernetes container, virtual machine, container cluster",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "microservices",
+
+        "Object Types": "authentication microservice, logging microservice, billing microservice, notification microservice",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "logs",
+
+        "Object Types": "system log, security log, application log, audit log",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "transactions",
+
+        "Object Types": "financial transaction, service transaction, batch transaction, real-time transaction",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "sessions",
+
+        "Object Types": "user session, system session, persistent session, temporary session",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "cache",
+
+        "Object Types": "memory cache, disk cache, web cache, database cache",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "threads",
+
+        "Object Types": "worker thread, ui thread, background thread, main thread",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "requests",
+
+        "Object Types": "synchronous request, asynchronous request, idempotent request, non-idempotent request",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "responses",
+
+        "Object Types": "synchronous response, asynchronous response, cached response, dynamic response",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "configurations",
+
+        "Object Types": "system configuration, user configuration, network configuration, security configuration",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "dependencies",
+
+        "Object Types": "direct dependency, transitive dependency, development dependency, production dependency",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "backups",
+
+        "Object Types": "full backup, incremental backup, differential backup, mirror backup",
+
+        "Professions": "back end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "ads",
+
+        "Object Types": "search advertising, video ads, google ads, paid search advertising, banner ads, social media advertising, native advertising, contextual advertising",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "collaborations",
+
+        "Object Types": "cross-industry collaborations, brand-artist collaborations, competitive collaborations, charity collaborations, influencer collaborations",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "communications",
+
+        "Object Types": "client correspondence, influencer engagements, support queries",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "metrics",
+
+        "Object Types": "awareness, engagement, perception, experience, acquisition, conversion",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "posts",
+
+        "Object Types": "video post, image post, text post, carousel post",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "profiles",
+
+        "Object Types": "business, creator",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "stories",
+
+        "Object Types": "photo story, video story",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "strategies",
+
+        "Object Types": "posting strategy, promotional strategy, conversion strategy, engagement strategy",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "visuals",
+
+        "Object Types": "images, video, infographic, gif, animation",
+
+        "Professions": "smm",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "modules",
+
+        "Object Types": "utility modules, feature modules, core modules",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "queries",
+
+        "Object Types": "select queries, update queries, insert queries",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "endpoints",
+
+        "Object Types": "REST endpoints, SOAP endpoints, GraphQL endpoints",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "forms",
+
+        "Object Types": "login forms, registration forms, data entry forms",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "routes",
+
+        "Object Types": "API routes, resource routes, redirect routes",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "schemas",
+
+        "Object Types": "database schemas, validation schemas, XML schemas",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "templates",
+
+        "Object Types": "HTML templates, email templates, report templates",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "stylesheets",
+
+        "Object Types": "CSS stylesheets, SCSS stylesheets, LESS stylesheets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "widgets",
+
+        "Object Types": "UI widgets, dashboard widgets, embeddable widgets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "packets",
+
+        "Object Types": "data packets, network packets, protocol packets",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "sessions",
+
+        "Object Types": "user sessions, server sessions, transaction sessions",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "cookies",
+
+        "Object Types": "session cookies, persistent cookies, third-party cookies",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "hooks",
+
+        "Object Types": "lifecycle hooks, event hooks, utility hooks",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "middleware",
+
+        "Object Types": "authentication middleware, logging middleware, caching middleware",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "payloads",
+
+        "Object Types": "JSON payloads, XML payloads, binary payloads",
+
+        "Professions": "full stack developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "modules",
+
+        "Object Types": "ui modules, service modules, feature modules",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "queries",
+
+        "Object Types": "graphql queries, ajax queries, data fetching queries",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "endpoints",
+
+        "Object Types": "rest endpoints, api gateways, resource endpoints",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "forms",
+
+        "Object Types": "input forms, search forms, login forms",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "routes",
+
+        "Object Types": "client-side routes, api routes, static routes",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "schemas",
+
+        "Object Types": "json schemas, xml schemas, data validation schemas",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "templates",
+
+        "Object Types": "ejs templates, handlebars templates, mustache templates",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "stylesheets",
+
+        "Object Types": "css stylesheets, scss stylesheets, less stylesheets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "widgets",
+
+        "Object Types": "interactive widgets, informational widgets, control widgets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "packets",
+
+        "Object Types": "network packets, data packets, message packets",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "sessions",
+
+        "Object Types": "user sessions, transaction sessions, persistent sessions",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "cookies",
+
+        "Object Types": "session cookies, secure cookies, http-only cookies",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "hooks",
+
+        "Object Types": "react hooks, vue hooks, state hooks, effect hooks",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "middleware",
+
+        "Object Types": "authentication middleware, logging middleware, error handling middleware",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "payload",
+
+        "Object Types": "json payload, form-data payload, binary payload",
+
+        "Professions": "front end developer",
+
+        "Departments": "developers"
+
+    },
+
+    {
+
+        "Objects": "ads",
+
+        "Object Types": "search advertising, video ads, google ads, paid search advertising, banner ads, social media advertising, native advertising, contextual advertising",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "content plan",
+
+        "Object Types": "posting strategy, promotional strategy, conversion strategy, engagement strategy",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "media",
+
+        "Object Types": "images, video, infographic, gif, animation ",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "metrics",
+
+        "Object Types": "awareness, engagement, perception, experience, acquisition, conversion",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "posts",
+
+        "Object Types": "video post, image post, text post, carousel post",
+
+        "Professions": "content manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "characters",
+
+        "Object Types": "main characters, secondary characters, background characters",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "backgrounds",
+
+        "Object Types": "digital backgrounds, hand-drawn backgrounds, interactive backgrounds",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "textures",
+
+        "Object Types": "natural textures, synthetic textures, environmental textures",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "layers",
+
+        "Object Types": "foreground layers, middle ground layers, background layers",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "props",
+
+        "Object Types": "animated props, static props, interactive props",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "animations",
+
+        "Object Types": "2d animations, 3d animations, stop motion animations",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "frames",
+
+        "Object Types": "key frames, in-between frames, extreme frames",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "keyframes",
+
+        "Object Types": "start keyframes, end keyframes, breakdown keyframes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "storyboards",
+
+        "Object Types": "initial storyboards, final storyboards, presentation storyboards",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "scripts",
+
+        "Object Types": "dialogue scripts, action scripts, narrative scripts",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "timelines",
+
+        "Object Types": "scene timelines, character timelines, effects timelines",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "palettes",
+
+        "Object Types": "character palettes, background palettes, detail palettes",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "effects",
+
+        "Object Types": "particle effects, light effects, shadow effects",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "motions",
+
+        "Object Types": "linear motions, complex motions, guided motions",
+
+        "Professions": "animator",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "animations",
+
+        "Object Types": "2d animations, 3d animations, interactive animations",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "backgrounds",
+
+        "Object Types": "virtual backgrounds, animated backgrounds, static backgrounds",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "characters",
+
+        "Object Types": "animated characters, 3d characters, character rigs",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "effects",
+
+        "Object Types": "visual effects, particle effects, digital effects",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "frames",
+
+        "Object Types": "key frames, end frames, transition frames",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "graphics",
+
+        "Object Types": "vector graphics, raster graphics, 3d graphics",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "intros",
+
+        "Object Types": "teaser intros, logo intros, cinematic intros",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "overlays",
+
+        "Object Types": "text overlays, image overlays, effect overlays",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "sequences",
+
+        "Object Types": "animation sequences, video sequences, scene sequences",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "storyboards",
+
+        "Object Types": "concept storyboards, presentation storyboards, detail storyboards",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "templates",
+
+        "Object Types": "video templates, animation templates, title templates",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "typography",
+
+        "Object Types": "kinetic typography, static typography, digital typography",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "videos",
+
+        "Object Types": "explainer videos, promotional videos, tutorial videos",
+
+        "Professions": "motion designer",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "audios",
+
+        "Object Types": "audio mixing audios, sound effect audios, voiceover audios",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "background",
+
+        "Object Types": "virtual set backgrounds, green screen backgrounds, thematic backgrounds",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "color",
+
+        "Object Types": "color grading colors, color correction colors, color enhancement colors",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "description",
+
+        "Object Types": "metadata descriptions, SEO descriptions, narrative descriptions",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "effects",
+
+        "Object Types": "visual effects, transition effects, sound effects",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "footage",
+
+        "Object Types": "raw footage, stock footage, edited footage",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "frame",
+
+        "Object Types": "composition frames, static frames, dynamic frames",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "graphics",
+
+        "Object Types": "motion graphics, static graphics, animated graphics",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "intro",
+
+        "Object Types": "teaser intros, thematic intros, narrative intros",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "music",
+
+        "Object Types": "background music, theme music, incidental music",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "noise",
+
+        "Object Types": "background noise, noise reduction, ambient noise",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "outro",
+
+        "Object Types": "closing outros, credit outros, call-to-action outros",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "script",
+
+        "Object Types": "metadata descriptions, SEO descriptions, narrative descriptions, shooting scripts, dialogue scripts, storyboard scripts",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "storyboard",
+
+        "Object Types": "pre-production storyboards, animatic storyboards, presentation storyboards",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "subtitles",
+
+        "Object Types": "translated subtitles, closed caption subtitles, descriptive subtitles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "template",
+
+        "Object Types": "video templates, title templates, transition templates",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "titles",
+
+        "Object Types": "translated subtitles, closed caption subtitles, descriptive subtitles, opening titles, lower-thirds titles, credit titles",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "transitions",
+
+        "Object Types": "cut transitions, fade transitions, wipe transitions",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "video breakdown",
+
+        "Object Types": "scene breakdown, shot breakdown, sequence breakdown",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "video hook",
+
+        "Object Types": "opening hook, narrative hook, promotional hook",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "video take",
+
+        "Object Types": "master takes, alternative takes, b-roll takes",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "videos",
+
+        "Object Types": "promotional videos, documentary videos, tutorial videos",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "voiceover",
+
+        "Object Types": "instructional voiceovers, narrative voiceovers, promotional voiceovers",
+
+        "Professions": "video editor",
+
+        "Departments": "videographers"
+
+    },
+
+    {
+
+        "Objects": "banners",
+
+        "Object Types": "web banner, social media banner, email banner",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "headers",
+
+        "Object Types": "social media header, website header",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "icons",
+
+        "Object Types": "outline icon, filled icon, flat icon, dimensional icon, emoji icon, hand-drawn icon",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "illustrations",
+
+        "Object Types": "flat illustration, isometric illustration, vector illustration, character illustration",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "infographics",
+
+        "Object Types": "statistical infographic, informational infographic, process infographic",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "logos",
+
+        "Object Types": "wordmark logo, lettermark logo, pictorial logo, abstract logo, combination logo, emblem logo",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "presentations",
+
+        "Object Types": "informative presentation, persuasive presentation, demonstrative presentation",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "brandbooks",
+
+        "Object Types": "corporate brandbook, product brandbook, visual identity guideline",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "fonts",
+
+        "Object Types": "web font, display font, custom font",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "business cards",
+
+        "Object Types": "personal contact card, social media business card, QR code business card",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "thumbnails",
+
+        "Object Types": "promo thumbnail, interview thumbnail, tutorial thumbnail",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "mockups",
+
+        "Object Types": "website mockup, app mockup, advertising mockup",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "email templates",
+
+        "Object Types": "promotional email template, newsletter template, feedback email template",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "characters",
+
+        "Object Types": "mascot, user avatar, instructional character, storytelling character, iconic character",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "portraits",
+
+        "Object Types": "digital portrait",
+
+        "Professions": "graphic designer",
+
+        "Departments": "designers"
+
+    },
+
+    {
+
+        "Objects": "keywords",
+
+        "Object Types": "primary keywords, long-tail keywords, negative keywords",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "backlinks",
+
+        "Object Types": "inbound backlinks, outbound backlinks, toxic backlinks",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "metatags",
+
+        "Object Types": "title tags, description tags, header tags",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "content",
+
+        "Object Types": "blog posts, landing pages, product descriptions",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "sitemap",
+
+        "Object Types": "XML sitemap, HTML sitemap, video sitemap",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "snippets",
+
+        "Object Types": "featured snippets, rich snippets, meta descriptions",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "headers",
+
+        "Object Types": "H1 tags, H2 tags, H3 tags",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "domains",
+
+        "Object Types": "primary domains, subdomains, international domains",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "traffic",
+
+        "Object Types": "organic traffic, paid traffic, referral traffic",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "rankings",
+
+        "Object Types": "SERP rankings, local rankings, global rankings",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "pages",
+
+        "Object Types": "home pages, category pages, archive pages",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "URLs",
+
+        "Object Types": "static URLs, dynamic URLs, canonical URLs",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "analytics",
+
+        "Object Types": "traffic analytics, conversion analytics, behavior analytics",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "campaigns",
+
+        "Object Types": "PPC campaigns, email campaigns, social media campaigns",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "conversions",
+
+        "Object Types": "form submissions, sales conversions, sign-ups",
+
+        "Professions": "seo manager tech",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "calls",
+
+        "Object Types": "first call, second call, interview, introductory call, project call",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "leads",
+
+        "Object Types": "hot leads, interested leads, cold leads, ignoring leads, new leads, ",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "clients",
+
+        "Object Types": "ex-clients,  current clients",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "communications",
+
+        "Object Types": "text communication, voice communication",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "employees",
+
+        "Object Types": "available employee, presale employee, hired employee. ",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "projects",
+
+        "Object Types": "full-time project, part-time project, 40-hour project, 10-hour free project, test task project",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "feedbacks",
+
+        "Object Types": "clients feedback, candidates feedback, references",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "instructions",
+
+        "Object Types": "client instructions, company instructions",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "documents",
+
+        "Object Types": "invoices, agreements, scripts, full-time agreement, part-time agreement, 40-hour agreement, 10-hour free agreement",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "performance",
+
+        "Object Types": "personal perfomance, candidate performance, project performance",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "reports",
+
+        "Object Types": "daily report, employee report, project report",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "accounts",
+
+        "Object Types": "linkedin accounts, email accounts, whatsapp group accounts",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "services",
+
+        "Object Types": "outstaff",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "databases",
+
+        "Object Types": "employees database, clients database,  leads database",
+
+        "Professions": "sales manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "keywords",
+
+        "Object Types": "Primary, Secondary, Long-Tail, Branded",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "meta tags",
+
+        "Object Types": "Title Tags, Description Tags, Robots Tags",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "links",
+
+        "Object Types": "Internal, External, Backlinks",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "headings",
+
+        "Object Types": "H1, H2- H6",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "sitemaps",
+
+        "Object Types": "XML Sitemap, HTML Sitemap, Image Sitemap, Video Sitemap",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "snippets",
+
+        "Object Types": "Featured Snippets, Rich Snippets",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "analytics",
+
+        "Object Types": "Website Analytics, Social Media Analytics",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "reports",
+
+        "Object Types": "SEO Performance Report, Traffic Report, Conversion Report",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "audits",
+
+        "Object Types": "On-Page SEO Audit, Off-Page SEO Audit, Technical Audit",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "backlink",
+
+        "Object Types": "Inbound Links, Outbound Links, Authority Links, Toxic Links",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "rankings",
+
+        "Object Types": "Search Engine Rankings, Local Search Rankings",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "strategy",
+
+        "Object Types": "SEO Strategy, Content Strategy, Link Building Strategy",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "traffic",
+
+        "Object Types": "Organic Traffic, Referral Traffic, Direct Traffic, Paid Traffic",
+
+        "Professions": "seo manager",
+
+        "Departments": "marketers"
+
+    },
+
+    {
+
+        "Objects": "accounts",
+
+        "Object Types": "new, in work, sold, banned, problematic, free",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "industries",
+
+        "Object Types": "sector, industry, market",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "customer persona",
+
+        "Object Types": "business, individual",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "search queries",
+
+        "Object Types": "google, linkedin",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "profiles",
+
+        "Object Types": "company, lead",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "contacts",
+
+        "Object Types": "valid, active, inactive, empty",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "companies",
+
+        "Object Types": "lead, interested, client, updated, not relevant",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "leads",
+
+        "Object Types": "cold, new, active, client, updated, not relevant",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "connections",
+
+        "Object Types": "personalized, relevant, old, received",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "messages",
+
+        "Object Types": "connection, cold, follow up, presentation, sms",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "emails",
+
+        "Object Types": "cold, follow up, presentation",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "promotions",
+
+        "Object Types": "informational, trial-based, discounts, interactive",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "needs",
+
+        "Object Types": "immediate, long-term, position, skill, replacement, project",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "communications",
+
+        "Object Types": "first connection, basic correspondence, event, follow up, presentation",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "events",
+
+        "Object Types": "scheduled, held, transferred, follow up, ignored",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "feedbacks",
+
+        "Object Types": "direct, in-app, live chat, product\/service, price",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "reports",
+
+        "Object Types": "daily, monthly, by countries, by industries, by manager, by event",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "databases",
+
+        "Object Types": "operational, analytical",
+
+        "Professions": "lead generator",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "appointments",
+
+        "Object Types": "business appointments, personal appointments",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "calendars",
+
+        "Object Types": "daily calendars, project calendars",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "checklists",
+
+        "Object Types": "task checklists, verification checklists",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "clients",
+
+        "Object Types": "prospective clients, recurring clients",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "communications",
+
+        "Object Types": "internal communications, external communications",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "contacts",
+
+        "Object Types": "business contacts, personal contacts",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "correspondence",
+
+        "Object Types": "email correspondence, letter correspondence",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "costs",
+
+        "Object Types": "travel costs, operational costs",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "documents",
+
+        "Object Types": "confidential documents, shared documents",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "emails",
+
+        "Object Types": "urgent emails, bulk emails",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "events",
+
+        "Object Types": "corporate events, social events",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "feedbacks",
+
+        "Object Types": "client feedback, staff feedback",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "meetings",
+
+        "Object Types": "team meetings, client meetings",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "notes",
+
+        "Object Types": "meeting notes, research notes",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "orders",
+
+        "Object Types": "purchase orders, sales orders",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "presentations",
+
+        "Object Types": "client presentations, team presentations",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "reminders",
+
+        "Object Types": "deadline reminders, meeting reminders",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "reports",
+
+        "Object Types": "financial reports, project reports",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "support",
+
+        "Object Types": "technical support, customer support",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "travels",
+
+        "Object Types": "domestic travel, international travel",
+
+        "Professions": "personal assistant",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "dashboards",
+
+        "Object Types": "overview dashboard, employees dashboard, milestones dasshboard, tasks dashboard, Gantt chart ",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "deadlines",
+
+        "Object Types": "project deadline, milestone deadlisne, task deadline",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "edits",
+
+        "Object Types": "scope edits, schedule edits, resource edits, budget edits, quality edits, risk management edits",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "feedbacks",
+
+        "Object Types": "client feedback, team feedback, stakeholder feedback",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "goals",
+
+        "Object Types": "quality goals, cost goals, time goals, scope goals, customer satisfaction goals",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "meetings",
+
+        "Object Types": "kick-off meetings, status update meetings, planning meetings, review meetings, stakeholder meetings, retrospective meetings",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "milestones",
+
+        "Object Types": "initiation milestone, planning milestone, development milestone, implementation milestone, closure milestone",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "projects",
+
+        "Object Types": "software development projects, website development projects, system integration projects, data migration projects",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "strategies",
+
+        "Object Types": "agile, scrum, waterfall, devops, kanban",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "tasks",
+
+        "Object Types": "initiation task, planning task, development task, implementation task, closure task",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "teams",
+
+        "Object Types": "functional team, project team, operational team, management team",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "timelines",
+
+        "Object Types": "mileastone timeline, project timeline, workflow timeline",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    },
+
+    {
+
+        "Objects": "workflows",
+
+        "Object Types": "sequential workflow, parallel workflow",
+
+        "Professions": "project manager",
+
+        "Departments": "managers"
+
+    }
+
+]

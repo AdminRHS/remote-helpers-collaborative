@@ -1,0 +1,20 @@
+﻿CREATE TABLE $tableName (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `order` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `step_template_id` smallint(5) unsigned NOT NULL,
+  `assignee_id` smallint(5) unsigned DEFAULT NULL,
+  `name` varchar(200) NOT NULL,
+  `entity_id` tinyint(3) unsigned DEFAULT NULL,
+  `task_id` mediumint(8) unsigned DEFAULT NULL,
+  `is_completed` tinyint(1) NOT NULL DEFAULT 0,
+  `completed_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `steps_step_template_id_foreign` (`step_template_id`),
+  KEY `steps_assignee_id_foreign` (`assignee_id`),
+  KEY `steps_entity_id_foreign` (`entity_id`),
+  KEY `steps_task_id_foreign` (`task_id`),
+  CONSTRAINT `steps_assignee_id_foreign` FOREIGN KEY (`assignee_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `steps_entity_id_foreign` FOREIGN KEY (`entity_id`) REFERENCES `entities` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `steps_step_template_id_foreign` FOREIGN KEY (`step_template_id`) REFERENCES `step_templates` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `steps_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
+)

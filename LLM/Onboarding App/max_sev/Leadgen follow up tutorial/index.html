@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LinkedIn Mastery Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+    
+    :root {
+      --primary: #6c5ce7;
+      --secondary: #a29bfe;
+      --accent: #fd79a8;
+      --dark: #2d3436;
+      --light: #f5f6fa;
+      --success: #00b894;
+      --danger: #d63031;
+      --warning: #fdcb6e;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--light);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .game-container {
+      width: 100%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .game-header {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .game-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .game-title i {
+      color: var(--accent);
+    }
+    
+    .game-progress {
+      display: flex;
+      gap: 5px;
+    }
+    
+    .progress-step {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .progress-step.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
+    
+    .game-content {
+      padding: 25px;
+    }
+    
+    .section {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .section.active-section {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .section-subtitle {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--secondary);
+    }
+    
+    .section-text {
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .accordion-item {
+      margin-bottom: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .accordion-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .accordion-button {
+      width: 100%;
+      padding: 15px 20px;
+      text-align: left;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .accordion-button:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .accordion-button i {
+      transition: transform 0.3s ease;
+    }
+    
+    .accordion-button.active {
+      background: var(--success);
+    }
+    
+    .accordion-button.active i {
+      transform: rotate(180deg);
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .accordion-content.active {
+      max-height: 5000px;
+      padding: 15px 20px;
+    }
+    
+    .accordion-content ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .accordion-content li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .accordion-content li:before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+    
+    .game-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    
+    .game-button {
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .game-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .game-button.prev {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    .game-button.prev:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    .game-button.next {
+      background: var(--accent);
+      color: white;
+    }
+    
+    .game-button.next:hover {
+      background: #e84393;
+    }
+    
+    .game-button.start-quiz {
+      background: linear-gradient(135deg, #ff7675 0%, #fdcb6e 100%);
+      color: white;
+      margin: 20px auto;
+      display: block;
+      font-size: 1.1rem;
+      padding: 15px 30px;
+    }
+    
+    .game-button.start-quiz:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    
+    .game-button.next.inactive {
+      background: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.5);
+      cursor: not-allowed;
+    }
+    
+    /* Quiz Section Styles */
+    .quiz-container {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .quiz-timer {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: 700;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .quiz-timer i {
+      color: var(--warning);
+    }
+    
+    .quiz-question {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: white;
+      position: relative;
+    }
+    
+    .quiz-question:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background: var(--accent);
+      border-radius: 15px 0 0 15px;
+    }
+    
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .quiz-option {
+      background: rgba(0, 0, 0, 0.2);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 15px 20px;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .quiz-option:hover {
+      background: rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .quiz-option-letter {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+    }
+    
+    .quiz-option.correct {
+      background: rgba(0, 184, 148, 0.3);
+      border-color: var(--success);
+    }
+    
+    .quiz-option.incorrect {
+      background: rgba(214, 48, 49, 0.3);
+      border-color: var(--danger);
+    }
+    
+    .quiz-progress {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    
+    .prize-level {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .prize-level.active {
+      background: rgba(253, 121, 168, 0.3);
+      transform: scale(1.02);
+    }
+    
+    .prize-level.reached {
+      background: rgba(0, 184, 148, 0.3);
+    }
+    
+    .prize-amount {
+      font-weight: 700;
+    }
+    
+    .prize-status {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+    }
+    
+    .prize-level.reached .prize-status {
+      background: var(--success);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .prize-level.reached .prize-status:after {
+      content: "✓";
+      color: white;
+      font-size: 0.8rem;
+    }
+    
+    /* Countdown and Messages */
+    .countdown-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .countdown-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .countdown-message {
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      text-align: center;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .countdown-message.correct {
+      color: var(--success);
+    }
+    
+    .countdown-message.incorrect {
+      color: var(--danger);
+    }
+    
+    /* Win Screen */
+    .win-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #6c5ce7 0%, #00b894 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    
+    .win-screen.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .win-content {
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .win-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .win-prize {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--warning);
+      margin-bottom: 30px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 30px;
+      border-radius: 50px;
+      display: inline-block;
+    }
+    
+    .win-image {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 30px;
+      background: url('https://cdn-icons-png.flaticon.com/512/3132/3132773.png') center/contain no-repeat;
+    }
+    
+    .win-button {
+      background: white;
+      color: var(--primary);
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+    
+    .win-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .game-container {
+        border-radius: 15px;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+      
+      .game-button {
+        padding: 10px 20px;
+      }
+      
+      .quiz-question {
+        font-size: 1.1rem;
+      }
+    }
+
+    .icon-label {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .icon-info {
+        background: #3498db; /* Blue for information */
+    }
+
+    .icon-warning {
+        background: #e74c3c; /* Red for pain points */
+    }
+
+    .icon-comparison {
+        background: #f1c40f; /* Yellow for comparisons */
+    }
+
+    .note {
+      background-color: rgba(255, 255, 0, 0.2); /* Light yellow background */
+      border-left: 4px solid #f1c40f; /* Yellow border */
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class="game-title">
+        <i class="fas fa-trophy"></i>
+        <span>LinkedIn Mastery Game</span>
+      </div>
+      <div class="game-progress">
+        <div class="progress-step active"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+      </div>
+    </div>
+    
+    <div class="game-content">
+      <!-- Introduction -->
+      <div class="section active-section" id="intro">
+        <h1 class="section-title">Optimizing LinkedIn Connection Management</h1>
+        <p class="section-text">Learn the efficient way to send follow-up messages and manage your LinkedIn connections like a pro!</p>
+        
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-button">
+              <span>1. Overview</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="icon-label icon-info">
+                  <i class="fas fa-info-circle"></i>
+              </div>
+              <p class="section-text">Sending follow-up messages on LinkedIn can become a hassle, especially if you have a lot of connections. Since LinkedIn doesn't offer pagination, you're forced to scroll endlessly through your entire list. This not only takes up a lot of time, but on older devices, it can even cause the site to lag or freeze. 
+              </p>
+              <p>This quick guide will show you how to easily download your LinkedIn connection list, convert it into a clean spreadsheet, and remove unnecessary fields—using the help of AI to make everything faster and easier.</p>
+              <img src="graphics/introduction gif.gif" alt="LinkedIn Scrolling Example" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-button">
+              <span>2. Main Painpoints</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="icon-label icon-warning">
+                  <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <ul>
+                <li><strong>Time Waste:</strong> Users may spend significant time scrolling through their connection list to find the last one they interacted with.</li>
+                <li><strong>Performance Issues:</strong> On devices with older hardware, the page can freeze or become unresponsive due to long lists of connections.</li>
+                <li><strong>Frustration and Distraction:</strong> These issues can lead to frustration, causing users to spend more time on tasks that could be done faster with a different approach.</li>
+              </ul>
+              <!-- Display the GIF directly -->
+              <img src="https://media.giphy.com/media/l46CbAuxFk2Cz0s2A/giphy.gif" alt="Meme Gif" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-button">
+              <span>3. Associative Comparisons</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="icon-label icon-comparison">
+                  <i class="fas fa-sync-alt"></i>
+              </div>
+              <p class="section-text">Imagine scrolling through a long list of YouTube videos, trying to find the one you watched earlier. Just as you finally spot it, the app freezes. You restart it, only to begin the whole scroll from the top again. Frustrating, right? That's exactly how it feels when trying to scroll through hundreds (or thousands) of LinkedIn connections, especially on slower devices.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="game-buttons">
+          <button class="game-button next" onclick="showSection('content1')">
+            Continue <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Content 1 -->
+      <div class="section" id="content1">
+        <h1 class="section-title">The Solution: Downloading LinkedIn Connections</h1>
+        <p class="section-text">Learn the efficient way to send follow-up messages and manage your LinkedIn connections like a pro!</p>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>1. Overview</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">To mitigate the scrolling issue, LinkedIn allows users to download their connections in CSV format. By downloading this data, users can quickly access, search, and organize their connections offline, eliminating the need to endlessly scroll.</p>
+                    <img src="graphics/csv illustration.png" alt="CSV Illustration" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                    
+                  </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>2. Why Download Connections</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <ul>
+                        <li>Avoid the need for scrolling through large lists.</li>
+                        <li>Have a permanent backup of your connections data.</li>
+                        <li>Quickly sort and search through your list for more efficient management.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>3. How It Improves Performance</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">Offload data processing to your device or upload it to Google Docs to use online, reducing lag on LinkedIn. Work offline, eliminating the need for the browser to keep rendering large datasets.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>4. Practical Uses</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">Organize and filter your connections based on various factors (connection date, company name, etc.). Keep track of important connections or interactions without needing to scroll through the platform. Edit your file however you want.</p>
+                    <img src="https://media.giphy.com/media/Sf5U5y6zy7EoU8PSoz/giphy.gif" alt="Meme Gif" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                  </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>5. Associative Comparisons</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-comparison">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <p class="section-text">Imagine downloading a large list of students and their data—say over a thousand items—to your computer. Once it's saved, you can open the full list instantly, scroll freely, mark important entries, remove what you don't need, or add custom notes and fields.</p> 
+                    <p>That's the kind of control and flexibility you get when you download your LinkedIn connections instead of dealing with endless in-app scrolling.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-buttons">
+            <button class="game-button prev" onclick="showSection('intro')">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="game-button next inactive" onclick="showSection('content2')" disabled>
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+      </div>
+      
+      <!-- Content 2 -->
+      <div class="section" id="content2">
+        <h1 class="section-title">Advanced LinkedIn Automation Techniques</h1>
+        <p class="section-text">Learn advanced techniques to automate LinkedIn tasks and increase your efficiency.</p>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>1. Overview</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">A step-by-step guide to download your LinkedIn connections data.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>2. Access Privacy and Security Settings</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">Navigate to your LinkedIn account settings and select "Settings & Privacy"</p>
+                    <img src="graphics/guide_step1.gif" alt="LinkedIn Scrolling Example" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>3. Choose Data Download Option</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">In the settings, look for the "Data Privacy" section. Select "Get a copy of you data".</p>
+                    <img src="graphics/guide_step2.gif" alt="LinkedIn Data Privacy" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                  </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>4. Select "Connections" to Download</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">From the available data categories, select "Connections" to download your full list of LinkedIn connections. </p>
+                    <p>If this option doesn't exist due to constant policy change of LinkedIn, select to download a larger data archive, including connections, verifications, contacts, account history etc., and press "Request archive"</p>
+                    <img src="graphics/guide_step3.png" alt="LinkedIn Connections" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                    
+                  </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>5. Download the CSV File</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">After submitting your request, LinkedIn will generate and send you a file—either a single CSV or a ZIP archive containing multiple CSV files. We are only interested in the Connections CSV file.</p>
+                    <img src="graphics/guide_step4.png" alt="LinkedIn Archive" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                    <p class="section-text">Once you extract the archive, you'll see a large number of CSV files. However, the only file we need is Connections.csv</p>
+                    <img src="graphics/guide_step4_2.gif" alt="LinkedIn Archive Files" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                    
+                  </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>6. Associative Comparisons</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-comparison">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <p class="section-text">Downloading your LinkedIn connections is similar to backing up contacts from your phone. Instead of endlessly scrolling through your list, you can download a file and have all your data saved in one accessible place.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-buttons">
+            <button class="game-button prev" onclick="showSection('content1')">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="game-button next inactive" onclick="showSection('content3')" disabled>
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+      </div>
+      
+      <!-- Content 3 -->
+      <div class="section" id="content3">
+        <h1 class="section-title">Converting CSV to XLSX: Simplifying Data Modification</h1>
+        <p class="section-text">Make your connection data easier to edit, filter, and use.</p>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>1. Overview</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">Once the CSV file containing your LinkedIn connections is downloaded, converting it to an XLSX file makes it easier to modify, filter, and organize your data using spreadsheet tools like Microsoft Excel or Google Sheets.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>2. Why Convert to XLSX</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <p class="section-text">XLSX files are compatible with various spreadsheet tools, offering better functionality for sorting, filtering, and editing.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>3. Steps to Convert the File</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <ul>
+                        <li>Open ChatGPT and append a file in the chat box</li>
+                    <img src="graphics/guide_step5_1.gif" alt="File to ChatGPT" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+
+                        <li>Ask ChatGPT to convert CSV file to XLSX</li>
+                    <img src="graphics/guide_step5_2.gif" alt="File to ChatGPT" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+
+                        <li>Let's download the file and upload it on your Google Drive or use it locally.</li>
+                    <img src="graphics/guide_step5_3.gif" alt="File to ChatGPT" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                         
+                    </ul>
+                    <div class="note">If the file does not contain any usable information or appears to be broken, simply ask ChatGPT to convert the file from CSV to XLSX without making any modifications. Do not attempt to fix or edit the content — just perform the format conversion.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                  <span>4. Last Steps</span>
+                  <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                  <div class="icon-label icon-info">
+                      <i class="fas fa-info-circle"></i>
+                  </div>
+                  <ul>
+                    <li>When reviewing the file, we notice several blank fields. </li>
+                  <img src="graphics/guide_step5_4.gif" alt="XLSX Modification" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                  <li>Let's ask ChatGPT to remove any rows containing blank fields. Additionally, for demonstration purposes, please also remove the "Email Address" column.</li>
+                  <img src="graphics/guide_step5_5.png" alt="XLSX Modification" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+                  <li>Finally, we can use the modified file for our purpose: copy the first and last name and paste it into the message search field to find the lead you previously contacted and send follow-up messages.
+                    <br>
+                    Once you're done, highlight the last contacted lead in your file so you know where you left off. Feel free to modify the file in any way that helps you work more efficiently.</li>  
+                    <img src="graphics/guide_step5_6.gif" alt="XLSX Modification" style="width: 100%; margin-top: 10px; border-radius: 8px;">
+
+                </ul>
+                  
+                  
+                  <div class="note">If the final file is broken, missing information, or incorrectly modified, keep asking ChatGPT for clarification on what should be changed and what should be preserved in order to achieve better end results.</div>
+
+              </div>
+          </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>5. Benefits of XLSX Format</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <ul>
+                        <li>Easier to edit and format your data.</li>
+                        <li>Lets you filter and sort information quickly.</li>
+                        <li>Supports multiple sheets and rich styling(bold headers, cell coloring, freeze panes, and merged cells for better organization).</li>
+                        <li>Makes data easier to read and organize.</li>
+                        <li>Works better with tools like Excel and Google Sheets.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-button">
+                    <span>6. Associative Comparisons</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="icon-label icon-comparison">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <p class="section-text">Converting a CSV to an XLSX file is like upgrading a simple text document to a full-fledged presentation. With more features and functionality, it becomes much easier to work with and organize the data.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-buttons">
+            <button class="game-button prev" onclick="showSection('content2')">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="game-button next inactive" onclick="showSection('quiz')" disabled>
+                Start Quiz <i class="fas fa-gamepad"></i>
+            </button>
+        </div>
+      </div>
+      
+      <!-- Quiz -->
+      <div class="section" id="quiz">
+        <h1 class="section-title">LinkedIn Mastery Quiz</h1>
+        <p class="section-text">Test your knowledge and win up to $1,000,000 in virtual prizes!</p>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <button id="start-quiz" class="game-button start-quiz">
+            <i class="fas fa-play"></i> Start Quiz
+          </button>
+        </div>
+        
+        <div class="quiz-container" id="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-timer">
+              <i class="fas fa-clock"></i>
+              <span id="timer">20</span>s
+            </div>
+          </div>
+          
+          <div class="quiz-question" id="question">
+            <!-- Question will be inserted here -->
+          </div>
+          
+          <div class="quiz-options" id="quiz-options">
+            <!-- Options will be inserted here -->
+          </div>
+          
+          <div class="quiz-progress">
+            <!-- Prize levels will be inserted here -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Finish -->
+      <div class="section" id="finish">
+        <h1 class="section-title">Congratulations!</h1>
+        <p class="section-text">You've completed the LinkedIn Mastery Game. Great job!</p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+          <div style="width: 150px; height: 150px; margin: 0 auto; background: url('https://cdn-icons-png.flaticon.com/512/3132/3132773.png') center/contain no-repeat;"></div>
+        </div>
+        
+        <div style="background: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+          <h3 class="section-subtitle">Next Lesson Preview</h3>
+          <p class="section-text">Advanced LinkedIn automation techniques to save even more time and increase your response rates!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Countdown Overlay -->
+  <div class="countdown-overlay" id="countdown-overlay">
+    <div class="countdown-message" id="countdown-message">3</div>
+  </div>
+  
+  <!-- Win Screen -->
+  <div class="win-screen" id="win-screen">
+    <div class="win-content">
+      <div class="win-image"></div>
+      <h1 class="win-title">Congratulations!</h1>
+      <div class="win-prize" id="win-prize">$1,000,000</div>
+      <p style="color: white; font-size: 1.2rem; margin-bottom: 20px;">You've mastered LinkedIn connection management!</p>
+      <button class="win-button" onclick="location.reload()">
+        <i class="fas fa-redo"></i> Play Again
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Updated quiz questions
+    const questions = [
+      {
+        question: "Why would someone download their LinkedIn connections?",
+        options: { A: "To remove inactive connections", B: "To avoid scrolling through long lists on LinkedIn", C: "To delete their LinkedIn account", D: "To edit LinkedIn settings" },
+        correct: "B"
+      },
+      {
+        question: "Where can you open the downloaded LinkedIn connections file?",
+        options: { A: "Adobe Photoshop", B: "Notepad", C: "Google Sheets", D: "VLC Media Player" },
+        correct: "C"
+      },
+      {
+        question: "What format is typically used for LinkedIn connection downloads?",
+        options: { A: "DOCX", B: "HTML", C: "JPG", D: "CSV" },
+        correct: "D"
+      },
+      {
+        question: "Which of the following improves when using a downloaded connection file instead of scrolling LinkedIn?",
+        options: { A: "Design", B: "Performance", C: "Security", D: "Connection requests" },
+        correct: "B"
+      },
+      {
+        question: "What is the correct step after selecting 'Connections' from LinkedIn's data request options?",
+        options: { A: "Restart your device", B: "Refresh the page", C: "Submit the download request", D: "Log out of your account" },
+        correct: "C"
+      },
+      {
+        question: "What alternative should you use if the 'Connections' option is missing during the download process?",
+        options: { A: "Use a VPN", B: "Select the full data archive", C: "Call LinkedIn support", D: "Change your browser" },
+        correct: "B"
+      },
+      {
+        question: "Which of these best describes the benefit of converting a CSV file to XLSX format?",
+        options: { A: "It makes the file printable only", B: "It helps avoid Excel crashes", C: "It allows advanced filtering and formatting features", D: "It turns your connections into contacts automatically" },
+        correct: "C"
+      },
+      {
+        question: "Which combination below correctly matches LinkedIn download steps to their actions?",
+        options: { A: "Access Settings → Wait for data", B: "Select Data Privacy → Submit request", C: "Download ZIP → Choose data", D: "Select 'Connections' → Request password" },
+        correct: "B"
+      }
+    ];
+
+    // Updated prize money array
+    const prizeMoney = ["$50,000", "$100,000", "$150,000", "$200,000", "$300,000", "$400,000", "$500,000", "$1,000,000"];
+    let currentQuestionIndex = 0;
+    let timeLeft = 20;
+    let timerInterval;
+    let gameActive = false;
+
+    // DOM elements
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const quizContainer = document.getElementById('quiz-container');
+    const quizOptionsContainer = document.getElementById('quiz-options');
+    const questionElement = document.getElementById('question');
+    const timerElement = document.getElementById('timer');
+    const startQuizButton = document.getElementById('start-quiz');
+    const countdownOverlay = document.getElementById('countdown-overlay');
+    const countdownMessage = document.getElementById('countdown-message');
+    const winScreen = document.getElementById('win-screen');
+    const winPrize = document.getElementById('win-prize');
+
+    // Initially hide the prize money block
+    const prizeMoneyBlock = document.querySelector('.quiz-progress');
+    prizeMoneyBlock.style.display = 'none';
+
+    // Move the existing prize money block to the body
+    document.body.appendChild(prizeMoneyBlock);
+
+    // Style for the prize money block
+    prizeMoneyBlock.style.position = 'fixed';
+    prizeMoneyBlock.style.top = '20px';
+    prizeMoneyBlock.style.right = '20px';
+    prizeMoneyBlock.style.background = 'rgba(0, 0, 0, 0.5)';
+    prizeMoneyBlock.style.padding = '10px 20px';
+    prizeMoneyBlock.style.borderRadius = '10px';
+    prizeMoneyBlock.style.color = 'white';
+    prizeMoneyBlock.style.fontWeight = 'bold';
+    prizeMoneyBlock.style.zIndex = '1000';
+
+    // Section navigation
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active-section'));
+      document.getElementById(sectionId).classList.add('active-section');
+
+      // Update progress steps
+      const sectionIds = ['intro', 'content1', 'content2', 'content3', 'quiz', 'finish'];
+      const activeIndex = sectionIds.indexOf(sectionId);
+      
+      progressSteps.forEach((step, index) => {
+        if (index <= activeIndex) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+    }
+
+    // Accordion functionality
+    function setupAccordion(pageId) {
+        const accordionButtons = document.querySelectorAll(`#${pageId} .accordion-button`);
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                this.classList.toggle('active');
+                content.classList.toggle('active');
+                this.querySelector('i').classList.toggle('rotate');
+                checkAllAccordionsClicked(pageId);
+            });
+        });
+    }
+
+    function checkAllAccordionsClicked(pageId) {
+        const allClicked = Array.from(document.querySelectorAll(`#${pageId} .accordion-button`)).every(button => button.classList.contains('active'));
+        const continueButton = document.querySelector(`#${pageId} .game-button.next`);
+        if (allClicked) {
+            continueButton.classList.remove('inactive');
+            continueButton.disabled = false;
+        }
+    }
+
+    // Quiz functions
+    function loadQuestion() {
+      const currentQuestion = questions[currentQuestionIndex];
+      questionElement.textContent = currentQuestion.question;
+      
+      // Clear previous options
+      quizOptionsContainer.innerHTML = '';
+      
+      // Create new options
+      for (const [key, value] of Object.entries(currentQuestion.options)) {
+        const option = document.createElement('div');
+        option.className = 'quiz-option';
+        option.dataset.answer = key;
+        option.innerHTML = `
+          <div class="quiz-option-letter">${key}</div>
+          <div class="quiz-option-text">${value}</div>
+        `;
+        option.addEventListener('click', selectAnswer);
+        quizOptionsContainer.appendChild(option);
+      }
+      
+      // Load prize progress
+      const progressContainer = document.querySelector('.quiz-progress');
+      progressContainer.innerHTML = '';
+      
+      prizeMoney.forEach((amount, index) => {
+        const level = document.createElement('div');
+        level.className = 'prize-level';
+        if (index === currentQuestionIndex) {
+          level.classList.add('active');
+        }
+        if (index < currentQuestionIndex) {
+          level.classList.add('reached');
+        }
+        level.innerHTML = `
+          <div class="prize-amount">${amount}</div>
+          <div class="prize-status"></div>
+        `;
+        progressContainer.appendChild(level);
+      });
+      
+      // Start timer
+      clearInterval(timerInterval);
+      timeLeft = 20;
+      timerElement.textContent = timeLeft;
+      timerInterval = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          timerElement.textContent = timeLeft;
+        } else {
+          clearInterval(timerInterval);
+          timeUp();
+        }
+      }, 1000);
+      
+      gameActive = true;
+    }
+
+    // Function to trigger confetti effect
+    function triggerConfetti() {
+        const confettiSettings = { target: 'confetti-canvas' };
+        const confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+        setTimeout(() => confetti.clear(), 3000); // stop confetti after 3 seconds
+    }
+
+    // Modify selectAnswer function to include flex container for message and countdown
+    function selectAnswer(e) {
+        if (!gameActive) return;
+        
+        gameActive = false;
+        clearInterval(timerInterval);
+        
+        const selectedOption = e.currentTarget;
+        const selectedAnswer = selectedOption.dataset.answer;
+        const correctAnswer = questions[currentQuestionIndex].correct;
+        
+        // Disable all options
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.style.pointerEvents = 'none';
+            if (option.dataset.answer === correctAnswer) {
+                option.classList.add('correct');
+            } else if (option === selectedOption && selectedAnswer !== correctAnswer) {
+                option.classList.add('incorrect');
+            }
+        });
+        
+        // Show feedback
+        countdownOverlay.classList.add('active');
+        const messageContainer = document.createElement('div');
+        messageContainer.style.display = 'flex';
+        messageContainer.style.flexDirection = 'column';
+        messageContainer.style.alignItems = 'center';
+        messageContainer.style.gap = '10px';
+        countdownOverlay.appendChild(messageContainer);
+
+        const messageElement = document.createElement('div');
+        messageElement.style.fontSize = '2rem';
+        messageElement.style.fontWeight = 'bold';
+        messageContainer.appendChild(messageElement);
+
+        messageContainer.appendChild(countdownMessage);
+        
+        if (selectedAnswer === correctAnswer) {
+            messageElement.textContent = 'Correct Answer!';
+            countdownMessage.classList.add('correct');
+            countdownMessage.classList.remove('incorrect');
+            triggerConfetti();
+        } else {
+            messageElement.textContent = 'All money lost, nooo!';
+            countdownMessage.classList.add('incorrect');
+            countdownMessage.classList.remove('correct');
+            prizeMoneyBlock.style.display = 'none'; // Hide prize block on wrong answer
+        }
+        
+        // Start countdown
+        let countdown = 3;
+        countdownMessage.textContent = countdown;
+        
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            countdownMessage.textContent = countdown;
+            
+            if (countdown === 0) {
+                clearInterval(countdownInterval);
+                countdownOverlay.classList.remove('active');
+                messageContainer.remove();
+                
+                if (selectedAnswer === correctAnswer) {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questions.length) {
+                        loadQuestion();
+                    } else {
+                        // Quiz completed
+                        quizContainer.style.display = 'none';
+                        showWinScreen();
+                    }
+                } else {
+                    // Wrong answer - restart quiz
+                    restartQuiz();
+                }
+            }
+        }, 1000);
+    }
+
+    function timeUp() {
+      gameActive = false;
+      countdownOverlay.classList.add('active');
+      countdownMessage.textContent = 'Time Up!';
+      countdownMessage.classList.add('incorrect');
+      countdownMessage.classList.remove('correct');
+      
+      // Highlight correct answer
+      const correctAnswer = questions[currentQuestionIndex].correct;
+      document.querySelectorAll('.quiz-option').forEach(option => {
+        if (option.dataset.answer === correctAnswer) {
+          option.classList.add('correct');
+        }
+      });
+      
+      // Start countdown
+      let countdown = 3;
+      countdownMessage.textContent = countdown;
+      
+      const countdownInterval = setInterval(() => {
+        countdown--;
+        countdownMessage.textContent = countdown;
+        
+        if (countdown === 0) {
+          clearInterval(countdownInterval);
+          countdownOverlay.classList.remove('active');
+          restartQuiz();
+        }
+      }, 1000);
+    }
+
+    function restartQuiz() {
+      currentQuestionIndex = 0;
+      startQuizButton.style.display = 'block';
+      quizContainer.style.display = 'none';
+    }
+
+    function showWinScreen() {
+      winPrize.textContent = prizeMoney[prizeMoney.length - 1];
+      winScreen.classList.add('active');
+      prizeMoneyBlock.style.display = 'none'; // Hide prize block
+    }
+
+    // Event listeners
+    startQuizButton.addEventListener('click', function() {
+      this.style.display = 'none';
+      quizContainer.style.display = 'block';
+      loadQuestion();
+      prizeMoneyBlock.style.display = 'block'; // Show prize block
+    });
+
+    // Initialize first section
+    showSection('intro');
+
+    // Initialize button state
+    document.querySelector('.game-button.next').classList.add('inactive');
+    document.querySelector('.game-button.next').disabled = true;
+
+    // Initialize accordions for each page
+    setupAccordion('intro');
+    setupAccordion('content1');
+    setupAccordion('content2');
+    setupAccordion('content3');
+
+    // Initialize button state for page 2 (content1)
+    document.querySelector('#content1 .game-button.next').classList.add('inactive');
+    document.querySelector('#content1 .game-button.next').disabled = true;
+
+    // Add a canvas for confetti
+    const confettiCanvas = document.createElement('canvas');
+    confettiCanvas.id = 'confetti-canvas';
+    confettiCanvas.style.position = 'fixed';
+    confettiCanvas.style.top = '0';
+    confettiCanvas.style.left = '0';
+    confettiCanvas.style.width = '100%';
+    confettiCanvas.style.height = '100%';
+    confettiCanvas.style.pointerEvents = 'none';
+    document.body.appendChild(confettiCanvas);
+
+    // Include ConfettiGenerator script
+    const confettiScript = document.createElement('script');
+    confettiScript.src = 'https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js';
+    document.head.appendChild(confettiScript);
+  </script>
+</body>
+</html>

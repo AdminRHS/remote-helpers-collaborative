@@ -1,0 +1,120 @@
+Scene 1:
+
+Voiceover:"Hi there! I’m Sharky, your friendly AI guide! Today, I’ll show you what Artificial Intelligence is all about!"
+
+Graphics prompt:A bright coral office room with sandy floors, smooth coral walls decorated with shell patterns, large windows showing colorful tropical fish outside, coral furniture and floating holographic screens; a sleek light grey and white anthropomorphic shark with big expressive eyes, a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands in the center waving both fins cheerfully. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, playful and professional. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark speaks and gestures.
+
+Hailuo AI:The shark speaks and gestures.
+
+Scene 2:
+
+Voiceover:"Artificial Intelligence means machines can learn and solve problems!"
+
+Graphics prompt:A colorful underwater workspace with smooth pearl consoles, a sandy floor with shell patterns, and vibrant coral shelves. Floating holographic charts display three large glowing icons: a gear representing machine learning, a light bulb symbolizing ideas, and a puzzle piece representing problem-solving. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands by the console pointing at these icons with excitement. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, playful and professional. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark points excitedly at glowing icons.
+
+Hailuo AI:The shark points excitedly at glowing icons.
+
+Scene 3:
+
+Voiceover:"AI helps with talking, deciding, and even finding solutions!"
+
+Graphics prompt:An underwater office meeting area with a large transparent bubble table, smooth coral walls, and floating holographic icons: a speech bubble representing communication, a green check mark symbolizing decision-making, and a magnifying glass with a light bulb inside representing problem-solving and discovery. Bright underwater plants sway in the background. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, points at these icons with a confident smile. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, colorful and dynamic. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark points at icons and smiles confidently.
+
+Hailuo AI:The shark points at icons and smiles confidently.
+
+Scene 4:
+
+Voiceover:"From Turing’s ideas to smart assistants — AI has come a long way!"
+
+Graphics prompt:A futuristic underwater gallery with smooth coral pillars and large floating holographic screens. The first screen shows a portrait of Alan Turing, the second displays a glowing microphone representing voice assistants, and the third screen features a laptop with a smart cloud symbol. Floating light trails connect all three screens. The background includes vibrant sea plants and colorful fish. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands proudly gesturing toward the timeline with enthusiasm. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, elegant and educational. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark gestures proudly toward the floating timeline.
+
+Hailuo AI:The shark gestures proudly toward the floating timeline.
+
+Scene 5:
+
+Voiceover:"Narrow AI handles single tasks like chatting or driving!"
+
+Graphics prompt:A high-tech underwater lab with floating holographic screens showing two large glowing icons: a chat bubble with three dots representing communication, and a car on a road symbolizing autonomous driving. Smooth sandy floor with elegant coral panels and jellyfish-shaped ceiling lights. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, points toward the icons with an excited, knowledgeable look. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, playful and modern. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark points with excitement at holographic icons.
+
+Hailuo AI:The shark points with excitement at holographic icons.
+
+Scene 6:
+
+Voiceover:"General AI? Not real yet, but it’s in the works!"
+
+Graphics prompt:An underwater innovation hub with smooth pearl consoles, soft sandy floors with shell inlays, and large floating holographic prototypes. One main glowing hologram shows a silhouette of a human head with a question mark above it, representing General AI. The background features wide transparent domes revealing deep-sea views with drifting jellyfish. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands thoughtfully, pointing at the prototype hologram with curiosity. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, imaginative and futuristic. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark points thoughtfully at a glowing prototype.
+
+Hailuo AI:The shark points thoughtfully at a glowing prototype.
+
+Scene 7:
+
+Voiceover:"Machine Learning helps AI learn from examples!"
+
+Graphics prompt:An underwater classroom with smooth coral walls and floating holographic blackboards displaying colorful charts. The charts feature arrows moving from books representing examples, toward a simple model diagram, and ending with a flag symbolizing results. Large round windows show schools of fish swimming outside. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands in front of the board holding a glowing digital pointer with a happy, teaching expression. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, fun and clear. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark teaches with a glowing pointer.
+
+Hailuo AI:The shark teaches with a glowing pointer.
+
+Scene 8:
+
+Voiceover:"Deep Learning makes AI even smarter!"
+
+Graphics prompt:A sleek underwater tech lab with floating curved holographic screens displaying layered diagrams of deep learning structures. The diagrams feature multiple colored layers stacked like a pyramid. Smooth sandy floors with shell patterns and vibrant sea plants sway gently in the background. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, points at the layered diagrams with excitement. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, dynamic and futuristic. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark points at the deep learning diagram.
+
+Hailuo AI:The shark points at the deep learning diagram.
+
+Scene 9:
+
+Voiceover:"Neural Networks? They’re AI’s brain connections!"
+
+Graphics prompt:A futuristic underwater server room with smooth pearl consoles, glowing coral cables, and large floating holographic structures of neural networks made up of bright interconnected nodes and lines. The background features soft light and gentle water currents visible through wide windows. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, gestures enthusiastically toward the neural network display. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, techy and friendly. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark gestures toward the neural network.
+
+Hailuo AI:The shark gestures toward the neural network.
+
+Scene 10:
+
+Voiceover:"Some think AI can think like us. But really, it calculates fast!"
+
+Graphics prompt:An underwater research lab with large floating holographic displays showing fast-moving mathematical formulas, graphs, and equations. The floor has smooth sand with geometric shell designs, and round windows display swaying seaweed and slow-moving fish. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, points at the formula displays with a thoughtful and calm smile. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, professional and clear. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark calmly explains while pointing at formulas.
+
+Hailuo AI:The shark calmly explains while pointing at formulas.
+
+Scene 11:
+
+Voiceover:"AI isn’t here to take jobs, but to help us be more creative!"
+
+Graphics prompt:A bright creative underwater workspace with smooth sandy floors decorated with shell patterns, floating holographic artboards displaying colorful illustrations and design layouts, coral shelves filled with digital brushes, swaying sea plants visible through large glass windows; a sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands with both fins open in a welcoming and inspiring gesture. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, creative and uplifting. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark gestures warmly in a creative space.
+
+Hailuo AI:The shark gestures warmly in a creative space.
+
+Scene 12 (Outro):
+
+Voiceover:"See? AI is amazing and fun! And I’ll be here to show you even more!"
+
+Graphics prompt:A festive underwater lounge with soft sandy floors, elegant coral couches, wide curved glass walls revealing colorful schools of fish and rays of sunlight; a sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, waves both fins joyfully with excitement and positivity. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, cheerful and celebratory. --ar 9:16 --s 250
+
+Video generation prompts:Kling AI:The shark waves his hands, then disappears in a whirlpool of bubbles.
+
+Hailuo AI:The shark waves his hands, then disappears in a whirlpool of bubbles.
+

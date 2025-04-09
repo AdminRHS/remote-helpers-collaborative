@@ -1,0 +1,395 @@
+{
+    "sheet_name": "Types",
+    "data": [
+        {
+            "Types": "new",
+            "Parameters": "initial response rate, conversion rate, engagement level",
+            "Objects": "accounts"
+        },
+        {
+            "Types": "in work",
+            "Parameters": "client interaction frequency, progress tracking, issue resolution rate",
+            "Objects": "accounts"
+        },
+        {
+            "Types": "sold",
+            "Parameters": "revenue generated, sales cycle duration, customer satisfaction index",
+            "Objects": "accounts"
+        },
+        {
+            "Types": "banned",
+            "Parameters": "reason for ban, ban appeal success rate, preventive measures taken",
+            "Objects": "accounts"
+        },
+        {
+            "Types": "problematic",
+            "Parameters": "problem identification speed, resolution effectiveness, recurrence rate",
+            "Objects": "accounts"
+        },
+        {
+            "Types": "free",
+            "Parameters": "upgrade conversion rate, engagement metrics, activity score",
+            "Objects": "accounts"
+        },
+        {
+            "Types": "sector",
+            "Parameters": "growth rate, market share, regulatory impact",
+            "Objects": "industries"
+        },
+        {
+            "Types": "industry",
+            "Parameters": "innovation rate, competitor density, profit margins",
+            "Objects": "industries"
+        },
+        {
+            "Types": "market",
+            "Parameters": "market penetration rate, demand fluctuation, customer loyalty",
+            "Objects": "industries"
+        },
+        {
+            "Types": "business",
+            "Parameters": "needs assessment accuracy, decision-making speed, purchasing power",
+            "Objects": "customer persona"
+        },
+        {
+            "Types": "individual",
+            "Parameters": "buying behavior, brand loyalty, price sensitivity",
+            "Objects": "customer persona"
+        },
+        {
+            "Types": "google",
+            "Parameters": "search volume, click-through rate, keyword effectiveness",
+            "Objects": "search queries"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "network expansion rate, profile engagement rate, lead conversion rate",
+            "Objects": "search queries"
+        },
+        {
+            "Types": "company",
+            "Parameters": "accuracy of company information, update frequency, user engagement",
+            "Objects": "profiles"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "lead quality score, conversion potential, follow-up rate",
+            "Objects": "profiles"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "connection growth rate, profile completeness, interaction rate",
+            "Objects": "profiles"
+        },
+        {
+            "Types": "website",
+            "Parameters": "visitor traffic, conversion rate, bounce rate",
+            "Objects": "profiles"
+        },
+        {
+            "Types": "social media",
+            "Parameters": "follower growth, engagement rate, content reach",
+            "Objects": "profiles"
+        },
+        {
+            "Types": "valid",
+            "Parameters": "contact accuracy rate, response rate, update frequency",
+            "Objects": "contacts"
+        },
+        {
+            "Types": "active",
+            "Parameters": "communication frequency, transaction rate, responsiveness",
+            "Objects": "contacts"
+        },
+        {
+            "Types": "inactive",
+            "Parameters": "reactivation success rate, dormancy period, last activity date",
+            "Objects": "contacts"
+        },
+        {
+            "Types": "empty",
+            "Parameters": "cleanup efficiency, data completeness, last audit date",
+            "Objects": "contacts"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "lead acquisition rate, initial contact success, follow-up efficiency",
+            "Objects": "companies"
+        },
+        {
+            "Types": "interested",
+            "Parameters": "interest level, engagement actions, proposal acceptance rate",
+            "Objects": "companies"
+        },
+        {
+            "Types": "client",
+            "Parameters": "client retention rate, average transaction value, satisfaction index",
+            "Objects": "companies"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "information accuracy rate, update frequency, relevance score",
+            "Objects": "companies"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "disqualification reasons, alternative opportunities identified, re-engagement attempts",
+            "Objects": "companies"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "reactivation rate, initial interest level, follow-up response",
+            "Objects": "leads"
+        },
+        {
+            "Types": "new",
+            "Parameters": "freshness index, engagement rate, qualification speed",
+            "Objects": "leads"
+        },
+        {
+            "Types": "active",
+            "Parameters": "progress tracking, conversion rate, interaction depth",
+            "Objects": "leads"
+        },
+        {
+            "Types": "client",
+            "Parameters": "client conversion rate, upsell rate, satisfaction level",
+            "Objects": "leads"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "data accuracy, recency of interaction, relevance of information",
+            "Objects": "leads"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "disqualification rate, reason analysis, follow-up actions",
+            "Objects": "leads"
+        },
+        {
+            "Types": "personalized",
+            "Parameters": "personalization effectiveness, response rate, engagement uplift",
+            "Objects": "connections"
+        },
+        {
+            "Types": "relevant",
+            "Parameters": "relevance score, engagement level, conversion impact",
+            "Objects": "connections"
+        },
+        {
+            "Types": "old",
+            "Parameters": "re-engagement success, historical value assessment, update needs",
+            "Objects": "connections"
+        },
+        {
+            "Types": "received",
+            "Parameters": "response rate, interaction quality, follow-up actions",
+            "Objects": "connections"
+        },
+        {
+            "Types": "connection",
+            "Parameters": "initial response quality, timeliness, conversion impact",
+            "Objects": "messages"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "engagement rate, response quality, follow-up rate",
+            "Objects": "messages"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "follow-up success rate, client feedback, deal closure rate",
+            "Objects": "messages"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "effectiveness rating, audience engagement, feedback quality",
+            "Objects": "messages"
+        },
+        {
+            "Types": "sms",
+            "Parameters": "open rate, response rate, conversion from SMS",
+            "Objects": "messages"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "open rate, click-through rate, unsubscribe rate",
+            "Objects": "emails"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "response rate, engagement depth, conversion success",
+            "Objects": "emails"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "audience reach, engagement score, feedback quality",
+            "Objects": "emails"
+        },
+        {
+            "Types": "informational",
+            "Parameters": "reach, engagement rate, knowledge uplift",
+            "Objects": "promotions"
+        },
+        {
+            "Types": "trial-based",
+            "Parameters": "conversion rate, trial success rate, subsequent purchase rate",
+            "Objects": "promotions"
+        },
+        {
+            "Types": "discounts",
+            "Parameters": "redemption rate, sales increase, customer acquisition cost",
+            "Objects": "promotions"
+        },
+        {
+            "Types": "interactive",
+            "Parameters": "participant count, engagement depth, conversion rate",
+            "Objects": "promotions"
+        },
+        {
+            "Types": "immediate",
+            "Parameters": "urgency identification, response time, resolution effectiveness",
+            "Objects": "needs"
+        },
+        {
+            "Types": "long-term",
+            "Parameters": "planning accuracy, resource allocation efficiency, goal attainment",
+            "Objects": "needs"
+        },
+        {
+            "Types": "position",
+            "Parameters": "demand accuracy, candidate fit, fulfillment duration",
+            "Objects": "needs"
+        },
+        {
+            "Types": "skill",
+            "Parameters": "skill gap analysis, training effectiveness, performance improvement",
+            "Objects": "needs"
+        },
+        {
+            "Types": "replacement",
+            "Parameters": "replacement time, cost efficiency, performance continuity",
+            "Objects": "needs"
+        },
+        {
+            "Types": "project",
+            "Parameters": "project alignment accuracy, resource utilization, outcome success",
+            "Objects": "needs"
+        },
+        {
+            "Types": "first connection",
+            "Parameters": "contact quality, initial response time, relationship potential",
+            "Objects": "communications"
+        },
+        {
+            "Types": "basic correspondence",
+            "Parameters": "message clarity, response timeliness, issue resolution rate",
+            "Objects": "communications"
+        },
+        {
+            "Types": "event",
+            "Parameters": "attendance rate, participant satisfaction, follow-up opportunities",
+            "Objects": "communications"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "follow-up timeliness, issue resolution success, client retention impact",
+            "Objects": "communications"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "audience engagement, clarity of information, actionable outcomes",
+            "Objects": "communications"
+        },
+        {
+            "Types": "scheduled",
+            "Parameters": "scheduling efficiency, participant readiness, agenda relevance",
+            "Objects": "events"
+        },
+        {
+            "Types": "held",
+            "Parameters": "attendance rate, participant engagement, feedback quality",
+            "Objects": "events"
+        },
+        {
+            "Types": "transferred",
+            "Parameters": "transfer reasons, re-scheduling efficiency, participant notification effectiveness",
+            "Objects": "events"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "follow-up action rate, participant conversion, feedback implementation",
+            "Objects": "events"
+        },
+        {
+            "Types": "ignored",
+            "Parameters": "non-attendance rate, reasons for ignoring, re-engagement success",
+            "Objects": "events"
+        },
+        {
+            "Types": "direct",
+            "Parameters": "feedback authenticity, response action rate, issue identification",
+            "Objects": "feedbacks"
+        },
+        {
+            "Types": "in-app",
+            "Parameters": "user interaction rate, satisfaction rating, improvement suggestions",
+            "Objects": "feedbacks"
+        },
+        {
+            "Types": "live chat",
+            "Parameters": "response time, resolution rate, customer satisfaction",
+            "Objects": "feedbacks"
+        },
+        {
+            "Types": "product/service",
+            "Parameters": "quality ratings, improvement suggestions, re-purchase rate",
+            "Objects": "feedbacks"
+        },
+        {
+            "Types": "price",
+            "Parameters": "price sensitivity feedback, competitor price comparison, discount responsiveness",
+            "Objects": "feedbacks"
+        },
+        {
+            "Types": "daily",
+            "Parameters": "data accuracy, timeliness, actionable insights",
+            "Objects": "reports"
+        },
+        {
+            "Types": "monthly",
+            "Parameters": "trend analysis, performance metrics, strategic adjustments",
+            "Objects": "reports"
+        },
+        {
+            "Types": "by countries",
+            "Parameters": "regional performance, market trends, growth opportunities",
+            "Objects": "reports"
+        },
+        {
+            "Types": "by industries",
+            "Parameters": "industry benchmarks, competitive analysis, market positioning",
+            "Objects": "reports"
+        },
+        {
+            "Types": "by manager",
+            "Parameters": "managerial effectiveness, team performance, operational insights",
+            "Objects": "reports"
+        },
+        {
+            "Types": "by event",
+            "Parameters": "event outcomes, ROI measurement, future recommendations",
+            "Objects": "reports"
+        },
+        {
+            "Types": "operational",
+            "Parameters": "data integrity, access speed, update frequency",
+            "Objects": "databases"
+        },
+        {
+            "Types": "analytical",
+            "Parameters": "query performance, insight generation rate, data coverage",
+            "Objects": "databases"
+        }
+    ]
+}

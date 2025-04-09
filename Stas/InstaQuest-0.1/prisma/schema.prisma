@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Lesson {
+  id          String         @id @default(cuid())
+  title       String
+  description String?       // Добавляем опциональное поле description
+  screens     String        // JSON string
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  progress    UserProgress[]
+}
+
+model UserProgress {
+  id              String   @id @default(cuid())
+  userId          String   // Hardcoded as "1" for MVP
+  lessonId        String
+  completedScreens String  // JSON string array
+  quizStats       String   // JSON string
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  lesson          Lesson   @relation(fields: [lessonId], references: [id])
+
+  @@unique([userId, lessonId])
+} 

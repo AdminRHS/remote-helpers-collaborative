@@ -1,0 +1,107 @@
+🛠️ STEP-BY-STEP GUIDE: Generate a Pixar-Style Explainer Video Script
+====================================================================
+
+🎯 GOAL:
+Create a Pixar-style animated explainer video script using an onboarding document and a 3D mascot design.
+The final script will be divided into short, visual scenes ready for AI video generation tools like Kling AI and Hailuo AI.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ WHAT YOU NEED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. 📄 A structured onboarding document
+2. 🦈 A high-quality image of the mascot
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔁 STEP-BY-STEP INSTRUCTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📂 STEP 1: Upload the Onboarding Document
+------------------------------------------
+Prompt:
+> “This is our onboarding document. Please read and understand the content.”
+
+🖼️ STEP 2: Upload the Mascot Image
+-----------------------------------
+Prompt:
+> “Here is the design of the mascot that will be the main character of the video. 
+> Please analyze the image and write a short, vivid description of the mascot suitable for use in prompts.
+> Include the mascot’s appearance, expression, outfit, and any unique traits.”
+
+ChatGPT will return a reusable mascot prompt such as:
+> A sleek light grey and white anthropomorphic shark with big expressive eyes, a wide toothy smile, 
+> wearing a beige shirt, denim cargo shorts, and brown work boots.
+
+✂️ STEP 3: Break the Document into Scenes
+------------------------------------------
+Prompt:
+> “Split the onboarding content into short video scenes. Each scene should explain only ONE idea.
+> The voiceover for each scene must be one sentence that fits into 5 seconds of narration.”
+
+🧠 STEP 4: Generate the Script
+-------------------------------
+Prompt:
+> “For each scene, provide:
+> 1. Scene number
+> 2. The 5-second voiceover sentence
+> 3. A detailed graphics prompt, including the **exact mascot description you generated earlier in Step 2**.  
+> Make sure the mascot is shown performing an action appropriate to the scene's voiceover.  
+> The background should be imaginative or educational to fit the tone.”
+
+Each scene should look like:
+
+Scene 3:
+
+Voiceover:  
+"AI helps with talking, deciding, and even solving problems!"
+
+Graphics prompt:  
+An underwater meeting space with floating holographic icons and bright coral walls. 
+A sleek light grey and white anthropomorphic shark with big expressive eyes, a wide toothy smile, wearing a beige shirt and denim cargo shorts,
+ points to the icons with excitement. Pixar 3D style, high detail, clean lighting.
+
+🎬 STEP 5: Add Video Generation Prompts
+----------------------------------------
+Prompt:
+> “Now, for each scene, add short prompts for Kling AI and Hailuo AI.
+> These prompts should be one sentence and only describe the mascot’s physical action (not the setting or background).”
+
+Example:
+
+Video generation prompts:  
+Kling AI:  
+The shark points at icons and smiles.  
+Hailuo AI:  
+The shark points at icons and smiles.
+
+📦 STEP 6: Export the Script
+-----------------------------
+Prompt:
+> “Now export the full script as a downloadable .txt file.”
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🧾 FINAL FORMAT PER SCENE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Scene 4:
+
+Voiceover:  
+"From Turing’s ideas to smart assistants — AI has come a long way!"
+
+Graphics prompt:  
+A futuristic underwater gallery with smooth coral pillars and large floating holographic screens. 
+The first screen shows a portrait of Alan Turing, the second displays a glowing microphone representing voice assistants, 
+and the third screen features a laptop with a smart cloud symbol. Floating light trails connect all three screens. 
+The background includes vibrant sea plants and colorful fish. 
+A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, 
+denim cargo shorts, and brown work boots, stands proudly gesturing toward the timeline with enthusiasm. 
+Bright and clean lighting, Pixar-like 3D cartoon style, high detail, elegant and educational.
+
+Video generation prompts:  
+Kling AI:  
+The shark gestures proudly toward the floating timeline.  
+Hailuo AI:  
+The shark gestures proudly toward the floating timeline.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 That’s it! Use this guide to generate video scripts anytime you have a new onboarding document and mascot.

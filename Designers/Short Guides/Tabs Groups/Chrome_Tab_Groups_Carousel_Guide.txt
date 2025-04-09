@@ -1,0 +1,43 @@
+
+INSTRUCTIONS TO RECREATE THIS CAROUSEL PROJECT IN ANOTHER CHAT
+
+1. Upload the mascot images or reference character to the new chat.
+2. Paste this text content into the prompt to regenerate the carousel concept.
+3. Request the assistant to search the web (if needed) or proceed with generating illustrations.
+4. Request each slide's graphic by its slide number and caption.
+5. Ask for illustrations in 9:16 aspect ratio for social media use.
+6. Use minimal text in graphics and include a mascot in all visuals.
+7. Request a .txt export of carousel script if needed again.
+
+---
+
+CAROUSEL CONTENT: MINI-GUIDE TO GOOGLE CHROME TAB GROUPS
+
+**Slide 1: Introduction to Tab Groups**
+- Visual: Mascot character overwhelmed by numerous open tabs in Chrome.
+- Caption: "Too many tabs? Let's organize with Tab Groups!"
+
+**Slide 2: Creating a New Tab Group**
+- Visual: Mascot right-clicking on a Chrome tab, highlighting "Add to new group."
+- Caption: "Right-click a tab and select 'Add to new group'."
+
+**Slide 3: Naming and Coloring the Group**
+- Visual: Mascot choosing a color and naming the group in the dialog box.
+- Caption: "Name your group and pick a color for easy identification."
+
+**Slide 4: Adding Tabs to the Group**
+- Visual: Mascot dragging another tab into the newly created group (e.g. The Verge).
+- Caption: "Drag related tabs into your group to keep them together."
+
+**Slide 5: Collapsing and Expanding the Group**
+- Visual: Mascot clicking on the group name to collapse and expand the tab group.
+- Caption: "Click the group name to collapse or expand your tabs."
+
+**Slide 6: Managing the Tab Group**
+- Visual: Mascot right-clicking the group name, showing options like "Ungroup" or "Close group."
+- Caption: "Right-click the group name to manage your tabs."
+
+---
+
+**Social Media Post Description:**
+"Struggling with too many open tabs? 🖥️💥 Discover how to streamline your browsing experience with Google Chrome's Tab Groups! Our quick guide shows you how to create, customize, and manage tab groups effortlessly. Say goodbye to clutter and hello to organized browsing! #GoogleChrome #TabGroups #ProductivityTips"

@@ -1,0 +1,117 @@
+{
+  "name": "GetOnboardingFile-ai-tools-in-remote-helpers-overview",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "ai-tools-in-remote-helpers-overview",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f2ff8ce3-d1a0-459b-a94c-a8b23d5b5408",
+      "name": "Webhook",
+      "webhookId": "4c4f006e-8dec-4e91-b1ab-d2eb8ac68846"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/13wjLylRLRCpRh_cK9-H_CJmKozvvzhzRGDmRJnQ8B6E/edit"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "111a8071-cff4-414b-817a-15f6804e97c9",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "u4aaDpAzm6YKZV9W",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "a11ad925-fda1-4d4c-8311-09a67d083169",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "0663c0f1-6df1-4b99-9687-f92d64fcb876",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bce7fa653659e581ce25e9a76408cecc1db830bd4c16d1cddb638823b7bca87a"
+  },
+  "id": "6mF9SDcLcUC2h0UH",
+  "tags": [
+    {
+      "createdAt": "2025-03-25T08:55:00.132Z",
+      "updatedAt": "2025-03-25T08:55:00.132Z",
+      "id": "LZfkwp4S1EWjoMPT",
+      "name": "How To Work"
+    },
+    {
+      "createdAt": "2025-03-03T09:07:39.636Z",
+      "updatedAt": "2025-03-03T09:07:39.636Z",
+      "id": "WSdrUAjxY2vUjAbn",
+      "name": "Day1"
+    },
+    {
+      "createdAt": "2025-03-03T09:06:36.037Z",
+      "updatedAt": "2025-03-03T09:06:36.037Z",
+      "id": "qWJOcf4ehs6iONwh",
+      "name": "Files"
+    },
+    {
+      "createdAt": "2025-02-28T12:15:59.970Z",
+      "updatedAt": "2025-02-28T12:15:59.970Z",
+      "id": "sdWf5s6naE3QVMN8",
+      "name": "Onboarding"
+    }
+  ]
+}

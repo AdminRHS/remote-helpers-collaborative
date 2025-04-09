@@ -1,0 +1,117 @@
+{
+  "name": "GetOnboardingFile How to work content",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "HowToWork",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "809d4acb-3242-442c-9fa0-3ec92d9bea3a",
+      "name": "Webhook",
+      "webhookId": "6390f28e-3aa8-45fe-af26-904bc99ff432"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/1SvH9t1KifAmStaCCJBRZMFpw4egjbtAK89p249RgNOg/edit?tab=t.0"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "d2e81c7a-ec5a-4279-ab52-1323b4fd891e",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "u4aaDpAzm6YKZV9W",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "39c929af-774f-47c2-a945-78dd0c0b12d7",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "589f262e-10ef-4022-a897-05f173039aec",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bce7fa653659e581ce25e9a76408cecc1db830bd4c16d1cddb638823b7bca87a"
+  },
+  "id": "Jxs5ugVCbcRRu1cE",
+  "tags": [
+    {
+      "createdAt": "2025-03-25T08:55:00.132Z",
+      "updatedAt": "2025-03-25T08:55:00.132Z",
+      "id": "LZfkwp4S1EWjoMPT",
+      "name": "How To Work"
+    },
+    {
+      "createdAt": "2025-03-03T09:07:39.636Z",
+      "updatedAt": "2025-03-03T09:07:39.636Z",
+      "id": "WSdrUAjxY2vUjAbn",
+      "name": "Day1"
+    },
+    {
+      "createdAt": "2025-03-03T09:06:36.037Z",
+      "updatedAt": "2025-03-03T09:06:36.037Z",
+      "id": "qWJOcf4ehs6iONwh",
+      "name": "Files"
+    },
+    {
+      "createdAt": "2025-02-28T12:15:59.970Z",
+      "updatedAt": "2025-02-28T12:15:59.970Z",
+      "id": "sdWf5s6naE3QVMN8",
+      "name": "Onboarding"
+    }
+  ]
+}

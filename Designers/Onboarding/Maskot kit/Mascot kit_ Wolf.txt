@@ -1,0 +1,147 @@
+Mary the Office Wolf: Mascot Kit Development Guide
+
+The following mascot kit provides a comprehensive framework for Mary the Office Wolf, following the established pattern from Sharky the Office Shark. This standardized approach ensures consistency across your mascot collection while maintaining unique environmental elements for each character.
+
+Character Prompt Structure for AI Generation
+Developing effective prompts for AI image generators like Midjourney and DALL-E requires specific language and formatting to achieve consistent, high-quality results. The images should show a well-executed 3D cartoon-style wolf character with anthropomorphic features, professional attire, and expressive features.
+
+Base Character Prompt Template
+For generating consistent mascot characters across your collection, utilize this standardized prompt structure:
+
+3D cartoon [character type] mascot, anthropomorphic, [specific animal] with [distinctive feature], wearing [clothing description], [pose/action], [expression], [viewpoint], professional 3D rendering, solid [background color], character design, mascot logo --ar 1:1 --stylize 750
+
+Mary's Specific Character Prompt
+Based on the character concept, Mary's specific AI generation prompt would be:
+
+3D cartoon wolf mascot, anthropomorphic, friendly gray wolf with expressive brown eyes and well-groomed fur, wearing light blue button-up shirt with rolled-up sleeves, red name badge "MARY", brown leather belt, standing upright, holding tablet and stylus, confident warm smile, front view, professional 3D rendering, solid forest green background, character design, mascot logo --ar 1:1 --stylize 750
+
+Character Design Documentation
+Core Character Elements
+Creating a cohesive mascot requires detailed documentation of physical and personality traits that remain consistent across all applications:
+
+Name: Mary
+
+Species: Gray Wolf (anthropomorphized)
+
+Profession: Lead Generation Manager
+
+Core Personality Traits: Confident, strategic, team-oriented, protective, warm, approachable, data-driven, results-focused
+
+Brand Alignment: Represents leadership in lead generation and sales with a strong sense of community and data-driven decision making
+
+Physical Appearance Specifications
+Based on the character concept, Mary's design includes:
+
+Body Structure: Upright bipedal wolf with athletic build
+
+Fur Color: Rich gray with subtle gradient variations
+
+Facial Features: Large expressive brown eyes, warm confident smile with visible canines
+
+Hair Style: Soft waves that complement her warm personality
+
+Proportions: Well-balanced head-to-body ratio (approximately 1/4 of total height), strong shoulders, agile frame
+
+Height Reference: Approximately 6-7 head units tall (cartoon proportions)
+
+Standard Outfit Components
+The consistent outfit elements that define Mary include:
+
+Light blue button-up shirt with rolled-up sleeves
+
+Red rectangular badge with name "MARY"
+
+Brown leather belt with silver buckle
+
+Gray pleated slacks with subtle pinstripe pattern
+
+Brown leather oxford shoes
+
+Environmental Concept
+Mary inhabits a professional lead generation office that combines classic business elements with warm, inviting touches. This environment reflects her role in managing and optimizing lead generation processes while maintaining a welcoming atmosphere for team collaboration.
+
+Color Palette and Lighting
+Primary Colors: Forest green (#228B22), Navy blue (#000080), Gray (#808080), White (#FFFFFF)
+Accent Colors: Silver (#C0C0C0), Amber (#FFBF00), Deep Red (#8B0000)
+Lighting: Professional overhead lighting with natural light through large windows
+Ambient Effects: Subtle office atmosphere, professional environment
+
+Environment Object Inventory (50 Items)
+Workspace Essentials (15 items)
+Classic mahogany executive desk
+Ergonomic leather office chair
+Dual monitor setup
+Desktop phone with multiple lines
+Professional desk organizer
+Wall calendar with lead tracking
+Filing cabinet with lead categories
+Desktop calculator
+Professional desk lamp
+Business card holder
+Document trays for lead forms
+Desktop printer
+Paper shredder
+Desk blotter
+Professional desk clock
+
+Office Environment Elements (15 items)
+Wooden bookshelves with business books
+Professional wall clock
+Meeting room table
+Whiteboard with markers
+Projector screen
+Filing system cabinets
+Wall-mounted bulletin board
+Professional door signage
+Window blinds
+Office plants
+Reception area desk
+Visitor seating area
+Conference room table
+Wall-mounted coat rack
+Professional office partitions
+
+Decorative & Personal Elements (20 items)
+Framed sales achievement certificates
+Team photos in frames
+Professional wall art
+Company awards display
+Desk nameplate
+Business magazines
+Professional books collection
+Team achievement plaques
+Wall calendar with important dates
+Office plants
+Professional motivational quotes
+Company logo display
+Sales target charts
+Team performance graphs
+Business card collection
+Professional desk accessories
+Office supply organizer
+Meeting notes binder
+Client contact directory
+Professional desk calendar
+
+Implementation Guidelines for Mascot Series
+To maintain consistency across your planned 30-mascot collection, each character should follow these guidelines:
+
+Character Consistency Requirements
+Maintain consistent proportions and rendering style across all characters
+
+Use the same technical specifications in AI prompts
+
+Ensure similar level of detail and complexity
+
+Apply consistent lighting and shading techniques
+
+Environment Differentiation Strategy
+For your additional mascots, each environment should:
+
+Follow the same 50-item limit
+
+Maintain completely unique item sets (no repetition between characters)
+
+Reflect the character's species and personality
+
+Include the same categories (workspace essentials, environment elements, decorative items) 

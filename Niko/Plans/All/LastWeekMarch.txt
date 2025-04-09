@@ -1,0 +1,170 @@
+LLM-New Professions Research
+Add to Daily Work Rules: Summurize chat
+Use Version Control 
+Create LLMs by New Profession
+
+Game Scenario
+Lists of Domains: 
+CRM-s
+Pros: Exm 
+		Exm-api 
+		pros pros-api
+
+Rewrite Instructions
+	*Learn Deep Research
+	Discord Interviews:
+		Guide on Interview in google Meet
+
+
+Processes Reviews:
+Managers No Code Usage of Cursor and Claude
+Employees Tasks: Required: Obligatory
+Train 1 AI on DataBase Structure:
+
+
+
+Download and Practice WindSurf and Replit
+Clean Up Discord Server
+Can i export Discored Server Structure to AI?
+Continue Deep Researches
+
+
+755 Bonus Company Compliance:
+Learnings Tracking Bonus
+Rules: 
+	Employees Hours by month Report
+
+small apps
+workload Managment +/-
+my economics Management: 
+	-how much income?
+	-where we invest
+
+
+24/03/25
+Work On:
+	Full Execution Plan
+	Create General Exam Rules
+	Review Task Manager
+    Review DB Structure
+    Split Softs by Smaller Applications
+    Work Destribution by Employees / How they integrate in common plan
+    Social Media Publish Plans
+    MCPs in LeadGen
+    
+
+Restructure Guide Formats
+
+
+inner client:
+New Product Development And Integration Plan
+
+Possible Product: restore and improving personal pictures
+sell to personal people
+
+bold3d from image-
+sync.so sync multi languages 
+youtube chanel’s distribution
+text to audio, video to audio
+video to music
+image generation with text!
+Notebook LM  mindmap claude search gemini co drawing
+Vidu AI video generated from refference images.
+Krea AI training video model
+slipperygem
+
+
+**********************
+MCP Library:
+Prepare MVPs and Pitch with them through LeadGen
+https://github.com/modelcontextprotocol/servers
+https://github.com/punkpeye/awesome-mcp-servers
+
+Me:
+	I need to Connect to SupaBase and Upload All from Cursor
+
+
+General Plan:
+Build AI Tasks Review Process:
+Which Tasks?
+	Colect All Steps and Start Filling it in
+		Start From Lesson 
+			Combine with Memory
+		List of tasks per Milestone
+		Add Results: Generated
+		Proceed to Next Task
+MilesTone Post in Social Media
+	Info Required: Inner Client
+					Social Media Kit
+					Research Target Audience
+					Matched Possible Required Tasks
+						Create Task Template Post:
+							Full Description on website;
+						Posts Dedicated Types:
+							- Plans Building
+							- AI Matching
+							- Building Template
+								*Scrape Social Media Sequences
+
+Prod CRM: 
+	Add to Milestones in DB- Controller put to 
+	Store API Connections with tools in CRM
+	CHange Guides Size, Formats ....
+	Add Score to Tasks
+	Add Template Onboarding - combine all together
+	Guide Format: Prompts?
+
+LLM:
+	Squiz Our LLM Model to be able to pass it in one prompt	
+
+	
+Create Comprehensive Job Posts Prompt:
+
+General Test:
+	Form List of required Professions 
+		To each profession allocate  
+		Scoring System
+		Next Step:
+			From a CV from It
+
+Separate Lessons Onboarding Landings or MockUp
+
+Analyze and Describe Task Template Structure based on DB
+
+
+Comprehensive Common plan: 
+	Common Explanation
+	List of executable tasks 
+	are filled with Steps
+
+
+
+Developers:
+Integrate Linkedin API Messages Import
+	-Store it by accounts section in crm
+
+Run Deep Research on YouTube Chanel optimization
+
+
+
+Exploration 
+	(Google Drive review and Use):
+		Expand all Existing Instructions in Google Drive 
+		archiving, downloading all documents we went trough to DropBox
+			Set up one more export with docs only
+
+Daily Work explanations needed:
+	Tools Requires, Methodology How to use tools
+	List of Daily Assignments with needed Variables
+
+Test new AI features and Announce:
+NoteNookLM MindMaps
+
+
+Data Annotaition Chat: 
+	Verify AI Answer. 
+ 	Tasks Verification Assignments
+		Test to Put AI Answer into Editable note for feedback 	
+
+Collect Rules:
+	*Gathering feedback is a must

@@ -1,0 +1,221 @@
+{
+    "sheet_name": "Responsibilities",
+    "data": [
+        {
+            "Objects": "accounts",
+            "Responsibilities": "managing client portfolios"
+        },
+        {
+            "Objects": "accounts",
+            "Responsibilities": "updating account statuses"
+        },
+        {
+            "Objects": "accounts",
+            "Responsibilities": "monitoring account activities"
+        },
+        {
+            "Objects": "industries",
+            "Responsibilities": "analyzing market trends"
+        },
+        {
+            "Objects": "industries",
+            "Responsibilities": "identifying growth opportunities"
+        },
+        {
+            "Objects": "industries",
+            "Responsibilities": "tracking industry metrics"
+        },
+        {
+            "Objects": "customer persona",
+            "Responsibilities": "developing buyer profiles"
+        },
+        {
+            "Objects": "customer persona",
+            "Responsibilities": "customizing engagement strategies"
+        },
+        {
+            "Objects": "customer persona",
+            "Responsibilities": "assessing needs analysis"
+        },
+        {
+            "Objects": "search queries",
+            "Responsibilities": "generating seo keywords"
+        },
+        {
+            "Objects": "search queries",
+            "Responsibilities": "optimizing search strategies"
+        },
+        {
+            "Objects": "search queries",
+            "Responsibilities": "monitoring query performance"
+        },
+        {
+            "Objects": "profiles",
+            "Responsibilities": "creating professional profiles"
+        },
+        {
+            "Objects": "profiles",
+            "Responsibilities": "updating profile information"
+        },
+        {
+            "Objects": "profiles",
+            "Responsibilities": "analyzing profile interactions"
+        },
+        {
+            "Objects": "contacts",
+            "Responsibilities": "managing contact databases"
+        },
+        {
+            "Objects": "contacts",
+            "Responsibilities": "validating contact information"
+        },
+        {
+            "Objects": "contacts",
+            "Responsibilities": "categorizing contact types"
+        },
+        {
+            "Objects": "companies",
+            "Responsibilities": "researching potential clients"
+        },
+        {
+            "Objects": "companies",
+            "Responsibilities": "maintaining company databases"
+        },
+        {
+            "Objects": "companies",
+            "Responsibilities": "analyzing company needs"
+        },
+        {
+            "Objects": "leads",
+            "Responsibilities": "generating sales leads"
+        },
+        {
+            "Objects": "leads",
+            "Responsibilities": "qualifying incoming leads"
+        },
+        {
+            "Objects": "leads",
+            "Responsibilities": "tracking lead conversion"
+        },
+        {
+            "Objects": "connections",
+            "Responsibilities": "establishing professional connections"
+        },
+        {
+            "Objects": "connections",
+            "Responsibilities": "maintaining ongoing relationships"
+        },
+        {
+            "Objects": "connections",
+            "Responsibilities": "prioritizing connection outreach"
+        },
+        {
+            "Objects": "messages",
+            "Responsibilities": "crafting promotional messages"
+        },
+        {
+            "Objects": "messages",
+            "Responsibilities": "sending targeted communications"
+        },
+        {
+            "Objects": "messages",
+            "Responsibilities": "analyzing message impact"
+        },
+        {
+            "Objects": "emails",
+            "Responsibilities": "designing email campaigns"
+        },
+        {
+            "Objects": "emails",
+            "Responsibilities": "analyzing email responses"
+        },
+        {
+            "Objects": "emails",
+            "Responsibilities": "segmenting email lists"
+        },
+        {
+            "Objects": "promotions",
+            "Responsibilities": "planning promotional events"
+        },
+        {
+            "Objects": "promotions",
+            "Responsibilities": "evaluating promotion effectiveness"
+        },
+        {
+            "Objects": "promotions",
+            "Responsibilities": "tailoring promotion strategies"
+        },
+        {
+            "Objects": "needs",
+            "Responsibilities": "assessing client requirements"
+        },
+        {
+            "Objects": "needs",
+            "Responsibilities": "prioritizing urgent needs"
+        },
+        {
+            "Objects": "needs",
+            "Responsibilities": "forecasting future needs"
+        },
+        {
+            "Objects": "communications",
+            "Responsibilities": "coordinating communication efforts"
+        },
+        {
+            "Objects": "communications",
+            "Responsibilities": "enhancing communication channels"
+        },
+        {
+            "Objects": "communications",
+            "Responsibilities": "streamlining internal communications"
+        },
+        {
+            "Objects": "events",
+            "Responsibilities": "organizing networking events"
+        },
+        {
+            "Objects": "events",
+            "Responsibilities": "coordinating event logistics"
+        },
+        {
+            "Objects": "events",
+            "Responsibilities": "evaluating event success"
+        },
+        {
+            "Objects": "feedbacks",
+            "Responsibilities": "collecting customer feedback"
+        },
+        {
+            "Objects": "feedbacks",
+            "Responsibilities": "analyzing feedback data"
+        },
+        {
+            "Objects": "feedbacks",
+            "Responsibilities": "implementing feedback improvements"
+        },
+        {
+            "Objects": "reports",
+            "Responsibilities": "generating performance reports"
+        },
+        {
+            "Objects": "reports",
+            "Responsibilities": "analyzing report data"
+        },
+        {
+            "Objects": "reports",
+            "Responsibilities": "distributing reports internally"
+        },
+        {
+            "Objects": "databases",
+            "Responsibilities": "maintaining data integrity"
+        },
+        {
+            "Objects": "databases",
+            "Responsibilities": "updating database entries"
+        },
+        {
+            "Objects": "databases",
+            "Responsibilities": "securing database access"
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+Practical Integration Example: Recruiter Task Automation
+================================================
+
+This example demonstrates how different LLM components work together in a real recruitment scenario.
+
+1. Initial Task Setup
+--------------------
+From LLM professions.json:
+{
+    "Profession": "recruiter",
+    "Department": "managers"
+}
+
+From LLM tasks.json:
+{
+    "task_name": "candidate_screening",
+    "profession": "recruiter",
+    "required_tools": ["CRM", "email_system", "video_conference"],
+    "actions": ["review_cv", "schedule_interview", "send_assessment"]
+}
+
+2. Workflow Example: Candidate Screening
+--------------------------------------
+A. Task Initialization:
+1. System identifies recruiter role
+2. Loads relevant tasks from tasks.json
+3. Validates tool access from tools.json
+4. Prepares action sequence from actions.json
+
+B. Process Flow:
+1. CV Review Action:
+   - Object: "resume" (from objects.json)
+   - Type: "application_document" (from types.json)
+   - Parameters: 
+     - required_skills
+     - experience_level
+     - education_requirements
+
+2. Interview Scheduling Action:
+   - Object: "calendar_event"
+   - Type: "video_interview"
+   - Parameters:
+     - duration
+     - participant_emails
+     - timezone
+
+3. Assessment Distribution:
+   - Object: "assessment"
+   - Type: "skill_test"
+   - Parameters:
+     - test_type
+     - deadline
+     - scoring_criteria
+
+3. Integration Points
+-------------------
+A. Data Flow:
+1. Profession -> Task Assignment:
+   recruiter -> candidate_screening
+
+2. Task -> Actions:
+   candidate_screening -> [review_cv, schedule_interview, send_assessment]
+
+3. Actions -> Tools:
+   review_cv -> CRM
+   schedule_interview -> calendar_system
+   send_assessment -> assessment_platform
+
+B. Automation Rules:
+1. When new CV received:
+   - Trigger: new_application
+   - Action: review_cv
+   - Next: schedule_interview (if qualified)
+
+2. When interview scheduled:
+   - Trigger: interview_confirmed
+   - Action: send_assessment
+   - Next: track_completion
+
+4. System Interaction Example
+---------------------------
+A. API Calls Sequence:
+
+1. Get Recruiter Tasks:
+GET /api/v1/professions/recruiter/tasks
+
+2. Initialize Screening:
+POST /api/v1/tasks/candidate_screening/initialize
+{
+    "candidate_id": "12345",
+    "position_id": "67890"
+}
+
+3. Execute Actions:
+POST /api/v1/actions/review_cv/execute
+{
+    "resume_id": "12345",
+    "criteria": {
+        "required_skills": ["Python", "AWS"],
+        "min_experience": 3
+    }
+}
+
+B. Automation Flow:
+
+1. Document Processing:
+   - Parse CV using NLP
+   - Match skills against requirements
+   - Generate qualification score
+
+2. Interview Coordination:
+   - Check calendar availability
+   - Send interview invites
+   - Create meeting links
+
+3. Assessment Management:
+   - Select appropriate test
+   - Set up candidate access
+   - Monitor completion
+
+5. Error Handling
+---------------
+A. Common Scenarios:
+
+1. Missing Documents:
+   - Log error in task_errors
+   - Notify recruiter
+   - Pause workflow
+
+2. Scheduling Conflicts:
+   - Identify alternative slots
+   - Trigger rescheduling flow
+   - Update task status
+
+3. Assessment Issues:
+   - Track failed attempts
+   - Provide support contact
+   - Log completion status
+
+6. Reporting Integration
+----------------------
+A. Metrics Tracking:
+
+1. Process Efficiency:
+   - Time per stage
+   - Completion rates
+   - Conversion metrics
+
+2. Quality Metrics:
+   - Candidate satisfaction
+   - Interview show rates
+   - Assessment completion
+
+3. Recruiter Performance:
+   - Tasks completed
+   - Response times
+   - Hire success rate
+
+7. Practical Implementation Notes
+------------------------------
+A. Best Practices:
+
+1. Data Validation:
+   - Verify all required fields
+   - Check data format
+   - Validate relationships
+
+2. Performance Optimization:
+   - Cache frequent queries
+   - Batch process updates
+   - Optimize API calls
+
+3. User Experience:
+   - Provide progress indicators
+   - Send timely notifications
+   - Enable manual overrides
+
+B. Integration Tips:
+
+1. System Setup:
+   - Start with core workflows
+   - Add features incrementally
+   - Test thoroughly
+
+2. Maintenance:
+   - Regular data updates
+   - Monitor performance
+   - Gather user feedback
+
+This example demonstrates how the various LLM components (professions, tasks, actions, objects, etc.) work together in a real-world recruitment scenario. It shows the practical application of the architecture described in the main instruction file. 

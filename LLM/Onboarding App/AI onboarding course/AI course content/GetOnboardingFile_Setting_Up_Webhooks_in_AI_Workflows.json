@@ -1,0 +1,117 @@
+{
+  "name": "GetOnboardingFile Setting Up Webhooks in AI Workflows",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "441e348f-8ec2-4823-8285-d4d8a3131f23",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "fbd098a6-ba07-4ec8-a0ab-1ec5cb0e7819",
+      "name": "Webhook",
+      "webhookId": "441e348f-8ec2-4823-8285-d4d8a3131f23"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/1yoMCqP5TwQ7TD_OK20gcYETDRoTiTVzY4m5-Nh6RR5g/view"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "fde693fc-5ada-475c-98b6-9a70ba2dc550",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "u4aaDpAzm6YKZV9W",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "1508284b-8c50-4214-9af4-21604171cf2e",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "85b16a97-2c3d-4be5-ae89-5c3d76128549",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bce7fa653659e581ce25e9a76408cecc1db830bd4c16d1cddb638823b7bca87a"
+  },
+  "id": "WfD2pqFE8Bqq6xcY",
+  "tags": [
+    {
+      "createdAt": "2025-03-04T10:12:31.735Z",
+      "updatedAt": "2025-03-04T10:12:31.735Z",
+      "id": "HTfjYUz6vEtXNRrq",
+      "name": "Day5"
+    },
+    {
+      "createdAt": "2025-03-04T15:18:45.103Z",
+      "updatedAt": "2025-03-04T15:18:45.103Z",
+      "id": "Lv0IHVqEPpRYfyh7",
+      "name": "AI Onboarding"
+    },
+    {
+      "createdAt": "2025-03-03T09:06:36.037Z",
+      "updatedAt": "2025-03-03T09:06:36.037Z",
+      "id": "qWJOcf4ehs6iONwh",
+      "name": "Files"
+    },
+    {
+      "createdAt": "2025-02-28T12:15:59.970Z",
+      "updatedAt": "2025-02-28T12:15:59.970Z",
+      "id": "sdWf5s6naE3QVMN8",
+      "name": "Onboarding"
+    }
+  ]
+}

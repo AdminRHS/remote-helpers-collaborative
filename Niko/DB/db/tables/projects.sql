@@ -1,0 +1,20 @@
+﻿CREATE TABLE $tableName (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `entity_id` tinyint(3) unsigned DEFAULT NULL,
+  `inner_client_id` tinyint(3) unsigned DEFAULT NULL,
+  `project_template_id` smallint(5) unsigned DEFAULT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date DEFAULT NULL,
+  `created_by` smallint(5) unsigned DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `projects_entity_id_foreign` (`entity_id`),
+  KEY `projects_project_template_id_foreign` (`project_template_id`),
+  KEY `projects_created_by_foreign` (`created_by`),
+  KEY `projects_inner_client_id_foreign` (`inner_client_id`),
+  CONSTRAINT `projects_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `projects_entity_id_foreign` FOREIGN KEY (`entity_id`) REFERENCES `entities` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `projects_inner_client_id_foreign` FOREIGN KEY (`inner_client_id`) REFERENCES `inner_clients` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `projects_project_template_id_foreign` FOREIGN KEY (`project_template_id`) REFERENCES `project_templates` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+)

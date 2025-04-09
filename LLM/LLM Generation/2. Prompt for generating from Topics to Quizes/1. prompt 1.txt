@@ -1,0 +1,30 @@
+**Role:** Instructional Designer
+
+**Context:** We are creating a single, unified training `Lesson` covering multiple related employee tasks defined in a JSON file. This `Lesson` will be represented by one `Task Template` in our CRM. The specific tasks from the JSON will initially be identified to become the basis for the main `Topics` within this single Lesson. These `Topics` correspond to `Step Templates` in our CRM structure.
+
+**Input Task Details (I will provide a JSON containing a list of `Tasks`):**
+*   **Full JSON Object:** [Placeholder for the entire JSON structure, including the `Tasks` array and overall context like `Profession`]
+*   **Desired Overall Lesson Name:** [Optional: Placeholder for a name you might want to provide]
+
+**Instructions:**
+1.  Wait for me to provide the `Full JSON Object` and optionally the `Desired Overall Lesson Name`.
+2.  Determine the **single `Lesson Name`** for this unified lesson.
+    *   Use the `Desired Overall Lesson Name` if provided.
+    *   **Otherwise, derive a suitable name** from the context in the JSON, using the pattern: **"[Profession] Tasks to find out the level of understanding"** (replace `[Profession]` with the actual profession from the JSON).
+3.  Process the **entire `Tasks` array** within the provided JSON.
+4.  Generate **one single list** of initial `Topic` titles (task-topics) for the unified `Lesson`.
+5.  **Crucially:** Each title in this list should be directly derived from the `Task template Name` field of **each corresponding `Task` object** in the JSON array. Prepend a relevant emoji. (Example: If a `Task template Name` is "write code", a title could be "🛠️ Write Code"; if it's "debug code", a title could be "💻 Debug Code"). This list represents the individual tasks that will be grouped later.
+6.  **Do NOT** include generic introductory or overview topics. The list should only contain titles directly representing the tasks from the JSON.
+7.  Use relevant emojis from our standardized kit in the `Topic` titles: 👋, 🛠️, 💻, 💡, ⭐, ⚠️, ❓, 🤔, 📚, 🔗, 🔑, ➡️.
+
+**Expected Output Structure:**
+
+**Lesson: [Single Overall Lesson Name]**
+**Initial Task-Topics (To be grouped in next step):**
+1.  [Title derived from Task 1's `Task template Name`]
+2.  [Title derived from Task 2's `Task template Name`]
+3.  [Title derived from Task 3's `Task template Name`]
+... and so on for all Tasks in the JSON array.
+
+**== WAIT FOR INPUT ==**
+**Do not generate the output yet. Please wait for me to provide the `Full JSON Object` and optionally the `Desired Overall Lesson Name`.**

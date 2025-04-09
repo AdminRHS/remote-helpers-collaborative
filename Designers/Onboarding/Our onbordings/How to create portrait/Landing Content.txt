@@ -1,0 +1,279 @@
+Version 1: Internal Training for RH Illustrators (Gamified)
+Welcome & Introduction:
+Meet Mila, a curious Pixar-style 3D hummingbird mascot who will be your guide. This internal training landing page is fun and friendly, designed to help RH illustrators learn the portrait creation workflow. Mila will accompany you through theory and practice, earning badges along the way!
+Visual Theme: Whimsical Pixar 3D cartoon style, with Mila appearing in images and illustrations on the page. Mila represents a growing creative bird – enthusiastic and helpful.
+Tone: Friendly and playful, as if a colleague is guiding you. The language is informal but informative.
+🐦 Mila’s Portrait Mission (Overview)
+Mila welcomes the user and outlines the mission: “We’re going to create a professional portrait of an RH employee, step by step!” This section provides a quick summary of what the trainee will achieve by the end (LinkedIn-ready portrait, background-removed version, email signature image, and a fun embroidered-shirt variant). Training Timeline: (Lovable AI timeline block)
+Intro to MidJourney & Prompt Engineering – Learn how to use MidJourney (via Discord) and craft effective prompts (with parameters like --cref, --iw, --no, etc.).
+Generate the Portrait – Use MidJourney to create a business-style avatar from an employee’s photo reference.
+Face Swap & Retouch – Ensure likeness by swapping in the real face if needed, then polish the image with editing tools.
+Figma & Exports – Remove background, upload to Figma for web display, and export optimized files (PNG/WebP).
+Email Signature Creation – Incorporate the portrait into a company email signature format.
+Embroidered Shirt Variant – (Optional bonus) Create a Ukrainian embroidered shirt version of the portrait for a special touch.
+(A progress tracker could visually show these steps, advancing as the user completes each section. Mila might fly to each “checkpoint” on the timeline.)
+📖 Theoretical Section: MidJourney Magic and Prompt Engineering
+In this section, Mila introduces the concepts and commands needed to use MidJourney effectively.
+What is MidJourney? – A brief explanation that MidJourney is an AI image generator accessed through Discord. Illustrators should log in with the company’s MidJourney Discord account (credentials provided internally) to get started. Mila might appear next to a Discord icon, explaining the /imagine command.
+Using the /imagine Command: Mila shows how to trigger MidJourney by typing /imagine. “As soon as you type /imagine, you can enter a prompt – a description of the image you want. Let’s learn to write a great prompt!”
+Prompt Structure: Explain that a prompt is a line of text describing the desired image. It can include:
+Reference Image URL – A link to the employee’s photo for likeness.
+Subject and Context – e.g. “photo of a woman wearing a classic business suit” (the person and attire)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Descriptors – e.g. “smiling, cheerful, joyful” (facial expression & mood)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Background and Style – e.g. “corporate background, professional studio lighting, 8k resolution” (setting and quality)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Usage Context – e.g. “photo for a LinkedIn profile” (so the style stays business-appropriate).
+Parameters (Advanced Prompt Options): Introduce MidJourney parameters that fine-tune the output, added at the end of the prompt:
+--cref (Character Reference) – A new way to attach the reference photo after the descriptive prompt​
+FILE-EGGM1EHFFLISCSH7QGV16G
+​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. For example:
+“... profile --cref [image_link]” uses the image for character likeness.
+--iw (Image Weight) – If using the old method (image URL at start of prompt), --iw sets how strongly MidJourney tries to mimic that image (range 0–2)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Default is 1; 2 gives maximum similarity​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+--cw (Character Weight) – If using --cref, controls how much to copy the reference (range 0–100)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Lower values (10–20) focus on matching only the face; higher values copy clothing too​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. We usually use a low --cw (e.g. 10) so the face matches but the outfit can be whatever we describe (business suit, etc.)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+--no (Negative Prompt) – Excludes something you don’t want in the image​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. For example: --no glasses --no phone will ensure those items (if present in the reference or being generated) are left out​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Mila explains: “We use --no to avoid unwanted details, like glasses or hats from the original photo, or anything MidJourney keeps adding that we don’t need.”
+Tip: Provide links or references to MidJourney’s official docs for further reading (concise but optional) – e.g. “See MidJourney’s prompt documentation for more tips.” (This can be a small footnote or help icon.)
+(Throughout the theoretical section, image with caption blocks can show Mila demonstrating each concept: e.g. Mila holding a reference photo, Mila pointing at a prompt text on a chalkboard, etc. Captions explain what’s shown, like “Mila points to the --no parameter to exclude ‘glasses’.”) Quiz: MidJourney Prompt Mastery (Lovable AI quiz block)
+Mila pops up with a quiz to test the learner’s understanding before moving on:
+Q1: Which parameter would you use to ensure MidJourney closely follows the reference image’s face, without copying the clothes?
+a. --iw
+b. --no
+c. --cw
+d. --cref
+Correct Answer: c. --cw – (With a low value when using --cref).
+Q2: In a MidJourney prompt, where do you put the reference image link when using --cref?
+a. At the very beginning of the prompt.
+b. Right after the /imagine command.
+c. At the end of the prompt, after --cref.
+d. You can’t use image links in prompts.
+Correct Answer: c. After writing the description, add --cref then the image URL​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+(The quiz block would ideally be interactive, allowing illustrators to select an answer and get immediate feedback. Mila cheers when you get it right!) Badge Earned: Prompt Pro 🏅
+After completing the theory section and passing the quiz, Mila awards the Prompt Pro badge. This badge (displayed with a cute icon of Mila holding a notepad) signifies that the user has mastered prompt writing and MidJourney fundamentals.
+✨ Practical Section: Hands-On Portrait Creation
+Now it’s time to apply the theory. Mila guides the user through each step of actually creating the employee’s portrait. A progress tracker at the top of this section might show the steps from the timeline, highlighting the current step. Step 1: Generate the Base Portrait with MidJourney
+Mila: “Let’s start creating! We have the employee’s photo reference and details, so go ahead and generate the portrait.”
+Compose Your Prompt: Use the employee’s photo link and describe the portrait. For example, Mila might suggest a prompt:
+“/imagine prompt: [EMPLOYEE_PHOTO_URL] photo of a [man/woman] wearing a classic business suit::4 smiling, approachable::5 corporate background:: professional studio lighting, clean sharp focus, 8k --cref [EMPLOYEE_PHOTO_URL] --cw 10 --no glasses --no phone”​
+FILE-EGGM1EHFFLISCSH7QGV16G
+​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+This prompt structure links the reference image and describes the desired output: a friendly, professional-looking portrait for a LinkedIn profile. The parameters ensure MidJourney uses the reference and avoids unwanted items.
+Run the Prompt: On the Discord MidJourney server (in the #portraits channel or DM the bot), enter the prompt. MidJourney will generate a set of images. Mila reminds: “Be patient – you might need a few tries!”
+Examine the Outputs: The goal is an image that resembles the employee closely and fits a professional portrait (upper shoulders and head in frame, neutral background). If the first attempt isn’t perfect, you can hit the regenerate button or tweak the prompt (for example, adjust descriptors or weights).
+Step 2: Select the Best and Upscale
+Choose the Closest Likeness: From the generated options, pick the one that most closely matches the employee’s face and overall appearance. Tip: Don’t worry if it’s not 100% perfect – focus on face shape and features. We’ll fix details soon. Also ensure the composition is good (not cutting off the head, shoulders visible, no extreme lighting issues)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Upscale the Chosen Image: Use MidJourney’s U (upscale) button on the selected thumbnail to get a full-sized version. This will be the base portrait we refine.
+Save the Result: Once upscaled, save the portrait image (and you can paste it in the #portraits channel to get a Discord URL link for it, which we’ll need for Figma and documentation).
+Step 3: Face Swap for Accuracy (if needed)
+If the generated face is close but not an exact match to the real person, we perform a face swap:
+Use the Face Swap Tool: On the DD ♥ MidJourney Discord (internal server), go to the #face-swap channel. Mila instructs: “We’ll blend the real face onto our AI portrait.” Use the bot command /saveid to save the original photo with an ID (e.g. the employee’s ID number)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Then use /swapid with that same ID and the generated portrait image​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+(Alternatively, external face-swap services or software can be used if not on the internal server.)
+Get the Swapped Portrait: The service returns the portrait with the employee’s actual face merged in. Now our image should look much more like the person! Mila cheers: “Now that looks just like them!”
+Troubleshooting: If the swap result has minor artifacts (maybe edges of the face are a bit off), don’t worry—we’ll fix it in the next step.
+Step 4: Retouch and Enhance
+Time to polish the portrait in an image editing software (e.g. Photoshop):
+Fix Minor Issues: Open the swapped portrait in Photoshop. Check for any distortions or seams from the face swap. Use tools like the Healing Brush or slight Liquify to adjust the face shape if needed​
+FILE-EGGM1EHFFLISCSH7QGV16G
+ (ensuring it matches the original photo features closely).
+Tweak Lighting and Color: Apply subtle improvements: use Shadows/Highlights (about +15) to brighten up shadows​
+FILE-EGGM1EHFFLISCSH7QGV16G
+, adjust contrast or color balance so the portrait looks vibrant but natural. The goal is a clean, professional look (no strong shadows, not too flat or too contrasty).
+Final Touches: Make sure the image is sharp and high-resolution. Remove any background distractions if MidJourney put them (we’ll do a full background removal next, but if there’s noise, you can tidy it up now).
+Result: You should now have a finished, high-quality portrait of the employee in business attire, with a realistic likeness. Save this final portrait as a PNG file.
+(At this point, the progress tracker might show ~50% complete. Mila earns the Retouch Ruler badge for mastering the art of touch-ups! A badge icon of Mila with a little paintbrush can be displayed.) Step 5: Remove Background for Web Use
+Now we create a version of the portrait with a transparent background (so it can be placed on any web page or graphic):
+Background Removal: Use Photoshop (Quick Selection or Remove Background button) or an online tool to delete the background around the person. You should be left with just the person’s figure on transparency​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Save as PNG: Save this no-background portrait as a PNG (to preserve transparency).
+Why? Mila explains: “On our RH website, we display employee portraits on a clean page. We need a PNG with no background so it blends in nicely.” It also allows reusing the portrait in various designs or different backgrounds easily.
+Step 6: Upload to Figma
+RH uses Figma to organize and store these portraits:
+Open the RH Portraits Figma file: There is a Figma project containing all employee portraits.
+Create a New Frame: In the main portraits page, add a new frame (1000×1000 px) next to the others​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Name the frame with the employee’s name and ID (following the naming convention given in the task)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Place the PNG: Insert the transparent PNG of the portrait into this frame. Scale and position it so that the head and shoulders are nicely centered. If the image was too large (like a waist-up shot), crop it by letting the frame cut off around mid-chest level​
+FILE-EGGM1EHFFLISCSH7QGV16G
+ – we want a consistent head-and-shoulders view.
+Copy the Figma Link: Once the portrait is placed, use Figma’s share/link feature to copy a URL to this frame. Paste that link into the internal “PNG link (All Portraits)” cell for this employee in the MidJourney Portraits spreadsheet (as instructed in the assignment)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Step 7: Export and Compress (Web Optimized)
+For the website, we need a smaller, optimized file:
+Export from Figma: Select the 1000x1000 portrait frame and export it as PNG to your computer.
+Convert to WebP: Use the company’s preferred conversion service (link provided in the task) to convert the PNG to WebP format (which has a smaller file size)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Upload & Get Link: Upload this WebP to the designated image hosting service (as per internal instructions) to get a permanent direct link URL​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Document it: Paste this link into the “Compressed PNG” cell for the employee in the spreadsheet. Now the web team can use that link on the website to display the portrait.
+Step 8: Create the Email Signature Portrait
+Mila: “We’re almost done – let’s make sure this portrait is everywhere it needs to be, including email!”
+RH maintains email signature templates in Figma for consistency:
+Open Email Signatures Figma: There’s another Figma file with sections for each department’s email signatures​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Duplicate a Template: Find a signature in the section for the employee’s department and duplicate that frame/template.
+Insert the Portrait: Replace the existing photo in the template with your new portrait (the no-background version)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Resize to fit the circular or rectangular placeholder as needed.
+Fill in Name and Details: Update the text fields with the employee’s name (check the exact formatting needed; usually First Name Last Name in proper order, not last name first)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Include any other info as required by the template.
+Export the Signature Image: Once the signature block is updated with the new portrait and name, export that frame as PNG. This image will be used in the actual email client.
+Update Records: Mark the “Mail Signature” field for the employee as completed (if there’s a tracking cell for that)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+(Mila awards the Figma Flyer badge here, with an icon of her carrying a Figma logo, celebrating the completion of the design tasks!) Step 9: Bonus Level – Embroidered Shirt Portrait (Vyshyvanka)
+As a fun cultural touch (and future-proofing for a planned gallery), illustrators also create a version of the portrait with a traditional Ukrainian embroidered shirt (vyshyvanka) instead of the business suit​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. This showcases a different skill: using MidJourney’s Vary (Region) feature.
+Use Vary (Region): On the MidJourney generation of the portrait (the one in business attire), click the Vary (Region) button​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. This allows you to select a part of the image to change. Use the lasso to draw around the person’s outfit (the suit area).
+Prompt the Embroidery: In the prompt field that appears for the selected region, enter a description for the embroidered shirt. For example: “woman in an embroidered Ukrainian blouse, red traditional vyshyvanka patterns, high quality, clear details”​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. If the subject is male, use “man in an embroidered shirt” (and note: for women it’s okay to say “embroidered blouse” instead of shirt)​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Also, paste a reference link to an image of a real embroidered shirt (especially one with the correct colors/patterns) at the start of this regional prompt to guide MidJourney​
+FILE-EGGM1EHFFLISCSH7QGV16G
+.
+Example: https://s.mj.run/XXXXX embroidered shirt, red Ukrainian embroidery pattern
+Generate Variations: MidJourney will produce new versions of the portrait where the suit is replaced by an embroidered shirt​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. You may need to regenerate a few times to get the best result.
+Pick the Best & Swap Face: Choose the best embroidered shirt portrait. Just like before, do a face swap with the employee’s face if the likeness isn’t perfect (often needed since the face might have changed slightly during variation).
+Retouch & Color Adjust: Do any Photoshop touch-ups on this version too. Additionally, adjust the embroidery color to match the employee’s department color (this is an RH-specific detail): e.g. managers = red, designers = purple, marketers = pink, developers = green, video team = orange​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. This can be done by hue/saturation adjustments on the embroidery part.
+Add to Figma: In the main portraits Figma, create a new frame in the “Embroidered shirts” section. Insert the final embroidered portrait without background, name the frame similarly (Name + ID), and copy its link​
+FILE-EGGM1EHFFLISCSH7QGV16G
+. Paste that link into the “Vyshyvanka PNG” cell for the employee.
+Now we have an awesome cultural variant of the portrait! Mila is wearing her celebration hat (imagine!) to congratulate you on completing the bonus level.
+🎉 Conclusion & Next Steps
+Congratulations! You’ve completed the internal portrait illustration training. Mila flutters with joy as you’ve earned all your badges:
+Prompt Pro – for mastering MidJourney prompts and parameters.
+Retouch Ruler – for skillfully editing and improving the portrait.
+Figma Flyer – for integrating the portrait into design assets.
+(A reward/badge display block can show these three badges with icons and titles. Perhaps a final badge “Portrait Prodigy” is awarded for completing the entire course.) In this final section, encourage illustrators to apply their new skills:
+Remind them that consistency is key – all employee portraits should have a unified style (framing, lighting).
+Suggest they share tips or ask questions in the internal #illustrators Slack channel if they need help.
+Finally, a cheerful send-off from Mila: “Great job! You’re now an official Portrait Prodigy of RH. Go ahead and create amazing portraits!”
+The landing page can include a Call-to-Action like a button to start another training (or to revisit the MidJourney docs) or simply a celebratory graphic of Mila with a trophy. The experience ends on a positive, fun note, reinforcing the knowledge gained and the gamified rewards earned.
+Version 2: Public Masterclass Landing Page (AI Portrait Workflow)
+Title/Tagline: “AI Portrait Masterclass: Create Stunning Professional Avatars with MidJourney & Figma”
+(This version is for a broad audience of illustrators/designers. It maintains an educational yet playful tone, suitable for anyone looking to build their portfolio or learn new skills. Mila the hummingbird can still be a friendly guide character, but all content is generalized beyond RH-specific tools.)
+Introduction & What You’ll Learn
+A brief welcome that hooks the audience: “Ready to transform ordinary photos into eye-catching professional portraits? Join Mila (our friendly illustrator hummingbird) in this step-by-step masterclass using AI tools!” The intro highlights key outcomes for the learner:
+How to use MidJourney (an AI image generator) to create a realistic portrait from a reference photo.
+Techniques for prompt crafting and refining AI outputs.
+How to do a face swap and minor retouching to perfect the likeness.
+Integrating the portrait into designs: removing backgrounds, using Figma (or other design tools) to prepare assets.
+Creating additional variants (like a fun thematic version) to enhance your portfolio.
+By the end, participants can produce a LinkedIn-ready avatar, a transparent background image for websites, an email signature image, and even a creative themed portrait.
+(Include a friendly image of Mila presenting these bullet points on a chalkboard or screen for visual engagement.)
+Module 1: MidJourney Basics – *“Imagine” Your Portrait
+Getting Started with MidJourney: Explain that MidJourney is accessed via Discord. Users should have a MidJourney subscription or access (free trial or paid). Provide steps to get set up:
+Join the MidJourney Discord server and find a newbie or private channel to work in.
+Use the /imagine command to generate images. Mila’s tip: “Think of /imagine as telling a story to an AI artist. You describe, it paints!”
+Crafting an Effective Prompt: Break down the components of a good prompt for a portrait:
+Include the reference photo of the person. (On Discord, you can upload an image or paste an image URL. MidJourney will treat it as a reference.) For example, upload the subject’s photo and copy its link into the prompt field.
+Describe the person and desired style: e.g. “photo of a man in a navy business suit, professional headshot”. Mention expression and mood if relevant: “smiling confidently, friendly face”. Add details for background or lighting: “studio background, soft lighting, high resolution”. Emphasize this is for a professional profile picture.
+Keep it concise but detailed. You can use double colons :: to weight certain parts of the description if needed (advanced users).
+Using Advanced Parameters: Introduce useful MidJourney parameters in a public-friendly way:
+Image Weight (--iw): e.g. --iw 2 makes MidJourney stick more closely to the reference image’s composition or look (if you placed the image at the start of the prompt).
+Character Reference (--cref with --cw): Mention that newer MidJourney versions have --cref to specifically indicate a character reference photo, and --cw to control how much of that character’s details to apply. “For example, --cw 10 tells the AI to use the reference mainly for the face, so you can change clothing or style in the prompt.”
+Negative Prompt (--no): Explain with an example: “If your reference has the person wearing glasses but you don’t want glasses in the AI portrait, add --no glasses at the end of your prompt.” This ensures unwanted elements are left out.
+(This section could use an infographic or a code-like block showing a sample prompt syntax visually. Mila might appear pointing to different parts of the prompt, labeling ‘reference image’, ‘description’, and ‘parameters’.)
+Module 2: Generating Your AI Portrait
+Time to put the prompt into action:
+Submit the Prompt: Walk through typing the prompt into MidJourney. Emphasize correct order: reference (or --cref usage) and description, then parameters. Encourage the user to run it.
+Review the Outputs: MidJourney will return 4 variant images. Advise the learner on selecting the best one:
+Look for the image that best matches the person’s facial features. It might not be perfect, but pick the closest. Ensure the portrait is well-composed (head and shoulders visible, no weird distortions).
+If none are satisfactory, tweak the prompt (maybe the description or weights) and try again. It’s normal to iterate.
+Upscale Your Chosen Image: Once a good variant is identified, use the upscale option to get a high-res version.
+Pro Tip: Sometimes it takes a few rounds to get an ideal result. Mila encourages not to give up: “AI art is a bit of trial and error – each try is a new surprise!” (Include an image with caption: e.g., Mila watching four MidJourney outputs appear like tiles, with a thought bubble "Which one looks most like our subject?" to illustrate the selection process.)
+Module 3: Refining Likeness – Face Swap (Optional Advanced Step)
+If the AI-generated face is almost like the reference person but not quite, introduce the concept of face swapping for a perfect match:
+What is Face Swapping? A quick explanation: using a tool to replace the face in the generated image with the face from the original photo, while keeping the art style. This can dramatically improve likeness.
+Tools for Face Swap: Suggest user-friendly tools or methods available publicly (for example: online face swap websites, or Photoshop’s neural filters, etc.). If there’s a known reliable tool: “You can try tools like InsightFace Swap or SwapNext (just as examples) – upload the original photo and the AI image, and the tool will merge the faces.”
+Proceed with Caution: Advise to use high-quality images for best results, and be prepared for a bit of cleanup after. Face swaps might not be perfect on the first go.
+Result: After swapping, the portrait should unmistakably look like the person. It might slightly alter lighting or colors, which we will fix next.
+(This section is optional for the user – not everyone will do this if they’re satisfied with the MidJourney output. It could be marked as an “Advanced Tip” callout.)
+Module 4: Polishing the Portrait – Retouching
+Now the user should have a base portrait (AI-generated, possibly face-swapped). This module covers final edits to make it truly professional:
+Import into an Editor: Use Photoshop or any photo-editing software.
+Check & Fix Details: Look for any oddities:
+Facial features: ensure eyes, nose, mouth look natural. Sometimes AI artifacts or the face swap can make parts look slightly off – use touch-up tools to correct these.
+Edges: if the face swap created a seam or color mismatch at the jawline, blend it smoothly.
+Clothing and background: remove any weird spots or glitches.
+Enhance Lighting: A common tweak is to slightly brighten the image and add contrast. Adjust shadow/highlight levels to make sure the face is well-lit and clear (especially since AI images can be a bit dark or flat). Color-balance if needed to match skin tones to reality.
+Sharpen & Clarify: Ensure the image is sharp where it should be (particularly the eyes). But avoid over-sharpening – it should still look like a natural photo.
+Final Check: The portrait should now look like a real professional headshot of the person. Save the edited portrait as a high-quality PNG or JPG.
+Module 5: Preparing Assets – Transparent Background & Standard Sizes
+This module teaches how to make the portrait versatile for different uses (websites, profiles, etc.):
+Remove the Background: Use an editor or a tool like remove.bg to cut out the background, leaving just the person. This yields a clean transparent PNG of the person. This is useful for placing the portrait on any background (corporate site pages, marketing materials).
+Create Standard Sizes (e.g., 1000x1000): It’s good practice to have a standard square crop. Open Figma (or an alternative design tool like Canva or Photoshop) to place the portrait:
+Make a frame or canvas of 1000×1000 pixels (a typical size for profile pictures).
+Place the cut-out portrait into this frame. Position it so the face is centered, with a bit of space above the head and shoulders visible (a classic headshot composition).
+Choose a neutral background color if needed (for example, white or light gray) or keep it transparent if the output allows.
+Export the Square Portrait: Export as PNG. This can be used for profile images (LinkedIn, etc.) or uploaded to websites. Mention that some platforms might auto-crop to a circle – having a well-framed square ensures it looks good everywhere.
+Optimize for Web: Optionally, convert the PNG to a WebP for smaller file size if you plan to put it on a website (improves loading speed). Tools: online converters or built-in export options.
+(In this section, Mila could be shown “framing” the portrait nicely in a square, illustrating proper headroom and centering.)
+Module 6: Utilizing the Portrait – Email Signatures & More
+Encourage learners to put their new portrait to use in real-world scenarios:
+Email Signature Image: Many professionals include a photo in their email signature. Show how to resize the portrait to a smaller dimension (e.g., 100x100 or per company guidelines) and insert it into an email signature template. If using Outlook or Gmail, provide quick pointers on adding an image to the signature.
+Teams/Slack Profile: They can use the new portrait as their avatar in communication tools too.
+Before-and-After Showcase: Suggest updating the LinkedIn profile with the new AI-enhanced portrait and observing the improvement from the original photo. This not only is useful, but it’s great for the portfolio – showing how AI and editing can upgrade a headshot.
+(Perhaps include a small mock example of an email signature with the portrait and name/title, to visualize the end result.)
+Module 7: Creative Variations (Bonus Creativity)
+For a bit of fun and to stretch AI skills, show how to create a creative variant of the portrait:
+Concept: Using MidJourney’s inpainting or variation features to change the portrait’s elements. For example, swap the business suit with something thematic or cultural. (In our internal example, we used a traditional embroidered shirt.)
+Method – Inpainting/Partial Change: If using MidJourney (latest versions), use the Vary (Region) or Remix mode. Select just the clothing area, and prompt a new outfit. For instance: “replace suit with casual hoodie” or “wearing a medieval knight armor” – depending on how playful/professional the user wants to get. Mila suggests: “Why not try a fun theme that suits your brand or interests?”
+Reference Images: You can include an image of the target outfit as a reference in the prompt to guide the AI (just like we did for the original reference).
+Multiple Attempts: It might take a few tries to get the variant right. Once done, do the same face swap and retouch process if needed to maintain the subject’s likeness.
+Use Cases: These creative portraits can be used for special occasions (holiday themes, internal team fun, marketing campaigns, etc.) or just to show off creative skills in a portfolio. It demonstrates versatility in using AI tools.
+(An example image: Mila holding up two portraits – one in a business suit, one in a fun outfit – showing the idea of variation.)
+Conclusion and Call-to-Action
+The masterclass wraps up with an encouraging note:
+Summarize the accomplishment: “From a simple photo to a polished professional portrait – and even a creative twist – look at what you made!” Emphasize the new skills learned (AI prompting, editing).
+Encourage sharing: “Share your before-and-after or your creative portrait on social media. Tag us or use #AIPortraitMasterclass – we’d love to see your results!”
+Invite further learning: Provide a next step, such as an advanced course (maybe on full-body AI illustrations or a link to a community/forum for AI artists).
+Thank the participant for joining. Mila could appear one last time waving or giving a thumbs-up: “Thank you for learning with me. Keep creating and stay inspired!”
+A call-to-action button could be present, e.g. “Explore More Courses” or “Download Cheat Sheet” (maybe a PDF of prompt tips). The page remains playful and motivating, leaving the learner excited to apply what they’ve learned.

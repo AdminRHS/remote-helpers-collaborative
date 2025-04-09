@@ -1,0 +1,778 @@
+{
+    "profession": "content manager",
+    "department": "marketers",
+    "tasks": [
+        {
+            "task_name": "draft ad copy for search advertising",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. clearly identify the main offer and unique selling points of the product or service to be highlighted in the ad copy, 2. utilize relevant keywords and tags that align with the target audience’s search behavior to ensure the ad appears for the correct queries, 3. write engaging text and headlines that capture attention and convey the message succinctly, ensuring they are aligned with the identity and values of the brand, 4. ensure the ad's link directs users to a relevant and optimized landing page that matches the ad's promise and enhances user experience, 5. define the budget and adjust bid strategies to optimize ad placement and cost-efficiency within search engine results."
+            ],
+            "type": "search advertising",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Google AdWords",
+                "Facebook",
+                "Facebook Ads Manager",
+                "Grammarly",
+                "SEMrush"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop scripts for targeted video ads",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. determine the main message and target audience based on the offer and audience characteristics, 2. outline the narrative to introduce the problem, highlight the solution, and include a compelling call to action, 3. ensure the script includes critical parameters such as text, tags, and a clear link to the landing page, 4. match the script with defined marketing goals and budget constraints, 5. review the script for clarity and impact, making revisions as needed to optimize engagement."
+            ],
+            "type": "video ads",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Premiere Pro",
+                "Facebook",
+                "Facebook Ads Manager",
+                "Google AdWords",
+                "Canva"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "create text for Google ad campaigns",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. write concise ad text with a clear call-to-action, focusing on the main offer and how it benefits the target audience, 2. customize the language and messaging to match the interests and identity of the intended audience, 3. check that the ad link directs users to a landing page that reflects the ad’s promises and messaging, 4. set and manage the campaign budget and bids to optimize reach and cost-efficiency, 5. test multiple versions of the ad text to identify which yields the best conversion rates."
+            ],
+            "type": "google ads",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Google AdWords",
+                "Grammarly",
+                "Google Analytics",
+                "SEMrush"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "refine keyword strategies for paid search ads",
+            "responsibilities": "improving ad",
+            "objects": "ads",
+            "checklists": [
+                "1. review the effectiveness of existing keywords by analyzing metrics like click-through rates, conversions, and bid efficiency, 2. conduct keyword research to find new opportunities based on current trends, audience behavior, and competitors' strategies, 3. update ad text to align with new keywords, ensuring that each ad has a clear and compelling message. Optimize links to ensure they direct to relevant and high-converting landing pages, 4. reallocate budget based on keyword performance and adjust bids to optimize ad placement and cost-effectiveness, 5. continuously monitor the performance of the updated keyword strategy and make iterative adjustments based on real-time data to maximize ad impact and ROI."
+            ],
+            "type": "paid search advertising",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Google AdWords",
+                "Google Keyword Planner",
+                "SEMrush"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "craft text for banner ads",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. analyze the target audience's preferences and the specifics of the offer to ensure the text aligns with their interests and needs, 2. create engaging and concise text for the banner ad, focusing on a clear value proposition and a strong call to action, 3. ensure the text includes essential elements such as the tag (brand or campaign tagline) and the identity of the brand to maintain consistency across ads, 4. attach a direct link to a well-designed landing page that matches the promise of the ad and provides a seamless user experience, 5. implement A/B testing to compare different versions of ad text. Use the results to refine the message and optimize the budget and bid for maximum effectiveness."
+            ],
+            "type": "banner ads",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Google AdWords",
+                "Facebook",
+                "Canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "write social media ad content",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. tailor the content to the target audience's preferences and clarify the specific offer, 2. write engaging ad copy that effectively communicates the offer and aligns with the audience's identity, 3. design visuals or select banners that complement the ad text and appeal to the audience, 4. ensure the landing page is relevant and the ad link is functioning correctly, 5. allocate the budget and adjust bids to optimize reach and effectiveness."
+            ],
+            "type": "social media advertising",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Canva",
+                "Facebook",
+                "Instagram"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "create content for native advertising integration",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. study the platform's format and audience behaviors to inform the design and messaging of the ad, 2. develop text that aligns with platform norms and audience interests, incorporating a relevant offer, 3. droduce visuals like banners that fit naturally with the platform’s content and enhance the ad's appeal, 4. include trackable links and ensure the landing page is fully optimized for the targeted audience, 5. allocate budget wisely and bid strategically to achieve effective ad placement."
+            ],
+            "type": "native advertising",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Canva",
+                "Photoshop",
+                "Facebook Ads Manager",
+                "Google Analytics",
+                "Bitly"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "compose ads tailored to website content context",
+            "responsibilities": "analyzing audience",
+            "objects": "ads",
+            "checklists": [
+                "1. analyze the themes and user behaviors on the target webpage to inform the ad’s content, 2. develop compelling text and a visually appealing banner that aligns with the webpage’s content and audience preferences, 3. ensure the landing page reflects the ad’s message and offers a cohesive experience from ad to website, 4. allocate budget and adjust bids to optimize ad placement and effectiveness, 5. implement the ad, monitor performance, and make necessary adjustments based on analytics."
+            ],
+            "type": "contextual advertising",
+            "parameters": [
+                "text",
+                "link",
+                "landing page",
+                "budget",
+                "audience",
+                "tag",
+                "banner",
+                "identity",
+                "offer",
+                "bid"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Facebook Pixel",
+                "SEMrush",
+                "Ahrefs"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop content themes for posting strategy",
+            "responsibilities": "writing instructions",
+            "objects": "content plan",
+            "checklists": [
+                "1. set clear goals for the posting strategy and outline the desired outcomes, 2. utilize mind mapping tools to generate and organize potential content themes, 3. choose the most effective channels for each theme based on audience preferences and content type, 4. develop concise guidelines that dictate the style, tone, and frequency of posts for each theme, 5. draft initial content ideas and outline interaction strategies to engage the audience."
+            ],
+            "type": "posting strategy",
+            "parameters": [
+                "strategy",
+                "mind map",
+                "interaction",
+                "channel",
+                "goal",
+                "guideline",
+                "text"
+            ],
+            "tools": [
+                "Trello",
+                "Miro",
+                "Notion"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "create conversion-focused content plans",
+            "responsibilities": "creating a calendar",
+            "objects": "content plan",
+            "checklists": [
+                "1. define conversion objectives and use a mind map to visualize the overall strategy and key content themes, 2. develop clear guidelines for content style, tone, and messaging to ensure consistency and alignment with conversion goals, 3. identify the best channels for content distribution based on where the target audience is most engaged, 4. incorporate calls to action and other interactive elements in the content to drive user engagement and conversions, 5. prepare and schedule content using a calendar to ensure regular and strategic postings."
+            ],
+            "type": "conversion strategy",
+            "parameters": [
+                "strategy",
+                "mind map",
+                "interaction",
+                "channel",
+                "goal",
+                "guideline",
+                "text"
+            ],
+            "tools": [
+                "Trello",
+                "Google Calendar",
+                "Asana"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "draft promotional content outlines",
+            "responsibilities": "content strategy",
+            "objects": "content plan",
+            "checklists": [
+                "1. define the promotional strategy and specific engagement goals for the content, 2. use a mind map to organize key themes and interaction points related to the strategy, 3. select the most effective channels for distributing the content, tailored to the target audience, 4. draft initial content outlines that adhere to strategic guidelines and incorporate planned interactions, 5. review and refine the outlines to ensure alignment with the overall promotional goals and channel specifics."
+            ],
+            "type": "promotional strategy",
+            "parameters": [
+                "strategy",
+                "mind map",
+                "interaction",
+                "channel",
+                "goal",
+                "guideline",
+                "text"
+            ],
+            "tools": [
+                "Trello",
+                "Notion",
+                "Google Docs",
+                "Miro"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "design interactive content to boost engagement",
+            "responsibilities": "content strategy",
+            "objects": "content plan",
+            "checklists": [
+                "1. use a mind map to plan the interaction types and content distribution across channels according to the engagement goals, 2. formulate guidelines for creating engaging, interactive content (e.g., quizzes, interactive videos) tailored to specific channels, 3. implement the interactive content across chosen platforms, ensuring alignment with channel-specific audiences and strategic goals, 4. analyze engagement metrics and user feedback to refine the content and strategy for enhanced interaction."
+            ],
+            "type": "engagement strategy",
+            "parameters": [
+                "strategy",
+                "mind map",
+                "interaction",
+                "channel",
+                "goal",
+                "guideline",
+                "text"
+            ],
+            "tools": [
+                "Canva",
+                "InShot",
+                "Adobe XD"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze conversion metrics to refine content approach",
+            "responsibilities": "evaluating plan success",
+            "objects": "content plan",
+            "checklists": [
+                "1. assess how well the current content strategy aligns with conversion goals, 2. analyze interaction data and content performance across different channels to identify effective practices and areas for improvement, 3. update content guidelines and text based on performance insights to better target user conversions, 4. apply changes to the content strategy, monitor the impact on conversion metrics, and make further adjustments as needed."
+            ],
+            "type": "conversion strategy",
+            "parameters": [
+                "strategy",
+                "mind map",
+                "interaction",
+                "channel",
+                "goal",
+                "guideline",
+                "text"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Data Studio",
+                "Facebook"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "evaluate engagement data to optimize future strategies",
+            "responsibilities": "evaluating plan success",
+            "objects": "content plan",
+            "checklists": [
+                "1. examine the current engagement strategy and assess its effectiveness in meeting set goals, 2. analyze data on user interactions across different channels to identify strengths and areas for improvement, 3. refine content guidelines based on the analysis to boost engagement, 4. apply the updated strategies, monitor the engagement metrics, and adjust as needed."
+            ],
+            "type": "engagement strategy",
+            "parameters": [
+                "strategy",
+                "mind map",
+                "interaction",
+                "channel",
+                "goal",
+                "guideline",
+                "text"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Data Studio"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "curate images aligning with content themes",
+            "responsibilities": "selecting media",
+            "objects": "media",
+            "checklists": [
+                "1. identify key content themes and determine the types of visuals (e.g., stickers, illustrations) needed, 2. choose appropriate formats like boomerangs, animations, or stickers that match the thematic requirements, 3. assess the alignment of selected images with the content themes, making adjustments to ensure coherence, 4. categorize and store the curated images in a media library for streamlined access and usage."
+            ],
+            "type": "images",
+            "parameters": [
+                "stories",
+                "sticker",
+                "boomerang",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Canva",
+                "Photoshop"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "select videos enhancing narrative content",
+            "responsibilities": "selecting media",
+            "objects": "media",
+            "checklists": [
+                "1. assess the narrative or storytelling goals of the project to define the type of visual enhancement needed, 2. examine available video formats such as stories, boomerangs, and animations, 3. choose dynamic elements like stickers and illustrations to add to the videos, enhancing engagement and storytelling depth, 4. make the final selection of videos ensuring they align with the narrative's theme and flow, integrate these videos seamlessly into the overall content."
+            ],
+            "type": "video        ",
+            "parameters": [
+                "stories",
+                "sticker",
+                "boomerang",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Canva",
+                "Premiere Pro"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "choose infographics for data visualization",
+            "responsibilities": "selecting media",
+            "objects": "media",
+            "checklists": [
+                "1. determine the key story or data points that need to be communicated and identify which type of visual representation (sticker, boomerang, illustration, animation) best conveys the story, 2. choose visuals that clearly illustrate the data or story, 3. assess the selected visuals for clarity, engagement, and the ability to effectively communicate the intended message to the target audience, 4. finalize the chosen infographics, ensuring they integrate well with the overall media or presentation format."
+            ],
+            "type": "infographic",
+            "parameters": [
+                "stories",
+                "sticker",
+                "boomerang",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Canva",
+                "Adobe Spark",
+                "Figma"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "integrate with articles",
+            "responsibilities": "selecting media",
+            "objects": "media",
+            "checklists": [
+                "1. select infographics that closely match the article’s topic and enhance the narrative, 2. place the infographic at points in the article where it best supports and clarifies the content, 3. optimize the format (illustration, animation) for visual appeal and reader engagement, 4. assess how well the infographic integrates with the article’s flow and make adjustments if needed."
+            ],
+            "type": "infographic",
+            "parameters": [
+                "stories",
+                "sticker",
+                "boomerang",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Canva",
+                "Adobe Spark",
+                "Figma"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "utilize gifs for emphasis and engagement in posts",
+            "responsibilities": "selecting media",
+            "objects": "media",
+            "checklists": [
+                "1. select GIFs that enhance the story or message, such as stickers or animations, ensuring they fit the post’s theme, 2. integrate GIFs at points in the content where they can best emphasize key messages or add visual interest, 3. monitor how different GIFs perform in terms of audience engagement and interaction, 4. adjust the selection and placement of GIFs based on analytics and viewer feedback to optimize engagement."
+            ],
+            "type": "gif",
+            "parameters": [
+                "stories",
+                "sticker",
+                "boomerang",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Adobe Spark",
+                "Photoshop",
+                "Giphy"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "employ animations to illustrate complex stories",
+            "responsibilities": "selecting media",
+            "objects": "media",
+            "checklists": [
+                "1. identify and storyboard key story elements that benefit from visual representation using illustrations and basic animations, 2. develop detailed animations, incorporating dynamic elements like stickers or boomerangs where appropriate, 3. seamlessly integrate animations into the storytelling process to enhance narrative clarity and engagement, 4. review the animations' effectiveness in communicating the story, adjust based on feedback to optimize impact."
+            ],
+            "type": "animation",
+            "parameters": [
+                "stories",
+                "sticker",
+                "boomerang",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Adobe After Effects",
+                "Blender",
+                "Canva"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "track audience reach metrics",
+            "responsibilities": "tracking metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. utilize Google Ads to gather comprehensive data on audience reach, 2. analyze reach metrics by different audience segments and tags to identify which groups are most effectively targeted, 3. integrate insights from Chat GPT to enhance understanding of data trends and correlations between audience reach and content types, 4. review these metrics regularly to adapt strategies promptly and efficiently based on audience reach analysis."
+            ],
+            "type": "awareness",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "track conversion metrics",
+            "responsibilities": "tracking metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. access Google Analytics to monitor key conversion points like purchases or sign-ups, 2. set goals within Google Ads to track ad-driven conversions and assess their roi, 3. compile conversion data weekly to spot trends or drop-offs, 4. update tracking parameters as campaigns evolve to maintain accurate data capture."
+            ],
+            "type": "conversion",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Ads"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "assess brand sentiment from customer feedback",
+            "responsibilities": "reporting metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. gather customer feedback data across multiple channels, 2. categorize feedback by sentiment and relevance using analytics tools to measure positive, neutral, and negative responses, 3. engage Chat GPT to analyze qualitative data, extracting prevalent themes and sentiment trends from customer comments."
+            ],
+            "type": "perception",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Chat GPT",
+                "Hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "measure new user sign-ups",
+            "responsibilities": "tracking audience growth",
+            "objects": "metrics",
+            "checklists": [
+                "1. access Google Ads to extract data on new user sign-ups from specific campaigns, 2. segment the data by audience and tags to identify trends and effective strategies, 3. analyze the effectiveness of different text calls-to-action using Chat GPT."
+            ],
+            "type": "acquisition",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze customer journey analytics",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. use Google Ads for analytics on customer journeys across various digital touchpoints, 2. segment data by audience characteristics and tags, 3. apply Chat GPT to summarize complex journey data into actionable insights, highlighting areas for improvement."
+            ],
+            "type": "experience",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze content engagement",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. access engagement data from Google Ads to review likes, shares, and comments across all content platforms, 2. segment engagement metrics by audience tags to understand which demographic interacts the most with the content, 3. use Chat GPT to process textual feedback and identify key themes or issues, 4. compile and analyze patterns in the data to determine the effectiveness of content strategies and suggest improvements based on engagement trends."
+            ],
+            "type": "engagement",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze lead generation effectiveness",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1.access Google Ads to pull reports on campaigns, 2. dissect user behavior and conversion rates, 3. employ Chat GPT to assist in interpreting data and deriving insights, 4. cross-reference findings with campaign goals to assess alignment and effectiveness., 5. document insights and recommendations to optimize future campaigns."
+            ],
+            "type": "acquisition",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "optimize content for higher conversion rates",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. review content performance data from Google Ads and Analytics to identify areas for improvement, 2. enhance content using insights generated by Chat GPT, 3. apply changes to key elements such as headlines, calls-to-action, and visuals based on performance metrics, 4. monitor the impact of these changes on user behavior and conversion rates through Google Analytics, 5. continuously update and refine content strategies to maximize conversions."
+            ],
+            "type": "conversion",
+            "parameters": [
+                "analytic",
+                "audience",
+                "tag",
+                "text"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "design carousel layouts for product features",
+            "responsibilities": "creating post",
+            "objects": "posts",
+            "checklists": [
+                "1. gather all necessary materials such as text, video, images, offers, and links relevant to the product, 2. collaborate with the design team to refine visual elements and ensure brand consistency across all carousel slides, 3. implement the layouts in a social media management tool and schedule the posts according to the content calendar, 4. monitor the performance of carousel posts and make adjustments based on user engagement and feedback."
+            ],
+            "type": "carousel post",
+            "parameters": [
+                "text",
+                "video",
+                "images",
+                "offer",
+                "link"
+            ],
+            "tools": [
+                "Canva",
+                "Adobe Photoshop",
+                "Hootsuite",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "draft scripts for video content",
+            "responsibilities": "creating content",
+            "objects": "posts",
+            "checklists": [
+                "1. identify the core message and objective of the video content based on campaign goals, 2. use Chat GPT to refine script ideas that align with the video’s theme, 3. write an initial draft focusing on clear language that resonates with the target audience, 4. finalize the script ensuring all key messages, calls to action, and links are correctly incorporated."
+            ],
+            "type": "video post",
+            "parameters": [
+                "text",
+                "video",
+                "images",
+                "offer",
+                "link"
+            ],
+            "tools": [
+                "Chat GPT"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "compose engaging text posts",
+            "responsibilities": "drafting text",
+            "objects": "posts",
+            "checklists": [
+                "1. determine the objective of the post and the target audience demographics, 2. utilize Chat GPT to generate creative content ideas and engaging text options, 3. draft the initial text, incorporating relevant keywords and offers to enhance the call to action, 4. review and adjust the text based on feedback or engagement metrics from similar past posts, 5. finalize and schedule the text post for optimal times using insights from Google Ads data."
+            ],
+            "type": "text post",
+            "parameters": [
+                "text",
+                "video",
+                "images",
+                "offer",
+                "link"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Ads"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize image captions for engagement",
+            "responsibilities": "optimizing text",
+            "objects": "posts",
+            "checklists": [
+                "1. use keyword tools like Google Ads to find trending phrases, 2. сraft engaging captions using Chat GPT that complement the visual, 3. test different captions in smaller segments, 4. finalize the captions based on analytics feedback and schedule for posting."
+            ],
+            "type": "image post",
+            "parameters": [
+                "text",
+                "video",
+                "images",
+                "offer",
+                "link"
+            ],
+            "tools": [
+                "Google Ads",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "enhance carousel captions for user interaction",
+            "responsibilities": "optimizing text",
+            "objects": "posts",
+            "checklists": [
+                "1. analyze current engagement trends and audience feedback, 2. draft multiple caption options using Chat GPT, incorporating key messaging and call-to-actions, 3. integrate keywords optimized through Google Ads insights, 4. choose which captions perform best, 5. refine and finalize captions based on analytics data, updating them in the content management system."
+            ],
+            "type": "carousel post",
+            "parameters": [
+                "text",
+                "video",
+                "images",
+                "offer",
+                "link"
+            ],
+            "tools": [
+                "Google Ads",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        }
+    ]
+}

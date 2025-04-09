@@ -1,0 +1,88 @@
+App Name: Clip’s Madagascar Voiceover Quest
+Tagline: "Explore Madagascar with Clip to Master Voiceovers!"
+
+------------------------------------------
+
+Overview
+
+Clip’s Madagascar Voiceover Quest is a gamified learning app where students join Clip the Chameleon on a filmmaking adventure across Madagascar.
+The island’s diverse regions—rainforests, highlands, savannas, canyons, and volcanic areas.
+Clip, dressed in his explorer outfit (yellow baseball cap, cream safari shirt, golden yellow shorts, and orangey-brown sneakers), guides users through missions, mini-games, and memory techniques to learn ElevenLabs’ voiceover tools.
+
+------------------------------------------
+
+App Structure: A Journey Across Madagascar
+The app’s map is now a stylized representation of Madagascar, with five distinct regions.
+Each region corresponds to a level from the onboarding document, and Clip travels through them as the user progresses.
+
+1. Welcome Screen: Meet Clip the Chameleon
+Visuals: Clip stands in front of a Madagascar map, holding his camera, with a big smile. The background features a lush rainforest with baobab trees and a lemur peeking from the foliage.
+Text: "Hi, I’m Clip! I’m a chameleon filmmaker from Madagascar, and I’m here to help you master voiceovers with ElevenLabs. Let’s explore my island and create some magic! 🎙️"
+Gamification Element: Users earn their first badge, "The Voice Seeker Begins", for starting the journey (mirroring Level 1 of the onboarding).
+Memory Technique: Visualization – Users are prompted to imagine themselves as Clip’s filmmaking assistant, exploring Madagascar’s rainforests with a camera.
+
+2. The Map: Clip’s Madagascar
+The map is a hand-drawn, whimsical depiction of Madagascar with five regions:
+Rainforest Gateway (Level 1: Account Creation) – Inspired by Madagascar’s eastern rainforests, like Andasibe-Mantadia National Park.
+Highland Studio (Level 2: Voiceover Magic) – Based on the central highlands, with rolling hills and traditional Malagasy huts.
+Savanna Soundscape (Level 3: Sound Effects) – Reflecting the grassy savannas of western Madagascar, like the Kirindy Forest.
+Canyon Edit Hub (Level 4: Integration) – Inspired by the Tsingy de Bemaraha stone forest, with jagged limestone formations.
+Volcanic Festival (Final Practical Task) – Set near the volcanic landscapes of the Ankaratra Mountains.
+Clip’s character moves across the map as the user progresses, with animated effects (e.g., his tail curls and changes colors, reflecting Madagascar’s vibrant biodiversity).
+
+Gamified Learning Journey
+Region 1: Rainforest Gateway – “The Gateway Quest”
+Theme: A dense Madagascar rainforest with towering trees, lemurs, and colorful orchids.
+
+Visuals (Slide 1 & Slide 2): The journey begins with a scroll hanging between rainforest trees, reading “Create Free Voiceovers with ElevenLabs” (Slide 1). Clip receives a glowing scroll from a parrot messenger in a wooden hut, with the text: "Your mission, CLIP: Master the voice of the jungle with ElevenLabs. Begin your quest by unlocking the Gateway Portal!" (Slide 2). A Madagascar red-fronted brown lemur watches from a branch.
+Mission (Slide 3): Sign up for ElevenLabs.
+Task: Follow Clip’s step-by-step guide to create an account (email or social login). Clip stands before a glowing portal shaped like a wide-open mouth, surrounded by tribal carvings and lush leaves, with a banana leaf reading: "Step 1: Create your ElevenLabs account. Use email or social login. No credit card needed."
+Mini-Game: "Rainforest Sign-Up Sprint" – A timed game where users match icons (email, Google, Facebook) to the correct sign-up method. Clip cheers, "You’re fast like a chameleon in the rainforest!"
+Reward: 50 "Voice Gems" (in-app currency) + "The Voice Seeker Begins" badge.
+Memory Technique: Chunking – Clip says, "Think of signing up like joining a library for voices! Just like Madagascar’s rainforests hold endless species, ElevenLabs holds endless voices."
+Clip’s Role: Clip sets up a camp in the rainforest, saying, "Let’s get you signed up so we can start filming in Madagascar!"
+Region 2: Highland Studio – “The TTS Workshop”
+Theme: The central highlands of Madagascar, with rolling hills, rice paddies, and a traditional Malagasy hut turned into a voice studio.
+
+Visuals (Slide 4): Inside a cozy hut, Clip hands a scroll to a glowing speech spirit, with light filtering through wooden walls and tropical plants. A wooden plank reads: "Type your script. Choose a voice. Generate audio with one click." A Madagascar hoopoe bird perches on the window.
+Mission: Create a voiceover using the Text-to-Speech (TTS) tool.
+Task: Type a short script (e.g., "Welcome to my Madagascar movie!"), choose a voice style, and generate audio.
+Mini-Game: "Voice Match Challenge" – Users hear a voice clip and match it to the correct emotion (happy, sad, excited). Clip says, "Great ear! You’re a voice alchemist in the highlands!"
+Reward: 100 Voice Gems + "Text-to-Speech Alchemist" badge.
+Memory Technique: Visualization – Clip prompts, "Imagine handing your script to a voice spirit in this highland hut. They read it with emotion—that’s what TTS does!"
+Clip’s Role: Clip sets up his camera in the hut, saying, "Let’s record some magical voices in the highlands!"
+Region 3: Savanna Soundscape – “The Audio Wizardry Lab”
+Theme: A grassy savanna in western Madagascar, with baobab trees and fossas roaming in the distance.
+
+Visuals (Slide 5): In a hidden savanna cave, Clip, wearing a wizard hat, casts sound spells from a leafy book, creating effects like “swoosh,” “cat meow,” and “explosion.” Text floats among sparks: "Describe your sound. Generate up to 60/month. Mix waves and wonders! 🌊💥🐾"
+Mission: Generate a sound effect using ElevenLabs.
+Task: Describe a sound (e.g., “fossa growl”) and generate it.
+Mini-Game: "Savanna Sound Safari" – Users match sound effects to animals or scenes (e.g., “fossa growl” to a suspense scene). Clip says, "You’re a sound sorcerer in the savanna!"
+Reward: 150 Voice Gems + "Sound Sorcerer" badge.
+Memory Technique: Association – Clip says, "Link sounds to pictures in your mind! A fossa growl means we’re in the Madagascar savanna."
+Clip’s Role: Clip explores the savanna with his camera, recording sounds and saying, "Let’s capture the perfect effect in this wild savanna!"
+Region 4: Canyon Edit Hub – “The Creator’s Forge”
+Theme: The jagged limestone formations of Tsingy de Bemaraha, with a bamboo editing shack nestled among the rocks.
+
+Visuals (Slide 6): Clip sits at a wooden desk in the shack, using a jungle-style video editor on a bamboo laptop. An open bamboo notebook reads: "Drag. Drop. Sync. Craft your story. Bring visuals and voice together. 🛠️" A ring-tailed lemur watches from a nearby rock.
+Mission: Integrate a voiceover and sound effect into a video.
+Task: Import a short video clip (or use a preloaded one), add the voiceover and sound effect, and sync them.
+Mini-Game: "Timeline Tangle" – Users drag and drop audio clips into the correct spots on a video timeline. Clip cheers, "You’re a toolmaster in the canyon!"
+Reward: 200 Voice Gems + "Toolmaster" badge.
+Memory Technique: Storybuilding – Clip says, "Think of your video as a story puzzle. Audio is the glue that brings it to life in this rocky canyon!"
+Clip’s Role: Clip edits his footage in the shack, saying, "Let’s put it all together and make a masterpiece in the Tsingy canyon!"
+Region 5: Volcanic Festival – “The Voiceover Challenge”
+Theme: A volcanic landscape near the Ankaratra Mountains, where Clip hosts a grand filmmaking festival with a tribal ceremony.
+
+Visuals (Slide 7, Slide 8, Slide 9): Clip presents his final audio at a tribal ceremony, with a jury of Madagascar animals (a fossa, a parrot, an owl, and a lemur) listening to a vine-wrapped speaker (Slide 7: "Create a 15–30 sec voiceover. Use emotion. Add one sound effect. Upload your masterpiece! 🎤🎧"). The animals react with excitement, saying "WOW," "AH," and "GREAT" (Slide 8). The jury then leans forward, with the parrot holding a glowing question leaf, saying, "Impressive… but we have questions" (Slide 9).
+Mission: Complete the final practical task.
+Task: Create a 15–30 second voiceover with a sound effect, meeting the requirements from the onboarding.
+Mini-Game (Slides 10–14): "Memory Sprint Quiz" – A quiz with questions from the onboarding, set in various Madagascar scenes:
+Slide 10: A jungle classroom with a blackboard: "What is the monthly character limit for ElevenLabs' free plan? a) 1,000 b) 10,000 c) 100,000 d) Unlimited"
+Slide 11: A scroll between trees: "Which tool in ElevenLabs allows you to convert written text into spoken audio? a) Audio Mixer b) Sound Lab c) Text-to-Speech d) Voice Cloner"
+Slide 12: A stone tablet: "How many sound effects can you generate per month with the free plan? a) 15 b) 30 c) 60 d) Unlimited"
+Slide 13: A bamboo notebook on a leaf table: "What format should your final voiceover file be submitted in? a) .mp4 b) .avi c) .mp3 d) .docx"
+Slide 14: A hanging parchment: "What happens if you exceed the 10,000 character limit on a free plan? a) You get billed automatically b) Your account is locked c) You must wait until the next monthly reset d) You can request an emergency extension"
+Reward: 300 Voice Gems + "Voiceover Champion" badge + a virtual trophy.
+Memory Technique: Recap Game – The quiz reinforces learning through repetition and engagement.
+Clip’s Role: Clip stands on a volcanic stage, holding a trophy and saying, "You’re a voiceover champion! Let’s celebrate in Madagascar’s volcanic festival!"

@@ -1,0 +1,12 @@
+Recruiters Plans;
+
+Learn Deep Research: Topic: "Recruiting Methodics Through job sites in Europe"
+"Recruitment literature list with mmain points"
+
+Tools:
+    End Result: Store in Cursor
+
+Teachers to run Lessons: "How to work"
+    Prepare Lesson on Curstor install
+    Teach Rule: Save Chat Results in Files
+    Install and Use MCP

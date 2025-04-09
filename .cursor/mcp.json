@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "node",
+      "args": ["node_modules/@modelcontextprotocol/server-postgres/dist/index.js"],
+      "env": {
+        "DATABASE_URL": "postgresql://postgres:qyzwo9-pyhxaf-xyBmic@aws-0-us-west-1.pooler.supabase.com:5432/postgres?project_id=czasfggorygcsrecnzsh",
+        "NODE_ENV": "production",
+        "DEBUG": "*",
+        "PGSSLMODE": "require"
+      },
+      "tools": ["query"],
+      "enabled": true
+    }
+  }
+} 

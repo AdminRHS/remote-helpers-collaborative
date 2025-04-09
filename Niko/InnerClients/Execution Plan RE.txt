@@ -1,0 +1,458 @@
+﻿Cursor AI Execution Prompt Plan for Remote Work Platform
+Phase 1: Project Setup & Entity Architecture
+1. Initial Project Setup
+Copy
+Create a new Next.js project with TypeScript for a remote work platform similar to RemotEmployees. Set up the folder structure following best practices, initialize Git repository, and configure ESLint and Prettier for code quality. Include Tailwind CSS for styling. The application should have both a public-facing frontend and an administrative back office system.
+2. Entity Management Core
+Copy
+Implement the core entity architecture with Prisma ORM:
+1. Create the foundational tables: entity_types, entities, blocks, entity_block
+2. Implement the workflow engine with statuses and status_entity_blocks
+3. Build the field management system with fields and entity_block_fields tables
+4. Develop the permissions framework with roles, permissions, and permission_types
+5. Set up the library system as a central repository for reusable content
+
+
+Ensure proper relationships and constraints between all tables and implement the service layer for CRUD operations on these core components. Include database seeding for essential reference data.
+3. Authentication and Authorization
+Copy
+Implement a comprehensive security system:
+1. Create a multi-role authentication system using NextAuth.js with JWT tokens
+2. Build a custom authorization provider that integrates with the entity permissions system
+3. Implement field-level access control based on user roles and permissions
+4. Develop status transition authorization based on workflow rules
+5. Create an audit logging system that tracks all authentication and authorization events
+6. Implement IP and device-based access controls
+
+
+Include admin interfaces for managing roles, permissions, and user access levels.
+Phase 2: Library Management System
+4. Library Core Implementation
+Copy
+Develop the library management system as a central repository for reusable content:
+1. Implement the libraries table with hierarchical structure support
+2. Create interfaces for managing library content with proper categorization
+3. Build a library browser component with search and filtering capabilities
+4. Implement library item creation with parent-child relationships
+5. Develop a versioning system for library content
+6. Create APIs for retrieving and utilizing library items
+
+
+Include translation support for library items and implement library item status workflow management.
+5. Geography and Location Management
+Copy
+Build the geography and location system:
+1. Implement countries and cities tables with coordinates support
+2. Create a map-based interface for browsing and selecting locations
+3. Develop bulk import functionality for geographic data
+4. Build location search with autocomplete functionality
+5. Implement location filtering for job listings
+6. Create visualization components for geographic data analysis
+
+
+Include integration with mapping services and support for location-based reporting and analytics.
+6. Job Structure Framework
+Copy
+Implement the job structure framework:
+1. Create the departments and professions hierarchy management
+2. Build the responsibilities system with actions and objects
+3. Develop the tools catalog with categorization
+4. Implement the industry classification system
+5. Create interfaces for defining job requirements and skills
+6. Build relationship management between professions and skills
+
+
+Include visualization tools for displaying job structure relationships and develop a skill matching algorithm.
+7. Template Generation System
+Copy
+Create the template generation system:
+1. Implement job templates with dynamic content fields
+2. Build a template editor with library component selection
+3. Develop template versioning and approval workflow
+4. Create template rendering with variable substitution
+5. Implement template categorization and search
+6. Build template analytics for usage tracking
+
+
+Include support for multiple languages and develop a template preview functionality.
+Phase 3: Job Recruitment System
+8. Job Posting Management
+Copy
+Develop the job posting management system:
+1. Create job posts from templates with customization options
+2. Implement the job site and job account management
+3. Build scheduled publication with posting lifecycle management
+4. Develop cost tracking and ROI analysis for paid postings
+5. Create location-based targeting with geographic filters
+6. Implement contact association and communication tracking
+7. Build a unified dashboard for monitoring all job postings
+
+
+Include integration with external job boards via API connections and implement post performance analytics.
+9. Application Processing System
+Copy
+Create the application processing workflow:
+1. Build the applicant profile system with contact information management
+2. Implement the video submission functionality for remote interviews
+3. Create application status workflow with stage progression
+4. Develop recruiter assignment and workload management
+5. Build the talent pool for candidate storage and categorization
+6. Create application evaluation and scoring system
+7. Implement note-taking and communication logging
+
+
+Include reporting on application funnels and conversion rates across different sources.
+10. Client and Project Management
+Copy
+Implement the client management system:
+1. Build the inner client profiles with company information
+2. Create job request workflow for managing client talent needs
+3. Develop the project management system with milestones
+4. Implement client-specific document and asset management
+5. Build client communication and meeting scheduling system
+6. Create client billing and usage reporting
+7. Implement client satisfaction tracking
+
+
+Include client portals for self-service operations and develop client-specific analytics dashboar
+
+
+Phase 4: Client and Communication System
+12. Inner Client Management
+   * Implement the client management system:
+   * 1. Create Prisma models for inner_clients and related tables
+   * 2. Build client profile management with company details and contacts
+   * 3. Implement industry and company type classification
+   * 4. Create client document and credential management
+   * 5. Build client-specific configuration and preferences
+   * 6. Implement client relationship visualization
+   * 7. Create client analytics and reporting dashboard
+   *    * Include client hierarchies for enterprise accounts and access control for client data.
+13. Job Request System
+   * Develop the job request workflow system:
+   * 1. Create Prisma models for job_requests and related junction tables
+   * 2. Build job request creation interface with profession and skill selection
+   * 3. Implement approval workflow for new job requests
+   * 4. Create job request to job template mapping functionality
+   * 5. Build applicant matching system for job requests
+   * 6. Implement job request tracking and fulfillment reporting
+   * 7. Create client notification system for request updates
+   *    * Include analytics on fulfillment rates and time-to-fill metrics.
+14. Contact Management System
+   * Build the polymorphic contact management system:
+   * 1. Create Prisma models for contacts with polymorphic relationships
+   * 2. Implement contact type configuration with tool associations
+   * 3. Build contact form components with validation by type
+   * 4. Create contact search and filtering system
+   * 5. Implement contact privacy controls and access management
+   * 6. Build contact synchronization with external systems
+   * 7. Create contact analytics and usage reporting
+   *    * Include duplicate detection and merging capabilities for contact records.
+15. Communication System
+   * Develop the integrated communication system:
+   * 1. Create Prisma models for communications, messages, and message_types
+   * 2. Implement the communication type configuration system
+   * 3. Build message template management with variable substitution
+   * 4. Create communication logging and tracking system
+   * 5. Implement multichannel communication (email, SMS, in-app)
+   * 6. Build communication scheduling and follow-up management
+   * 7. Create communication analytics and response tracking
+   *    * Include compliance features for communication opt-outs and regulatory requirements.
+   * ```# Cursor AI Execution Prompt Plan for Remote Work Platform
+   *    * ## Phase 1: Project Setup & Entity Architecture
+   *    * ### 1. Initial Project Setup
+Create a new Next.js project with TypeScript for a remote work platform similar to RemotEmployees. Set up the folder structure following best practices, initialize Git repository, and configure ESLint and Prettier for code quality. Include Tailwind CSS for styling. The application should have both a public-facing frontend and an administrative back office system.
+   * 
+   * ### 2. Entity Management Core
+Implement the core entity architecture with Prisma ORM:
+1. Create the foundational tables: entity_types, entities, blocks, entity_block
+2. Implement the workflow engine with statuses and status_entity_blocks
+3. Build the field management system with fields and entity_block_fields tables
+4. Develop the permissions framework with roles, permissions, and permission_types
+5. Set up the library system as a central repository for reusable content
+Ensure proper relationships and constraints between all tables and implement the service layer for CRUD operations on these core components. Include database seeding for essential reference data.
+   * 
+   * ### 3. Authentication and Authorization
+Implement a comprehensive security system:
+1. Create a multi-role authentication system using NextAuth.js with JWT tokens
+2. Build a custom authorization provider that integrates with the entity permissions system
+3. Implement field-level access control based on user roles and permissions
+4. Develop status transition authorization based on workflow rules
+5. Create an audit logging system that tracks all authentication and authorization events
+6. Implement IP and device-based access controls
+Include admin interfaces for managing roles, permissions, and user access levels.
+   * 
+   * ## Phase 2: Library and Content Management
+   *    * ### 4. Library System Implementation
+Implement the library management system for reusable content:
+1. Create Prisma models for libraries, library hierarchies, and related content types
+2. Build a library service for retrieving, filtering, and organizing library content
+3. Implement library item creation with support for hierarchical relationships
+4. Create library browsing components with tree view, search, and filtering
+5. Build a library item editor with version tracking and reference validation
+6. Implement internationalization support with language variants for library items
+7. Create caching mechanisms for optimized library content access
+Include visualization for content relationships and comprehensive search capabilities.
+   * 
+   * ### 5. Location and Reference Data
+Implement the geographic and reference data systems:
+1. Create Prisma models for countries, cities, languages, and related tables
+2. Build import/export utilities for managing reference data in bulk
+3. Implement geographic visualization with maps and coordinates
+4. Create reference data pickers and selection components
+5. Build a search system with typeahead for location and reference data
+6. Implement data validation and integrity rules for reference relationships
+7. Create admin interfaces for managing reference data
+Include proper indexing for performance and support for geospatial queries.
+   * 
+   * ### 6. Profession and Skill Management
+Build the profession, department, and skill management systems:
+1. Create Prisma models for professions, departments, responsibilities, tools, and objects
+2. Implement hierarchical relationships between professional categories
+3. Build skill matrix visualization components
+4. Create profession and skill selection components with typeahead search
+5. Implement skill matching algorithms for job recommendations
+6. Build profession-based permission inheritance
+7. Create a professional taxonomy management interface
+Include comprehensive reporting on skill distribution and demand analytics.
+   * 
+   * ### 7. Tools and Integration Management
+Implement the tool and integration management system:
+1. Create Prisma models for tools, tool_types, and tool relationships
+2. Build configuration interfaces for external tool integration
+3. Implement API connectors for supported external tools
+4. Create credential management with secure storage
+5. Build tool usage tracking and analytics
+6. Implement tool selection components for various entities
+7. Create tool documentation management
+Include security best practices for credential handling and API communication.
+   * 
+   * ## Phase 3: Job Recruitment System
+   *    * ### 8. Job Template System
+Build the job template system for standardized job creation:
+1. Create Prisma models for job_templates and related junction tables (job_templates_tools, job_templates_languages, etc.)
+2. Implement the template editor with profession, tool, and responsibility selection
+3. Build template versioning and approval workflow
+4. Create template categorization and search functionality
+5. Implement template preview with styled output
+6. Build template usage analytics and reporting
+7. Create template duplication and modification features
+Include translation support for multilingual templates and content validation.
+   * 
+   * ### 9. Job Site and Account Management
+Implement the job site integration system:
+1. Create Prisma models for job_sites, job_accounts, and related tables
+2. Build job site configuration with country and language targeting
+3. Implement job site pricing and package management
+4. Create account credential management with security features
+5. Build verification and testing functionality for job site accounts
+6. Implement credential rotation and audit logging
+7. Create job site usage analytics and reporting
+Include secure storage for credentials and health monitoring for integrations.
+   * 
+   * ### 10. Job Posting System
+Develop the job posting management system:
+1. Create Prisma models for job_posts and related tables
+2. Build the job post editor with template selection and customization
+3. Implement publication scheduling and lifecycle management
+4. Create multi-channel publishing to different job sites
+5. Build job post tracking with external link verification
+6. Implement cost tracking and ROI analysis
+7. Create job post analytics and performance metrics
+Include status workflow management and automated publishing processes.
+   * 
+   * ### 11. Application Tracking System
+Create the application processing system:
+1. Create Prisma models for job_applications and related tables
+2. Build application intake system with form and document processing
+3. Implement video submission capabilities for remote interviews
+4. Create application review workflow with status tracking
+5. Build applicant communication system with templated messages
+6. Implement assignment system for recruiters and managers
+7. Create talent pool for promising candidates
+Include analytics for application sources, conversion funnels, and recruiter performance.
+   * 
+   * ## Phase 4: Communication and Notification System
+   *    * ### 11. Contact Management
+Build a unified contact management system:
+1. Implement the polymorphic contacts system that works across entities
+2. Create interfaces for managing contact information with privacy controls
+3. Develop contact grouping and categorization
+4. Build contact search with advanced filtering
+5. Implement contact synchronization with external systems
+6. Create contact activity tracking and history
+7. Develop permissions-based contact visibility
+Include duplicate detection and merging capabilities, and implement export/import functionality.
+   * 
+   * ### 12. Communication System
+Develop the integrated communication system:
+1. Create the message template system with variable substitution
+2. Implement multichannel communication (email, SMS, internal messages)
+3. Build scheduled and triggered communication based on status changes
+4. Develop communication history tracking and analytics
+5. Create communication preferences management
+6. Implement threading and conversation tracking
+7. Build communication search and archiving
+Include message templating with library integration and implement compliance and privacy controls.
+   * 
+   * ### 13. Notification System
+Implement the notification system:
+1. Create the push_notifications configuration interface
+2. Build user_notifications preference management
+3. Develop real-time notifications through websockets
+4. Implement notification center with read/unread tracking
+5. Create notification triggers based on workflow events
+6. Build notification aggregation and batching
+7. Implement notification analytics and optimization
+Include integration with external notification services and develop notification testing tools.
+   * 
+   * ### 14. Calendar and Scheduling
+Create the calendar and scheduling system:
+1. Implement the calendars and holidays management
+2. Build user scheduling with availability tracking
+3. Develop meeting and interview scheduling
+4. Create recurring event management
+5. Implement time zone support for global operations
+6. Build calendar sharing and permissions
+7. Create calendar integration with external services
+Include resource booking capabilities and implement conflict detection and resolution.
+   * 
+   * ## Phase 5: Analytics and Reporting
+   *    * ### 15. Activity Tracking and Auditing
+Implement comprehensive activity tracking:
+1. Create the activities table for logging all system events
+2. Build contextual logging that captures device, IP, and user agent details
+3. Implement before/after value tracking for data changes
+4. Develop reason tracking for critical actions
+5. Create a queryable activity log interface with advanced filtering
+6. Build timeline visualization for user and entity activities
+7. Implement data retention policies with archiving functionality
+Include privacy controls for sensitive information and develop export capabilities for compliance purposes.
+   * 
+   * ### 16. Operational Reporting
+Develop the operational reporting system:
+1. Implement the report_daily aggregation engine
+2. Create dashboards for monitoring activities by entity and user
+3. Build metrics tracking for job sites, accounts, templates, posts, and applications
+4. Develop trend analysis for recruitment activities
+5. Implement KPI visualization for user productivity
+6. Create export functionality with multiple formats
+7. Build scheduled report generation and distribution
+Include customizable dashboard widgets and implement drill-down capabilities for detailed analysis.
+   * 
+   * ### 17. Geographic and Language Analytics
+Create specialized analytical reporting:
+1. Implement the report_languages system for multilingual metrics
+2. Build the report_countries system for geographic analysis
+3. Create map visualizations for market penetration
+4. Develop comparative analysis for multilingual job postings
+5. Implement geographic distribution visualizations for applications
+6. Build talent pool analysis by location and language
+7. Create forecasting tools for resource planning
+Include geographic heat maps and develop language distribution visualizations.
+   * 
+   * ### 18. Business Intelligence Dashboards
+Develop comprehensive business intelligence:
+1. Create role-based dashboard customization
+2. Implement real-time activity monitoring with alerts
+3. Build performance metrics with benchmarking
+4. Develop ROI analysis for recruitment channels
+5. Create candidate source analysis with conversion tracking
+6. Implement anomaly detection for pattern identification
+7. Build predictive analytics for recruitment forecasting
+Include executive dashboards for high-level KPIs and implement data export for external analysis.
+
+Implement a comprehensive data import/export system:
+* Create a CSV/Excel import interface with field mapping
+* Build a data validation engine for imports
+* Implement export functionality with configurable formats
+* Develop batch operation capabilities
+* Create an import history and error reporting system
+* Build a scheduling system for automated imports/exports
+* Implement data transformation rules for import/export operations Include proper error handling and recovery for failed imports.
+   * 
+   * ## Phase 6: Testing, Deployment & Maintenance
+   *    * ### 19. Testing Strategy
+Implement a comprehensive testing strategy for the platform:
+* Create unit tests for all core components using Jest and React Testing Library
+* Implement integration tests for entity-block-field system and workflow engine
+* Develop API endpoint tests for all CRUD operations
+* Build end-to-end tests for critical user journeys using Cypress
+* Implement visual regression testing for UI components
+* Create performance tests for database queries and API endpoints
+* Develop security tests for authentication and authorization systems Include automated test runs in CI/CD pipeline with minimum 80% code coverage requirement.
+   * 
+   * ### 20. Security and Performance
+Enhance the platform's security and performance:
+* Implement CSRF protection for all form submissions
+* Add rate limiting for authentication and API endpoints
+* Create input sanitization for all user inputs
+* Set up proper data encryption for sensitive information
+* Configure HTTPS enforcement and security headers
+* Implement caching strategies for data-heavy pages
+* Optimize database queries with proper indexing
+* Set up code splitting and lazy loading for frontend components
+* Create image optimization pipeline for uploaded assets Include regular security audits and performance monitoring.
+   * 
+   * ### 21. Deployment and DevOps
+Set up the complete deployment infrastructure:
+* Configure multi-environment setup (development, staging, production)
+* Implement CI/CD pipeline with GitHub Actions
+* Create database migration system with versioning
+* Set up environment variable management
+* Implement monitoring and error tracking with Sentry
+* Create comprehensive logging system
+* Develop automated backup strategy
+* Set up analytics integration Include documentation for deployment procedures and emergency protocols.
+   * 
+   * ### 22. Maintenance and Support
+Establish ongoing maintenance systems:
+* Create a bug tracking and feature request workflow
+* Implement user feedback collection mechanisms
+* Develop a system for handling schema migrations
+* Set up automated testing for regular dependency updates
+* Create documentation for admin and user operations
+* Implement telemetry for usage patterns and error reporting
+* Develop a knowledge base for common questions and issues Include training materials for new system administrators and users.
+   * 
+   * # Implementation Notes:
+   *    * 1. **Technology Stack:**
+   *    - Frontend: Next.js 14, TypeScript, Tailwind CSS, TanStack Query, Zustand
+   *    - Backend: Node.js with Next.js API routes or NestJS
+   *    - Database: PostgreSQL with Prisma ORM
+   *    - Authentication: NextAuth.js with custom providers
+   *    - UI Components: Shadcn/UI as base with custom extensions
+   *    - Hosting: Vercel or AWS
+   *    * 2. **Architecture Approach:**
+   *    - Implement entity-based architecture with dynamic component rendering
+   *    - Use repository pattern for data access
+   *    - Implement service layer for business logic
+   *    - Create status-based workflow engine
+   *    - Develop permission system with entity-level access control
+   *    - Implement event-based system for activity tracking
+   *    - Use React Context for global state and feature flags
+   *    * 3. **Admin UI Framework:**
+   *    - Create a component system for the five main view types: datagrid, card, profile, edit, create
+   *    - Implement a block system for organizing functionality into tabs or sections
+   *    - Develop responsive layouts that adapt to different screen sizes
+   *    - Build a theme system with light/dark mode support
+   *    - Implement a unified filtering and search system
+   *    - Create keyboard shortcuts for common operations
+   *    - Use skeleton loaders for data-fetching states
+   *    * 4. **Data Management:**
+   *    - Implement optimistic updates for better user experience
+   *    - Use pagination and virtualization for large datasets
+   *    - Create a client-side caching layer with invalidation strategies 
+   *    - Implement batch operations for multiple records
+   *    - Develop a consistent error handling strategy
+   *    - Use web workers for heavy data processing operations
+   *    - Implement real-time updates for collaborative features
+   *    * 5. **Performance Considerations:**
+   *    - Implement database query optimization with proper indexes
+   *    - Use query caching for repeated operations
+   *    - Implement lazy loading for components and routes
+   *    - Configure proper edge caching strategies
+   *    - Optimize bundle sizes with code splitting
+   *    - Use server components for data-heavy pages
+   *    - Implement connection pooling for database queries
+   * 

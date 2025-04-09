@@ -1,0 +1,435 @@
+﻿1. JSON Conversion & Pattern Recognition: I will first structure the information from the Excel sheets into a JSON-like format (in my understanding, not literally outputting JSON unless asked). This will aid me in identifying relationships and patterns between objects, tasks, types, parameters, and responsibilities.
+2. Object and Type Identification: When you provide a request, I'll start by identifying the main object (e.g., logo, banner, infographic) and the specific type of that object (e.g., wordmark logo, web banner, statistical infographic).
+3. Parameter Extraction: I'll determine the necessary parameters related to the chosen object and type.
+4. Responsibility and Task Outlining: I will identify and outline the responsibilities involved in the task and suggest specific, actionable steps.
+5. Tool Suggestion: Based on the task, I will suggest relevant design tools (although tool information might be limited in the provided data).
+6. Contextual Awareness: I will maintain awareness of Remote Helpers' role as an outstaffing company and tailor suggestions appropriately if relevant.
+7. Clarity and Actionability: I'll focus on providing clear, concise, and actionable guidance.
+8. Identify the User's Profession: Determine the profession of the user making the request (e.g., are they a recruiter, a sales manager, etc.?).
+9. Access the  Look up the design_context object for that profession.
+10. Prioritize Suggestions: When suggesting design options, prioritize the relevant_objects and relevant_types listed in the design_context. For example, if a recruiter asks for a design, you'll know to focus on email templates, presentations, banners, and thumbnails.
+11. Understand Context: Use the other keys in the design_context (the object- and type- specific keys), as well as the general Remote Helpers context and task guidelines, to further tailor your response to the user's specific needs and goals.
+
+
+How to Use This Data (Example):
+1. Scenario: A graphic designer needs to create a logo for a new online course.
+2. Identify the Profession: The user is a "graphic designer."
+3. Access Relevant Data: Access the design_context and talents_db_context for "graphic designer."
+4. Design Suggestions: The design_context suggests focusing on "logos."
+5. Talent DB Context: The talents_db_context provides the structure of Tasks and Task_Templates. You can then understand how this logo design task would be defined, tracked, and assigned within the system (e.g., what fields are required, what the task workflow looks like, what milestones it's associated with). You also see the Courses and Topics structure, giving context to what the logo is for.
+6. More Informed Response: You can then ask the graphic designer more targeted questions based on this database context, such as "What is the entity_id for this course?" or "Which project is this logo related to?"
+
+
+
+{
+  "design_data": {
+    "objects_and_types": [
+      {
+        "object": "banners",
+        "types": ["web banner", "social media banner", "email banner"]
+      },
+      {
+        "object": "headers",
+        "types": ["social media header", "website header"]
+      },
+      {
+        "object": "icons",
+        "types": ["outline icon", "filled icon", "flat icon", "dimensional icon", "emoji icon", "hand-drawn icon"]
+      },
+      {
+        "object": "illustrations",
+        "types": ["flat illustration", "isometric illustration", "vector illustration", "character illustration"]
+      },
+      {
+        "object": "infographics",
+        "types": ["statistical infographic", "informational infographic", "process infographic"]
+      },
+      {
+        "object": "logos",
+        "types": ["wordmark logo", "lettermark logo", "pictorial logo", "abstract logo", "combination logo", "emblem logo"]
+      },
+      {
+        "object": "presentations",
+        "types": ["informative presentation", "persuasive presentation", "demonstrative presentation"]
+      },
+      {
+        "object": "brandbooks",
+        "types": ["corporate brandbook", "product brandbook", "visual identity guideline"]
+      },
+      {
+        "object": "fonts",
+        "types": ["web font", "display font", "custom font"]
+      },
+      {
+        "object": "business cards",
+        "types": ["personal contact card", "social media business card", "QR code business card"]
+      },
+      {
+        "object": "thumbnails",
+        "types": ["promo thumbnail", "interview thumbnail", "tutorial thumbnail"]
+      },
+      {
+        "object": "mockups",
+        "types": ["website mockup", "app mockup", "advertising mockup"]
+      },
+      {
+        "object": "email templates",
+        "types": ["promotional email template", "newsletter template", "feedback email template"]
+      },
+      {
+        "object": "characters",
+        "types": ["mascot", "user avatar", "instructional character", "storytelling character", "iconic character"]
+      },
+      {
+        "object": "portraits",
+        "types": ["digital portrait"]
+      }
+    ],
+    "tasks_guideline": {
+      "purpose": "This GPT-4 model is designed to aid in front end, back end, and full stack development by using a structured dataset covering tasks, objects, parameters, types, responsibilities, and tools.",
+      "handling_user_queries": "Identify key components of user queries, including tasks, involved objects, and specific information needs (parameters, responsibilities).",
+      "data_retrieval": "Extract necessary information from the relevant Excel sheets, which may involve multiple sheets if queries span various development facets.",
+      "task_execution_assistance": "Provide detailed guidance for tasks tailored to user proficiency levels, using 'Tasks' and 'Checklists' sheets.",
+      "error_handling_and_debugging": "Resolve common development issues using insights from 'Parameters' and 'Objects' sheets to understand the properties and behaviors of various elements.",
+      "resource_and_documentation_referral": "Recommend appropriate resources or documentation for complex issues or when learning new concepts.",
+      "personalized_advice_and_interactive_learning": "Offer tailored advice and encourage exploration of different development aspects through interactive queries based on Excel data.",
+      "user_interaction_guidelines": "Clarify ambiguities in user queries, align responses with specific development needs, maintain supportive communication, and periodically update knowledge from Excel files to adapt to evolving development trends."
+    },
+    "remote_helpers_context": {
+      "description": "Remote Helpers is a Ukrainian outstaffing company established in 2018 that connects skilled specialists with global businesses in the USA, Canada, and Western Europe. It offers flexible employment solutions across digital fields such as web development, digital marketing, and social media management, primarily targeting medium-sized businesses, startups, and small companies.",
+      "available_roles": ["designers", "developers", "managers", "marketers", "videographers"]
+    },
+    "professions_departments": [
+      {"profession": "hr manager", "department": "managers"},
+      {"profession": "lead generator", "department": "managers"},
+      {"profession": "front end developer", "department": "developers"},
+      {"profession": "back end developer", "department": "developers"},
+      {"profession": "full stack developer", "department": "developers"},
+      {"profession": "smm", "department": "marketers"},
+      {"profession": "content manager", "department": "marketers"},
+      {"profession": "seo manager tech", "department": "marketers"},
+      {"profession": "graphic designer", "department": "designers"},
+      {"profession": "recruiter", "department": "managers"},
+      {"profession": "sales manager", "department": "managers"},
+      {"profession": "video editor", "department": "videographers"},
+      {"profession": "seo manager", "department": "marketers"},
+      {"profession": "animator", "department": "videographers"},
+      {"profession": "project manager", "department": "managers"},
+      {"profession": "personal assistant", "department": "managers"},
+      {"profession": "motion designer", "department": "videographers"}
+    ]
+  }
+}
+
+
+
+
+{
+  "design_data": {
+    "objects_and_types": [
+      {
+        "object": "banners",
+        "types": ["web banner", "social media banner", "email banner"]
+      },
+      {
+        "object": "headers",
+        "types": ["social media header", "website header"]
+      },
+      {
+        "object": "icons",
+        "types": ["outline icon", "filled icon", "flat icon", "dimensional icon", "emoji icon", "hand-drawn icon"]
+      },
+      {
+        "object": "illustrations",
+        "types": ["flat illustration", "isometric illustration", "vector illustration", "character illustration"]
+      },
+      {
+        "object": "infographics",
+        "types": ["statistical infographic", "informational infographic", "process infographic"]
+      },
+      {
+        "object": "logos",
+        "types": ["wordmark logo", "lettermark logo", "pictorial logo", "abstract logo", "combination logo", "emblem logo"]
+      },
+      {
+        "object": "presentations",
+        "types": ["informative presentation", "persuasive presentation", "demonstrative presentation"]
+      },
+      {
+        "object": "brandbooks",
+        "types": ["corporate brandbook", "product brandbook", "visual identity guideline"]
+      },
+      {
+        "object": "fonts",
+        "types": ["web font", "display font", "custom font"]
+      },
+      {
+        "object": "business cards",
+        "types": ["personal contact card", "social media business card", "QR code business card"]
+      },
+      {
+        "object": "thumbnails",
+        "types": ["promo thumbnail", "interview thumbnail", "tutorial thumbnail"]
+      },
+      {
+        "object": "mockups",
+        "types": ["website mockup", "app mockup", "advertising mockup"]
+      },
+      {
+        "object": "email templates",
+        "types": ["promotional email template", "newsletter template", "feedback email template"]
+      },
+      {
+        "object": "characters",
+        "types": ["mascot", "user avatar", "instructional character", "storytelling character", "iconic character"]
+      },
+      {
+        "object": "portraits",
+        "types": ["digital portrait"]
+      }
+    ],
+    "tasks_guideline": {
+      "purpose": "This GPT-4 model is designed to aid in front end, back end, and full stack development by using a structured dataset covering tasks, objects, parameters, types, responsibilities, and tools.",
+      "handling_user_queries": "Identify key components of user queries, including tasks, involved objects, and specific information needs (parameters, responsibilities).",
+      "data_retrieval": "Extract necessary information from the relevant Excel sheets, which may involve multiple sheets if queries span various development facets.",
+      "task_execution_assistance": "Provide detailed guidance for tasks tailored to user proficiency levels, using 'Tasks' and 'Checklists' sheets.",
+      "error_handling_and_debugging": "Resolve common development issues using insights from 'Parameters' and 'Objects' sheets to understand the properties and behaviors of various elements.",
+      "resource_and_documentation_referral": "Recommend appropriate resources or documentation for complex issues or when learning new concepts.",
+      "personalized_advice_and_interactive_learning": "Offer tailored advice and encourage exploration of different development aspects through interactive queries based on Excel data.",
+      "user_interaction_guidelines": "Clarify ambiguities in user queries, align responses with specific development needs, maintain supportive communication, and periodically update knowledge from Excel files to adapt to evolving development trends."
+    },
+    "remote_helpers_context": {
+      "description": "Remote Helpers is a Ukrainian outstaffing company established in 2018 that connects skilled specialists with global businesses in the USA, Canada, and Western Europe. It offers flexible employment solutions across digital fields such as web development, digital marketing, and social media management, primarily targeting medium-sized businesses, startups, and small companies.",
+      "available_roles": ["designers", "developers", "managers", "marketers", "videographers"]
+    },
+    "professions_departments": [
+      {
+        "profession": "hr manager",
+        "department": "managers",
+        "design_context": {
+          "relevant_objects": ["email templates", "presentations", "videos", "infographics"],
+          "relevant_types": ["newsletter template", "informative presentation", "video interview", "informational infographic"],
+          "hr_objects": ["communications", "contracts", "databases", "emlpoyees", "events", "faqs", "feedbacks", "instructions", "meetings", "onboarding", "performance", "reports", "videos"],
+          "hr_types": ["text communciation", " voice communication", "employees contracts", "presale contract", "candidates database", "interviews database", "employees database", "video database", "employee", "presale employee", "project employee", "holidays event ", "birthdays event", "competitions event", "team buildings event", "candidates faq", "employees faq", "before project faq", "after project faq", "management feedback", "candidates feedback", "employees feedback", "project feedback", "profession instruction", "department instruction", "company instruction", "project instruction", "department meeting", "team meeting", "project meeting", "one-on-one meeting", "company onboarding", "department onboarding", "project onboarding", "personal perfomance", "daily report", "monthly report", "employee report", "profession report", "department report", "company report", "video interview", "re-record video", "greetings video"]
+        },
+        "talents_db_context": {
+          "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"]
+            }
+        }
+      },
+      {
+        "profession": "lead generator",
+        "department": "managers",
+        "design_context": {
+          "relevant_objects": ["email templates", "banners", "thumbnails", "infographics"],
+          "relevant_types": ["promotional email template", "social media banner", "promo thumbnail", "statistical infographic"],
+           "lead_gen_objects": ["accounts", "industries", "customer persona", "search queries", "profiles", "contacts", "companies", "leads", "connections", "messages", "emails", "promotions", "needs", "communications", "events", "feedbacks", "reports", "databases"],
+          "lead_gen_types": ["new", "in work", "sold", "banned", "problematic", "free", "sector", "industry", "market", "business", "individual", "google", "linkedin", "company", "lead", "valid", "active", "inactive", "empty", "lead", "interested", "client", "updated", "not relevant", "cold", "new", "active", "client", "updated", "not relevant", "personalized", "relevant", "old", "received", "connection", "cold", "follow up", "presentation", "sms", "cold", "follow up", "presentation", "informational", "trial-based", "discounts", "interactive", "immediate", "long-term", "position", "skill", "replacement", "project", "first connection", "basic correspondence", "event", "follow up", "presentation", "scheduled", "held", "transferred", "follow up", "ignored", "direct", "in-app", "live chat", "product/service", "price", "daily", "monthly", "by countries", "by industries", "by manager", "by event", "operational", "analytical"]
+        },
+        "talents_db_context": {
+          "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"]
+           }
+        }
+      },
+      {
+        "profession": "front end developer",
+        "department": "developers",
+        "design_context": {
+          "relevant_objects": ["website mockup", "icons", "illustrations", "thumbnails"],
+          "relevant_types": ["website mockup", "flat icon", "vector illustration", "tutorial thumbnail"]
+        }
+      },
+      {
+        "profession": "back end developer",
+        "department": "developers",
+        "design_context": {
+          "relevant_objects": ["website mockup", "icons", "illustrations"],
+          "relevant_types": ["website mockup", "flat icon", "vector illustration"]
+        }
+      },
+      {
+        "profession": "full stack developer",
+        "department": "developers",
+        "design_context": {
+          "relevant_objects": ["website mockup", "icons", "illustrations", "thumbnails"],
+          "relevant_types": ["website mockup", "flat icon", "vector illustration", "tutorial thumbnail"]
+        }
+      },
+      {
+        "profession": "smm",
+        "department": "marketers",
+        "design_context": {
+          "relevant_objects": ["banners", "headers", "thumbnails", "illustrations"],
+          "relevant_types": ["social media banner", "social media header", "promo thumbnail", "flat illustration"]
+        },
+        "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"]
+           }
+        }
+      },
+      {
+        "profession": "content manager",
+        "department": "marketers",
+        "design_context": {
+          "relevant_objects": ["infographics", "illustrations", "email templates", "presentations"],
+          "relevant_types": ["informational infographic", "vector illustration", "newsletter template", "informative presentation"]
+        },
+         "talents_db_context": {
+          "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"]
+           }
+        }
+      },
+      {
+        "profession": "seo manager tech",
+        "department": "marketers",
+        "design_context": {
+          "relevant_objects": ["infographics", "thumbnails", "icons"],
+          "relevant_types": ["statistical infographic", "tutorial thumbnail", "flat icon"]
+        },
+         "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"]
+           }
+        }
+      },
+      {
+        "profession": "graphic designer",
+        "department": "designers",
+        "design_context": {
+          "relevant_objects": ["logos", "brandbooks", "illustrations", "icons", "banners", "email templates"],
+          "relevant_types": ["wordmark logo", "corporate brandbook", "vector illustration", "flat icon", "web banner", "promotional email template"]
+        },
+         "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"],
+            "courses": ["id (PK)", "title", "description", "created_at", "created_by", "updated_at", "topics_amount", "course_duration", "action_id", "object_id"],
+            "topics": ["id (PK)", "course_id (FK)", "title", "content", "created_at", "created_by", "updated_at", "entity_id"],
+            "tests": ["id (PK)", "course_id (FK)", "title", "pass_score"],
+            "projects": ["id (PK)", "name", "inner_client_id", "project_template_id", "start_date", "end_date", "created_by", "created_at"]
+           }
+        }
+      },
+      {
+        "profession": "recruiter",
+        "department": "managers",
+        "design_context": {
+          "relevant_objects": ["email templates", "presentations", "banners", "thumbnails"],
+          "relevant_types": ["promotional email template", "informative presentation", "social media banner", "interview thumbnail"]
+        },
+        "talents_db_context": {
+          "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"]
+           }
+        }
+      },
+      {
+        "profession": "sales manager",
+        "department": "managers",
+        "design_context": {
+          "relevant_objects": ["presentations", "email templates", "business cards", "mockups"],
+          "relevant_types": ["persuasive presentation", "promotional email template", "personal contact card", "advertising mockup"],
+           "sales_manager_objects": ["calls", "leads", "clients", "communications", "employees", "projects", "feedbacks", "instructions", "documents", "performance", "reports", "accounts", "services", "databases"],
+          "sales_manager_types": ["first call", "second call", "interview", "introductory call", "project call", "hot leads", "interested leads", "cold leads", "ignoring leads", "new leads", "ex-clients", "current clients", "text communication", "voice communication", "available employee", "presale employee", "hired employee", "full-time project", "part-time project", "40-hour project", "10-hour free project", "test task project", "clients feedback", "candidates feedback", "references", "client instructions", "company instructions", "invoices", "agreements", "scripts", "full-time agreement", "part-time agreement", "40-hour agreement", "10-hour free agreement", "personal perfomance", "candidate performance", "project performance", "daily report", "employee report", "project report", "linkedin accounts", "email accounts", "whatsapp group accounts", "outstaff", "employees database", "clients database", " leads database"]
+        },
+         "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"],
+            "projects": ["id (PK)", "name", "inner_client_id", "project_template_id", "start_date", "end_date", "created_by", "created_at"]
+           }
+        }
+      },
+      {
+        "profession": "video editor",
+        "department": "videographers",
+        "design_context": {
+          "relevant_objects": ["thumbnails"],
+          "relevant_types": ["promo thumbnail", "tutorial thumbnail"]
+        }
+      },
+      {
+        "profession": "seo manager",
+        "department": "marketers",
+        "design_context": {
+          "relevant_objects": ["infographics", "thumbnails", "icons"],
+          "relevant_types": ["statistical infographic", "tutorial thumbnail", "flat icon"]
+        }
+      },
+      {
+        "profession": "animator",
+        "department": "videographers",
+        "design_context": {
+          "relevant_objects": ["characters", "illustrations", "videos"],
+          "relevant_types": ["mascot", "character illustration", "greetings video"]
+        }
+      },
+       {
+        "profession": "project manager",
+        "department": "managers",
+        "design_context": {
+          "relevant_objects": ["dashboards", "presentations", "infographics"],
+          "relevant_types": ["overview dashboard", "team presentations", "process infographic"],
+           "project_manager_objects": ["dashboards", "deadlines", "edits", "feedbacks", "goals", "meetings", "milestones", "projects", "strategies", "tasks", "teams", "timelines", "workflows"],
+          "project_manager_types": ["overview dashboard", "employees dashboard", "milestones dasshboard", "tasks dashboard", "Gantt chart ", "project deadline", "milestone deadlisne", "task deadline", "scope edits", "schedule edits", "resource edits", "budget edits", "quality edits", "risk management edits", "client feedback", "team feedback", "stakeholder feedback", "quality goals", "cost goals", "time goals", "scope goals", "customer satisfaction goals", "kick-off meetings", "status update meetings", "planning meetings", "review meetings", "stakeholder meetings", "retrospective meetings", "initiation milestone", "planning milestone", "development milestone", "implementation milestone", "closure milestone", "software development projects", "website development projects", "system integration projects", "data migration projects", "agile", "scrum", "waterfall", "devops", "kanban", "initiation task", "planning task", "development task", "implementation task", "closure task", "functional team", "project team", "operational team", "management team", "mileastone timeline", "project timeline", "workflow timeline", "sequential workflow", "parallel workflow"]
+        },
+         "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"],
+            "task_request":["id (PK)", "title", "task_template_id", "entity_id", "description", "created_at", "created_by", "task_id", "priority_id"],
+            "milestones": ["id", "name", "description", "milestone_template_id", "project_id", "start_date", "end_date", "expected_hours"]
+           }
+        }
+      },
+      {
+        "profession": "personal assistant",
+        "department": "managers",
+        "design_context": {
+          "relevant_objects": ["presentations", "email templates", "business cards"],
+          "relevant_types": ["client presentations", "urgent emails", "personal contact card"],
+          "personal_assistant_objects": ["appointments", "calendars", "checklists", "clients", "communications", "contacts", "correspondence", "costs", "documents", "emails", "events", "feedbacks", "meetings", "notes", "orders", "presentations", "reminders", "reports", "support", "travels"],
+          "personal_assistant_types": ["business appointments", "personal appointments", "daily calendars", "project calendars", "task checklists", "verification checklists", "prospective clients", "recurring clients", "internal communications", "external communications", "business contacts", "personal contacts", "email correspondence", "letter correspondence", "travel costs", "operational costs", "confidential documents", "shared documents", "urgent emails", "bulk emails", "corporate events", "social events", "client feedback", "staff feedback", "team meetings", "client meetings", "meeting notes", "research notes", "purchase orders", "sales orders", "client presentations", "team presentations", "deadline reminders", "meeting reminders", "financial reports", "project reports", "technical support", "customer support", "domestic travel", "international travel"]
+        },
+         "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"]
+           }
+        }
+      },
+      {
+        "profession": "motion designer",
+        "department": "videographers",
+        "design_context": {
+          "relevant_objects": ["illustrations", "videos"],
+          "relevant_types": ["isometric illustration", "greetings video"]
+        },
+         "talents_db_context": {
+           "tables": {
+            "tasks": ["id (PK)", "entity_id", "milestone_id", "project_id", "title", "task_template_id", "status_id", "start_date", "due_date", "priority_id", "total_time", "created_by", "created_at", "note", "is_completed"],
+            "task_templates": ["id (PK)", "title", "description", "profession", "difficulty", "created_at", "cost", "is_draft", "frequency_id", "task_quantity", "expected_hours", "entity_id", "created_by"]
+           }
+        }
+      }
+    ]
+  }
+}

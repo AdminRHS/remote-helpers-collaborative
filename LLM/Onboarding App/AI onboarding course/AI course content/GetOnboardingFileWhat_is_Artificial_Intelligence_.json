@@ -1,0 +1,117 @@
+{
+  "name": "GetOnboardingFileWhat is Artificial Intelligence?",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "d3424e5a-a604-4c59-8594-c4cb4e7f194b",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3128955a-9af1-4bc5-bbb1-9fa97e746719",
+      "name": "Webhook",
+      "webhookId": "d3424e5a-a604-4c59-8594-c4cb4e7f194b"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "https://docs.google.com/document/d/1JcER7v45OQ2L81CxIB_7PXJkLxQLEM2Bt2FkxmF6Mjg/view"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "52768f1b-42bb-443d-b9cb-5e4a336cf6b5",
+      "name": "Google Docs",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "u4aaDpAzm6YKZV9W",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "6c87d89c-f161-4f95-8d84-d886922f7816",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8ec3e862-d39f-4c67-82f6-fa5c29715071",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bce7fa653659e581ce25e9a76408cecc1db830bd4c16d1cddb638823b7bca87a"
+  },
+  "id": "JlQY4ijqiCoybs7M",
+  "tags": [
+    {
+      "createdAt": "2025-03-04T15:18:45.103Z",
+      "updatedAt": "2025-03-04T15:18:45.103Z",
+      "id": "Lv0IHVqEPpRYfyh7",
+      "name": "AI Onboarding"
+    },
+    {
+      "createdAt": "2025-03-03T09:07:39.636Z",
+      "updatedAt": "2025-03-03T09:07:39.636Z",
+      "id": "WSdrUAjxY2vUjAbn",
+      "name": "Day1"
+    },
+    {
+      "createdAt": "2025-03-03T09:06:36.037Z",
+      "updatedAt": "2025-03-03T09:06:36.037Z",
+      "id": "qWJOcf4ehs6iONwh",
+      "name": "Files"
+    },
+    {
+      "createdAt": "2025-02-28T12:15:59.970Z",
+      "updatedAt": "2025-02-28T12:15:59.970Z",
+      "id": "sdWf5s6naE3QVMN8",
+      "name": "Onboarding"
+    }
+  ]
+}

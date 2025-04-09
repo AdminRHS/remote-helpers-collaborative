@@ -1,0 +1,339 @@
+# Task Manager Database Schema
+
+## Core Tables
+
+### Users
+- id: UUID (PK)
+- username: VARCHAR(50) UNIQUE
+- email: VARCHAR(100) UNIQUE
+- password_hash: VARCHAR(255)
+- first_name: VARCHAR(50)
+- last_name: VARCHAR(50)
+- profile_image: VARCHAR(255)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- last_login: TIMESTAMP
+- is_active: BOOLEAN
+- preferences: JSONB
+
+### Projects
+- id: UUID (PK)
+- name: VARCHAR(100)
+- description: TEXT
+- owner_id: UUID (FK → Users.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_archived: BOOLEAN
+- color: VARCHAR(20)
+- icon: VARCHAR(50)
+- priority: INTEGER
+- deadline: TIMESTAMP
+
+### Tasks
+- id: UUID (PK)
+- title: VARCHAR(255)
+- description: TEXT
+- project_id: UUID (FK → Projects.id)
+- creator_id: UUID (FK → Users.id)
+- assignee_id: UUID (FK → Users.id)
+- status_id: UUID (FK → TaskStatuses.id)
+- priority_id: UUID (FK → Priorities.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- due_date: TIMESTAMP
+- estimated_time: INTEGER (minutes)
+- actual_time: INTEGER (minutes)
+- is_recurring: BOOLEAN
+- recurrence_pattern: VARCHAR(100)
+- parent_task_id: UUID (Self-reference, nullable)
+
+### TaskStatuses
+- id: UUID (PK)
+- name: VARCHAR(50)
+- description: TEXT
+- color: VARCHAR(20)
+- project_id: UUID (FK → Projects.id, nullable)
+- is_default: BOOLEAN
+- order_index: INTEGER
+
+### Priorities
+- id: UUID (PK)
+- name: VARCHAR(50)
+- description: TEXT
+- color: VARCHAR(20)
+- level: INTEGER (1=lowest, 5=highest)
+- icon: VARCHAR(50)
+
+### Tags
+- id: UUID (PK)
+- name: VARCHAR(50)
+- description: TEXT
+- color: VARCHAR(20)
+- project_id: UUID (FK → Projects.id, nullable)
+
+### TaskTags
+- task_id: UUID (FK → Tasks.id)
+- tag_id: UUID (FK → Tags.id)
+- PRIMARY KEY (task_id, tag_id)
+
+### Comments
+- id: UUID (PK)
+- task_id: UUID (FK → Tasks.id)
+- user_id: UUID (FK → Users.id)
+- content: TEXT
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- parent_comment_id: UUID (Self-reference, nullable)
+
+### Attachments
+- id: UUID (PK)
+- task_id: UUID (FK → Tasks.id)
+- user_id: UUID (FK → Users.id)
+- file_name: VARCHAR(255)
+- file_path: VARCHAR(512)
+- file_type: VARCHAR(50)
+- file_size: INTEGER
+- upload_date: TIMESTAMP
+- description: TEXT
+
+### UserProjectRoles
+- user_id: UUID (FK → Users.id)
+- project_id: UUID (FK → Projects.id)
+- role: VARCHAR(50) (e.g., 'owner', 'admin', 'member', 'viewer')
+- PRIMARY KEY (user_id, project_id)
+
+## Guides and Formats
+
+### Guides
+- id: UUID (PK)
+- title: VARCHAR(255)
+- description: TEXT
+- content: TEXT
+- format_id: UUID (FK → GuideFormats.id)
+- creator_id: UUID (FK → Users.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- version: VARCHAR(20)
+- is_published: BOOLEAN
+- category: VARCHAR(100)
+- tags: JSONB
+
+### GuideFormats
+- id: UUID (PK)
+- name: VARCHAR(100)
+- description: TEXT
+- structure: JSONB
+- stylesheet: TEXT
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- creator_id: UUID (FK → Users.id)
+- is_system: BOOLEAN
+
+### GuideVersions
+- id: UUID (PK)
+- guide_id: UUID (FK → Guides.id)
+- version_number: VARCHAR(20)
+- content: TEXT
+- created_at: TIMESTAMP
+- creator_id: UUID (FK → Users.id)
+- change_notes: TEXT
+
+## Templates
+
+### Templates
+- id: UUID (PK)
+- name: VARCHAR(255)
+- description: TEXT
+- content: JSONB
+- category_id: UUID (FK → TemplateCategories.id)
+- creator_id: UUID (FK → Users.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_public: BOOLEAN
+- usage_count: INTEGER
+- average_rating: DECIMAL(3,2)
+
+### TemplateCategories
+- id: UUID (PK)
+- name: VARCHAR(100)
+- description: TEXT
+- parent_category_id: UUID (Self-reference, nullable)
+- icon: VARCHAR(50)
+- color: VARCHAR(20)
+
+### TemplateRatings
+- id: UUID (PK)
+- template_id: UUID (FK → Templates.id)
+- user_id: UUID (FK → Users.id)
+- rating: INTEGER (1-5)
+- comment: TEXT
+- created_at: TIMESTAMP
+
+### TemplateTags
+- template_id: UUID (FK → Templates.id)
+- tag_id: UUID (FK → Tags.id)
+- PRIMARY KEY (template_id, tag_id)
+
+## Checklists
+
+### Checklists
+- id: UUID (PK)
+- name: VARCHAR(255)
+- description: TEXT
+- task_id: UUID (FK → Tasks.id, nullable)
+- project_id: UUID (FK → Projects.id, nullable)
+- creator_id: UUID (FK → Users.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_template: BOOLEAN
+- template_id: UUID (FK → Templates.id, nullable)
+
+### ChecklistItems
+- id: UUID (PK)
+- checklist_id: UUID (FK → Checklists.id)
+- description: TEXT
+- is_completed: BOOLEAN
+- completed_at: TIMESTAMP
+- completed_by: UUID (FK → Users.id, nullable)
+- due_date: TIMESTAMP
+- priority_id: UUID (FK → Priorities.id, nullable)
+- order_index: INTEGER
+- parent_item_id: UUID (Self-reference, nullable)
+- assignee_id: UUID (FK → Users.id, nullable)
+
+## LLM Integration
+
+### LLMModels
+- id: UUID (PK)
+- name: VARCHAR(100)
+- provider: VARCHAR(100)
+- version: VARCHAR(50)
+- description: TEXT
+- api_endpoint: VARCHAR(255)
+- default_parameters: JSONB
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_active: BOOLEAN
+- cost_per_token: DECIMAL(10,6)
+
+### LLMActions
+- id: UUID (PK)
+- name: VARCHAR(100)
+- description: TEXT
+- prompt_template: TEXT
+- model_id: UUID (FK → LLMModels.id)
+- parameters: JSONB
+- output_format: VARCHAR(50)
+- creator_id: UUID (FK → Users.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- category: VARCHAR(100)
+- is_system: BOOLEAN
+
+### LLMObjects
+- id: UUID (PK)
+- name: VARCHAR(100)
+- description: TEXT
+- schema: JSONB
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- creator_id: UUID (FK → Users.id)
+- is_system: BOOLEAN
+
+### LLMActionHistory
+- id: UUID (PK)
+- action_id: UUID (FK → LLMActions.id)
+- user_id: UUID (FK → Users.id)
+- input_data: JSONB
+- output_data: JSONB
+- execution_time: INTEGER (milliseconds)
+- tokens_used: INTEGER
+- created_at: TIMESTAMP
+- task_id: UUID (FK → Tasks.id, nullable)
+- status: VARCHAR(50)
+- error_message: TEXT
+
+### LLMWorkflows
+- id: UUID (PK)
+- name: VARCHAR(255)
+- description: TEXT
+- steps: JSONB
+- creator_id: UUID (FK → Users.id)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_active: BOOLEAN
+- trigger_type: VARCHAR(50)
+- trigger_conditions: JSONB
+
+## Automation and Integrations
+
+### Automations
+- id: UUID (PK)
+- name: VARCHAR(255)
+- description: TEXT
+- trigger_type: VARCHAR(100)
+- trigger_conditions: JSONB
+- actions: JSONB
+- creator_id: UUID (FK → Users.id)
+- project_id: UUID (FK → Projects.id, nullable)
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_active: BOOLEAN
+- last_executed: TIMESTAMP
+- execution_count: INTEGER
+
+### IntegrationProviders
+- id: UUID (PK)
+- name: VARCHAR(100)
+- description: TEXT
+- api_url: VARCHAR(255)
+- auth_type: VARCHAR(50)
+- logo_url: VARCHAR(255)
+- is_active: BOOLEAN
+- required_scopes: JSONB
+
+### UserIntegrations
+- id: UUID (PK)
+- user_id: UUID (FK → Users.id)
+- provider_id: UUID (FK → IntegrationProviders.id)
+- access_token: VARCHAR(512)
+- refresh_token: VARCHAR(512)
+- token_expires_at: TIMESTAMP
+- created_at: TIMESTAMP
+- updated_at: TIMESTAMP
+- is_active: BOOLEAN
+- settings: JSONB
+
+## Analytics
+
+### ActivityLogs
+- id: UUID (PK)
+- user_id: UUID (FK → Users.id)
+- action_type: VARCHAR(100)
+- entity_type: VARCHAR(100)
+- entity_id: UUID
+- details: JSONB
+- ip_address: VARCHAR(50)
+- user_agent: VARCHAR(255)
+- created_at: TIMESTAMP
+
+### UserStats
+- user_id: UUID (FK → Users.id)
+- tasks_created: INTEGER
+- tasks_completed: INTEGER
+- average_completion_time: INTEGER (minutes)
+- on_time_percentage: DECIMAL(5,2)
+- active_days: INTEGER
+- last_calculated: TIMESTAMP
+- PRIMARY KEY (user_id)
+
+### ProjectStats
+- project_id: UUID (FK → Projects.id)
+- tasks_count: INTEGER
+- completed_tasks: INTEGER
+- overdue_tasks: INTEGER
+- active_users: INTEGER
+- completion_rate: DECIMAL(5,2)
+- average_task_age: INTEGER (days)
+- last_calculated: TIMESTAMP
+- PRIMARY KEY (project_id)

@@ -1,0 +1,315 @@
+CRM Task Manager & Examination Structure
+=======================================
+
+1. CRM System Architecture
+-------------------------
+
+1.1 Checklist & Task Tracking System
+-----------------------------------
+The checklists module ensures structured workflows, task completion tracking, and quality control.
+
+Database Tables:
+```sql
+checklists (
+    id SERIAL PRIMARY KEY,
+    status_id INTEGER REFERENCES statuses(id),
+    is_completed BOOLEAN NOT NULL
+)
+
+checklist_items (
+    id SERIAL PRIMARY KEY,
+    checklist_id INTEGER REFERENCES checklists(id) NOT NULL,
+    assignee_id INTEGER REFERENCES users(id),
+    status_id INTEGER REFERENCES statuses(id)
+)
+
+guideables (
+    guide_id INTEGER REFERENCES guides(id) NOT NULL,
+    guideable_id BIGINT NOT NULL,
+    guideable_type VARCHAR(255) NOT NULL
+)
+
+task_templates (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    entity_id INTEGER REFERENCES entities(id),
+    is_draft BOOLEAN NOT NULL DEFAULT false
+)
+
+task_request (
+    id SERIAL PRIMARY KEY,
+    status_id INTEGER REFERENCES statuses(id),
+    approval_required BOOLEAN NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    created_by INTEGER REFERENCES users(id)
+)
+
+task_request_assignee (
+    task_request_id INTEGER REFERENCES task_request(id) NOT NULL,
+    assignee_id INTEGER REFERENCES users(id) NOT NULL
+)
+
+task_results (
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES tasks(id),
+    performance_metrics JSONB
+)
+```
+
+Workflow:
+- Checklist Creation – Tasks are broken down into checklist items that must be completed sequentially or in parallel
+- Assignment – Each checklist item is assigned to a user through assignee_id reference
+- Progress Tracking – Items update their status_id as they progress toward completion
+- Validation – Some items require validation via guideables, ensuring they meet quality standards
+- Completion & Logging – Checklist completions are logged and linked to task_results for analytics
+
+1.2 Project-Based Checklists
+---------------------------
+Project execution and milestone tracking integrate closely with checklists.
+
+Database Tables:
+```sql
+projects (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    status_id INTEGER REFERENCES statuses(id),
+    entity_id INTEGER REFERENCES entities(id),
+    created_at TIMESTAMP NOT NULL,
+    created_by INTEGER REFERENCES users(id)
+)
+
+milestone_templates (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    entity_id INTEGER REFERENCES entities(id),
+    is_draft BOOLEAN NOT NULL
+)
+
+milestones (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(500) NOT NULL,
+    project_id INTEGER REFERENCES projects(id),
+    milestone_template_id BIGINT REFERENCES milestone_templates(id),
+    start_date DATE,
+    end_date DATE,
+    expected_hours TIME NOT NULL
+)
+
+task_template_profession (
+    task_template_id INTEGER REFERENCES task_templates(id) NOT NULL,
+    profession_id BIGINT REFERENCES professions(id) NOT NULL
+)
+
+task_temp_parent_task_temp (
+    task_template_id INTEGER REFERENCES task_templates(id) NOT NULL,
+    parent_task_template_id INTEGER REFERENCES task_templates(id) NOT NULL
+)
+```
+
+Workflow:
+- Project Creation – A new project is created with status, entity, and creator tracking
+- Milestone Definition – The system links milestones from milestone_templates
+- Task Assignment – Tasks are assigned to users through the task_assignee table
+- Timeline Management – Start dates, end dates, and expected hours are tracked
+- Progress Reporting – Completed milestones update project status
+
+1.3 Automated Workflow Components
+-------------------------------
+The CRM automates task tracking, validation, and milestone completion.
+
+```sql
+step_templates (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    process_definition JSONB
+)
+
+task_template_step_template (
+    task_template_id INTEGER REFERENCES task_templates(id) NOT NULL,
+    step_template_id INTEGER REFERENCES step_templates(id) NOT NULL,
+    order INTEGER
+)
+
+tasks (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    status_id INTEGER REFERENCES statuses(id),
+    task_template_id INTEGER REFERENCES task_templates(id),
+    created_at TIMESTAMP NOT NULL,
+    due_date TIMESTAMP
+)
+
+task_assignee (
+    task_id INTEGER REFERENCES tasks(id) NOT NULL,
+    assignee_id INTEGER REFERENCES users(id) NOT NULL
+)
+
+tasks_parent_task (
+    task_id INTEGER REFERENCES tasks(id) NOT NULL,
+    parent_task_id INTEGER REFERENCES tasks(id) NOT NULL
+)
+```
+
+Workflow:
+- Task Creation – Tasks are created from templates with due dates
+- User Assignment – Users are assigned tasks through task_assignee
+- Task Organization – Tasks are organized in hierarchies through parent-child relationships
+- Completion Tracking – Task status is updated as work progresses
+- Performance Analysis – Task completion metrics are stored in task_results
+
+2. Core Knowledge Framework
+-------------------------
+
+2.1 Static Knowledge Templates
+----------------------------
+| Category              | Template Type        | Purpose                           |
+|--------------------|-------------------|-----------------------------------|
+| Onboarding Programs   | project_templates    | Long-term structured learning (5+ days) |
+| Milestones & Timelines| milestone_templates  | Key progress checkpoints based on days  |
+| Exams & Tests        | task_templates       | Evaluation of knowledge (quizzes, tasks)|
+| Individual Steps     | step_templates       | Detailed step-by-step execution        |
+| Goals & Validation   | checklist_items      | Completion tracking with validation     |
+
+2.2 Documentation & Localization
+-----------------------------
+| Category          | Template Type     | Purpose                           |
+|--------------------|-------------------|-----------------------------------|
+| Process Guides     | guides           | Explains workflow steps           |
+| Guide Formats      | formats          | Defines learning type (text, video, interactive) |
+| Language Support   | languages        | Multi-language accessibility      |
+
+3. Performance Tracking System
+----------------------------
+
+3.1 Real-time Metrics
+--------------------
+```json
+{
+    "completion_score": {
+        "source_tables": ["task_results", "tasks"],
+        "calculation": "percentage_completed / total_tasks"
+    },
+    "help_score": {
+        "source_table": "task_assignee",
+        "calculation": "assistance_provided_count"
+    },
+    "timing_score": {
+        "source_table": "tasks",
+        "calculation": "actual_time / expected_time"
+    },
+    "quality_score": {
+        "source_table": "task_results",
+        "calculation": "correct_answers / total_questions"
+    },
+    "technical_score": {
+        "source_tables": ["task_assignee", "task_results"],
+        "calculation": "technical_competency_rating"
+    }
+}
+```
+
+3.2 Specialization System
+-----------------------
+Progression Levels:
+1. Beginner
+   - Requirements: 1 completed project
+   - Tracking: projects.status_id = completed_status_id
+   
+2. Intermediate
+   - Requirements: 3 passed milestone tests
+   - Tracking: milestones with positive task_results
+   
+3. Advanced
+   - Requirements: High progress score (2+ projects)
+   - Tracking: Continuous performance metrics in task_results
+
+3.3 Live Task & Milestone Tracking
+--------------------------------
+| Tracking Flow      | Tracking Data              | Purpose                          |
+|--------------------|----------------------------|----------------------------------|
+| Task Progress      | tasks                      | Track individual execution progress |
+| Checklist Execution| checklists                 | Ensures all goals are met        |
+| Step Tracking      | task_template_step_template| Logs execution sequence for steps|
+| Milestone Progress | milestones                 | Monitors achievement of goals    |
+
+4. API Integration Flow
+----------------------
+```json
+{
+    "onboarding_flow": {
+        "steps": [
+            {
+                "action": "initiate_onboarding",
+                "endpoint": "/api/onboarding/start",
+                "payload": {"user_id": "INTEGER"}
+            },
+            {
+                "action": "assign_tasks",
+                "endpoint": "/api/tasks/assign",
+                "payload": {"template_id": "INTEGER"}
+            },
+            {
+                "action": "track_progress",
+                "endpoint": "/api/progress/update",
+                "payload": {
+                    "user_id": "INTEGER",
+                    "task_id": "INTEGER",
+                    "status_id": "INTEGER"
+                }
+            },
+            {
+                "action": "evaluate_results",
+                "endpoint": "/api/evaluation/process",
+                "payload": {"task_results": "JSONB"}
+            },
+            {
+                "action": "generate_reports",
+                "endpoint": "/api/reports/create",
+                "payload": {"metrics": "JSONB"}
+            },
+            {
+                "action": "unlock_specializations",
+                "endpoint": "/api/specializations/update",
+                "payload": {"user_id": "INTEGER", "progress_data": "JSONB"}
+            }
+        ]
+    }
+}
+```
+
+5. Implementation Guidelines
+--------------------------
+1. Database Setup:
+   - Use PostgreSQL for complex JSON operations
+   - Implement proper indexing on frequently queried fields
+   - Set up proper foreign key constraints
+
+2. API Development:
+   - RESTful endpoints for all major operations
+   - WebSocket integration for real-time progress tracking
+   - Rate limiting on evaluation endpoints
+
+3. Security Measures:
+   - Role-based access control
+   - Encryption for sensitive data
+   - Audit logging for all modifications
+
+4. Monitoring:
+   - Performance metrics tracking
+   - Error rate monitoring
+   - User progress analytics
+
+6. Next Steps
+------------
+1. Database schema validation
+2. API endpoint documentation
+3. Integration testing setup
+4. Performance optimization
+5. User feedback implementation
+6. Specialization system development 

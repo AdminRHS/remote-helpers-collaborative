@@ -1,0 +1,445 @@
+{
+    "sheet_name": "Details",
+    "data": [
+        {
+            "Parameters": "account",
+            "Details": "communications: lead account;",
+            "Objects": "communications, companies, connections, databases"
+        },
+        {
+            "Parameters": "addressee",
+            "Details": null,
+            "Objects": "emails, messages"
+        },
+        {
+            "Parameters": "age",
+            "Details": null,
+            "Objects": "customer persona"
+        },
+        {
+            "Parameters": "approval",
+            "Details": null,
+            "Objects": "accounts"
+        },
+        {
+            "Parameters": "benefit",
+            "Details": null,
+            "Objects": "faqs, lead magnets, presentations"
+        },
+        {
+            "Parameters": "bonus",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "call",
+            "Details": null,
+            "Objects": "events, reports"
+        },
+        {
+            "Parameters": "candidate",
+            "Details": null,
+            "Objects": "databases, events"
+        },
+        {
+            "Parameters": "channel",
+            "Details": null,
+            "Objects": "communications, follow ups"
+        },
+        {
+            "Parameters": "client",
+            "Details": null,
+            "Objects": "industries"
+        },
+        {
+            "Parameters": "comment",
+            "Details": null,
+            "Objects": "events"
+        },
+        {
+            "Parameters": "communication",
+            "Details": null,
+            "Objects": "databases, follow ups"
+        },
+        {
+            "Parameters": "company",
+            "Details": null,
+            "Objects": "databases, faqs, reports, serch operators, events"
+        },
+        {
+            "Parameters": "company description",
+            "Details": null,
+            "Objects": "presentations"
+        },
+        {
+            "Parameters": "connection",
+            "Details": null,
+            "Objects": "accounts, reports"
+        },
+        {
+            "Parameters": "contact",
+            "Details": "profiles: company contact, lead contact; leads: facebook, twitter, linkedin, linkedin, community, facebook, instagram, skype, telegram, twitter, viber, whatsup, xing;",
+            "Objects": "companies, leads, profilles"
+        },
+        {
+            "Parameters": "content",
+            "Details": null,
+            "Objects": "emails, messages"
+        },
+        {
+            "Parameters": "cooperation",
+            "Details": null,
+            "Objects": "faqs"
+        },
+        {
+            "Parameters": "country",
+            "Details": null,
+            "Objects": "accounts, companies, customer persona, events, profilles, reports, serch operators"
+        },
+        {
+            "Parameters": "cta",
+            "Details": null,
+            "Objects": "emails, lead magnets, messages"
+        },
+        {
+            "Parameters": "customer satisfaction",
+            "Details": null,
+            "Objects": "feedbacks"
+        },
+        {
+            "Parameters": "date",
+            "Details": "accounts: banned date, buy date, sold date; companies: created date, event/call date;",
+            "Objects": "accounts, communications, companies, events, follow ups, needs"
+        },
+        {
+            "Parameters": "demo",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "department",
+            "Details": null,
+            "Objects": "faqs, needs, presentations"
+        },
+        {
+            "Parameters": "difference",
+            "Details": "customer persona: local and cultural differences",
+            "Objects": "customer persona"
+        },
+        {
+            "Parameters": "discount",
+            "Details": null,
+            "Objects": "faqs, lead magnets"
+        },
+        {
+            "Parameters": "email",
+            "Details": null,
+            "Objects": "contacts, databases, events, follow ups, leads, messages, profilles, reports"
+        },
+        {
+            "Parameters": "employee",
+            "Details": null,
+            "Objects": "accounts"
+        },
+        {
+            "Parameters": "ethnicity",
+            "Details": null,
+            "Objects": "customer persona"
+        },
+        {
+            "Parameters": "event",
+            "Details": null,
+            "Objects": "reports"
+        },
+        {
+            "Parameters": "follow up",
+            "Details": null,
+            "Objects": "communications, companies, events"
+        },
+        {
+            "Parameters": "gender",
+            "Details": null,
+            "Objects": "customer persona"
+        },
+        {
+            "Parameters": "growth rate",
+            "Details": null,
+            "Objects": "industries"
+        },
+        {
+            "Parameters": "guest",
+            "Details": null,
+            "Objects": "events"
+        },
+        {
+            "Parameters": "header",
+            "Details": null,
+            "Objects": "emails"
+        },
+        {
+            "Parameters": "income",
+            "Details": null,
+            "Objects": "customer persona"
+        },
+        {
+            "Parameters": "industry",
+            "Details": null,
+            "Objects": "companies, customer persona, events, profilles, reports, serch operators"
+        },
+        {
+            "Parameters": "instruction",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "issue",
+            "Details": null,
+            "Objects": "feedbacks"
+        },
+        {
+            "Parameters": "label",
+            "Details": null,
+            "Objects": "emails"
+        },
+        {
+            "Parameters": "lead",
+            "Details": null,
+            "Objects": "communications, companies, connections, databases, follow ups, reports"
+        },
+        {
+            "Parameters": "lead status",
+            "Details": "status: active, inactive; lead status: call, connected, email sent, event, follow up, ignoring, interested, needed candidate, new lead, not interested, not relevant for us, presentation, responded, sent request;",
+            "Objects": "leads"
+        },
+        {
+            "Parameters": "link",
+            "Details": null,
+            "Objects": "accounts, emails, messages"
+        },
+        {
+            "Parameters": "linkedin",
+            "Details": null,
+            "Objects": "contacts, reports"
+        },
+        {
+            "Parameters": "list",
+            "Details": null,
+            "Objects": "connections"
+        },
+        {
+            "Parameters": "login",
+            "Details": null,
+            "Objects": "accounts"
+        },
+        {
+            "Parameters": "manager",
+            "Details": null,
+            "Objects": "accounts, communications, companies, events"
+        },
+        {
+            "Parameters": "market size",
+            "Details": null,
+            "Objects": "industries"
+        },
+        {
+            "Parameters": "market trend",
+            "Details": null,
+            "Objects": "industries"
+        },
+        {
+            "Parameters": "message",
+            "Details": null,
+            "Objects": "follow ups"
+        },
+        {
+            "Parameters": "name",
+            "Details": "profiles: company name, lead name;",
+            "Objects": "accounts, companies, contacts, leads, profilles"
+        },
+        {
+            "Parameters": "need",
+            "Details": "databases: needed candidates;",
+            "Objects": "customer persona, databases, industries"
+        },
+        {
+            "Parameters": "note",
+            "Details": null,
+            "Objects": "accounts, communications, follow ups, needs"
+        },
+        {
+            "Parameters": "notification",
+            "Details": null,
+            "Objects": "events"
+        },
+        {
+            "Parameters": "offer",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "password",
+            "Details": null,
+            "Objects": "accounts"
+        },
+        {
+            "Parameters": "personalization",
+            "Details": null,
+            "Objects": "emails, messages"
+        },
+        {
+            "Parameters": "phone",
+            "Details": "leads: phone, mobile phone, landline phone;",
+            "Objects": "contacts, leads, profilles"
+        },
+        {
+            "Parameters": "placement",
+            "Details": null,
+            "Objects": "communications"
+        },
+        {
+            "Parameters": "position",
+            "Details": "profilles: lead position",
+            "Objects": "contacts, customer persona, leads, needs, presentations, profilles, serch operators"
+        },
+        {
+            "Parameters": "premium",
+            "Details": null,
+            "Objects": "accounts"
+        },
+        {
+            "Parameters": "presentation",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "price",
+            "Details": null,
+            "Objects": "faqs, feedbacks, presentations"
+        },
+        {
+            "Parameters": "product",
+            "Details": null,
+            "Objects": "feedbacks, presentations"
+        },
+        {
+            "Parameters": "profession",
+            "Details": null,
+            "Objects": "faqs"
+        },
+        {
+            "Parameters": "quantity",
+            "Details": null,
+            "Objects": "connections, needs"
+        },
+        {
+            "Parameters": "relevancy",
+            "Details": null,
+            "Objects": "industries"
+        },
+        {
+            "Parameters": "report",
+            "Details": null,
+            "Objects": "databases, lead magnets"
+        },
+        {
+            "Parameters": "responsibility",
+            "Details": null,
+            "Objects": "faqs"
+        },
+        {
+            "Parameters": "service",
+            "Details": null,
+            "Objects": "feedbacks, presentations"
+        },
+        {
+            "Parameters": "signature",
+            "Details": null,
+            "Objects": "emails"
+        },
+        {
+            "Parameters": "size",
+            "Details": "customer persona: company size",
+            "Objects": "companies, customer persona, profilles, serch operators"
+        },
+        {
+            "Parameters": "skill",
+            "Details": null,
+            "Objects": "faqs, needs"
+        },
+        {
+            "Parameters": "sms",
+            "Details": null,
+            "Objects": "databases, follow ups, messages, reports"
+        },
+        {
+            "Parameters": "source",
+            "Details": null,
+            "Objects": "accounts, companies"
+        },
+        {
+            "Parameters": "status",
+            "Details": "needs: candidate status, employment status; contacts: lead status;",
+            "Objects": "accounts, companies, contacts, follow ups, needs"
+        },
+        {
+            "Parameters": "subindustry",
+            "Details": null,
+            "Objects": "industries"
+        },
+        {
+            "Parameters": "subject",
+            "Details": null,
+            "Objects": "emails"
+        },
+        {
+            "Parameters": "survey",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "target audience",
+            "Details": null,
+            "Objects": "customer persona"
+        },
+        {
+            "Parameters": "time",
+            "Details": null,
+            "Objects": "events"
+        },
+        {
+            "Parameters": "type",
+            "Details": "companies: lead type - customer;",
+            "Objects": "communications, companies, contacts, follow ups"
+        },
+        {
+            "Parameters": "update",
+            "Details": "companies: updated date, update on;",
+            "Objects": "companies"
+        },
+        {
+            "Parameters": "video",
+            "Details": null,
+            "Objects": "lead magnets"
+        },
+        {
+            "Parameters": "website",
+            "Details": null,
+            "Objects": "companies, events, profilles, serch operators"
+        },
+        {
+            "Parameters": "year founded",
+            "Details": null,
+            "Objects": "companies, profilles"
+        },
+        {
+            "Parameters": null,
+            "Details": null,
+            "Objects": null
+        },
+        {
+            "Parameters": "contact type",
+            "Details": null,
+            "Objects": "contacts"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+**Role:** Quiz & Assessment Designer
+
+**Context:** You need to create **one single, comprehensive knowledge check (`Quiz`)** that covers the key information from the **entire unified `Lesson` Content** generated in the previous step. This single Quiz corresponds to a CRM `Task Template`. `Questions` map to `Step Templates`, and `Answer options` map to `Checklist Items`. The questions must generally increase in difficulty, ending with a single "senior" level question, and points should reflect difficulty.
+
+**Input (I will provide this based on Prompt 2 results):**
+*   **Single Lesson Name:** [Placeholder for the Overall Lesson Name from Prompt 1/2]
+*   **Full Generated Content:** [Placeholder for the complete structured output from Prompt 2]
+
+**Instructions:**
+1.  Wait for me to provide the specific `Input` details.
+2.  Once you receive the input, create **ONE single `Quiz`**. Name it based on the `Single Lesson Name` (e.g., "Quiz: [Single Lesson Name]").
+3.  Generate exactly **15 multiple-choice questions** covering key aspects from across **ALL the broader Topics** in the `Full Generated Content`.
+4.  **Difficulty and Point Allocation:**
+    *   Assign a **Question difficulty** to each question: `easy`, `medium`, `hard`, or `senior`.
+    *   Assign **Points received** based on difficulty. Suggested points: `easy` = 5, `medium` = 7, `hard` = 10, `senior` = 15.
+    *   Distribute difficulties aiming for approximately: **6 easy, 4 medium, 4 hard, and exactly 1 senior.**
+5.  **Question Ordering:** Arrange the 15 questions in **generally increasing order of difficulty**. Questions 1-6 `easy`, 7-10 `medium`, 11-14 `hard`, and **Question 15 MUST be the single `senior` difficulty question.**
+6.  **Question Content:** Ensure questions test understanding. The `senior` question should require synthesis or deeper understanding.
+7.  For **each** question: Provide 4 plausible answer options, ensure only one is correct, and clearly indicate the correct answer letter.
+8.  Use relevant emojis like `❓` or `🤔` sparingly if desired in the question text.
+
+**Output Structure:**
+Structure the output exactly as follows for the single quiz, repeating the difficulty/points block for each question and following the difficulty order:
+
+**Quiz: [Single Lesson Name]**
+
+**Question difficulty:** easy
+**Points received:** 5
+**Question 1:** [Easy question text 1]? `❓`
+Answer option 1 for question 1: [Option a text]
+Answer option 2 for question 1: [Option b text]
+Answer option 3 for question 1: [Option c text]
+Answer option 4 for question 1: [Option d text]
+**Correct answer:** [Correct letter, e.g., c)]
+
+**Question difficulty:** easy
+**Points received:** 5
+**Question 2:** [Easy question text 2]? `❓`
+Answer option 1 for question 2: [Option a text]
+Answer option 2 for question 2: [Option b text]
+Answer option 3 for question 2: [Option c text]
+Answer option 4 for question 2: [Option d text]
+**Correct answer:** [Correct letter]
+... (Questions 3-6 formatted similarly with difficulty: easy, points: 5)
+
+**Question difficulty:** medium
+**Points received:** 7
+**Question 7:** [Medium question text 1]? `❓`
+Answer option 1 for question 7: [Option a text]
+Answer option 2 for question 7: [Option b text]
+Answer option 3 for question 7: [Option c text]
+Answer option 4 for question 7: [Option d text]
+**Correct answer:** [Correct letter]
+... (Questions 8-10 formatted similarly with difficulty: medium, points: 7)
+
+**Question difficulty:** hard
+**Points received:** 10
+**Question 11:** [Hard question text 1]? `🤔`
+Answer option 1 for question 11: [Option a text]
+Answer option 2 for question 11: [Option b text]
+Answer option 3 for question 11: [Option c text]
+Answer option 4 for question 11: [Option d text]
+**Correct answer:** [Correct letter]
+... (Questions 12-14 formatted similarly with difficulty: hard, points: 10)
+
+**Question difficulty:** senior
+**Points received:** 15
+**Question 15:** [Senior level question text]? `🤔`
+Answer option 1 for question 15: [Option a text]
+Answer option 2 for question 15: [Option b text]
+Answer option 3 for question 15: [Option c text]
+Answer option 4 for question 15: [Option d text]
+**Correct answer:** [Correct letter]
+
+**== WAIT FOR INPUT ==**
+**Do not generate the output yet. Please wait for me to provide the `Single Lesson Name` and the `Full Generated Content`.**

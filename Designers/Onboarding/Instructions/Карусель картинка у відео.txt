@@ -1,0 +1,90 @@
+Instagram Carousel: Create Video from a Photo Using Hailuo AI
+Slide 1: Introduction to the Adventure!
+Title: "Transform Your Photos into Videos!"
+
+Caption:
+Let’s bring your photos to life with Hailuo AI! Follow along with our playful guide, the chameleon, to create your first animated video! Ready to start?
+
+Image Prompt:
+2D illustration of a playful chameleon mascot standing in front of a computer, with a glowing "Create Video From a Photo Using Hailuo AI!" sign. Background features colorful, gamified milestones like stars and coins. --ar 9:16
+
+Slide 2: Sign Up or Log In
+Title: "Step 1: Log In to Get Started!"
+
+Caption:
+First, sign up or log in to Hailuo AI. It’s quick and easy—just use Google for a fast start! Let’s get those creative juices flowing!
+
+Image Prompt:
+Chameleon mascot sitting at a computer, enthusiastically clicking the "Sign Up" button. A simple, playful interface is visible on the screen. --ar 9:16
+
+Slide 3: Choose Image-to-Video Mode
+Title: "Step 2: Select Image-to-Video Mode"
+
+Caption:
+Once you're logged in, choose the “Image-to-Video” option. This is where the magic begins! The chameleon’s excited to show you how it’s done.
+
+Image Prompt:
+Chameleon mascot pointing excitedly at a glowing "Image-to-Video" button on a digital screen, surrounded by vibrant, gamified elements like bubbles or arrows. --ar 9:16
+
+Slide 4: Upload Your Image
+Title: "Step 3: Upload Your Image"
+
+Caption:
+Upload your chosen image. The chameleon’s ready to help! Select the perfect photo and watch it come to life.
+
+Image Prompt:
+Chameleon mascot happily clicking the “Upload Image” button, with a large photo preview on screen. Bright and colorful setting, with floating icons or arrows. --ar 9:16
+
+Slide 5: Add a Text Description (Optional)
+Title: "Step 4: Add Your Description"
+
+Caption:
+Describe what should happen in the video. Let the AI know if you want a camera pan or a snowfall effect—get creative!
+
+Image Prompt:
+Chameleon mascot tilting its head with a notepad in hand, with floating speech bubbles showing sample text like “rotate camera” and “falling snow.” --ar 9:16
+
+Slide 6: Click 'Create Video'
+Title: "Step 5: Generate the Video!"
+
+Caption:
+Hit that “Create Video” button and let the magic happen! The chameleon presses the button to get started on creating a masterpiece.
+
+Image Prompt:
+Chameleon mascot excitedly pressing the “Create Video” button. A glowing button, digital interface visible. --ar 9:16
+
+Slide 7: Wait for Processing
+Title: "Step 6: Wait for Processing"
+
+Caption:
+Hold tight! Processing may take a few minutes, but the wait will be worth it. The chameleon keeps an eye on the progress bar!
+
+Image Prompt:
+Chameleon mascot tapping its foot near a glowing progress bar. The chameleon looks excited as the bar fills up. --ar 9:16
+
+Slide 8: Preview Your Video
+Title: "Step 7: Preview Your Video!"
+
+Caption:
+Once the video’s ready, play it back and see how the magic unfolds! Make sure it looks just like you envisioned.
+
+Image Prompt:
+Chameleon mascot watching a screen where a video plays. The video features motion effects (like rotating or snowfall). --ar 9:16
+
+Slide 9: Download and Share
+Title: "Step 8: Download and Share!"
+
+Caption:
+Now that your video is perfect, download it and share with friends or on social media. The chameleon’s ready to hit “share”!
+
+Image Prompt:
+Chameleon mascot holding a smartphone showing social media icons like Instagram and Twitter, with video file icons. --ar 9:16
+
+Slide 10: Congrats! You're a Video Master
+Title: "Congrats! You're a Video Master!"
+
+Caption:
+Well done! You’ve completed your first video creation using Hailuo AI. Ready for more creativity? Keep exploring and share your work!
+
+Image Prompt:
+Chameleon mascot proudly holding a "Video Master" badge. Confetti and stars surround the chameleon as it celebrates your success. --ar 9:16

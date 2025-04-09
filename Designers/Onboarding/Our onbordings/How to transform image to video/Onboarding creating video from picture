@@ -1,0 +1,47 @@
+Onboarding (Series of Screens)
+Below is a concept for onboarding — a series of welcome screens for new users of Hailuo AI. Each screen focuses on a key aspect of using the service, accompanied by our mascot chameleon for clarity and interaction, with brief explanations and calls to action.
+
+Screen 1: Welcome!
+Title: "Welcome to Hailuo AI!"
+
+Main Text: "Turn your static photos into stunning videos with AI — quickly and easily." This message immediately introduces the user to the main feature of the service.
+
+Illustration: The chameleon mascot appears on the welcome screen, smiling and waving its paw, creating a friendly atmosphere as the user starts.
+
+Button: "Start" (By clicking, the user proceeds to the next screen).
+
+Screen 2: Upload Your Photo
+Title: "Upload a Photo to Animate"
+
+Main Text: "Select any image and we'll help bring it to life as a video." This text tells the user that they just need a photo, and the service will handle the rest.
+
+Illustration: The chameleon in a yellow cap points to the image icon or the "Upload" button, visually guiding the user to click to choose a file. This emphasizes the importance of uploading the image.
+
+Button: "Next" (Proceed to the next step).
+
+Screen 3: Add Your Description (Idea)
+Title: "Add Your Idea"
+
+Main Text: "Describe what should happen in the video, or skip this step and let AI handle it." This text explains that adding a prompt is optional but recommended for more precise results.
+
+Illustration: Our chameleon holds a pen and notepad, seemingly encouraging the user to type a few words about the desired animation. This visually suggests the possibility of adding a text description.
+
+Button: "Next" (Proceed to the next screen).
+
+Screen 4: Video Generation
+Title: "AI Creates the Video"
+
+Main Text: "Click ‘Create Video’ and wait a few seconds while AI works its magic!" This text focuses on the simplicity of the action and the speed of the process, reassuring users.
+
+Illustration: The chameleon looks excited, observing the progress bar (e.g., holding a clock or stopwatch) to emphasize the quickness of the AI's work and the anticipation of the result.
+
+Button: "Next" (Proceed to the final screen).
+
+Screen 5: You're Done — Share Your Result
+Title: "Your Video Is Ready!"
+
+Main Text: "Download and share your creation in one click." This text encourages users to use and share the result, emphasizing the ease of saving and sharing.
+
+Illustration: The chameleon mascot celebrates the success, holding a camera and the video file (or preview video icon), surrounded by social media icons, signaling that users can share their creation.
+
+Button: "Get Started" (Complete onboarding and go directly to the platform to start using the service — opens the upload interface for the first image).

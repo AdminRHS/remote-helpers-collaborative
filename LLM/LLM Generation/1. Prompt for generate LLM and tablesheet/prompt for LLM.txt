@@ -1,0 +1,107 @@
+"You are an expert in generating structured data for CRM systems. Given a [Profession Name] and its associated [Department Name], your task is to generate a table in the LLM10 format. Follow these steps:
+
+1. Generate Table Structure: Create the LLM10 table structure as follows:
+
+    Department,Department Translation,Department Priority,Department Group,Department Status,Professions,Profession Translation,Profession Priority,Profession Group,Profession Status,Task templates,Task template Description,LEN,Task template Status,Actions,Actions Translation,Action Priority,Action Group,Action Status,Objects,Objects Translation,Objects Priority,Objects Group,Objects Status,Tools,Tool Types,Tool Link
+
+    This will be the header row of the table.
+
+2. Generate Objects: Create a list of Objects that a [Profession Name] works with. Objects must be:
+
+    Plural
+    Lowercase
+    Concrete, tangible nouns (or slightly abstract)
+    Considered as nouns to be used in the profession's task templates.
+    One word preferable, two words maximum.
+    Avoid duplicate and similar values.
+    Output these objects as a newline-separated list. Specifically, for each object, include a newline character ("\n") after the object.
+
+3. Generate Task Templates, Actions, and Object Pairs: Generate a set of related data points: task templates, actions, and objects, following these rules:
+    Generate Task Templates in the format 'Action + Object'.
+    'Action' must be a single verb in the present simple form (e.g., 'maintain', 'design').
+    'Object' must be one or two words and correspond to ONE of the objects previously generated in step 2, generating a relationship between each object, and task template.
+    The task templates generated must not exceed 3 words.
+    Each Task Template must be unique and relevant to the profession.
+    Generate the corresponding action for the task template using a single verb in the present simple form (e.g., maintain).
+    Output each set of task template, action, and object on a new line using the following format (separated by a pipe "|"): "Task Template | Action | Object".
+
+    Example output:
+
+    maintain codebases | maintain | codebases
+    optimize algorithms | optimize | algorithms
+    design databases | design | databases
+
+4. Generate Tools: For each task template generated in Step 3, suggest relevant tools that would typically be used to perform that task. You MUST choose ONLY from the following predefined list:
+
+    Cursor Pro (Software) - https://www.cursor.com/
+    Gemini (AI) - https://gemini.google.com/app
+    ChatGPT (AI) - https://chatgpt.com/
+    Midjourney (AI) - (No official public link, often used via Discord)
+    Claude AI (AI) - https://claude.ai/
+    Perplexity AI (AI) - https://www.perplexity.ai/
+    Grok (AI) - https://grok.com/
+    Notebook LM (AI) - https://notebooklm.google.com/
+
+    Output the tool name(s), its/their type(s) (AI or Software, based on the list above), and its/their corresponding link(s) from the list. You may suggest multiple tools from the list if appropriate for a single task template, separated by commas in the Tools and Tool Link columns.
+
+5. Craft Descriptions: For each of the task templates, expand on the tasks, describing what the task template does in more detail for the profession. In the description, mention the specific tool(s) selected in Step 4 for that task template.
+
+6. Populate Tables: Organize the generated data into the following tables, using the specified constant values where indicated and applying the specific rules for groups and types:
+    Task Template Table:
+        Task templates (from Step 3 - extract the 'Task Template' part)
+        Task template Description (from Step 5)
+        LEN (Calculate the character length of the 'Task template Description' for this row)
+        Task template Status: Approved
+
+    Action Table:
+        Actions (from Step 3 - extract the 'Action' part)
+        Actions Translation: English
+        Action Priority: Main
+        Action Group: Use the value from the 'Actions' column for this row
+        Action Status: Approved
+
+    Object Table:
+
+        Objects (from Step 3 - extract the 'Object' part).
+        Objects Translation: English
+        Objects Priority: Main
+        Objects Group: Use the value from the 'Objects' column for this row
+        Objects Status: Approved
+
+    Tool Table:
+
+        Tools (Selected tool(s) from the predefined list in Step 4, comma-separated if multiple)
+        Tool Types (Determine the unique types (AI, Software) present in the selected Tools for this row, comma-separated. e.g., if Tools are "ChatGPT, Cursor Pro", Tool Types should be "AI, Software". If Tools are "ChatGPT, Gemini", Tool Types should be "AI".)
+        Tool Link (Link(s) corresponding to the selected tool(s) in Step 4, comma-separated if multiple)
+
+7. Final LLM10-Style Table Creation: Combine all the data from the tables in Step 6 into a single table matching the exact format and columns of the provided 'LLM10' example (see below). Ensure that all columns are populated correctly and consistently, and that the table adheres to the guidelines in the Instruction for LLM.txt document.
+
+    CAPITALIZATION RULE: Ensure the first word in EVERY cell (except for the numerical 'LEN' column and the URL 'Tool Link' column) starts with a capital letter. This applies to Department, Professions, Task templates, Actions, Objects, and their corresponding Group/Translation/Priority/Status columns, as well as Tools and Tool Types.
+    The 'Department' related columns should all be set as follows: Department = [Department Name], Department Translation = English, Department Priority = Main, Department Group = [Department Name], Department Status = Approved.
+    The 'Profession' related columns should be set as follows: Professions = [Profession Name], Profession Translation = English, Profession Priority = Main, Profession Group = [Profession Name], Profession Status = Approved.
+    Ensure the Task template Status column value = Approved.
+    For Actions related columns: Actions Translation = English, Action Priority = Main, and Action Status = Approved. The 'Action Group' column must contain the value from the 'Actions' column for the same row.
+    For Objects related columns: Objects Translation = English, Objects Priority = Main, and Objects Status = Approved. The 'Objects Group' column must contain the value from the 'Objects' column for the same row.
+    Crucially, the 'LEN' column must contain the calculated character count of the corresponding 'Task template Description' for that row.
+    For the 'Tool Types' column, list the unique types (AI, Software) corresponding to the tools listed in the 'Tools' column, separated by a comma and space. Do not repeat types (e.g., "AI, AI" should be just "AI").
+    The objects must also fit into their row, by being split using a new line character ("\n").
+
+
+Input:
+
+    Profession Name: [Profession Name - e.g., Software Engineer]
+    Department Name: [Department Name - e.g., Engineering]
+
+Instructions:
+
+    Replace [Profession Name] and [Department Name] with the provided values.
+    Follow ALL steps carefully and generate the final LLM10-style table.
+    Ensure that tools suggested in Step 4 are ONLY selected from the provided list.
+    Ensure the output is valid CSV format.
+    Adhere to all rules and formatting guidelines specified in the 'Instruction for LLM.txt' document.
+    Pay special attention to the relationship between objects, task templates and actions. Also, be sure to apply correct static values to each cell.
+    The 'Action Group' value must match the 'Actions' value for each row.
+    The 'Objects Group' value must match the 'Objects' value for each row.
+    Calculate the LEN column by counting the characters in the 'Task template Description' for each row.
+    Generate the 'Tool Types' column by listing the unique types (AI, Software) from the 'Tools' column for that row.
+    Ensure the LLM10 output matches the specified structure and formatting. "

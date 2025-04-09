@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="image/png" sizes="16x16" rel="icon" href="https://i.postimg.cc/gJf9MgWR/icons8-32.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Template Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-blue: #081E2F;
+      --primary-yellow: #FCB305;
+      --red: #D32F2F;
+      --red-hover: #C62828;
+      --green: #2E7D32;
+      --green-hover: #1B5E20;
+      --blue: #197502;
+      --blue-dark: #1555C0;
+      --blue-light: #4245F5;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #F8F9FA;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    #titlePage {
+      text-align: center;
+      padding: 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #titlePage h1 {
+      font-size: 28px;
+      color: var(--deep-blue);
+      margin-bottom: 1rem;
+    }
+    .quiz-info {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(8, 30, 47, 0.1);
+      margin: 1rem auto;
+      max-width: 500px;
+    }
+    .info-item {
+      font-size: 15px;
+      color: #4A4A4A;
+      margin: 0.75rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #timer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--green);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
+    }
+    .hidden {
+      display: none !important;
+      visibility: hidden;
+    }
+    
+    /* Анимация для титульной страницы */
+    @keyframes fadeOut {
+      from { opacity: 1; transform: scale(1); }
+      to { opacity: 0; transform: scale(0.95); }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    .fade-out {
+      animation: fadeOut 0.6s ease forwards;
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    .question {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(8, 30, 47, 0.1);
+      transition: all 0.3s ease;
+    }
+    .question h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--deep-blue);
+      margin: 0 0 1rem 0;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #4A4A4A;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    label:hover {
+      background: rgba(25, 118, 210, 0.04);
+    }
+    /* Radio buttons (single-answer) */
+    input[type="radio"] {
+      margin-right: 0.75rem;
+      accent-color: var(--green);
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+    }
+    /* Checkboxes (multi-answer) */
+    input[type="checkbox"] {
+      margin-right: 0.75rem;
+      accent-color: var(--green);
+    }
+    input[type="text"],
+    input[type="number"] {
+      padding: 0.5rem;
+      border: 1px solid #DEE2E6;
+      border-radius: 4px;
+      font-size: 16px; /* Минимальный размер шрифта для предотвращения масштабирования в iOS */
+      width: 100%;
+      box-sizing: border-box;
+      -webkit-appearance: none; /* Отключает стандартное оформление iOS */
+      appearance: none;
+    }
+    /* Заменяем read-only поле выбора профессии на выпадающий список */
+    select[name="profession"] {
+      padding: 0.5rem;
+      border: 1px solid #DEE2E6;
+      border-radius: 4px;
+      font-size: 16px; /* Минимальный размер шрифта для предотвращения масштабирования в iOS */
+      width: 100%;
+      box-sizing: border-box;
+      background: #fff;
+      color: #4A4A4A;
+      -webkit-appearance: none; /* Улучшенное оформление в iOS */
+      appearance: none;
+    }
+    button {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 1rem auto 0;
+      letter-spacing: 0.5px;
+    }
+    button:hover {
+      background: var(--green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    }
+    #result {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 2rem;
+      box-shadow: 0 2px 8px rgba(8, 30, 47, 0.1);
+    }
+    .correct {
+      border-left: 4px solid var(--green);
+      background: #F0F9FF;
+    }
+    .incorrect {
+      border-left: 4px solid var(--red);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .question {
+        padding: 1rem;
+      }
+      button {
+        width: 100%;
+        padding: 14px 20px;
+      }
+      #timer {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Title Page -->
+  <div id="titlePage">
+    <h1>🤖 ✨ Template Quiz</h1>
+    <div class="quiz-info">
+      <div class="info-item">
+        <span>Questions:</span>
+        <strong>15</strong>
+      </div>
+      <div class="info-item">
+        <span>Time Limit:</span>
+        <strong>5 minutes</strong>
+      </div>
+      <div class="info-item">
+        <span>Passing Score:</span>
+        <strong>80%</strong>
+      </div>
+      <div class="info-item" style="color: var(--green); font-weight: bold; display: flex; justify-content: space-between; align-items: flex-start;">
+        <span>Good news: 😁</span>
+        <strong style="text-align: right; max-width: 70%;">You can try this exam multiple times, no need to pass on your first attempt!</strong>
+      </div>
+      <div class="info-item" style="color: var(--red); font-weight: bold; display: flex; justify-content: space-between; align-items: flex-start;">
+        <span>Bad news: 😥</span>
+        <strong style="text-align: right; max-width: 70%;">You must enter your full name (first and last name) before submitting</strong>
+      </div>
+      <button id="startExamBtn" onclick="startQuiz()">Start Exam</button>
+    </div>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="hidden">
+    <div id="timer">00:00</div>
+    <h1>Template Quiz</h1>
+    <form id="examForm">
+      <!-- User Data Block (not scored) -->
+      <div class="question" data-points="0">
+        <h3>Enter Your Information</h3>
+        <label>
+          Your Full Name (First and Last Name): (required)
+          <input type="text" name="fullName" placeholder="e.g., John Doe" required pattern="^\s*[A-Za-zА-Яа-яЁё]+\s+[A-Za-zА-Яа-яЁё]+\s*$" title="Please enter both your first and last name">
+        </label>
+        <label>
+          Your Profession:
+          <select name="profession">
+            <option value="3d designer">3d designer</option>
+            <option value="account manager">account manager</option>
+            <option value="affiliate manager">affiliate manager</option>
+            <option value="analyst">analyst</option>
+            <option value="animator">animator</option>
+            <option value="back end developer">back end developer</option>
+            <option value="chat operator">chat operator</option>
+            <option value="content manager">content manager</option>
+            <option value="copywriter">copywriter</option>
+            <option value="email marketer">email marketer</option>
+            <option value="event manager">event manager</option>
+            <option value="financial manager">financial manager</option>
+            <option value="front end developer">front end developer</option>
+            <option value="full stack developer">full stack developer</option>
+            <option value="graphic designer">graphic designer</option>
+            <option value="hr manager">hr manager</option>
+            <option value="illustrator">illustrator</option>
+            <option value="influencer manager">influencer manager</option>
+            <option value="interior designer">interior designer</option>
+            <option value="investment manager">investment manager</option>
+            <option value="lead generator">lead generator</option>
+            <option value="linkbuilder">linkbuilder</option>
+            <option value="media buyer">media buyer</option>
+            <option value="mobile developer">mobile developer</option>
+            <option value="mobile video editor">mobile video editor</option>
+            <option value="motion designer">motion designer</option>
+            <option value="personal assistant">personal assistant</option>
+            <option value="ppc specialist">ppc specialist</option>
+            <option value="pr manager">pr manager</option>
+            <option value="project manager">project manager</option>
+            <option value="proofreader">proofreader</option>
+            <option value="qa">qa</option>
+            <option value="recruiter">recruiter</option>
+            <option value="sales manager">sales manager</option>
+            <option value="seo manager">seo manager</option>
+            <option value="social media manager">social media manager</option>
+            <option value="system administrator">system administrator</option>
+            <option value="targetologist">targetologist</option>
+            <option value="tourism manager">tourism manager</option>
+            <option value="ui/ux designer">ui/ux designer</option>
+            <option value="video editor">video editor</option>
+            <option value="web designer">web designer</option>
+            <option value="wordpress designer">wordpress designer</option>
+          </select>
+        </label>
+        <label>
+          Your Recruiter:
+          <select name="recruiter" style="padding: 10px; border-radius: 6px; border: 1px solid #DEE2E6; background-color: #fff; color: #4A4A4A; font-size: 15px; width: 100%; box-sizing: border-box;">
+            <option value="Anastasia Fadeeva">Anastasia Fadeeva</option>
+            <option value="Elena Ermakova">Elena Ermakova</option>
+            <option value="Anna Aleksandrova">Anna Aleksandrova</option>
+            <option value="Sabina Gasanova">Sabina Gasanova</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Template Question 1 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 1: [Insert question text here]</h3>
+        <label><input type="radio" name="q1" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q1" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q1" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q1" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 2 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 2: [Insert question text here]</h3>
+        <label><input type="radio" name="q2" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q2" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q2" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q2" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 3 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 3: [Insert question text here]</h3>
+        <label><input type="radio" name="q3" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q3" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q3" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q3" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 4 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 4: [Insert question text here]</h3>
+        <label><input type="radio" name="q4" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q4" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q4" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q4" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 5 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 5: [Insert question text here]</h3>
+        <label><input type="radio" name="q5" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q5" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q5" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q5" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 6 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 6: [Insert question text here]</h3>
+        <label><input type="radio" name="q6" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q6" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q6" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q6" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 7 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 7: [Insert question text here]</h3>
+        <label><input type="radio" name="q7" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q7" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q7" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q7" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 8 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 8: [Insert question text here]</h3>
+        <label><input type="radio" name="q8" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q8" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q8" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q8" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 9 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 9: [Insert question text here]</h3>
+        <label><input type="radio" name="q9" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q9" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q9" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q9" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 10 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 10: [Insert question text here]</h3>
+        <label><input type="radio" name="q10" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q10" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q10" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q10" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 11 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 11: [Insert question text here]</h3>
+        <label><input type="radio" name="q11" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q11" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q11" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q11" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 12 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 12: [Insert question text here]</h3>
+        <label><input type="radio" name="q12" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q12" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q12" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q12" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 13 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 13: [Insert question text here]</h3>
+        <label><input type="radio" name="q13" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q13" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q13" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q13" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 14 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 14: [Insert question text here]</h3>
+        <label><input type="radio" name="q14" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q14" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q14" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q14" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <!-- Template Question 15 -->
+      <div class="question" data-points="2">
+        <h3>Template Question 15: [Insert question text here]</h3>
+        <label><input type="radio" name="q15" value="A" data-correct="true"> A) [Enter correct option text]</label>
+        <label><input type="radio" name="q15" value="B"> B) [Enter option text]</label>
+        <label><input type="radio" name="q15" value="C"> C) [Enter option text]</label>
+        <label><input type="radio" name="q15" value="D"> D) [Enter option text]</label>
+      </div>
+
+      <button id="submitBtn" type="button" onclick="calculateScore()">Submit Exam</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Глобальные переменные
+    let timer;
+    let seconds = 0;
+    const timeLimit = 300; // 5 минут
+    const examName = "Template Quiz";
+    let submissionDone = false; // Флаг для предотвращения повторной отправки
+
+    // Fisher–Yates shuffle function
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Randomize answer labels (excluding the user data block)
+    function randomizeAnswers() {
+      const questions = document.querySelectorAll('.question[data-points]:not([data-points="0"])');
+      questions.forEach(question => {
+        const labels = Array.from(question.querySelectorAll('label'));
+        const shuffled = shuffle(labels);
+        shuffled.forEach(label => label.parentNode.removeChild(label));
+        const heading = question.querySelector('h3');
+        shuffled.forEach(label => heading.parentNode.appendChild(label));
+      });
+    }
+
+    function startQuiz() {
+      const titlePage = document.getElementById('titlePage');
+      const quizContainer = document.getElementById('quizContainer');
+      
+      if (titlePage && quizContainer) {
+        titlePage.classList.add('fade-out');
+        setTimeout(() => {
+          titlePage.style.display = 'none';
+          titlePage.classList.add('hidden');
+          quizContainer.classList.remove('hidden');
+          quizContainer.classList.add('fade-in');
+          quizContainer.style.display = 'block';
+          window.scrollTo(0, 0);
+          randomizeAnswers();
+          startTimer();
+        }, 500);
+      } else {
+        console.error('Elements not found: titlePage or quizContainer');
+      }
+    }
+
+    function startTimer() {
+      seconds = timeLimit;
+      timer = setInterval(function() {
+        seconds--;
+        const minutes = Math.floor(seconds / 60);
+        const rem = seconds % 60;
+        const timerElement = document.getElementById('timer');
+        if (timerElement) {
+          timerElement.textContent = String(minutes).padStart(2, '0') + ":" + String(rem).padStart(2, '0');
+        }
+        if (seconds <= 0) {
+          clearInterval(timer);
+          calculateScore(true);
+        }
+      }, 1000);
+    }
+
+    // Форматирование даты как "dd.mm.yyyy hh:mm"
+    function formatDate(date) {
+      const options = {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      };
+      const formatted = date.toLocaleString("en-GB", options);
+      return formatted.replace(/\//g, ".").replace(", ", " ");
+    }
+
+    function calculateScore(timeout = false) {
+      if (submissionDone) return;
+      submissionDone = true;
+
+      const fullNameInput = document.querySelector('[name="fullName"]');
+      const fullName = fullNameInput ? fullNameInput.value.trim() : "";
+      const namePattern = /^\s*[A-Za-zА-Яа-яЁё]+\s+[A-Za-zА-Яа-яЁё]+\s*$/;
+      
+      if (!fullName && !timeout) {
+        alert("Please enter your name before submitting!");
+        submissionDone = false;
+        return;
+      }
+      
+      if (!timeout && !namePattern.test(fullName)) {
+        alert("Please enter both your first and last name!");
+        submissionDone = false;
+        return;
+      }
+      
+      const submitButton = document.getElementById('submitBtn');
+      if (submitButton) {
+        submitButton.style.display = 'none';
+      }
+      
+      if (timer) {
+        clearInterval(timer);
+      }
+      
+      let totalPoints = 0;
+      let maxPoints = 0;
+      const questions = document.querySelectorAll('.question');
+      
+      questions.forEach(function(question) {
+        const points = parseInt(question.dataset.points) || 1;
+        maxPoints += points;
+        if (points === 0) return;
+        
+        let correct = true;
+        const inputs = question.querySelectorAll('input');
+        let selectedValues = [];
+        let correctValues = [];
+        
+        inputs.forEach(function(inp) {
+          if (inp.checked) selectedValues.push(inp.value);
+          if (inp.dataset.correct === "true") correctValues.push(inp.value);
+        });
+        
+        if (
+          selectedValues.length !== correctValues.length ||
+          !selectedValues.every(function(val) { return correctValues.includes(val); })
+        ) {
+          correct = false;
+        }
+        
+        if (correct) {
+          totalPoints += points;
+          question.classList.add('correct');
+        } else {
+          question.classList.add('incorrect');
+        }
+      });
+      
+      const percentage = ((totalPoints / maxPoints) * 100).toFixed(1);
+      const timeUsed = Math.floor(seconds / 60) + "m " + (seconds % 60) + "s";
+      const resultDiv = document.getElementById('result');
+      
+      if (resultDiv) {
+        let resultsHTML = `
+          <h3>Exam Results</h3>
+          <p>Your score: ${totalPoints} / ${maxPoints} (${percentage}%)</p>
+          <p>Time used: ${timeUsed}</p>
+          ${percentage >= 80 ? "Congratulations! You passed!" : "Try again! Review your mistakes below."}
+          ${timeout ? "<p class='warning'>Time limit exceeded!</p>" : ""}
+        `;
+        
+        resultsHTML += `
+          <button type="button" onclick="location.reload()">Retry</button>
+          <button type="button" onclick="window.location.href='#'">Read Again</button>
+          <button type="button" id="taskButton" onclick="loadTask()">Task</button>
+        `;
+        
+        resultDiv.innerHTML = resultsHTML;
+        
+        const professionElement = document.querySelector('[name="profession"]');
+        const recruiterElement = document.querySelector('[name="recruiter"]');
+        
+        const profession = professionElement ? professionElement.value.trim() : "";
+        const recruiter = recruiterElement ? recruiterElement.value.trim() : "";
+        
+        const postData = {
+          fullName: fullName,
+          profession: profession,
+          recruiter: recruiter,
+          day: "4",  // День 4 для отправки на сервер
+          examName: examName,
+          scoreObtained: totalPoints,
+          scoreTotal: maxPoints,
+          timeUsed: seconds,
+          timeTotal: timeLimit,
+          date: formatDate(new Date())
+        };
+        
+        try {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          resultDiv.innerHTML += '<p>Sending results to server...</p>';
+          
+          fetch("https://auto.crm-s.com/webhook/Onboarding/Update", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json, text/plain, */*"
+            },
+            body: JSON.stringify(postData),
+            mode: "cors"
+          })
+          .then(function(res) {
+            return res.text().then(function(text) {
+              console.log("POST response status:", res.status);
+              console.log("POST response body:", text);
+              
+              if (res.status === 200) {
+                resultDiv.innerHTML += '<p style="color: green;">✓ Results successfully sent to server!</p>';
+              } else {
+                resultDiv.innerHTML += '<p style="color: red;">Error sending results to server: ' + res.status + '</p>';
+              }
+            });
+          })
+          .catch(function(err) {
+            console.error("Error in POST:", err);
+            resultDiv.innerHTML += '<p style="color: red;">Error sending results: ' + err.message + '</p>';
+          });
+        } catch (error) {
+          console.error("Error submitting quiz results:", error);
+          resultDiv.innerHTML += '<p style="color: red;">Error: ' + error.message + '</p>';
+        }
+      }
+    }
+
+    // loadTask() заменяет представление экзамена на задание.
+    function loadTask() {
+      const task = {
+        title: "Template Quiz",
+        description: `# Template Quiz Task
+
+## Overview
+This is a template quiz task that demonstrates the structure and functionality of the quiz system.
+
+## Instructions
+1. Review the template questions and answer options
+2. Replace the placeholder text with actual quiz content
+3. Ensure all questions have one correct answer marked with data-correct="true"
+4. Test the quiz functionality
+
+## Template Structure
+- Each question has 4 options (A, B, C, D)
+- Correct answers are marked with data-correct="true"
+- Questions are worth 2 points each
+- Total possible score: 30 points
+
+## Placeholder Format
+- Question text: [Insert question text here]
+- Answer options: [Enter option text]
+- Correct answer: [Enter correct option text]
+
+## Notes
+- Maintain consistent formatting across all questions
+- Ensure clear and unambiguous correct answers
+- Test all functionality before finalizing`,
+        points: 30,
+        type: "quiz"
+      };
+
+      const taskMarkdown = `# 🛠 Practice: Create an AI Automation Workflow for Your Field
+
+🔹 In this task, you'll design an AI automation workflow relevant to your professional field.
+
+# ✅ Assignment: 
+1. Design a workflow that uses trigger-based AI automation to solve a common problem in your profession.
+
+2. Your workflow design should include:
+   - Clear identification of the trigger(s) that start the automation
+   - The specific AI tools or integrations you would use
+   - The data flow or process steps
+   - The expected outcome and benefits of the automation
+
+3. Include a brief explanation of how this automation would save time or improve results compared to manual processes.
+
+# 🤖 Tools you can use: Draw.io, Lucidchart, Miro, Make.com, or even a hand-drawn diagram that you can upload as an image.`;
+
+      const parsedMarkdown = parseMarkdown(taskMarkdown);
+      document.body.innerHTML = `
+        <div style="font-family: 'Open Sans', sans-serif; background: #F8F9FA; padding: 2rem; max-width: 800px; margin: 0 auto;">
+          ${parsedMarkdown}
+          <div style="margin-top: 2rem;">
+            <label for="taskLinkInput" style="font-weight: bold;">Optional link to your work:</label>
+            <input type="text" id="taskLinkInput" placeholder="https://app.napkin.ai/page/..." style="width: 100%; padding: 8px; margin: 4px 0 1rem;">
+            <input type="checkbox" id="taskCompletedCheckbox">
+            <label for="taskCompletedCheckbox">Task Completed</label>
+          </div>
+        </div>
+      `;
+
+      const checkbox = document.getElementById("taskCompletedCheckbox");
+      if (checkbox) {
+        checkbox.addEventListener("change", function() {
+          if (checkbox.checked) {
+            const taskLinkInput = document.getElementById("taskLinkInput");
+            const taskLink = taskLinkInput ? taskLinkInput.value.trim() : "";
+            checkbox.disabled = true;
+            const messageDiv = document.createElement('div');
+            messageDiv.innerHTML = '<p>Sending task completion to server...</p>';
+            document.body.appendChild(messageDiv);
+
+            try {
+              fetch("https://auto.crm-s.com/webhook/Onboarding/UpdateTaskTable", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "Accept": "application/json, text/plain, */*"
+                },
+                body: JSON.stringify({
+                  examName: "Template Quiz",
+                  day: "4",  // День 4 для отправки на сервер
+                  link: taskLink,
+                  date: formatDate(new Date())
+                }),
+                mode: "cors"
+              })
+              .then(function(res) {
+                return res.text().then(function(text) {
+                  console.log("Task completed webhook status:", res.status);
+                  console.log("Task completed webhook body:", text);
+
+                  if (res.status === 200) {
+                    messageDiv.innerHTML = '<p style="color: green; font-weight: bold;">✓ Task completion successfully sent to server!</p>';
+                  } else {
+                    messageDiv.innerHTML = '<p style="color: orange; font-weight: bold;">Task marked as complete, but server returned status: ' + res.status + '</p>';
+                  }
+                });
+              })
+              .catch(function(err) {
+                console.error("Error sending task completed webhook:", err);
+                messageDiv.innerHTML = '<p style="color: red; font-weight: bold;">Error sending task completion: ' + err.message + '</p>';
+                alert("Your task has been marked as complete, but there was an issue connecting to the server. Your instructor will be notified.");
+              });
+            } catch (error) {
+              console.error("Error marking task as complete:", error);
+              messageDiv.innerHTML = '<p style="color: red; font-weight: bold;">Error: ' + error.message + '</p>';
+              alert("Your task has been marked as complete, but there was an issue connecting to the server. Your instructor will be notified.");
+            }
+          }
+        });
+      }
+    }
+
+    function parseMarkdown(markdownText) {
+      const lines = markdownText.split('\n');
+      let html = "";
+      const stack = [];
+      
+      lines.forEach(function(line) {
+        const match = line.match(/^(#{1,4})\s+(.*)/);
+        if (match) {
+          const level = match[1].length;
+          const text = match[2];
+          
+          while (stack.length && stack[stack.length - 1] >= level) {
+            html += "</details>";
+            stack.pop();
+          }
+          
+          html += `<details><summary>${text}</summary>`;
+          stack.push(level);
+        } else {
+          html += line + "<br>";
+        }
+      });
+      
+      while (stack.length) {
+        html += "</details>";
+        stack.pop();
+      }
+      
+      return html;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const startExamBtn = document.getElementById("startExamBtn");
+      if (startExamBtn) {
+        startExamBtn.addEventListener("click", startQuiz);
+      }
+    });
+  </script>
+</body>
+</html>

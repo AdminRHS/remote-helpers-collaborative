@@ -1,0 +1,29 @@
+COMPLETING PROMPTS
+
+There's the part on how to generate prompts for MidJourney in the "how_to_generate_video_script" instruction.
+The prompts obtained by that instruction will be actually incomplete.
+Here are steps for completing them:
+
+1. Add links to the reference graphic files at the beginning of prompts so MidJourney will generate the mascot really looking like the original.
+For example, currently, links to the shark mascot are https://s.mj.run/I_yJx6Ud7jk https://s.mj.run/wm4ip6Mz3rw https://s.mj.run/aNFgVPlbd4A
+
+2. Also you'll need to add parameter of aspect ratio to the end of the prompt for generating graphics with dimentios required for video. 
+Currently the parameter is --ar 9:16
+
+Here's the example of the complete prompt that can generate actual graphics in MidJourney:
+https://s.mj.run/I_yJx6Ud7jk https://s.mj.run/wm4ip6Mz3rw https://s.mj.run/aNFgVPlbd4A A futuristic underwater server room with smooth pearl consoles, glowing coral cables, and large floating holographic structures of neural networks made up of bright interconnected nodes and lines. The background features soft light and gentle water currents visible through wide windows. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, gestures enthusiastically toward the neural network display. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, techy and friendly. --ar 9:16https://s.mj.run/I_yJx6Ud7jk https://s.mj.run/wm4ip6Mz3rw https://s.mj.run/aNFgVPlbd4A A futuristic underwater server room with smooth pearl consoles, glowing coral cables, and large floating holographic structures of neural networks made up of bright interconnected nodes and lines. The background features soft light and gentle water currents visible through wide windows. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, gestures enthusiastically toward the neural network display. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, techy and friendly. --ar 9:16
+
+
+ADDITIONAL GENERATIONS IN MIDJOURNEY TO GET BEST GRAPHICS FOR VIDEO
+
+Of all generated variants, choose the picture that contains mascot really resempling reference mascot design.
+The background on the image must also be clear and beautiful, and correspond the prompt and the scene of the video you're generating it for.
+The mascot and the surroundings must have no or very little mutilations.
+Generate graphics again and again untill you get good picture.
+If there are just minor imperfections on the picture you've chosen from the generation results, use button "Vary (subtle)" or "Vary (strong)"
+The mascot will be a bit too big on the generated graphics, also some black "wide screen" lines may be on graphics.
+Example: https://cdn.discordapp.com/attachments/1351178403751137310/1354349769207844965/midjourneyrh_A_bright_creative_underwater_workspace_with_smooth_0c91683a-b675-4466-a532-807f0627af7a.png?ex=67eb8f83&is=67ea3e03&hm=a3885689c4f8d6122e14dead80619224a1fedccae3a65a46d7161d8e1a4e07c5&
+Use button "Zoom out 1.5 x" and the image will be fixed and will have the mascot size more appropriate for video
+Example of the graphics ready for video: https://cdn.discordapp.com/attachments/1351178403751137310/1354351168452825178/midjourneyrh_A_bright_creative_underwater_workspace_with_smooth_1c6eeef8-e3ba-47c8-8150-d474b0c62f59.png?ex=67eb90d1&is=67ea3f51&hm=ae3145ccd9f5c4ab53364089873a9c44f7290a865146fa569d8d4a1021e9d107&
+
+

@@ -1,0 +1,103 @@
+You are an AI assistant tasked with expanding and enhancing a meeting plan document to make it more effective and impactful.
+
+**Provided Meeting Plan:**
+
+{{ Meeting Goal: To kickstart content generation for learning materials, ensure everyone is aligned on tools (Cursor), and assign clear responsibilities for research, exam structure, and gamification.
+
+Pre-Meeting Preparation:
+
+1. Shared Document: Create a shared online document (Google Docs, Notion, etc.) structured with sections for:
+    * Cursor Settings Guide (pre-filled with recommended settings)
+    * Cursor Command Testing Area
+    * Memory Techniques Research (section for brainstorming and notes)
+    * Exam Structures (section for brainstorming and notes)
+    * Gamified Learning Delivery (section for brainstorming and notes)
+    * Action Items (table to fill during the meeting)
+
+2. Cursor Setup Guide: Prepare a short guide with screenshots or bullet points of recommended Cursor settings for consistency. Include instructions on how to access settings.
+
+3. Cursor Command List:  List 2-3 simple but useful Cursor commands to test during the call (e.g., `New File`, `//` for comment,  `Ctrl+K` for AI chat).
+
+4. Content Block Leads:  Pre-assign departments or individuals to lead each content block (Memory Techniques, Exams, Gamification).  This ensures ownership from the start.
+
+Meeting Agenda (60 minutes):
+
+1. Introduction & Goals (5 minutes)
+    * "Today, we're going to get hands-on and start building the foundation for our new learning materials. We'll synchronize our tools, test them out, and divide the work for researching memory techniques, exam structures, and gamification."
+    * "By the end of this meeting, we will have synchronized Cursor settings, tested basic commands, brainstormed initial ideas for each content block, and assigned clear action items."
+
+2. Cursor Settings Synchronization (15 minutes)
+    * Action:  Share your screen displaying the prepared "Cursor Settings Guide" in the shared document.
+    * Speech: "Let's start by ensuring we're all on the same page with our Cursor settings. Please open Cursor and navigate to your settings [show where].  We'll go through these key settings together to ensure consistency and collaboration."
+    * Walk through each setting in the guide.  Pause after each setting and ask for confirmation: "Everyone synchronized this setting? Any questions?"
+    * Purpose: Immediate action to ensure tool alignment.
+
+3. Cursor Command Testing (10 minutes)
+    * Action:  In the shared document, navigate to the "Cursor Command Testing Area." Ask everyone to open Cursor and follow along.
+    * Speech: "Now, let's quickly test a few basic Cursor commands to get comfortable. In Cursor, please follow these steps [demonstrate on your screen]: 1. Use the command `New File` [show how]. 2. Type a comment using `// This is a test`. 3. Try opening the AI chat with `Ctrl+K` and ask 'What is Cursor?'"
+    * Observe:  Ask participants to confirm they were able to execute each command. Address any immediate issues.
+    * Purpose: Hands-on practice and immediate feedback on tool usage.
+
+4. Content Block Brainstorming & Assignment (25 minutes)
+    * Action: Divide the remaining time into three segments (approx. 8 minutes each) for Memory Techniques, Exams, and Gamification. Navigate to each section in the shared document.
+    * Speech (for each block - example for Memory Techniques): "Now, let's move to the content generation.  [Lead assigned to Memory Techniques], please guide us through an initial brainstorm for 'Memory Techniques Research'. What types of memory techniques should we explore? Visual aids? Spaced repetition?  Let's jot down initial ideas directly in this section of the document.  Everyone, please contribute your thoughts."
+    * Facilitate:  Encourage active participation and note-taking in the shared document.  Ensure the pre-assigned lead guides the brainstorming for their block.
+    * Purpose: Collaborative content generation kick-off and clear ownership.
+
+5. Action Items & Next Steps (5 minutes)
+    * Action: Navigate to the "Action Items" table in the shared document.
+    * Speech: "To ensure we move forward effectively, let's define clear action items. For each content block, the assigned lead will be responsible for [define next steps, e.g., 'conducting initial research and outlining 3-5 key techniques', 'drafting a basic exam structure template', 'finding 2-3 examples of gamified learning platforms'].  Let's fill in this action item table with specific tasks and deadlines for each block."
+    * Fill in the table collaboratively:  Assign tasks, owners (leads), and realistic deadlines (e.g., end of week).
+    * Speech: "We'll review progress in a follow-up meeting [schedule briefly]. Please use the shared document to continue collaborating and adding your research and ideas."
+    * Purpose:  Clear task assignment, deadlines, and next steps to ensure follow-through.
+
+During the Call - Tips for Engagement:
+
+* Call on people by name:  Encourage participation by directly asking for input from different participants.
+* Use visuals: Share your screen effectively to guide them through Cursor settings and document sections.
+* Real-time documentation: Emphasize that the shared document is the central hub for the meeting's output and future collaboration.
+* Positive reinforcement: Acknowledge and appreciate contributions to keep the energy positive.
+
+Post-Meeting Follow-up (within 1 hour):
+
+* Email Summary: Send a follow-up email containing:
+    * Link to the shared document.
+    * Summary of synchronized Cursor settings (or link to the guide).
+    * List of tested Cursor commands.
+    * Clear list of action items with owners and deadlines (copied from the shared document).
+    * Date/time of the follow-up meeting.
+
+This revised plan is much more specific, action-oriented, and directly addresses your request for immediate actions during the call and structured content generation. Let me know if you'd like any part of this plan elaborated further!
+}}
+
+
+AI prompt for Deep research: 
+**Objective:**
+
+Your goal is to deeply research and expand upon the provided meeting plan to provide more robust and actionable strategies for each section. Focus on adding depth and practical insights that can be immediately implemented.
+
+**Specific Tasks:**
+
+1.  **Deep Research for Each Content Block:**
+    *   **Memory Techniques Research:**  Research various memory techniques relevant to learning and training. Identify specific techniques that are most effective for knowledge retention and skill development. Provide examples and resources for each technique.
+    *   **Exam Structures:** Investigate different exam and testing structures that can effectively assess user skills and knowledge. Explore step-by-step testing methodologies, different question types, and scoring mechanisms. Research best practices in educational assessment.
+    *   **Gamified Learning Delivery:**  Explore gamification strategies for learning materials. Research successful examples of gamified learning platforms and techniques. Identify specific game mechanics, rewards systems, and engagement strategies that can be applied to learning content delivery.
+
+2.  **Enhance Meeting Plan Sections:**
+    *   **Cursor Settings Synchronization:**  Research and recommend specific Cursor settings that are optimal for collaborative coding and content creation. Explain the benefits of each recommended setting.
+    *   **Cursor Command Testing:**  Expand the list of Cursor commands to test during the meeting. Include commands that are relevant to content creation, collaboration, and efficient workflow. Provide clear instructions for testing each command.
+    *   **Content Block Brainstorming & Assignment:**  Suggest specific brainstorming prompts and questions for each content block to guide the discussion and ensure productive idea generation. Recommend frameworks or methodologies for structuring the brainstorming sessions.
+
+3.  **Thinking Functions - Strategic Improvements:**
+    *   **Engagement Strategies:**  Propose additional engagement strategies to ensure active participation and prevent passive listening during the meeting. Think beyond the current suggestions and consider interactive elements, breakout sessions, or real-time feedback mechanisms.
+    *   **Post-Meeting Follow-up:**  Expand the post-meeting follow-up plan with more detailed actions to ensure accountability and progress tracking. Suggest specific tools or platforms for task management and progress monitoring.
+    *   **Long-Term Vision:**  Think about the long-term vision for the learning materials and how this initial meeting sets the stage for future development. Suggest how to connect the outcomes of this meeting to broader goals and ongoing processes.
+
+**Output Format:**
+
+Organize your expanded information in a structured format that directly corresponds to the sections of the provided meeting plan.  For each section, provide:
+
+*   **Enhanced Content:**  Your researched and expanded information, including specific techniques, examples, resources, and recommendations.
+*   **Actionable Steps:**  Clear, actionable steps that can be immediately implemented in the meeting plan to incorporate your enhancements.
+
+The goal is to transform the initial meeting plan into a more comprehensive and impactful strategy for content generation and team alignment. Please provide detailed and practical suggestions that can be readily used to improve the meeting's effectiveness and outcomes.

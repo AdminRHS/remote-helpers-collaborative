@@ -1,0 +1,20 @@
+﻿CREATE TABLE $tableName (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `order` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `checklist_item_id` mediumint(8) unsigned NOT NULL,
+  `is_completed` tinyint(1) NOT NULL DEFAULT 0,
+  `completed_by` smallint(5) unsigned DEFAULT NULL,
+  `completed_at` timestamp NULL DEFAULT NULL,
+  `step_id` mediumint(8) unsigned DEFAULT NULL,
+  `placement_id` mediumint(8) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `checklists_checklist_item_id_foreign` (`checklist_item_id`),
+  KEY `checklists_completed_by_foreign` (`completed_by`),
+  KEY `checklists_step_id_foreign` (`step_id`),
+  KEY `checklists_placement_id_foreign` (`placement_id`),
+  CONSTRAINT `checklists_checklist_item_id_foreign` FOREIGN KEY (`checklist_item_id`) REFERENCES `checklist_items` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `checklists_completed_by_foreign` FOREIGN KEY (`completed_by`) REFERENCES `users` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `checklists_placement_id_foreign` FOREIGN KEY (`placement_id`) REFERENCES `placements` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `checklists_step_id_foreign` FOREIGN KEY (`step_id`) REFERENCES `steps` (`id`) ON DELETE SET NULL
+)

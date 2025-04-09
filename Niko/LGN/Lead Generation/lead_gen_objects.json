@@ -1,0 +1,113 @@
+{
+    "sheet_name": "Objects",
+    "data": [
+        {
+            "Objects": "accounts",
+            "Types": "new, in work, sold, banned, problematic, free",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "industries",
+            "Types": "sector, industry, market",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "customer persona",
+            "Types": "business, individual",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "search queries",
+            "Types": "google, linkedin",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "profiles",
+            "Types": "company, lead",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "contacts",
+            "Types": "valid, active, inactive, empty",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "companies",
+            "Types": "lead, interested, client, updated, not relevant",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "leads",
+            "Types": "cold, new, active, client, updated, not relevant",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "connections",
+            "Types": "personalized, relevant, old, received",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "messages",
+            "Types": "connection, cold, follow up, presentation, sms",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "emails",
+            "Types": "cold, follow up, presentation",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "promotions",
+            "Types": "informational, trial-based, discounts, interactive",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "needs",
+            "Types": "immediate, long-term, position, skill, replacement, project",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "communications",
+            "Types": "first connection, basic correspondence, event, follow up, presentation",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "events",
+            "Types": "scheduled, held, transferred, follow up, ignored",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "feedbacks",
+            "Types": "direct, in-app, live chat, product/service, price",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "reports",
+            "Types": "daily, monthly, by countries, by industries, by manager, by event",
+            "Objects v2": null,
+            "Types v2": null
+        },
+        {
+            "Objects": "databases",
+            "Types": "operational, analytical",
+            "Objects v2": null,
+            "Types v2": null
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+﻿CREATE TABLE $tableName (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `job_site_id` smallint(5) unsigned DEFAULT NULL,
+  `pricing_type_id` tinyint(3) unsigned DEFAULT NULL,
+  `package_name` varchar(100) NOT NULL,
+  `price` smallint(5) unsigned NOT NULL,
+  `currency_id` tinyint(3) unsigned DEFAULT NULL,
+  `job_post_amount` tinyint(3) unsigned DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_by` smallint(5) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `job_site_pricings_job_site_id_foreign` (`job_site_id`),
+  KEY `job_site_pricings_pricing_type_id_foreign` (`pricing_type_id`),
+  KEY `job_site_pricings_currency_id_foreign` (`currency_id`),
+  KEY `job_site_pricings_created_by_foreign` (`created_by`),
+  CONSTRAINT `job_site_pricings_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `job_site_pricings_currency_id_foreign` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `job_site_pricings_job_site_id_foreign` FOREIGN KEY (`job_site_id`) REFERENCES `job_sites` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `job_site_pricings_pricing_type_id_foreign` FOREIGN KEY (`pricing_type_id`) REFERENCES `pricing_types` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+)

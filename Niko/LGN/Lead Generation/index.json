@@ -1,0 +1,23 @@
+{
+    "source_file": "Lead generator LLM.xlsx",
+    "sheets_processed": [
+        "Objects",
+        "Types",
+        "Parameters",
+        "Details",
+        "Responsibilities",
+        "Tasks",
+        "Tools",
+        "Actions"
+    ],
+    "files_created": [
+        "lead_gen_objects.json",
+        "lead_gen_types.json",
+        "lead_gen_parameters.json",
+        "lead_gen_details.json",
+        "lead_gen_responsibilities.json",
+        "lead_gen_tasks.json",
+        "lead_gen_tools.json",
+        "lead_gen_actions.json"
+    ]
+}

@@ -1,0 +1,1175 @@
+{
+  "LLM professions.json": [
+    {
+      "Professions": "hr manager",
+      "Departments": "managers"
+    },
+    {
+      "Professions": "lead generator",
+      "Departments": "managers"
+    },
+    {
+      "Professions": "front end developer",
+      "Departments": "developers"
+    },
+    {
+      "Professions": "back end developer",
+      "Departments": "developers"
+    },
+    {
+      "Professions": "full stack developer",
+      "Departments": "developers"
+    },
+    {
+      "Professions": "smm",
+      "Departments": "marketers"
+    },
+    {
+      "Professions": "content manager",
+      "Departments": "marketers"
+    },
+    {
+      "Professions": "seo manager tech",
+      "Departments": "marketers"
+    },
+    {
+      "Professions": "graphic designer",
+      "Departments": "designers"
+    },
+    {
+      "Professions": "recruiter",
+      "Departments": "managers"
+    },
+    {
+      "Professions": "sales manager",
+      "Departments": "managers"
+    },
+    {
+      "Professions": "video editor",
+      "Departments": "videographers"
+    },
+    {
+      "Professions": "seo manager",
+      "Departments": "marketers"
+    },
+    {
+      "Professions": "animator",
+      "Departments": "videographers"
+    },
+    {
+      "Professions": "project manager",
+      "Departments": "managers"
+    },
+    {
+      "Professions": "personal assistant",
+      "Departments": "managers"
+    },
+    {
+      "Professions": "motion designer",
+      "Departments": "videographers"
+    }
+  ],
+  "LLM7.json": {
+    "design_data": {
+      "objects_and_types": [
+        {
+          "object": "banners",
+          "types": [
+            "web banner",
+            "social media banner",
+            "email banner"
+          ]
+        },
+        {
+          "object": "headers",
+          "types": [
+            "social media header",
+            "website header"
+          ]
+        },
+        {
+          "object": "icons",
+          "types": [
+            "outline icon",
+            "filled icon",
+            "flat icon",
+            "dimensional icon",
+            "emoji icon",
+            "hand-drawn icon"
+          ]
+        },
+        {
+          "object": "illustrations",
+          "types": [
+            "flat illustration",
+            "isometric illustration",
+            "vector illustration",
+            "character illustration"
+          ]
+        },
+        {
+          "object": "infographics",
+          "types": [
+            "statistical infographic",
+            "informational infographic",
+            "process infographic"
+          ]
+        },
+        {
+          "object": "logos",
+          "types": [
+            "wordmark logo",
+            "lettermark logo",
+            "pictorial logo",
+            "abstract logo",
+            "combination logo",
+            "emblem logo"
+          ]
+        },
+        {
+          "object": "presentations",
+          "types": [
+            "informative presentation",
+            "persuasive presentation",
+            "demonstrative presentation"
+          ]
+        },
+        {
+          "object": "brandbooks",
+          "types": [
+            "corporate brandbook",
+            "product brandbook",
+            "visual identity guideline"
+          ]
+        },
+        {
+          "object": "fonts",
+          "types": [
+            "web font",
+            "display font",
+            "custom font"
+          ]
+        },
+        {
+          "object": "business cards",
+          "types": [
+            "personal contact card",
+            "social media business card",
+            "QR code business card"
+          ]
+        },
+        {
+          "object": "thumbnails",
+          "types": [
+            "promo thumbnail",
+            "interview thumbnail",
+            "tutorial thumbnail"
+          ]
+        },
+        {
+          "object": "mockups",
+          "types": [
+            "website mockup",
+            "app mockup",
+            "advertising mockup"
+          ]
+        },
+        {
+          "object": "email templates",
+          "types": [
+            "promotional email template",
+            "newsletter template",
+            "feedback email template"
+          ]
+        },
+        {
+          "object": "characters",
+          "types": [
+            "mascot",
+            "user avatar",
+            "instructional character",
+            "storytelling character",
+            "iconic character"
+          ]
+        },
+        {
+          "object": "portraits",
+          "types": [
+            "digital portrait"
+          ]
+        }
+      ],
+      "tasks_guideline": {
+        "purpose": "This GPT-4 model is designed to aid in front end, back end, and full stack development by using a structured dataset covering tasks, objects, parameters, types, responsibilities, and tools.",
+        "handling_user_queries": "Identify key components of user queries, including tasks, involved objects, and specific information needs (parameters, responsibilities).",
+        "data_retrieval": "Extract necessary information from the relevant Excel sheets, which may involve multiple sheets if queries span various development facets.",
+        "task_execution_assistance": "Provide detailed guidance for tasks tailored to user proficiency levels, using 'Tasks' and 'Checklists' sheets.",
+        "error_handling_and_debugging": "Resolve common development issues using insights from 'Parameters' and 'Objects' sheets to understand the properties and behaviors of various elements.",
+        "resource_and_documentation_referral": "Recommend appropriate resources or documentation for complex issues or when learning new concepts.",
+        "personalized_advice_and_interactive_learning": "Offer tailored advice and encourage exploration of different development aspects through interactive queries based on Excel data.",
+        "user_interaction_guidelines": "Clarify ambiguities in user queries, align responses with specific development needs, maintain supportive communication, and periodically update knowledge from Excel files to adapt to evolving development trends."
+      },
+      "remote_helpers_context": {
+        "description": "Remote Helpers is a Ukrainian outstaffing company established in 2018 that connects skilled specialists with global businesses in the USA, Canada, and Western Europe. It offers flexible employment solutions across digital fields such as web development, digital marketing, and social media management, primarily targeting medium-sized businesses, startups, and small companies.",
+        "available_roles": [
+          "designers",
+          "developers",
+          "managers",
+          "marketers",
+          "videographers"
+        ]
+      },
+      "professions_departments": [
+        {
+          "profession": "hr manager",
+          "department": "managers",
+          "design_context": {
+            "relevant_objects": [
+              "email templates",
+              "presentations",
+              "videos",
+              "infographics"
+            ],
+            "relevant_types": [
+              "newsletter template",
+              "informative presentation",
+              "video interview",
+              "informational infographic"
+            ],
+            "hr_objects": [
+              "communications",
+              "contracts",
+              "databases",
+              "emlpoyees",
+              "events",
+              "faqs",
+              "feedbacks",
+              "instructions",
+              "meetings",
+              "onboarding",
+              "performance",
+              "reports",
+              "videos"
+            ],
+            "hr_types": [
+              "text communciation",
+              " voice communication",
+              "employees contracts",
+              "presale contract",
+              "candidates database",
+              "interviews database",
+              "employees database",
+              "video database",
+              "employee",
+              "presale employee",
+              "project employee",
+              "holidays event ",
+              "birthdays event",
+              "competitions event",
+              "team buildings event",
+              "candidates faq",
+              "employees faq",
+              "before project faq",
+              "after project faq",
+              "management feedback",
+              "candidates feedback",
+              "employees feedback",
+              "project feedback",
+              "profession instruction",
+              "department instruction",
+              "company instruction",
+              "project instruction",
+              "department meeting",
+              "team meeting",
+              "project meeting",
+              "one-on-one meeting",
+              "company onboarding",
+              "department onboarding",
+              "project onboarding",
+              "personal perfomance",
+              "daily report",
+              "monthly report",
+              "employee report",
+              "profession report",
+              "department report",
+              "company report",
+              "video interview",
+              "re-record video",
+              "greetings video"
+            ]
+          }
+        },
+        {
+          "profession": "lead generator",
+          "department": "managers",
+          "design_context": {
+            "relevant_objects": [
+              "email templates",
+              "banners",
+              "thumbnails",
+              "infographics"
+            ],
+            "relevant_types": [
+              "promotional email template",
+              "social media banner",
+              "promo thumbnail",
+              "statistical infographic"
+            ],
+            "lead_gen_objects": [
+              "accounts",
+              "industries",
+              "customer persona",
+              "search queries",
+              "profiles",
+              "contacts",
+              "companies",
+              "leads",
+              "connections",
+              "messages",
+              "emails",
+              "promotions",
+              "needs",
+              "communications",
+              "events",
+              "feedbacks",
+              "reports",
+              "databases"
+            ],
+            "lead_gen_types": [
+              "new",
+              "in work",
+              "sold",
+              "banned",
+              "problematic",
+              "free",
+              "sector",
+              "industry",
+              "market",
+              "business",
+              "individual",
+              "google",
+              "linkedin",
+              "company",
+              "lead",
+              "valid",
+              "active",
+              "inactive",
+              "empty",
+              "lead",
+              "interested",
+              "client",
+              "updated",
+              "not relevant",
+              "cold",
+              "new",
+              "active",
+              "client",
+              "updated",
+              "not relevant",
+              "personalized",
+              "relevant",
+              "old",
+              "received",
+              "connection",
+              "cold",
+              "follow up",
+              "presentation",
+              "sms",
+              "cold",
+              "follow up",
+              "presentation",
+              "informational",
+              "trial-based",
+              "discounts",
+              "interactive",
+              "immediate",
+              "long-term",
+              "position",
+              "skill",
+              "replacement",
+              "project",
+              "first connection",
+              "basic correspondence",
+              "event",
+              "follow up",
+              "presentation",
+              "scheduled",
+              "held",
+              "transferred",
+              "follow up",
+              "ignored",
+              "direct",
+              "in-app",
+              "live chat",
+              "product/service",
+              "price",
+              "daily",
+              "monthly",
+              "by countries",
+              "by industries",
+              "by manager",
+              "by event",
+              "operational",
+              "analytical"
+            ]
+          }
+        },
+        {
+          "profession": "front end developer",
+          "department": "developers",
+          "design_context": {
+            "relevant_objects": [
+              "website mockup",
+              "icons",
+              "illustrations",
+              "thumbnails"
+            ],
+            "relevant_types": [
+              "website mockup",
+              "flat icon",
+              "vector illustration",
+              "tutorial thumbnail"
+            ]
+          }
+        },
+        {
+          "profession": "back end developer",
+          "department": "developers",
+          "design_context": {
+            "relevant_objects": [
+              "website mockup",
+              "icons",
+              "illustrations"
+            ],
+            "relevant_types": [
+              "website mockup",
+              "flat icon",
+              "vector illustration"
+            ]
+          }
+        },
+        {
+          "profession": "full stack developer",
+          "department": "developers",
+          "design_context": {
+            "relevant_objects": [
+              "website mockup",
+              "icons",
+              "illustrations",
+              "thumbnails"
+            ],
+            "relevant_types": [
+              "website mockup",
+              "flat icon",
+              "vector illustration",
+              "tutorial thumbnail"
+            ]
+          }
+        },
+        {
+          "profession": "smm",
+          "department": "marketers",
+          "design_context": {
+            "relevant_objects": [
+              "banners",
+              "headers",
+              "thumbnails",
+              "illustrations"
+            ],
+            "relevant_types": [
+              "social media banner",
+              "social media header",
+              "promo thumbnail",
+              "flat illustration"
+            ]
+          }
+        },
+        {
+          "profession": "content manager",
+          "department": "marketers",
+          "design_context": {
+            "relevant_objects": [
+              "infographics",
+              "illustrations",
+              "email templates",
+              "presentations"
+            ],
+            "relevant_types": [
+              "informational infographic",
+              "vector illustration",
+              "newsletter template",
+              "informative presentation"
+            ]
+          }
+        },
+        {
+          "profession": "seo manager tech",
+          "department": "marketers",
+          "design_context": {
+            "relevant_objects": [
+              "infographics",
+              "thumbnails",
+              "icons"
+            ],
+            "relevant_types": [
+              "statistical infographic",
+              "tutorial thumbnail",
+              "flat icon"
+            ]
+          }
+        },
+        {
+          "profession": "graphic designer",
+          "department": "designers",
+          "design_context": {
+            "relevant_objects": [
+              "logos",
+              "brandbooks",
+              "illustrations",
+              "icons",
+              "banners",
+              "email templates"
+            ],
+            "relevant_types": [
+              "wordmark logo",
+              "corporate brandbook",
+              "vector illustration",
+              "flat icon",
+              "web banner",
+              "promotional email template"
+            ]
+          }
+        },
+        {
+          "profession": "recruiter",
+          "department": "managers",
+          "design_context": {
+            "relevant_objects": [
+              "email templates",
+              "presentations",
+              "banners",
+              "thumbnails"
+            ],
+            "relevant_types": [
+              "promotional email template",
+              "informative presentation",
+              "social media banner",
+              "interview thumbnail"
+            ]
+          }
+        },
+        {
+          "profession": "sales manager",
+          "department": "managers",
+          "design_context": {
+            "relevant_objects": [
+              "presentations",
+              "email templates",
+              "business cards",
+              "mockups"
+            ],
+            "relevant_types": [
+              "persuasive presentation",
+              "promotional email template",
+              "personal contact card",
+              "advertising mockup"
+            ],
+            "sales_manager_objects": [
+              "calls",
+              "leads",
+              "clients",
+              "communications",
+              "employees",
+              "projects",
+              "feedbacks",
+              "instructions",
+              "documents",
+              "performance",
+              "reports",
+              "accounts",
+              "services",
+              "databases"
+            ],
+            "sales_manager_types": [
+              "first call",
+              "second call",
+              "interview",
+              "introductory call",
+              "project call",
+              "hot leads",
+              "interested leads",
+              "cold leads",
+              "ignoring leads",
+              "new leads",
+              "ex-clients",
+              "current clients",
+              "text communication",
+              "voice communication",
+              "available employee",
+              "presale employee",
+              "hired employee",
+              "full-time project",
+              "part-time project",
+              "40-hour project",
+              "10-hour free project",
+              "test task project",
+              "clients feedback",
+              "candidates feedback",
+              "references",
+              "client instructions",
+              "company instructions",
+              "invoices",
+              "agreements",
+              "scripts",
+              "full-time agreement",
+              "part-time agreement",
+              "40-hour agreement",
+              "10-hour free agreement",
+              "personal perfomance",
+              "candidate performance",
+              "project performance",
+              "daily report",
+              "employee report",
+              "project report",
+              "linkedin accounts",
+              "email accounts",
+              "whatsapp group accounts",
+              "outstaff",
+              "employees database",
+              "clients database",
+              " leads database"
+            ]
+          }
+        },
+        {
+          "profession": "video editor",
+          "department": "videographers",
+          "design_context": {
+            "relevant_objects": ["thumbnails"],
+            "relevant_types": ["promo thumbnail", "tutorial thumbnail"]
+          }
+        },
+        {
+          "profession": "seo manager",
+          "department": "marketers",
+          "design_context": {
+            "relevant_objects": ["infographics", "thumbnails", "icons"],
+            "relevant_types": [
+              "statistical infographic",
+              "tutorial thumbnail",
+              "flat icon"
+            ]
+          }
+        },
+        {
+          "profession": "animator",
+          "department": "videographers",
+          "design_context": {
+            "relevant_objects": ["characters", "illustrations", "videos"],
+            "relevant_types": ["mascot", "character illustration", "greetings video"]
+          }
+        },
+        {
+          "profession": "project manager",
+          "department": "managers",
+          "design_context": {
+            "relevant_objects": ["dashboards", "presentations", "infographics"],
+            "relevant_types": [
+              "overview dashboard",
+              "team presentations",
+              "process infographic"
+            ],
+            "project_manager_objects": [
+              "dashboards",
+              "deadlines",
+              "edits",
+              "feedbacks",
+              "goals",
+              "meetings",
+              "milestones",
+              "projects",
+              "strategies",
+              "tasks",
+              "teams",
+              "timelines",
+              "workflows"
+            ],
+            "project_manager_types": [
+              "overview dashboard",
+              "employees dashboard",
+              "milestones dasshboard",
+              "tasks dashboard",
+              "Gantt chart ",
+              "project deadline",
+              "milestone deadlisne",
+              "task deadline",
+              "scope edits",
+              "schedule edits",
+              "resource edits",
+              "budget edits",
+              "quality edits",
+              "risk management edits",
+              "client feedback",
+              "team feedback",
+              "stakeholder feedback",
+              "quality goals",
+              "cost goals",
+              "time goals",
+              "scope goals",
+              "customer satisfaction goals",
+              "kick-off meetings",
+              "status update meetings",
+              "planning meetings",
+              "review meetings",
+              "stakeholder meetings",
+              "retrospective meetings",
+              "initiation milestone",
+              "planning milestone",
+              "development milestone",
+              "implementation milestone",
+              "closure milestone",
+              "software development projects",
+              "website development projects",
+              "system integration projects",
+              "data migration projects",
+              "agile",
+              "scrum",
+              "waterfall",
+              "devops",
+              "kanban",
+              "initiation task",
+              "planning task",
+              "development task",
+              "implementation task",
+              "closure task",
+              "functional team",
+              "project team",
+              "operational team",
+              "management team",
+              "mileastone timeline",
+              "project timeline",
+              "workflow timeline",
+              "sequential workflow",
+              "parallel workflow"
+            ]
+          }
+        },
+        {
+          "profession": "personal assistant",
+          "department": "managers",
+          "design_context": {
+            "relevant_objects": [
+              "presentations",
+              "email templates",
+              "business cards"
+            ],
+            "relevant_types": [
+              "client presentations",
+              "urgent emails",
+              "personal contact card"
+            ],
+            "personal_assistant_objects": [
+              "appointments",
+              "calendars",
+              "checklists",
+              "clients",
+              "communications",
+              "contacts",
+              "correspondence",
+              "costs",
+              "documents",
+              "emails",
+              "events",
+              "feedbacks",
+              "meetings",
+              "notes",
+              "orders",
+              "presentations",
+              "reminders",
+              "reports",
+              "support",
+              "travels"
+            ],
+            "personal_assistant_types": [
+              "business appointments",
+              "personal appointments",
+              "daily calendars",
+              "project calendars",
+              "task checklists",
+              "verification checklists",
+              "prospective clients",
+              "recurring clients",
+              "internal communications",
+              "external communications",
+              "business contacts",
+              "personal contacts",
+              "email correspondence",
+              "letter correspondence",
+              "travel costs",
+              "operational costs",
+              "confidential documents",
+              "shared documents",
+              "urgent emails",
+              "bulk emails",
+              "corporate events",
+              "social events",
+              "client feedback",
+              "staff feedback",
+              "team meetings",
+              "client meetings",
+              "meeting notes",
+              "research notes",
+              "purchase orders",
+              "sales orders",
+              "client presentations",
+              "team presentations",
+              "deadline reminders",
+              "meeting reminders",
+              "financial reports",
+              "project reports",
+              "technical support",
+              "customer support",
+              "domestic travel",
+              "international travel"
+            ]
+          }
+        },
+        {
+          "profession": "motion designer",
+          "department": "videographers",
+          "design_context": {
+            "relevant_objects": ["illustrations", "videos"],
+            "relevant_types": ["isometric illustration", "greetings video"]
+          }
+        }
+      ]
+    }
+  },
+  "LLM types.json": [
+    {
+      "Types": "linkedin accounts",
+      "Objects": "accounts",
+      "Professions": "sales manager",
+      "Parameters": "connection, message, follow-up, call set-up",
+      "Departments": "managers"
+    },
+    {
+      "Types": "email accounts",
+      "Objects": "accounts",
+      "Professions": "sales manager",
+      "Parameters": "status, template, spam, personal, corporate",
+      "Departments": "managers"
+    },
+    {
+      "Types": "whatsapp group accounts",
+      "Objects": "accounts",
+      "Professions": "sales manager",
+      "Parameters": "message, report, feed back, project, client, employee",
+      "Departments": "managers"
+    },
+    {
+      "Types": "new",
+      "Objects": "accounts",
+      "Professions": "lead generator",
+      "Parameters": "initial response rate, conversion rate, engagement level",
+      "Departments": "managers"
+    },
+    {
+      "Types": "in work",
+      "Objects": "accounts",
+      "Professions": "lead generator",
+      "Parameters": "client interaction frequency, progress tracking, issue resolution rate",
+      "Departments": "managers"
+    },
+    {
+      "Types": "sold",
+      "Objects": "accounts",
+      "Professions": "lead generator",
+      "Parameters": "revenue generated, sales cycle duration, customer satisfaction index",
+      "Departments": "managers"
+    },
+    {
+      "Types": "banned",
+      "Objects": "accounts",
+      "Professions": "lead generator",
+      "Parameters": "reason for ban, ban appeal success rate, preventive measures taken",
+      "Departments": "managers"
+    },
+    {
+      "Types": "problematic",
+      "Objects": "accounts",
+      "Professions": "lead generator",
+      "Parameters": "problem identification speed, resolution effectiveness, recurrence rate",
+      "Departments": "managers"
+    },
+    {
+      "Types": "free",
+      "Objects": "accounts",
+      "Professions": "lead generator",
+      "Parameters": "upgrade conversion rate, engagement metrics, activity score",
+      "Departments": "managers"
+    },
+    {
+      "Types": "search advertising",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "video ads",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "google ads",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "paid search advertising",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "banner ads",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "social media advertising",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "native advertising",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "contextual advertising",
+      "Objects": "ads",
+      "Professions": "smm",
+      "Parameters": "audience, budget, text, goal, geotag, bid, click map, identity",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "banner ads",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "contextual advertising",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "google ads",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "native advertising",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "paid search advertising",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "search advertising",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "social media advertising",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "video ads",
+      "Objects": "ads",
+      "Professions": "content manager",
+      "Parameters": "text, link, landing page, budget, audience, tag, banner, identity, offer, bid",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "traffic analytics",
+      "Objects": "analytics",
+      "Professions": "seo manager tech",
+      "Parameters": "user demographics, session duration, page views",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "conversion analytics",
+      "Objects": "analytics",
+      "Professions": "seo manager tech",
+      "Parameters": "funnel effectiveness, conversion path, drop-off rate",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "behavior analytics",
+      "Objects": "analytics",
+      "Professions": "seo manager tech",
+      "Parameters": "user interaction patterns, heat maps, event tracking",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "Website Analytics",
+      "Objects": "Analytics",
+      "Professions": "seo manager",
+      "Parameters": "Traffic volume, User behavior, Conversion rate",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "Social Media Analytics",
+      "Objects": "Analytics",
+      "Professions": "seo manager",
+      "Parameters": "Engagement Metrics, Reach, Audience Demographics",
+      "Departments": "marketers"
+    },
+    {
+      "Types": "2d animations",
+      "Objects": "animations",
+      "Professions": "animator",
+      "Parameters": "frame rate, animation style, motion fluidity",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "3d animations",
+      "Objects": "animations",
+      "Professions": "animator",
+      "Parameters": "spatial depth, rendering quality, model complexity",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "stop motion animations",
+      "Objects": "animations",
+      "Professions": "animator",
+      "Parameters": "frame consistency, motion realism",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "2d animations",
+      "Objects": "animations",
+      "Professions": "motion designer",
+      "Parameters": "frame rate, resolution, animation style",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "3d animations",
+      "Objects": "animations",
+      "Professions": "motion designer",
+      "Parameters": "render quality, texture detail, lighting",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "interactive animations",
+      "Objects": "animations",
+      "Professions": "motion designer",
+      "Parameters": "interactivity level, responsiveness, user input types",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "internal api",
+      "Objects": "apis",
+      "Professions": "back end developer",
+      "Parameters": "authentication method, throughput, versioning",
+      "Departments": "developers"
+    },
+    {
+      "Types": "external api",
+      "Objects": "apis",
+      "Professions": "back end developer",
+      "Parameters": "security protocols, data format, access rate limits",
+      "Departments": "developers"
+    },
+    {
+      "Types": "public api",
+      "Objects": "apis",
+      "Professions": "back end developer",
+      "Parameters": "throttling policies, documentation quality, public endpoints",
+      "Departments": "developers"
+    },
+    {
+      "Types": "private api",
+      "Objects": "apis",
+      "Professions": "back end developer",
+      "Parameters": "access control, integration ease, data privacy",
+      "Departments": "developers"
+    },
+    {
+      "Types": "partner api",
+      "Objects": "apis",
+      "Professions": "back end developer",
+      "Parameters": "SLA compliance, partnership level, data sharing policies",
+      "Departments": "developers"
+    },
+    {
+      "Types": "business appointments",
+      "Objects": "appointments",
+      "Professions": "personal assistant",
+      "Parameters": "agenda focus, stakeholder involvement, business goals",
+      "Departments": "managers"
+    },
+    {
+      "Types": "personal appointments",
+      "Objects": "appointments",
+      "Professions": "personal assistant",
+      "Parameters": "personal significance, flexibility, location specifics",
+      "Departments": "managers"
+    },
+    {
+      "Types": "audio mixing audios",
+      "Objects": "audios",
+      "Professions": "video editor",
+      "Parameters": "clarity, balance, frequency range",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "sound effect audios",
+      "Objects": "audios",
+      "Professions": "video editor",
+      "Parameters": "variety, impactfulness, synchronization",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "voiceover audios",
+      "Objects": "audios",
+      "Professions": "video editor",
+      "Parameters": "clarity, tone, pacing",
+      "Departments": "videographers"
+    },
+    {
+      "Types": "On-Page SEO Audit",
+      "Objects": "Audits",
+      "Professions": "seo manager",
+      "Parameters": "Meta Titles, Content Quality,

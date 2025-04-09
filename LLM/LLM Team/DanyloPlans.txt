@@ -1,0 +1,88 @@
+========================================================================================================================
+
+24.03-28.03.2025
+
+========================================================================================================================
+
+Day 1:
+Objective: Refine and process the General Plans file for further development, explore gamification platforms, and identify tools for website snapshots.
+
+    1. Run the General Plans file through DeeperSearch again.
+        Reprocess the file to make it more detailed, addressing the issue from last Friday when errors occurred (possibly due to character limits).
+        Check the character count beforehand and split the file into smaller sections if needed to avoid hitting limits.
+        Save the output as a new version (e.g., "General_Plans_v2").
+    2. Feed the updated General Plans file into the Cursor program via an AI model.
+        Upload the DeeperSearch output into Cursor.
+        Ensure the AI model integrates the file correctly and troubleshoot any formatting issues.
+    3. Assign employees to each Step in General Plans using Cursor’s AI.
+        For each Step, analyze required skills and match them to an employee with relevant expertise.
+        Add one employee per Step, documenting their name and a brief justification (e.g., "John – skilled in UI design").
+        Export the updated file with assignments as "General_Plans".
+    4. Find platforms similar to Habitica.com.
+        Search for platforms that gamify task management or habit tracking, like Habitica, with features such as character creation, rewards (e.g., coins), and customizable 
+        profiles.
+        Evaluate at least 3–5 alternatives (e.g., TaskHero, Do It Now: RPG To Do List) for their core features and potential CRM inspiration.
+        Compile a short list with brief notes on their gamification elements and usability for reference later in the week.
+    5. Identify the focus of platforms capable of taking snapshots of preferred websites.
+        Research tools or platforms that automate website screenshot creation, focusing on their ability to capture full pages or specific sections.
+        Explore options like Greenshot, URL2PNG, or browser extensions (e.g., GoFullPage) for ease of use and integration potential.
+        Note their key functionalities (e.g., annotation, cloud storage, API access) and assess relevance for CRM or project documentation needs.
+    6. Sort the obtained information on gamification into different folders and process it through in-depth AI analysis.
+Буду пополнять неделю по мере появления задач
+
+Day 2:
+Objective: Develop and implement a new structure for managing professions, objects, actions, task templates, and tools using the LLM10 model.
+
+    1. Creating LLM7, that combine LLM6-LLM9 to new LLM10 and delete dublicates using 2 python codes
+    2. Using LLM10 - help to make new profession by this structure
+    3. Create a prompt that can generate tables for LLM10.
+
+Day 3:
+Objective: To efficiently generate and manage structured data and educational content through automation and LLM-assisted workflows.
+    1. After successfully creating a prompt to generate tables in TSV format for a specified company and department, both ChatGPT and Grok were able to generate tables in the desired format. Therefore, I will proceed to generate new tables for all required companies.
+    2. Create an LLM10.json file using spreadsheets and the Gemini thinking model within Cursor.
+    3. Automate the creation of a new profession definition using Cursor. This will involve generating a prompt file and a separate instruction file outlining the steps to achieve the desired outcome.
+    4. In the "How to Work" course on Replit, edit the markdown file to enhance detail and include a warning. Additionally, transfer the content of Day 1 from the LinkedIn course into the "How to Work" course as a second block, effectively restructuring the LinkedIn course to a 4-day format.
+
+Day 4:
+Objective: To explore and implement self-learning AI models and automate the creation of educational content.
+    1. Conduct an in-depth study to set up a Self-Learning AI model on our server.
+    2. Gather all relevant information and upload it to Cursor, including a guide on how to install the AI.
+    3. Generate a prompt for the automatic creation of guides and tutorials based on JSON LLM output and other relevant information.
+
+Day 5:
+Objective: To optimize the educational content creation process by improving prompts and implementing gamification elements.
+    1. Test the prompt, and if it doesn't work, transform it into a prompt chain, where: 
+        a. the first generates topics
+        b. the second generates subtopics and content
+        c. the third generates a quiz
+    2. Add difficulty levels and points (gamification) to the quiz.
+    3. Unplanned: gathered in a voice channel with 13 people and discussed how to make the course more gamified.
+
+========================================================================================================================
+
+31.03-04.04.2025
+
+========================================================================================================================
+
+Day 1:
+Objective: ......
+    1. ......
+    2. ......
+    3. ......
+    4. ......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

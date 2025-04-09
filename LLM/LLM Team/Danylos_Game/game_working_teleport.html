@@ -1,0 +1,2972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        #game-container {
+            position: relative;
+            width: 1200px;
+            height: 500px;
+            background-color: #1a365d;
+            border: 4px solid #2c5282;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        #game-map {
+            position: absolute;
+            width: 10000px;
+            height: 500px;
+            background-color: #2a4365;
+            background-image: linear-gradient(to bottom, #1a365d 0%, #2a4365 100%);
+        }
+        
+        .city-background {
+            position: absolute;
+            bottom: 160px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .building {
+            position: absolute;
+            bottom: 0;
+            background-color: #1e3a8a;
+            border: 1px solid #2563eb;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+        }
+        
+        .building.modern {
+            clip-path: none;
+        }
+        
+        .building.vertical {
+            width: 80px !important;
+            height: 250px !important;
+        }
+        
+        .building.horizontal {
+            width: 200px !important;
+            height: 120px !important;
+        }
+        
+        .building::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(37, 99, 235, 0.1) 100%);
+        }
+        
+        .building.window {
+            position: absolute;
+            background-color: #fbbf24;
+            border-radius: 2px;
+            width: 20px; /* Примерная ширина окна */
+            height: 30px; /* Примерная высота окна */
+        }
+
+        
+        
+        .road {
+            position: absolute;
+            bottom: 120px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: repeating-linear-gradient(
+                90deg,
+                #4b5563,
+                #4b5563 50px,
+                #374151 50px,
+                #374151 100px
+            );
+            border-top: 4px solid #6b7280;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .road::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #6b7280;
+            transform: translateY(-50%);
+        }
+        
+        .road::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #6b7280;
+            transform: translateY(50%);
+        }
+        
+        #player {
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            background-color: #dc2626;
+            border-radius: 8px;
+            z-index: 10;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.7);
+            bottom: 160px;
+        }
+        
+        #train-body {
+            width: 100%;
+            height: 60%;
+            background-color: #7c3e3e;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+        }
+        
+        #train-cabin {
+            width: 30%;
+            height: 40%;
+            background-color: #b91c1c;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 0 8px 0 0;
+        }
+        
+        #train-window {
+            width: 20px;
+            height: 20px;
+            background-color: #93c5fd;
+            border-radius: 50%;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            border: 2px solid #1e3a8a;
+        }
+        
+        #train-chimney {
+            width: 15px;
+            height: 25px;
+            background-color: #44403c;
+            position: absolute;
+            right: 10px;
+            top: -25px;
+        }
+        
+        #train-wheels {
+            display: flex;
+            position: absolute;
+            bottom: -15px;
+            width: 100%;
+            justify-content: space-around;
+        }
+        
+        .train-wheel {
+            width: 25px;
+            height: 25px;
+            background-color: #1c1917;
+            border-radius: 50%;
+            border: 3px solid #57534e;
+        }
+        
+        .chest {
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            background-color: #d69e2e;
+            border: 3px solid #b7791f;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f6e05e;
+            font-weight: bold;
+            z-index: 5;
+            box-shadow: 0 0 10px #d69e2e;
+            animation: pulse 2s infinite;
+        }
+        
+        .enemy {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #e53e3e;
+            border-radius: 50%;
+            border: 2px solid #c53030;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            z-index: 5;
+            box-shadow: 0 0 10px #e53e3e;
+            animation: shake 0.5s infinite alternate;
+        }
+        
+        .path {
+            position: absolute;
+            background-color: #4b5563;
+            z-index: 1;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+        
+        .horizontal-path {
+            height: 40px;
+            border-top: 2px solid #6b7280;
+            border-bottom: 2px solid #6b7280;
+            background: repeating-linear-gradient(
+                90deg,
+                #4b5563,
+                #4b5563 20px,
+                #374151 20px,
+                #374151 40px
+            );
+        }
+        
+        .vertical-path {
+            width: 40px;
+            border-left: 2px solid #6b7280;
+            border-right: 2px solid #6b7280;
+            background: repeating-linear-gradient(
+                0deg,
+                #4b5563,
+                #4b5563 20px,
+                #374151 20px,
+                #374151 40px
+            );
+        }
+        
+        .topic-marker {
+            position: absolute;
+            width: 150px;
+            height: 60px;
+            background-color: rgba(109, 40, 217, 0.7);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            z-index: 2;
+            border: 2px solid #7c3aed;
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        
+        .xp-star {
+            display: inline-block;
+            color: gold;
+            margin-right: 0.2rem;
+            animation: float 2s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes shake {
+            0% { transform: translateX(-2px); }
+            100% { transform: translateX(2px); }
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .health-bar {
+            height: 10px;
+            background-color: #e53e3e;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #38a169;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+        
+        .quiz-option {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .quiz-option:hover {
+            background-color: #ebf8ff;
+            transform: translateX(5px);
+        }
+        
+        .correct {
+            background-color: #c6f6d5 !important;
+        }
+        
+        .incorrect {
+            background-color: #fed7d7 !important;
+        }
+        
+        .damage-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.3);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .xp-gain {
+            position: absolute;
+            color: gold;
+            font-weight: bold;
+            pointer-events: none;
+            animation: xpFloat 1s forwards;
+        }
+        
+        @keyframes xpFloat {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-50px); }
+        }
+        
+        .minimap {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid #2c5282;
+            z-index: 20;
+        }
+        
+        .minimap-player {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #dc2626;
+            border-radius: 2px;
+        }
+        
+        .minimap-chest {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #d69e2e;
+            border-radius: 2px;
+        }
+        
+        .minimap-enemy {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #e53e3e;
+            border-radius: 50%;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 30;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .subtopic {
+            font-weight: bold;
+            color: #6b46c1;
+            margin-top: 1rem;
+            border-bottom: 2px solid #9f7aea;
+            padding-bottom: 0.3rem;
+        }
+        
+        .smoke {
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            filter: blur(5px);
+            animation: smoke 2s forwards;
+            opacity: 0;
+        }
+        
+        @keyframes smoke {
+            0% { transform: translateY(0) scale(0.5); opacity: 0.7; }
+            100% { transform: translateY(-100px) scale(2); opacity: 0; }
+        }
+        
+        .matching-quiz {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .matching-item {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .matching-item:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .matching-item.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        
+        .matching-line {
+            position: absolute;
+            background-color: #3b82f6;
+            height: 2px;
+            transform-origin: left center;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .ranking-item {
+            padding: 0.5rem;
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem;
+            cursor: move;
+            border: 1px dashed #d1d5db;
+        }
+        
+        .ranking-item.dragging {
+            opacity: 0.5;
+        }
+        
+        .theory-cell {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #4f46e5;
+            border: 2px solid #6366f1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+            bottom: 160px;
+        }
+        
+        .theory-cell:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+        
+        .quiz-cell {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #dc2626;
+            border: 2px solid #b91c1c;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            bottom: 160px;
+        }
+        
+        .quiz-cell:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+        }
+        
+        .quiz-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1f2937;
+            border: 2px solid #4f46e5;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .quiz-modal h2 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+        }
+        
+        .quiz-modal .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .quiz-modal .close-btn:hover {
+            color: #f3f4f6;
+        }
+        
+        .quiz-option {
+            background-color: #374151;
+            border: 2px solid #4b5563;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .quiz-option:hover {
+            background-color: #4b5563;
+            border-color: #6366f1;
+        }
+        
+        .quiz-option.selected {
+            background-color: #4f46e5;
+            border-color: #6366f1;
+        }
+        
+        .quiz-submit-btn {
+            background-color: #4f46e5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .quiz-submit-btn:hover {
+            background-color: #4338ca;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .quiz-feedback.correct {
+            background-color: #065f46;
+            color: #a7f3d0;
+        }
+        
+        .quiz-feedback.incorrect {
+            background-color: #991b1b;
+            color: #fecaca;
+        }
+
+        .test-btn {
+            background-color: #4f46e5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .test-btn:hover {
+            background-color: #4338ca;
+        }
+
+        .category-container {
+            background-color: #374151;
+            border: 2px solid #4b5563;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .category-title {
+            color: #e5e7eb;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .category-items {
+            min-height: 100px;
+            border: 2px dashed #4b5563;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .draggable-item {
+            background-color: #4f46e5;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: move;
+            user-select: none;
+        }
+
+        .draggable-item:hover {
+            background-color: #4338ca;
+        }
+
+        /* Egyptian location styles */
+        .city-background.egyptian {
+            background: linear-gradient(to bottom, #f4a460 0%, #deb887 100%);
+        }
+
+        .building.pyramid {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            background-color: #d2b48c;
+            border: none;
+        }
+
+        .building.sphinx {
+            clip-path: polygon(0% 100%, 20% 80%, 40% 100%, 60% 80%, 80% 100%, 100% 80%, 100% 100%);
+            background-color: #cd853f;
+            border: none;
+        }
+
+        .building.obelisk {
+            clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+            background-color: #b8860b;
+            border: none;
+        }
+
+        .road.egyptian {
+            background: repeating-linear-gradient(
+                90deg,
+                #d2b48c,
+                #d2b48c 50px,
+                #deb887 50px,
+                #deb887 100px
+            );
+            border-top: 4px solid #cd853f;
+        }
+
+        .building.triangle {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center py-8">
+    <div class="text-center mb-6">
+        <h1 class="text-5xl font-bold text-indigo-400 mb-2">AI LEARNING ADVENTURE</h1>
+        <p class="text-xl text-gray-300">Embark on a structured journey through AI learning topics</p>
+    </div>
+    
+    <div class="flex mb-6 w-full max-w-5xl justify-between items-center">
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
+            <h3 class="font-bold text-gray-300 flex items-center">
+                <i class="fas fa-heart mr-2 text-red-400"></i> Player Stats
+            </h3>
+            <div class="mt-2">
+                <div class="flex justify-between mb-1 text-gray-300">
+                    <span>Health:</span>
+                    <span id="health-value">100/100</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                    <div id="health-bar" class="health-bar h-2.5 rounded-full" style="width: 100%"></div>
+                </div>
+                
+                <div class="flex justify-between mb-1 text-gray-300">
+                    <span>Knowledge:</span>
+                    <span id="knowledge-value">0</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2.5">
+                    <div id="knowledge-bar" class="progress-bar h-2.5 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
+            <h3 class="font-bold text-gray-300 flex items-center">
+                <i class="fas fa-star mr-2 text-yellow-400"></i> XP: <span id="xp-value" class="ml-1">0</span>
+            </h3>
+            <div id="xp-stars" class="mt-2"></div>
+            <div class="text-xs text-gray-400 mt-1">Next level: <span id="next-level">100</span> XP</div>
+        </div>
+        
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
+            <h3 class="font-bold text-gray-300 flex items-center">
+                <i class="fas fa-backpack mr-2 text-blue-400"></i> Inventory
+            </h3>
+            <div id="inventory" class="mt-2 flex space-x-2">
+                <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center border border-gray-600 text-gray-400">-</div>
+                <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center border border-gray-600 text-gray-400">-</div>
+                <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center border border-gray-600 text-gray-400">-</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game-container" class="mx-auto mb-6 relative">
+        <div id="damage-effect" class="damage-effect"></div>
+        <div id="game-map">
+            <div id="player">
+                <div id="train-body">
+                    <div id="train-cabin">
+                        <div id="train-window"></div>
+                    </div>
+                    <div id="train-chimney"></div>
+                </div>
+                <div id="train-wheels">
+                    <div class="train-wheel"></div>
+                    <div class="train-wheel"></div>
+                    <div class="train-wheel"></div>
+                </div>
+            </div>
+            <!-- Paths will be generated by JavaScript -->
+            <!-- Chests and enemies will be placed by JavaScript -->
+            <!-- Topic markers will be placed by JavaScript -->
+        </div>
+        <div id="minimap" class="minimap"></div>
+        <div id="tooltip" class="tooltip"></div>
+    </div>
+    
+    <div class="grid grid-cols-3 gap-4 mb-6 w-full max-w-md">
+        <button id="up-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-lg font-bold transition transform hover:scale-105 active:scale-95 shadow-lg">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="left-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-lg font-bold transition transform hover:scale-105 active:scale-95 shadow-lg">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button id="right-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-lg font-bold transition transform hover:scale-105 active:scale-95 shadow-lg">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        <button id="down-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white py-4 px-8 rounded-lg font-bold transition transform hover:scale-105 active:scale-95 shadow-lg col-start-2">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+    </div>
+    
+    <div class="bg-gray-800 p-6 rounded-lg shadow-xl w-full max-w-2xl mb-6 border border-gray-700">
+        <h2 class="text-2xl font-bold text-gray-300 mb-4 flex items-center">
+            <i class="fas fa-scroll mr-2 text-yellow-400"></i> Game Log
+        </h2>
+        <div id="game-log" class="h-40 overflow-y-auto border border-gray-700 p-3 bg-gray-900 rounded text-gray-300 text-sm">
+            <p class="text-indigo-300">Welcome to AI Learning Adventure! Use the arrow buttons to move your train.</p>
+            <p class="text-indigo-300">Follow the tracks through structured AI learning topics.</p>
+            <p class="text-indigo-300">Complete lessons and challenges to gain knowledge and XP.</p>
+        </div>
+    </div>
+    
+    <!-- Lesson Modal -->
+    <div id="lesson-modal" class="modal">
+        <div class="modal-content bg-gradient-to-b from-gray-800 to-gray-900 border border-indigo-500">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="lesson-title" class="text-2xl font-bold text-indigo-400 flex items-center">
+                    <i class="fas fa-treasure-chest mr-2 text-yellow-400"></i> Knowledge Station
+                </h2>
+                <button id="close-lesson" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="lesson-content" class="prose max-w-none text-gray-300">
+                <!-- Lesson content will be inserted here -->
+            </div>
+            <button id="complete-lesson" class="mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-indigo-700 hover:to-purple-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                Complete Lesson (+<span id="lesson-reward">10</span> Knowledge)
+            </button>
+        </div>
+    </div>
+    
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content bg-gradient-to-b from-gray-800 to-gray-900 border border-red-500">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="quiz-title" class="text-2xl font-bold text-red-400 flex items-center">
+                    <i class="fas fa-question-circle mr-2"></i> Challenge
+                </h2>
+                <div class="bg-red-900 text-red-200 px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                    <i class="fas fa-bolt mr-1"></i> Difficulty: <span id="quiz-difficulty" class="ml-1">Medium</span>
+                </div>
+            </div>
+            <p id="quiz-question" class="mb-4 text-lg font-medium text-gray-300 bg-gray-700 p-3 rounded"></p>
+            <div id="quiz-options" class="space-y-3">
+                <!-- Options will be inserted here -->
+            </div>
+            <div id="quiz-feedback" class="mt-4 hidden">
+                <p id="feedback-text" class="font-bold text-lg text-center"></p>
+                <div id="xp-gain-feedback" class="text-center text-yellow-400 font-bold my-2">
+                    +<span id="xp-gain-value">0</span> XP
+                </div>
+                <button id="next-quiz" class="mt-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Matching Quiz Modal -->
+    <div id="matching-quiz-modal" class="modal">
+        <div class="modal-content bg-gradient-to-b from-gray-800 to-gray-900 border border-red-500">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="matching-quiz-title" class="text-2xl font-bold text-red-400 flex items-center">
+                    <i class="fas fa-question-circle mr-2"></i> Matching Challenge
+                </h2>
+                <div class="bg-red-900 text-red-200 px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                    <i class="fas fa-bolt mr-1"></i> Difficulty: <span id="matching-quiz-difficulty" class="ml-1">Easy</span>
+                </div>
+            </div>
+            <p id="matching-quiz-question" class="mb-4 text-lg font-medium text-gray-300 bg-gray-700 p-3 rounded"></p>
+            <div id="matching-quiz-container" class="matching-quiz">
+                <div id="matching-left" class="space-y-2">
+                    <h3 class="font-bold text-gray-300">Components</h3>
+                    <!-- Left items will be inserted here -->
+                </div>
+                <div id="matching-right" class="space-y-2">
+                    <h3 class="font-bold text-gray-300">Descriptions</h3>
+                    <!-- Right items will be inserted here -->
+                </div>
+            </div>
+            <div id="matching-lines-container"></div>
+            <div id="matching-quiz-feedback" class="mt-4 hidden">
+                <p id="matching-feedback-text" class="font-bold text-lg text-center"></p>
+                <div id="matching-xp-gain-feedback" class="text-center text-yellow-400 font-bold my-2">
+                    +<span id="matching-xp-gain-value">0</span> XP
+                </div>
+                <button id="next-matching-quiz" class="mt-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                    Continue
+                </button>
+            </div>
+            <button id="check-matching-answers" class="mt-4 bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-700 hover:to-blue-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full hidden">
+                Check Answers
+            </button>
+        </div>
+    </div>
+    
+    <!-- Ranking Quiz Modal -->
+    <div id="ranking-quiz-modal" class="modal">
+        <div class="modal-content bg-gradient-to-b from-gray-800 to-gray-900 border border-red-500">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="ranking-quiz-title" class="text-2xl font-bold text-red-400 flex items-center">
+                    <i class="fas fa-question-circle mr-2"></i> Ranking Challenge
+                </h2>
+                <div class="bg-red-900 text-red-200 px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                    <i class="fas fa-bolt mr-1"></i> Difficulty: <span id="ranking-quiz-difficulty" class="ml-1">Medium</span>
+                </div>
+            </div>
+            <p id="ranking-quiz-question" class="mb-4 text-lg font-medium text-gray-300 bg-gray-700 p-3 rounded"></p>
+            <div id="ranking-quiz-container" class="space-y-2">
+                <!-- Ranking items will be inserted here -->
+            </div>
+            <div id="ranking-quiz-feedback" class="mt-4 hidden">
+                <p id="ranking-feedback-text" class="font-bold text-lg text-center"></p>
+                <div id="ranking-xp-gain-feedback" class="text-center text-yellow-400 font-bold my-2">
+                    +<span id="ranking-xp-gain-value">0</span> XP
+                </div>
+                <button id="next-ranking-quiz" class="mt-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                    Continue
+                </button>
+            </div>
+            <button id="check-ranking-answers" class="mt-4 bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-700 hover:to-blue-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                Check Order
+            </button>
+        </div>
+    </div>
+    
+    <!-- Identification Quiz Modal -->
+    <div id="identification-quiz-modal" class="modal">
+        <div class="modal-content bg-gradient-to-b from-gray-800 to-gray-900 border border-red-500">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="identification-quiz-title" class="text-2xl font-bold text-red-400 flex items-center">
+                    <i class="fas fa-question-circle mr-2"></i> Identification Challenge
+                </h2>
+                <div class="bg-red-900 text-red-200 px-3 py-1 rounded-full text-sm font-bold flex items-center">
+                    <i class="fas fa-bolt mr-1"></i> Difficulty: <span id="identification-quiz-difficulty" class="ml-1">Hard</span>
+                </div>
+            </div>
+            <p id="identification-quiz-question" class="mb-4 text-lg font-medium text-gray-300 bg-gray-700 p-3 rounded"></p>
+            <div id="identification-quiz-container" class="space-y-4">
+                <!-- Identification items will be inserted here -->
+            </div>
+            <div id="identification-quiz-feedback" class="mt-4 hidden">
+                <p id="identification-feedback-text" class="font-bold text-lg text-center"></p>
+                <div id="identification-xp-gain-feedback" class="text-center text-yellow-400 font-bold my-2">
+                    +<span id="identification-xp-gain-value">0</span> XP
+                </div>
+                <button id="next-identification-quiz" class="mt-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                    Continue
+                </button>
+            </div>
+            <button id="check-identification-answers" class="mt-4 bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-700 hover:to-blue-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                Check Answers
+            </button>
+        </div>
+    </div>
+    
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content text-center bg-gradient-to-b from-gray-800 to-gray-900 border border-red-600">
+            <h2 class="text-4xl font-bold text-red-500 mb-4 flex justify-center items-center">
+                <i class="fas fa-skull mr-3"></i> Game Over
+            </h2>
+            <p class="mb-4 text-gray-300">Your health has reached zero. You need more knowledge to continue!</p>
+            <div class="bg-gray-700 rounded-lg p-4 mb-6">
+                <p class="text-gray-300">You collected <span id="final-xp" class="font-bold text-yellow-400">0</span> XP</p>
+                <p class="text-gray-300">and <span id="final-knowledge" class="font-bold text-green-400">0</span> Knowledge points.</p>
+            </div>
+            <button id="restart-game" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-8 rounded-lg font-bold hover:from-indigo-700 hover:to-purple-700 transition transform hover:scale-105 active:scale-95 shadow-lg text-lg">
+                <i class="fas fa-redo mr-2"></i> Restart Game
+            </button>
+        </div>
+    </div>
+    
+    <!-- Victory Modal -->
+    <div id="victory-modal" class="modal">
+        <div class="modal-content text-center bg-gradient-to-b from-gray-800 to-gray-900 border border-green-600">
+            <h2 class="text-4xl font-bold text-green-400 mb-4 flex justify-center items-center">
+                <i class="fas fa-trophy mr-3"></i> Congratulations!
+            </h2>
+            <p class="mb-4 text-gray-300">You've completed the AI Learning Adventure!</p>
+            <div class="bg-gray-700 rounded-lg p-4 mb-4">
+                <p class="text-gray-300">You mastered all lessons and defeated all challenges with</p>
+                <p class="text-2xl font-bold text-yellow-400"><span id="total-xp">0</span> XP!</p>
+            </div>
+            <div id="victory-stars" class="flex justify-center mb-6"></div>
+            <button id="new-game" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-8 rounded-lg font-bold hover:from-indigo-700 hover:to-purple-700 transition transform hover:scale-105 active:scale-95 shadow-lg text-lg">
+                <i class="fas fa-play mr-2"></i> Start New Game
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Game state
+        const gameState = {
+            player: {
+                x: 100,
+                y: 250,
+                health: 100,
+                maxHealth: 100,
+                knowledge: 0,
+                maxKnowledge: 100,
+                xp: 0,
+                level: 1,
+                nextLevelXp: 100,
+                inventory: [],
+                currentTheory: null,
+                completedTheories: []
+            },
+            map: {
+                width: 10000,
+                height: 500,
+                paths: [],
+                theoryCells: [],
+                quizCells: [],
+                visitedTheories: [],
+                completedQuizzes: []
+            },
+            theories: [
+                {
+                    id: 1,
+                            title: "Developing Practical AI Skills",
+                    position: 500,
+                    content: `
+                        <div class="prose max-w-none text-gray-300">
+                                <p>In today's digital world, practical AI skills are essential for tech professionals. This training focuses on developing AI competencies through hands-on experience:</p>
+                                <ul>
+                                    <li><strong>AI Fluency:</strong> Master tools like ChatGPT, Claude, and Perplexity AI for solving real business problems. Focus on strategic implementation rather than basic prompting.</li>
+                                    <li><strong>Critical Analysis:</strong> Apply critical thinking for decision-making and problem-solving with AI tools.</li>
+                                    <li><strong>Role-Context-Query Method:</strong> Learn precise formulation and task decomposition for effective AI interaction.</li>
+                                    <li><strong>Practical Exercise:</strong> Create an AI-assisted workflow optimization plan with clear metrics and validation steps.</li>
+                            </ul>
+                        </div>
+                    `,
+                    quizzes: [
+                        {
+                            type: "matching",
+                            difficulty: "Easy",
+                            question: "Match each training component with its corresponding description.",
+                            leftItems: [
+                                "AI Fluency",
+                                "Critical Analysis",
+                                "Role-Context-Query Method",
+                                "Practical Exercise"
+                            ],
+                            rightItems: [
+                                "Master tools like ChatGPT, Claude, and Perplexity AI to solve real business problems with a focus on strategic implementation.",
+                                "Apply critical thinking for decision-making and problem-solving with AI tools.",
+                                "Learn precise formulation and task decomposition for effective AI interaction.",
+                                "Create an AI-assisted workflow optimization plan with clear metrics and validation steps."
+                            ],
+                            correctMatches: [
+                                [0, 0],
+                                [1, 1],
+                                [2, 2],
+                                [3, 3]
+                            ]
+                        },
+                        {
+                            type: "ranking",
+                            difficulty: "Medium",
+                            question: "Arrange the following training components in the exact order they are presented in the training module.",
+                            items: [
+                                "Practical Exercise",
+                                "Critical Analysis",
+                                "Role-Context-Query Method",
+                                "AI Fluency"
+                            ],
+                            correctOrder: [3, 1, 2, 0]
+                        },
+                        {
+                            type: "identification",
+                            difficulty: "Hard",
+                            question: "For each statement below, write the name of the training component it best describes.",
+                            statements: [
+                                "This component focuses on mastering AI tools like ChatGPT, Claude, and Perplexity AI to address real business challenges.",
+                                "This section encourages the use of critical thinking for effective decision-making and problem-solving with AI.",
+                                "In this part, learners practice creating an AI-assisted workflow optimization plan complete with metrics and validation.",
+                                "This method teaches how to precisely formulate tasks and decompose them for more effective AI interactions."
+                            ],
+                            correctAnswers: [
+                                "AI Fluency",
+                                "Critical Analysis",
+                                "Practical Exercise",
+                                "Role-Context-Query Method"
+                            ],
+                            components: [
+                                "AI Fluency",
+                                "Critical Analysis",
+                                "Role-Context-Query Method",
+                                "Practical Exercise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Proactive AI Implementation",
+                    position: 1000,
+                    content: `
+                        <div class="prose max-w-none text-gray-300">
+                            <h3 class="text-xl font-bold text-indigo-400 mb-4">Strategic Planning for AI Adoption</h3>
+                            <p>Success in AI adoption requires strategic planning through multiple key components:</p>
+                            <ul>
+                                <li><strong>Rapid Testing:</strong> Launch small pilots quickly, learn from results, and scale successful approaches.</li>
+                                <li><strong>Change Management:</strong> Drive adoption through clear communication and demonstrable benefits.</li>
+                                <li><strong>Tool Selection:</strong> Choose appropriate AI tools based on specific professional roles and needs.</li>
+                                <li><strong>Skills Assessment:</strong> Identify areas for improvement in AI tool usage and implementation.</li>
+                                <li><strong>Project Focus:</strong> Apply learning to real projects aligned with course objectives.</li>
+                                <li><strong>Continuous Learning:</strong> Practice AI skills through hands-on projects and exercises.</li>
+                                </ul>
+                            <p class="mt-4"><strong>Example:</strong> Develop practical solutions using Claude AI for documents and Perplexity AI for information verification.</p>
+                            <p><strong>Planning:</strong> Create detailed project plans with measurable outcomes.</p>
+                        </div>
+                    `,
+                    quizzes: [
+                        {
+                            type: "matching",
+                            difficulty: "Medium",
+                            question: "Sort each item into its correct category based on its role in strategic planning.",
+                            leftItems: [
+                                "Rapid Testing",
+                                "Change Management",
+                                "Tool Selection",
+                                "Skills Assessment",
+                                "Project Focus",
+                                "Continuous Learning",
+                                "Example",
+                                "Planning"
+                            ],
+                            rightItems: [
+                                "Implementation Strategies",
+                                "Implementation Strategies",
+                                "Implementation Strategies",
+                                "Personal Development Strategies",
+                                "Personal Development Strategies",
+                                "Personal Development Strategies",
+                                "Illustration",
+                                "Implementation Strategies"
+                            ],
+                            correctMatches: [
+                                [0, 0],
+                                [1, 0],
+                                [2, 0],
+                                [3, 1],
+                                [4, 1],
+                                [5, 1],
+                                [6, 2],
+                                [7, 0]
+                            ]
+                        },
+                        {
+                            type: "ranking",
+                            difficulty: "Hard",
+                            question: "Reorder these strategic planning components to match their exact sequence in the text.",
+                            items: [
+                                "Change Management",
+                                "Continuous Learning",
+                                "Rapid Testing",
+                                "Tool Selection",
+                                "Planning",
+                                "Skills Assessment",
+                                "Project Focus",
+                                "Example"
+                            ],
+                            correctOrder: [2, 0, 3, 5, 6, 1, 7, 4]
+                        },
+                        {
+                            type: "identification",
+                            difficulty: "Easy",
+                            question: "Match each description with its correct strategic planning component.",
+                            statements: [
+                                "Launch small pilots quickly, learn from results, and scale successful approaches.",
+                                "Drive adoption through clear communication and demonstrable benefits.",
+                                "Choose appropriate AI tools based on specific professional roles and needs.",
+                                "Practice AI skills through hands-on projects and exercises."
+                            ],
+                            correctAnswers: [
+                                "Rapid Testing",
+                                "Change Management",
+                                "Tool Selection",
+                                "Continuous Learning"
+                            ],
+                            components: [
+                                "Rapid Testing",
+                                "Change Management",
+                                "Tool Selection",
+                                "Continuous Learning"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Final Project - AI Solution Implementation",
+                    position: 1500,
+                    content: `
+                        <div class="prose max-w-none text-gray-300">
+                            <h3 class="text-xl font-bold text-indigo-400 mb-4">Business Process Improvement with AI</h3>
+                            <p>Develop and present an AI-driven solution for a specific business challenge:</p>
+                            <ul>
+                                <li><strong>Analysis:</strong> Identify opportunities for AI implementation in your business processes.</li>
+                                <li><strong>Tools:</strong> Select and implement appropriate AI solutions based on your needs.</li>
+                                <li><strong>Execute:</strong> Build and test solutions with stakeholder feedback.</li>
+                                <li><strong>Present:</strong> Demonstrate results and future development plans.</li>
+                            </ul>
+                            <p class="mt-4"><strong>Example:</strong> Implement workflow optimization using AI tools covered in the course.</p>
+                        </div>
+                    `,
+                    quizzes: []
+                },
+                {
+                    id: 4,
+                    title: "Final Project - Business Process Optimization",
+                    position: 2000,
+                    content: `
+                        <div class="prose max-w-none text-gray-300">
+                            <h3 class="text-xl font-bold text-indigo-400 mb-4">AI-Driven Business Improvement</h3>
+                            <p>Create and implement an AI solution for business process improvement:</p>
+                            <ul>
+                                <li><strong>Analysis Phase:</strong> Identify key areas for AI implementation in your workflow.</li>
+                                <li><strong>Tool Selection:</strong> Choose the most suitable AI tools for your specific needs.</li>
+                                <li><strong>Implementation:</strong> Build and test your solution with real stakeholders.</li>
+                                <li><strong>Presentation:</strong> Showcase results and outline future improvements.</li>
+                            </ul>
+                            <p class="mt-4"><strong>Example:</strong> Optimize business workflows using the AI tools learned throughout the course.</p>
+                        </div>
+                    `,
+                    quizzes: []
+                }
+            ],
+            currentQuiz: null,
+            currentMatchingQuiz: null,
+            currentRankingQuiz: null,
+            currentIdentificationQuiz: null,
+            gameActive: true,
+            moveSpeed: 25,
+            lastMoveTime: 0,
+            moveInterval: 100,
+            selectedMatchingItems: {
+                left: null,
+                right: null
+            },
+            matchingConnections: [],
+            smokeInterval: null,
+            currentTopic: 1,
+            topics: [
+                {
+                    id: 1,
+                    title: "Practical Skills & Proactive Implementation",
+                    completed: false
+                },
+                {
+                    id: 2,
+                    title: "Egyptian Knowledge",
+                    completed: false
+                }
+            ]
+        };
+
+        // DOM elements
+        const gameContainer = document.getElementById('game-container');
+        const gameMap = document.getElementById('game-map');
+        const player = document.getElementById('player');
+        const healthValue = document.getElementById('health-value');
+        const healthBar = document.getElementById('health-bar');
+        const knowledgeValue = document.getElementById('knowledge-value');
+        const knowledgeBar = document.getElementById('knowledge-bar');
+        const xpValue = document.getElementById('xp-value');
+        const nextLevel = document.getElementById('next-level');
+        const xpStars = document.getElementById('xp-stars');
+        const inventory = document.getElementById('inventory');
+        const gameLog = document.getElementById('game-log');
+        const damageEffect = document.getElementById('damage-effect');
+        const minimap = document.getElementById('minimap');
+        const tooltip = document.getElementById('tooltip');
+        
+        // Buttons
+        const upBtn = document.getElementById('up-btn');
+        const downBtn = document.getElementById('down-btn');
+        const leftBtn = document.getElementById('left-btn');
+        const rightBtn = document.getElementById('right-btn');
+        
+        // Modals
+        const lessonModal = document.getElementById('lesson-modal');
+        const quizModal = document.getElementById('quiz-modal');
+        const matchingQuizModal = document.getElementById('matching-quiz-modal');
+        const rankingQuizModal = document.getElementById('ranking-quiz-modal');
+        const identificationQuizModal = document.getElementById('identification-quiz-modal');
+        const gameOverModal = document.getElementById('game-over-modal');
+        const victoryModal = document.getElementById('victory-modal');
+        
+        // Modal elements
+        const lessonTitle = document.getElementById('lesson-title');
+        const lessonContent = document.getElementById('lesson-content');
+        const lessonReward = document.getElementById('lesson-reward');
+        const completeLessonBtn = document.getElementById('complete-lesson');
+        const closeLessonBtn = document.getElementById('close-lesson');
+        
+        const quizTitle = document.getElementById('quiz-title');
+        const quizDifficulty = document.getElementById('quiz-difficulty');
+        const quizQuestion = document.getElementById('quiz-question');
+        const quizOptions = document.getElementById('quiz-options');
+        const quizFeedback = document.getElementById('quiz-feedback');
+        const feedbackText = document.getElementById('feedback-text');
+        const xpGainFeedback = document.getElementById('xp-gain-feedback');
+        const xpGainValue = document.getElementById('xp-gain-value');
+        const nextQuizBtn = document.getElementById('next-quiz');
+        
+        const matchingQuizTitle = document.getElementById('matching-quiz-title');
+        const matchingQuizDifficulty = document.getElementById('matching-quiz-difficulty');
+        const matchingQuizQuestion = document.getElementById('matching-quiz-question');
+        const matchingLeft = document.getElementById('matching-left');
+        const matchingRight = document.getElementById('matching-right');
+        const matchingLinesContainer = document.getElementById('matching-lines-container');
+        const matchingQuizFeedback = document.getElementById('matching-quiz-feedback');
+        const matchingFeedbackText = document.getElementById('matching-feedback-text');
+        const matchingXpGainFeedback = document.getElementById('matching-xp-gain-feedback');
+        const matchingXpGainValue = document.getElementById('matching-xp-gain-value');
+        const nextMatchingQuizBtn = document.getElementById('next-matching-quiz');
+        const checkMatchingAnswersBtn = document.getElementById('check-matching-answers');
+        
+        const rankingQuizTitle = document.getElementById('ranking-quiz-title');
+        const rankingQuizDifficulty = document.getElementById('ranking-quiz-difficulty');
+        const rankingQuizQuestion = document.getElementById('ranking-quiz-question');
+        const rankingQuizContainer = document.getElementById('ranking-quiz-container');
+        const rankingQuizFeedback = document.getElementById('ranking-quiz-feedback');
+        const rankingFeedbackText = document.getElementById('ranking-feedback-text');
+        const rankingXpGainFeedback = document.getElementById('ranking-xp-gain-feedback');
+        const rankingXpGainValue = document.getElementById('ranking-xp-gain-value');
+        const nextRankingQuizBtn = document.getElementById('next-ranking-quiz');
+        const checkRankingAnswersBtn = document.getElementById('check-ranking-answers');
+        
+        const identificationQuizTitle = document.getElementById('identification-quiz-title');
+        const identificationQuizDifficulty = document.getElementById('identification-quiz-difficulty');
+        const identificationQuizQuestion = document.getElementById('identification-quiz-question');
+        const identificationQuizContainer = document.getElementById('identification-quiz-container');
+        const identificationQuizFeedback = document.getElementById('identification-quiz-feedback');
+        const identificationFeedbackText = document.getElementById('identification-feedback-text');
+        const identificationXpGainFeedback = document.getElementById('identification-xp-gain-feedback');
+        const identificationXpGainValue = document.getElementById('identification-xp-gain-value');
+        const nextIdentificationQuizBtn = document.getElementById('next-identification-quiz');
+        const checkIdentificationAnswersBtn = document.getElementById('check-identification-answers');
+        
+        const finalXp = document.getElementById('final-xp');
+        const finalKnowledge = document.getElementById('final-knowledge');
+        const restartGameBtn = document.getElementById('restart-game');
+        
+        const totalXp = document.getElementById('total-xp');
+        const victoryStars = document.getElementById('victory-stars');
+        const newGameBtn = document.getElementById('new-game');
+
+        // Initialize game
+        function initializeGame() {
+            // Create city background
+            const cityBackground = document.createElement('div');
+            cityBackground.className = 'city-background';
+            gameMap.appendChild(cityBackground);
+
+            // Create buildings with different shapes
+            const buildingTypes = ['vertical', 'horizontal', 'steps', 'modern']; // Removed 'trapezoid', added 'vertical' and 'horizontal'
+            const buildingCount = 30;
+            const mapWidth = 2500;
+            const buildingSpacing = mapWidth / buildingCount;
+
+            for (let i = 0; i < buildingCount; i++) {
+                const building = document.createElement('div');
+                building.className = 'building';
+                
+                // Add random building type
+                const buildingType = buildingTypes[Math.floor(Math.random() * buildingTypes.length)];
+                building.classList.add(buildingType);
+                
+                // Random building properties with increased spacing
+                const width = Math.random() * 150 + 100;
+                const height = Math.random() * 200 + 100;
+                const left = i * buildingSpacing + (Math.random() * buildingSpacing * 0.8); // Increased spacing
+                
+                building.style.width = `${width}px`;
+                building.style.height = `${height}px`;
+                building.style.left = `${left}px`;
+                
+                // Add windows with different patterns based on building type
+                const windowPattern = getWindowPattern(buildingType);
+                addWindows(building, windowPattern);
+                
+                cityBackground.appendChild(building);
+            }
+
+            // Create road
+            const road = document.createElement('div');
+            road.className = 'road';
+            gameMap.appendChild(road);
+
+            // Create theory cells with reduced spacing
+            gameState.theories.forEach((theory, index) => {
+                const theoryCell = document.createElement('div');
+                theoryCell.className = 'theory-cell';
+                theoryCell.style.left = `${theory.position}px`;
+                theoryCell.dataset.theoryId = theory.id;
+                gameMap.appendChild(theoryCell);
+
+                theoryCell.addEventListener('click', () => {
+                    if (!gameState.player.currentTheory) {
+                        showTheory(theory);
+                    }
+                });
+
+                // Add quiz cell after each theory (only for theories with quizzes)
+                if (theory.quizzes && theory.quizzes.length > 0) {
+                    const quizCell = document.createElement('div');
+                    quizCell.className = 'quiz-cell';
+                    quizCell.style.left = `${theory.position + 100}px`;
+                    quizCell.style.backgroundColor = '#dc2626';
+                    quizCell.style.borderColor = '#b91c1c';
+                    quizCell.innerHTML = '<i class="fas fa-question"></i>';
+                    quizCell.dataset.theoryId = theory.id;
+                    gameMap.appendChild(quizCell);
+
+                    quizCell.addEventListener('click', () => {
+                        if (!gameState.player.currentTheory) {
+                            startQuiz(theory.id);
+                        }
+                    });
+                }
+            });
+
+            // Initialize player position
+            updatePlayerPosition();
+        }
+
+        function getWindowPattern(buildingType) {
+            switch(buildingType) {
+                case 'vertical':
+                    return {
+                        rows: 12,
+                        cols: 4,
+                        spacing: { x: 15, y: 15 },
+                        offset: { x: 10, y: 10 }
+                    };
+                case 'horizontal':
+                    return {
+                        rows: 5,
+                        cols: 10,
+                        spacing: { x: 15, y: 15 },
+                        offset: { x: 10, y: 10 }
+                    };
+                case 'steps':
+                    return {
+                        rows: 7,
+                        cols: 8,
+                        spacing: { x: 12, y: 14 },
+                        offset: { x: 8, y: 8 }
+                    };
+                case 'modern':
+                    return {
+                        rows: 9,
+                        cols: 8,
+                        spacing: { x: 12, y: 12 },
+                        offset: { x: 8, y: 8 }
+                    };
+                default:
+                    return {
+                        rows: 7,
+                        cols: 8,
+                        spacing: { x: 12, y: 14 },
+                        offset: { x: 8, y: 8 }
+                    };
+            }
+        }
+
+        function addWindows(building, pattern) {
+            for (let row = 0; row < pattern.rows; row++) {
+                for (let col = 0; col < pattern.cols; col++) {
+                    if (Math.random() > 0.15) { // 85% chance of window
+                        const window = document.createElement('div');
+                        window.className = 'building window';
+                        window.style.width = '16px';
+                        window.style.height = '24px';
+                        window.style.left = `${(col * pattern.spacing.x) + pattern.offset.x}px`;
+                        window.style.top = `${(row * pattern.spacing.y) + pattern.offset.y}px`;
+                        building.appendChild(window);
+                    }
+                }
+            }
+        }
+
+        function showTheory(theory) {
+            console.log('Showing theory:', theory); // Debug log
+            const modal = document.createElement('div');
+            modal.className = 'quiz-modal';
+            
+            // Create the content with the test button
+            let content = `
+                <button class="close-btn">&times;</button>
+                <h2>${theory.title}</h2>
+                ${theory.content}
+            `;
+            
+            // Add test button for the first theory
+            if (theory.id === 1) {
+                content += `
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="test-btn" style="
+                            background-color: #4f46e5;
+                            color: white;
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            transition: background-color 0.2s;
+                            font-size: 16px;
+                            font-weight: bold;
+                        ">Start Test</button>
+                    </div>
+                `;
+            }
+            
+            modal.innerHTML = content;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+            gameState.player.currentTheory = theory;
+            gameState.gameActive = false;
+
+            // Add event listeners
+            const closeBtn = modal.querySelector('.close-btn');
+            closeBtn.addEventListener('click', () => {
+                modal.remove();
+            gameState.gameActive = true;
+            });
+
+            // Add test button event listener if it exists
+            if (theory.id === 1) {
+                const testBtn = modal.querySelector('.test-btn');
+                if (testBtn) {
+                    testBtn.addEventListener('click', () => {
+                        console.log('Test button clicked'); // Debug log
+                        modal.remove();
+                        startTest(theory);
+                    });
+                }
+            }
+        }
+
+        function startTest(theory) {
+            const test = {
+                questions: [
+                    {
+                        type: 'matching',
+                        difficulty: 'Easy',
+                        prompt: 'Match each training component with its corresponding description. Draw a line to connect the item on the left with the correct item on the right.',
+                        leftItems: [
+                            'AI Fluency',
+                            'Critical Analysis',
+                            'Role-Context-Query Method',
+                            'Practical Exercise'
+                        ],
+                        rightItems: [
+                            'Master tools like ChatGPT, Claude, and Perplexity AI to solve real business problems with a focus on strategic implementation.',
+                            'Apply critical thinking for decision-making and problem-solving with AI tools.',
+                            'Learn precise formulation and task decomposition for effective AI interaction.',
+                            'Create an AI-assisted workflow optimization plan with clear metrics and validation steps.'
+                        ],
+                        correctMatches: [
+                            [0, 0],
+                            [1, 1],
+                            [2, 2],
+                            [3, 3]
+                        ]
+                    },
+                    {
+                        type: 'ranking',
+                        difficulty: 'Medium',
+                        prompt: 'Drag and drop the following training components to arrange them in the exact order they are presented in the training module.',
+                        items: [
+                            'Practical Exercise',
+                            'Critical Analysis',
+                            'Role-Context-Query Method',
+                            'AI Fluency'
+                        ],
+                        correctOrder: [3, 1, 2, 0]
+                    },
+                    {
+                        type: 'identification',
+                        difficulty: 'Hard',
+                        prompt: 'For each statement below, write the name of the training component it best describes. Use the list provided to identify the correct component.',
+                        statements: [
+                            'This component focuses on mastering AI tools like ChatGPT, Claude, and Perplexity AI to address real business challenges.',
+                            'This section encourages the use of critical thinking for effective decision-making and problem-solving with AI.',
+                            'In this part, learners practice creating an AI-assisted workflow optimization plan complete with metrics and validation.',
+                            'This method teaches how to precisely formulate tasks and decompose them for more effective AI interactions.'
+                        ],
+                        components: [
+                            'AI Fluency',
+                            'Critical Analysis',
+                            'Role-Context-Query Method',
+                            'Practical Exercise'
+                        ],
+                        correctAnswers: [
+                            'AI Fluency',
+                            'Critical Analysis',
+                            'Practical Exercise',
+                            'Role-Context-Query Method'
+                        ]
+                    }
+                ],
+                currentQuestion: 0
+            };
+
+            showTestQuestion(test, theory);
+        }
+
+        function showTestQuestion(test, theory) {
+            const question = test.questions[test.currentQuestion];
+            const modal = document.createElement('div');
+            modal.className = 'quiz-modal';
+            modal.innerHTML = `
+                <button class="close-btn">&times;</button>
+                <h2>Question ${test.currentQuestion + 1}: ${question.type} (${question.difficulty})</h2>
+                <p>${question.prompt}</p>
+                <div class="quiz-content"></div>
+                <button class="quiz-submit-btn">Submit Answer</button>
+                <div class="quiz-feedback"></div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+
+            const quizContent = modal.querySelector('.quiz-content');
+            const submitBtn = modal.querySelector('.quiz-submit-btn');
+            const feedback = modal.querySelector('.quiz-feedback');
+            const closeBtn = modal.querySelector('.close-btn');
+
+            switch (question.type) {
+                case 'matching':
+                    setupMatchingQuiz(question, quizContent, submitBtn, feedback);
+                    break;
+                case 'ranking':
+                    setupRankingQuiz(question, quizContent, submitBtn, feedback);
+                    break;
+                case 'identification':
+                    setupIdentificationQuiz(question, quizContent, submitBtn, feedback);
+                    break;
+            }
+
+            submitBtn.addEventListener('click', () => {
+                if (test.currentQuestion < test.questions.length - 1) {
+                    test.currentQuestion++;
+                    modal.remove();
+                    showTestQuestion(test, theory);
+                } else {
+                    gameState.player.completedTheories.push(theory.id);
+                    gameState.player.currentTheory = null;
+                    gameState.gameActive = true;
+                    modal.remove();
+                    addToLog('Test completed!');
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.remove();
+                gameState.gameActive = true;
+            });
+        }
+
+        function showQuiz(quiz, theory) {
+            const modal = document.createElement('div');
+            modal.className = 'quiz-modal';
+            modal.innerHTML = `
+                <button class="close-btn">&times;</button>
+                <h2>Quiz - ${quiz.difficulty}</h2>
+                <p>${quiz.question}</p>
+                <div class="quiz-content"></div>
+                <button class="quiz-submit-btn">Submit Answer</button>
+                <div class="quiz-feedback"></div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+
+            const quizContent = modal.querySelector('.quiz-content');
+            const submitBtn = modal.querySelector('.quiz-submit-btn');
+            const feedback = modal.querySelector('.quiz-feedback');
+            const closeBtn = modal.querySelector('.close-btn');
+
+            switch (quiz.type) {
+                case 'matching':
+                    setupMatchingQuiz(quiz, quizContent, submitBtn, feedback);
+                    break;
+                case 'ranking':
+                    setupRankingQuiz(quiz, quizContent, submitBtn, feedback);
+                    break;
+                case 'identification':
+                    setupIdentificationQuiz(quiz, quizContent, submitBtn, feedback);
+                    break;
+            }
+
+            submitBtn.addEventListener('click', () => {
+                const nextQuizIndex = theory.quizzes.indexOf(quiz) + 1;
+                if (nextQuizIndex < theory.quizzes.length) {
+                    modal.remove();
+                    showQuiz(theory.quizzes[nextQuizIndex], theory);
+                } else {
+                    gameState.player.completedTheories.push(theory.id);
+                    gameState.player.currentTheory = null;
+                    gameState.gameActive = true;
+                    modal.remove();
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.remove();
+                gameState.gameActive = true;
+            });
+        }
+
+        function setupMatchingQuiz(quiz, container, submitBtn, feedback) {
+            const leftContainer = document.createElement('div');
+            const rightContainer = document.createElement('div');
+            leftContainer.style.display = 'inline-block';
+            rightContainer.style.display = 'inline-block';
+            leftContainer.style.marginRight = '20px';
+
+            quiz.leftItems.forEach((item, index) => {
+                const option = document.createElement('div');
+                option.className = 'quiz-option';
+                option.textContent = item;
+                option.dataset.index = index;
+                option.draggable = true;
+                leftContainer.appendChild(option);
+            });
+
+            quiz.rightItems.forEach((item, index) => {
+                const target = document.createElement('div');
+                target.className = 'quiz-option';
+                target.textContent = item;
+                target.dataset.index = index;
+                rightContainer.appendChild(target);
+            });
+
+            container.appendChild(leftContainer);
+            container.appendChild(rightContainer);
+
+            // Add drag and drop functionality
+            const options = leftContainer.querySelectorAll('.quiz-option');
+            const targets = rightContainer.querySelectorAll('.quiz-option');
+            
+            options.forEach(option => {
+                option.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', option.dataset.index);
+                });
+            });
+
+            targets.forEach(target => {
+                target.addEventListener('dragover', e => {
+                    e.preventDefault();
+                });
+
+                target.addEventListener('drop', e => {
+                    e.preventDefault();
+                    const sourceIndex = parseInt(e.dataTransfer.getData('text/plain'));
+                    const targetIndex = parseInt(target.dataset.index);
+                    
+                    // Store the match
+                    if (!target.matches) target.matches = [];
+                    target.matches.push(sourceIndex);
+                    
+                    // Visual feedback
+                    const option = leftContainer.querySelector(`[data-index="${sourceIndex}"]`);
+                    option.style.opacity = '0.5';
+                });
+            });
+
+            submitBtn.addEventListener('click', () => {
+                const matches = Array.from(targets).map(target => target.matches || []);
+                const isCorrect = quiz.correctMatches.every(([left, right]) => {
+                    return matches[right] && matches[right].includes(left);
+                });
+
+                feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+                feedback.textContent = isCorrect ? 'Correct! Well done!' : 'Incorrect. Try again!';
+            });
+        }
+
+        function setupRankingQuiz(quiz, container, submitBtn, feedback) {
+            const list = document.createElement('div');
+            list.style.display = 'flex';
+            list.style.flexDirection = 'column';
+            list.style.gap = '10px';
+
+            quiz.items.forEach((item, index) => {
+                const option = document.createElement('div');
+                option.className = 'quiz-option';
+                option.textContent = item;
+                option.draggable = true;
+                option.dataset.index = index;
+                list.appendChild(option);
+            });
+
+            container.appendChild(list);
+
+            // Add drag and drop functionality
+            let draggedItem = null;
+
+            list.querySelectorAll('.quiz-option').forEach(item => {
+                item.addEventListener('dragstart', () => {
+                    draggedItem = item;
+                    setTimeout(() => item.style.display = 'none', 0);
+                });
+
+                item.addEventListener('dragend', () => {
+                    setTimeout(() => item.style.display = '', 0);
+                    draggedItem = null;
+                });
+
+                item.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    const box = item.getBoundingClientRect();
+                    const offsetY = e.clientY - box.top - box.height / 2;
+                    
+                    if (item !== draggedItem) {
+                        if (offsetY < 0) {
+                            item.parentNode.insertBefore(draggedItem, item);
+                        } else {
+                            item.parentNode.insertBefore(draggedItem, item.nextSibling);
+                        }
+                    }
+                });
+            });
+
+            submitBtn.addEventListener('click', () => {
+                const currentOrder = Array.from(list.children).map(item => parseInt(item.dataset.index));
+                const isCorrect = currentOrder.every((item, index) => item === quiz.correctOrder[index]);
+
+                feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+                feedback.textContent = isCorrect ? 'Correct! Perfect sequence!' : 'Incorrect. Try rearranging the items!';
+            });
+        }
+
+        function setupIdentificationQuiz(quiz, container, submitBtn, feedback) {
+            quiz.statements.forEach((statement, index) => {
+                const statementDiv = document.createElement('div');
+                statementDiv.className = 'quiz-option';
+                statementDiv.textContent = statement;
+                
+                const select = document.createElement('select');
+                select.style.marginLeft = '10px';
+                select.dataset.index = index;
+
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.textContent = 'Select component';
+                select.appendChild(defaultOption);
+
+                quiz.components.forEach(component => {
+                    const option = document.createElement('option');
+                    option.value = component;
+                    option.textContent = component;
+                    select.appendChild(option);
+                });
+
+                statementDiv.appendChild(select);
+                container.appendChild(statementDiv);
+            });
+
+            submitBtn.addEventListener('click', () => {
+                const answers = Array.from(container.querySelectorAll('select')).map(select => select.value);
+                const isCorrect = answers.every((answer, index) => answer === quiz.correctAnswers[index]);
+
+                feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+                feedback.textContent = isCorrect ? 'Correct! You\'ve identified all components correctly!' : 'Incorrect. Check your answers and try again!';
+            });
+        }
+
+        // Start smoke animation
+        function startSmokeAnimation() {
+            if (gameState.smokeInterval) {
+                clearInterval(gameState.smokeInterval);
+            }
+            
+            gameState.smokeInterval = setInterval(() => {
+                if (!gameState.gameActive) return;
+                
+                const smoke = document.createElement('div');
+                smoke.className = 'smoke';
+                smoke.style.left = `${player.offsetLeft + 80}px`;
+                smoke.style.top = `${player.offsetTop - 10}px`;
+                gameContainer.appendChild(smoke);
+                
+                setTimeout(() => {
+                    smoke.remove();
+                }, 2000);
+            }, 800);
+        }
+
+        // Generate paths for the player to follow
+        function generatePaths() {
+            // Create horizontal path
+            const mainPath = document.createElement('div');
+            mainPath.className = 'path horizontal-path';
+            mainPath.style.left = '0px';
+            mainPath.style.top = '230px';
+            mainPath.style.width = '10000px';
+            gameMap.appendChild(mainPath);
+            gameState.map.paths.push({
+                x1: 0,
+                y1: 250,
+                x2: 10000,
+                y2: 250,
+                type: 'horizontal'
+            });
+            
+            // Add theory and quiz cells
+            gameState.theories.forEach((theory, index) => {
+                // Create theory cell
+                createTheoryCell(theory);
+                
+                // Create quiz cells for each quiz
+                theory.quizzes.forEach((quiz, quizIndex) => {
+                    createQuizCell(theory, quiz, quizIndex);
+                });
+            });
+        }
+
+        // Place topic markers on the map
+        function placeTopicMarkers() {
+            gameState.theories.forEach(theory => {
+                const marker = document.createElement('div');
+                marker.className = 'topic-marker';
+                marker.style.left = `${theory.position - 75}px`;
+                marker.style.top = '200px';
+                marker.textContent = theory.title;
+                marker.dataset.theoryId = theory.id;
+                
+                // Add tooltip
+                marker.addEventListener('mouseenter', () => {
+                    tooltip.textContent = `Theory: ${theory.title}`;
+                    tooltip.style.left = `${theory.position - 40}px`;
+                    tooltip.style.top = '170px';
+                    tooltip.style.opacity = '1';
+                });
+                
+                marker.addEventListener('mouseleave', () => {
+                    tooltip.style.opacity = '0';
+                });
+                
+                gameMap.appendChild(marker);
+                gameState.map.theoryCells.push(theory);
+            });
+        }
+
+        // Create a theory cell
+        function createTheoryCell(theory) {
+            const cell = document.createElement('div');
+            cell.className = 'theory-cell';
+            cell.style.left = `${theory.position}px`;
+            cell.style.top = '220px';
+            cell.innerHTML = '<i class="fas fa-book"></i>';
+            cell.dataset.theoryId = theory.id;
+            
+            // Add tooltip
+            cell.addEventListener('mouseenter', () => {
+                tooltip.textContent = `Theory: ${theory.title}`;
+                tooltip.style.left = `${theory.position + 40}px`;
+                tooltip.style.top = '190px';
+                tooltip.style.opacity = '1';
+            });
+            
+            cell.addEventListener('mouseleave', () => {
+                tooltip.style.opacity = '0';
+            });
+            
+            // Add click handler
+            cell.addEventListener('click', () => {
+                if (!gameState.map.visitedTheories.includes(theory.id)) {
+                    showTheory(theory);
+                }
+            });
+            
+            gameMap.appendChild(cell);
+            gameState.map.theoryCells.push({
+                id: theory.id,
+                x: theory.position,
+                y: 220,
+                type: 'theory'
+            });
+        }
+
+        // Create a quiz cell
+        function createQuizCell(theory, quiz, index) {
+            const cell = document.createElement('div');
+            cell.className = 'quiz-cell';
+            cell.style.left = `${theory.position + 100 + (index * 100)}px`;
+            cell.style.top = '220px';
+            cell.innerHTML = '<i class="fas fa-question"></i>';
+            cell.dataset.theoryId = theory.id;
+            cell.dataset.quizIndex = index;
+            
+            // Add tooltip
+            cell.addEventListener('mouseenter', () => {
+                tooltip.textContent = `${quiz.difficulty} ${quiz.type} Quiz`;
+                tooltip.style.left = `${theory.position + 140 + (index * 100)}px`;
+                tooltip.style.top = '190px';
+                tooltip.style.opacity = '1';
+            });
+            
+            cell.addEventListener('mouseleave', () => {
+                tooltip.style.opacity = '0';
+            });
+            
+            // Add click handler
+            cell.addEventListener('click', () => {
+                if (gameState.map.visitedTheories.includes(theory.id) &&
+                    !gameState.map.completedQuizzes.includes(`${theory.id}-${index}`)) {
+                    startQuiz(theory, quiz, index);
+                } else if (!gameState.map.visitedTheories.includes(theory.id)) {
+                    addToLog("You need to complete the theory first!");
+                }
+            });
+            
+            gameMap.appendChild(cell);
+            gameState.map.quizCells.push({
+                id: `${theory.id}-${index}`,
+                x: theory.position + 100 + (index * 100),
+                y: 220,
+                type: 'quiz',
+                theoryId: theory.id,
+                quizIndex: index
+            });
+        }
+
+        // Update minimap
+        function updateMinimap() {
+            minimap.innerHTML = '';
+            
+            // Draw main path
+            const pathElement = document.createElement('div');
+            pathElement.className = 'path';
+            pathElement.style.left = '0';
+            pathElement.style.top = '45px';
+            pathElement.style.width = '200px';
+            pathElement.style.height = '10px';
+            minimap.appendChild(pathElement);
+            
+            // Draw chests
+            gameState.map.theoryCells.forEach(cell => {
+                if (!gameState.map.visitedTheories.includes(cell.id)) {
+                    const cellElement = document.createElement('div');
+                    cellElement.className = 'minimap-chest';
+                    cellElement.style.left = `${cell.x / 50}px`;
+                    cellElement.style.top = '48px';
+                    minimap.appendChild(cellElement);
+                }
+            });
+            
+            // Draw enemies
+            gameState.map.theoryCells.forEach(cell => {
+                if (!gameState.map.completedTests.some(e => e.id === cell.id)) {
+                    const cellElement = document.createElement('div');
+                    cellElement.className = 'minimap-enemy';
+                    cellElement.style.left = `${cell.x / 50}px`;
+                    cellElement.style.top = '38px';
+                    minimap.appendChild(cellElement);
+                }
+            });
+            
+            // Draw topics
+            gameState.theories.forEach(theory => {
+                const topicElement = document.createElement('div');
+                topicElement.className = 'minimap-chest';
+                topicElement.style.backgroundColor = '#6d28d9';
+                topicElement.style.width = '6px';
+                topicElement.style.height = '6px';
+                topicElement.style.borderRadius = '3px';
+                topicElement.style.left = `${theory.position / 50}px`;
+                topicElement.style.top = '48px';
+                minimap.appendChild(topicElement);
+            });
+            
+            // Draw player
+            const playerElement = document.createElement('div');
+            playerElement.className = 'minimap-player';
+            playerElement.style.left = `${gameState.player.x / 50}px`;
+            playerElement.style.top = '48px';
+            minimap.appendChild(playerElement);
+        }
+
+        // Update player position on screen
+        function updatePlayerPosition() {
+            player.style.left = `${gameState.player.x - 50}px`;
+            
+            // Center game map on player
+            const containerWidth = gameContainer.clientWidth;
+            const containerHeight = gameContainer.clientHeight;
+            
+            gameMap.style.left = `${containerWidth / 2 - gameState.player.x}px`;
+            gameMap.style.top = `${containerHeight / 2 - gameState.player.y}px`;
+            
+            // Update minimap
+            updateMinimap();
+            
+            // Check for collisions with chests and enemies
+            checkCollisions();
+        }
+
+        // Check for collisions with chests and enemies
+        function checkCollisions() {
+            if (!gameState.gameActive) return;
+            
+            // Check theory cell collisions
+            gameState.map.theoryCells.forEach(cell => {
+                if (!gameState.map.visitedTheories.includes(cell.id) && 
+                    Math.abs(gameState.player.x - cell.x) < 50 && 
+                    Math.abs(gameState.player.y - cell.y) < 30) {
+                    
+                    const theory = gameState.theories.find(t => t.id === cell.id);
+                    if (theory) {
+                        gameState.player.currentTheory = theory;
+                        showTheory(theory);
+                    }
+                }
+            });
+            
+            // Check quiz cell collisions
+            gameState.map.quizCells.forEach(cell => {
+                if (gameState.map.visitedTheories.includes(cell.theoryId) &&
+                    !gameState.map.completedQuizzes.includes(cell.id) &&
+                    Math.abs(gameState.player.x - cell.x) < 50 && 
+                    Math.abs(gameState.player.y - cell.y) < 30) {
+                    
+                    const theory = gameState.theories.find(t => t.id === cell.theoryId);
+                    if (theory) {
+                        startQuiz(theory, theory.quizzes[cell.quizIndex], cell.quizIndex);
+                    }
+                }
+            });
+
+            // Check for topic completion
+            if (gameState.currentTopic === 1 && 
+                gameState.player.x >= 2000 && 
+                !gameState.topics[0].completed) {
+                showTopicCompletion();
+            }
+        }
+
+        // Show theory content
+        function showTheory(theory) {
+            lessonTitle.textContent = theory.title;
+            lessonContent.innerHTML = theory.content;
+            lessonReward.textContent = "Complete to unlock quizzes";
+            
+            completeLessonBtn.innerHTML = "Complete Theory";
+            completeLessonBtn.dataset.theoryId = theory.id;
+            
+            lessonModal.style.display = 'flex';
+            gameState.gameActive = false;
+            
+            // Add to game log
+            addToLog(`Found theory: ${theory.title}`);
+        }
+
+        // Complete theory and start test
+        function completeTheory(theoryId) {
+            const theory = gameState.theories.find(t => t.id === parseInt(theoryId));
+            if (!theory) return;
+            
+            // Mark theory as completed
+            if (!gameState.map.visitedTheories.includes(theory.id)) {
+                gameState.map.visitedTheories.push(theory.id);
+                addToLog(`Completed theory: ${theory.title}`);
+                
+                // Add XP and knowledge
+                gameState.player.xp += 25;
+                gameState.player.knowledge += 15;
+                updateStats();
+            }
+            
+            // Close theory modal and resume game
+            lessonModal.style.display = 'none';
+            gameState.gameActive = true;
+            gameState.player.currentTheory = null;
+        }
+
+        // Start a quiz
+        function startQuiz(theoryId) {
+            const quiz = theoryId === 1 ? {
+                questions: [
+                    {
+                        type: 'matching',
+                        difficulty: 'Easy',
+                        prompt: 'Match each training component with its corresponding description. Draw a line to connect the item on the left with the correct item on the right.',
+                        leftItems: [
+                            'AI Fluency',
+                            'Critical Analysis',
+                            'Role-Context-Query Method',
+                            'Practical Exercise'
+                        ],
+                        rightItems: [
+                            'Master tools like ChatGPT, Claude, and Perplexity AI to solve real business problems with a focus on strategic implementation.',
+                            'Apply critical thinking for decision-making and problem-solving with AI tools.',
+                            'Learn precise formulation and task decomposition for effective AI interaction.',
+                            'Create an AI-assisted workflow optimization plan with clear metrics and validation steps.'
+                        ],
+                        correctMatches: [
+                            [0, 0],
+                            [1, 1],
+                            [2, 2],
+                            [3, 3]
+                        ]
+                    },
+                    {
+                        type: 'ranking',
+                        difficulty: 'Medium',
+                        prompt: 'Drag and drop the following training components to arrange them in the exact order they are presented in the training module.',
+                        items: [
+                            'Practical Exercise',
+                            'Critical Analysis',
+                            'Role-Context-Query Method',
+                            'AI Fluency'
+                        ],
+                        correctOrder: [3, 1, 2, 0]
+                    },
+                    {
+                        type: 'identification',
+                        difficulty: 'Hard',
+                        prompt: 'For each statement below, write the name of the training component it best describes. Use the list provided to identify the correct component.',
+                        statements: [
+                            'This component focuses on mastering AI tools like ChatGPT, Claude, and Perplexity AI to address real business challenges.',
+                            'This section encourages the use of critical thinking for effective decision-making and problem-solving with AI.',
+                            'In this part, learners practice creating an AI-assisted workflow optimization plan complete with metrics and validation.',
+                            'This method teaches how to precisely formulate tasks and decompose them for more effective AI interactions.'
+                        ],
+                        components: [
+                            'AI Fluency',
+                            'Critical Analysis',
+                            'Role-Context-Query Method',
+                            'Practical Exercise'
+                        ],
+                        correctAnswers: [
+                            'AI Fluency',
+                            'Critical Analysis',
+                            'Practical Exercise',
+                            'Role-Context-Query Method'
+                        ]
+                    }
+                ]
+            } : {
+                questions: [
+                    {
+                        type: 'classification',
+                        difficulty: 'Medium',
+                        prompt: 'Drag each of the following items into one of three categories based on its role in strategic planning for proactive AI implementation and personal development.',
+                        categories: [
+                            'Implementation Strategies',
+                            'Personal Development Strategies',
+                            'Illustration'
+                        ],
+                        items: [
+                            'Rapid Testing',
+                            'Change Management',
+                            'Tool Selection',
+                            'Skills Assessment',
+                            'Project Focus',
+                            'Continuous Learning',
+                            'Example',
+                            'Planning'
+                        ],
+                        correctClassification: {
+                            'Implementation Strategies': ['Rapid Testing', 'Change Management', 'Tool Selection', 'Planning'],
+                            'Personal Development Strategies': ['Skills Assessment', 'Project Focus', 'Continuous Learning'],
+                            'Illustration': ['Example']
+                        }
+                    },
+                    {
+                        type: 'ranking',
+                        difficulty: 'Hard',
+                        prompt: 'Reorder the following strategic planning components to reflect the exact sequence in which they appear in the text.',
+                        items: [
+                            'Change Management',
+                            'Continuous Learning',
+                            'Rapid Testing',
+                            'Tool Selection',
+                            'Planning',
+                            'Skills Assessment',
+                            'Project Focus',
+                            'Example'
+                        ],
+                        correctOrder: [2, 0, 3, 5, 6, 1, 7, 4]
+                    },
+                    {
+                        type: 'identification',
+                        difficulty: 'Easy',
+                        prompt: 'For each description below, drag the correct strategic planning component label from the list to match the description.',
+                        statements: [
+                            'Launch small pilots quickly, learn from results, and scale successful approaches.',
+                            'Drive adoption through clear communication and demonstrable benefits.',
+                            'Choose appropriate AI tools based on specific professional roles and needs.',
+                            'Practice AI skills through hands-on projects and exercises.'
+                        ],
+                        components: [
+                            'Rapid Testing',
+                            'Change Management',
+                            'Tool Selection',
+                            'Continuous Learning'
+                        ],
+                        correctAnswers: [
+                            'Rapid Testing',
+                            'Change Management',
+                            'Tool Selection',
+                            'Continuous Learning'
+                        ]
+                    }
+                ]
+            };
+
+            showQuizQuestion(quiz, 0);
+        }
+
+        function showQuizQuestion(quiz, questionIndex) {
+            const question = quiz.questions[questionIndex];
+            const modal = document.createElement('div');
+            modal.className = 'quiz-modal';
+            modal.innerHTML = `
+                <button class="close-btn">&times;</button>
+                <h2>Question ${questionIndex + 1}: ${question.type} (${question.difficulty})</h2>
+                <p>${question.prompt}</p>
+                <div class="quiz-content"></div>
+                <button class="quiz-submit-btn">Submit Answer</button>
+                <div class="quiz-feedback"></div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+
+            const quizContent = modal.querySelector('.quiz-content');
+            const submitBtn = modal.querySelector('.quiz-submit-btn');
+            const feedback = modal.querySelector('.quiz-feedback');
+            const closeBtn = modal.querySelector('.close-btn');
+
+            switch (question.type) {
+                        case 'matching':
+                    setupMatchingQuiz(question, quizContent, submitBtn, feedback);
+                            break;
+                        case 'ranking':
+                    setupRankingQuiz(question, quizContent, submitBtn, feedback);
+                            break;
+                        case 'identification':
+                    setupIdentificationQuiz(question, quizContent, submitBtn, feedback);
+                    break;
+                case 'classification':
+                    setupClassificationQuiz(question, quizContent, submitBtn, feedback);
+                            break;
+                    }
+
+            submitBtn.addEventListener('click', () => {
+                if (questionIndex < quiz.questions.length - 1) {
+                    modal.remove();
+                    showQuizQuestion(quiz, questionIndex + 1);
+                } else {
+                    gameState.player.currentTheory = null;
+                    gameState.gameActive = true;
+                    modal.remove();
+                    addToLog('Quiz completed!');
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.remove();
+                gameState.gameActive = true;
+            });
+        }
+
+        function setupClassificationQuiz(question, container, submitBtn, feedback) {
+            const categoriesContainer = document.createElement('div');
+            categoriesContainer.style.display = 'grid';
+            categoriesContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
+            categoriesContainer.style.gap = '20px';
+            categoriesContainer.style.marginBottom = '20px';
+
+            question.categories.forEach(category => {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category-container';
+                categoryDiv.innerHTML = `
+                    <h3 class="category-title">${category}</h3>
+                    <div class="category-items" data-category="${category}"></div>
+                `;
+                categoriesContainer.appendChild(categoryDiv);
+            });
+
+            const itemsContainer = document.createElement('div');
+            itemsContainer.className = 'items-container';
+            itemsContainer.style.display = 'flex';
+            itemsContainer.style.flexWrap = 'wrap';
+            itemsContainer.style.gap = '10px';
+            itemsContainer.style.marginBottom = '20px';
+
+            question.items.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'draggable-item';
+                itemDiv.textContent = item;
+                itemDiv.draggable = true;
+                itemDiv.dataset.item = item;
+                itemsContainer.appendChild(itemDiv);
+            });
+
+            container.appendChild(categoriesContainer);
+            container.appendChild(itemsContainer);
+
+            // Add drag and drop functionality
+            const draggableItems = itemsContainer.querySelectorAll('.draggable-item');
+            const categoryContainers = categoriesContainer.querySelectorAll('.category-items');
+
+            draggableItems.forEach(item => {
+                item.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', item.dataset.item);
+                    item.style.opacity = '0.5';
+                });
+
+                item.addEventListener('dragend', e => {
+                    item.style.opacity = '1';
+                });
+            });
+
+            categoryContainers.forEach(container => {
+                container.addEventListener('dragover', e => {
+                    e.preventDefault();
+                });
+
+                container.addEventListener('drop', e => {
+                    e.preventDefault();
+                    const itemName = e.dataTransfer.getData('text/plain');
+                    const item = itemsContainer.querySelector(`[data-item="${itemName}"]`);
+                    if (item) {
+                        container.appendChild(item);
+                    }
+                });
+            });
+
+            submitBtn.addEventListener('click', () => {
+                let correct = 0;
+                let total = 0;
+
+                Object.entries(question.correctClassification).forEach(([category, items]) => {
+                    const container = categoriesContainer.querySelector(`[data-category="${category}"]`);
+                    const placedItems = Array.from(container.children).map(item => item.dataset.item);
+                    
+                    items.forEach(item => {
+                        total++;
+                        if (placedItems.includes(item)) {
+                            correct++;
+                        }
+                    });
+                });
+
+                const score = Math.round((correct / total) * 100);
+                feedback.className = `quiz-feedback ${score >= 70 ? 'correct' : 'incorrect'}`;
+                feedback.textContent = `Score: ${score}%`;
+            });
+        }
+
+        // Check matching quiz answers
+        checkMatchingAnswersBtn.addEventListener('click', () => {
+            const quiz = gameState.theories[gameState.player.currentTheory.id - 1]
+                .quizzes[gameState.currentQuizIndex];
+            
+            let correct = 0;
+            gameState.matchingConnections.forEach(connection => {
+                if (quiz.correctMatches.some(match => 
+                    match[0] === connection.leftIndex && match[1] === connection.rightIndex
+                )) {
+                    correct++;
+                }
+            });
+            
+            const score = Math.round((correct / quiz.correctMatches.length) * 100);
+            matchingFeedbackText.textContent = `Score: ${score}%`;
+            matchingFeedbackText.className = score >= 70 ? 'text-green-400' : 'text-red-400';
+            matchingXpGainValue.textContent = score >= 70 ? '50' : '0';
+            
+            matchingQuizFeedback.classList.remove('hidden');
+            checkMatchingAnswersBtn.classList.add('hidden');
+            
+            if (score >= 70) {
+                completeQuiz(gameState.player.currentTheory.id, gameState.currentQuizIndex);
+            }
+        });
+
+        // Check ranking quiz answers
+        checkRankingAnswersBtn.addEventListener('click', () => {
+            const quiz = gameState.theories[gameState.player.currentTheory.id - 1]
+                .quizzes[gameState.currentQuizIndex];
+            
+            const currentOrder = Array.from(rankingQuizContainer.children)
+                .map(item => parseInt(item.dataset.index));
+            
+            let correct = 0;
+            currentOrder.forEach((index, position) => {
+                if (quiz.correctOrder[position] === index) {
+                    correct++;
+                }
+            });
+            
+            const score = Math.round((correct / quiz.correctOrder.length) * 100);
+            rankingFeedbackText.textContent = `Score: ${score}%`;
+            rankingFeedbackText.className = score >= 70 ? 'text-green-400' : 'text-red-400';
+            rankingXpGainValue.textContent = score >= 70 ? '50' : '0';
+            
+            rankingQuizFeedback.classList.remove('hidden');
+            checkRankingAnswersBtn.classList.add('hidden');
+            
+            if (score >= 70) {
+                completeQuiz(gameState.player.currentTheory.id, gameState.currentQuizIndex);
+            }
+        });
+
+        // Check identification quiz answers
+        checkIdentificationAnswersBtn.addEventListener('click', () => {
+            const quiz = gameState.theories[gameState.player.currentTheory.id - 1]
+                .quizzes[gameState.currentQuizIndex];
+            
+            const inputs = identificationQuizContainer.querySelectorAll('input');
+            let correct = 0;
+            
+            inputs.forEach((input, index) => {
+                if (input.value.trim().toLowerCase() === quiz.correctAnswers[index].toLowerCase()) {
+                    correct++;
+                }
+            });
+            
+            const score = Math.round((correct / quiz.correctAnswers.length) * 100);
+            identificationFeedbackText.textContent = `Score: ${score}%`;
+            identificationFeedbackText.className = score >= 70 ? 'text-green-400' : 'text-red-400';
+            identificationXpGainValue.textContent = score >= 70 ? '50' : '0';
+            
+            identificationQuizFeedback.classList.remove('hidden');
+            checkIdentificationAnswersBtn.classList.add('hidden');
+            
+            if (score >= 70) {
+                completeQuiz(gameState.player.currentTheory.id, gameState.currentQuizIndex);
+            }
+        });
+
+        // Add drag and drop for ranking quiz
+        rankingQuizContainer.addEventListener('dragover', e => {
+            e.preventDefault();
+            const dragging = document.querySelector('.dragging');
+            const siblings = [...rankingQuizContainer.querySelectorAll('.ranking-item:not(.dragging)')];
+            
+            const nextSibling = siblings.find(sibling => {
+                const box = sibling.getBoundingClientRect();
+                const offset = e.clientY - box.top - box.height / 2;
+                return offset < 0;
+            });
+            
+            if (nextSibling) {
+                rankingQuizContainer.insertBefore(dragging, nextSibling);
+            } else {
+                rankingQuizContainer.appendChild(dragging);
+            }
+        });
+
+        // Select matching item
+        function selectMatchingItem(side, index) {
+            // Clear previous selection on this side
+            const items = side === 'left' ? 
+                matchingLeft.querySelectorAll('.matching-item') : 
+                matchingRight.querySelectorAll('.matching-item');
+            
+            items.forEach(item => item.classList.remove('selected'));
+            
+            // Select the clicked item
+            const selectedItem = side === 'left' ? 
+                matchingLeft.querySelector(`[data-index="${index}"]`) : 
+                matchingRight.querySelector(`[data-index="${index}"]`);
+            
+            selectedItem.classList.add('selected');
+            gameState.selectedMatchingItems[side] = index;
+            
+            // If both sides have a selection, create a connection
+            if (gameState.selectedMatchingItems.left !== null && 
+                gameState.selectedMatchingItems.right !== null) {
+                createMatchingConnection(
+                    gameState.selectedMatchingItems.left,
+                    gameState.selectedMatchingItems.right
+                );
+                
+                // Clear selections
+                gameState.selectedMatchingItems = { left: null, right: null };
+                items.forEach(item => item.classList.remove('selected'));
+            }
+        }
+
+        // Create a connection line in the matching quiz
+        function createMatchingConnection(leftIndex, rightIndex) {
+            const leftItem = matchingLeft.querySelector(`[data-index="${leftIndex}"]`);
+            const rightItem = matchingRight.querySelector(`[data-index="${rightIndex}"]`);
+            
+            const leftRect = leftItem.getBoundingClientRect();
+            const rightRect = rightItem.getBoundingClientRect();
+            const containerRect = matchingQuizContainer.getBoundingClientRect();
+            
+            const startX = leftRect.right - containerRect.left;
+            const startY = leftRect.top + leftRect.height / 2 - containerRect.top;
+            const endX = rightRect.left - containerRect.left;
+            const endY = rightRect.top + rightRect.height / 2 - containerRect.top;
+            
+            const line = document.createElement('div');
+            line.className = 'matching-line';
+            line.style.left = `${startX}px`;
+            line.style.top = `${startY}px`;
+            
+            const length = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+            const angle = Math.atan2(endY - startY, endX - startX) * 180 / Math.PI;
+            
+            line.style.width = `${length}px`;
+            line.style.transform = `rotate(${angle}deg)`;
+            
+            matchingLinesContainer.appendChild(line);
+            
+            // Store the connection
+            gameState.matchingConnections.push({
+                leftIndex,
+                rightIndex,
+                element: line
+            });
+        }
+
+        // Complete quiz
+        function completeQuiz(theoryId, quizIndex) {
+            const quizId = `${theoryId}-${quizIndex}`;
+            if (!gameState.map.completedQuizzes.includes(quizId)) {
+                gameState.map.completedQuizzes.push(quizId);
+                
+                // Add XP and knowledge
+                gameState.player.xp += 50;
+                gameState.player.knowledge += 25;
+                updateStats();
+            }
+            
+            // Resume game
+            gameState.gameActive = true;
+            
+            // Check if all quizzes are completed
+            const theory = gameState.theories.find(t => t.id === theoryId);
+            const allQuizzesCompleted = theory.quizzes.every((_, index) => 
+                gameState.map.completedQuizzes.includes(`${theoryId}-${index}`)
+            );
+            
+            if (allQuizzesCompleted) {
+                addToLog(`Completed all quizzes for: ${theory.title}`);
+            }
+            
+            // Check for game completion
+            checkGameCompletion();
+        }
+
+        // Check if all theories and quizzes are completed
+        function checkGameCompletion() {
+            const allTheoriesCompleted = gameState.theories.every(theory => 
+                gameState.map.visitedTheories.includes(theory.id)
+            );
+            
+            const allQuizzesCompleted = gameState.theories.every(theory =>
+                theory.quizzes.every((_, index) => 
+                    gameState.map.completedQuizzes.includes(`${theory.id}-${index}`)
+                )
+            );
+            
+            if (allTheoriesCompleted && allQuizzesCompleted) {
+                showVictory();
+            }
+        }
+
+        // Add event listeners for movement buttons
+        upBtn.addEventListener('click', () => movePlayer('up'));
+        downBtn.addEventListener('click', () => movePlayer('down'));
+        leftBtn.addEventListener('click', () => movePlayer('left'));
+        rightBtn.addEventListener('click', () => movePlayer('right'));
+
+        // Add keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (!gameState.gameActive) return;
+            
+            switch(e.key) {
+                case 'ArrowUp':
+                    movePlayer('up');
+                    break;
+                case 'ArrowDown':
+                    movePlayer('down');
+                    break;
+                case 'ArrowLeft':
+                    movePlayer('left');
+                    break;
+                case 'ArrowRight':
+                    movePlayer('right');
+                    break;
+            }
+        });
+
+        // Move player function
+        function movePlayer(direction) {
+            if (!gameState.gameActive) return;
+            
+            const now = Date.now();
+            if (now - gameState.lastMoveTime < gameState.moveInterval) return;
+            gameState.lastMoveTime = now;
+            
+            const oldX = gameState.player.x;
+            const oldY = gameState.player.y;
+            let newX = oldX;
+            let newY = oldY;
+            
+            switch(direction) {
+                case 'left':
+                    newX = Math.max(50, oldX - gameState.moveSpeed);
+                    break;
+                case 'right':
+                    newX = Math.min(9950, oldX + gameState.moveSpeed);
+                    break;
+            }
+            
+            // Always allow horizontal movement on the main path
+            gameState.player.x = newX;
+            gameState.player.y = 250; // Keep train centered on the path
+            updatePlayerPosition();
+            
+            // Check for collisions after movement
+            checkCollisions();
+        }
+
+        // Update stats display
+        function updateStats() {
+            healthValue.textContent = `${gameState.player.health}/${gameState.player.maxHealth}`;
+            healthBar.style.width = `${(gameState.player.health / gameState.player.maxHealth) * 100}%`;
+            
+            knowledgeValue.textContent = gameState.player.knowledge;
+            knowledgeBar.style.width = `${(gameState.player.knowledge / gameState.player.maxKnowledge) * 100}%`;
+            
+            xpValue.textContent = gameState.player.xp;
+            nextLevel.textContent = gameState.player.nextLevelXp;
+            
+            // Update XP stars
+            xpStars.innerHTML = '';
+            const starCount = Math.min(5, Math.floor(gameState.player.xp / 20));
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('span');
+                star.className = 'xp-star';
+                star.innerHTML = '<i class="fas fa-star"></i>';
+                xpStars.appendChild(star);
+            }
+            
+            // Check for level up
+            if (gameState.player.xp >= gameState.player.nextLevelXp) {
+                levelUp();
+            }
+        }
+
+        // Level up function
+        function levelUp() {
+            gameState.player.level++;
+            gameState.player.nextLevelXp = gameState.player.level * 100;
+            gameState.player.maxHealth += 20;
+            gameState.player.health = gameState.player.maxHealth;
+            
+            addToLog(`Level Up! You are now level ${gameState.player.level}`);
+        }
+
+        // Add message to game log
+        function addToLog(message) {
+            const logEntry = document.createElement('p');
+            logEntry.className = 'text-gray-300';
+            logEntry.textContent = message;
+            gameLog.appendChild(logEntry);
+            gameLog.scrollTop = gameLog.scrollHeight;
+        }
+
+        // Show victory screen
+        function showVictory() {
+            gameState.gameActive = false;
+            totalXp.textContent = gameState.player.xp;
+            
+            // Add stars based on performance
+            victoryStars.innerHTML = '';
+            const starCount = Math.min(5, Math.floor(gameState.player.xp / 100));
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('span');
+                star.className = 'text-4xl text-yellow-400 mx-1';
+                star.innerHTML = '<i class="fas fa-star"></i>';
+                victoryStars.appendChild(star);
+            }
+            
+            victoryModal.style.display = 'flex';
+        }
+
+        // Initialize the game when the page loads
+        window.addEventListener('load', initializeGame);
+
+        // Add event listeners for modal buttons
+        closeLessonBtn.addEventListener('click', () => {
+            lessonModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+
+        completeLessonBtn.addEventListener('click', () => {
+            const theoryId = completeLessonBtn.dataset.theoryId;
+            completeTheory(theoryId);
+        });
+
+        nextQuizBtn.addEventListener('click', () => {
+            const currentTheory = gameState.player.currentTheory;
+            const currentQuizIndex = gameState.currentQuizIndex;
+            
+            quizModal.style.display = 'none';
+            completeQuiz(currentTheory.id, currentQuizIndex);
+        });
+
+        restartGameBtn.addEventListener('click', () => {
+            gameOverModal.style.display = 'none';
+            initializeGame();
+        });
+
+        newGameBtn.addEventListener('click', () => {
+            victoryModal.style.display = 'none';
+            initializeGame();
+        });
+
+        // Select answer in quiz
+        function selectAnswer(index) {
+            const question = gameState.currentTest.questions[gameState.currentTestIndex];
+            const options = quizOptions.querySelectorAll('.quiz-option');
+            
+            options.forEach(option => option.classList.remove('correct', 'incorrect'));
+            
+            if (index === question.correct) {
+                options[index].classList.add('correct');
+                feedbackText.textContent = 'Correct!';
+                feedbackText.className = 'font-bold text-lg text-center text-green-400';
+                xpGainValue.textContent = '10';
+                gameState.player.xp += 10;
+            } else {
+                options[index].classList.add('incorrect');
+                options[question.correct].classList.add('correct');
+                feedbackText.textContent = 'Incorrect!';
+                feedbackText.className = 'font-bold text-lg text-center text-red-400';
+                xpGainValue.textContent = '0';
+            }
+            
+            quizFeedback.classList.remove('hidden');
+            gameState.currentTestIndex++;
+        }
+
+        // Add close buttons for quiz modals
+        const closeMatchingQuizBtn = document.createElement('button');
+        closeMatchingQuizBtn.className = 'text-gray-400 hover:text-white absolute top-4 right-4';
+        closeMatchingQuizBtn.innerHTML = '<i class="fas fa-times"></i>';
+        closeMatchingQuizBtn.addEventListener('click', () => {
+            matchingQuizModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+        matchingQuizModal.querySelector('.modal-content').appendChild(closeMatchingQuizBtn);
+
+        const closeRankingQuizBtn = document.createElement('button');
+        closeRankingQuizBtn.className = 'text-gray-400 hover:text-white absolute top-4 right-4';
+        closeRankingQuizBtn.innerHTML = '<i class="fas fa-times"></i>';
+        closeRankingQuizBtn.addEventListener('click', () => {
+            rankingQuizModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+        rankingQuizModal.querySelector('.modal-content').appendChild(closeRankingQuizBtn);
+
+        const closeIdentificationQuizBtn = document.createElement('button');
+        closeIdentificationQuizBtn.className = 'text-gray-400 hover:text-white absolute top-4 right-4';
+        closeIdentificationQuizBtn.innerHTML = '<i class="fas fa-times"></i>';
+        closeIdentificationQuizBtn.addEventListener('click', () => {
+            identificationQuizModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+        identificationQuizModal.querySelector('.modal-content').appendChild(closeIdentificationQuizBtn);
+
+        // Add event listeners for quiz completion buttons
+        nextMatchingQuizBtn.addEventListener('click', () => {
+            matchingQuizModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+
+        nextRankingQuizBtn.addEventListener('click', () => {
+            rankingQuizModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+
+        nextIdentificationQuizBtn.addEventListener('click', () => {
+            identificationQuizModal.style.display = 'none';
+            gameState.gameActive = true;
+        });
+
+        // Add new function for topic completion
+        function showTopicCompletion() {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content bg-gradient-to-b from-gray-800 to-gray-900 border border-green-500">
+                    <h2 class="text-3xl font-bold text-green-400 mb-4 text-center">
+                        <i class="fas fa-trophy mr-2"></i> Congratulations!
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-6 text-center">
+                        You have completed the first topic: "Practical Skills & Proactive Implementation"
+                    </p>
+                    <button id="next-topic-btn" class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:from-green-700 hover:to-blue-700 transition transform hover:scale-105 active:scale-95 shadow-lg w-full">
+                        Proceed to Second Topic
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modal.style.display = 'flex';
+            gameState.gameActive = false;
+
+            document.getElementById('next-topic-btn').addEventListener('click', () => {
+                modal.remove();
+                switchToSecondTopic();
+            });
+        }
+
+        // Add function to switch to second topic
+        function switchToSecondTopic() {
+            gameState.currentTopic = 2;
+            gameState.topics[0].completed = true;
+            
+            // Clear existing city background
+            const existingCity = document.querySelector('.city-background');
+            if (existingCity) {
+                existingCity.remove();
+            }
+
+            // Create Egyptian background
+            const egyptianBackground = document.createElement('div');
+            egyptianBackground.className = 'city-background egyptian';
+            gameMap.appendChild(egyptianBackground);
+
+            // Create Egyptian buildings
+            const buildingTypes = ['pyramid', 'sphinx', 'obelisk'];
+            const buildingCount = 15; // Reduced from 25 to 15
+            const mapWidth = 2500;
+            const buildingSpacing = mapWidth / buildingCount;
+
+            for (let i = 0; i < buildingCount; i++) {
+                const building = document.createElement('div');
+                building.className = 'building';
+                
+                const buildingType = buildingTypes[Math.floor(Math.random() * buildingTypes.length)];
+                building.classList.add(buildingType);
+                
+                // Random building properties with increased spacing
+                const width = Math.random() * 150 + 100;
+                const height = Math.random() * 200 + 100;
+                const left = i * buildingSpacing + (Math.random() * buildingSpacing * 0.8); // Increased spacing
+                
+                building.style.width = `${width}px`;
+                building.style.height = `${height}px`;
+                building.style.left = `${left}px`;
+                
+                egyptianBackground.appendChild(building);
+            }
+
+            // Update road style
+            const road = document.querySelector('.road');
+            if (road) {
+                road.className = 'road egyptian';
+            }
+
+            // Reset player position
+            gameState.player.x = 100;
+            gameState.player.y = 250;
+            updatePlayerPosition();
+            
+            gameState.gameActive = true;
+            addToLog('Welcome to the Egyptian Knowledge topic!');
+        }
+    </script>
+</body>
+</html> 

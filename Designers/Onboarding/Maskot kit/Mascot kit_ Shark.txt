@@ -1,0 +1,202 @@
+Mascot KIT
+                    Prompt and description of Mascot
+                    Mascot environment (limit number of objects to 30, don't repeat environments for different mascots)
+
+
+Sharky the Office Shark: Mascot Kit Development Guide
+The following mascot kit provides a comprehensive framework for Sharky the Office Shark and future character designs. This standardized approach ensures consistency across your planned 30-character mascot collection while maintaining unique environmental elements for each character.
+
+Character Prompt Structure for AI Generation
+Developing effective prompts for AI image generators like Midjourney and DALL-E requires specific language and formatting to achieve consistent, high-quality results. The images provided show a well-executed 3D cartoon-style shark character with anthropomorphic features, professional attire, and expressive features.
+
+Base Character Prompt Template
+For generating consistent mascot characters across your collection, utilize this standardized prompt structure:
+
+3D cartoon [character type] mascot, anthropomorphic, [specific animal] with [distinctive feature], wearing [clothing description], [pose/action], [expression], [viewpoint], professional 3D rendering, solid [background color], character design, mascot logo --ar 1:1 --stylize 750
+
+This format creates standalone character renders with clean backgrounds for maximum adaptability. The specific styling parameters ensure consistency in the visual aesthetic across all mascots while allowing for individual character distinctions.
+
+Sharky's Specific Character Prompt
+Based on the provided images and description, Sharky's specific AI generation prompt would be:
+
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, standing upright, holding notebook and pencil, friendly smile showing teeth, front view, professional 3D rendering, solid light teal background, character design, mascot logo --ar 1:1 --stylize 750
+
+This prompt captures the essential elements visible in the reference images while incorporating the character brief specifications
+
+Character Design Documentation
+Core Character Elements
+Creating a cohesive mascot requires detailed documentation of physical and personality traits that remain consistent across all applications:
+
+Name: Sharky
+
+Species: Great White Shark (anthropomorphized)
+
+Core Personality Traits: Friendly, organized, helpful, detail-oriented
+
+Brand Alignment: Represents professionalism with an approachable demeanor
+
+Physical Appearance Specifications
+Based on the provided images and brief, Sharky's design includes:
+
+Body Structure: Upright bipedal shark with rounded, sturdy body
+
+Skin Tone: Light blue-gray, classic shark coloration
+
+Facial Features: Large expressive purple eyes, friendly smile with visible sharp teeth
+
+Proportions: Slightly oversized head (approximately 1/3 of total height), short fins/arms with functional hands
+
+Height Reference: Approximately 5-6 head units tall (cartoon proportions)
+
+Standard Outfit Components
+The consistent outfit elements that define Sharky include:
+
+Beige short-sleeved button-up shirt with collar
+
+Circular coral-design badge on left chest with name "SHARKY"
+
+Blue cargo shorts with functional pockets
+
+Brown leather belt with simple buckle
+
+Brown lace-up work boots (ankle height)
+
+Environmental Concept
+Sharky inhabits an underwater office that merges traditional workplace elements with oceanic features. This environment balances professional functionality with whimsical underwater elements, creating a distinctive workspace that reflects the character's nature.
+
+Color Palette and Lighting
+Primary Colors: Coral pink (#FF7F50), Sandy beige (#F5DEB3), Orange (#FFA500), Sea green (#2E8B57)
+
+Accent Colors: Pearl white (#FDEEF4), Deep coral (#E9967A)
+
+Lighting: Dappled sunlight effect from above, creating gentle light shafts
+
+Ambient Effects: Occasional rising bubbles, subtle underwater current movement
+
+Environment Object Inventory (50 Items)
+Workspace Essentials (15 items)
+Coral branch desk (main workstation)
+
+Woven seaweed office chair
+
+Giant clam shell laptop
+
+Spiral nautilus shell telephone
+
+Algae paper documents
+
+Seaweed pens/pencils
+
+Sand dollar coasters
+
+Anemone desk lamp
+
+Coral reef file cabinet
+
+Pebble paperweights
+
+Shell-shaped inbox/outbox trays
+
+Jellyfish light pendant (ceiling)
+
+Abalone shell business card holder
+
+Seaweed sticky notes
+
+Urchin pencil holder
+
+Office Environment Elements (15 items)
+Coral branch room dividers
+
+Pearl-inlaid floating shelves
+
+Blown glass bubble windows
+
+Fossilized coral tile flooring
+
+Wave-patterned drop ceiling
+
+Floating seaweed privacy curtains
+
+Shell-mosaic wall panels
+
+Bubble tube room dividers
+
+Driftwood door frames
+
+Bioluminescent path markers
+
+Kelp forest accent wall
+
+Fishing net storage hammocks
+
+Anchor wall hooks
+
+Decorative life preservers
+
+Gradient sand floor transitions
+
+Decorative & Personal Elements (20 items)
+Framed starfish awards
+
+Potted sea anemones
+
+Miniature treasure chest drawer
+
+Salvaged ship wheel wall clock
+
+Nautical map wall art
+
+Vintage diving helmet display
+
+Model shipwreck miniature
+
+Compass-themed desk mat
+
+Glass bottle with message inside
+
+Decorative barnacle clusters
+
+Small aquarium with tropical fish
+
+Conch shell speaker
+
+Historical harpoon display (mounted)
+
+Ship's bell meeting signal
+
+Shark-themed motivational posters
+
+Underwater photography prints
+
+Colored sea glass paperweights
+
+Shark tooth collection (framed)
+
+Antique diving boots bookends
+
+Glowing jellyfish desk toy
+
+Implementation Guidelines for Mascot Series
+To maintain consistency across your planned 30-mascot collection, each character should follow these guidelines:
+
+Character Consistency Requirements
+Maintain consistent proportions and rendering style across all characters
+
+Use the same technical specifications in AI prompts
+
+Ensure similar level of detail and complexity
+
+Apply consistent lighting and shading techniques
+
+Environment Differentiation Strategy
+For your additional mascots, each environment should:
+
+Follow the same 50-item limit
+
+Maintain completely unique item sets (no repetition between characters)
+
+Reflect the character's species and personality
+
+Include the same categories (workspace essentials, environment elements, decorative items)
+                    

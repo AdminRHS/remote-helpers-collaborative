@@ -1,0 +1,663 @@
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes waterFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+@keyframes leafShake {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.game-tile {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transition: all 0.2s ease;
+    background-size: cover;
+}
+
+/* Terrain styles */
+.grass {
+    background-color: #7cba6b;
+    background-image: radial-gradient(circle, #9ed98b 10%, transparent 10%), 
+                      radial-gradient(circle, #9ed98b 10%, transparent 10%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+.dirt {
+    background-color: #b88c64;
+    background-image: linear-gradient(45deg, #c99e76 25%, transparent 25%, transparent 75%, #c99e76 75%),
+                      linear-gradient(45deg, #c99e76 25%, transparent 25%, transparent 75%, #c99e76 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+.sand {
+    background-color: #e3c9a5;
+    background-image: radial-gradient(circle, #f0d9b8 20%, transparent 20%);
+    background-size: 15px 15px;
+}
+.water {
+    background: linear-gradient(45deg, #4d9be6, #2a6fc9);
+    position: relative;
+    overflow: hidden;
+    animation: waterFlow 3s linear infinite;
+}
+.deep-water {
+    background-color: #2a6fc9;
+    background-image: linear-gradient(45deg, #3a7bd9 25%, transparent 25%, transparent 75%, #3a7bd9 75%),
+                      linear-gradient(45deg, #3a7bd9 25%, transparent 25%, transparent 75%, #3a7bd9 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    animation: waterFlow 2s linear infinite;
+}
+.forest {
+    background-color: #2d5a30;
+    position: relative;
+    overflow: hidden;
+}
+.forest::before {
+    content: '🌲';
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rock {
+    background-color: #8a8a8a;
+    background-image: linear-gradient(45deg, #9e9e9e 25%, transparent 25%, transparent 75%, #9e9e9e 75%),
+                      linear-gradient(45deg, #9e9e9e 25%, transparent 25%, transparent 75%, #9e9e9e 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+.mountain {
+    background: linear-gradient(45deg, #6d6d6d, #8a8a8a);
+    position: relative;
+    overflow: hidden;
+}
+.mountain::before {
+    content: '⛰️';
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.magic-barrier {
+    background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ff00cc);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+/* Game elements */
+.player {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 7px;
+    left: 7px;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.player:hover {
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
+}
+
+.scroll {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #9333ea;
+    border: 2px solid #7e22ce;
+    border-radius: 5px;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    animation: float 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.scroll::before {
+    content: '📜';
+    font-size: 20px;
+}
+
+.chest {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fbbf24;
+    border: 2px solid #d97706;
+    border-radius: 5px;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    animation: bounce 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #92400e;
+}
+
+.chest::before {
+    content: '⭐';
+    font-size: 20px;
+}
+
+.enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ef4444;
+    border: 2px solid #dc2626;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    animation: shake 0.5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.enemy::before {
+    content: '💀';
+    font-size: 20px;
+}
+
+.hidden-enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #6b7280;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+.tree {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #5e3a21;
+    top: 10px;
+    left: 15px;
+    z-index: 1;
+}
+.tree::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: #3a7d3e;
+    border-radius: 50%;
+    top: -20px;
+    left: -10px;
+    z-index: 1;
+    animation: leafShake 3s infinite alternate;
+}
+.rock-obstacle {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: #8a8a8a;
+    border-radius: 5px;
+    top: 15px;
+    left: 10px;
+    z-index: 4;
+}
+.river-obstacle {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    background-color: #4d9be6;
+    top: 17px;
+    left: 0;
+    z-index: 3;
+    animation: waterFlow 3s linear infinite;
+}
+.bridge {
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background-color: #5e3a21;
+    top: 20px;
+    left: 0;
+    z-index: 4;
+}
+
+.portal {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal::before {
+    content: '🌀';
+    font-size: 24px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* UI Elements */
+.progress-bar {
+    transition: width 0.5s ease;
+}
+
+#knowledge-journal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.knowledge-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: transform 0.2s ease;
+}
+
+.knowledge-item:hover {
+    transform: translateX(5px);
+}
+
+.knowledge-item .book-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    flex-shrink: 0;
+}
+
+.knowledge-item .book-icon::before {
+    content: '📚';
+    font-size: 24px;
+}
+
+.knowledge-item .topic-title {
+    color: #e5e7eb;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Different colors for book icons */
+.knowledge-item:nth-child(3n+1) .book-icon {
+    background-color: #3b82f6;
+}
+
+.knowledge-item:nth-child(3n+2) .book-icon {
+    background-color: #10b981;
+}
+
+.knowledge-item:nth-child(3n+3) .book-icon {
+    background-color: #8b5cf6;
+}
+
+/* Hide the text content */
+.knowledge-item h4,
+.knowledge-item p {
+    display: none;
+}
+
+.knowledge-item:hover {
+    transform: translateX(5px);
+    background-color: #374151;
+}
+.knowledge-item:hover h4 {
+    color: #60a5fa;
+}
+.knowledge-item:hover p {
+    color: #e5e7eb;
+}
+
+/* Inventory items */
+.inventory-item {
+    position: relative;
+}
+
+.inventory-item:hover::after {
+    content: attr(title);
+    position: fixed;
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 99999;
+    pointer-events: none;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: none;
+    width: auto;
+    overflow: visible;
+}
+
+/* Fireworks Animation */
+.fireworks {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.fireworks::before,
+.fireworks::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    box-shadow: 
+        -120px -218.66667px blue,
+        248px -16.66667px #00ff84,
+        190px 16.33333px #002bff,
+        -113px -308.66667px #ff009d,
+        -109px -287.66667px #ffb300,
+        -50px -313.66667px #ff006e,
+        226px -31.66667px #ff4000,
+        180px -351.66667px #ff00d0,
+        -12px -338.66667px #00f6ff,
+        220px -388.66667px #99ff00,
+        -69px -27.66667px #ff0400,
+        -111px -339.66667px #6200ff,
+        155px -237.66667px #00ddff,
+        -152px -380.66667px #00ffd0,
+        -50px -37.66667px #00ffdd,
+        -95px -175.66667px #a6ff00,
+        -88px 10.33333px #0d00ff,
+        112px -309.66667px #005eff,
+        69px -415.66667px #ff00a6,
+        168px -100.66667px #ff004c,
+        -244px 24.33333px #ff6600,
+        97px -325.66667px #ff0066,
+        -211px -182.66667px #00ffa2,
+        236px -126.66667px #b700ff,
+        140px -196.66667px #9000ff,
+        125px -175.66667px #00bbff,
+        118px -381.66667px #ff002f,
+        144px -111.66667px #ffae00,
+        36px -78.66667px #f600ff,
+        -63px -196.66667px #c800ff,
+        -218px -227.66667px #d4ff00,
+        -134px -377.66667px #ea00ff,
+        -36px -412.66667px #ff00d4,
+        209px -106.66667px #00fff2,
+        91px -278.66667px #000dff,
+        -22px -191.66667px #9dff00,
+        139px -392.66667px #a6ff00,
+        56px -2.66667px #0099ff,
+        -156px -276.66667px #ea00ff,
+        -163px -233.66667px #00fffb,
+        -238px -346.66667px #00ff73,
+        62px -363.66667px #0088ff,
+        244px -170.66667px #0062ff,
+        224px -142.66667px #b300ff,
+        141px -208.66667px #9000ff,
+        211px -285.66667px #ff6600,
+        181px -128.66667px #1e00ff,
+        90px -123.66667px #c800ff,
+        189px 70.33333px #00ffc8,
+        -18px -383.66667px #00ff33,
+        100px -6.66667px #ff008c;
+    animation: fireworks 3s infinite;
+}
+
+.fireworks::after {
+    animation-delay: 1.25s;
+}
+
+@keyframes fireworks {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Victory Modal Styles */
+#victory-modal {
+    z-index: 9000;
+}
+
+#victory-modal .bg-gray-800 {
+    position: relative;
+    z-index: 9001;
+    overflow: hidden;
+}
+
+.victory-content {
+    position: relative;
+    z-index: 9002;
+}
+
+#victory-modal h2,
+#victory-modal p,
+#victory-modal div,
+#victory-modal button {
+    position: relative;
+    z-index: 9002;
+}
+
+.decorative-trees {
+    z-index: 1;
+}
+
+.fireworks {
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Container styles */
+#inventory {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.inventory-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    cursor: help;
+}
+
+.water::before {
+    content: '🌊';
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal:not(.hidden) {
+    display: flex !important;
+}
+
+#knowledge-modal .bg-gray-800 {
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#knowledge-content {
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+#knowledge-content p {
+    margin-bottom: 1rem;
+}
+
+#knowledge-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#knowledge-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tooltips */
+.knowledge-item:hover::after {
+    content: attr(title);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 99999;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#victory-modal .fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#victory-modal .fireworks::before,
+#victory-modal .fireworks::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    box-shadow: 
+        -120px -218.66667px blue,
+        248px -16.66667px #00ff84,
+        190px 16.33333px #002bff,
+        -113px -308.66667px #ff009d,
+        -109px -287.66667px #ffb300,
+        -50px -313.66667px #ff006e,
+        226px -31.66667px #ff4000,
+        180px -351.66667px #ff00d0,
+        -12px -338.66667px #00f6ff,
+        220px -388.66667px #99ff00;
+    animation: fireworks 2s infinite;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+@keyframes fireworks {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0) rotate(360deg);
+        opacity: 0;
+    }
+} 

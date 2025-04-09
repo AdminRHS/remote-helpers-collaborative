@@ -1,0 +1,2717 @@
+{
+    "profession": "hr manager",
+    "department": "managers",
+    "tasks": [
+        {
+            "task_name": "plan text communication strategies",
+            "responsibilities": "planning employee communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Identify the purpose and urgency of the message using a priority matrix in Notion.",
+                "2. Select appropriate formats (email, memo, text) for different types of messages in Google Docs templates.",
+                "3. Define the target recipients for each type of communication using filters in CRM.",
+                "4. Schedule strategic communications planning sessions via Discord."
+            ],
+            "type": "text communication",
+            "parameters": [
+                "format",
+                "confidentiality",
+                "urgency",
+                "recipient"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs",
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct text communications with employees",
+            "responsibilities": "conducting employee communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Draft messages according to the planned format and urgency in Google Docs.",
+                "2. Ensure all communications meet confidentiality standards.",
+                "3. Distribute messages through CRM integrated with email and texting tools.",
+                "4. Monitor and log communication delivery and receipt in CRM for tracking."
+            ],
+            "type": "text communication",
+            "parameters": [
+                "format",
+                "confidentiality",
+                "urgency",
+                "recipient"
+            ],
+            "tools": [
+                "Google Docs",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "plan voice communication strategies",
+            "responsibilities": "planning employee communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Establish the tone and clarity objectives for all oral communications in a Notion checklist.",
+                "2. Define expected duration for different types of calls and meetings using Google Calendar.",
+                "3. Identify and list participants for each type of communication in CRM."
+            ],
+            "type": "voice communication",
+            "parameters": [
+                "tone",
+                "clarity",
+                "duration",
+                "participant"
+            ],
+            "tools": [
+                "Notion",
+                "Google Calendar",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct voice communications with employees",
+            "responsibilities": "conducting employee communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Conduct scheduled calls and meetings using Discord, ensuring adherence to defined tone and clarity.",
+                "2. Use a timer to keep voice communications within planned durations."
+            ],
+            "type": "voice communication",
+            "parameters": [
+                "tone",
+                "clarity",
+                "duration",
+                "participant"
+            ],
+            "tools": [
+                "Discord",
+                "Google Calendar"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "draft employees contracts",
+            "responsibilities": "drafting contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Gather all necessary details about the employment terms using CRM.",
+                "2. Use Google Docs to draft the contract, ensuring all parameters (subject, service, responsibilities, etc.) are included and clearly defined.",
+                "3. Review the draft for compliance with labor laws in Notion.",
+                "4. Secure managerial approval via Zoho Sign.",
+                "5. Store the finalized contract securely in Google Drive and distribute copies through email."
+            ],
+            "type": "employees contracts",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Notion",
+                "Zoho Sign",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "renew employees contracts",
+            "responsibilities": "renewing contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Review the existing contract terms in Zoho Sign for approaching renewals.",
+                "2. Update the terms based on feedback and new organizational policies using Google Docs.",
+                "3. Conduct a review session via Discord to discuss changes with the employee.",
+                "4. Finalize the renewal with signatures through Zoho Sign.",
+                "5. Archive the renewed contract in Google Drive and notify accounting department via Discord."
+            ],
+            "type": "employees contracts",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "Zoho Sign",
+                "Google Docs",
+                "Discord",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "draft presale contracts",
+            "responsibilities": "drafting contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Collaborate with the sales and accounting department using Notion to outline contract specifics based on the presale agreement.",
+                "2. Draft the contract in Google Docs, detailing all negotiated terms including project scope and conditions.",
+                "3. Review the initial draft in a meeting hosted on Discord with stakeholders.",
+                "4. Obtain necessary approvals via Zoho Sign.",
+                "5. Distribute the finalized contract using Gmail and store securely in Google Drive."
+            ],
+            "type": "presale contract",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs",
+                "Discord",
+                "Zoho Sign",
+                "Gmail",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "renew presale contracts",
+            "responsibilities": "renewing contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Assess the current presale contract stored in Zoho Sign to determine necessary updates or extensions.",
+                "2. Update contract terms in Google Docs to reflect new project timelines or scope changes.",
+                "3. Review updated terms with the project team using Discord for final feedback.",
+                "4. Secure renewed agreement signatures with Zoho Sign.",
+                "5. Notify all parties of contract renewal via Discord and store the document in Google Drive."
+            ],
+            "type": "presale contract",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "Zoho Sign",
+                "Google Docs",
+                "Discord",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "enter data into candidates database",
+            "responsibilities": "entering data into databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Collect all candidate information, ensuring completeness of details such as name, age, contact, and resume.",
+                "2. Use CRM to input profile and general information systematically.",
+                "3. Attach documents like resumes, portfolios, and educational records in the CRM.",
+                "4. Input additional data such as videos, interviews, and photographs into the database.",
+                "5. Review and verify the accuracy of all data entered before finalizing."
+            ],
+            "type": "candidates database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "responsibility",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "project",
+                "date",
+                "activity",
+                "task",
+                "document",
+                "correspondence",
+                "report"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update records in candidates database",
+            "responsibilities": "updating databases records",
+            "objects": "databases",
+            "checklists": [
+                "1. Retrieve the candidate profile to be updated from the CRM.",
+                "2. Make necessary changes to the candidate’s information such as contact details, updating resumes, or interview notes.",
+                "3. Ensure all updates adhere to data privacy standards.",
+                "4. Save and confirm updates in the CRM.",
+                "5. Log the update activity and notify relevant department heads via Discord."
+            ],
+            "type": "candidates database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "responsibility",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "project",
+                "date",
+                "activity",
+                "task",
+                "document",
+                "correspondence",
+                "report"
+            ],
+            "tools": [
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "enter data into interviews database",
+            "responsibilities": "entering data into databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Collect all relevant interview data including notes, evaluations, and candidate responses.",
+                "2. Input detailed interview records into the interviews database using a standardized format in the CRM.",
+                "3. Attach supplementary materials such as interview recordings or assessment results.",
+                "4. Cross-verify entered data for accuracy and completeness.",
+                "5. Securely store the data, ensuring access is restricted to authorized personnel only."
+            ],
+            "type": "interviews database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "responsibility",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "project",
+                "date",
+                "activity",
+                "task",
+                "document",
+                "correspondence",
+                "report"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update records in interviews database",
+            "responsibilities": "updating databases records",
+            "objects": "databases",
+            "checklists": [
+                "1. Access the specific interview record that requires updating in the CRM.",
+                "2. Update the record with new information such as post-interview evaluations or additional candidate feedback.",
+                "3. Ensure all updates are logged and tracked for audit purposes.",
+                "4. Confirm the accuracy of updated details and secure approval if required.",
+                "5. Notify relevant team members of the updates to maintain transparency."
+            ],
+            "type": "interviews database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "responsibility",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "project",
+                "date",
+                "activity",
+                "task",
+                "document",
+                "correspondence",
+                "report"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "enter data into employees database",
+            "responsibilities": "entering data into databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Collect all necessary employee details including personal, job, and performance information.",
+                "2. Use a CRM system to systematically input all data including profiles, general info, and job-related details.",
+                "3. Attach supporting documents and multimedia files, such as resumes and videos, securely in the database.",
+                "4. Review and validate all entries for accuracy and completeness before final submission.",
+                "5. Log entry activities and ensure access control and data privacy standards are maintained."
+            ],
+            "type": "employees database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "responsibility",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "project",
+                "date",
+                "activity",
+                "task",
+                "document",
+                "correspondence",
+                "report"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update records in employees database",
+            "responsibilities": "updating databases records",
+            "objects": "databases",
+            "checklists": [
+                "1. Retrieve the employee record needing updates from the CRM.",
+                "2. Make necessary updates such as changes in contact details, job responsibilities, or performance data.",
+                "3. Ensure that all updated information adheres to data protection regulations.",
+                "4. Save changes and confirm the update with automated verification emails to relevant departments.",
+                "5. Document the changes in the system and notify accounting department via Discord."
+            ],
+            "type": "employees database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "responsibility",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "project",
+                "date",
+                "activity",
+                "task",
+                "document",
+                "correspondence",
+                "report"
+            ],
+            "tools": [
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "enter data into video database",
+            "responsibilities": "entering data into databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Ensure all video files are reviewed for quality and compliance with privacy standards before uploading.",
+                "2. Organize videos by candidate name, interview date, and orientation in the database.",
+                "3. Use Google Drive or a similar secure platform to store videos, maintaining a clear naming convention and folder structure.",
+                "4. Log each entry with detailed metadata including format and size to facilitate easy retrieval.",
+                "5. Implement security measures to restrict access to authorized personnel only."
+            ],
+            "type": "video database",
+            "parameters": [
+                "quality",
+                "privacy",
+                "script",
+                "orientation",
+                "size",
+                "amount",
+                "format"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update records in video database",
+            "responsibilities": "updating databases records",
+            "objects": "databases",
+            "checklists": [
+                "1. Access the specific video record that requires updating, ensuring proper identification through metadata.",
+                "2. Update video files with enhanced quality or adjusted privacy settings as required.",
+                "3. Re-organize or re-script videos if necessary to maintain consistency and relevance.",
+                "4. Confirm updates with a thorough review and save changes securely.",
+                "5. Record the update process in the database log and notify the recruitment team of changes."
+            ],
+            "type": "video database",
+            "parameters": [
+                "quality",
+                "privacy",
+                "script",
+                "orientation",
+                "size",
+                "amount",
+                "format"
+            ],
+            "tools": [
+                "CRM",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create profiles for employees",
+            "responsibilities": "creating employees profiles",
+            "objects": "employees",
+            "checklists": [
+                "1. Collect all relevant communication and event participation details.",
+                "2. Enter information into the CRM, including contact methods and feedback mechanisms.",
+                "3. Document involvement in internal and external events for comprehensive profiling.",
+                "4. Review and verify the completeness and accuracy of the profile."
+            ],
+            "type": "employee",
+            "parameters": [
+                "message",
+                "call",
+                "faq",
+                "feedback",
+                "notification",
+                "event"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update profiles for employees",
+            "responsibilities": "updating employees profiles",
+            "objects": "employees",
+            "checklists": [
+                "1. Retrieve existing employee profile from the CRM.",
+                "2. Update contact details, communication preferences, and feedback records.",
+                "3. Adjust event participation records and notification settings as needed.",
+                "4. Save updates and confirm changes through an automated system review.",
+                "5. Notify the employee of updated profile details via Gmail or internal message."
+            ],
+            "type": "employee",
+            "parameters": [
+                "message",
+                "call",
+                "faq",
+                "feedback",
+                "notification",
+                "event"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "create profiles for presale employees",
+            "responsibilities": "creating employees profiles",
+            "objects": "employees",
+            "checklists": [
+                "1. Input initial communication details including preferred message and call information into the CRM.",
+                "2. Establish FAQ access tailored to presale engagements.",
+                "3. Set feedback channels to gather initial impressions and ongoing interactions.",
+                "4. Ensure data privacy compliance for sensitive candidate information."
+            ],
+            "type": "presale employee",
+            "parameters": [
+                "message",
+                "call",
+                "faq",
+                "feedback",
+                "notification"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update profiles for presale employees",
+            "responsibilities": "updating employees profiles",
+            "objects": "employees",
+            "checklists": [
+                "1. Access presale employee profile in the CRM.",
+                "2. Update communication methods and feedback loops based on latest interactions.",
+                "3. Refresh FAQ and notification preferences to align with current collaboration terms.",
+                "4. Review updates for accuracy and completeness.",
+                "5. Inform the presale employee of profile updates and new opportunities via preferred communication channels."
+            ],
+            "type": "presale employee",
+            "parameters": [
+                "message",
+                "call",
+                "faq",
+                "feedback",
+                "notification"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create profiles for project employees",
+            "responsibilities": "creating employees profiles",
+            "objects": "employees",
+            "checklists": [
+                "1. Gather detailed project assignment and role information for entry into the CRM.",
+                "2. Document primary communication channels and feedback processes relevant to project work.",
+                "3. Establish access to project-specific FAQs.",
+                "4. Validate all entered data for project alignment and employee role clarity."
+            ],
+            "type": "project employee",
+            "parameters": [
+                "message",
+                "call",
+                "faq",
+                "feedback",
+                "notification"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update profiles for project employees",
+            "responsibilities": "updating employees profiles",
+            "objects": "employees",
+            "checklists": [
+                "1. Retrieve the project employee’s profile from the CRM.",
+                "2. Update communication preferences and project feedback mechanisms as project phases progress.",
+                "3. Ensure that FAQs are current with project updates.",
+                "4. Confirm all updates and communicate changes to the employee through the updated profile."
+            ],
+            "type": "project employee",
+            "parameters": [
+                "message",
+                "call",
+                "faq",
+                "feedback",
+                "notification"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "plan agendas for holiday events",
+            "responsibilities": "planning event agendas",
+            "objects": "events",
+            "checklists": [
+                "1. Select the date and holiday to be celebrated based on cultural significance using Google Calendar.",
+                "2. Define holiday-specific traditions and activities relevant to the cultural context in a meeting via Zoom.",
+                "3. Schedule event activities and allocate durations for each.",
+                "4. Prepare communication materials to inform all participants using Discord.",
+                "5. Finalize the list of participants and ensure logistics are managed via a shared document in Google Drive."
+            ],
+            "type": "holidays event",
+            "parameters": [
+                "date",
+                "holiday",
+                "traditions",
+                "activities",
+                "duration",
+                "communication",
+                "schedule",
+                "participants"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Zoom",
+                "Discord",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct holiday events",
+            "responsibilities": "conducting events",
+            "objects": "events",
+            "checklists": [
+                "1. Execute the planned activities as per the schedule.",
+                "2. Monitor the event progress and handle real-time communication via mobile devices.",
+                "3. Engage participants through interactive and culturally relevant activities, ensuring inclusion.",
+                "4. Document the event proceedings and participant feedback using digital recording tools and feedback forms on Google Forms.",
+                "5. Post-event, conduct a debrief session via Discord to discuss outcomes and areas for improvement."
+            ],
+            "type": "holidays event",
+            "parameters": [
+                "date",
+                "holiday",
+                "traditions",
+                "activities",
+                "duration",
+                "communication",
+                "schedule",
+                "participants"
+            ],
+            "tools": [
+                "Google Forms",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "plan agendas for birthday events",
+            "responsibilities": "planning event agendas",
+            "objects": "events",
+            "checklists": [
+                "1. Set dates for birthday celebrations monthly using CRM.",
+                "2. Congratulations to employees via a shared channel in Discord"
+            ],
+            "type": "birthdays event",
+            "parameters": [
+                "date",
+                "holiday",
+                "traditions",
+                "activities",
+                "duration",
+                "communication",
+                "schedule",
+                "participants"
+            ],
+            "tools": [
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "plan agendas for team building events",
+            "responsibilities": "planning event agendas",
+            "objects": "events",
+            "checklists": [
+                "1. Define the objectives for team building, focusing on enhancing specific skills or relationships, in a strategic meeting via Discord.",
+                "2. Plan a series of activities that promote teamwork and communication, detailing each in Discord.",
+                "3. Arrange a schedule that maximizes participant engagement without impacting work commitments, managed through Google Calendar.",
+                "4. Develop and distribute pre-event communication to prepare participants, using Discord."
+            ],
+            "type": "team buildings event",
+            "parameters": [
+                "date",
+                "objectives",
+                "duration",
+                "activities",
+                "communication",
+                "schedule",
+                "participants"
+            ],
+            "tools": [
+                "Discord",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct team building events",
+            "responsibilities": "conducting events",
+            "objects": "events",
+            "checklists": [
+                "1. Conduct team building activities according to the schedule, ensuring each activity aligns with the predefined objectives.",
+                "2. Use real-time communication tools to keep activities on track and address any immediate needs.",
+                "3. Facilitate open feedback during the event to adjust activities dynamically.",
+                "4. Record participation and outcomes for each activity to evaluate effectiveness."
+            ],
+            "type": "team buildings event",
+            "parameters": [
+                "date",
+                "objectives",
+                "duration",
+                "activities",
+                "communication",
+                "schedule",
+                "participants"
+            ],
+            "tools": [
+                "Zoom",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "identify faqs for candidates",
+            "responsibilities": "identifying faqs",
+            "objects": "faqs",
+            "checklists": [
+                "1. Review feedback from recent applicants and hiring managers to determine common queries using tools like Google Forms.",
+                "2. Compile a list of potential FAQs related to the recruitment and onboarding process.",
+                "3. Organize FAQs by category in a document on Google Docs.",
+                "4. Validate the relevance of each FAQ with the HR team during a meeting on Discord.",
+                "5. Prioritize FAQs based on frequency of questions and importance to the application process."
+            ],
+            "type": "candidates faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Google Forms",
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write answers for candidates faq",
+            "responsibilities": "writing faq answers",
+            "objects": "faqs",
+            "checklists": [
+                "1. Draft clear and concise answers for each identified FAQ using information from HR and accounting departments.",
+                "2. Utilize company guidelines and policy documents stored in Google Drive to ensure accuracy.",
+                "3. Review the answers with department heads via Discord to ensure they align with company policies and culture.",
+                "4. Format the FAQ document for easy navigation and readability using Notion.",
+                "5. Get final approval from the communication department."
+            ],
+            "type": "candidates faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Google Drive",
+                "Discord",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update content for candidates faq",
+            "responsibilities": "updating faq content",
+            "objects": "faqs",
+            "checklists": [
+                "1. Regularly review and update FAQ content based on changes in company policies.",
+                "2. Incorporate new information from recent queries and feedback received through Google Forms.",
+                "3. Ensure all updates are legally compliant.",
+                "4. Monitor the impact of FAQ updates on applicant queries and adjust as necessary."
+            ],
+            "type": "candidates faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Forms"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "identify faqs for employees",
+            "responsibilities": "identifying faqs",
+            "objects": "faqs",
+            "checklists": [
+                "1. Gather input from employee surveys and HR inquiries to identify common concerns and questions.",
+                "2. Collaborate with various departments to compile a comprehensive list of FAQs in Notion.",
+                "3. Classify FAQs into categories like benefits, work procedures, and career development.",
+                "4. Assess the need for new FAQs during departmental meetings held over Discord.",
+                "5. Ensure FAQs address all key employee touchpoints, refining the list for relevance and breadth."
+            ],
+            "type": "employees faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Notion",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write answers for employees faq",
+            "responsibilities": "writing faq answers",
+            "objects": "faqs",
+            "checklists": [
+                "1. Draft answers that provide clarity and guidance, using official policy documents as references.",
+                "2. Coordinate with department leads to ensure accuracy and completeness via Discord.",
+                "3. Style and format the FAQs for user-friendliness using web design principles in Notion.",
+                "4. Review the content with the internal communications team for consistency.",
+                "5. Approve and publish the FAQs on the internal company portal."
+            ],
+            "type": "employees faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Notion",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update content for employees faq",
+            "responsibilities": "updating faq content",
+            "objects": "faqs",
+            "checklists": [
+                "1. Regularly evaluate and update FAQs based on policy changes and employee feedback, using a scheduled review process.",
+                "2. Integrate changes recommended by HR and compliance teams to ensure up-to-date information.",
+                "3. Confirm updates with key stakeholders via Discord.",
+                "4. Re-publish the updated FAQs on the internal network and notify employees.",
+                "5. Track usage and feedback on FAQ updates."
+            ],
+            "type": "employees faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Google Drive",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "identify faqs for before project",
+            "responsibilities": "identifying faqs",
+            "objects": "faqs",
+            "checklists": [
+                "1. Gather input from project managers and client liaisons to compile common questions about new assignments using a shared Google Doc.",
+                "2. Focus on logistical details such as location, language requirements, and shift timings.",
+                "3. Organize a brainstorming session via Discord to ensure all relevant project aspects are covered, including communication protocols and bonus structures.",
+                "4. Prioritize the FAQs based on urgency and impact on project success.",
+                "5. Validate the questions with senior management and on-site team leads for comprehensiveness."
+            ],
+            "type": "before project faq",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "bonus"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write answers for before project faq",
+            "responsibilities": "writing faq answers",
+            "objects": "faqs",
+            "checklists": [
+                "1. Draft clear, concise answers for each FAQ, ensuring they provide actionable guidance for project preparations.",
+                "2. Use internal databases and previous project reports to ensure answers are accurate and informed.",
+                "3. Review all answers with project management and HR to ensure alignment with company policies and client expectations.",
+                "4. Format the FAQs for easy readability and quick access using Notion.",
+                "5. Obtain final approval from the compliance team to ensure all information is up-to-date and legally sound."
+            ],
+            "type": "before project faq",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "bonus"
+            ],
+            "tools": [
+                "Notion",
+                "CRM"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update content for before project faq",
+            "responsibilities": "updating faq content",
+            "objects": "faqs",
+            "checklists": [
+                "1. Regularly review and update FAQs based on new project experiences and changes in client requirements.",
+                "2. Incorporate feedback from teams recently returned from assignments to keep the FAQs relevant.",
+                "3. Ensure all logistical updates such as time zone changes and shift updates are immediately reflected.",
+                "4. Republish the updated FAQs on the internal portal and notify project teams via Discord.",
+                "5. Monitor the usage and effectiveness of FAQs to adjust content proactively based on analytics."
+            ],
+            "type": "before project faq",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "bonus"
+            ],
+            "tools": [
+                "Notion",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "identify faqs for after project",
+            "responsibilities": "identifying faqs",
+            "objects": "faqs",
+            "checklists": [
+                "1. Consult with project teams and client service managers to gather common post-project queries.",
+                "2. Analyze project debriefs and closure reports to identify recurring themes and potential FAQs.",
+                "3. Organize FAQs into categories such as project wrap-up, client feedback, and tool decommissioning.",
+                "4. Validate potential FAQs in a team meeting to ensure they address all significant post-project concerns.",
+                "5. Document and prioritize FAQs for development based on their frequency and impact."
+            ],
+            "type": "after project faq",
+            "parameters": [
+                "client",
+                "project",
+                "responsibility",
+                "task",
+                "duration",
+                "tool",
+                "experience"
+            ],
+            "tools": [
+                "Notion",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write answers for after project faq",
+            "responsibilities": "writing faq answers",
+            "objects": "faqs",
+            "checklists": [
+                "1. Develop detailed answers that address the specifics of project completion and follow-up processes.",
+                "2. Collaborate with accounting department to ensure compliance and accuracy in answers related to contracts and financials.",
+                "3. Format and prepare FAQs for dissemination through the Discord or Notion.",
+                "4. Review and revise answers with stakeholders for clarity and completeness before publishing."
+            ],
+            "type": "after project faq",
+            "parameters": [
+                "client",
+                "project",
+                "responsibility",
+                "task",
+                "duration",
+                "tool",
+                "experience"
+            ],
+            "tools": [
+                "Notion",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update content for after project faq",
+            "responsibilities": "updating faq content",
+            "objects": "faqs",
+            "checklists": [
+                "1. Regularly update FAQs to reflect changes in CRM following a scheduled review cycle.",
+                "2. Integrate new insights and solutions discovered during recent project completions.",
+                "3. Ensure updated FAQs are compliant with any new regulations or corporate standards.",
+                "4. Communicate updates to all relevant stakeholders via internal messages or digital dashboards.",
+                "5. Use feedback tools to gauge the effectiveness of the FAQ updates and adjust as necessary."
+            ],
+            "type": "after project faq",
+            "parameters": [
+                "client",
+                "project",
+                "responsibility",
+                "task",
+                "duration",
+                "tool",
+                "experience"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Google Forms"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "collect feedback forms from candidates",
+            "responsibilities": "collecting feedback forms",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Design feedback forms that cover all aspects of the recruitment process using Google Forms.",
+                "2. Distribute the forms via Telegram after interviews or application stages.",
+                "3. Remind candidates to submit feedback through follow-up emails or during final interview communications.",
+                "4. Collect and store feedback securely in the company CRM for analysis.",
+                "5. Ensure compliance with data privacy laws while handling candidate information."
+            ],
+            "type": "candidates feedback",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Google Forms",
+                "Telegram",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "analyze feedback data from candidates",
+            "responsibilities": "analyzing feedback data",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Compile feedback data from the CRM into a central database.",
+                "2. Use data analysis tools like Excel to identify trends and areas for improvement.",
+                "3. Create reports highlighting key feedback points and potential enhancements.",
+                "4. Present findings to the HR team and discuss actionable changes in a meeting via Discord.",
+                "5. Update recruitment processes based on analysis and feedback loops."
+            ],
+            "type": "candidates feedback",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "CRM",
+                "Excel",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "collect feedback forms from employees",
+            "responsibilities": "collecting feedback forms",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Create comprehensive feedback forms tailored to various departments.",
+                "2. Circulate forms during quarterly reviews or via internal communication channels like Discord.",
+                "3. Offer incentives for completing feedback to enhance response rates.",
+                "4. Securely gather and compile feedback for confidentiality.",
+                "5. Regularly update the feedback collection process to incorporate current issues and concerns."
+            ],
+            "type": "employees feedback",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Google Forms",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "analyze feedback data from employees",
+            "responsibilities": "analyzing feedback data",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Identify patterns and common themes that could indicate systemic issues or highlight strengths.",
+                "2. Implement changes based on feedback to foster a better working environment."
+            ],
+            "type": "employees feedback",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule"
+            ],
+            "tools": [
+                "Excel",
+                "Google Forms",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "collect feedback forms from projects",
+            "responsibilities": "collecting feedback forms",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Develop project-specific feedback forms that address key project deliverables and teamwork aspects.",
+                "2. Distribute these forms to both team members and clients at project close.",
+                "3. Store all received feedback in a structured format.",
+                "4. Ensure feedback is anonymized if shared across teams for learning purposes."
+            ],
+            "type": "project feedback",
+            "parameters": [
+                "client",
+                "project",
+                "responsibility",
+                "task",
+                "duration",
+                "tool",
+                "experience"
+            ],
+            "tools": [
+                "Google Forms",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "analyze feedback data from projects",
+            "responsibilities": "analyzing feedback data",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Consolidate feedback from various stakeholders to assess project success and areas needing improvement.",
+                "2. Create detailed reports that outline strengths and weaknesses identified through feedback."
+            ],
+            "type": "project feedback",
+            "parameters": [
+                "client",
+                "project",
+                "responsibility",
+                "task",
+                "duration",
+                "tool",
+                "experience"
+            ],
+            "tools": [
+                "Excel",
+                "Discord",
+                "CRM"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "write instruction manuals for professions",
+            "responsibilities": "writing instruction manuals",
+            "objects": "instructions",
+            "checklists": [
+                "1. Gather comprehensive details about each profession's role and responsibilities from HR and department heads.",
+                "2. Compile tasks and tools associated with each position into a structured outline in Google Docs.",
+                "3. Develop step-by-step guides for each task, integrating best practices and training recommendations.",
+                "4. Review and refine the manuals with subject matter experts to ensure accuracy and practicality.",
+                "5. Finalize the manuals with clear formatting and accessible language to ensure usability across the organization."
+            ],
+            "type": "profession instruction",
+            "parameters": [
+                "profession",
+                "position",
+                "responsibility",
+                "task",
+                "tool",
+                "training",
+                "development"
+            ],
+            "tools": [
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update instruction guidelines for professions",
+            "responsibilities": "updating instruction guidelines",
+            "objects": "instructions",
+            "checklists": [
+                "1. Review existing instruction manuals to identify areas needing updates or improvements, using feedback collected via internal surveys or direct reports.",
+                "2. Consult with department heads and experienced employees to integrate new industry standards or company policies into the guidelines.",
+                "3. Make revisions in the original documents, tracked via version control in Google Docs.",
+                "4. Obtain approval for the updated guidelines from senior management to ensure compliance.",
+                "5. Archive old versions and replace them with updated guidelines in the company database."
+            ],
+            "type": "profession instruction",
+            "parameters": [
+                "profession",
+                "position",
+                "responsibility",
+                "task",
+                "tool",
+                "training",
+                "development"
+            ],
+            "tools": [
+                "Google Docs"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "distribute profession instructions to staff",
+            "responsibilities": "distributing instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Prepare digital copies of the finalized instruction manuals for distribution using Google Docs to preserve formatting and content integrity.",
+                "2. Upload the instruction manuals to the company database.",
+                "3. Announce the availability of new manuals during team meetings or through company-wide announcements on platforms like Discord.",
+                "4. Offer follow-up Q&A sessions or workshops to address any questions or areas of uncertainty about the new guidelines, using platforms like Discord or in-person meetings."
+            ],
+            "type": "profession instruction",
+            "parameters": [
+                "profession",
+                "position",
+                "responsibility",
+                "task",
+                "tool",
+                "training",
+                "development"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write instruction manuals for departments",
+            "responsibilities": "writing instruction manuals",
+            "objects": "instructions",
+            "checklists": [
+                "1. Conduct meetings with department heads to gather specific needs and expectations using Discord for virtual discussions.",
+                "2. Compile information on each department’s standard operating procedures, policies, and role expectations into a structured manual using Google Docs.",
+                "3. Incorporate feedback from initial drafts reviewed by department leaders to ensure accuracy and relevancy.",
+                "4. Utilize professional formatting tools in Google Docs to enhance readability and accessibility.",
+                "5. Finalize the manual for approval by senior management to ensure it aligns with overall organizational policies."
+            ],
+            "type": "department instruction",
+            "parameters": [
+                "department",
+                "expectation",
+                "position"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update instruction guidelines for departments",
+            "responsibilities": "updating instruction guidelines",
+            "objects": "instructions",
+            "checklists": [
+                "1. Regularly review the existing departmental manuals to identify sections that require updates due to changes in procedures or policies, using feedback from staff and updates in company strategy.",
+                "2. Collaborate with department heads to revise outdated content and integrate new guidelines, utilizing collaborative editing tools like Google Docs.",
+                "3. Validate changes with accounting department to ensure all updates adhere to current laws and internal regulations.",
+                "4. Document all changes meticulously for audit purposes and maintain version control.",
+                "5. Obtain final approval for the updated manuals from senior management before distribution."
+            ],
+            "type": "department instruction",
+            "parameters": [
+                "department",
+                "expectation",
+                "position"
+            ],
+            "tools": [
+                "Google Docs"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "distribute department instructions to staff",
+            "responsibilities": "distributing instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Prepare electronic versions of the finalized departmental instruction manuals for distribution, ensuring secure access on the company Google drive.",
+                "2. Send out announcements via Discord to notify department members of the new or updated manuals.",
+                "3. Organize departmental meetings or training sessions to walk through the new guidelines, ensuring understanding and implementation, potentially using web conferencing.",
+                "4. Monitor the implementation of the new guidelines through follow-up surveys or direct feedback to assess effectiveness and address any concerns.",
+                "5. Provide ongoing support and updates as necessary based on the feedback and evolving department needs."
+            ],
+            "type": "department instruction",
+            "parameters": [
+                "department",
+                "expectation",
+                "position"
+            ],
+            "tools": [
+                "Google Drive",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "write instruction manuals for projects",
+            "responsibilities": "writing instruction manuals",
+            "objects": "instructions",
+            "checklists": [
+                "1. Collaborate with sales managers to gather all relevant information, including objectives, client requirements, and specific project responsibilities using collaborative tools like Discord.",
+                "2. Draft a comprehensive manual in Google Docs that outlines project tasks, timelines, and communication protocols.",
+                "3. Include sections on handling different time zones and language considerations for international projects.",
+                "4. Review the draft with key stakeholders, incorporating their feedback to ensure all project nuances are accurately captured.",
+                "5. Finalize the manual, ensuring it adheres to company standards and client expectations, and gain approval from senior management."
+            ],
+            "type": "project instruction",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update instruction guidelines for projects",
+            "responsibilities": "updating instruction guidelines",
+            "objects": "instructions",
+            "checklists": [
+                "1. Periodically review the project instruction manuals to identify areas needing updates, especially after major project reviews or client feedback sessions.",
+                "2. Update the guidelines to reflect new project insights or changes in client requirements, using a version control system to track changes effectively.",
+                "3. Consult with project leads and client representatives to validate the updates, ensuring they meet the current needs and compliance standards.",
+                "4. Re-distribute the updated manuals via an internal portal, ensuring all project team members are notified of the changes.",
+                "5. Hold a briefing session, possibly via Discord, to explain significant updates to the project team and address any questions."
+            ],
+            "type": "project instruction",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "distribute project instructions to staff",
+            "responsibilities": "distributing instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Prepare digital copies of the project instruction manuals for distribution, ensuring they are formatted for easy accessibility and use on multiple devices.",
+                "2. Upload the final manuals to a secure, central location such as the company intranet where all team members can easily access them.",
+                "3. Announce the availability of the manuals through company communication channels like Discord highlighting the importance of reviewing the documents.",
+                "4. Monitor the usage of the instructions, and gather feedback on their effectiveness and clarity through follow-up emails or during project meetings.",
+                "5. Provide training or walkthrough sessions if complex projects require detailed explanation of the guidelines."
+            ],
+            "type": "project instruction",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report"
+            ],
+            "tools": [
+                "Google Drive",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "schedule department meetings",
+            "responsibilities": "scheduling meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Identify the main objectives and goals for the meeting based on departmental needs using input from team leads.",
+                "2. Choose an appropriate time and date that accommodates all attendees.",
+                "3. Reserve a meeting space or set up a virtual meeting room on Discord.",
+                "4. Prepare an agenda that outlines topics of discussion, including productivity issues and specific tasks or problems.",
+                "5. Confirm attendance and send out reminders one day prior to the meeting."
+            ],
+            "type": "department meeting",
+            "parameters": [
+                "department",
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inform employees about department meetings",
+            "responsibilities": "informing employees about meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Send out the meeting agenda along with the date, time, and virtual meeting link using Discord.",
+                "2. Include a list of topics to be discussed and request for any additional points to consider adding to the agenda.",
+                "3. Provide clear instructions on how to prepare for the meeting, suggesting pre-meeting materials or reports to review.",
+                "4. Use reminders on the day of the meeting to ensure high attendance."
+            ],
+            "type": "department meeting",
+            "parameters": [
+                "department",
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "conduct department meetings",
+            "responsibilities": "conducting meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Start the meeting by reviewing the agenda and objectives.",
+                "2. Facilitate discussions around each agenda item, allowing time for feedback and input from all participants.",
+                "3. Use collaborative tools like Google Docs for real-time note-taking and sharing of relevant data or documents during the meeting.",
+                "4. Address any productivity issues or departmental problems as prioritized in the agenda.",
+                "5. Conclude the meeting with a summary of discussions, decisions made, and outline the next steps or tasks assigned."
+            ],
+            "type": "department meeting",
+            "parameters": [
+                "department",
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "summarize information from department meetings",
+            "responsibilities": "summarising meeting information",
+            "objects": "meetings",
+            "checklists": [
+                "1. Highlight key action items, assigned tasks, and deadlines for follow-up.",
+                "2. Schedule follow-ups or next meetings based on the tasks and objectives discussed."
+            ],
+            "type": "department meeting",
+            "parameters": [
+                "department",
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "schedule team meetings",
+            "responsibilities": "scheduling meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Determine the main objectives and goals for the meeting, consulting with team leaders and key stakeholders.",
+                "2. Choose an optimal time and date that accommodates all team members.",
+                "3. Set up a virtual meeting link on Discord.",
+                "4. Draft and distribute a detailed agenda ahead of the meeting."
+            ],
+            "type": "team meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inform employees about team meetings",
+            "responsibilities": "informing employees about meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Send a reminder via Discord, reiterating the meeting details, agenda, and objectives.",
+                "2. Encourage team members to prepare any necessary materials or questions they have regarding the agenda topics.",
+                "3. Provide instructions for accessing the meeting space or virtual link, especially if there are participants from different locations.",
+                "4. Highlight the importance of punctuality and full participation to meet the meeting's goals.",
+                "5. Address any accessibility concerns to ensure all team members can participate effectively."
+            ],
+            "type": "team meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "conduct team meetings",
+            "responsibilities": "conducting meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Start the meeting by reviewing the agenda and goals, ensuring clarity and alignment among team members.",
+                "2. Facilitate open discussions on each agenda item, allowing time for each member to provide input or feedback.",
+                "3. Utilize collaborative tools for note-taking and sharing documents during the meeting, such as Google Docs.",
+                "4. Address and strategize on productivity improvements and problem-solving as planned.",
+                "5. Conclude the meeting by summarizing decisions and assigning tasks or responsibilities, ensuring clarity on next steps."
+            ],
+            "type": "team meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "summarize information from team meetings",
+            "responsibilities": "summarising meeting information",
+            "objects": "meetings",
+            "checklists": [
+                "1. Compile a comprehensive summary of the meeting, including key points discussed, decisions made, and action items.",
+                "2. Highlight assigned tasks, responsibilities, and deadlines clearly in the summary.",
+                "3. Store the summary in a centralized digital location accessible to the team for future reference, such as Google Drive.",
+                "4. Follow up on action items and monitor progress through regular updates or subsequent meetings."
+            ],
+            "type": "team meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "feedback"
+            ],
+            "tools": [
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "schedule project meetings",
+            "responsibilities": "scheduling meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Identify all relevant project details, including client information, project scope, and team responsibilities.",
+                "2. Coordinate with team members across different time zones to find a suitable meeting time.",
+                "3. Arrange for a virtual meeting platform such as Discord, ensuring all necessary technology is ready.",
+                "4. Distribute the meeting agenda that includes objectives, current status, and discussion points.",
+                "5. Confirm availability of all participants and send out reminders one day before the meeting."
+            ],
+            "type": "project meeting",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "experience"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inform employees about project meetings",
+            "responsibilities": "informing employees about meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Send detailed information about the meeting agenda, including the date, time, location or video conferencing link, using Discord.",
+                "2. Include instructions on necessary preparations or documents to bring to the meeting, emphasizing the importance of each member’s input.",
+                "3. Provide background materials or previous reports relevant to the meeting discussions via Discord or a shared drive like Google Drive.",
+                "4. Reiterate the meeting’s objectives and expected outcomes to ensure focused discussions.",
+                "5. Offer technical support for remote participants to ensure smooth access to the meeting."
+            ],
+            "type": "project meeting",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "experience"
+            ],
+            "tools": [
+                "Discord",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct project meetings",
+            "responsibilities": "conducting meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Begin with a recap of the project’s current status and recent developments.",
+                "2. Facilitate discussion on each agenda item, allowing time for input from all team members, particularly focusing on challenges and task completions.",
+                "3. Utilize collaborative tools like Discord for sharing screens and real-time document editing.",
+                "4. Address action items from previous meetings and set new tasks with clear responsibilities and deadlines.",
+                "5. Ensure effective communication throughout."
+            ],
+            "type": "project meeting",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "experience"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "summarize information from project meetings",
+            "responsibilities": "summarising meeting information",
+            "objects": "meetings",
+            "checklists": [
+                "1. Compile a comprehensive summary of the meeting, detailing discussions, decisions made, and actions agreed upon.",
+                "2. Highlight key responsibilities assigned and deadlines set during the meeting in a clear format.",
+                "3. Distribute the summary to all project stakeholders via Discord.",
+                "4. Store the meeting minutes and related documents in a centralized digital repository, accessible to all team members for reference and follow-up.",
+                "5. Schedule follow-up meetings or reviews as needed, based on the meeting outcomes."
+            ],
+            "type": "project meeting",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report",
+                "experience"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "schedule one-on-one meetings",
+            "responsibilities": "scheduling meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Identify the primary objectives and goals for the meeting, focusing on the employee’s performance and development needs.",
+                "2. Choose a suitable time for both parties, ensuring privacy and minimal interruptions.",
+                "3. Prepare an agenda that includes discussion points such as feedback, career development plans, and any specific issues or tasks, and share it with the employee in advance.",
+                "4. Confirm the meeting a day prior via Discord to ensure attendance.",
+                "5. Secure a virtual meeting link."
+            ],
+            "type": "one-on-one meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "experience"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inform employees about one-on-one meetings",
+            "responsibilities": "informing employees about meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Notify the employee about the meeting details well in advance, including the time, place, and main topics of discussion via Discord.",
+                "2. Encourage the employee to prepare any materials or questions they might have concerning their performance or career goals.",
+                "3. Provide guidelines on what to expect during the meeting, especially if it’s their first one-on-one session.",
+                "4. Remind the employee about the meeting’s confidential nature, ensuring they feel comfortable to speak openly.",
+                "5. Send a reminder an hour before the meeting as a final confirmation."
+            ],
+            "type": "one-on-one meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "experience"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "conduct one-on-one meetings",
+            "responsibilities": "conducting meetings",
+            "objects": "meetings",
+            "checklists": [
+                "1. Begin the meeting by establishing a welcoming and open atmosphere to encourage honest communication.",
+                "2. Discuss each agenda item, focusing on providing constructive feedback and listening actively to the employee’s input.",
+                "3. Use tools like a Google Docs or Notion to record key points and action items during the discussion.",
+                "4. Set clear, achievable goals together with the employee, outlining steps and expected outcomes.",
+                "5. Address any personal or professional concerns they might have, providing guidance and support as needed."
+            ],
+            "type": "one-on-one meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "experience"
+            ],
+            "tools": [
+                "Google Docs",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "summarize information from one-on-one meetings",
+            "responsibilities": "summarising meeting information",
+            "objects": "meetings",
+            "checklists": [
+                "1. Compile a summary of the meeting, including feedback provided, goals set, and any developmental plans discussed.",
+                "2. Outline agreed-upon action items and responsibilities, specifying deadlines and expected results.",
+                "3. Share the meeting summary with the employee via Discord, ensuring they have a record to refer back to.",
+                "4. Schedule a follow-up meeting or checkpoint to review progress on discussed items.",
+                "5. Store the summary and any related documentation in the employee’s personal file for future reference and ongoing development tracking."
+            ],
+            "type": "one-on-one meeting",
+            "parameters": [
+                "objective",
+                "goal",
+                "productivity",
+                "problem",
+                "note",
+                "task",
+                "experience"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "prepare onboarding kits for company",
+            "responsibilities": "preparing onboarding kits",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Compile essential documents and digital resources related to company culture, policies, and operational procedures.",
+                "2. Include tools and account access information critical for daily functions, such as time tracking systems and communication channels.",
+                "3. Organize work schedule templates and reporting guidelines in the kit.",
+                "4. Add introductory courses or training materials specific to the company’s operations and values.",
+                "5. Package all materials in a user-friendly format, ensuring easy access for new hires during their first week."
+            ],
+            "type": "company onboarding",
+            "parameters": [
+                "culture",
+                "policy",
+                "work schedule",
+                "time tracking",
+                "screenshot",
+                "communication channel",
+                "report",
+                "account",
+                "tool",
+                "access",
+                "course",
+                "department",
+                "profession",
+                "position",
+                "salary",
+                "project"
+            ],
+            "tools": [
+                "Google Docs",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct onboarding sessions for company",
+            "responsibilities": "conducting onboarding sessions",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Schedule comprehensive onboarding sessions to introduce new hires to the company’s culture and operational framework.",
+                "2. Conduct interactive presentations and discussions on company policies and values.",
+                "3. Demonstrate the use of essential tools and software, providing hands-on training as needed.",
+                "4. Facilitate introductions to various team leads and department heads to establish communication lines.",
+                "5. Include practical exercises or simulations to engage new hires and reinforce learning."
+            ],
+            "type": "company onboarding",
+            "parameters": [
+                "culture",
+                "policy",
+                "work schedule",
+                "time tracking",
+                "screenshot",
+                "communication channel",
+                "report",
+                "account",
+                "tool",
+                "access",
+                "course",
+                "department",
+                "profession",
+                "position",
+                "salary",
+                "project"
+            ],
+            "tools": [
+                "Google Slides"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "gather feedback from company onboarding",
+            "responsibilities": "gathering onboarding feedback",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Distribute feedback forms or conduct surveys at the end of the onboarding period to assess the effectiveness of the sessions.",
+                "2. Analyze feedback to identify areas of improvement in the onboarding process.",
+                "3. Implement changes based on feedback to enhance future onboarding experiences.",
+                "4. Follow up with new hires after their initial week to gather additional insights and address any ongoing concerns."
+            ],
+            "type": "company onboarding",
+            "parameters": [
+                "culture",
+                "policy",
+                "work schedule",
+                "time tracking",
+                "screenshot",
+                "communication channel",
+                "report",
+                "account",
+                "tool",
+                "access",
+                "course",
+                "department",
+                "profession",
+                "position",
+                "salary",
+                "project"
+            ],
+            "tools": [
+                "Discord",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "prepare onboarding kits for department",
+            "responsibilities": "preparing onboarding kits",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Assemble department-specific documents and guides that outline roles and expectations within the department.",
+                "2. Include position-specific tasks and responsibilities in the kit.",
+                "3. Provide resources that explain departmental workflows and key contacts.",
+                "4. Ensure all materials are current and reflect the latest departmental processes and goals.",
+                "5. Organize the kit in a logical order to facilitate easy understanding for new hires."
+            ],
+            "type": "department onboarding",
+            "parameters": [
+                "department",
+                "expectation",
+                "position"
+            ],
+            "tools": [
+                "Google Docs",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct onboarding sessions for department",
+            "responsibilities": "conducting onboarding sessions",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Plan and conduct detailed sessions that introduce new hires to their specific roles and departmental culture.",
+                "2. Use real-life scenarios or case studies to demonstrate daily tasks and challenges.",
+                "3. Engage with existing team members to provide a welcoming and informative session.",
+                "4. Coordinate with department heads to cover all relevant topics thoroughly."
+            ],
+            "type": "department onboarding",
+            "parameters": [
+                "department",
+                "expectation",
+                "position"
+            ],
+            "tools": [
+                "Discord",
+                "Google Slides",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "gather feedback from department onboarding",
+            "responsibilities": "gathering onboarding feedback",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Collect feedback directly after the departmental onboarding to evaluate the clarity and effectiveness of the information provided.",
+                "2. Use the feedback to refine future onboarding efforts, making adjustments where necessary.",
+                "3. Monitor the integration of new hires into the department based on the feedback to ensure successful onboarding.",
+                "4. Continuously update departmental leaders on the effectiveness of the onboarding process.",
+                "5. Document all feedback for record-keeping and future reference."
+            ],
+            "type": "department onboarding",
+            "parameters": [
+                "department",
+                "expectation",
+                "position"
+            ],
+            "tools": [
+                "Google Forms",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "prepare onboarding kits for project",
+            "responsibilities": "preparing onboarding kits",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Compile project information including clients background, project scope, and objectives.",
+                "2. Include guidelines on communication protocols, reporting requirements, and any relevant tools or software.",
+                "3. Organize practical guides or cheat sheets on navigating project challenges, especially for complex or multi-lingual projects.",
+                "4. Ensure all materials are current and reflect the latest project management methodologies.",
+                "5. Prepare digital access to project documentation and resources for ease of use."
+            ],
+            "type": "project onboarding",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Google Docs"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "conduct onboarding sessions for project",
+            "responsibilities": "conducting onboarding sessions",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Facilitate comprehensive onboarding sessions that provide an overview of the project context and specific roles.",
+                "2. Discuss the project timeline, key deliverables, and client expectations in detail.",
+                "3. Simulate typical project scenarios to prepare the team for real-world challenges.",
+                "4. Encourage open dialogue to address any concerns or clarifications needed by team members.",
+                "5. Use interactive tools or platforms to enhance understanding and engagement during the session."
+            ],
+            "type": "project onboarding",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "gather feedback from project onboarding",
+            "responsibilities": "gathering onboarding feedback",
+            "objects": "onboarding",
+            "checklists": [
+                "1. Use feedback forms or digital surveys to collect impressions and suggestions from participants after the onboarding.",
+                "2. Evaluate feedback to refine project onboarding processes, ensuring alignment with project requirements and team capabilities."
+            ],
+            "type": "project onboarding",
+            "parameters": [
+                "client",
+                "project",
+                "task",
+                "responsibility",
+                "location",
+                "language",
+                "time zone",
+                "shift",
+                "communication",
+                "report"
+            ],
+            "tools": [
+                "Google Forms"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "set performance indicators for personal performance",
+            "responsibilities": "setting performance indicators",
+            "objects": "performance",
+            "checklists": [
+                "1. Define clear, measurable goals for productivity, such as specific output levels or tasks completed within a timeframe.",
+                "2. Establish quality metrics based on error rates, employee feedback, or compliance with company standards.",
+                "3. Outline self-management indicators like adherence to deadlines, efficiency in workflow, or time management.",
+                "4. Document these indicators in performance tracking tools or software for ongoing assessment.",
+                "5. Communicate these indicators clearly to the individual to ensure understanding and agreement."
+            ],
+            "type": "personal performance",
+            "parameters": [
+                "productivity",
+                "work quality",
+                "self-management"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "monitor progress of personal performance",
+            "responsibilities": "monitoring performance progress",
+            "objects": "performance",
+            "checklists": [
+                "1. Regularly review performance data against set indicators using CRM and report in Discord.",
+                "2. Schedule periodic reviews with the individual to discuss progress and any challenges faced.",
+                "3. Adjust performance goals as necessary based on feedback and changes in job scope.",
+                "4. Provide resources or training to support improvement in areas like time management or task efficiency.",
+                "5. Document and analyze trends over time to assess long-term performance improvements or declines."
+            ],
+            "type": "personal performance",
+            "parameters": [
+                "productivity",
+                "work quality",
+                "self-management"
+            ],
+            "tools": [
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "compile data for monthly reports",
+            "responsibilities": "compiling report data",
+            "objects": "reports",
+            "checklists": [
+                "1. Collect data from various departments highlighting key activities, outcomes, and performance metrics.",
+                "2. Ensure that all data gathered is accurate and up-to-date, verifying entries against departmental submissions.",
+                "3. Organize data by categories.",
+                "4. Confirm that all relevant tasks, links, plans, and problems are included for comprehensive coverage."
+            ],
+            "type": "monthly report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write summaries for monthly reports",
+            "responsibilities": "writing report summaries",
+            "objects": "reports",
+            "checklists": [
+                "1. Analyze the compiled data to identify trends and key takeaways from the month’s activities.",
+                "2. Draft a clear, concise summary that highlights significant achievements and areas for improvement.",
+                "3. Ensure the summary provides actionable insights and aligns with company goals and strategies.",
+                "4. Review the draft for accuracy and clarity before finalization and distribution to stakeholders."
+            ],
+            "type": "monthly report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "compile data for employee reports",
+            "responsibilities": "compiling report data",
+            "objects": "reports",
+            "checklists": [
+                "1. Gather individual performance data, including task completion rates, project contributions, and feedback.",
+                "2. Check that all information regarding responsibilities, tools used, and processes followed is accurately captured.",
+                "3. Ensure confidentiality and data integrity in handling personal performance reports."
+            ],
+            "type": "employee report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write summaries for employee reports",
+            "responsibilities": "writing report summaries",
+            "objects": "reports",
+            "checklists": [
+                "1. Synthesize performance data to draft individual employee reports that reflect both achievements and areas needing improvement.",
+                "2. Highlight specific instances of excellence or concern, linking them to overall team and company objectives.",
+                "3. Provide a balanced view that includes development opportunities and commendations.",
+                "4. Review summaries to ensure they are constructive, motivational, and aligned with company values."
+            ],
+            "type": "employee report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "compile data for profession reports",
+            "responsibilities": "compiling report data",
+            "objects": "reports",
+            "checklists": [
+                "1. Gather data relevant to specific professions including performance metrics, development progress, and any challenges faced.",
+                "2. Source information from various department heads and HR regarding professional training and career advancements.",
+                "3. Utilize specialized tools to analyze trends and output relevant data.",
+                "4. Organize data chronologically to observe changes and developments over the specified period.",
+                "5. Ensure completeness and accuracy of all compiled information."
+            ],
+            "type": "profession report",
+            "parameters": [
+                "profession",
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "write summaries for profession reports",
+            "responsibilities": "writing report summaries",
+            "objects": "reports",
+            "checklists": [
+                "1. Analyze the compiled data to identify key trends and insights about the specific profession.",
+                "2. Draft a summary that highlights achievements, areas for improvement, and notable trends in professional development.",
+                "3. Review the summary for clarity, accuracy, and coherence before final submission."
+            ],
+            "type": "profession report",
+            "parameters": [
+                "profession",
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "compile data for department reports",
+            "responsibilities": "compiling report data",
+            "objects": "reports",
+            "checklists": [
+                "1. Collect comprehensive data from the specific department covering all relevant parameters such as tasks completed, problems encountered, and progress made.",
+                "2. Coordinate with department leaders to ensure all information reflects current status and achievements.",
+                "3. Validate data accuracy with cross-references to project and company databases."
+            ],
+            "type": "department report",
+            "parameters": [
+                "department",
+                "profession",
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "write summaries for department reports",
+            "responsibilities": "writing report summaries",
+            "objects": "reports",
+            "checklists": [
+                "1. Interpret the data to outline departmental performance against company-wide objectives.",
+                "2. Draft a detailed report that discusses achievements, highlights challenges, and evaluates metric outcomes.",
+                "3. Integrate visual data displays to support the textual analysis.",
+                "4. Formulate conclusions and future strategies to address any ongoing issues.",
+                "5. Proofread the report to ensure it meets organizational standards for internal and external communication."
+            ],
+            "type": "department report",
+            "parameters": [
+                "department",
+                "profession",
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "review video interviews",
+            "responsibilities": "reviewing video interviews",
+            "objects": "videos",
+            "checklists": [
+                "1. Watch each video interview to assess the quality of the recording in terms of audio and visuals.",
+                "2. Evaluate the content for clarity and adherence to the script.",
+                "3. Check the orientation and language used to ensure they are appropriate for the intended audience.",
+                "4. Note the duration to ensure it aligns with the set standards for engagement and comprehensiveness.",
+                "5. Provide feedback for any necessary improvements or adjustments."
+            ],
+            "type": "video interview",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inform employees about video interviews",
+            "responsibilities": "informing employees",
+            "objects": "videos",
+            "checklists": [
+                "1. Communicate the schedule and expectations for upcoming video interviews to all relevant staff.",
+                "2. Provide details about the orientation, duration, and script to prepare employees or candidates adequately.",
+                "3. Outline the language requirements and any cultural considerations.",
+                "4. Ensure all parties know the technical requirements and support available.",
+                "5. Update employees on any changes to the interview process or schedule."
+            ],
+            "type": "video interview",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "plan re-recording of video interviews",
+            "responsibilities": "planning re-recording",
+            "objects": "videos",
+            "checklists": [
+                "1. Identify videos that require re-recording due to outdated content or poor quality.",
+                "2. Plan the sessions, including scheduling with all involved parties.",
+                "3. Confirm the script revisions and any changes in language or presentation orientation.",
+                "4. Allocate resources and equipment needed for the re-recording.",
+                "5. Organize rehearsals if necessary to ensure quality outcomes."
+            ],
+            "type": "re-record video",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "CRM",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "inform employees about re-recording video interviews",
+            "responsibilities": "informing employees",
+            "objects": "videos",
+            "checklists": [
+                "1. Notify employees involved in the re-recording process about the schedule and objectives.",
+                "2. Clarify the expectations regarding the new orientation, script, and language usage.",
+                "3. Provide guidelines on how to prepare for the re-recording, including dress code and content review.",
+                "4. Update all participants on any logistical changes or additional support available.",
+                "5. Encourage feedback and suggestions for improving the re-recording process."
+            ],
+            "type": "re-record video",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "review greetings videos",
+            "responsibilities": "reviewing video interviews",
+            "objects": "videos",
+            "checklists": [
+                "1. Review each greetings video to ensure it conveys the intended message of goodwill and appreciation effectively.",
+                "2. Check that the video maintains the proper orientation and language for its audience.",
+                "3. Verify that the video's duration is appropriate for maintaining viewer engagement.",
+                "4. Assess the quality of the video to ensure it meets the company's standards.",
+                "5. Approve the final version or request edits if necessary."
+            ],
+            "type": "greetings video",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inform employees about greetings video opportunities",
+            "responsibilities": "informing employees",
+            "objects": "videos",
+            "checklists": [
+                "1. Announce opportunities for employees to participate in or contribute to greetings videos.",
+                "2. Provide details about the video's purpose, script, and who will be featured or have speaking roles.",
+                "3. Explain the technical specifications, including duration and language.",
+                "4. Schedule recording times and locations, ensuring all participants can attend.",
+                "5. Encourage creativity and personal input to make the video more engaging and heartfelt."
+            ],
+            "type": "greetings video",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Low"
+        }
+    ]
+}

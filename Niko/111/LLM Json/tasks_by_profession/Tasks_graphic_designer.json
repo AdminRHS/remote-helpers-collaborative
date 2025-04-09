@@ -1,0 +1,2322 @@
+{
+    "profession": "graphic designer",
+    "department": "designers",
+    "tasks": [
+        {
+            "task_name": "design web banners for websites",
+            "responsibilities": "designing banners",
+            "objects": "banners",
+            "checklists": [
+                "1. Select template or create own in Figma,Photoshop",
+                "2. Customize fonts and dimensions",
+                "3. Insert CTA",
+                "4. Review design with team via Notion",
+                "5. Final adjustments and export"
+            ],
+            "type": "web banner",
+            "parameters": [
+                "image type",
+                "dimension",
+                "font style",
+                "size",
+                "CTA"
+            ],
+            "tools": [
+                "Figma",
+                "Photoshop Google Drive",
+                "Notion",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update web banners to new branding",
+            "responsibilities": "updating banners",
+            "objects": "banners",
+            "checklists": [
+                "1. Load existing banner in Figma, Photoshop, Indesign",
+                "2. Update branding elements",
+                "3. Adjust dimensions and fonts",
+                "4. Internal review via Notion,",
+                "5. Export final version"
+            ],
+            "type": "web banner",
+            "parameters": [
+                "image type",
+                "dimension",
+                "font style",
+                "size",
+                "CTA"
+            ],
+            "tools": [
+                "Figma",
+                "InDesign",
+                "Photoshop",
+                "Google Drive",
+                "Notion",
+                "Discord",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create banners for social media platforms",
+            "responsibilities": "designing banners",
+            "objects": "banners",
+            "checklists": [
+                "1. Choose or create platform-specific template in Canva, Figma, Photoshop",
+                "2. Adapt design to specified dimensions",
+                "3. Customize style and fonts",
+                "4. Get feedback via Notion",
+                "5. Prepare for publishing"
+            ],
+            "type": "social media banner",
+            "parameters": [
+                "image type",
+                "dimension",
+                "font style",
+                "size",
+                "CTA"
+            ],
+            "tools": [
+                "Figma",
+                "InDesign",
+                "Photoshop",
+                "Canva",
+                "CRM",
+                "Notion",
+                "Midjourney"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "refresh social media banner designs",
+            "responsibilities": "updating banners",
+            "objects": "banners",
+            "checklists": [
+                "1. Retrieve old design from Google Drive",
+                "2. Update with new imagery using Figma, Adobe Photoshop",
+                "3. Revise text and CTA with team (rececive feedback)",
+                "4. Finalize adjustments",
+                "5. Upload to social media through CRM"
+            ],
+            "type": "social media banner",
+            "parameters": [
+                "image type",
+                "dimension",
+                "font style",
+                "size",
+                "CTA"
+            ],
+            "tools": [
+                "Google Drive",
+                "Adobe Photoshop",
+                "Google Slides",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "develop banners for email campaigns",
+            "responsibilities": "designing banners",
+            "objects": "banners",
+            "checklists": [
+                "1. Start with a draft in Fifma, Adobe Photoshop, Adobe Illustrator",
+                "2. Incorporate brand-specific graphic elements",
+                "3. Optimize font and button design",
+                "4. Convert to required file format",
+                "5. Receive feedback from team and make final edits"
+            ],
+            "type": "email banner",
+            "parameters": [
+                "image type",
+                "dimension",
+                "image file format",
+                "font style",
+                "font size",
+                "CTA button design",
+                "types of graphic elements"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Google Drive",
+                "Notion",
+                "CRM"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "revise email banners as necessary",
+            "responsibilities": "updating banners",
+            "objects": "banners",
+            "checklists": [
+                "1. Open existing design in Figma, Photoshop, Adobe Illustrator",
+                "2. Modify graphic elements and font styles",
+                "3. Adjust CTA designs",
+                "4. Review design compliance with brand guidelines",
+                "5. Test in various email clients"
+            ],
+            "type": "email banner",
+            "parameters": [
+                "image type",
+                "dimension",
+                "image file format",
+                "font style",
+                "font size",
+                "CTA button design",
+                "types of graphic elements"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create headers for social media",
+            "responsibilities": "creating headers",
+            "objects": "headers",
+            "checklists": [
+                "1. Select or create relevant template in Canva/Figma/Adobe Photoshop",
+                "2. Incorporate background image and color scheme",
+                "3. Add text and CTA",
+                "4. Insert graphic elements",
+                "5. Receive feedback and make edits",
+                "6. Preview and export final version"
+            ],
+            "type": "social media header",
+            "parameters": [
+                "background image/color",
+                "text content",
+                "CTA",
+                "graphic elements",
+                "contact information"
+            ],
+            "tools": [
+                "Canva",
+                "Figma",
+                "Adobe Photoshop",
+                "Google Drive",
+                "Notion",
+                "CRM"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "enhance visuals of social media headers",
+            "responsibilities": "enhancing header visuals",
+            "objects": "headers",
+            "checklists": [
+                "1. Retrieve current header from storage",
+                "2. Enhance images and graphics using Figma, Adobe Photoshop, Canva",
+                "3. Update CTAs",
+                "4. Test layout on different social platforms",
+                "5. Finalize and upload"
+            ],
+            "type": "social media header",
+            "parameters": [
+                "background image/color",
+                "text content",
+                "CTA",
+                "graphic elements",
+                "contact information"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Google Slides",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design headers for websites",
+            "responsibilities": "creating headers",
+            "objects": "headers",
+            "checklists": [
+                "1. Draft initial design in Figma, Adobe Photoshop",
+                "2. Select high-resolution images",
+                "3. Integrate brand colors and icons",
+                "4. Arrange navigation and CTA buttons",
+                "5. Review with web design team",
+                "6.Preview and export final version"
+            ],
+            "type": "website header",
+            "parameters": [
+                "high-resolution imagery",
+                "headline text",
+                "brand colors",
+                "shapes/icons",
+                "navigation",
+                "CTA buttons"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe photoshop",
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "improve visuals of website headers",
+            "responsibilities": "enhancing header visuals",
+            "objects": "headers",
+            "checklists": [
+                "1. Analyze current header design",
+                "2. Apply advanced graphic enhancements in Figma, Adobe Photoshop",
+                "3. Update text and CTAs",
+                "4. Optimize for responsive design",
+                "5. Obtain final approval from design lead",
+                "6. Preview and export final version"
+            ],
+            "type": "website header",
+            "parameters": [
+                "high-resolution imagery",
+                "headline text",
+                "brand colors",
+                "shapes/icons",
+                "navigation",
+                "CTA buttons"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Google Drive",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "develop outline icons",
+            "responsibilities": "developing icons",
+            "objects": "icons",
+            "checklists": [
+                "1. Draft initial concept in Figma, Adobe Illustrator or upload on Flaticons, Iconfinder, Icons8",
+                "2. Generate icons with the help of GPT chat,",
+                "3. Focus on minimalistic design",
+                "4. Ensure visual clarity",
+                "5. Refine edges and lines",
+                "6. Final review and adjustments"
+            ],
+            "type": "outline icon",
+            "parameters": [
+                "minimalism",
+                "visual clarity",
+                "simplicity"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "GPT chat",
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "standardize designs for outline icons",
+            "responsibilities": "standardizing icon design",
+            "objects": "icons",
+            "checklists": [
+                "1. Create a template in Adobe Illustrator or find on Flaticons, Iconfinder, Icons8",
+                "2. Define style guides for minimalism and clarity",
+                "3. Document icon standards",
+                "4. Share guidelines with team via Notion",
+                "5. Gather feedback and refine"
+            ],
+            "type": "outline icon",
+            "parameters": [
+                "minimalism",
+                "visual clarity",
+                "simplicity"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Midjourney",
+                "Google drive",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create filled icons",
+            "responsibilities": "developing icons",
+            "objects": "icons",
+            "checklists": [
+                "1. Start with basic shapes in Adobe Illustrator or upload on Flaticons, Iconfinder, Icons8",
+                "2. Generate icons with the help of GPT chat",
+                "3. Apply color theory principles",
+                "4. Adjust for visual clarity",
+                "5. Iterate based on feedback",
+                "6. Finalize and export for use"
+            ],
+            "type": "filled icon",
+            "parameters": [
+                "simplicity",
+                "color usage",
+                "visual clarity"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Midjourney",
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "standardize designs for filled icons",
+            "responsibilities": "standardizing icon design",
+            "objects": "icons",
+            "checklists": [
+                "1. Establish a color palette in Figma",
+                "2. Define clear design criteria",
+                "3. Create a comprehensive design manual",
+                "4. Distribute manual and conduct a training session",
+                "5. Monitor adherence and update as needed"
+            ],
+            "type": "filled icon",
+            "parameters": [
+                "simplicity",
+                "color usage",
+                "visual clarity"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "GPT chat",
+                "Google Slides",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design flat icons",
+            "responsibilities": "developing icons",
+            "objects": "icons",
+            "checklists": [
+                "1. Sketch designs using Figma or upload on Flaticon, Iconfinder, Icons8",
+                "2. Generate icons with the help of GPT chat",
+                "3. Emphasize simplicity and flat color blocks",
+                "4. Review design for uniform clarity",
+                "5. Test icons in different sizes",
+                "6. Finalize and compile into icon set"
+            ],
+            "type": "flat icon",
+            "parameters": [
+                "simplicity",
+                "visual clarity"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "GPT chat",
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "standardize designs for flat icons",
+            "responsibilities": "standardizing icon design",
+            "objects": "icons",
+            "checklists": [
+                "1. Define flat design guidelines in Figma",
+                "2. Create template examples",
+                "3. Distribute templates to team via Notion",
+                "4. Collect feedback and make adjustments",
+                "5. Update and finalize guidelines"
+            ],
+            "type": "flat icon",
+            "parameters": [
+                "simplicity",
+                "visual clarity"
+            ],
+            "tools": [
+                "Figma",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "develop dimensional icons",
+            "responsibilities": "developing icons",
+            "objects": "icons",
+            "checklists": [
+                "1. Draft 3D designs in Figma, Adobe illustrator, Adobe Photoshop",
+                "2. Generate icons with the help of GPT chat",
+                "3. Apply detailed shading and gradients",
+                "4. Review for visual depth and consistency",
+                "5. Iterate based on design feedback",
+                "6. Prepare for production use"
+            ],
+            "type": "dimensional icon",
+            "parameters": [
+                "depth and volume",
+                "detailed shading",
+                "color gradients"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "standardize designs for dimensional icons",
+            "responsibilities": "standardizing icon design",
+            "objects": "icons",
+            "checklists": [
+                "1. Establish a style guide in Figma",
+                "2. Define standards for shading and gradients",
+                "3. Create sample icons and review",
+                "4. Document procedures in Notion",
+                "5. Conduct training sessions for design consistency"
+            ],
+            "type": "dimensional icon",
+            "parameters": [
+                "depth and volume",
+                "detailed shading",
+                "color gradients"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Photoshop",
+                "Adobe Illustrator",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "create emoji icons",
+            "responsibilities": "developing icons",
+            "objects": "icons",
+            "checklists": [
+                "1. Sketch initial emoji concepts in Figma, Adobe Illustrator or upload on EmojiDB",
+                "2.Generate emoji concepts with the help of GPT chat",
+                "3.Enhance color vibrancy using Figma or Adobe Photoshop",
+                "4. Simplify details for clarity at small sizes",
+                "5. Gather team feedback",
+                "6. Finalize emoji set"
+            ],
+            "type": "emoji icon",
+            "parameters": [
+                "expressiveness",
+                "color vibrancy",
+                "simplification"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Adobe Photoshop",
+                "GPT chat",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "standardize designs for emoji icons",
+            "responsibilities": "standardizing icon design",
+            "objects": "icons",
+            "checklists": [
+                "1. Develop an emoji design manual in Notion and Figma",
+                "2. Specify expressiveness and color guidelines",
+                "3. Create standard sets for review",
+                "4. Distribute manual via Notion and Google Drive",
+                "5. Hold a review session to ensure compliance"
+            ],
+            "type": "emoji icon",
+            "parameters": [
+                "expressiveness",
+                "color vibrancy",
+                "simplification"
+            ],
+            "tools": [
+                "Figma",
+                "Notion",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "generate concepts for flat illustrations",
+            "responsibilities": "generating illustration concepts",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Research current trends in flat design",
+                "2. Sketch initial concepts in Figma  or upload on image stock",
+                "3. Select a color palette",
+                "4. Layout initial compositions",
+                "5. Review and refine concepts"
+            ],
+            "type": "flat illustration",
+            "parameters": [
+                "visual style",
+                "color palette",
+                "composition"
+            ],
+            "tools": [
+                "Figma",
+                "Midjourney",
+                "Notion"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "enhance visuals of flat illustrations",
+            "responsibilities": "enhancing illustrations",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Review existing illustrations",
+                "2. Adjust color balance and palette in Figma",
+                "3. Refine composition elements",
+                "4. Enhance visual style for clarity",
+                "5. Final approval and adjustments"
+            ],
+            "type": "flat illustration",
+            "parameters": [
+                "visual style",
+                "color palette",
+                "composition"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "develop concepts for isometric illustrations",
+            "responsibilities": "generating illustration concepts",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Study isometric design principles",
+                "2. Create initial sketches using grids in Figma, Adobe Illustrator",
+                "3. Apply a consistent color palette",
+                "4. Develop detailed perspective elements",
+                "5. Gather feedback and iterate designs"
+            ],
+            "type": "isometric illustration",
+            "parameters": [
+                "perspective and dimension",
+                "composition",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Blender"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "improve visuals of isometric illustrations",
+            "responsibilities": "enhancing illustrations",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Assess current isometric illustrations",
+                "2. Update dimensions and perspective using Figm, Adobe Illustrator",
+                "3. Adjust color palette for depth perception",
+                "4. Refine details for consistency",
+                "5. Finalize for production use"
+            ],
+            "type": "isometric illustration",
+            "parameters": [
+                "perspective and dimension",
+                "composition",
+                "color palette"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Adobe Photoshop",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "create concepts for vector illustrations",
+            "responsibilities": "generating illustration concepts",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Define key components of style in Figma",
+                "2. Develop a unified color palette",
+                "3. Sketch initial concepts in Figma, Adobe Illustrator",
+                "4. Arrange composition elements strategically",
+                "5. Review designs with the team"
+            ],
+            "type": "vector illustration",
+            "parameters": [
+                "composition",
+                "color palette",
+                "style components"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "enhance visuals of vector illustrations",
+            "responsibilities": "enhancing illustrations",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Evaluate existing vector graphics",
+                "2. Enhance color palette for visual impact",
+                "3. Refine style components for uniformity",
+                "4. Adjust composition for balance",
+                "5. Review and feedback session"
+            ],
+            "type": "vector illustration",
+            "parameters": [
+                "composition",
+                "color palette",
+                "style components"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop",
+                "Figma",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "generate concepts for character illustrations",
+            "responsibilities": "generating illustration concepts",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Brainstorm character traits and themes",
+                "2. Sketch initial designs in Figma, Adobe Illustrator",
+                "3. Refine facial expressions and clothing details",
+                "4. Choose suitable color schemes",
+                "5. Present concepts for initial feedback"
+            ],
+            "type": "character illustration",
+            "parameters": [
+                "appearance",
+                "facial expression",
+                "clothing",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop",
+                "Figma",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "improve visuals of character illustrations",
+            "responsibilities": "enhancing illustrations",
+            "objects": "illustrations",
+            "checklists": [
+                "1. Review current character designs",
+                "2. Update appearances and expressions for emotional impact",
+                "3. Modify clothing and color palette for consistency",
+                "4. Get feedback through internal presentations",
+                "5. Finalize adjustments"
+            ],
+            "type": "character illustration",
+            "parameters": [
+                "appearance",
+                "facial expression",
+                "clothing",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Google Drive",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design statistical infographics",
+            "responsibilities": "designing infographics",
+            "objects": "infographics",
+            "checklists": [
+                "1. Gather data and establish graph types",
+                "2. Create draft layouts in Figma, Adobe Illustrator",
+                "3. Implement color schemes for clarity and impact",
+                "4. Insert text elements and legends",
+                "5. Review and iterate based on feedback"
+            ],
+            "type": "statistical infographic",
+            "parameters": [
+                "charts and graphs",
+                "text elements",
+                "color",
+                "infographic legends"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Google Charts (for data visualization)"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "revise statistical infographics",
+            "responsibilities": "revising infographics",
+            "objects": "infographics",
+            "checklists": [
+                "1. Collect feedback on existing infographics",
+                "2. Update charts and graphs for accuracy",
+                "3. Adjust color and text for better readability",
+                "4. Reformat legends for clarity",
+                "5. Conduct final reviews and adjustments"
+            ],
+            "type": "statistical infographic",
+            "parameters": [
+                "charts and graphs",
+                "text elements",
+                "color",
+                "infographic legends"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Google Charts"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create informational infographics",
+            "responsibilities": "designing infographics",
+            "objects": "infographics",
+            "checklists": [
+                "1. Define the infographic's main message",
+                "2. Design a compelling title and header in Figma, Adobe Illustrator",
+                "3. Integrate text and visual elements for clarity",
+                "4. Review layout for visual flow",
+                "5. Refine and prepare for publication"
+            ],
+            "type": "informational infographic",
+            "parameters": [
+                "title and header",
+                "text elements",
+                "visual elements"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "revise informational infographics",
+            "responsibilities": "revising infographics",
+            "objects": "infographics",
+            "checklists": [
+                "1. Assess feedback on existing infographic",
+                "2. Revise title and header for impact",
+                "3. Adjust text and visuals for improved clarity",
+                "4. Test different layouts",
+                "5. Final adjustments and approvals"
+            ],
+            "type": "informational infographic",
+            "parameters": [
+                "title and header",
+                "text elements",
+                "visual elements"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design process infographics",
+            "responsibilities": "designing infographics",
+            "objects": "infographics",
+            "checklists": [
+                "1. Outline the process steps clearly",
+                "2. Design engaging title and step descriptions in Adobe Illustrator, Figma",
+                "3. Create or select appropriate icons and symbols",
+                "4. Assemble steps in a logical flow",
+                "5. Review and iterate design for clarity"
+            ],
+            "type": "process infographic",
+            "parameters": [
+                "title",
+                "steps",
+                "icons and symbols"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "revise process infographics",
+            "responsibilities": "revising infographics",
+            "objects": "infographics",
+            "checklists": [
+                "1. Gather user feedback on clarity and effectiveness",
+                "2. Update title and steps for better understanding",
+                "3. Refine icons and symbols for uniformity",
+                "4. Reevaluate the visual and textual flow",
+                "5. Implement final changes and verify"
+            ],
+            "type": "process infographic",
+            "parameters": [
+                "title",
+                "steps",
+                "icons and symbols"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "develop wordmark logos with custom typography",
+            "responsibilities": "crafting logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Research and select a unique typographic style",
+                "2. Sketch initial logo concepts focusing on lettering",
+                "3. Refine typography and color palette in Adobe Illustrator",
+                "4. Present initial drafts for feedback",
+                "5. Finalize and standardize the logo design"
+            ],
+            "type": "wordmark logo",
+            "parameters": [
+                "typography",
+                "color",
+                "custom lettering",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Fonts",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "refine wordmark logos for updated branding",
+            "responsibilities": "modifying logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Review existing logo design",
+                "2. Update typography to align with new branding in Adobe Illustrator",
+                "3. Adjust color scheme for consistency",
+                "4. Simplify design to enhance readability",
+                "5. Present refined logo for feedback"
+            ],
+            "type": "wordmark logo",
+            "parameters": [
+                "typography",
+                "color",
+                "custom lettering",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create lettermark logos from initials",
+            "responsibilities": "crafting logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Select appropriate font style in Adobe Illustrator",
+                "2. Design initial-based logo",
+                "3. Integrate a simple icon or symbol",
+                "4. Refine for visual balance",
+                "5. Review and iterate based on feedback"
+            ],
+            "type": "lettermark logo",
+            "parameters": [
+                "icon or symbol",
+                "font style",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Fonts",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "enhance lettermark logos for better recognition",
+            "responsibilities": "modifying logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Evaluate current logo effectiveness",
+                "2. Enhance icon or symbol for clarity in Adobe Illustrator, Figma",
+                "3. Adjust font style for better legibility",
+                "4. Test logo in various formats",
+                "5. Finalize and implement changes"
+            ],
+            "type": "lettermark logo",
+            "parameters": [
+                "icon or symbol",
+                "font style",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design logos with symbolic imagery",
+            "responsibilities": "crafting logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Brainstorm unique imagery concepts",
+                "2. Sketch preliminary designs in Adobe Illustrator, Figma",
+                "3. Select and refine the most appropriate image",
+                "4. Simplify design for broader application",
+                "5. Finalize design and review"
+            ],
+            "type": "pictorial logo",
+            "parameters": [
+                "imagery",
+                "simplicity",
+                "uniqueness"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "update pictorial logos to match brand changes",
+            "responsibilities": "modifying logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Assess current logo against brand evolution",
+                "2. Redesign imagery to reflect updated brand in Adobe Illustrator, Figma",
+                "3. Simplify imagery for universal recognition",
+                "4. Test updated logo across media",
+                "5. Roll out updated logo"
+            ],
+            "type": "pictorial logo",
+            "parameters": [
+                "imagery",
+                "simplicity",
+                "uniqueness"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "craft abstract logos that represent brand values",
+            "responsibilities": "crafting logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Define brand values and translate into visual elements",
+                "2. Experiment with shapes and colors in Adobe Illustrator, Figma",
+                "3. Create a simple yet meaningful design",
+                "4. Review and refine the concept",
+                "5. Finalize design after feedback"
+            ],
+            "type": "abstract logo",
+            "parameters": [
+                "shapes",
+                "colors",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "adjust abstract logos for clear messaging",
+            "responsibilities": "modifying logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Analyze current logo for message clarity",
+                "2. Simplify and adjust shapes and colors in Adobe Illustrator",
+                "3. Test logo perception internally",
+                "4. Refine based on feedback",
+                "5. Implement the refined logo"
+            ],
+            "type": "abstract logo",
+            "parameters": [
+                "shapes",
+                "colors",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create logos that combine text and symbols",
+            "responsibilities": "crafting logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Sketch potential designs combining text and symbols",
+                "2. Select appropriate fonts and symbols in Adobe Illustrator, Figma",
+                "3. Integrate color palette for harmony",
+                "4. Review design with stakeholders",
+                "5. Refine and finalize"
+            ],
+            "type": "combination logo",
+            "parameters": [
+                "icon or symbol",
+                "font style",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Fonts",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "revise combination logos for visual impact",
+            "responsibilities": "modifying logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Evaluate existing logo's visual impact",
+                "2. Enhance font style and symbol integration in Adobe Illustrator, Figma",
+                "3. Adjust color palette for contrast and visibility",
+                "4. Present revisions for feedback",
+                "5. Apply final changes"
+            ],
+            "type": "combination logo",
+            "parameters": [
+                "icon or symbol",
+                "font style",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Fonts",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design emblem logos that reflect the brand ethos",
+            "responsibilities": "crafting logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Research historical and cultural context of the brand",
+                "2. Develop icon and typography that reflect ethos in Adobe Illustrator, Figma",
+                "3. Apply a consistent color palette",
+                "4. Review with the branding team",
+                "5. Finalize the emblem design"
+            ],
+            "type": "emblem logo",
+            "parameters": [
+                "icon or symbol",
+                "font style",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Fonts",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "modernize emblem logos while maintaining heritage",
+            "responsibilities": "modifying logos",
+            "objects": "logos",
+            "checklists": [
+                "1. Review historical elements of the emblem",
+                "2. Incorporate modern design trends in Adobe Illustrator, Figma",
+                "3. Retain key symbols and colors",
+                "4. Gather feedback on updates",
+                "5. Implement changes ensuring heritage is preserved"
+            ],
+            "type": "emblem logo",
+            "parameters": [
+                "icon or symbol",
+                "font style",
+                "color palette"
+            ],
+            "tools": [
+                "Adobe Illustrator"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design informative presentations with clear data",
+            "responsibilities": "designing presentations",
+            "objects": "presentations",
+            "checklists": [
+                "1. Define the main data points and structure",
+                "2. Design slides with clear sectioning in Microsoft PowerPoint",
+                "3. Integrate visual data representations",
+                "4. Refine content flow",
+                "5. Review for clarity and accuracy"
+            ],
+            "type": "informative presentation",
+            "parameters": [
+                "introduction",
+                "body",
+                "conclusion",
+                "reference"
+            ],
+            "tools": [
+                "Microsoft PowerPoint",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "animate elements in informative presentations",
+            "responsibilities": "animating presentation elements",
+            "objects": "presentations",
+            "checklists": [
+                "1. Select key elements to animate for emphasis",
+                "2. Use PowerPoint animations to enhance message delivery",
+                "3. Sync animations with presentation timing",
+                "4. Test playback for smooth transitions",
+                "5. Finalize animations"
+            ],
+            "type": "informative presentation",
+            "parameters": [
+                "introduction",
+                "body",
+                "conclusion",
+                "reference"
+            ],
+            "tools": [
+                "Microsoft PowerPoint",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create persuasive presentations to influence viewers",
+            "responsibilities": "designing presentations",
+            "objects": "presentations",
+            "checklists": [
+                "1. Craft a compelling opening statement",
+                "2. Organize slides to build the argument with evidence in Microsoft PowerPoint",
+                "3. Design visual aids to support the thesis",
+                "4. Ensure logical flow of arguments",
+                "5. Practice delivery for impact"
+            ],
+            "type": "persuasive presentation",
+            "parameters": [
+                "opening statement",
+                "clear thesis statement",
+                "evidence",
+                "logical statement"
+            ],
+            "tools": [
+                "Microsoft PowerPoint",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "animate elements in persuasive presentations",
+            "responsibilities": "animating presentation elements",
+            "objects": "presentations",
+            "checklists": [
+                "1. Highlight key arguments with dynamic animations",
+                "2. Apply smooth transitions to maintain audience focus",
+                "3. Align animations with speech for emphasis",
+                "4. Review animations for timing and impact",
+                "5. Adjust based on feedback"
+            ],
+            "type": "persuasive presentation",
+            "parameters": [
+                "opening statement",
+                "clear thesis statement",
+                "evidence",
+                "logical statement"
+            ],
+            "tools": [
+                "Microsoft PowerPoint",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design demonstrative presentations to show processes",
+            "responsibilities": "designing presentations",
+            "objects": "presentations",
+            "checklists": [
+                "1. Outline the process clearly in the introduction",
+                "2. Design slides with strong visual appeal using Adobe Illustrator, Figma for graphic elements or a template",
+                "3. Develop clear and concise commentary",
+                "4. Sequence slides for logical process flow",
+                "5. Review and practice delivery of presentation"
+            ],
+            "type": "demonstrative presentation",
+            "parameters": [
+                "introduction",
+                "visual appeal",
+                "explanation and commentary"
+            ],
+            "tools": [
+                "Microsoft PowerPoint",
+                "Adobe Illustrator",
+                "Figma",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "animate elements in demonstrative presentations",
+            "responsibilities": "animating presentation elements",
+            "objects": "presentations",
+            "checklists": [
+                "1. Identify key visuals for animation to enhance understanding",
+                "2. Use PowerPoint to implement animations",
+                "3. Sync animations with commentary for clarity",
+                "4. Test animations with a small audience for feedback",
+                "5. Refine animations based on feedback"
+            ],
+            "type": "demonstrative presentation",
+            "parameters": [
+                "introduction",
+                "visual appeal",
+                "explanation and commentary"
+            ],
+            "tools": [
+                "Microsoft PowerPoint",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create corporate brandbooks for brand consistency",
+            "responsibilities": "creating brandbooks",
+            "objects": "brandbooks",
+            "checklists": [
+                "1. Define and document the digital UI standards in Figma",
+                "2. Include guidelines for font accessibility",
+                "3. Standardize image alternative text procedures",
+                "4. Ensure consistency across all platforms",
+                "5. Compile and review the brandbook"
+            ],
+            "type": "corporate brandbook",
+            "parameters": [
+                "font accessibility",
+                "digital UI standard",
+                "image alternative text",
+                "platform consistency"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Adobe InDesign",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "develop product brandbooks to outline specific product branding",
+            "responsibilities": "creating brandbooks",
+            "objects": "brandbooks",
+            "checklists": [
+                "1. Establish content structure and UI design principles",
+                "2. Document accessibility standards and features",
+                "3. Align branding with overall product strategy",
+                "4. Ensure brand compliance in all elements",
+                "5. Finalize and validate brandbook with stakeholders"
+            ],
+            "type": "product brandbook",
+            "parameters": [
+                "content structure",
+                "accessibility standards",
+                "accessibility features",
+                "UI design principles",
+                "brand compliance standards"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Adobe InDesign",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design visual identity guidelines to standardize visual assets",
+            "responsibilities": "creating brandbooks",
+            "objects": "brandbooks",
+            "checklists": [
+                "1. Standardize logo placement and usage rules in Figma, Adobe illustrator",
+                "2. Define the color palette and typography guidelines",
+                "3. Set rules for imagery and composition",
+                "4. Compile guidelines into a cohesive document",
+                "5. Review and distribute the guidelines"
+            ],
+            "type": "visual identity guideline",
+            "parameters": [
+                "logo placement",
+                "color palette",
+                "typography",
+                "imagery",
+                "composition"
+            ],
+            "tools": [
+                "Figma",
+                "Adobe Illustrator",
+                "Adobe InDesign",
+                "Notion",
+                "Google drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "select web fonts for online readability",
+            "responsibilities": "selecting fonts",
+            "objects": "fonts",
+            "checklists": [
+                "1. Research fonts suited for web readability",
+                "2. Test font rendering on various screens",
+                "3. Check licensing for web use",
+                "4. Implement fonts on a trial website",
+                "5. Gather user feedback on readability"
+            ],
+            "type": "web font",
+            "parameters": [
+                "font files",
+                "font hosting",
+                "licensing"
+            ],
+            "tools": [
+                "Adobe Fonts",
+                "Google Fonts"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "customize web fonts for specific web needs",
+            "responsibilities": "customizing fonts",
+            "objects": "fonts",
+            "checklists": [
+                "1. Identify specific needs for web usage",
+                "2. Test fonts in different web environments",
+                "3. Ensure licensing compliance",
+                "4. Deploy customized fonts on web platforms"
+            ],
+            "type": "web font",
+            "parameters": [
+                "font files",
+                "font hosting",
+                "licensing"
+            ],
+            "tools": [
+                "Adobe Fonts",
+                "Google Fonts",
+                "FontForge"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "choose display fonts for impact in large sizes",
+            "responsibilities": "selecting fonts",
+            "objects": "fonts",
+            "checklists": [
+                "1. Select fonts that are bold and large",
+                "2. Test fonts for impact and visibility at large sizes",
+                "3. Evaluate unique and decorative elements",
+                "4. Consider use cases in promotional materials",
+                "5. Finalize font choice"
+            ],
+            "type": "display font",
+            "parameters": [
+                "font style",
+                "large and bold",
+                "unique and decorative"
+            ],
+            "tools": [
+                "Adobe Fonts",
+                "FontShop"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "modify display fonts for promotional materials",
+            "responsibilities": "customizing fonts",
+            "objects": "fonts",
+            "checklists": [
+                "1. Analyze existing promotional materials for style alignment",
+                "2. Adjust font features to enhance impact",
+                "3. Test modified fonts in mock-ups",
+                "4. Gather internal feedback",
+                "5. Implement the modified fonts in campaigns"
+            ],
+            "type": "display font",
+            "parameters": [
+                "font style",
+                "large and bold",
+                "unique and decorative"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "FontForge"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "select base styles for custom fonts",
+            "responsibilities": "selecting fonts",
+            "objects": "fonts",
+            "checklists": [
+                "1. Define the brand's needs for custom fonts",
+                "2. Research base styles that align with brand identity",
+                "3. Test readability and legibility",
+                "4. Evaluate technical and scalability requirements",
+                "5. Choose the most suitable base style"
+            ],
+            "type": "custom font",
+            "parameters": [
+                "font style",
+                "readability and legibility",
+                "technical usages",
+                "scalability"
+            ],
+            "tools": [
+                "Adobe Fonts",
+                "FontForge"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design custom fonts for unique brand identity",
+            "responsibilities": "customizing fonts",
+            "objects": "fonts",
+            "checklists": [
+                "1. Draft initial font designs based on brand identity",
+                "2. Refine designs for readability and technical usability",
+                "3. Conduct scalability tests across platforms",
+                "4. Iterate based on stakeholder feedback",
+                "5. Finalize and implement the font"
+            ],
+            "type": "custom font",
+            "parameters": [
+                "font style",
+                "readability and legibility",
+                "technical usages",
+                "scalability"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "FontForge"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design personal contact cards for individual networking",
+            "responsibilities": "designing business cards",
+            "objects": "business cards",
+            "checklists": [
+                "1. Gather individual's professional details",
+                "2. Choose a modern design template in Adobe InDesign",
+                "3. Incorporate essential contact info",
+                "4. Review design for visual appeal",
+                "5. Finalize and print"
+            ],
+            "type": "personal contact card",
+            "parameters": [
+                "name and title",
+                "modern design",
+                "essential contact information"
+            ],
+            "tools": [
+                "Adobe InDesign",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "customize personal contact cards to reflect individual styles",
+            "responsibilities": "customizing business cards",
+            "objects": "business cards",
+            "checklists": [
+                "1. Consult with the individual on style preferences",
+                "2. Tailor the template to individual taste in Adobe InDesign",
+                "3. Add unique design elements",
+                "4. Proof and adjust based on feedback",
+                "5. Produce the final card"
+            ],
+            "type": "personal contact card",
+            "parameters": [
+                "name and title",
+                "modern design",
+                "essential contact information"
+            ],
+            "tools": [
+                "Adobe InDesign",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design social media business cards with relevant social links",
+            "responsibilities": "designing business cards",
+            "objects": "business cards",
+            "checklists": [
+                "1. Define layout for social media links in Adobe InDesign",
+                "2. Design a card that integrates these links clearly",
+                "3. Ensure contact information is prominent",
+                "4. Review for clarity and style",
+                "5. Print samples for testing"
+            ],
+            "type": "social media business card",
+            "parameters": [
+                "modern design",
+                "contact information"
+            ],
+            "tools": [
+                "Adobe InDesign",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "customize social media business cards for specific platforms",
+            "responsibilities": "customizing business cards",
+            "objects": "business cards",
+            "checklists": [
+                "1. Identify platform-specific features for the card",
+                "2. Customize design to highlight these features in Adobe InDesign",
+                "3. Balance design and functional elements",
+                "4. Review and refine based on platform requirements",
+                "5. Final production of cards"
+            ],
+            "type": "social media business card",
+            "parameters": [
+                "modern design",
+                "contact information"
+            ],
+            "tools": [
+                "Adobe InDesign",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design QR code business cards for quick scanning",
+            "responsibilities": "designing business cards",
+            "objects": "business cards",
+            "checklists": [
+                "1. Design a layout that includes QR code in a prominent place in Adobe InDesign,Figma",
+                "2. Integrate name and title elegantly",
+                "3. Ensure QR code scans correctly by testing",
+                "4. Adjust design elements for balance and readability",
+                "5. Proceed with printing after approval"
+            ],
+            "type": "QR code business card",
+            "parameters": [
+                "name and title",
+                "contact information",
+                "QR Code placement"
+            ],
+            "tools": [
+                "Adobe InDesign"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "customize QR code business cards with dynamic content",
+            "responsibilities": "customizing business cards",
+            "objects": "business cards",
+            "checklists": [
+                "1. Review existing QR code card design",
+                "2. Implement dynamic QR codes using a generator",
+                "3. Test QR code functionality",
+                "4. Integrate personalization features",
+                "5. Finalize design and print"
+            ],
+            "type": "QR code business card",
+            "parameters": [
+                "name and title",
+                "contact information",
+                "QR Code placement"
+            ],
+            "tools": [
+                "Adobe InDesign",
+                "Dynamic QR Code Generator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create promo thumbnails to attract viewers",
+            "responsibilities": "creating thumbnails",
+            "objects": "thumbnails",
+            "checklists": [
+                "1. Select compelling imagery relevant to content",
+                "2. Design title text overlay for impact",
+                "3. Integrate branding elements consistently",
+                "4. Focus on emotive content",
+                "5. Review and adjust for visual appeal"
+            ],
+            "type": "promo thumbnail",
+            "parameters": [
+                "engaging imagery",
+                "title text overlay",
+                "branding elements"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "optimize promo thumbnails for different platforms",
+            "responsibilities": "optimizing thumbnails",
+            "objects": "thumbnails",
+            "checklists": [
+                "1. Adapt thumbnail size and layout for specific platforms",
+                "2. Adjust image and text for platform optimization",
+                "3. Ensure branding consistency",
+                "4. Test on multiple devices",
+                "5. Refine based on platform feedback"
+            ],
+            "type": "promo thumbnail",
+            "parameters": [
+                "engaging imagery",
+                "title text overlay",
+                "branding elements"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design interview thumbnails to feature participants",
+            "responsibilities": "creating thumbnails",
+            "objects": "thumbnails",
+            "checklists": [
+                "1. Choose images that clearly feature participants",
+                "2. Create text overlays that are easy to read",
+                "3. Maintain brand consistency",
+                "4. Adjust for optimal contrast and color",
+                "5. Simplify design to enhance focus"
+            ],
+            "type": "interview thumbnail",
+            "parameters": [
+                "engaging imagery",
+                "text overlay",
+                "brand consistency",
+                "contrast and colors",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "optimize interview thumbnails for viewer engagement",
+            "responsibilities": "optimizing thumbnails",
+            "objects": "thumbnails",
+            "checklists": [
+                "1. Review thumbnail impact on different platforms",
+                "2. Enhance visual elements for engagement",
+                "3. Standardize text and brand features",
+                "4. Test color and contrast adjustments",
+                "5. Finalize based on user engagement data"
+            ],
+            "type": "interview thumbnail",
+            "parameters": [
+                "engaging imagery",
+                "text overlay",
+                "brand consistency",
+                "contrast and colors",
+                "simplicity"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create tutorial thumbnails to summarize content",
+            "responsibilities": "creating thumbnails",
+            "objects": "thumbnails",
+            "checklists": [
+                "1. Select high-quality images that represent the content",
+                "2. Design with consistent backgrounds for brand alignment",
+                "3. Scale and orient elements for easy recognition",
+                "4. Keep the layout simple and focused",
+                "5. Gather feedback and refine"
+            ],
+            "type": "tutorial thumbnail",
+            "parameters": [
+                "high-quality image",
+                "consistent backgrounds",
+                "scale and orientation"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "optimize tutorial thumbnails for clarity and appeal",
+            "responsibilities": "optimizing thumbnails",
+            "objects": "thumbnails",
+            "checklists": [
+                "1. Evaluate existing thumbnails for clarity",
+                "2. Adjust image quality and background consistency",
+                "3. Modify scale and orientation for optimal viewing",
+                "4. Enhance overall design appeal",
+                "5. Test and revise based on analytics"
+            ],
+            "type": "tutorial thumbnail",
+            "parameters": [
+                "high-quality image",
+                "consistent backgrounds",
+                "scale and orientation"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Adobe Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "generate website mockups for project previews",
+            "responsibilities": "generating mockups",
+            "objects": "mockups",
+            "checklists": [
+                "1. Sketch initial layout concepts",
+                "2. Design detailed navigation and typography in Adobe XD",
+                "3. Ensure responsive design principles",
+                "4. Create interactive prototypes",
+                "5. Review and iterate based on initial feedback"
+            ],
+            "type": "website mockup",
+            "parameters": [
+                "layout",
+                "navigation",
+                "typography",
+                "responsive design"
+            ],
+            "tools": [
+                "Adobe XD",
+                "Figma"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "test website mockup usability with users",
+            "responsibilities": "testing mockup usability",
+            "objects": "mockups",
+            "checklists": [
+                "1. Conduct user testing sessions",
+                "2. Collect qualitative and quantitative feedback",
+                "3. Analyze usability data",
+                "4. Make adjustments based on feedback",
+                "5. Validate changes with follow-up testing"
+            ],
+            "type": "website mockup",
+            "parameters": [
+                "layout",
+                "navigation",
+                "typography",
+                "responsive design"
+            ],
+            "tools": [
+                "Adobe XD",
+                "UserTesting"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "create app mockups for development planning",
+            "responsibilities": "generating mockups",
+            "objects": "mockups",
+            "checklists": [
+                "1. Define core functionality and CTA placement",
+                "2. Create layout integrating navigation and typography in Sketch",
+                "3. Apply responsive design adjustments",
+                "4. Prototype interactions in Sketch",
+                "5. Conduct internal review for coherence"
+            ],
+            "type": "app mockup",
+            "parameters": [
+                "layout",
+                "navigation",
+                "typography",
+                "responsive design",
+                "CTA"
+            ],
+            "tools": [
+                "Sketch",
+                "InVision"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "test app mockup usability for user feedback",
+            "responsibilities": "testing mockup usability",
+            "objects": "mockups",
+            "checklists": [
+                "1. Setup usability testing with target users",
+                "2. Gather feedback on layout, navigation, and CTA effectiveness",
+                "3. Adjust design based on user interactions",
+                "4. Implement changes for enhanced usability",
+                "5. Retest and finalize design"
+            ],
+            "type": "app mockup",
+            "parameters": [
+                "layout",
+                "navigation",
+                "typography",
+                "responsive design",
+                "CTA"
+            ],
+            "tools": [
+                "Sketch",
+                "UserTesting",
+                "InVision"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design advertising mockups for campaigns",
+            "responsibilities": "generating mockups",
+            "objects": "mockups",
+            "checklists": [
+                "1. Conceptualize Ad based on campaign goals",
+                "2. Integrate headline, images, and brand identity in Figma",
+                "3. Layout design for different media formats",
+                "4. Get preliminary feedback from marketing team",
+                "5. Refine based on feedback"
+            ],
+            "type": "advertising mockup",
+            "parameters": [
+                "headline",
+                "images or graphics",
+                "brand logo and identity"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Illustrator"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "test advertising mockup effectiveness",
+            "responsibilities": "testing mockup usability",
+            "objects": "mockups",
+            "checklists": [
+                "1. Test different versions in focus groups",
+                "2. Analyze effectiveness of headline and visuals",
+                "3. Collect feedback on brand consistency",
+                "4. Tweak designs based on feedback",
+                "5. Conduct A/B testing to finalize the Ad"
+            ],
+            "type": "advertising mockup",
+            "parameters": [
+                "headline",
+                "images or graphics",
+                "brand logo and identity"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Google AdWords",
+                "A/B Testing Tools"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "design promotional email templates for marketing",
+            "responsibilities": "designing email templates",
+            "objects": "email templates",
+            "checklists": [
+                "1. Draft a captivating subject line and header",
+                "2. Design a compelling hero image in Figma,Adobe Photoshop",
+                "3. Develop engaging body content",
+                "4. Integrate a clear CTA",
+                "5. Include social media links and a professional footer"
+            ],
+            "type": "promotional email template",
+            "parameters": [
+                "header",
+                "subject line",
+                "hero image",
+                "headline",
+                "body content",
+                "CTA",
+                "social media links",
+                "footer"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Mailchimp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "personalize promotional templates for target audiences",
+            "responsibilities": "personalizing template design",
+            "objects": "email templates",
+            "checklists": [
+                "1. Customize the header and subject line for audience segments",
+                "2. Adapt the hero image to reflect target demographics",
+                "3. Tailor content and CTA to audience interests",
+                "4. Ensure social links are relevant",
+                "5. Modify footer details as needed"
+            ],
+            "type": "promotional email template",
+            "parameters": [
+                "header",
+                "subject line",
+                "hero image",
+                "headline",
+                "body content",
+                "CTA",
+                "social media links",
+                "footer"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Mailchimp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "create newsletter templates for regular updates",
+            "responsibilities": "designing email templates",
+            "objects": "email templates",
+            "checklists": [
+                "1. Create an eye-catching header and title/banner",
+                "2. Write an engaging introduction section",
+                "3. Compile relevant body content",
+                "4. Design a visible CTA",
+                "5. Craft a useful and informative footer"
+            ],
+            "type": "newsletter template",
+            "parameters": [
+                "Header",
+                "Title/banner",
+                "Introduction section",
+                "Body content",
+                "CTA",
+                "Footer"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Mailchimp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "tailor newsletter templates to reader preferences",
+            "responsibilities": "personalizing template design",
+            "objects": "email templates",
+            "checklists": [
+                "1. Adjust the header and title to suit reader preferences",
+                "2. Personalize the introduction for engagement",
+                "3. Customize body content based on past interactions",
+                "4. Vary the CTA based on user data",
+                "5. Update the footer with personalized links"
+            ],
+            "type": "newsletter template",
+            "parameters": [
+                "Header",
+                "Title/banner",
+                "Introduction section",
+                "Body content",
+                "CTA",
+                "Footer"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Mailchimp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "design feedback email templates for user engagement",
+            "responsibilities": "designing email templates",
+            "objects": "email templates",
+            "checklists": [
+                "1. Formulate an inviting subject line",
+                "2. Create a personalized greeting using dynamic content",
+                "3. Lay out clear and concise instructions",
+                "4. Design an easy-to-spot CTA",
+                "5. Include essential contact information"
+            ],
+            "type": "feedback email template",
+            "parameters": [
+                "subject line",
+                "personalized greeting",
+                "introduction",
+                "clear Instructions",
+                "CTA",
+                "contact info"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Mailchimp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "customize feedback templates to enhance response rates",
+            "responsibilities": "personalizing template design",
+            "objects": "email templates",
+            "checklists": [
+                "1. Tailor subject lines to increase open rates",
+                "2. Adjust greetings for individualization",
+                "3. Refine instructions for clarity",
+                "4. Optimize the CTA for better engagement",
+                "5. Personalize contact info based on user data"
+            ],
+            "type": "feedback email template",
+            "parameters": [
+                "subject line",
+                "personalized greeting",
+                "introduction",
+                "clear Instructions",
+                "CTA",
+                "contact info"
+            ],
+            "tools": [
+                "Adobe Photoshop",
+                "Mailchimp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "sketch mascots for brand representation",
+            "responsibilities": "sketching characters",
+            "objects": "characters",
+            "checklists": [
+                "1. Define the brand values to be represented",
+                "2. Develop character concepts reflecting these traits",
+                "3. Create preliminary sketches in Figma,Adobe Illustrator",
+                "4. Refine sketches to enhance personality",
+                "5. Finalize and review with stakeholders"
+            ],
+            "type": "mascot",
+            "parameters": [
+                "character concept",
+                "personality traits"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "sketch user avatars for online platforms",
+            "responsibilities": "sketching characters",
+            "objects": "characters",
+            "checklists": [
+                "1. Research current trends in avatar design",
+                "2. Sketch initial designs focusing on key features",
+                "3. Select appropriate color schemes",
+                "4. Incorporate interactive capabilities",
+                "5. Iterate based on user feedback"
+            ],
+            "type": "user avatar",
+            "parameters": [
+                "style",
+                "key features",
+                "color scheme",
+                "interactive capabilities"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "sketch instructional characters for educational content",
+            "responsibilities": "sketching characters",
+            "objects": "characters",
+            "checklists": [
+                "1. Identify educational goals",
+                "2. Design characters that are approachable and engaging",
+                "3. Create sketches with clear, inviting expressions",
+                "4. Test character appeal in focus groups",
+                "5. Adjust based on educational feedback"
+            ],
+            "type": "instructional character",
+            "parameters": [
+                "educational appeal",
+                "approachability"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "sketch storytelling characters for narratives",
+            "responsibilities": "sketching characters",
+            "objects": "characters",
+            "checklists": [
+                "1. Outline the narrative and character role",
+                "2. Develop characters with distinct backgrounds and emotions",
+                "3. Sketch detailed expressions and attire",
+                "4. Review narrative integration",
+                "5. Refine for emotional depth and clarity"
+            ],
+            "type": "storytelling character",
+            "parameters": [
+                "character background",
+                "visual design",
+                "emotional expression"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "sketch iconic characters for major branding initiatives",
+            "responsibilities": "sketching characters",
+            "objects": "characters",
+            "checklists": [
+                "1. Understand brand & target audience values, message, appeal.",
+                "2. Sketch character concepts, broad appeal, unique traits.",
+                "3. Refine based on feedback recognizability, audience connection.",
+                "4. Finalize detailed, dynamic character sketch..",
+                "5. Present for final approval and implementation."
+            ],
+            "type": "iconic character",
+            "parameters": [
+                "distinctive appearance",
+                "emotional expression",
+                "timelessness"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "generate digital portraits for clients",
+            "responsibilities": "generating portraits",
+            "objects": "portraits",
+            "checklists": [
+                "1. Consult client for specific requirements and obtain the prompt, reference, and exclusion parameters.",
+                "2. Use the reference to guide the initial portrait design, avoiding elements listed in the exclusion parameter.",
+                "3. Apply face-swap techniques if required.",
+                "4. Perform detailed retouching post face-swap to enhance realism.",
+                "5. Create a backgroundless version of the portrait in Figma, ensuring clean edges and professional finish.",
+                "6. Convert the portrait to required formats and sizes as specified in the prompt, preparing for client review and feedback."
+            ],
+            "type": "digital portrait",
+            "parameters": [
+                "prompt",
+                "reference",
+                "exclusion parameter",
+                "retouching after face-swap",
+                "backgroundless portrait in figma",
+                "converted portrait",
+                "email signature",
+                "version in embroidered shirt"
+            ],
+            "tools": [
+                "Figma",
+                "Photoshop",
+                "After Effects",
+                "Face swap"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "edit digital portraits to enhance details",
+            "responsibilities": "editing portraits",
+            "objects": "portraits",
+            "checklists": [
+                "1. Review the initial prompt and reference images to understand the desired outcome.",
+                "2. Apply face-swap techniques as required and check alignment and blending.",
+                "3. Perform detailed retouching focusing on skin, eyes, and other facial features for realism.",
+                "4. Remove the background using Figma for a clean, distraction-free portrait.",
+                "5. Convert the portrait to the specified formats and prepare versions like the embroidered shirt edition if needed."
+            ],
+            "type": "digital portrait",
+            "parameters": [
+                "prompt",
+                "reference",
+                "exclusion parameter",
+                "retouching after face-swap",
+                "backgroundless portrait in figma",
+                "converted portrait",
+                "email signature",
+                "version in embroidered shirt"
+            ],
+            "tools": [
+                "Figma",
+                "Photoshop",
+                "After Effects",
+                "Face swap"
+            ],
+            "complexity": "High"
+        }
+    ]
+}

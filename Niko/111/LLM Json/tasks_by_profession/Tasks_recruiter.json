@@ -1,0 +1,4272 @@
+{
+    "profession": "recruiter",
+    "department": "managers",
+    "tasks": [
+        {
+            "task_name": "Filter needed candidate resumes.",
+            "responsibilities": "Screening candidate resumes",
+            "objects": "candidates",
+            "checklists": [
+                "1. Access the CRM to retrieve candidate data filtered by specified parameters (skill, location, etc.).",
+                "2. Use job sites and LinkedIn to cross-reference candidates' profiles.",
+                "3. Review resumes in Google Docs, focusing on relevance to the project and skill match.",
+                "4. Update candidate status in CRM and draft initial contact messengers or social media.",
+                "5. Schedule initial interviews using Google Meet, ensuring all key details are noted in Notion."
+            ],
+            "type": "needed candidates",
+            "parameters": [
+                "skill",
+                "project",
+                "location",
+                "company",
+                "manager",
+                "profession",
+                "date",
+                "status",
+                "possible employee",
+                "tool",
+                "quantity"
+            ],
+            "tools": [
+                "CRM",
+                "Job sites",
+                "Google Docs",
+                "LinkedIn",
+                "Telegram",
+                "Instagram",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Conduct interviews with needed candidates.",
+            "responsibilities": "Conducting candidate interviews",
+            "objects": "candidates",
+            "checklists": [
+                "1. Prepare interview questions and agenda using Notion.",
+                "2. Set up the interview environment on Google Meet.",
+                "3. Conduct the interview, taking detailed notes in Google Docs.",
+                "4. Use interview script.",
+                "5. Use Google slides for demonstation a presentation",
+                "6. Schedule next steps or further interviews in Google Calendar."
+            ],
+            "type": "needed candidates",
+            "parameters": [
+                "skill",
+                "project",
+                "location",
+                "company",
+                "manager",
+                "profession",
+                "date",
+                "status",
+                "possible employee",
+                "tool",
+                "quantity"
+            ],
+            "tools": [
+                "Notion",
+                "Google Meet",
+                "Google Docs",
+                "Google Calendar",
+                "Google slides"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Evaluate needed candidate qualifications.",
+            "responsibilities": "Assessing candidate qualifications",
+            "objects": "candidates",
+            "checklists": [
+                "1. Review the detailed job description and candidate requirements in Google Docs.",
+                "2. Use CRM to analyze candidate data against job qualifications.",
+                "3. Conduct competency assessments using specialized tools like Zoho Sign for agreements on testing.",
+                "4. Summarize findings and update candidate ratings in CRM.",
+                "5. Prepare evaluation report in Notion for review by the hiring manager."
+            ],
+            "type": "needed candidates",
+            "parameters": [
+                "skill",
+                "project",
+                "location",
+                "company",
+                "manager",
+                "profession",
+                "date",
+                "status",
+                "possible employee",
+                "tool",
+                "quantity"
+            ],
+            "tools": [
+                "Google Docs",
+                "CRM",
+                "Zoho Sign",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Screen resumes from applied candidates.",
+            "responsibilities": "Screening candidate resumes",
+            "objects": "candidates",
+            "checklists": [
+                "1. Utilize CRM to filter applications based on critical parameters like department, profession, and language.",
+                "2. Review resumes and portfolios in Google Docs.",
+                "3. Highlight top candidates using Google Drive for team access.",
+                "4. Organize candidate information in Notion for easy retrieval.",
+                "5. Send shortlisted notifications via Gmail or social media"
+            ],
+            "type": "applied candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Google Drive",
+                "Notion",
+                "Gmail",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Conduct interviews with applied candidates.",
+            "responsibilities": "Conducting candidate interviews",
+            "objects": "candidates",
+            "checklists": [
+                "1. Schedule interviews using Google Calendar and confirm via Gmail.",
+                "2. Prepare digital interview environment on Google Meet.",
+                "3. Conduct the interview while taking detailed notes in Notion.",
+                "4. Use interview script.",
+                "5. Use Google slides for demonstation a presentation.",
+                "6. Record interview highlights in CRM for review."
+            ],
+            "type": "applied candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Gmail",
+                "Google Meet",
+                "Notion",
+                "CRM",
+                "Google slides"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Assess applied candidate qualifications.",
+            "responsibilities": "Assessing candidate qualifications",
+            "objects": "candidates",
+            "checklists": [
+                "1. Retrieve candidate data from CRM and cross-reference with job criteria.",
+                "2. Utilize specialized tools like LinkedIn to verify professional background.",
+                "3. Schedule and manage skill tests using Zoho Sign for consent forms.",
+                "4. Compile assessment results in Google Docs.",
+                "5. Discuss qualifications in a team meeting using Microsoft Teams or Google Meet."
+            ],
+            "type": "applied candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift"
+            ],
+            "tools": [
+                "CRM",
+                "LinkedIn",
+                "Zoho Sign",
+                "Google Docs",
+                "Microsoft Teams",
+                "Google Meet"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Screen found candidate resumes.",
+            "responsibilities": "Screening candidate resumes",
+            "objects": "candidates",
+            "checklists": [
+                "1. Access CRM to sort candidates by key filters such as profession, expected salary, and language skills.",
+                "2. Use Google Docs to review resumes and portfolios for suitability.",
+                "3. Highlight standout resumes in Google Drive for shared access.",
+                "4. Summarize top profiles in Notion for quick retrieval.",
+                "5. Notify team members of potential candidates via Gmail or social media."
+            ],
+            "type": "found candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Google Drive",
+                "Notion",
+                "Gmail",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Conduct interviews with found candidates.",
+            "responsibilities": "Conducting candidate interviews",
+            "objects": "candidates",
+            "checklists": [
+                "1. Prepare and schedule the interview setup using Google Calendar and send invites through Gmail.",
+                "2. Setup Google Meet for virtual interviews.",
+                "3. Conduct detailed interviews while taking notes in Notion.",
+                "4. Use interview script.",
+                "5. Document and review interview feedback in CRM."
+            ],
+            "type": "found candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Gmail",
+                "Google Meet",
+                "Notion",
+                "CRM",
+                "Google slides"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Evaluate found candidate qualifications.",
+            "responsibilities": "Assessing candidate qualifications",
+            "objects": "candidates",
+            "checklists": [
+                "1. Cross-check candidate credentials against job requirements using CRM.",
+                "2. Utilize LinkedIn to verify professional experiences and endorsements.",
+                "3. Conduct technical or skill-based assessments via platforms like Zoho Sign for test agreements.",
+                "4. Analyze test results and compile findings in Google Docs.",
+                "5. Present candidate evaluations in a team meeting"
+            ],
+            "type": "found candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "LinkedIn",
+                "Zoho Sign",
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Re-screen follow-up candidate resumes.",
+            "responsibilities": "Screening candidate resumes",
+            "objects": "candidates",
+            "checklists": [
+                "1. Update search criteria in CRM based on new job specifications or changes in requirements.",
+                "2. Access previously stored resumes in Google Drive and filter using updated parameters.",
+                "3. Review changes or updates in candidates’ profiles using Google Docs.",
+                "4. Mark candidates for follow-up in Notion.",
+                "5. Notify team members of potential re-interviews via Gmail or social media"
+            ],
+            "type": "follow-up candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary",
+                "period"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive",
+                "Google Docs",
+                "Notion",
+                "Gmail",
+                "Instagram",
+                "Telegram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Conduct interviews with follow-up candidates.",
+            "responsibilities": "Conducting candidate interviews",
+            "objects": "candidates",
+            "checklists": [
+                "1. Schedule follow-up interviews using Google Calendar, informing candidates via Gmail.",
+                "2. Prepare specific follow-up questions in Notion, focusing on new information or previous concerns.",
+                "3. Conduct interviews using Google Meet, recording key points.",
+                "4. Use interview script.",
+                "5. Use Google slides for demonstation a presentation 6. Summarize interview outcomes in CRM for decision-making."
+            ],
+            "type": "follow-up candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary",
+                "period"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Gmail",
+                "Google Meet",
+                "Notion",
+                "CRM",
+                "Google slides"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Re-evaluate follow-up candidate qualifications.",
+            "responsibilities": "Assessing candidate qualifications",
+            "objects": "candidates",
+            "checklists": [
+                "1. Gather all previous assessment data from CRM and cross-check with new job criteria.",
+                "2. Use LinkedIn to verify any newly added skills or experiences.",
+                "3. Conduct additional skills assessments if necessary, coordinating with Zoho Sign.",
+                "4. Compile and review all new data in Google Docs.",
+                "5. Present re-evaluation findings in a team meeting"
+            ],
+            "type": "follow-up candidates",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary",
+                "period"
+            ],
+            "tools": [
+                "CRM",
+                "LinkedIn",
+                "Zoho Sign",
+                "Google Docs",
+                "Discord"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Send initial job offers to qualified candidates.",
+            "responsibilities": "Distributing job offers",
+            "objects": "communications",
+            "checklists": [
+                "1. Review candidate profiles in CRM to confirm qualifications.",
+                "2. Draft initial job offers using Google Docs, detailing vacancy, benefits, and company information.",
+                "3. Send job offers via Gmail, using personalized email templates.",
+                "4. Track sent offers and expected responses in CRM.",
+                "5. Set reminders in Google Calendar for follow-up communications."
+            ],
+            "type": "first connection",
+            "parameters": [
+                "date",
+                "vacancy",
+                "benefit",
+                "name",
+                "company"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Gmail",
+                "Google Calendar",
+                "Telegram",
+                "Instagram",
+                ""
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Update and resend revised job offers as needed.",
+            "responsibilities": "Distributing job offers",
+            "objects": "communications",
+            "checklists": [
+                "1. Gather feedback on previous offers from CRM.",
+                "2. Adjust job offer details in Google Docs based on feedback and changes in terms or benefits.",
+                "3. Resend updated job offers via Gmail, highlighting any changes.",
+                "4. Monitor responses and update offer statuses in CRM.",
+                "5. Use GPT chat to optimize communication wording based on profession and outcome."
+            ],
+            "type": "update",
+            "parameters": [
+                "response time",
+                "outcome",
+                "profession",
+                "frequency",
+                "channel",
+                "goal"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Gmail",
+                "GPT chat",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Manage initial communications with potential candidates.",
+            "responsibilities": "Managing communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Organize candidate contact information in CRM.",
+                "2. Send initial greeting and information requests using Gmail.",
+                "3. Document communications and any candidate queries in Notion.",
+                "4. Set up auto-responses for frequently asked questions via Gmail.",
+                "5. Schedule regular updates to keep candidates informed using Google Calendar."
+            ],
+            "type": "first connection",
+            "parameters": [
+                "date",
+                "vacancy",
+                "benefit",
+                "name",
+                "company"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail",
+                "Notion",
+                "Google Calendar",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Manage ongoing updates and notifications to candidates.",
+            "responsibilities": "Managing communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Review communication strategies and response data in CRM.",
+                "2. Draft updates and notifications in Google Docs.",
+                "3. Send out communications through multiple channels such as Gmail, LinkedIn, and Telegram.",
+                "4. Analyze response times and adjust frequency using insights from CRM.",
+                "5. Use Notion to track and schedule future communications."
+            ],
+            "type": "update",
+            "parameters": [
+                "response time",
+                "outcome",
+                "profession",
+                "frequency",
+                "channel",
+                "goal"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Gmail",
+                "LinkedIn",
+                "Telegram",
+                "Notion",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Distribute follow-up communications and reminders of offers.",
+            "responsibilities": "Distributing job offers",
+            "objects": "communications",
+            "checklists": [
+                "1. Review candidate status and history in CRM to personalize communications.",
+                "2. Draft follow-up messages and offer reminders using Google Docs.",
+                "3. Send communications through Gmail and track engagement via CRM.",
+                "4. Use Telegram or LinkedIn for additional follow-ups.",
+                "5. Schedule reminders in Google Calendar to ensure timely follow-ups."
+            ],
+            "type": "follow-up",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary",
+                "period",
+                "response time",
+                "outcome",
+                "feedback",
+                "profession",
+                "frequency",
+                "channel"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Gmail",
+                "Telegram",
+                "LinkedIn",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Handle follow-up communications to ensure candidate engagement.",
+            "responsibilities": "Managing communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Organize candidate information in CRM for targeted communication.",
+                "2. Develop a communication plan in Notion to maintain engagement.",
+                "3. Send personalized follow-up emails via Gmail.",
+                "4. Utilize Discord and Viber for informal updates and check-ins.",
+                "5. Analyze communication effectiveness and adjust strategies using feedback in CRM."
+            ],
+            "type": "follow-up",
+            "parameters": [
+                "name",
+                "age",
+                "address",
+                "date",
+                "source",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "test",
+                "department",
+                "profession",
+                "applied for",
+                "language",
+                "tool",
+                "course",
+                "comment",
+                "sub title",
+                "status",
+                "salary",
+                "shift",
+                "expected salary",
+                "period",
+                "response time",
+                "outcome",
+                "feedback",
+                "profession",
+                "frequency",
+                "channel"
+            ],
+            "tools": [
+                "CRM",
+                "Notion",
+                "Gmail",
+                "Discord",
+                "Viber",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Include requests for feedback with job offers.",
+            "responsibilities": "Distributing job offers",
+            "objects": "communications",
+            "checklists": [
+                "1. Embed feedback requests in job offer letters drafted in Google Docs.",
+                "2.Track received feedback through a structured format in Google Sheets.",
+                "3. Review feedback promptly and update offer documents accordingly.",
+                "4. Notify team of feedback insights using Gmail."
+            ],
+            "type": "feedback",
+            "parameters": [
+                "timeliness",
+                "relevance",
+                "specificity",
+                "format",
+                "constructiveness"
+            ],
+            "tools": [
+                "Google Docs",
+                "Google Sheets",
+                "Gmail",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Manage collection and analysis of candidate feedback.",
+            "responsibilities": "Managing communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Set up a feedback collection system in CRM with specific parameters.",
+                "2. Analyze feedback for trends and insights using advanced tools like GPT chat for text analysis.",
+                "3. Document feedback analysis in Notion.",
+                "4. Share feedback summaries with team using Google Meet.",
+                "5. Adjust communication strategies based on feedback data."
+            ],
+            "type": "feedback",
+            "parameters": [
+                "timeliness",
+                "relevance",
+                "specificity",
+                "format",
+                "constructiveness"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "Notion",
+                "Google Meet",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Distribute FAQs alongside job offers to clarify roles and expectations.",
+            "responsibilities": "Distributing job offers",
+            "objects": "communications",
+            "checklists": [
+                "1. Compile FAQ content relevant to the job position using Notion.",
+                "2. Review and integrate FAQs into job offer documents in Google Docs.",
+                "3. Distribute job offers with FAQs attached via Gmail.",
+                "4. Track which FAQs are frequently accessed or queried using CRM.",
+                "5. Update FAQs periodically based on feedback collected in Google Sheets."
+            ],
+            "type": "faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule",
+                "benefit",
+                "contract condition"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs",
+                "Gmail",
+                "CRM",
+                "Google Sheets",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Manage and update FAQs based on common candidate inquiries.",
+            "responsibilities": "Managing communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Monitor candidate questions and identify common themes using CRM.",
+                "2. Update FAQ documents in Google Docs based on new inquiries.",
+                "3. Share updated FAQs via company website and email using Gmail.",
+                "4. Notify relevant departments of FAQ updates",
+                "5. Schedule regular FAQ reviews and updates in Google Calendar."
+            ],
+            "type": "faq",
+            "parameters": [
+                "company",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "responsibility",
+                "task",
+                "experience",
+                "development",
+                "salary",
+                "schedule",
+                "benefit",
+                "contract condition"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Gmail",
+                "Website",
+                "Google Calendar",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Send job offers with detailed onboarding instructions.",
+            "responsibilities": "Distributing job offers",
+            "objects": "communications",
+            "checklists": [
+                "1. Develop comprehensive onboarding plans including schedules and welcome messages in Notion.",
+                "2. Include onboarding FAQs and presentations in job offer packets prepared in Google Docs.",
+                "3. Send job offers with onboarding instructions via Gmail social media.",
+                "4. Coordinate first-day arrangements and access provisions using CRM.",
+                "5. Confirm readiness with new hires via Discord or Google Meet."
+            ],
+            "type": "onboarding",
+            "parameters": [
+                "call",
+                "presentation",
+                "faq",
+                "presentation",
+                "engagement",
+                "integration",
+                "plan",
+                "welcome message",
+                "company information",
+                "company culture",
+                "contact",
+                "access",
+                "timeline"
+            ],
+            "tools": [
+                "Notion",
+                "Google Docs",
+                "Gmail",
+                "CRM",
+                "Discord",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Manage communications to support new hires during onboarding.",
+            "responsibilities": "Managing communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Establish a communication plan in Notion for ongoing support.",
+                "2. Use emails and phone calls to ensure new hires have access to necessary resources.",
+                "3. Manage integration efforts through regular check-ins via Zoom or Google Meet.",
+                "4. Utilize a feedback loop in CRM to adjust onboarding processes.",
+                "5. Organize welcome events or meetings using Discord."
+            ],
+            "type": "onboarding",
+            "parameters": [
+                "call",
+                "presentation",
+                "faq",
+                "presentation",
+                "engagement",
+                "integration",
+                "plan",
+                "welcome message",
+                "company information",
+                "company culture",
+                "contact",
+                "access",
+                "timeline"
+            ],
+            "tools": [
+                "Notion",
+                "Gmail",
+                "Phone",
+                "Discord",
+                "Google Meet",
+                "CRM",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Finalize employee contracts post-negotiation.",
+            "responsibilities": "Finalizing employment contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Review negotiated terms using CRM to ensure all conditions are met.",
+                "2. Prepare the final contract in Google Docs including all agreed terms.",
+                "3. Send the final contract for electronic signing via Zoho sign.",
+                "4. Store the signed contract in Google Drive and update CRM.",
+                "5. Notify the employee and HR via Gmail of the contract completion."
+            ],
+            "type": "employee contracts",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "order of rendering",
+                "condition",
+                "result transfer",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Zoho sign",
+                "Google Drive",
+                "Gmail"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Negotiate terms for new employee contracts.",
+            "responsibilities": "Negotiating contract terms",
+            "objects": "contracts",
+            "checklists": [
+                "1. Draft initial contract terms based on job role and requirements in Google Docs.",
+                "2. Conduct negotiation meetings using Google Meet or Zoom.",
+                "3. Use CRM to log negotiation details and updates.",
+                "4. Revise contract drafts in Google Docs based on feedback.",
+                "5. Prepare for final review and signatures in Zoho sign."
+            ],
+            "type": "employee contracts",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "order of rendering",
+                "condition",
+                "result transfer",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "Google Docs",
+                "Google Meet",
+                "Zoom",
+                "CRM",
+                "Zoho"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Renew contracts for continuing employees.",
+            "responsibilities": "Renewing worker contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Review current contract and employee performance in CRM.",
+                "2. Discuss renewal terms with the employee via Google Meet.",
+                "3. Update contract terms in Google Docs reflecting any new conditions or updates.",
+                "4. Process the updated contract through Zoho sign for signing.",
+                "5. Archive old contract and store the new one in Google Drive."
+            ],
+            "type": "employee contracts",
+            "parameters": [
+                "subject",
+                "service",
+                "responsibility",
+                "order of rendering",
+                "condition",
+                "result transfer",
+                "duration",
+                "salary",
+                "benefits",
+                "training",
+                "privacy",
+                "termination"
+            ],
+            "tools": [
+                "CRM",
+                "Google Meet",
+                "Google Docs",
+                "Zoho",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Finalize presale contracts with prospective clients.",
+            "responsibilities": "Finalizing employment contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Verify all contract terms are agreed upon using CRM to track negotiations.",
+                "2. Draft the final contract in Google Docs incorporating all legal stipulations.",
+                "3. Review confidentiality and dispute resolution clauses for compliance.",
+                "4. Send the contract for electronic signature via Zoho sign.",
+                "5. Store the fully signed contract in Google Drive and update the CRM system."
+            ],
+            "type": "presale contract",
+            "parameters": [
+                "subject",
+                "rights",
+                "duties",
+                "duration",
+                "dispute resolution",
+                "confidential information",
+                "other conditions"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Zoho sign",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Discuss and settle terms for presale contracts.",
+            "responsibilities": "Negotiating contract terms",
+            "objects": "contracts",
+            "checklists": [
+                "1. Prepare initial contract drafts in Google Docs based on standard templates.",
+                "2. Conduct negotiation meetings via messenger or social media to discuss terms such as rights, duties, and confidentiality.",
+                "3. Use CRM to record changes and updates during negotiations.",
+                "4. Revise the contract in Google Docs based on the discussions.",
+                "5. Present the revised contract for preliminary approval."
+            ],
+            "type": "presale contract",
+            "parameters": [
+                "subject",
+                "rights",
+                "duties",
+                "duration",
+                "dispute resolution",
+                "confidential information",
+                "other conditions"
+            ],
+            "tools": [
+                "Google Docs",
+                "Telegram",
+                "Instagram",
+                "CRM",
+                "Zoho sign"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Assess and renew presale contracts as needed.",
+            "responsibilities": "Renewing worker contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Review the current contract's performance and terms in CRM.",
+                "2. Discuss renewal options and any necessary changes with the client via Google Meet.",
+                "3. Update the contract terms in Google Docs reflecting new agreements or conditions.",
+                "4. Send the updated contract via Zoho sign for signing.",
+                "5. Archive the old contract and save the new version in Google Drive."
+            ],
+            "type": "presale contract",
+            "parameters": [
+                "subject",
+                "rights",
+                "duties",
+                "duration",
+                "dispute resolution",
+                "confidential information",
+                "other conditions"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Google Meet",
+                "Zoho",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Complete content creator agreements.",
+            "responsibilities": "Finalizing employment contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Ensure all agreement sections are accurately filled out, using Google Docs for drafting.",
+                "2. Verify the inclusion of confidentiality clauses and rights transfers in the document.",
+                "3. Obtain digital signatures via Zoho sign.",
+                "4. File the fully signed agreement in Google Drive and update records in CRM.",
+                "5. Send a copy of the signed agreement to the content creator via Gmail."
+            ],
+            "type": "content creator agreement",
+            "parameters": [
+                "subject",
+                "name",
+                "signature",
+                "confidentiality",
+                "responsibility",
+                "transfer of right",
+                "termination",
+                "salary"
+            ],
+            "tools": [
+                "Google Docs",
+                "Zoho sign",
+                "Google Drive",
+                "CRM",
+                "Gmail"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Negotiate details of content creator agreements.",
+            "responsibilities": "Negotiating contract terms",
+            "objects": "contracts",
+            "checklists": [
+                "1. Draft preliminary agreement terms in Google Docs, outlining responsibilities and rights.",
+                "2. Discuss terms with the content creator over Google Meet or messenger, focusing on key areas like salary, confidentiality, and rights transfer.",
+                "3. Revise the agreement based on feedback in Google Docs.",
+                "4. Finalize the draft for review in Zoho sign.",
+                "5. Log negotiation details and changes in CRM."
+            ],
+            "type": "content creator agreement",
+            "parameters": [
+                "subject",
+                "name",
+                "signature",
+                "confidentiality",
+                "responsibility",
+                "transfer of right",
+                "termination",
+                "salary"
+            ],
+            "tools": [
+                "Google Docs",
+                "Zoom",
+                "CRM",
+                "Zoho",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Renew content creator agreements upon expiry.",
+            "responsibilities": "Renewing worker contracts",
+            "objects": "contracts",
+            "checklists": [
+                "1. Assess the current agreement's terms and performance in CRM.",
+                "2. Meet with the content creator via Google Meet to discuss renewal terms and any necessary updates.",
+                "3. Update the agreement in Google Docs to reflect new terms.",
+                "4. Process the updated agreement through Zoho sign for signatures.",
+                "5. Archive the previous agreement and store the new one in Google Drive."
+            ],
+            "type": "content creator agreement",
+            "parameters": [
+                "subject",
+                "name",
+                "signature",
+                "confidentiality",
+                "responsibility",
+                "transfer of right",
+                "termination",
+                "salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Meet",
+                "Google Docs",
+                "Zoho sign",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Update candidate profiles and statuses in the database.",
+            "responsibilities": "Updating candidate databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Review recent activity and updates from candidates using CRM.",
+                "2. Edit candidate profiles in CRM to reflect any new information or status changes.",
+                "3. Verify accuracy of updated data with documents stored in Google Drive.",
+                "4. Log changes and update timelines in Salesforce.",
+                "5. Notify relevant recruiters or departments of significant updates via Gmail."
+            ],
+            "type": "candidates database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "date",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "channel",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Search the candidates database for suitable profiles.",
+            "responsibilities": "Searching recruitment databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Define search criteria based on job requirements (e.g., profession, experience) in CRM.",
+                "2. Use advanced search features in CRM to filter candidate profiles.",
+                "3. Review profiles to assess suitability for open positions, storing shortlists in Google Sheets.",
+                "4. Share potential candidates with hiring managers via Discord, messengers or a shared Google Drive folder."
+            ],
+            "type": "candidates database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "date",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "channel",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Discord",
+                "Google Drive",
+                "Telegram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Ensure the accuracy and privacy of the candidates database.",
+            "responsibilities": "Maintaining database integrity",
+            "objects": "databases",
+            "checklists": [
+                "1. Regularly audit database entries for accuracy using  CRM.",
+                "2. Update security protocols in CRM and implement strong access controls.",
+                "3. Train team members on compliance with data privacy using Google Meet and internal documentation stored in Notion.",
+                "4. Implement regular backups of data using Google Drive.",
+                "5. Document all procedures and changes in Notion for transparency."
+            ],
+            "type": "candidates database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "date",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "channel",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Meet",
+                "Notion",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Update employee records and contract details.",
+            "responsibilities": "Updating candidate databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Access employee records in CRM to review and update personal and contractual details.",
+                "2. Edit profiles to reflect changes such as promotions, department transfers, or updates in contact information.",
+                "3. Verify all updates for accuracy against original documents stored in Google Drive.",
+                "4. Log all changes in CRM and notify HR via Discord or messenger.",
+                "5. Set reminders in Google Calendar for contract renewal dates."
+            ],
+            "type": "employees database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "responsibility",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "employee id",
+                "joining date",
+                "birthday",
+                "project",
+                "report",
+                "task",
+                "document"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive",
+                "Discord",
+                "Telegram",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Retrieve employee information from the database as needed.",
+            "responsibilities": "Searching recruitment databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Use CRM to perform searches based on specific criteria such as department or job title.",
+                "2. Extract detailed reports on individual or group profiles to assess project allocations or performance.",
+                "3. Save and organize retrieved information in Google Sheets for easy access during meetings or reviews.",
+                "4. Share necessary information with department heads via Gmail or Discord.",
+                "5. Ensure all accessed data is logged for security tracking in CRM."
+            ],
+            "type": "employees database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "responsibility",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "employee id",
+                "joining date",
+                "birthday",
+                "project",
+                "report",
+                "task",
+                "document"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Gmail",
+                "Discord",
+                "Telegram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Maintain security and integrity of the employees database.",
+            "responsibilities": "Maintaining database integrity",
+            "objects": "databases",
+            "checklists": [
+                "1. Regularly review security protocols in CRM to ensure data protection standards are met.",
+                "2. Conduct periodic audits of database access logs to detect any unauthorized access or anomalies.",
+                "3. Train staff on data privacy and security best practices using Google Meet.",
+                "4. Implement robust password policies and two-factor authentication.",
+                "5. Schedule regular backups of all employee data in Google Drive."
+            ],
+            "type": "employees database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "position",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "responsibility",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "employee id",
+                "joining date",
+                "birthday",
+                "project",
+                "report",
+                "task",
+                "document"
+            ],
+            "tools": [
+                "CRM",
+                "Google Meet",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Update entries in the presale database with current data.",
+            "responsibilities": "Updating candidate databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Access the presale database using CRM to identify outdated entries.",
+                "2. Update client information based on recent interactions or obtained data, logged in CRM.",
+                "3. Verify updated details for accuracy with documents in Google Drive.",
+                "4. Record changes in CRM and note important updates.",
+                "5. Notify sales team of updates via Discord for timely follow-up."
+            ],
+            "type": "presale database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "date",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "channel",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Search the presale database for potential client leads.",
+            "responsibilities": "Searching recruitment databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Use filtering and sorting features in  CRM to target potential clients by specific criteria (e.g., industry, previous engagement levels).",
+                "2. Review the relevance of found profiles in CRM.",
+                "3. Save potential leads in Google Sheets for easy access and tracking.",
+                "4. Share promising leads with the marketing team through Gmail.",
+                "5. Schedule follow-up actions in Google Calendar."
+            ],
+            "type": "presale database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "date",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "channel",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Gmail",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Ensure data accuracy and security in the presale database.",
+            "responsibilities": "Maintaining database integrity",
+            "objects": "databases",
+            "checklists": [
+                "1. Conduct regular audits of the CRM database to check for accuracy and completeness.",
+                "2. Update security settings in CRM to strengthen data protection.",
+                "3. Train staff on data handling and security practices using Google Meet.",
+                "4. Implement and monitor data access controls.",
+                "5. Back up database information weekly in Google Drive."
+            ],
+            "type": "presale database",
+            "parameters": [
+                "profile",
+                "general info",
+                "department",
+                "profession",
+                "tool",
+                "name",
+                "age",
+                "address",
+                "contact",
+                "resume",
+                "video",
+                "interview",
+                "photo",
+                "portfolio",
+                "language",
+                "education",
+                "experience",
+                "date",
+                "activity",
+                "correspondence",
+                "status",
+                "note",
+                "channel",
+                "expected salary"
+            ],
+            "tools": [
+                "CRM",
+                "Google Meet",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Schedule video interviews with candidates.",
+            "responsibilities": "Scheduling job interviews",
+            "objects": "interviews",
+            "checklists": [
+                "1. Review candidate availability and interview requirements using CRM.",
+                "2. Schedule interviews based on duration, orientation, and language needs using Google Calendar.",
+                "3. Send invitations and interview details through Gmail, including a link to the Google Meet video call.",
+                "4. Confirm interviews and prepare reminder emails to ensure candidate attendance.",
+                "5. Review and distribute interview scripts and guidelines to interviewers via Google Drive."
+            ],
+            "type": "video interview",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Gmail",
+                "Google Meet",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Conduct video interviews to assess candidate suitability.",
+            "responsibilities": "Conducting video interviews",
+            "objects": "interviews",
+            "checklists": [
+                "1. Set up the interview environment in Google Meet, ensuring all technical settings are optimized for the interview duration and language.",
+                "2. Conduct the interview following the prepared script to maintain consistency.",
+                "3.Use Google Slides for demonstration of presentation 4. Record the interview session for review, with consent from the candidate.",
+                "5. Take detailed notes during the interview in Google Docs using Transcription.",
+                "6. Engage in immediate post-interview discussion with other interviewers to gather initial thoughts."
+            ],
+            "type": "video interview",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "Google Meet",
+                "Google Docs",
+                "Transcription",
+                "Google Slides"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Summarize and record outcomes from video interviews.",
+            "responsibilities": "Debriefing interview outcomes",
+            "objects": "interviews",
+            "checklists": [
+                "1. Compile interview notes and recordings from Google Drive.",
+                "2. Summarize key points and candidate responses in a comprehensive report in Google Docs.",
+                "3. Discuss and evaluate candidate performance with the interviewing team using Google Meet.",
+                "4. Finalize the interview outcome and update candidate status in CRM.",
+                "5. Archive all relevant interview materials and outcomes securely in Google Drive."
+            ],
+            "type": "video interview",
+            "parameters": [
+                "duration",
+                "orientation",
+                "language",
+                "script"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs",
+                "Google Meet",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Arrange project-specific interviews for candidates.",
+            "responsibilities": "Scheduling job interviews",
+            "objects": "interviews",
+            "checklists": [
+                "1. Confirm project details and requirements with the hiring team using CRM.",
+                "2. Schedule interviews considering the availability of all participants using Google Calendar.",
+                "3. Send detailed interview agendas and expectations to candidates via Gmail or messengers.",
+                "4. Prepare and distribute interview materials, such as specific questions and project details, to interviewers using Google Drive.",
+                "5. Confirm the interview setup, including technical arrangements on the chosen channel (e.g., Zoom)."
+            ],
+            "type": "project interview",
+            "parameters": [
+                "project detail",
+                "date",
+                "time",
+                "channel",
+                "profession",
+                "company expectation",
+                "language",
+                "specific question",
+                "candidate preparedness",
+                "company",
+                "participant"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Gmail",
+                "Google Drive",
+                "Zoom",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Perform project interviews to evaluate candidate skills.",
+            "responsibilities": "Conducting video interviews",
+            "objects": "interviews",
+            "checklists": [
+                "1. Conduct the interview using Zoom or Google Drive, ensuring all necessary stakeholders are present.",
+                "2. Follow a structured interview script prepared in Google Docs, tailored to assess specific project-related skills and preparedness.",
+                "3. Record the interview for later review, ensuring compliance with privacy laws.",
+                "4. Utilize real-time collaboration tools like Google Docs to take notes and score candidate responses during the interview.",
+                "5. Engage participants in a brief discussion post-interview to gather immediate feedback."
+            ],
+            "type": "project interview",
+            "parameters": [
+                "project detail",
+                "date",
+                "time",
+                "channel",
+                "profession",
+                "company expectation",
+                "language",
+                "specific question",
+                "candidate preparedness",
+                "company",
+                "participant"
+            ],
+            "tools": [
+                "Zoom",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Debrief and document findings from project interviews.",
+            "responsibilities": "Debriefing interview outcomes",
+            "objects": "interviews",
+            "checklists": [
+                "1. Compile all interview notes and recordings from Zoom and Google Drive.",
+                "2. Summarize key points, candidate performance, and panel feedback in a comprehensive report using Google Docs.",
+                "3. Hold a debriefing session with the interview panel using Google Meet to discuss candidate suitability and next steps.",
+                "4. Update candidate statuses and feedback in CRM.",
+                "5. Archive all interview documents securely in Google Drive for future reference."
+            ],
+            "type": "project interview",
+            "parameters": [
+                "project detail",
+                "date",
+                "time",
+                "channel",
+                "profession",
+                "company expectation",
+                "language",
+                "specific question",
+                "candidate preparedness",
+                "company",
+                "participant"
+            ],
+            "tools": [
+                "Google Docs",
+                "Google Meet",
+                "CRM",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Negotiate salary packages with potential hires.",
+            "responsibilities": "Negotiating salary packages",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Review candidate expectations and budget limits using CRM.",
+                "2. Present initial salary offer based on benchmark data and role requirements.",
+                "3. Respond to candidate counteroffers and negotiate mutually agreeable terms.",
+                "4. Document negotiation details and agreed terms in CRM.",
+                "5. Use messengers or social media for negotiation discussions if required."
+            ],
+            "type": "salary negotiation",
+            "parameters": [
+                "initial offer",
+                "counteroffer",
+                "settled amount"
+            ],
+            "tools": [
+                "CRM",
+                "Telegram",
+                "Instagram",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Discuss job benefits as part of salary negotiations.",
+            "responsibilities": "Discussing job benefits",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Prepare detailed benefits packages including health, retirement plans, and bonuses, referencing current policies in Google Docs.",
+                "2. Highlight specific benefits that align with candidate's expectations during negotiation meetings.",
+                "3. Adjust benefits based on negotiation feedback and finalize in the offer.",
+                "4. Document all agreed benefits in CRM.",
+                "5. Communicate finalized benefits via Gmail, messengers or soial media to the candidate."
+            ],
+            "type": "salary negotiation",
+            "parameters": [
+                "initial offer",
+                "counteroffer",
+                "settled amount"
+            ],
+            "tools": [
+                "Google Docs",
+                "CRM",
+                "Gmail",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Finalize salary and terms before hiring.",
+            "responsibilities": "Finalizing hiring terms",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Compile the negotiated salary and benefits details from CRM.",
+                "2. Create a final offer letter in Google Docs, including all agreed terms.",
+                "3. Send the offer letter for electronic signature via Zoho sign.",
+                "4. Update candidate status and store signed documents in Google Drive.",
+                "5. Notify internal teams of the new hire and terms via messengers or social media for onboarding preparations."
+            ],
+            "type": "salary negotiation",
+            "parameters": [
+                "initial offer",
+                "counteroffer",
+                "settled amount"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Zoho sign",
+                "Google Drive",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Discuss and negotiate key contract terms.",
+            "responsibilities": "Negotiating salary packages",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Identify candidate needs and company standards using CRM.",
+                "2. Negotiate terms focusing on flexibility and mutual benefits, utilizing Zoom for discussions.",
+                "3. Document negotiation outcomes and agreed terms in Google Docs.",
+                "4. Review and adjust terms as needed in consultation with legal advisors.",
+                "5. Ensure all terms are clearly communicated and understood using clear documentation in Google Docs."
+            ],
+            "type": "contract term negotiation",
+            "parameters": [
+                "needs",
+                "standards",
+                "flexibility",
+                "clear communication",
+                "review period"
+            ],
+            "tools": [
+                "CRM",
+                "Zoom",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Highlight benefits related to specific contract terms.",
+            "responsibilities": "Discussing job benefits",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Outline job benefits directly tied to negotiated contract terms using Google Docs.",
+                "2. Discuss how these benefits meet the needs and expectations of the candidate during Zoom meetings.",
+                "3. Adjust benefits and terms based on feedback, maintaining documentation in CRM.",
+                "4. Provide detailed explanations of benefits and their implications for contract flexibility and standards.",
+                "5. Use Gmail to send finalized benefits details to the candidate for review."
+            ],
+            "type": "contract term negotiation",
+            "parameters": [
+                "needs",
+                "standards",
+                "flexibility",
+                "clear communication",
+                "review period"
+            ],
+            "tools": [
+                "Google Docs",
+                "Zoom",
+                "CRM",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Confirm all contract terms upon agreement.",
+            "responsibilities": "Finalizing hiring terms",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Compile all agreed terms from negotiation sessions stored in CRM.",
+                "2. Create the final contract draft in Google Docs including detailed terms and conditions.",
+                "3. Send the draft contract for electronic signing via Zoho sign.",
+                "4. Store signed contracts in Google Drive and update CRM.",
+                "5. Notify all relevant departments of the agreement terms using Discord for smooth onboarding and transition."
+            ],
+            "type": "contract term negotiation",
+            "parameters": [
+                "needs",
+                "standards",
+                "flexibility",
+                "clear communication",
+                "review period"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Zoho sign",
+                "Google Drive",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Negotiate additional benefits with candidates.",
+            "responsibilities": "Negotiating salary packages",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Assess candidate needs and align them with company standards and budget constraints using CRM.",
+                "2. Discuss flexible benefit options via Zoom, focusing on mutual benefits and cost implications.",
+                "3. Record all proposed and negotiated benefits in Google Docs.",
+                "4. Revisit and adjust terms as necessary, ensuring all changes are well-documented and clear.",
+                "5. Use Gmail to communicate ongoing changes and obtain feedback from candidates."
+            ],
+            "type": "benefit negotiation",
+            "parameters": [
+                "needs",
+                "standards",
+                "flexibility",
+                "cost implication",
+                "clear communication",
+                "review period"
+            ],
+            "tools": [
+                "Salesforce CRM",
+                "Zoom",
+                "Google Docs",
+                "Gmail"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Clarify details of job benefits during negotiations.",
+            "responsibilities": "Discussing job benefits",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Prepare a detailed presentation of job benefits using Google Slides, including standards, flexibility, and costs.",
+                "2. Highlight specific benefits during Zoom meetings, explaining how they meet the candidate's personal or professional needs.",
+                "3. Document questions and clarifications from candidates in Google Docs.",
+                "4. Adjust benefits information based on discussions and ensure all details are clearly communicated and agreed upon.",
+                "5. Send revised benefits details for confirmation via Gmail."
+            ],
+            "type": "benefit negotiation",
+            "parameters": [
+                "needs",
+                "standards",
+                "flexibility",
+                "cost implication",
+                "clear communication",
+                "review period"
+            ],
+            "tools": [
+                "Google Slides",
+                "Zoom",
+                "Google Docs",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Secure agreement on all negotiated benefits.",
+            "responsibilities": "Finalizing hiring terms",
+            "objects": "negotiations",
+            "checklists": [
+                "1. Compile all negotiated benefits from previous discussions into a comprehensive list using CRM.",
+                "2. Draft the final terms including all benefits in Google Docs.",
+                "3. Review the draft with candidates via Zoom to ensure full understanding and agreement.",
+                "4. Send the final benefits agreement for electronic signature through Zoho sign.",
+                "5. Update CRM with the finalized agreement and notify internal teams via messengers or social media for onboarding preparation."
+            ],
+            "type": "benefit negotiation",
+            "parameters": [
+                "needs",
+                "standards",
+                "flexibility",
+                "cost implication",
+                "clear communication",
+                "review period"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Zoom",
+                "Zoho sign",
+                "Telegram",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Compile daily summaries of recruitment activities.",
+            "responsibilities": "Compiling recruitment reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Gather daily activity data from CRM, including candidate interactions, task completions, and issue logs.",
+                "2. Summarize the data in Google Sheets, focusing on key metrics like number of interviews scheduled and problems encountered.",
+                "3. Distribute the summary via CRM, Discord or Viber to the recruitment team for review.",
+                "4. Store all daily summaries in Google Drive for record-keeping and future reference."
+            ],
+            "type": "daily report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Analyze data from daily reports to identify immediate trends.",
+            "responsibilities": "Analyzing hiring data",
+            "objects": "reports",
+            "checklists": [
+                "1. Use Google Sheets to compile and review data from previous daily reports.",
+                "2. Apply statistical analysis tools within Google Sheets to identify trends such as peak hiring times or frequent bottlenecks in the recruitment process.",
+                "3. Note significant patterns and potential areas for improvement.",
+                "4. Prepare a preliminary analysis report using Google Docs for detailed discussion."
+            ],
+            "type": "daily report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Present key findings from daily data to the recruitment team.",
+            "responsibilities": "Presenting hiring trends",
+            "objects": "reports",
+            "checklists": [
+                "1. Finalize the analysis report in Google Docs, ensuring clarity and accuracy of data presentation.",
+                "2. Create a presentation in Google Slides that highlights the key findings, trends, and actionable insights.",
+                "3. Schedule a meeting using Google Calendar and present the findings via Google Meet to the recruitment team.",
+                "4. Discuss potential strategies to address identified issues and optimize processes."
+            ],
+            "type": "daily report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Generate comprehensive monthly recruitment reports.",
+            "responsibilities": "Compiling recruitment reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Aggregate data from daily activities logged in CRM, including interviews conducted, hires made, and challenges faced.",
+                "2. Use Google Sheets to organize and quantify the data by key metrics such as time-to-fill and cost-per-hire.",
+                "3. Compile detailed narratives in Google Docs to explain the data, addressing any significant problems or achievements.",
+                "4. Review the completed report for accuracy and completeness.",
+                "5. Distribute the final report via Gmail to the recruitment team and key stakeholders."
+            ],
+            "type": "monthly report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric",
+                "result"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Google Docs",
+                "Gmail",
+                "Discord",
+                "Viber"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Review monthly data to assess recruitment performance.",
+            "responsibilities": "Analyzing hiring data",
+            "objects": "reports",
+            "checklists": [
+                "1. Use advanced features in Google Sheets to perform trend analysis and identify patterns in recruitment activities over the month.",
+                "2. Document key findings such as peak hiring periods or roles with unusually high or low fill rates.",
+                "3. Prepare an analytical report in Google Docs summarizing performance against set goals and previous months.",
+                "4. Highlight areas needing improvement or adjustment in recruitment strategies.",
+                "5. Share initial findings with the recruitment team to gather feedback and additional insights."
+            ],
+            "type": "monthly report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric",
+                "result"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Present monthly hiring trends and insights to management.",
+            "responsibilities": "Presenting hiring trends",
+            "objects": "reports",
+            "checklists": [
+                "1. Finalize the data analysis and compile key insights into a formal presentation using Google Slides.",
+                "2. Schedule a presentation session with management via Google Calendar.",
+                "3. Use Google Meet to conduct the presentation, focusing on strategic insights, achievements, and areas for improvement.",
+                "4. Discuss potential actions and strategies with management to address identified trends and issues.",
+                "5. Adjust recruitment processes based on management feedback and agreed-upon strategies."
+            ],
+            "type": "monthly report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "responsibility",
+                "process",
+                "date",
+                "metric",
+                "result"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Compile reports on individual employee recruitment status.",
+            "responsibilities": "Compiling recruitment reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Collect data on individual employees from CRM, focusing on specific recruitment tasks completed, problems encountered, and metrics achieved.",
+                "2. Organize this data in Google Sheets, categorizing by department and profession.",
+                "3. Create a comprehensive report in Google Docs detailing the recruitment status and any ongoing issues.",
+                "4. Review the report for accuracy and completeness.",
+                "5. Distribute the report via CRM, Discord or Viber to department heads and HR management."
+            ],
+            "type": "employee report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric",
+                "department",
+                "profession"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Analyze recruitment data per employee for insights.",
+            "responsibilities": "Analyzing hiring data",
+            "objects": "reports",
+            "checklists": [
+                "1. Use Google Sheets to perform detailed analysis on recruitment metrics for each employee, identifying trends such as time-to-hire, success rates, or frequent challenges.",
+                "2. Summarize insights in Google Docs, noting any significant deviations or achievements.",
+                "3. Prepare analytical visuals using Google Sheets for clearer presentation of data.",
+                "4. Review and adjust recruitment strategies based on findings, documenting any recommendations for improvements."
+            ],
+            "type": "employee report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric",
+                "department",
+                "profession"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Discuss employee-specific hiring trends and outcomes.",
+            "responsibilities": "Presenting hiring trends",
+            "objects": "reports",
+            "checklists": [
+                "1. Finalize the analysis and compile key insights into a presentation using Google Slides.",
+                "2. Schedule a meeting with relevant stakeholders using Google Calendar.",
+                "3. Present the findings in a Google Meet session, focusing on specific employee trends, departmental impacts, and potential strategic adjustments.",
+                "4. Facilitate a discussion to gather feedback and develop action plans based on the presented data.",
+                "5. Document the meeting outcomes and agreed actions in Google Docs."
+            ],
+            "type": "employee report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric",
+                "department",
+                "profession"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Compile recruitment reports by department.",
+            "responsibilities": "Compiling recruitment reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Gather data from CRM on recruitment activities, including vacancies, interviews, and candidate statuses by department.",
+                "2. Organize this data in Google Sheets, categorizing by department and vacancy.",
+                "3. Create comprehensive reports in Google Docs detailing recruitment outcomes, costs, and effectiveness.",
+                "4. Review the reports for accuracy and completeness.",
+                "5. Distribute the finalized reports to department heads and HR management via CRM, Discord or Viber."
+            ],
+            "type": "department report",
+            "parameters": [
+                "vacancy",
+                "pipeline",
+                "hired candidate",
+                "refused candidate",
+                "denied candidate",
+                "interview",
+                "channel",
+                "source",
+                "link",
+                "metric",
+                "task",
+                "cost",
+                "effectiveness"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Analyze departmental hiring data to optimize strategies.",
+            "responsibilities": "Analyzing hiring data",
+            "objects": "reports",
+            "checklists": [
+                "1. Use advanced analytics in Google Sheets to process the collected data, identifying trends such as successful channels and cost-effectiveness.",
+                "2. Document insights in Google Docs, highlighting areas for strategy optimization such as reducing costs or improving candidate sourcing.",
+                "3. Prepare a detailed analysis report, suggesting actionable improvements based on departmental performance.",
+                "4. Share preliminary findings with the recruitment team for feedback."
+            ],
+            "type": "department report",
+            "parameters": [
+                "vacancy",
+                "pipeline",
+                "hired candidate",
+                "refused candidate",
+                "denied candidate",
+                "interview",
+                "channel",
+                "source",
+                "link",
+                "metric",
+                "task",
+                "cost",
+                "effectiveness"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Present recruitment trends within departments.",
+            "responsibilities": "Presenting hiring trends",
+            "objects": "reports",
+            "checklists": [
+                "1. Finalize the data analysis and compile the key insights into a formal presentation using Google Slides.",
+                "2. Schedule a presentation session with department heads and senior management using Google Calendar.",
+                "3. Conduct the presentation via Google Meet, focusing on key recruitment trends, department comparisons, and recommendations for future recruitment strategies.",
+                "4. Facilitate a discussion to gather input and refine approaches based on the presented data."
+            ],
+            "type": "department report",
+            "parameters": [
+                "vacancy",
+                "pipeline",
+                "hired candidate",
+                "refused candidate",
+                "denied candidate",
+                "interview",
+                "channel",
+                "source",
+                "link",
+                "metric",
+                "task",
+                "cost",
+                "effectiveness"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Document specific recruitment tasks and their outcomes.",
+            "responsibilities": "Compiling recruitment reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Collect detailed data for each recruitment task from CRM, including task descriptions, participant roles, and outcomes.",
+                "2. Use Google Sheets to log each task's progress, issues encountered, and the effectiveness of the tools used.",
+                "3. Summarize findings in a task-specific report in Google Docs, noting any significant problems and successes.",
+                "4. Review and finalize the report for clarity and accuracy.",
+                "5. Archive the report in Google Drive and share it with relevant team members via Gmail."
+            ],
+            "type": "task report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric",
+                "participant",
+                "interaction"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Assess task-based data to improve recruitment processes.",
+            "responsibilities": "Analyzing hiring data",
+            "objects": "reports",
+            "checklists": [
+                "1. Analyze the compiled data in Google Sheets to identify patterns and trends related to task performance and participant engagement.",
+                "2. Document key insights and potential areas for process improvement in Google Docs.",
+                "3. Develop actionable recommendations based on the analysis to enhance recruitment efficiency.",
+                "4. Review the analysis with the recruitment team to refine strategies and implement changes.",
+                "5. Update the recruitment guidelines based on approved recommendations."
+            ],
+            "type": "task report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric",
+                "participant",
+                "interaction"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Share findings from task-based reports with stakeholders.",
+            "responsibilities": "Presenting hiring trends",
+            "objects": "reports",
+            "checklists": [
+                "1. Prepare a comprehensive presentation in Google Slides summarizing the task-based data analysis.",
+                "2. Schedule a meeting using Google Calendar to present the findings to stakeholders, including recruitment team leads and department heads.",
+                "3. Use Google Meet to conduct the presentation, highlighting key trends, challenges, and recommended changes.",
+                "4. Facilitate a discussion during the presentation to gather feedback and further refine strategies.",
+                "5. Document the meeting's outcomes and stakeholder feedback in Google Docs for future reference."
+            ],
+            "type": "task report",
+            "parameters": [
+                "name",
+                "task",
+                "link",
+                "plan",
+                "problem",
+                "tool",
+                "process",
+                "date",
+                "metric",
+                "participant",
+                "interaction"
+            ],
+            "tools": [
+                "CRM",
+                "Discord",
+                "Viber",
+                "Notion",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Adjust expected salaries based on market trends.",
+            "responsibilities": "Adjusting salaries",
+            "objects": "salaries",
+            "checklists": [
+                "1. Gather current salary data and market trends in compensation within the industry.",
+                "2. Adjust salary data in CRM to reflect market changes.",
+                "3. Review and validate the adjustments with HR and finance teams.",
+                "4. Communicate any changes to relevant stakeholders via email to maintain transparency.",
+                "5. Document all changes and rationale in Google Docs for internal records."
+            ],
+            "type": "expected salary",
+            "parameters": [
+                "amount",
+                "currency"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Email",
+                "Zoho"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Benchmark expected salaries against industry standards.",
+            "responsibilities": "Benchmarking salaries",
+            "objects": "salaries",
+            "checklists": [
+                "1. Collect salary data for similar roles and industries",
+                "2. Compare this data with internal salary figures in Google Sheets to identify disparities and opportunities for adjustment.",
+                "3. Discuss findings with HR to decide on potential salary adjustments.",
+                "4. Update salary structures in CRM based on agreed benchmarks.",
+                "5. Prepare a benchmark report in Google Docs to share with executive management."
+            ],
+            "type": "expected salary",
+            "parameters": [
+                "amount",
+                "currency"
+            ],
+            "tools": [
+                "LinkedIn Salary",
+                "Google Sheets",
+                "CRM",
+                "Google Docs",
+                "Zoho"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Set clear expectations for expected salary ranges.",
+            "responsibilities": "Setting salary expectations",
+            "objects": "salaries",
+            "checklists": [
+                "1. Define salary ranges based on internal data analysis and external benchmarks using Google Sheets.",
+                "2. Create clear documentation of salary ranges for each position and level in Google Docs.",
+                "3. Present these salary expectations to the recruitment team via Google Meet to ensure alignment.",
+                "4. Integrate salary range information into job descriptions and recruitment materials.",
+                "5. Archive and maintain these documents in Google Drive for accessibility and compliance."
+            ],
+            "type": "expected salary",
+            "parameters": [
+                "amount",
+                "currency"
+            ],
+            "tools": [
+                "Google Sheets",
+                "Google Docs",
+                "Google Meet",
+                "Google Drive",
+                "Zoho"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Modify proposed salaries to align with candidate qualifications.",
+            "responsibilities": "Adjusting salaries",
+            "objects": "salaries",
+            "checklists": [
+                "1. Review candidate qualifications and experience using CRM.",
+                "2. Assess the proposed salary against these qualifications and identify any gaps using Google Sheets.",
+                "3. Adjust the salary proposal in CRM based on the qualification assessment.",
+                "4. Document the rationale for salary adjustments in Google Docs.",
+                "5. Obtain approval from HR and finance teams via email before finalizing the proposal."
+            ],
+            "type": "proposed salary",
+            "parameters": [
+                "amount",
+                "currency",
+                "gap"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Google Docs",
+                "Email",
+                "Zoho"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Compare proposed salaries with similar roles in the sector.",
+            "responsibilities": "Benchmarking salaries",
+            "objects": "salaries",
+            "checklists": [
+                "1. Gather salary data for similar roles using industry-specific salary databases such as Glassdoor or Payscale.",
+                "2. Compare this external data with the proposed salaries in Google Sheets to identify discrepancies or alignment.",
+                "3. Adjust proposed salaries in CRM based on benchmark findings.",
+                "4. Prepare a benchmark report in Google Docs to share with HR and management.",
+                "5. Discuss findings and necessary adjustments in a meeting via Google Meet."
+            ],
+            "type": "proposed salary",
+            "parameters": [
+                "amount",
+                "currency",
+                "gap"
+            ],
+            "tools": [
+                "Google Sheets",
+                "CRM",
+                "Google Docs",
+                "Google Meet",
+                "Zoho"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Communicate proposed salary clearly to candidates.",
+            "responsibilities": "Setting salary expectations",
+            "objects": "salaries",
+            "checklists": [
+                "1. Finalize the salary offer details in CRM after all adjustments and approvals.",
+                "2. Create a clear and detailed offer letter in Google Docs outlining the salary, benefits, and terms.",
+                "3. Communicate the offer to the candidate via Email, ensuring all salary details are clearly stated.",
+                "4. Follow up with a phone call or a video meeting via Google Meet to address any questions or concerns from the candidate.",
+                "5. Document candidate responses and final agreements in CRM."
+            ],
+            "type": "proposed salary",
+            "parameters": [
+                "amount",
+                "currency",
+                "gap"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Email",
+                "Google Meet",
+                "Zoho"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Adjust starting salaries as negotiations finalize.",
+            "responsibilities": "Adjusting salaries",
+            "objects": "salaries",
+            "checklists": [
+                "1. Review final negotiation details stored in CRM to confirm agreed-upon salary adjustments.",
+                "2. Update starting salary amounts in CRM based on final agreements.",
+                "3. Document the adjustment process and rationale in Google Docs for HR and finance review.",
+                "4. Communicate finalized salaries to payroll via secure email.",
+                "5. Archive all negotiation and adjustment records in Google Drive."
+            ],
+            "type": "start salary",
+            "parameters": [
+                "amount",
+                "currency"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Email",
+                "Google Drive",
+                "Zoho"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Ensure starting salaries meet competitive benchmarks.",
+            "responsibilities": "Benchmarking salaries",
+            "objects": "salaries",
+            "checklists": [
+                "1. Gather current market data for similar positions using industry salary surveys from sites.",
+                "2. Compare this external data with internal starting salary proposals in Google Sheets.",
+                "3. Adjust internal salary scales in CRM as necessary to remain competitive.",
+                "4. Prepare a benchmarking report in Google Docs to present to management.",
+                "5. Discuss potential adjustments in a strategy meeting via Google Meet."
+            ],
+            "type": "start salary",
+            "parameters": [
+                "amount",
+                "currency"
+            ],
+            "tools": [
+                "Zoho",
+                "Google Sheets",
+                "Salesforce CRM",
+                "Google Docs",
+                "Google Meet"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Define and agree on starting salaries with new hires.",
+            "responsibilities": "Setting salary expectations",
+            "objects": "salaries",
+            "checklists": [
+                "1. Clarify starting salary ranges and expectations during initial job offer discussions, documented in CRM.",
+                "2. Draft formal salary offer letters in Google Docs outlining the agreed terms.",
+                "3. Send the offer letter via Email and request electronic confirmation or signature via Zoho.",
+                "4. Confirm agreement and store signed documents in Google Drive.",
+                "5. Update  CRM with the new hire's salary details for onboarding."
+            ],
+            "type": "start salary",
+            "parameters": [
+                "amount",
+                "currency"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Email",
+                "Zoho",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Identify and list open vacancies in recruitment channels.",
+            "responsibilities": "Identifying job vacancies",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Review internal hiring needs and upcoming projects using CRM to determine required positions.",
+                "2. Coordinate with department heads to gather vacancy details and specifications.",
+                "3. List all identified vacancies in a centralized document using Google Sheets, including essential details like title, responsibilities, and required qualifications.",
+                "4. Verify the accuracy of the information with HR.",
+                "5. Archive past vacancies and update current listings for accuracy."
+            ],
+            "type": "open vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Post details of open vacancies on relevant job boards and media.",
+            "responsibilities": "Posting job openings",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Prepare detailed job descriptions and vacancy announcements in Google Docs.",
+                "2. Select appropriate job boards and recruitment media based on the role and industry,  and specialized industry sites.",
+                "3. Post job listings, ensuring that all links, contact details, and application instructions are correct.",
+                "4. Monitor postings for engagement and response rates using analytics tools provided by the job boards.",
+                "5. Adjust and repost listings if response rates are below expectations."
+            ],
+            "type": "open vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date"
+            ],
+            "tools": [
+                "Google Docs",
+                "LinkedIn",
+                "Indeed",
+                "Industry-specific job boards",
+                "Instgram"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Close postings for positions once they are filled.",
+            "responsibilities": "Closing filled positions",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Confirm the successful hiring and onboarding of candidates using CRM.",
+                "2. Remove active job postings from all job boards and company career pages.",
+                "3. Update the status of the filled position in CRM and Google Sheets to reflect the closure.",
+                "4. Notify the marketing or communications team to remove or update the company’s external communications regarding the vacancy.",
+                "5. Document the closure process and candidate start date for internal records and future reference."
+            ],
+            "type": "open vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Company career pages",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Monitor and review closed vacancies for potential re-opening.",
+            "responsibilities": "Identifying job vacancies",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Review the list of closed vacancies periodically using CRM to assess which positions may need to be reopened due to changes in departmental needs.",
+                "2. Evaluate the performance and outcomes of previously closed vacancies to determine the necessity for re-opening.",
+                "3. Discuss with HR and department heads the feasibility and timing for re-opening vacancies.",
+                "4. Update vacancy status in CRM and prepare a report for senior management in Google Docs."
+            ],
+            "type": "closed vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date",
+                "result"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Remove closed vacancy listings from public posting areas.",
+            "responsibilities": "Posting job openings",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Check all public posting areas including job boards like LinkedIn and Indeed, and company career pages to identify and remove listings for closed vacancies.",
+                "2. Ensure all external links to the job postings are also deactivated.",
+                "3. Update the recruitment status in CRM to reflect the removal of the postings.",
+                "4. Confirm removal with the communications or marketing team to ensure consistency across all platforms.",
+                "5. Document the removal process in Google Docs for compliance and auditing purposes."
+            ],
+            "type": "closed vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date",
+                "result"
+            ],
+            "tools": [
+                "LinkedIn",
+                "CRM",
+                "Google Docs",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Archive documentation and data for closed positions.",
+            "responsibilities": "Closing filled positions",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Gather all relevant documentation and data from CRM, including candidate interviews, selection processes, and final outcomes.",
+                "2. Organize and store all documents in Google Drive in appropriately secured and labeled folders.",
+                "3. Ensure that all sensitive information is handled in compliance with privacy regulations.",
+                "4. Record the archiving details in CRM for easy retrieval.",
+                "5. Notify HR and relevant department heads about the archived materials via email for future reference."
+            ],
+            "type": "closed vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date",
+                "result"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive",
+                "Email",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Track and review suspended vacancies for status updates.",
+            "responsibilities": "Identifying job vacancies",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Use CRM to monitor suspended vacancies regularly, noting reasons and suspension periods.",
+                "2. Check for any changes or updates required based on the end of suspension periods or changes in business needs.",
+                "3. Prepare reports in Google Sheets detailing the status and projected reactivation dates of each suspended vacancy.",
+                "4. Share updates with HR and department heads via email for decision-making."
+            ],
+            "type": "suspended vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date",
+                "reason",
+                "period"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Email",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Temporarily remove or mark suspended vacancies as unavailable.",
+            "responsibilities": "Posting job openings",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Identify listings for suspended vacancies on job boards such as LinkedIn and company career pages.",
+                "2. Either remove the listings temporarily or update them to reflect that they are currently not available, including the reason for suspension if public disclosure is appropriate.",
+                "3. Ensure that all changes are synchronized across all platforms to maintain consistency.",
+                "4. Document actions taken in Google Docs for audit trails."
+            ],
+            "type": "suspended vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date",
+                "reason",
+                "period"
+            ],
+            "tools": [
+                "LinkedIn",
+                "Company career pages",
+                "Google Docs"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Update status of suspended vacancies when decisions are made.",
+            "responsibilities": "Closing filled positions",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Review decisions regarding suspended vacancies in CRM, whether to reactivate, permanently close, or extend the suspension.",
+                "2. Update the vacancy status accordingly in CRM and notify all relevant stakeholders through Discord or messangers.",
+                "3. If reactivated, re-post or update the vacancy listings on appropriate job boards.",
+                "4. Archive all decision documentation and communications in Google Drive for compliance and reference."
+            ],
+            "type": "suspended vacancy",
+            "parameters": [
+                "source",
+                "link",
+                "language",
+                "title",
+                "text",
+                "contact",
+                "response",
+                "city",
+                "date",
+                "reason",
+                "period"
+            ],
+            "tools": [
+                "CRM",
+                "Google Drive",
+                "Job sites",
+                "Instagram",
+                "Discord",
+                "Telegram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Pre-identify and prepare listings for planned vacancies.",
+            "responsibilities": "Identifying job vacancies",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Collaborate with department heads using CRM to identify future staffing needs based on upcoming projects and growth forecasts.",
+                "2. Develop job descriptions and required skills profiles in Google Docs.",
+                "3. Plan advertising strategies and budget allocations for each vacancy in Google Sheets.",
+                "4. Pre-approve all job listings and advertising materials with HR and marketing teams.",
+                "5. Store prepared listings and planning documents securely in Google Drive for easy access when vacancies go live."
+            ],
+            "type": "planned vacancy",
+            "parameters": [
+                "department",
+                "profession",
+                "project",
+                "skill",
+                "language",
+                "tool",
+                "timeline",
+                "source",
+                "advertising",
+                "cost"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Google Sheets",
+                "Google Drive",
+                "Job sites",
+                "Instagram"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Schedule postings for planned vacancies ahead of open dates.",
+            "responsibilities": "Posting job openings",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Set up a schedule in Google Calendar to ensure job postings align with project timelines and department needs.",
+                "2 Monitor the performance of postings and adjust strategies as necessary using analytics from the posting platforms.",
+                "3. Document all scheduled and executed postings in Salesforce CRM for tracking and reporting."
+            ],
+            "type": "planned vacancy",
+            "parameters": [
+                "department",
+                "profession",
+                "project",
+                "skill",
+                "language",
+                "tool",
+                "timeline",
+                "source",
+                "advertising",
+                "cost"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Job sites",
+                "Instagram",
+                "LinkedIn",
+                "CRM"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Prepare to close planned vacancies as soon as they are filled.",
+            "responsibilities": "Closing filled positions",
+            "objects": "vacancies",
+            "checklists": [
+                "1. Monitor the application and hiring process closely in CRM to determine when a position is filled.",
+                "2. Immediately update the job status on all advertising platforms and the company career page to reflect the closure.",
+                "3. Notify all stakeholders, including recruitment and department teams, via Discord or email about the vacancy closure.",
+                "4. Archive all related documentation and correspondence in Google Drive to maintain a record of the recruitment process and its conclusion."
+            ],
+            "type": "planned vacancy",
+            "parameters": [
+                "department",
+                "profession",
+                "project",
+                "skill",
+                "language",
+                "tool",
+                "timeline",
+                "source",
+                "advertising",
+                "cost"
+            ],
+            "tools": [
+                "CRM",
+                "Job sites",
+                "Instagram",
+                "Email",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Select job sites that align with recruitment needs.",
+            "responsibilities": "Selecting recruitment channels",
+            "objects": "channels",
+            "checklists": [
+                "1. Review organizational recruitment goals and target demographics using LinkedIn Insights.",
+                "2. Conduct competitive analysis using Google Analytics to assess traffic and engagement on potential job sites.",
+                "3. Evaluate cost-effectiveness and reach of sites using comparative data in Google Sheets.",
+                "4. Discuss potential sites with hiring managers and HR for alignment with recruitment strategies.",
+                "5. Set up and securely store account details for selected job sites using Google Drive."
+            ],
+            "type": "job site",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "LinkedIn Insights",
+                "Google Analytics",
+                "Google Drive",
+                "Job sites"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Manage postings and candidate responses on job sites.",
+            "responsibilities": "Managing online job boards",
+            "objects": "channels",
+            "checklists": [
+                "1. Create job listings with detailed descriptions using information from HR in Google Docs.",
+                "2. Post listings on selected job sites such as LinkedIn and job sites, ensuring alignment with job requirements and company branding.",
+                "3. Regularly monitor and analyze candidate responses and interaction data in CRM.",
+                "4. Adjust listings based on feedback and analytics insights using platform tools.",
+                "5. Communicate important updates or changes to job postings to HR and marketing teams via Discord."
+            ],
+            "type": "job site",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Google Docs",
+                "LinkedIn",
+                "",
+                "CRM",
+                "Discord",
+                "Job Sites"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Optimize job site strategies for better candidate reach.",
+            "responsibilities": "Optimizing channel strategies",
+            "objects": "channels",
+            "checklists": [
+                "1. Review current posting strategies and performance metrics using Google Analytics and LinkedIn Analytics.",
+                "2. Identify underperforming job ads and analyze reasons for low engagement using data in Google Sheets.",
+                "3. Experiment with different posting times, formats, and promotional strategies based on insights.",
+                "4. Implement changes and monitor results using updated analytics.",
+                "5. Prepare and present a monthly performance review to stakeholders using Google Slides to showcase results and suggest further adjustments."
+            ],
+            "type": "job site",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Google Analytics",
+                "LinkedIn Analytics",
+                "Google Slides"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Choose social networks based on target candidate profiles.",
+            "responsibilities": "Selecting recruitment channels",
+            "objects": "channels",
+            "checklists": [
+                "1. Analyze target candidate demographics using LinkedIn Analytics to identify which social networks are most frequented by potential candidates.",
+                "2. Review historical engagement data on platforms like Facebook Insights to understand where past campaigns have succeeded.",
+                "3. Discuss potential social networks with the marketing team to get insights on current social media trends and content performance.",
+                "4. Finalize the choice of networks based on alignment with recruitment goals and candidate reach using data from Google Sheets.",
+                "5. Securely store account and login information for chosen networks using LastPass."
+            ],
+            "type": "social network",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "LinkedIn",
+                "Facebook",
+                "Telegram",
+                "Instagram Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Manage recruitment campaigns on social networks.",
+            "responsibilities": "Managing online job boards",
+            "objects": "channels",
+            "checklists": [
+                "1. Develop a recruitment campaign plan detailing the objectives, target audience, and budget using Google Docs.",
+                "2. Create and schedule engaging content, including job postings and company culture highlights, using Google Drive for consistent presence across selected platforms.",
+                "3. Monitor real-time engagement and candidate responses using the native analytics tools of each platform.",
+                "4. Adjust campaign elements dynamically based on performance metrics and candidate feedback.",
+                "5. Report campaign results and ROI to stakeholders using Google Slides for periodic review meetings."
+            ],
+            "type": "social network",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Slides"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Tailor content and timing on social networks to maximize engagement.",
+            "responsibilities": "Optimizing channel strategies",
+            "objects": "channels",
+            "checklists": [
+                "1. Analyze peak engagement times and content preferences for each platform using tools like Facebook Insights.",
+                "2. Develop a content calendar in Google Calendar to plan and organize posts according to optimal engagement times.",
+                "3. Craft tailored messages and media for each platform, ensuring they resonate with the target audience and fit the network’s format.",
+                "4. Test different content strategies and track results using A/B testing methods with insights from Twitter Analytics.",
+                "5. Refine ongoing strategies based on data-driven insights, documenting strategy adjustments and outcomes in Google Docs."
+            ],
+            "type": "social network",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Facebook",
+                "Google Calendar",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Utilize messengers for quick and direct candidate engagement.",
+            "responsibilities": "Selecting recruitment channels",
+            "objects": "channels",
+            "checklists": [
+                "1. Identify the most popular messaging apps among the target candidate demographic using market research data.",
+                "2. Set up official recruitment accounts on platforms like Telegram, ensuring all account details are securely managed in Google Docs.",
+                "3. Integrate these platforms with CRM for seamless candidate tracking.",
+                "4. Train recruitment team on the effective use of each messenger platform for engagement.",
+                "5. Document standard operating procedures for messaging in Google Docs to ensure consistency across the team."
+            ],
+            "type": "messenger",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Telegram",
+                "CRM",
+                "Google Drive",
+                "Google Docs"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Manage real-time interactions and queries via messengers.",
+            "responsibilities": "Managing online job boards",
+            "objects": "channels",
+            "checklists": [
+                "1. Monitor incoming messages and candidate queries in real-time using the integrated chat features of Telegram and Instagram.",
+                "2. Respond promptly to each query, using templated responses stored in Google Docs for common questions.",
+                "3. Track all candidate interactions and responses in CRM to maintain a comprehensive communication log.",
+                "4. Escalate complex queries to relevant department heads or HR team members as needed.",
+                "5. Evaluate and report on response times and interaction quality weekly using Google Sheets."
+            ],
+            "type": "messenger",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Telegram",
+                "Google Docs",
+                "CRM",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Develop strategies for efficient communication via messengers.",
+            "responsibilities": "Optimizing channel strategies",
+            "objects": "channels",
+            "checklists": [
+                "1. Analyze communication patterns and candidate feedback using analytics tools within each messenger platform.",
+                "2. Develop and test different communication strategies, such as automated replies or personalized messaging, to improve engagement.",
+                "3. Implement the most effective strategies across all platforms, documenting the process in Google Docs.",
+                "4. Regularly update and refine messaging templates based on candidate responses and new FAQs.",
+                "5. Hold monthly review meetings via Google Meet to discuss performance metrics and further optimizations."
+            ],
+            "type": "messenger",
+            "parameters": [
+                "name",
+                "link",
+                "application",
+                "account",
+                "login",
+                "password"
+            ],
+            "tools": [
+                "Analytics Tools",
+                "Google Docs",
+                "Google Meet"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Provide detailed onboarding instructions to new hires.",
+            "responsibilities": "Providing interview instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Develop a comprehensive onboarding presentation using Google slides that includes all critical first-day information and general company policies.",
+                "2. Distribute the presentation via Discord to the new hire’s start date.",
+                "3. Schedule an introductory meeting using Discord to walk through the presentation and answer any preliminary questions.",
+                "4. Follow up with a info sent through Discord, including a detailed plan for the first week."
+            ],
+            "type": "onboarding instruction",
+            "parameters": [
+                "presentation",
+                "engagement",
+                "integration",
+                "plan"
+            ],
+            "tools": [
+                "Google Slides",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Outline steps for completing onboarding processes.",
+            "responsibilities": "Outlining application procedures",
+            "objects": "instructions",
+            "checklists": [
+                "1. Create a step-by-step guide in Google Docs detailing each phase of the onboarding process, from documentation to training sessions.",
+                "2. Include interactive checklists in the guide using Google Sheets to track progress and completion of each step.",
+                "3. Share the document with new hires via Google Drive, ensuring they have editing permissions to check off completed tasks.",
+                "4. Organize an orientation session using Discord to go over the guide and discuss any concerns.",
+                "5. Set reminders using CRM for deadlines related to onboarding tasks."
+            ],
+            "type": "onboarding instruction",
+            "parameters": [
+                "presentation",
+                "engagement",
+                "integration",
+                "plan"
+            ],
+            "tools": [
+                "Google Docs",
+                "Google Sheets",
+                "Google Drive",
+                "Discord",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Clarify role expectations during onboarding.",
+            "responsibilities": "Clarifying role expectations",
+            "objects": "instructions",
+            "checklists": [
+                "1. Prepare a detailed document in Microsoft Word outlining the job responsibilities, performance metrics, and goals for each profession.",
+                "2. Discuss the document in a one-on-one meeting via Discord to ensure understanding and address any questions.",
+                "3. Integrate role-specific training materials into the document, accessible through Google Drive.",
+                "4. Schedule follow-up meetings using Discord to review progress and provide ongoing support.",
+                "5. Use Discord to send periodic feedback and encouragement messages to the new hire."
+            ],
+            "type": "onboarding instruction",
+            "parameters": [
+                "presentation",
+                "engagement",
+                "integration",
+                "plan"
+            ],
+            "tools": [
+                "Microsoft Word",
+                "Discord",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Give instructions on responding to job postings during interviews.",
+            "responsibilities": "Providing interview instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Create a guideline document using Google Docs that outlines how candidates should prepare responses to typical questions about their application to job postings.",
+                "2. Use Google Slides to develop a presentation that visually explains the steps and tips for responding effectively in interviews.",
+                "3. Schedule training sessions with HR representatives via Google Meet to discuss these guidelines and ensure consistency in advising candidates.",
+                "4. Record a training video using Google Meet where recruiters role-play interview scenarios based on these guidelines.",
+                "5. Upload the training video and presentation to Google Drive for easy access by all recruitment staff."
+            ],
+            "type": "job posting instruction",
+            "parameters": [
+                "platform",
+                "script",
+                "profession",
+                "job title",
+                "job description",
+                "contact",
+                "location",
+                "salary range",
+                "application process",
+                "benefit"
+            ],
+            "tools": [
+                "Google Docs",
+                "Google Slides",
+                "Google Meet",
+                "Google Drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Detail application steps in job posting instructions.",
+            "responsibilities": "Outlining application procedures",
+            "objects": "instructions",
+            "checklists": [
+                "1. Compile a comprehensive list of all application requirements and steps in Google Docs, ensuring clarity and completeness.",
+                "2. Include specific instructions for submitting applications, such as required documents and online forms, in the document.",
+                "3. Format the document into an easy-to-follow guide using Google Sheets to track application steps as a checklist.",
+                "4. Integrate interactive elements such as links to application portals or instructional videos, hosted on Google Drive.",
+                "5. Distribute the final job posting instruction guide via email to potential applicants and post on relevant platforms like LinkedIn."
+            ],
+            "type": "job posting instruction",
+            "parameters": [
+                "platform",
+                "script",
+                "profession",
+                "job title",
+                "job description",
+                "contact",
+                "location",
+                "salary range",
+                "application process",
+                "benefit"
+            ],
+            "tools": [
+                "Google Docs",
+                "Google Sheets",
+                "Google Drive",
+                "Email",
+                "LinkedIn"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Explain job responsibilities and qualifications in job postings.",
+            "responsibilities": "Clarifying role expectations",
+            "objects": "instructions",
+            "checklists": [
+                "1. Draft detailed job descriptions that clearly state job responsibilities, required qualifications, and preferred skills using Microsoft Word.",
+                "2. Review and ensure all job postings are aligned with company policies and legal requirements in terms of clarity and non-discrimination.",
+                "3. Use Adobe Photoshop to create attractive visuals or infographics that summarize key job details, enhancing readability and engagement.",
+                "4. Post these detailed job descriptions on various platforms, including Indeed and Glassdoor, ensuring they are formatted correctly and include all necessary information.",
+                "5. Monitor feedback and questions from applicants regarding job details and make adjustments to postings as necessary."
+            ],
+            "type": "job posting instruction",
+            "parameters": [
+                "platform",
+                "script",
+                "profession",
+                "job title",
+                "job description",
+                "contact",
+                "location",
+                "salary range",
+                "application process",
+                "benefit"
+            ],
+            "tools": [
+                "Microsoft Word",
+                "Adobe Photoshop",
+                "Indeed",
+                "Glassdoor"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Offer guidance on using CRM during recruitment interviews.",
+            "responsibilities": "Providing interview instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Develop a comprehensive tutorial using PowerPoint that outlines how to use the CRM during interviews, including accessing candidate cards and reviewing profiles.",
+                "2. Conduct a training session via Zoom to demonstrate live CRM usage during mock interviews.",
+                "3. Create reference handouts in PDF format detailing step-by-step CRM operations for interviews, distribute via email.",
+                "4. Set up role-specific access in the CRM for interviewers, ensuring they can view relevant candidate information.",
+                "5. Schedule follow-up sessions using Google Calendar to address any questions and ensure comfort with the CRM tools."
+            ],
+            "type": "crm instruction",
+            "parameters": [
+                "access",
+                "profile setting",
+                "dashboard",
+                "tab",
+                "candidate card",
+                "employee card",
+                "presale card",
+                "bonus",
+                "report",
+                "time log",
+                "project",
+                "ticket",
+                "notice board",
+                "leave",
+                "message"
+            ],
+            "tools": [
+                "PowerPoint",
+                "Zoom",
+                "PDF",
+                "Email",
+                "Google Calendar"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Provide instructions for managing candidate data in CRM.",
+            "responsibilities": "Outlining application procedures",
+            "objects": "instructions",
+            "checklists": [
+                "1. Create a detailed guide in Google Docs on how to enter and update candidate data in the CRM.",
+                "2. Include screenshots and video tutorials using Camtasia to illustrate common data entry tasks.",
+                "3. Organize a webinar using Zoom to walk through the data management process, emphasizing data integrity and privacy practices.",
+                "4. Develop quick reference cards in PDF format for common CRM tasks, share them via Slack.",
+                "5. Implement a helpdesk ticket system in the CRM for real-time assistance with data entry issues."
+            ],
+            "type": "crm instruction",
+            "parameters": [
+                "access",
+                "profile setting",
+                "dashboard",
+                "tab",
+                "candidate card",
+                "employee card",
+                "presale card",
+                "bonus",
+                "report",
+                "time log",
+                "project",
+                "ticket",
+                "notice board",
+                "leave",
+                "message"
+            ],
+            "tools": [
+                "Google Docs",
+                "Camtasia",
+                "Zoom",
+                "PDF",
+                "Slack"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Use CRM to track and clarify candidate progress and expectations.",
+            "responsibilities": "Clarifying role expectations",
+            "objects": "instructions",
+            "checklists": [
+                "1. Set up customized dashboards in the CRM to track candidate progress through the recruitment pipeline.",
+                "2. Train HR staff using interactive Zoom sessions on interpreting and updating these dashboards.",
+                "3. Document the process for setting and updating candidate expectations in the CRM in a user manual created in Microsoft Word.",
+                "4. Integrate feedback mechanisms in the CRM to gather insights on candidate experiences.",
+                "5. Regularly review and adjust the CRM configurations to ensure alignment with evolving role expectations, documented in an ongoing log in Google Sheets."
+            ],
+            "type": "crm instruction",
+            "parameters": [
+                "access",
+                "profile setting",
+                "dashboard",
+                "tab",
+                "candidate card",
+                "employee card",
+                "presale card",
+                "bonus",
+                "report",
+                "time log",
+                "project",
+                "ticket",
+                "notice board",
+                "leave",
+                "message"
+            ],
+            "tools": [
+                "CRM Customization",
+                "Zoom",
+                "Microsoft Word",
+                "Google Sheets"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Instruct recruiters on proper communication techniques.",
+            "responsibilities": "Providing interview instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Develop a training module using PowerPoint that covers essential communication principles tailored to recruitment, focusing on purpose, tone, and response expectations.",
+                "2. Organize a training session via Zoom to demonstrate effective communication techniques through role-playing scenarios.",
+                "3. Create a detailed handbook in Microsoft Word that includes scripts and language suggestions for different stages of the recruitment process.",
+                "4. Assess recruiter understanding and application of these techniques with a follow-up quiz or feedback session using Google Forms.",
+                "5. Store training materials and recorded sessions in Google Drive for ongoing access and refresher training."
+            ],
+            "type": "communication instruction",
+            "parameters": [
+                "purpose",
+                "audience",
+                "content",
+                "tone",
+                "channel",
+                "timing",
+                "response expectation",
+                "feedback mechanism",
+                "script",
+                "language"
+            ],
+            "tools": [
+                "PowerPoint",
+                "Zoom",
+                "Microsoft Word",
+                "Google Forms",
+                "Google Drive"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Outline communication protocols with candidates.",
+            "responsibilities": "Outlining application procedures",
+            "objects": "instructions",
+            "checklists": [
+                "1. Compile a comprehensive guide in Google Docs that outlines all communication steps with candidates, from initial contact through follow-up communications, detailing the appropriate channels and timing.",
+                "2. Integrate email templates and SMS guidelines into the document for consistent messaging across different communication platforms.",
+                "3. Distribute this guide via email to all HR team members and discuss the content in a team meeting using Microsoft Teams to ensure clarity and uniform application.",
+                "4. Monitor adherence to these protocols using CRM software, tracking response times and candidate feedback.",
+                "5. Regularly update the guide based on new insights or changes in recruitment strategy."
+            ],
+            "type": "communication instruction",
+            "parameters": [
+                "purpose",
+                "audience",
+                "content",
+                "tone",
+                "channel",
+                "timing",
+                "response expectation",
+                "feedback mechanism",
+                "script",
+                "language"
+            ],
+            "tools": [
+                "Google Docs",
+                "Email",
+                "Microsoft Teams",
+                "CRM software"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Use communication guidelines to clarify interview processes.",
+            "responsibilities": "Clarifying role expectations",
+            "objects": "instructions",
+            "checklists": [
+                "1. Create a session in Microsoft Teams where key recruitment team members can collaborate to define clear role expectations and interview process guidelines.",
+                "2. Document these guidelines in a visual infographic using Adobe Illustrator to help visualize the process and expectations for both recruiters and candidates.",
+                "3. Share the finalized document via Slack to ensure all team members have immediate access and can refer back to it when needed.",
+                "4. Conduct a webinar via Zoom to walk through the guidelines, allowing for real-time questions and clarifications.",
+                "5. Evaluate the effectiveness of these communication strategies by reviewing candidate feedback collected through a CRM system."
+            ],
+            "type": "communication instruction",
+            "parameters": [
+                "purpose",
+                "audience",
+                "content",
+                "tone",
+                "channel",
+                "timing",
+                "response expectation",
+                "feedback mechanism",
+                "script",
+                "language"
+            ],
+            "tools": [
+                "Microsoft Teams",
+                "Adobe Illustrator",
+                "Slack",
+                "Zoom",
+                "CRM system"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Provide instructions for adding videos during recruitment processes.",
+            "responsibilities": "Providing interview instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Create a training module using PowerPoint that outlines how to integrate video links into candidate profiles within the recruitment CRM software.",
+                "2. Host a webinar using Zoom to demonstrate the technical process of uploading and tagging videos with appropriate comments and subtitles.",
+                "3. Distribute a PDF handbook via email that includes step-by-step instructions on video adding procedures, including recommended tools like Vimeo for hosting and language guidelines.",
+                "4. Set up a help desk ticket system using Zendesk for any technical issues encountered by recruiters.",
+                "5. Schedule follow-up training sessions using Google Calendar to ensure proficiency and address any ongoing issues."
+            ],
+            "type": "video adding instruction",
+            "parameters": [
+                "video link",
+                "comment",
+                "start salary",
+                "status",
+                "sub title",
+                "tool",
+                "language"
+            ],
+            "tools": [
+                "Google Slides",
+                "Google Docs"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Detail how to submit video applications.",
+            "responsibilities": "Outlining application procedures",
+            "objects": "instructions",
+            "checklists": [
+                "1. Develop comprehensive guidelines in Google Docs for candidates on how to create and submit video applications, including technical specifications and content suggestions.",
+                "2. Include a FAQ section addressing common questions and issues related to video submissions.",
+                "3. Share video application guidelines through the company's career page and social media channels using Hootsuite to ensure broad dissemination.",
+                "4. Provide examples of successful video applications on YouTube to help candidates understand expectations.",
+                "5. Implement a system using Salesforce to track and manage received video applications effectively."
+            ],
+            "type": "video adding instruction",
+            "parameters": [
+                "video link",
+                "comment",
+                "start salary",
+                "status",
+                "sub title",
+                "tool",
+                "language"
+            ],
+            "tools": [
+                "Google Docs",
+                "Hootsuite",
+                "YouTube",
+                "Salesforce"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Explain the role of video submissions in evaluating candidates.",
+            "responsibilities": "Clarifying role expectations",
+            "objects": "instructions",
+            "checklists": [
+                "1. Prepare a presentation using Keynote to explain the importance and benefits of video submissions in the recruitment process to internal stakeholders.",
+                "2. Outline the criteria used to evaluate video submissions, including how they contribute to assessing candidate skills and personality.",
+                "3. Document these evaluation criteria in Microsoft Word, and distribute the document via Microsoft Teams for easy accessibility by all recruitment team members.",
+                "4. Conduct a session using Zoom to train recruiters on interpreting and scoring video submissions.",
+                "5. Gather feedback on the video evaluation process through Google Forms to refine and improve the criteria."
+            ],
+            "type": "video adding instruction",
+            "parameters": [
+                "video link",
+                "comment",
+                "start salary",
+                "status",
+                "sub title",
+                "tool",
+                "language"
+            ],
+            "tools": [
+                "Keynote",
+                "Microsoft Word",
+                "Microsoft Teams",
+                "Zoom",
+                "Google Forms"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Write scripts for conducting structured interviews.",
+            "responsibilities": "Writing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Gather key competency areas and questions from HR using Microsoft Teams.",
+                "2. Draft the interview script in Google Docs, incorporating structured interview techniques.",
+                "3. Review and revise the draft based on feedback from hiring managers.",
+                "4. Finalize the script and format it properly for use during interviews.",
+                "5. Distribute the script via email to all interviewers and provide a brief training session on its effective use."
+            ],
+            "type": "interview script",
+            "parameters": [
+                "instruction",
+                "date",
+                "vacancy",
+                "recommendation",
+                "link",
+                "feedback"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Notion"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Develop interview scripts to include key questions and prompts.",
+            "responsibilities": "Developing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Identify the core skills and attributes required for the vacancy using Salesforce.",
+                "2. Create a list of open-ended questions that accurately assess these qualifications in Evernote.",
+                "3. Incorporate situational and behavioral questions to provide depth.",
+                "4. Solicit input from experienced interviewers within the company to refine questions.",
+                "5. Store the developed scripts in a shared Dropbox folder for easy access and updates."
+            ],
+            "type": "interview script",
+            "parameters": [
+                "instruction",
+                "date",
+                "vacancy",
+                "recommendation",
+                "link",
+                "feedback"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Write scripts for initial candidate outreach communications.",
+            "responsibilities": "Writing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Define the purpose of the outreach and the target candidate profile using data from Salesforce.",
+                "2. Draft initial outreach emails or messages in Mailchimp, focusing on engaging content that highlights the vacancy and company culture.",
+                "3. Test different versions of the script using A/B testing features in Mailchimp.",
+                "4. Analyze response rates and refine the messaging accordingly.",
+                "5. Document best practices and successful scripts in Confluence for team reference."
+            ],
+            "type": "outreach script",
+            "parameters": [
+                "date",
+                "instruction",
+                "access",
+                "link",
+                "vacancy",
+                "test",
+                "cta"
+            ],
+            "tools": [
+                "Salesforce",
+                "Mailchimp",
+                "Confluence"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Develop customized outreach scripts for different job roles.",
+            "responsibilities": "Developing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Segment the target job roles and their specific needs using insights from LinkedIn.",
+                "2. Draft tailored scripts for each segment in Google Docs, ensuring relevance and personalization.",
+                "3. Review and get feedback on these scripts from team leads via Slack.",
+                "4. Adjust scripts based on feedback and new job market trends.",
+                "5. Organize and store all versions of scripts in Google Drive for future campaigns and updates."
+            ],
+            "type": "outreach script",
+            "parameters": [
+                "date",
+                "instruction",
+                "access",
+                "link",
+                "vacancy",
+                "test",
+                "cta"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Write job offer scripts that clearly outline the terms and benefits.",
+            "responsibilities": "Writing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Gather essential offer details including salary, benefits, and start date from Workday.",
+                "2. Draft the offer script in Microsoft Word, ensuring all terms are clearly stated and easy to understand.",
+                "3. Review and revise the script to ensure it is engaging and highlights the key benefits of joining the company.",
+                "4. Finalize the script and save it in Microsoft SharePoint accessible to all HR staff involved in making job offers.",
+                "5. Distribute the script via Microsoft Outlook to all interviewers and provide a brief training session on its effective use."
+            ],
+            "type": "offer script",
+            "parameters": [
+                "offer detail",
+                "benefit",
+                "start date",
+                "salary",
+                "schedule",
+                "contract detail"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Develop offer scripts to enhance acceptance rates by clarifying advantages and expectations.",
+            "responsibilities": "Developing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Analyze feedback from previous job offers to identify elements that candidates found most appealing or unclear, using data from Workday.",
+                "2. Incorporate this feedback into a new draft of the offer script using Google Docs, emphasizing the advantages of the position and clear expectations.",
+                "3. Consult with the legal team to ensure all employment terms are compliant and accurately represented.",
+                "4. Organize a workshop using Zoom to train recruiters on how to deliver the offer effectively using the new script.",
+                "5. Update the script periodically based on new benefits or changes in employment law."
+            ],
+            "type": "offer script",
+            "parameters": [
+                "offer detail",
+                "benefit",
+                "start date",
+                "salary",
+                "schedule",
+                "contract detail"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Write onboarding scripts that guide new hires through the first days.",
+            "responsibilities": "Writing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Outline key onboarding stages including initial welcome, introduction to company culture, and first week tasks.",
+                "2. Write the script in Microsoft Word, ensuring it includes all necessary contact information and access details.",
+                "3. Incorporate multimedia elements like company videos or interactive modules to enhance engagement, planning these elements using Trello.",
+                "4. Pilot the onboarding script with recent hires to gather feedback on its effectiveness.",
+                "5. Refine and store the final version in Microsoft SharePoint for easy modification and reuse."
+            ],
+            "type": "onboarding script",
+            "parameters": [
+                "welcome message",
+                "company information",
+                "company culture",
+                "contact",
+                "access",
+                "timeline"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Develop comprehensive onboarding scripts to cover all necessary procedures and policies.",
+            "responsibilities": "Developing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Collaborate with various department heads to compile a comprehensive list of procedures and policies to include in the onboarding script.",
+                "2. Develop the script using Google Docs, structuring it to smoothly transition from general information to specific departmental policies.",
+                "3. Integrate interactive quizzes or FAQs to ensure understanding and engagement, utilizing tools like Typeform.",
+                "4. Review the script with the HR team for completeness and clarity using Zoom.",
+                "5. Implement the script as part of the onboarding process, making it accessible to new hires via BambooHR."
+            ],
+            "type": "onboarding script",
+            "parameters": [
+                "welcome message",
+                "company information",
+                "company culture",
+                "contact",
+                "access",
+                "timeline"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Write scripts for routine recruitment messaging tasks.",
+            "responsibilities": "Writing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Gather necessary details for each type of message, such as company information and position details, from the HR database.",
+                "2. Draft initial templates for different recruitment stages in Microsoft Word, including initial contact, interview invitation, job offer, rejection, and follow-up.",
+                "3. Review and refine each script with HR managers to ensure all information is accurately and clearly conveyed.",
+                "4. Test the effectiveness of scripts in mock scenarios.",
+                "5. Store finalized scripts in a centralized Salesforce CRM for easy access and standardization across the team."
+            ],
+            "type": "message script",
+            "parameters": [
+                "company information",
+                "position details",
+                "professional background",
+                "role-specific question",
+                "technical skill",
+                "initial contact message",
+                "interview invitation",
+                "job offer message",
+                "rejection message",
+                "follow-up message"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "Develop message scripts to ensure consistency and clarity in communication.",
+            "responsibilities": "Developing scripts",
+            "objects": "scripts",
+            "checklists": [
+                "1. Review existing communication materials to identify inconsistencies or areas for improvement.",
+                "2. Create a comprehensive guideline document in Google Docs detailing style, tone, and key points for each type of message based on recruitment best practices.",
+                "3. Develop a series of editable templates in Google Docs for each type of communication, ensuring flexibility for role-specific modifications.",
+                "4. Conduct training sessions via Zoom to familiarize all recruitment team members with these scripts.",
+                "5. Implement feedback mechanisms using Typeform to collect responses from team members on the script's clarity and effectiveness."
+            ],
+            "type": "message script",
+            "parameters": [
+                "company information",
+                "position details",
+                "professional background",
+                "role-specific question",
+                "technical skill",
+                "initial contact message",
+                "interview invitation",
+                "job offer message",
+                "rejection message",
+                "follow-up message"
+            ],
+            "tools": [
+                "Google Docs",
+                "GPT Chat",
+                "Instagram",
+                "Notion",
+                "LinkedIn"
+            ],
+            "complexity": "High"
+        }
+    ]
+}

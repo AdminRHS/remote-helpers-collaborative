@@ -1,0 +1,58 @@
+
+How to Generate Free Audio for Videos Using ElevenLabs (Free Plan)
+
+Introduction 
+ElevenLabs is an AI-powered text-to-speech platform that turns written text into realistic spoken audio. It’s widely used for creating voiceovers in videos, audiobooks, presentations, and more, thanks to its natural-sounding voices and ease of use. Even if you’ve never used text-to-speech before, ElevenLabs makes it simple. In this guide, we’ll walk you through creating a free ElevenLabs account and generating your first voiceover audio for a video. We’ll cover how to sign up on the free plan, use the voice generation tool, and download the audio, as well as explain the limitations of the free plan (like character limits and voice options). This tutorial is written in beginner-friendly language for teachers, secretaries, developers, designers, or anyone looking to add spoken audio to their projects without recording their own voice.
+
+Step 1: Sign Up for the ElevenLabs Free Plan 
+To use ElevenLabs, start by creating a free account. The free plan is $0 and gives you a monthly allowance of credits to generate audio. Here’s how to sign up:  
+
+1. Visit the ElevenLabs website: Go to the official ElevenLabs site (elevenlabs.io) and click on the “Get started free” or “Try for free” button. This will take you to the sign-up page.  
+2. Register an account: You can sign up using your email address (by creating a username/password) or use an existing Google, Facebook, or GitHub account to log in instantly. Choose whichever method is easiest for you.  
+3. Verify your email (if applicable): If you signed up with an email/password, ElevenLabs will send a verification link to your email. Go to your inbox, find the email from ElevenLabs, and click the verification link to activate your account. (If you used Google or another provider to sign in, you might skip this verification step.)  
+4. Log in to ElevenLabs: After confirming your email, log in with your new account. By default, your account will be on the free plan, which costs nothing and provides a set amount of free credits each month for voice generation. You do not need to enter any payment details for the free plan. Once logged in and verified, you’ll be taken directly to the ElevenLabs dashboard or the Speech Synthesis page where you can start creating audio.
+
+Note: The free plan includes 10,000 characters per month (about 10 minutes of spoken audio) that you can generate without charge. This is plenty to get started. Your free credits renew every month, allowing you to continue creating audio month-to-month as needed.
+
+Step 2: Access the Voice Generation Tool 
+After signing in, you should find yourself on the ElevenLabs voice generation interface, which is often labeled “Speech Synthesis” in the dashboard. This is the main text-to-speech tool. If you’re not automatically there, do the following:
+
+- Navigate to Speech Synthesis: Look at the menu or navigation bar in your ElevenLabs account. Click on “Speech Synthesis” or “Text to Speech” (sometimes found under a heading like Studio or Voice Lab). This will open the tool where you can input text and generate voice output.  
+
+Step 3: Enter Your Text and Choose a Voice 
+Now it’s time to prepare the content you want turned into speech:
+
+- Enter your text: Click on the text box (often labeled something like “Type or paste your text here”) and type or paste the script that you want to convert to audio. This could be a few sentences or a full paragraph – for example, a video narration, an announcement, or any dialogue you need. If you have a long script, you might start with a short section to test how it sounds. Make sure to proofread your text for any errors, because the AI will read exactly what you’ve written (including mispellings or abbreviations).  
+- Choose a voice: Next, select a voice from the available voice options. ElevenLabs offers a variety of premade AI voices (both male and female, in different styles and accents) for you to choose from. You might see a default voice already selected, but you can change it by clicking on the voice name or dropdown menu and picking another voice. For example, you could choose a female narrator voice for an instructional video or a deep male voice for a documentary style – pick whatever fits your project’s tone. The free plan lets you experiment with a wide range of narrator voices from ElevenLabs’ library, so feel free to try different ones.
+
+Step 4: Generate and Preview the Audio 
+Once your text is entered and a voice is selected, you can create the audio clip:
+
+1. Click “Generate”: Press the Generate button (sometimes labeled “Convert to Speech” or similar) to synthesize the voice. ElevenLabs will take a moment to process your text and then produce an audio playback.  
+2. Listen to the preview: After generation, the result will appear on the page, often with a small audio player interface. Click the Play button to listen to the voiceover reading your text.  
+3. Refine if needed: It’s common to do a little trial and error. You might tweak the text (e.g., add a comma or period for a pause, or correct spelling) or try another voice to get the perfect result.
+
+Step 5: Download the Audio File 
+After previewing the generated speech and being satisfied with it, you’ll want to save the audio to your computer:
+
+- Find the download option: On the ElevenLabs interface, look for a “Download” button or icon next to the audio player (it often looks like a downward arrow).  
+- Download your audio: Click the Download icon/button. The synthesized speech will be saved as an audio file (usually in MP3 format) to your computer.
+
+Step 6: Use the Audio in Your Video Project 
+With your voiceover file downloaded, the final step is to add it to your video or project:
+
+1. Open your video editing software.  
+2. Import the audio file: Locate the ElevenLabs audio file and import it into your video editor.  
+3. Place the audio in the timeline and align it with your visuals.  
+4. Adjust and preview the timing and volume.  
+5. Export or save your final video.
+
+Limitations of the ElevenLabs Free Plan 
+- Monthly usage cap: 10,000 characters/month.  
+- No commercial use license.  
+- No access to custom or voice cloning features.  
+- Audio quality is good, but high-fidelity options are reserved for paid plans.  
+- Each generation uses up characters – so preview with shorter texts when testing.
+
+Despite these limitations, ElevenLabs’ free plan is a great starting point for creating realistic voiceovers quickly and easily.
+

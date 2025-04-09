@@ -1,0 +1,206 @@
+﻿Expanded CRM System Structure
+Your CRM includes multiple interconnected modules, and Checklists, Project Checklists, and Task Automation play a crucial role in your workflows.
+________________
+
+
+1. Checklist & Task Tracking System
+The checklists module ensures structured workflows, task completion tracking, and quality control.
+Key Tables:
+* checklists – Main checklist entity, tracking each checklist item’s completion status.
+* checklist_items – Individual checklist steps assigned to users or teams.
+* checklist_item_guide – Links checklist items with relevant guides/documentation.
+* task_templates – Predefined task structures used in workflows.
+* task_request – Requests for new tasks that require approval or processing.
+* task_request_assignee – Links specific users with task requests.
+* task_results – Stores the output/result of tasks for tracking performance.
+Workflow:
+1. Checklist Creation – Tasks are broken down into checklist items that must be completed sequentially or in parallel.
+2. Assignment – Each checklist item is assigned to a user, team, or tool.
+3. Progress Tracking – As items are completed, they update their status (is_completed field).
+4. Validation – Some items require validation via checklist_item_guide, ensuring they meet quality control standards.
+5. Completion & Logging – Checklist completions are logged and linked to task_results for analytics.
+________________
+
+
+2. Project-Based Checklists
+Your project execution and milestone tracking integrate closely with checklists.
+Key Tables:
+* projects – Main entity tracking active projects.
+* project_task – Links tasks with projects.
+* project_templates – Predefined templates for structured project execution.
+* milestone_templates – Defines key checkpoints/milestones in projects.
+* milestone_template_task_template – Links milestones to specific tasks.
+* project_temp_task_temp – Manages the project-template-to-task-template relationship.
+Workflow:
+1. Project Creation – A new project is created using a template.
+2. Milestone Definition – The system sets up milestones from milestone_templates.
+3. Task Assignment – Tasks are assigned to users, teams, or AI-driven automation.
+4. Checklist Integration – Each milestone may have checklists for sub-tasks.
+5. Progress Reporting – Completed checklists and tasks update status reports.
+________________
+
+
+3. Automated Workflow Execution
+Your CRM automates task tracking, checklist validation, and milestone completion.
+Automation Components:
+* step_templates – Predefined steps in a process.
+* task_template_step_template – Links task templates with required steps.
+* steps – Tracks actual step execution within tasks.
+* step_tracker – Logs user interaction with steps.
+* step_template_checklist_item – Ensures checklists are integrated into steps.
+Workflow:
+1. Task Assigned → Step Execution Starts.
+2. Checklist Items Marked as Completed.
+3. Milestones Reached → Reports Updated.
+4. System Logs User Activity in step_tracker.
+________________
+
+
+4. Reporting & Analytics
+Tracking performance and automating feedback loops is key.
+Key Tables:
+* report_dailies – Daily logs of activities.
+* report_countries – Country-specific recruitment and business activity reports.
+* report_languages – Reports categorized by languages.
+* status_entities_blocks – Logs the status of checklist items, tasks, and milestones.
+________________
+
+
+Final Summary
+Your CRM ensures structured task execution and project tracking by integrating: ✔ Checklist validation with documentation.
+✔ Milestone-based execution in projects.
+✔ Automated workflows linking checklists to tasks.
+✔ Performance reports & real-time tracking.
+Updated Core Knowledge Order & Task Flow
+Now that we have the LeadGen Onboarding Plan, we can properly structure Core Knowledge Templates while ensuring a parallel tracking & reward system.
+________________
+
+
+1. Core Knowledge Templates (Static Frameworks)
+These provide structured learning, onboarding, and execution plans.
+A. Structured Learning & Task Frameworks
+Category
+	Templates (Knowledge Base)
+	Purpose
+	Onboarding Programs
+	project_templates
+	Long-term structured learning (5+ days)
+	Milestones & Timelines
+	milestone_templates
+	Key progress checkpoints based on days
+	Exams & Tests
+	task_templates
+	Evaluation of knowledge (quizzes, tasks)
+	Individual Steps & Questions
+	step_templates
+	Detailed step-by-step execution
+	Goals & Correct Answers
+	checklist_items
+	Completion tracking with validation
+	________________
+
+
+B. Guides, Translations & Formats
+Category
+	Templates (Knowledge Base)
+	Purpose
+	Process Guides
+	guides
+	Explains workflow steps
+	Guide Formats
+	guide_formats
+	Defines the type of learning (text, video, interactive)
+	Translations
+	languages, translations
+	Ensures knowledge is accessible in multiple languages
+	________________
+
+
+2. Task Execution & Tracking (Dynamic Data)
+This tracks real-time progress, task completion, and statistics compilation.
+A. Live Task & Milestone Tracking
+Tracking Flow
+	Tracking Data
+	Purpose
+	Task Progress
+	tasks
+	Track individual execution progress
+	Checklist Execution
+	checklists
+	Ensures all goals & correct answers are met
+	Step Tracking
+	steps, step_tracker
+	Logs execution time for each step
+	Milestone Progress
+	milestone_template_task_template
+	Monitors achievement of onboarding goals
+	________________
+
+
+B. Performance Metrics & Statistics
+Metric
+	Tracking Table
+	Purpose
+	Completion Score
+	report_dailies, status_entities_blocks
+	Tracks overall progress completion
+	Help Others Bonus
+	activities
+	Encourages collaboration
+	Timing Score
+	step_tracker
+	Measures efficiency
+	Quality Score
+	task_results
+	Evaluates accuracy
+	Technical Score
+	task_assignee, task_results
+	Checks technical competency
+	Communication Score
+	communications, message_types
+	Tracks engagement & response rate
+	Progress Score
+	tasks, milestone_template_task_template
+	Determines how far users advance
+	________________
+
+
+3. Expanding Professions via Specialization & Reward System
+To allow growth and specialization based on project completion, we introduce a reward system.
+A. Specialization System
+Level
+	Requirement (Tracking Data)
+	Specialization Unlocked
+	Beginner
+	Complete 1 project (projects, tasks)
+	Generalist title (LeadGen, Sales, etc.)
+	Intermediate
+	Pass 3 milestone-based tests (milestone_templates)
+	Specialization (LinkedIn, Email, SEO, etc.)
+	Advanced
+	Maintain a high Progress Score for 2+ projects
+	Senior specialization (Trainer, Consultant, etc.)
+	B. Reward Triggers
+Reward Type
+	Trigger (Tracking Table)
+	Impact
+	Title Upgrade
+	task_results (High Score)
+	Unlocks specialization
+	Badge System
+	status_periods (Tracking time in role)
+	Visual reputation boost
+	Promotion to Team Lead
+	report_dailies (High engagement)
+	Becomes mentor/trainer
+	________________
+
+
+API Call Sequence (Workflow)
+Onboarding Automation Flow
+✅ User starts onboarding →
+✅ System assigns structured tasks →
+✅ User completes checklists →
+✅ AI evaluates results →
+✅ Reports & analytics generated →
+✅ Specializations unlocked based on progress.

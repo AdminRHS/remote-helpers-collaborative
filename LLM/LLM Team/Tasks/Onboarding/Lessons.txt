@@ -1,0 +1,85 @@
+In the first lesson, we will focus on preparing your workspace, which is an important step for effective teamwork. You will learn how to properly set up Dropbox and Cursor with auto-save, create a project folder hierarchy, and use file naming templates. We will also cover the installation and setup of Discord to ensure fast and efficient team communication. These tools and processes will help you organize your workspace, which will significantly simplify project management and interaction with colleagues.
+
+Auto-saving files is critically important for teamwork. Proper setup prevents data loss and ensures synchronization between participants.
+
+System setup:
+
+- Install Dropbox ([dropbox.com](http://dropbox.com))
+- Grant all necessary permissions, make sure files are syncing.
+- Log in using [admin@rh-s.com](mailto:admin@rh-s.com) account
+- Install Cursor, open Settings → General → Appearance → Open Editor Settings → select auto-save type with regular interval, on focus change, and so on.
+- Enable auto-save
+- Specify Dropbox folder
+- Test the setup with a sample file
+
+After setup, all changes will automatically sync through Dropbox with the entire team.
+
+## Lesson 2: Activating Yolo Mode
+
+Yolo Mode is the mode in Cursor IDE that gives the rights to edit files on your computer. To activate it and configure automatic features, perform the following steps:
+
+1. Open Cursor IDE
+2. Go to Settings
+3. Navigate to the Features tab
+4. Find and check the "Enable auto-run mode" checkbox to allow the agent to automatically execute tools without confirmation prompts
+5. In the Editor section, enable "Auto select for Ctrl/$ + K" for automatic region selection
+6. Under Auto-run Prompt, enable "Iterate on lints" for automatic lint error fixes
+7. In the Cursor Tab section, turn on "Auto Import (for TypeScript)"
+8. In the Chat section, enable:
+    - Auto-scroll to bottom
+    - Auto-apply to files outside context in edit mode
+9. Click Apply or Save to confirm the changes
+
+After enabling these settings, the agent will be able to run tools automatically and perform various automated actions without requesting confirmation each time.
+
+Deep Research is a powerful feature in modern AI tools that allows for comprehensive information gathering and analysis. Here's how to effectively use different AI tools for deep research:
+
+### Key AI Tools for Deep Research
+
+- **ChatGPT (GPT-4)**
+    - Functions as a universal smart analyst
+     Excels in deep reasoning and complex tasks
+     Best for detailed analysis and creative problem-solving
+     Provides sources upon request
+- **Perplexity**
+    - Specializes in finding reliable sources
+     Quickly provides fact-based information with references
+     Excellent for academic and journalistic research
+     Offers generous free functionality for searches
+- **Gemini**
+    - Integrated with Google ecosystem
+     Strong multimodal capabilities
+     Connected to current information
+     Effective for various scenarios from basic queries to big data analysis
+- **Grok**
+    - Newer AI with distinct "personality"
+     Specializes in real-time information
+     Good for social media monitoring
+     Useful for trend fact-checking
+
+### Best Practices for Deep Research
+
+- Use multiple tools in combination for comprehensive research
+- Start with fact-gathering using Perplexity or Gemini
+- Utilize ChatGPT for deep analysis and interpretation
+- Employ Gemini or Grok for real-time data and trends
+- Leverage multimodal capabilities when working with visual content
+
+The effectiveness of your research will depend on choosing the right tool for specific aspects of your investigation and combining their strengths appropriately.
+
+## Lesson 4: Practical Assignment
+
+1. **Practical Assignment Goals:**
+    - Reinforce knowledge about workspace setup
+    - Learn to work with Dropbox and Cursor
+    - Master the use of team collaboration tools
+2. **Implementation Steps:**
+    - Install and configure Dropbox according to Lesson 1 instructions
+    - Install and set up Cursor with auto-save
+    - Study the team's Dropbox folder structure
+    - Create a test file and verify synchronization
+    - Activate Yolo Mode in Cursor as per Lesson 2
+3. **Verification and Feedback:**
+    - Demonstrate working file synchronization
+    - Show correct auto-save functionality in Cursor
+    - Get setup confirmation from team lead

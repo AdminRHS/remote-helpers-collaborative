@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt Engineering Express Guide</title>
+  <style>
+    /* Общие стили и фон */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #1e3c72, #2a5298, #00f2fe, #4facfe);
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .panel {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      padding: 20px 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .panel h1 {
+      font-size: 3em;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      white-space: nowrap;
+    }
+    
+    .panel p.subtitle {
+      font-size: 1.2em;
+      margin: 10px 0 0;
+      color: #eee;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+    
+    .start-btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #1e3c72;
+      background: #ffde59;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .start-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+    }
+    
+    .rocket {
+      position: fixed;
+      font-size: 5em;
+      bottom: 0;
+      left: 0;
+      margin: 20px;
+      transform: rotate(10deg);
+      animation: flyHalf 3s ease-in-out forwards;
+      z-index: 10;
+    }
+    @keyframes flyHalf {
+      0% {
+        bottom: 0;
+        left: 0;
+        transform: rotate(10deg);
+      }
+      50% {
+        bottom: 70%;
+        left: 70%;
+        transform: rotate(5deg);
+      }
+      100% {
+        bottom: 55%;
+        left: 50%;
+        transform: rotate(0deg);
+      }
+    }
+    
+    .target-i {
+      position: relative;
+      display: inline-block;
+    }
+    .target-i::before {
+      content: '';
+      position: absolute;
+      width: 0.15em;
+      height: 0.15em;
+      background-color: currentColor;
+      top: 0.2em;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .dot-hidden::before {
+      display: none;
+    }
+    
+    #alien {
+      position: fixed;
+      opacity: 0;
+      transition: all 1s ease;
+      transform: translateY(20px);
+      z-index: 11;
+      width: 120px;
+      height: 120px;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      75% { transform: rotate(-10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .wave {
+      animation: wave 1s infinite;
+      transform-origin: 80% 80%;
+    }
+  </style>
+</head>
+<body>
+  <div class="rocket">🚀</div>
+  
+  <div class="panel">
+    <h1>
+      Prompt Eng<span class="target-i">ı</span>neering Express Guide
+    </h1>
+    <p class="subtitle">Embark on a rapid journey into the world of advanced prompts</p>
+  </div>
+  
+  <button class="start-btn" onclick="startCourse()">Start Your Journey</button>
+  
+  <div id="alien">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+      <defs>
+        <radialGradient id="alienGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#9FFFD8" />
+          <stop offset="100%" stop-color="#60B8FF" />
+        </radialGradient>
+        <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFFFFF" />
+          <stop offset="100%" stop-color="#9FFFD8" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      
+      <!-- Glow effect -->
+      <ellipse cx="100" cy="100" rx="90" ry="95" fill="url(#glowGradient)" opacity="0.5" />
+      
+      <g>
+        <!-- Head -->
+        <ellipse cx="100" cy="70" rx="40" ry="45" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="3"/>
+        
+        <!-- Facial features -->
+        <!-- Eyes -->
+        <ellipse cx="85" cy="60" rx="12" ry="15" fill="#fff" stroke="#3a3a3a" stroke-width="1.5"/>
+        <ellipse cx="115" cy="60" rx="12" ry="15" fill="#fff" stroke="#3a3a3a" stroke-width="1.5"/>
+        
+        <!-- Pupils -->
+        <ellipse cx="85" cy="60" rx="6" ry="9" fill="#000"/>
+        <ellipse cx="115" cy="60" rx="6" ry="9" fill="#000"/>
+        
+        <!-- Eye highlights -->
+        <circle cx="82" cy="57" r="3" fill="#fff"/>
+        <circle cx="112" cy="57" r="3" fill="#fff"/>
+        
+        <!-- Mouth -->
+        <path d="M85,85 Q100,98 115,85" stroke="#3a3a3a" stroke-width="3" fill="none"/>
+        
+        <!-- Facial lines -->
+        <path d="M75,50 Q85,45 95,50" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        <path d="M105,50 Q115,45 125,50" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        
+        <!-- Body -->
+        <path d="M80,115 Q100,120 120,115 L120,160 Q100,170 80,160 Z" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="3"/>
+        
+        <!-- Body details -->
+        <ellipse cx="100" cy="135" rx="15" ry="15" fill="#60B8FF" stroke="#3a3a3a" stroke-width="1.5"/>
+        <circle cx="100" cy="135" r="8" fill="#45A0E0" stroke="#3a3a3a" stroke-width="1"/>
+        <circle cx="100" cy="135" r="3" fill="#fff"/>
+        
+        <!-- Neck -->
+        <path d="M90,115 L90,100 Q100,95 110,100 L110,115" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="2"/>
+        
+        <!-- Left arm (waving) -->
+        <path d="M80,120 C70,110 60,105 50,80" class="wave" stroke="#3a3a3a" stroke-width="3" fill="url(#alienGradient)"/>
+        <circle cx="50" cy="80" r="10" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="2"/>
+        
+        <!-- Left hand details -->
+        <path d="M45,80 L40,75" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        <path d="M45,85 L38,85" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        <path d="M48,88 L45,93" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        
+        <!-- Right arm -->
+        <path d="M120,120 C130,125 140,125 150,120" stroke="#3a3a3a" stroke-width="3" fill="url(#alienGradient)"/>
+        <circle cx="150" cy="120" r="10" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="2"/>
+        
+        <!-- Right hand details -->
+        <path d="M155,120 L160,115" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        <path d="M155,125 L162,127" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        <path d="M152,115 L158,110" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+        
+        <!-- Legs -->
+        <path d="M90,160 C87,170 85,180 85,185 L95,185 C95,180 93,170 90,160" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="3"/>
+        <path d="M110,160 C113,170 115,180 115,185 L105,185 C105,180 107,170 110,160" fill="url(#alienGradient)" stroke="#3a3a3a" stroke-width="3"/>
+        
+        <!-- Shoes -->
+        <ellipse cx="90" cy="185" rx="10" ry="5" fill="#3a3a3a"/>
+        <ellipse cx="110" cy="185" rx="10" ry="5" fill="#3a3a3a"/>
+        
+        <!-- Antenna -->
+        <path d="M90,30 C85,25 80,20 80,15" stroke="#3a3a3a" stroke-width="2" fill="none"/>
+        <path d="M110,30 C115,25 120,20 120,15" stroke="#3a3a3a" stroke-width="2" fill="none"/>
+        <circle cx="80" cy="15" r="5" fill="#FFCC00" stroke="#3a3a3a" stroke-width="1">
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="120" cy="15" r="5" fill="#FFCC00" stroke="#3a3a3a" stroke-width="1">
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+        </circle>
+      </g>
+    </svg>
+  </div>
+  
+  <script>
+    function startCourse() {
+      alert("Let's begin the journey!");
+    }
+    
+    // Функция показа инопланетянина слева от ракеты
+    function showAlien() {
+      const alien = document.getElementById('alien');
+      const rocket = document.querySelector('.rocket');
+      
+      const rocketRect = rocket.getBoundingClientRect();
+      const alienWidth = 120; // Обновленная ширина инопланетянина
+      
+      // Позиционируем инопланетянина справа от ракеты
+      alien.style.left = (rocketRect.left + rocketRect.width + 10) + 'px';
+      alien.style.top = (rocketRect.top + rocketRect.height/2 - 80) + 'px';
+      alien.style.opacity = '1';
+      alien.style.transform = 'translateY(0)';
+    }
+    
+    // Ждем окончания анимации с задержкой 3500 мс
+    document.addEventListener('DOMContentLoaded', function() {
+      const targetI = document.querySelector('.target-i');
+      targetI.classList.add('dot-hidden');
+      setTimeout(showAlien, 3500);
+    });
+  </script>
+</body>
+</html>

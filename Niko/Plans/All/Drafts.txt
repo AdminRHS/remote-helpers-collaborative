@@ -1,0 +1,117 @@
+General Plan:
+Build AI Tasks Review Process:
+Which Tasks?
+	1. Task Collection and Organization:
+		- Collect All Steps from Main Plan Categories:
+			* Onboarding Lesson Generation
+			* Workflow Control
+			* Task Manager Implementation
+			* Media Development
+		
+		2. Learning Process Integration:
+			Start From Lesson Structure:
+				- Connect with Memory Techniques (ref: Main Plan Memory Research)
+				- Integrate with LLM JSON Files Library
+				- Implement Gamification Elements
+			
+		3. Task Milestone Management:
+			- List tasks per Milestone aligned with CRM structure
+			- Track Progress via Dashboard
+			- Connect with Events Management System
+			
+		4. Results Tracking:
+			- Generated Content Review
+			- Test Task Measurements
+			- Employee Progress Tracking
+			
+		5. Sequential Task Flow:
+			- Implement Next Step Function
+			- Connect with Shift Manager System
+			- Automate Task Distribution
+
+MilesTone Social Media Integration:
+	Info Required:
+		1. Inner Client Analysis:
+			- Company Structure Documentation
+			- Employee Skill Matrix
+			- Learning Progress Data
+		
+		2. Social Media Kit Development:
+			- Comics Style Visual Templates
+			- Mascot Integration (30 objects limit)
+			- Video Content Guidelines
+		
+		3. Target Audience Research:
+			- Integration with Memory Techniques
+			- Learning Materials Delivery Analysis
+			- Profession-Specific Content
+		
+		4. Task Template System:
+			Create Task Template Posts:
+				- Full Description on website
+				- API Integration Documentation
+				- Learning Course Milestones
+			
+			Posts Dedicated Types:
+				1. Plans Building:
+					- Daily Planning Templates
+					- Workflow Control Guidelines
+					- Progress Tracking Methods
+				
+				2. AI Matching:
+					- Prompt Generation Guidelines
+					- LLM Integration Examples
+					- Automation Use Cases
+				
+				3. Building Template Library:
+					- Documentation Templates
+					- Task Execution Flows
+					- Social Media Sequences
+						* Scrape and Analyze Patterns
+						* Create Reusable Templates
+						* Track Engagement Metrics
+
+General Test Framework:
+	1. Profession Mapping:
+		Required Professions List:
+
+			
+	2. Scoring System Development:
+		Per Profession Metrics:
+			a) Technical Skills Assessment:
+				- Core Competencies Evaluation
+				- Tool Proficiency Measurement
+				- Problem-Solving Capabilities
+			
+			b) Process Knowledge:
+				- Workflow Understanding
+				- Documentation Abilities
+				- Integration Knowledge
+			
+			c) AI Interaction Skills:
+				- Prompt Writing Proficiency
+				- LLM Tool Usage
+				- Automation Understanding
+			
+	3. CV Processing System:
+		IT Focus Implementation:
+			a) CV Analysis Components:
+				- Technical Skills Extraction
+				- Experience Level Assessment
+				- Project History Analysis
+			
+			b) Automated Evaluation:
+				- Skills Matching Algorithm
+				- Experience Scoring
+				- Role Compatibility Check
+			
+			c) Next Steps Generator:
+				- Custom Learning Path Creation
+				- Skill Gap Analysis
+				- Development Recommendations
+			
+	4. Integration Points:
+		- Connect with Task Manager for skill-based assignment
+		- Link to Learning Process for customized training
+		- Feed into Analytics Scoring system
+		- Update Employee Skill Matrix automatically

@@ -1,0 +1,60 @@
+How to Generate Free Audio for Videos Using ElevenLabs
+
+Introduction
+ElevenLabs is an AI-powered platform that provides powerful tools for creating audio, including text-to-speech (TTS) voiceovers and sound effects. It's widely used for creating voiceovers in videos, audiobooks, presentations, and more, thanks to its natural-sounding voices and ease of use. The free tier makes professional-grade audio accessible to all creators.
+
+Step 1: Create an ElevenLabs Account
+1. Visit the ElevenLabs website (elevenlabs.io) and sign up for a free account.
+2. You can register using:
+   - Email address (requires verification)
+   - Google account
+   - Facebook account
+   - GitHub account
+3. Free-tier accounts provide:
+   - 10,000 characters per month for audio generation
+   - Approximately 10 minutes of voiceover or 60 sound effects
+   - No payment details required
+   - Credits renew monthly
+
+Step 2: Generate Voiceovers Using Text-to-Speech (TTS)
+1. Log in to your ElevenLabs account and navigate to the Text-to-Speech tool (also called Speech Synthesis).
+2. Enter your text in the provided text box:
+   - Type or paste your script
+   - Proofread carefully as the AI will read exactly what you've written
+   - Start with shorter sections for testing
+3. Customize the voice by selecting:
+   - Gender
+   - Accent
+   - Pace or emotional tone
+   (You can choose any voice from the free ones offered)
+4. Click "Generate Audio" to produce the voiceover
+5. Preview the audio using the built-in player
+6. If satisfied, download the MP3 file
+
+Step 3: Generate Sound Effects
+ElevenLabs' sound effects tool allows free users to generate up to 60 sound effects per month.
+
+1. Navigate to the Sound Effects tool in your ElevenLabs dashboard
+2. Type a description of the sound effect you need (e.g., "birds chirping" or "waves crashing")
+3. Click "Generate Sound Effect"
+4. Preview and download the generated sound effect
+
+Step 4: Integrate Audio into Your Video
+1. Open your video editing software (Canva, Adobe Premiere Pro, Final Cut Pro, etc.)
+2. Import your video and the downloaded audio files
+3. Add the audio files to your timeline
+4. Adjust timing and volume levels to synchronize with visuals
+5. Export or save your final video
+
+Important Notes for Free Users
+- Monthly usage cap: 10,000 characters/month
+- No commercial use license
+- No access to custom or voice cloning features
+- Audio quality is good, but high-fidelity options are reserved for paid plans
+- Must attribute audio content by including "elevenlabs.io" in the title or credits of published work
+- Ensure compliance with ElevenLabs' Prohibited Content and Uses Policy
+- Each generation uses up characters – preview with shorter texts when testing
+
+
+Conclusion
+ElevenLabs' free tools provide an excellent starting point for creating professional-quality voiceovers and sound effects for your videos. With its intuitive interface, customization options, and monthly free credits, it's an accessible solution for content creators of all levels. 

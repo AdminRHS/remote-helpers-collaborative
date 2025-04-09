@@ -1,0 +1,199 @@
+MCP Servers and Their Functionalities
+This list is organized according to the categories presented in the primary source ( github.com/modelcontextprotocol/servers): Reference Servers, Official Integrations, and Community Servers.
+
+Reference Servers
+AWS KB Retrieval: Retrieval from AWS Knowledge Base using Bedrock Agent Runtime.
+
+Brave Search: Web and local search using Brave's Search API.
+
+EverArt: AI image generation using various models.
+
+Everything: Reference/test server with prompts, resources, and tools.
+
+Fetch: Web content fetching and conversion for efficient LLM usage.
+
+Filesystem: Secure file operations with configurable access controls.
+
+Git: Tools to read, search, and manipulate Git repositories.
+
+GitHub: Repository management, file operations, and GitHub API integration.
+
+GitLab: GitLab API, enabling project management.
+
+Google Drive: File access and search capabilities for Google Drive.
+
+Google Maps: Location services, directions, and place details.
+
+Memory: Knowledge graph-based persistent memory system.
+
+PostgreSQL: Read-only database access with schema inspection.
+
+Puppeteer: Browser automation and web scraping.
+
+Sentry: Retrieving and analyzing issues from Sentry.io.
+
+Sequential Thinking: Dynamic and reflective problem-solving through thought sequences.
+
+Slack: Channel management and messaging capabilities.
+
+Sqlite: Database interaction and business intelligence capabilities.
+
+Time: Time and timezone conversion capabilities.
+
+Official Integrations
+Axiom: Query and analyze your Axiom logs, traces, and all other event data in natural language.
+
+Browserbase: Automate browser interactions in the cloud (e.g., web navigation, data extraction, form filling).
+
+Cloudflare: Deploy, configure & interrogate your resources on the Cloudflare developer platform (e.g., Workers/KV/R2/D1).
+
+E2B: Run code in secure sandboxes hosted by E2B.
+
+Exa: Search Engine made for AIs by Exa.
+
+Fireproof: Immutable ledger database with live synchronization.
+
+JetBrains: Work on your code with JetBrains IDEs.
+
+Kagi Search: Search the web using Kagi's search API.
+
+Meilisearch: Interact & query with Meilisearch (Full-text & semantic search API).
+
+Metoro: Query and interact with kubernetes environments monitored by Metoro.
+
+MotherDuck: Query and analyze data with MotherDuck and local DuckDB.
+
+Neo4j: Neo4j graph database server (schema + read/write-cypher) and separate graph database backed memory.
+
+Neon: Interact with the Neon serverless Postgres platform.
+
+Qdrant: Implement semantic memory layer on top of the Qdrant vector search engine.
+
+Raygun: Interact with your crash reporting and real using monitoring data on your Raygun account.
+
+Search1API: One API for Search, Crawling, and Sitemaps.
+
+Tinybird: Interact with Tinybird serverless ClickHouse platform.
+
+Community Servers
+AWS S3: Fetches objects (e.g., PDF documents) from AWS S3.
+
+AWS: Perform operations on your AWS resources using an LLM.
+
+Airtable: Read and write access to Airtable databases, with schema inspection.
+
+AlphaVantage: Provides access to stock market data via the AlphaVantage API.
+
+Anki: Interacts with your Anki decks and cards.
+
+Any Chat Completions: Interact with any OpenAI SDK Compatible Chat Completions API like OpenAI, Perplexity, Groq, xAI and many more.
+
+Atlassian: Interact with Atlassian Cloud products (Confluence and Jira) including searching/reading Confluence spaces/pages, accessing Jira issues, and project metadata.
+
+BigQuery: (by LucasHild & ergut) Enables LLMs to inspect database schemas and execute queries on BigQuery.
+
+ChatSum: Query and Summarize chat messages with LLM.
+
+Chroma: Vector database server for semantic document search and metadata filtering.
+
+Cloudinary: Upload media to Cloudinary and get back the media link and details.
+
+cognee-mcp: GraphRAG memory server with customizable ingestion, data processing and search.
+
+coin_api_mcp: Provides access to coinmarketcap cryptocurrency data.
+
+Contentful-mcp: Read, update, delete, publish content in your Contentful space(s).
+
+Data Exploration: Autonomous data exploration on .csv-based datasets. Caution: Executes arbitrary Python code.
+
+DevRev: Integrate with DevRev APIs to search through your DevRev Knowledge Graph.
+
+Docker: Integrate with Docker to manage containers, images, volumes, and networks.
+
+Elasticsearch: Provides Elasticsearch interaction.
+
+Fetch: Flexibly fetches HTML, JSON, Markdown, or plaintext.
+
+FireCrawl: Advanced web scraping with JavaScript rendering, PDF support, and smart rate limiting.
+
+FlightRadar24: Tracks flights in real-time using Flightradar24 data.
+
+Glean: Uses Glean API to search and chat.
+
+Google Calendar: Integration with Google Calendar to check schedules, find time, and add/delete events.
+
+Google Tasks: Google Tasks API Model Context Protocol Server.
+
+Home Assistant: Interact with Home Assistant including viewing and controlling lights, switches, sensors, and all other Home Assistant entities.
+
+HuggingFace Spaces: Server for using HuggingFace Spaces, supporting Open Source Image, Audio, Text Models and more.
+
+Inoyu: Interact with an Apache Unomi CDP customer data platform to retrieve and update customer profiles.
+
+Keycloak MCP: Enables natural language interaction with Keycloak for user and realm management.
+
+Kubernetes: Connect to Kubernetes cluster and manage pods, deployments, and services.
+
+Linear: Allows LLM to interact with Linear's API for project management.
+
+LlamaCloud: (by marcusschiesser) Integrate the data stored in a managed index on LlamaCloud.
+
+MCP Installer: Installs other MCP servers.
+
+mcp-k8s-go: Golang-based Kubernetes server for MCP to browse pods and their logs, events, namespaces and more.
+
+MSSQL: MSSQL database integration with configurable access controls and schema inspection.
+
+Markdownify: MCP to convert almost anything to Markdown (PPTX, HTML, PDF, Youtube Transcripts and more).
+
+Minima: MCP server for RAG on local files.
+
+MongoDB: A Model Context Protocol Server for MongoDB.
+
+MySQL: (by benborla & DesignComputer) MySQL database integration with configurable access controls and schema inspection.
+
+NS Travel Information: Access Dutch Railways (NS) real-time train travel information and disruptions through the official NS API.
+
+Needle: Production-ready RAG out of the box to search and retrieve data from your own documents.
+
+Notion: (by suekou & v-3) Interact with Notion API. Search, Read, Update, and Create pages through Claude chat.
+
+oatpp-mcp: C++ MCP integration for Oat++. Use Oat++ to build MCP servers.
+
+Obsidian Markdown Notes: Read and search through your Obsidian vault or any directory containing Markdown notes.
+
+OpenAPI: Interact with OpenAPI APIs.
+
+OpenRPC: Interact with and discover JSON-RPC APIs via OpenRPC.
+
+Pandoc: MCP server for seamless document format conversion using Pandoc.
+
+Pinecone: MCP server for searching and uploading records to Pinecone. Allows for simple RAG features, leveraging Pinecone's Inference API.
+
+Playwright: This MCP Server will help you run browser automation and webscraping using Playwright.
+
+RAG Web Browser: An MCP server for Apify's RAG Web Browser Actor to perform web searches, scrape URLs, and return content in Markdown.
+
+Rememberizer AI: An MCP server designed for interacting with the Rememberizer data source, facilitating enhanced knowledge retrieval.
+
+Salesforce MCP: Interact with Salesforce Data and Metadata.
+
+Scholarly: A MCP server to search for scholarly and academic articles.
+
+Snowflake: Enables LLMs to interact with Snowflake databases, allowing for secure and controlled data operations.
+
+Spotify: This MCP allows an LLM to play and use Spotify.
+
+TMDB: Integrates with The Movie Database (TMDB) API to provide movie information, search capabilities, and recommendations.
+
+Tavily search: An MCP server for Tavily's search & news API, with explicit site inclusions/exclusions.
+
+Todoist: Interact with Todoist to manage your tasks.
+
+Vega-Lite: Generate visualizations from fetched data using the VegaLite format and renderer.
+
+Windows CLI: MCP server for secure command-line interactions on Windows systems, enabling controlled access to PowerShell, CMD, and Git Bash shells.
+
+X (Twitter): (by EnesCinr & vidhupv) Interact with twitter API. Post tweets and search for tweets by query. Create, manage and publish X/Twitter posts directly through Claude chat.
+
+XMind: Read and search through your XMind directory containing XMind files.

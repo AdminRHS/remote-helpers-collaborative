@@ -1,0 +1,77 @@
+Платформа	                        Создание персонажа	Награды за задачи	Виртуальная экономика	Применимость для CRM
+TaskHero	                             Да	                    Да	                       Да	             Высокая
+Do It Now: RPG To Do List	             Да	                    Да	                       Да	             Высокая
+Bounty Tasker	                         Да	                    Да	                       Да	             Средняя
+MagicTask	                             Нет                 	Да	                       Частично	         Средняя
+
+https://www.taskheroics.com/
+https://play.google.com/store/apps/details?id=com.levor.liferpgtasks&hl=en_US
+https://www.indiegogo.com/projects/bounty-tasker-a-to-do-list-to-gamify-your-life
+https://magictask.io/
+
+Немного другое:
+Starbucks Rewards	                    Нет	                    Да	                        Да	                Высокая
+Duolingo	                            Нет                     Да	                        Нет	                Средняя
+Fitbit	                                Нет	                    Да	                        Нет	                Средняя
+
+
+Рекомендации для вашей CRM
+Для создания нового пользователя в вашей CRM с системой наград, рассмотрите следующие шаги:
+
+Кастомизация профиля: Позвольте клиентам создавать и кастомизировать свои профили или аватары, как в TaskHero или Do It Now.
+Задачи и награды: Предложите задачи или вызовы, которые клиенты могут выполнять для заработка очков, как в Starbucks Rewards 
+или Duolingo.
+Виртуальная экономика: Включите систему, где очки можно обменять на виртуальные предметы, скидки или эксклюзивный контент, 
+как в Steam или Fitbit.
+Прогрессия и уровни: Используйте уровни и лидерборды для мотивации, как в Khan Academy или Agile CRM, чтобы повысить 
+вовлечённость.
+
+
+Narrative-Based Games
+
+Quest Journeys: Structure learning as a hero's journey where learners complete quests to gain knowledge and skills.
+Mystery Solving: Create detective-style scenarios where learners must gather clues (knowledge) to solve a larger puzzle.
+Character Evolution: Allow learners to develop an avatar that visually evolves as they master new concepts.
+Storytelling Challenges: Have learners create stories that incorporate learned concepts, reinforcing understanding through creative application.
+
+Achievement-Based Systems
+
+Badge Systems: Award digital badges for concept mastery and skill application.
+Level Progression: Create tiered levels that unlock new content areas as learners demonstrate proficiency.
+Skill Trees: Implement branching progression paths where mastering foundational concepts unlocks more advanced topics.
+Collectible Knowledge Items: Create "collectible" concept cards or artifacts that build toward a complete set.
+
+Challenge-Based Activities
+
+Timed Challenges: Create friendly time pressure with countdown elements for recall or application exercises.
+Knowledge Duels: Set up competitive elements where learners can challenge each other on concept mastery.
+Obstacle Courses: Design interactive scenarios where learners must apply multiple concepts to overcome challenges.
+Escape Room Scenarios: Create digital "escape rooms" where progression requires solving concept-based puzzles.
+
+Social Learning Games
+
+Collaborative Missions: Design tasks requiring multiple learners to combine knowledge to succeed.
+Peer Teaching Rewards: Gamify the process of learners explaining concepts to peers with recognition systems.
+Team Competitions: Create friendly competitions between learning groups to solve problems or complete projects.
+Knowledge Trading: Implement systems where learners create and exchange concept explanations or examples.
+
+Visual Learning Games
+
+Concept Map Building: Gamify the process of building visual relationships between concepts.
+Interactive Sorting: Create drag-and-drop activities to categorize information.
+Visual Pattern Recognition: Design games that train learners to recognize visual patterns related to key concepts.
+Environment Customization: Allow learners to customize their learning environment as they progress.
+
+Memory-Enhancement Games
+
+Spaced Repetition Challenges: Create recurring quizzes that use optimal spacing for long-term retention.
+Memory Palace Builders: Guide learners to create their own visual memory palaces for concept storage.
+Association Games: Design activities requiring learners to create meaningful connections between concepts.
+Retrieval Practice Sprints: Gamify quick recall sessions with point systems and leaderboards.
+
+Application-Based Learning
+
+Simulation Scenarios: Create realistic situations where learners apply knowledge in context.
+Role-Playing Exercises: Design scenarios where learners take on roles related to the subject matter.
+Decision Trees: Create branching scenarios where choices lead to different outcomes based on concept application.
+Concept Application Challenges: Pose real-world problems requiring learned concepts to solve.

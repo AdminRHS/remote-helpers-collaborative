@@ -1,0 +1,456 @@
+{
+  "// Main comment": "Task-based system for managing project workflows and automation",
+  "// Version info": "v1.7 - Added detailed task templates",
+  
+  "project_templates": {
+    "// Comment": "Each system represents a major workflow area with specific task chains",
+    
+    "learning_system": {
+      "name": "implement_onboarding_automation",
+      "objects": ["instructions", "communications", "templates", "guides", "assessments"],
+      "milestone_templates": [
+        {
+          "name": "setup_learning_infrastructure",
+          "objects": ["onboarding", "instructions", "templates"],
+          "task_templates": [
+            {
+              "name": "generate_lesson_framework",
+              "professions": ["content_manager", "hr_manager", "project_manager", "personal_assistant", "recruiter"],
+              "objects": ["instructions", "templates", "guides"],
+              "step_templates": [
+                {
+                  "name": "define_content_structure",
+                  "objects": ["templates", "instructions"],
+                  "checklist_items": [
+                    "create_lesson_templates",
+                    "setup_instruction_formats",
+                    "configure_documentation_system",
+                    "integrate_memory_techniques",
+                    "implement_gamification_rules"
+                  ]
+                },
+                {
+                  "name": "develop_learning_materials",
+                  "objects": ["templates", "guides", "scripts"],
+                  "checklist_items": [
+                    "generate_content_templates",
+                    "create_assessment_system",
+                    "setup_guide_structure",
+                    "integrate_media_components",
+                    "develop_practice_exercises"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "implement_memory_techniques",
+              "professions": ["content_manager", "hr_manager"],
+              "objects": ["templates", "guides", "assessments"],
+              "step_templates": [
+                {
+                  "name": "research_learning_methods",
+                  "objects": ["templates", "guides"],
+                  "checklist_items": [
+                    "analyze_memory_patterns",
+                    "document_learning_techniques",
+                    "create_visual_mnemonics",
+                    "design_practice_sequences",
+                    "setup_retention_tests"
+                  ]
+                },
+                {
+                  "name": "integrate_gamification_elements",
+                  "objects": ["templates", "assessments"],
+                  "checklist_items": [
+                    "design_achievement_system",
+                    "create_progress_tracking",
+                    "implement_reward_mechanics",
+                    "setup_challenge_levels",
+                    "develop_feedback_loops"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "setup_daily_workflow",
+          "objects": ["templates", "communications", "reports"],
+          "task_templates": [
+            {
+              "name": "implement_daily_routines",
+              "professions": ["project_manager", "personal_assistant"],
+              "objects": ["templates", "communications"],
+              "step_templates": [
+                {
+                  "name": "create_workflow_templates",
+                  "objects": ["templates", "guides"],
+                  "checklist_items": [
+                    "design_daily_plan_format",
+                    "create_meeting_templates",
+                    "setup_report_structure",
+                    "implement_feedback_forms",
+                    "define_progress_metrics"
+                  ]
+                },
+                {
+                  "name": "setup_automation_tools",
+                  "objects": ["templates", "scripts"],
+                  "checklist_items": [
+                    "configure_reminder_system",
+                    "setup_task_tracking",
+                    "implement_progress_alerts",
+                    "create_summary_reports",
+                    "automate_notifications"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "crm_system": {
+      "name": "implement_crm_platform",
+      "objects": ["databases", "communications", "clients", "reports"],
+      "milestone_templates": [
+        {
+          "name": "setup_database_architecture",
+          "objects": ["databases", "schemas", "queries"],
+          "task_templates": [
+            {
+              "name": "implement_data_structures",
+              "professions": ["back_end_developer", "full_stack_developer", "front_end_developer", "project_manager", "lead_generator", "sales_manager"],
+              "objects": ["databases", "schemas", "queries"],
+              "step_templates": [
+                {
+                  "name": "design_database_schema",
+                  "objects": ["databases", "schemas"],
+                  "checklist_items": [
+                    "create_table_structures",
+                    "define_relationships",
+                    "document_schema_specs",
+                    "implement_data_validation",
+                    "setup_indexing_rules"
+                  ]
+                },
+                {
+                  "name": "setup_api_architecture",
+                  "objects": ["apis", "endpoints", "routes"],
+                  "checklist_items": [
+                    "create_api_endpoints",
+                    "define_route_structure",
+                    "document_api_specs",
+                    "implement_security_rules",
+                    "setup_rate_limiting"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "implement_linkedin_integration",
+              "professions": ["back_end_developer", "sales_manager"],
+              "objects": ["apis", "databases", "communications"],
+              "step_templates": [
+                {
+                  "name": "setup_linkedin_api",
+                  "objects": ["apis", "communications"],
+                  "checklist_items": [
+                    "configure_api_connection",
+                    "implement_auth_flow",
+                    "setup_message_sync",
+                    "create_contact_import",
+                    "define_update_rules"
+                  ]
+                },
+                {
+                  "name": "implement_data_storage",
+                  "objects": ["databases", "schemas"],
+                  "checklist_items": [
+                    "design_message_schema",
+                    "create_contact_structure",
+                    "setup_activity_tracking",
+                    "implement_archiving",
+                    "define_cleanup_rules"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "llm_system": {
+      "name": "integrate_llm_framework",
+      "objects": ["modules", "apis", "templates", "scripts"],
+      "milestone_templates": [
+        {
+          "name": "setup_model_framework",
+          "objects": ["modules", "templates", "scripts"],
+          "task_templates": [
+            {
+              "name": "create_profession_templates",
+              "professions": ["project_manager", "content_manager", "seo_manager_tech", "back_end_developer", "full_stack_developer"],
+              "objects": ["templates", "scripts", "prompts"],
+              "step_templates": [
+                {
+                  "name": "define_template_structure",
+                  "objects": ["templates", "scripts"],
+                  "checklist_items": [
+                    "setup_base_templates",
+                    "create_prompt_structure",
+                    "define_response_formats",
+                    "implement_validation_rules",
+                    "setup_error_handling"
+                  ]
+                },
+                {
+                  "name": "implement_integration_framework",
+                  "objects": ["apis", "endpoints", "modules"],
+                  "checklist_items": [
+                    "setup_integration_points",
+                    "create_connection_system",
+                    "document_integration_flows",
+                    "implement_security_checks",
+                    "configure_rate_limits"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "implement_memory_system",
+              "professions": ["back_end_developer", "content_manager"],
+              "objects": ["databases", "apis", "templates"],
+              "step_templates": [
+                {
+                  "name": "setup_memory_storage",
+                  "objects": ["databases", "templates"],
+                  "checklist_items": [
+                    "design_memory_schema",
+                    "implement_indexing",
+                    "setup_retrieval_system",
+                    "create_backup_process",
+                    "define_cleanup_rules"
+                  ]
+                },
+                {
+                  "name": "integrate_learning_algorithms",
+                  "objects": ["apis", "scripts"],
+                  "checklist_items": [
+                    "implement_pattern_recognition",
+                    "setup_feedback_loops",
+                    "create_adaptation_rules",
+                    "define_learning_metrics",
+                    "configure_optimization"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "implement_profession_specific_llms",
+          "objects": ["templates", "prompts", "scripts"],
+          "task_templates": [
+            {
+              "name": "create_role_templates",
+              "professions": ["content_manager", "project_manager"],
+              "objects": ["templates", "prompts"],
+              "step_templates": [
+                {
+                  "name": "define_role_requirements",
+                  "objects": ["templates"],
+                  "checklist_items": [
+                    "analyze_job_functions",
+                    "create_skill_matrices",
+                    "define_task_patterns",
+                    "setup_evaluation_criteria",
+                    "document_best_practices"
+                  ]
+                },
+                {
+                  "name": "implement_training_system",
+                  "objects": ["scripts", "prompts"],
+                  "checklist_items": [
+                    "create_training_sequences",
+                    "setup_validation_tests",
+                    "implement_feedback_loops",
+                    "define_success_metrics",
+                    "create_improvement_paths"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "media_system": {
+      "name": "develop_media_platform",
+      "objects": ["visuals", "videos", "templates", "guidelines"],
+      "milestone_templates": [
+        {
+          "name": "create_social_content",
+          "objects": ["templates", "visuals", "guidelines"],
+          "task_templates": [
+            {
+              "name": "generate_visual_content",
+              "professions": ["graphic_designer", "motion_designer", "video_editor", "animator", "smm", "content_manager", "seo_manager"],
+              "objects": ["templates", "visuals"],
+              "step_templates": [
+                {
+                  "name": "create_template_system",
+                  "objects": ["templates", "guidelines"],
+                  "checklist_items": [
+                    "generate_comics_templates",
+                    "setup_mascot_system",
+                    "define_brand_rules",
+                    "create_post_templates",
+                    "implement_style_guides"
+                  ]
+                },
+                {
+                  "name": "develop_animation_framework",
+                  "objects": ["templates", "videos"],
+                  "checklist_items": [
+                    "create_motion_guidelines",
+                    "setup_animation_library",
+                    "define_transition_rules",
+                    "implement_timing_system",
+                    "document_effect_standards"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "implement_content_distribution",
+              "professions": ["smm", "content_manager", "seo_manager"],
+              "objects": ["templates", "guidelines"],
+              "step_templates": [
+                {
+                  "name": "setup_publishing_system",
+                  "objects": ["templates", "guidelines"],
+                  "checklist_items": [
+                    "create_posting_schedule",
+                    "define_channel_rules",
+                    "setup_content_calendar",
+                    "implement_tracking_system",
+                    "create_engagement_metrics"
+                  ]
+                },
+                {
+                  "name": "develop_optimization_framework",
+                  "objects": ["templates", "reports"],
+                  "checklist_items": [
+                    "implement_seo_rules",
+                    "create_hashtag_strategy",
+                    "setup_performance_tracking",
+                    "define_improvement_metrics",
+                    "create_ab_testing_system"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "assessment_system": {
+      "name": "implement_professional_assessment",
+      "objects": ["templates", "metrics", "evaluations", "reports"],
+      "milestone_templates": [
+        {
+          "name": "setup_assessment_framework",
+          "objects": ["templates", "metrics"],
+          "task_templates": [
+            {
+              "name": "create_evaluation_system",
+              "professions": ["hr_manager", "recruiter", "project_manager", "lead_generator", "personal_assistant"],
+              "objects": ["templates", "metrics", "evaluations"],
+              "step_templates": [
+                {
+                  "name": "define_profession_categories",
+                  "objects": ["templates", "metrics"],
+                  "checklist_items": [
+                    "setup_it_roles",
+                    "define_ai_roles",
+                    "create_content_roles",
+                    "implement_skill_matrix",
+                    "document_role_requirements"
+                  ]
+                },
+                {
+                  "name": "implement_cv_processing",
+                  "objects": ["templates", "evaluations"],
+                  "checklist_items": [
+                    "create_skills_extractor",
+                    "setup_experience_metrics",
+                    "implement_project_analyzer",
+                    "generate_learning_paths",
+                    "create_matching_system"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "implement_scoring_system",
+              "professions": ["hr_manager", "project_manager"],
+              "objects": ["metrics", "evaluations"],
+              "step_templates": [
+                {
+                  "name": "create_assessment_metrics",
+                  "objects": ["metrics", "templates"],
+                  "checklist_items": [
+                    "define_scoring_criteria",
+                    "create_evaluation_rubrics",
+                    "setup_weighting_system",
+                    "implement_benchmarks",
+                    "document_standards"
+                  ]
+                },
+                {
+                  "name": "develop_feedback_system",
+                  "objects": ["templates", "reports"],
+                  "checklist_items": [
+                    "create_feedback_templates",
+                    "implement_review_process",
+                    "setup_improvement_tracking",
+                    "define_progress_metrics",
+                    "create_development_plans"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "last_updated": "2024-03-25",
+    "version": "1.7",
+    "source_files": [
+      "task_manager.txt",
+      "LLM objects.json",
+      "LastWeekMarch.txt",
+      "plan_prompts.txt",
+      "Drafts.txt",
+      "Main Plan.txt",
+      "LLM professions.json"
+    ],
+    "changelog": {
+      "1.0": "Initial compilation of tasks",
+      "1.1": "Added priority levels and descriptions",
+      "1.2": "Restructured to match task manager schema",
+      "1.3": "Refactored to template hierarchy with LLM objects integration",
+      "1.4": "Added media and professional assessment systems",
+      "1.5": "Converted to action-oriented task format, removed redundant fields",
+      "1.6": "Updated with actual company professions from LLM professions.json",
+      "1.7": "Added detailed task templates and expanded system functionality"
+    }
+  }
+} 

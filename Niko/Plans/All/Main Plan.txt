@@ -1,0 +1,212 @@
+How to work: New Guide
+	Independence:
+		1. Scratch Your Plan:
+				Plan / Execution Plan / Sequential Thinking
+					1 Summarize Meeting
+					2 Send Summary to Emails of participants
+					3 go to Calendar and create reminder for Tomorrow
+		
+		2. Research:
+			Ask AI to generate Prompt.... 
+			
+			Collect Documentation need to be saved
+
+		3. Execution Plan
+			Implement Steo By Step
+				1
+				2
+				3
+
+	Next Step:
+		Setting UP Custom AI
+
+		
+		Tools:
+			AI
+			Cursor
+			DropBox
+			
+
+		(Yolo Mode) Activate Next Step Function-
+		Vibe Coding:
+
+		a) Основные тезисы ручками	
+			Куда я иду  
+			что хочу получить в конце
+			когла ожиается результат
+
+
+	Next Step
+		Connect Tools to Cursor
+
+Common plan for Onboarding Lesson Generation:
+ Stage A:
+
+Rules:	
+	Choose 1 unit in every Category:
+
+WorkFlow Control Recruiters
+		-Generate Prompt : common practices documentation
+							-Implentation in our company
+	Daily Plans
+	Daily Reports Compare to Common Goal: Add Specifics Details to every point
+	Fill In DashBoard of Execution
+
+*****************Execution Plan: ********
+1. Choose Lesson  Topics:
+   	 General Introduction
+	Prompt Generation
+		Documentation Generation 
+
++ Generate Content 
+	Learning Course? - Milestone?
+	FlashCards? - Learning Materials
+	Quizes
+	Test Tasks
+
+
++Write Rules and Logic
+	Memory Techniques
+		Research: Learning Materials Delivery 
+					based on few lessons
+	Exam Complexity
+	Matching to Professions
+
++Develop Analytics Scoring
+	-Gamification
+    -Memorysing Techniques
+
+4. Task Manager 
+	Tech: - DB  
+     CRM Task manager 
+        DataBase Structure 
+            Review Based 
+        Functionality Explanation Documentation 
+		Tools autentification (how to verify, through API)
+        Posting Test Task Execution steps
+        +Video
+
+        Add to Employee CV
+
+    
+    -Front Design
+
+4. Media: Designers Yulya
+	Landing Page quest format or gaming format
+		Scratch:
+			MockUp
+				Block: Learning Materials
+						Quizes/Exams 
+						Test Task
+
+		Deep Research:
+			Abstract: Tell Nme All About
+
+
+		
+		
+		
+		Topic: Best Practices for Prompt Writing:
+		- Learning Process
+		Prompts for Generation
+            a) Make research: Designer
+                Integration of Remembering Techniques splitting it by Types as Visuals, Orders
+                Memory 
+                Game:
+                Bunch of Rules of Objects to identify it is Visuals
+            b)create Mascot KIT
+                Prompt and description of Mascot
+                Mascot environmentL Limit number of objects to 30
+            
+
+
+	Images: 
+        For Posts in SM- style Comics
+	Videos 
+
+Exams Generation
+	All version LLM JSON Files
+
++Events Management 
+	Event in Calendar:
+	*Test Task (Time Measurement)
+
+Trigger system / Danylo
+    Describe Logic:
+
+Execution Stage:
+	Employees List
+		General Test Results:
+			Know, Need to Learn
+
+
+Next Task Flow
+        Sequential Thinking AIs
+    Required Materials (Parent Stages)
+
+Execution Stage:
+	Employees List
+		General Test Results:
+			Know, Need to Learn
+    
+    +Events Management 
+	    Event in Calendar:
+	    *Test Task (Time Measurement)
+
+
+
+
+***********
+
+Tasks
+1 Make research: Designer
+Integration of Remembering Techniques splitting it by Types as Visuals, Orders
+Bunch of Rules of Objects to identify it is Visuals
+    Prepare 1-3 Lessons / Pass it to LLM Team
+    LLM Team: Convert them to 
+Lessons: 
+	How to Write Prompt:
+		Research the Daily Plans Creation
+			How to Plan your Day
+				Prompt:
+	a)
+
+2
+Finish LLM Json files full Library
+Explain the LLM Structure and logics: get Out Documents from there
+Merge it with CRM Structure: Add fields for Automation, Tracking And Materials Storage
+	Integrate rules	
+Parts of Speach And connections explained with human language
+
+3. CRM Task manager  DataBase Structure Review and Functionality Explanation 
+
+
+4. Last Days Summary Report: Recruiters- Daily!
+
+5. Find Me Secretary:
+		WorkLoad Control
+			Save Time from Ready Result to Next Step. write in Pairs 
+		Shift Manager:
+			The one that controls Tasks Destribution and results 
+			collection to proceed to next step.
+
+
+6. General Company Structure Document:
+
+7. Research AI integration into company Work Recent
+
+8 Write Task Execution Flow
+	a) Improve Prompt
+	b) Generate Plan
+
+9. CRM Add to Task Manager Task Request
+
+
+Devlope Prompts Library
+	:Download and Anylize Multiple Libraries
+	
+Download Drive to Cursor Files Analysis
+	Find Similarities and rewrite in new Files:
+
+
+

@@ -1,0 +1,55 @@
+{
+    "profession": "recruiter",
+    "department": "managers",
+    "tasks": [
+        {
+            "task_name": "Filter needed candidate resumes",
+            "responsibilities": "Screening candidate resumes",
+            "objects": "candidates",
+            "checklists": [
+                "Access the CRM to retrieve candidate data filtered by specified parameters (skill, location, etc.)",
+                "Use job sites and LinkedIn to cross-reference candidates' profiles",
+                "Review resumes in Google Docs, focusing on relevance to the project and skill match",
+                "Update candidate status in CRM and draft initial contact messengers or social media",
+                "Schedule initial interviews using Google Meet, ensuring all key details are noted in Notion"
+            ],
+            "type": "needed candidates",
+            "parameters": ["skill", "project", "location", "company", "manager", "profession", "date", "status", "possible employee", "tool", "quantity"],
+            "tools": ["CRM", "Job sites", "Google Docs", "LinkedIn", "Telegram", "Instagram", "Notion"],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Conduct interviews with needed candidates",
+            "responsibilities": "Conducting candidate interviews",
+            "objects": "candidates",
+            "checklists": [
+                "Prepare interview questions and agenda using Notion",
+                "Set up the interview environment on Google Meet",
+                "Conduct the interview, taking detailed notes in Google Docs",
+                "Use interview script",
+                "Use Google slides for demonstation a presentation",
+                "Schedule next steps or further interviews in Google Calendar"
+            ],
+            "type": "needed candidates",
+            "parameters": ["skill", "project", "location", "company", "manager", "profession", "date", "status", "possible employee", "tool", "quantity"],
+            "tools": ["Notion", "Google Meet", "Google Docs", "Google Calendar", "Google slides"],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "Screen resumes from applied candidates",
+            "responsibilities": "Screening candidate resumes",
+            "objects": "candidates",
+            "checklists": [
+                "Utilize CRM to filter applications based on critical parameters like department, profession, and language",
+                "Review resumes and portfolios in Google Docs",
+                "Highlight top candidates using Google Drive for team access",
+                "Organize candidate information in Notion for easy retrieval",
+                "Send shortlisted notifications via Gmail or social media"
+            ],
+            "type": "applied candidates",
+            "parameters": ["name", "age", "address", "date", "source", "contact", "resume", "video", "interview", "photo", "portfolio", "test", "department", "profession", "applied for", "language", "tool", "course", "comment", "sub title", "status", "salary", "shift"],
+            "tools": ["CRM", "Google Docs", "Google Drive", "Notion", "Gmail", "Telegram", "Instagram"],
+            "complexity": "Medium"
+        }
+    ]
+} 

@@ -1,0 +1,51 @@
+🧭 GUIDE: HOW TO USE CHATGPT TO CREATE INSTAGRAM CAROUSELS WITH YOUR MASCOT  
+For creators, designers, or marketers working with a character and educational content  
+
+📦 WHAT YOU’LL NEED  
+✅ A text document (educational, guide, explainer, etc.)  
+✅ A character design (3D mascot or illustrated figure)  
+✅ (Optional) A theme or tone (e.g. fun, professional, Gen Z-friendly)  
+
+🧑‍💻 YOUR TASK:  
+You’ll ask ChatGPT to help you turn the doc + character into a series of social media posts.  
+Use the instruction below — it’s what you will send to ChatGPT.  
+
+📩 COPY & PASTE THIS INTO CHATGPT:  
+
+You're a social media content strategist. I will give you:  
+- A text document on a topic (e.g. an AI guide)  
+- A 3D character design  
+- (Optional) a target theme or audience  
+
+I want you to create an Instagram carousel/story series that:  
+1. Uses my character as the main host  
+2. Breaks the text into post ideas with slide titles  
+3. For each post, gives:  
+   - Instagram-style caption  
+   - Slide title  
+   - Image generation prompt with:  
+     - My character (same style every time)  
+     - A creative environment fitting the message  
+     - An action/pose  
+     - A bold white title at the top  
+     - 9:16 aspect ratio formatting  
+
+🔄 The full series can be **up to 20 slides** if needed to deeply cover the topic.  
+
+👋 The **last slide** should be an **outro**, **conclusion**, or the **mascot saying goodbye** or inviting the audience to comment, share, or follow.  
+
+Ask me for:  
+- The character reference or detailed description  
+- The goal of the series if it’s not clear  
+
+Keep mascot style consistent and scenes visually themed!  
+
+🌟 EXAMPLE SLIDE PROMPT  
+
+📘 SLIDE 1: "What is Artificial Intelligence?"
+🖼️ Prompt:
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, standing upright, holding notebook and pencil, friendly smile showing teeth, front view, professional 3D rendering. Shark mascot is underwater, pointing at a glowing treasure chest labeled "AI", surrounded by glowing circuits, digital elements, and floating data bubbles. Bright, colorful underwater environment with soft light rays. Title text at the top in white: "What is Artificial Intelligence?"
+
+🖼️ Aspect Ratio: 9:16
+🧠 Theme: Introduction to AI
+🎯 Focus: Curiosity, discovery, learning

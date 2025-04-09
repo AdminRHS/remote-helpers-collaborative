@@ -1,0 +1,42 @@
+Media: Designers
+	Landing Page - Learning Process
+		prompts for Generation
+            a) Make research: Designer
+                Integration of Remembering Techniques splitting it by Types as Visuals, Orders
+                Memory 
+                Game:
+                Bunch of Rules of Objects to identify it is Visuals
+            b)create Mascot KIT
+                Prompt and description of Mascot
+                Mascot environmentL Limit number of objects to 30
+
+
+   Media: Designers
+	Landing Page quest format or gaming format - What is Prompt Engineering?
+            https://docs.google.com/document/d/1pA0v_ZEKsvMtl7sT5Wgb91xAcGPbUKdmwGMEXp0UXnU/edit?tab=t.0
+		Scratch:
+			MockUp
+				Block: Learning Materials
+						Quizes/Exams 
+						Test Task
+
+		Deep Research:
+			Abstract: Tell Nme All About             
+
+
+
+            We need to create:
+                1) mock up of landing page with integration of remembering techniques and gamification
+                    Ladning page must consist of: 
+                        Learning Materials
+						Quizes/Exams 
+						Test Task
+                2) landing page design using mascots and mascot's elements
+                3) structure of landing page and content for it
+                4) tutorial videos for learning materials
+                5) scenarios and prompts for tutorial videos
+                6) infographics for learning Materials
+                7) carousels with information from landing page
+                8) Mascot KIT
+                    Prompt and description of Mascot
+                    Mascot environment (limit number of objects to 30, don't repeat environments for different mascots)

@@ -1,0 +1,248 @@
+buy graphic cards GPU for local AI token Generation for home desktop
+
+CRM: Entities Turn to Apps
+Combine Libraries and Settingstogether and attach Tools, MCps, API Keys, Accounts
+We need Tools Library in CRM with Accesses and AUth Keys
+https://lovable.dev/ 
+
+AI coding assistants (Windsurf, Cursor, Cline, Roo Code, etc.)
+
+Сменить пароли, убить и перегенерировать ключи.
+WindSurf 14 days 03-31-25
+
+Create Library of full mode games:
+example Browser Game in WindSurf
+https://www.youtube.com/watch?v=ZEqSuggBKo8
+
+
+
+Add Global Rules to code generation AI projects:
+https://docs.google.com/document/d/12ATcyjCEKh8T-MPDZ-VMiQ1XMa9FUvvk2QazrsKoiR8/edit?tab=t.0#heading=h.d9nuxo5lc9ss
+
+
+How to Work:
+    Full Development step by step plan and then confirm and doublecheck with several AIs
+	    Research similar to Tailwind css Style System
+	    Full Defined Developers WorkFlow Process:
+		https://www.youtube.com/watch?v=SS5DYx6mPw8&t=14s
+        
+
+Create Seeders for the All Testing App:
+    Somehow adopt counting Score and Storing it
+    Integrate Chat with AI side Window instead of Menu 
+	    Deep Research How to Integrate... 
+	    Grab Laravel Documentation from WorkSuit
+
+!Claude Research in Desctop Browser to writ in Files
+
+https://v-lg.com/?
+
+Task Manager:
+Identify Tasks to be Done Next:
+Generate 1 Lesson Landing:
+	Split by blocks:
+		BackEnd Structure
+		Visual Story
+		Profile Page
+			Vibe Coding: Permission top make Mistakes
+
+	Lessons: ( Project )Introduction to Company Work
+		AI Learning
+		Tools Proficiency
+		Platforms Acquintance
+		Work Approaches
+		Visual Materials Needed
+
+
+Next Lessons:
+	Generate Code Workflow:
+		Big Plan Research... Global questions and goals
+		Compeling Plan how to Build
+		Custom AIs 
+
+	Generate Images:
+		Icons, Mascots, Story
+		Animate Visuals
+
+	Vertical File System Architecture:
+		Deep Research Filesystem Architecture
+
+	Posting;
+		Crate a List of Posting places
+		List of Accounts with Accesses
+
+My Task	
+	CRM:
+	    Run CRM on Local machine
+	    Ask to download DataBase now
+	    Add More Memory fot Prompts
+	    Help Olya to build MCP
+
+	Review new LLLM Structure
+
+
+
+Describe Scenarios:
+	Person Need To Confirm the Knowlege to start Getting tasks
+	-We need to Describe Task. preferably the one for tomorrow or from the list
+	-My Daily Tasks Loging- We Want Chat Memory - Employee Managing conversation with AI
+		Teach Employees to point cursor to specific Folder 
+Dev 3 pages Plan: 
+	Page 1:
+		Multilevel Employees Preferences and Knowledge that need to be stored
+		How Do we store the connections with professions? Dow we add SubProfessions (Specialisation or Secondary)
+	Page 2: Exams types: Multiple formats like sorting, combingnig, dragging, excluding etc
+		Generate more Types, Create Templates, to match content to it
+	Dev Comments:
+	 	Each Exam Generation as standAlone application is one of the options.
+    Choose Lessons
+        Add Skills to have different tasks
+        Identify if the task can be done only by 1 person
+    Tools- MCps
+	    DataBases: So that I would be able to see aded values from chat
+
+
+А что это?
+https://lrn.oa-y.com/leaderboard
+Added lesson.oa-y.com
+Localhosts:
+
+
+
+
+Do not forget to run full MCPs Research
+Finish connecting Replit and Cursor
+View Fix in tables:
+Add AI Chat View in Each Page window, store chat history in TXt or MD Files
+"Talk with your Data"
+
+
+Task from past: Download Drive
+
+03/30/25
+Weekend Conclusion: Research to broad, apply ingto many direction but missing specifics.
+We need to run research again only on materials and learning approach
+
+Create Plan Memory And Stages Updates based on our Task Manager Structure
+How To connect Memory and then how to Constantly Update The Plan
+Schedule AI Review of the Plan
+	-Build in Discord Project FocusedSprints Folders
+
+Restructure CRM To Store Prompts Upon Our Libraries
+As Match Of Action + Object = Parameters _ Prompt 
+
+Replit: Cancel Subscription
+Do we pay for each additional step?
+
+b2b.ai Fun Domain AI Checker
+Increase Prices or Drop Significantly
+
+
+Weekly Focus: 
+    Lead Generation, Sales and Traffic
+    Starting From Scratch LGN
+
+
+Work Plan:
+	Sales and Lead Generation Hub
+		Lessons To Learn
+		ReGenerate Full Process
+		Integrate New Platforms
+		Research Trends and From Messages Along With Posts
+		Anlyze Your LinkedIn Audience
+
+	Tech Research MCPs for scrapping
+		Trends Can Form Test Tasks Integrated into one wholistic Plan
+
+
+
+Personal Reorganisation:
+All Notes in NoteBook LM - Compile Plan
+Set Goals:
+	Get Canadian Driver License
+	https://www.ontario.ca/document/official-mto-drivers-handbook/level-two-road-test
+	Plan Business in Toronto
+		Write Plan, Propose to WiFi Map: Run a Test
+
+SMM-s
+	Deep Research Content 
+	Post for Relax Ontario: Image Generation for Ontario
+	Next Content Plan for TyNeSam
+Plan New RemotEmployees with Full Professions Descriptions
+Access Upon Registration:
+Navigate Content To Different Networks
+Separately Generate Prompts
+
+
+
+
+
+Отдать программистам вечерникам перенести драйв с Дев и Сап ДГН
+После Виталика Сменить пароли, убить и перегенерировать API ключи.
+
+Test List of MCPs
+Among Them start Useing Scraping
+Pay WindSurf in 14 days from 03-31-25
+
+
+Template Full 1 Lesson Template on Deep Research For Example
+Provide List of Required Deep Researches
+How To use them and what to do After
+Provide Lesson On Projects, Gems and GPT Notes
+Tasks Generation Template
+
+The Lesson Landing Page that will come into Professions Pages on 
+
+AnyEmp.com
+    Back End- CRM
+    FrontEnd Professions with Exam Amd Learning Materials
+
+    The Lessons Will be reinforced by Authors(Employees)
+    Video Screen Records.
+
+Next Hiring Live Video Agents Platforms
+
+
+
+
+
+Pay Per Task Done:
+    SEO Analysis, 
+    Tracking Installation, WebSite Development etc.
+    Work Pay Per Hour
+
+
+CRM:
+    Develop Our MCP Server hat connects to our Employees Chat Support Charging per hour low amount per hour like 3$
+    Also Sell publish "Shared Employees" Prices - Support Manager on any Topic (Up to 20 hours monthly Use)
+    After Done Prepare Announcement
+    Help Olya to Install Php MCP
+
+
+Generate a List of Posts Topics on AI and Proposal of Setting Up Work Flows Adoptation
+AI integration in GR or Business WorkFlow
+Research How to Create Screen Recording Video Guides
+ 
+
+SMM-s
+	Deep Research Content 
+	Post for Relax Ontario: Image Generation for Ontario
+	Next Content Plan for TyNeSam
+
+
+ReNew RemotEmployees.Com
+DeepResearch Full Development Process including DataBase Structure, API keys and MCP Server
+
+ with Full Professions Descriptions
+Access Upon Registration:
+Navigate Content To Different Networks
+Separately Generate Prompts
+
+
+
+
+Increase Prices:
+    Fast Learning Process for NewComers
+    Cut Corners in Hiring
+    Simplify Sales Process
+    

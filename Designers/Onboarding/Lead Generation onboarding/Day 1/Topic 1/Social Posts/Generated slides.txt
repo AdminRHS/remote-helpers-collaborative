@@ -1,0 +1,203 @@
+🌲📊 “How to Build a Lead Generation Google Sheet”
+Hosted by Mary the Forest Office Wolf 🐺💼🌿
+
+🔥 Series Overview
+Total Slides: 17 (16 content + 1 outro)
+
+Theme: Forest office + warm productivity aesthetic
+
+Tone: Friendly, smart, encouraging
+
+Ideal for: Solopreneurs, marketers, B2B SDRs, VA freelancers
+
+🧵 SLIDE-BY-SLIDE BREAKDOWN
+📘 SLIDE 1: “Create Your Ultimate Lead Gen Tracker in Sheets”
+📸 Prompt:
+3D anthropomorphic wolf mascot (Mary), stylish and friendly, standing at a tree stump desk with a glowing laptop. Surrounded by forest-themed office tools (wooden clipboard, acorn coffee mug). Sunlight through trees. Mary is gesturing toward the screen showing a Google Sheet.
+Top Title: “Create Your Ultimate Lead Gen Tracker in Sheets”
+🖼️ Aspect Ratio: 9:16
+
+📄 Caption:
+Welcome to your forest office! 🌿 Today, Mary will teach you how to build a Google Sheet that turns browsers into buyers. Let’s get organized 🧠📈
+
+📘 SLIDE 2: “Step 1 – Start With a Clean Sheet”
+📸 Prompt:
+Mary sitting at a mossy desk under a tree canopy, opening a glowing laptop. She’s clicking “New Sheet.” Floating icons (Google logo, drive folder) around.
+Top Title: “Step 1 – Start With a Clean Sheet”
+
+📄 Caption:
+Open Google Sheets from your Drive > Hit “New”
+🗂 Tip: Place it in the right folder so it never gets lost!
+✨ Pro move: Name your doc right away.
+
+📘 SLIDE 3: “Step 2 – Add Your Lead Columns”
+📸 Prompt:
+Mary with glasses, writing on a chalkboard made of bark with column names floating: Company, LinkedIn, Website, Industry...
+Top Title: “Step 2 – Add Your Lead Columns”
+
+📄 Caption:
+Your header row = your brain 🧠
+Include fields like:
+🔹 Company Name
+🔹 Lead Name
+🔹 Email, LinkedIn
+🔹 Status, Notes
+Keep it lean & relevant!
+
+📘 SLIDE 4: “Must-Have Fields (Copy These!)”
+📸 Prompt:
+Overhead view of Mary pointing at a magical scroll unrolling with the column headers glowing, floating above a log table.
+Top Title: “Must-Have Fields (Copy These!)”
+
+📄 Caption:
+Copy/paste these into Row 1:
+✅ Search Query
+✅ Company Name + LinkedIn
+✅ Lead Name + LinkedIn
+✅ Email, Phone
+✅ Status, Notes
+This is your lead funnel in a spreadsheet!
+
+📘 SLIDE 5: “Step 3 – Lock In Your Layout”
+📸 Prompt:
+Mary is freezing the header row on her wooden monitor. The screen is frozen mid-click, showing “View > Freeze > 1 row”.
+Top Title: “Step 3 – Lock In Your Layout”
+
+📄 Caption:
+Freeze Row 1 so your headers don’t scroll into the wild 🌲
+💡 View > Freeze > 1 row
+Bonus: Freeze first column for easy viewing!
+
+📘 SLIDE 6: “Make It Pretty (But Functional)”
+📸 Prompt:
+Mary is painting cells on her screen with a leaf-shaped brush. Bright but harmonious forest colors.
+Top Title: “Make It Pretty (But Functional)”
+
+📄 Caption:
+Use soft greens, browns, and subtle accents 🍃
+🎨 Borders, bold fonts, background color
+⚠️ Tip: Avoid rainbow chaos—focus on clarity
+
+📘 SLIDE 7: “Step 4 – Conditional Formatting = 🔥”
+📸 Prompt:
+Mary casting glowing colors onto cells, each changing based on keywords like “Connected” or “Follow-Up”. Spreadsheet magic vibes.
+Top Title: “Step 4 – Conditional Formatting = 🔥”
+
+📄 Caption:
+Turn your status column into a color-coded command center
+🔁 Format > Conditional Formatting
+Set rules like:
+🟢 “Connected”
+🟡 “Follow-Up”
+🔴 “No Response”
+
+📘 SLIDE 8: “Step 5 – Validate Yo' Data”
+📸 Prompt:
+Mary is holding a checklist, approving a dropdown field appearing on a giant leaf. Dropdown items: Connected, Event, Closed.
+Top Title: “Step 5 – Validate Yo' Data”
+
+📄 Caption:
+Prevent chaos with Data Validation!
+🎯 Add dropdowns for status
+📅 Force proper dates
+📬 Ensure email formats
+Your future self will thank you.
+
+📘 SLIDE 9: “Step 6 – Add Simple Formulas”
+📸 Prompt:
+Mary using a calculator carved from bark, next to glowing formula bars: =COUNTIF(H:H,"Connected") etc.
+Top Title: “Step 6 – Add Simple Formulas”
+
+📄 Caption:
+Track your numbers with these:
+➕ Total Leads: =COUNTA(A:A)
+🔢 Connected: =COUNTIF(H:H,"Connected")
+💬 SUM up results with =SUM()
+It's data, not drama.
+
+📘 SLIDE 10: “Step 7 – Automate Your Insights”
+📸 Prompt:
+Mary surrounded by floating formula bubbles and dashboard charts on bark screens. Graphs glow from a stump.
+Top Title: “Step 7 – Automate Your Insights”
+
+📄 Caption:
+Use formulas to build stats:
+📊 Connection rate
+📆 Follow-up reminders
+🎯 Lead score
+Let the sheet think while you lead 💡
+
+📘 SLIDE 11: “Go Advanced with Secondary Sheets”
+📸 Prompt:
+Mary opening a scroll labeled “Daily Tracker” and “Campaign Performance.” Each sheet floats above a mushroom desk.
+Top Title: “Go Advanced with Secondary Sheets”
+
+📄 Caption:
+🧩 Split your spreadsheet:
+1️⃣ “Daily Tracker”
+2️⃣ “Campaign Stats”
+3️⃣ “Templates Library”
+Stay clean. Stay scalable.
+
+📘 SLIDE 12: “Build Your Own Dashboard”
+📸 Prompt:
+Mary presenting a glowing dashboard projected from a tree trunk. Graphs show bar, pie, funnel charts in nature colors.
+Top Title: “Build Your Own Dashboard”
+
+📄 Caption:
+Track key metrics in one glance:
+✅ Leads by status
+✅ Conversion rate
+✅ Time to follow-up
+Bonus: Add Pivot Tables for deep dives.
+
+📘 SLIDE 13: “Use Sorting & Filtering Like a Pro”
+📸 Prompt:
+Mary holding a magnifying glass, sorting leaf folders into bins labeled “Industry,” “Country,” “Status.”
+Top Title: “Use Sorting & Filtering Like a Pro”
+
+📄 Caption:
+📂 Use filters to focus
+🔄 Sort by status, industry, region
+🎯 Formula: =FILTER() and =SORT()
+Get razor-sharp views in seconds.
+
+📘 SLIDE 14: “Avoid Duplicates & Data Mess”
+📸 Prompt:
+Mary zapping duplicate rows with a forest-themed cleanup tool (like a vacuum made of vines).
+Top Title: “Avoid Duplicates & Data Mess”
+
+📄 Caption:
+Use 🧹 Data > Cleanup > Remove Duplicates
+Enforce correct text case
+Keep your leads ✨fresh✨ and clean.
+
+📘 SLIDE 15: “Use Forms to Collect Leads”
+📸 Prompt:
+Mary setting up a glowing Google Form at a forest help desk. A squirrel submits a lead.
+Top Title: “Use Forms to Collect Leads”
+
+📄 Caption:
+💬 Use Google Forms to collect leads directly into your sheet
+💡 Great for VA teams, networking events, and social campaigns
+
+📘 SLIDE 16: “Now You’re Lead Gen Ready!”
+📸 Prompt:
+Mary giving a thumbs-up next to a fully-built, glowing forest-themed Google Sheet on a giant leaf.
+Top Title: “Now You’re Lead Gen Ready!”
+
+📄 Caption:
+You’ve built your lead machine!
+Keep tweaking, testing, and tracking 🌱
+Mary’s got your back—go get those leads!
+
+📘 SLIDE 17 (OUTRO): “Follow for More Smart Sheet Tips!”
+📸 Prompt:
+Mary waving goodbye from her forest office, with floating icons: comment bubble, share arrow, follow star.
+Top Title: “Follow for More Smart Sheet Tips!”
+
+📄 Caption:
+🗣 Drop your questions below
+🔁 Share this with your team
+📲 Follow for more forest-smart systems with Mary!
+#LeadGen #GoogleSheets #ForestOffice

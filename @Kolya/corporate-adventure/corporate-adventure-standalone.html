@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Adventure - Employee Training Game</title>
+    <style>
+        /* Animation keyframes */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes waterFlow {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        @keyframes leafShake {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fireworks {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+                box-shadow: 0 0 0 0px #fff, 0 0 0 0px #ff0, 0 0 0 0px #f0f;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+                box-shadow: 0 0 0 20px #fff, 0 0 0 40px #ff0, 0 0 0 60px #f0f;
+            }
+        }
+
+        /* General styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2563eb;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #93c5fd;
+            border-bottom: 1px solid #4b5563;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #93c5fd;
+        }
+        
+        /* Layout styles */
+        .flex {
+            display: flex;
+        }
+        .flex-col {
+            flex-direction: column;
+        }
+        .gap-6 {
+            gap: 1.5rem;
+        }
+        .flex-1 {
+            flex: 1;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-between {
+            justify-between: space-between;
+        }
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+        .mr-2 {
+            margin-right: 0.5rem;
+        }
+        .ml-2 {
+            margin-left: 0.5rem;
+        }
+        .p-4 {
+            padding: 1rem;
+        }
+        .p-6 {
+            padding: 1.5rem;
+        }
+        .p-8 {
+            padding: 2rem;
+        }
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-white {
+            color: white;
+        }
+        .text-gray-300 {
+            color: #d1d5db;
+        }
+        .text-gray-400 {
+            color: #9ca3af;
+        }
+        .text-blue-300 {
+            color: #93c5fd;
+        }
+        .text-blue-400 {
+            color: #60a5fa;
+        }
+        .text-blue-600 {
+            color: #2563eb;
+        }
+        .text-red-500 {
+            color: #ef4444;
+        }
+        .text-green-400 {
+            color: #4ade80;
+        }
+        .text-yellow-400 {
+            color: #facc15;
+        }
+        .font-bold {
+            font-weight: bold;
+        }
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        .text-lg {
+            font-size: 1.125rem;
+        }
+        .text-xl {
+            font-size: 1.25rem;
+        }
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+        .text-4xl {
+            font-size: 2.5rem;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .bg-gray-600 {
+            background-color: #4b5563;
+        }
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+        .bg-blue-500 {
+            background-color: #3b82f6;
+        }
+        .bg-blue-600 {
+            background-color: #2563eb;
+        }
+        .bg-blue-700 {
+            background-color: #1d4ed8;
+        }
+        .bg-blue-900 {
+            background-color: #1e3a8a;
+        }
+        .bg-red-500 {
+            background-color: #ef4444;
+        }
+        .bg-yellow-600 {
+            background-color: #ca8a04;
+        }
+        .hover\:bg-blue-700:hover {
+            background-color: #1d4ed8;
+        }
+        .rounded {
+            border-radius: 0.25rem;
+        }
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        .rounded-full {
+            border-radius: 9999px;
+        }
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .w-full {
+            width: 100%;
+        }
+        .w-32 {
+            width: 8rem;
+        }
+        .h-4 {
+            height: 1rem;
+        }
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        .overflow-y-auto {
+            overflow-y: auto;
+        }
+        .max-h-96 {
+            max-height: 24rem;
+        }
+        .max-w-md {
+            max-width: 28rem;
+        }
+        .max-w-2xl {
+            max-width: 42rem;
+        }
+        .max-h-\[90vh\] {
+            max-height: 90vh;
+        }
+        .space-y-2 > * + * {
+            margin-top: 0.5rem;
+        }
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+        .space-y-6 > * + * {
+            margin-top: 1.5rem;
+        }
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+
+        /* Дополнительные стили, которые не были перенесены */
+        .tree {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background-color: #5e3a21;
+            top: 10px;
+            left: 15px;
+            z-index: 1;
+        }
+        .tree::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            background-color: #3a7d3e;
+            border-radius: 50%;
+            top: -20px;
+            left: -10px;
+            z-index: 1;
+            animation: leafShake 3s infinite alternate;
+        }
+        .rock-obstacle {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            background-color: #8a8a8a;
+            border-radius: 5px;
+            top: 15px;
+            left: 10px;
+            z-index: 4;
+        }
+        .river-obstacle {
+            position: absolute;
+            width: 50px;
+            height: 15px;
+            background-color: #4d9be6;
+            top: 17px;
+            left: 0;
+            z-index: 3;
+            animation: waterFlow 3s linear infinite;
+        }
+        .bridge {
+            position: absolute;
+            width: 50px;
+            height: 10px;
+            background-color: #5e3a21;
+            top: 20px;
+            left: 0;
+            z-index: 4;
+        }
+
+        /* Стили для элементов интерфейса */
+        #knowledge-journal {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .knowledge-item .book-icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.25rem;
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+
+        .knowledge-item .book-icon::before {
+            content: '📚';
+            font-size: 18px;
+        }
+
+        /* Different colors for book icons */
+        .knowledge-item:nth-child(3n+1) .book-icon {
+            background-color: #3b82f6;
+        }
+
+        .knowledge-item:nth-child(3n+2) .book-icon {
+            background-color: #10b981;
+        }
+
+        .knowledge-item:nth-child(3n+3) .book-icon {
+            background-color: #8b5cf6;
+        }
+
+        /* Улучшенные стили для модального окна с информацией */
+        #knowledge-content {
+            line-height: 1.6;
+            color: #e5e7eb;
+        }
+
+        #knowledge-content p {
+            margin-bottom: 1rem;
+        }
+
+        #knowledge-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #knowledge-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Улучшенное отображение фейерверка */
+        #victory-modal .fireworks::before,
+        #victory-modal .fireworks::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            box-shadow: 
+                -120px -218.66667px blue,
+                248px -16.66667px #00ff84,
+                190px 16.33333px #002bff,
+                -113px -308.66667px #ff009d,
+                -109px -287.66667px #ffb300,
+                -50px -313.66667px #ff006e,
+                226px -31.66667px #ff4000,
+                180px -351.66667px #ff00d0,
+                -12px -338.66667px #00f6ff,
+                220px -388.66667px #99ff00;
+            animation: fireworks 2s infinite;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+        }
+
+        @keyframes fireworks {
+            0% {
+                transform: translate(-50%, -50%) scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1) rotate(180deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Стили для правильной фиксации модальных окон */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal:not(.hidden) {
+            display: flex !important;
+        }
+
+        /* Дополнительные стили для корректной работы Tailwind-подобных классов */
+        .justify-center {
+            justify-content: center;
+        }
+        .lg\:w-1\/3 {
+            width: 33.333333%;
+        }
+        @media (max-width: 1024px) {
+            .lg\:w-1\/3 {
+                width: 100%;
+            }
+            .lg\:flex-row {
+                flex-direction: row;
+            }
+        }
+        @media (min-width: 1024px) {
+            .flex-col.lg\:flex-row {
+                flex-direction: row;
+            }
+        }
+        .mx-4 {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .bg-green-800 {
+            background-color: #166534;
+        }
+        .bg-red-800 {
+            background-color: #991b1b;
+        }
+        .bg-gray-700 {
+            background-color: #374151;
+        }
+        .hover\:bg-gray-600:hover {
+            background-color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Corporate Adventure</h1>
+        
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Game Board -->
+            <div class="flex-1 bg-gray-800 rounded-lg shadow-lg p-4 relative">
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <span class="font-bold mr-2 text-white">HP:</span>
+                            <div class="w-32 h-4 bg-gray-600 rounded-full overflow-hidden">
+                                <div id="hp-bar" class="h-full bg-red-500 progress-bar" style="width: 100%"></div>
+                            </div>
+                            <span id="hp-text" class="ml-2 text-white">100/100</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="font-bold mr-2 text-white">XP:</span>
+                            <div class="w-32 h-4 bg-gray-600 rounded-full overflow-hidden">
+                                <div id="xp-bar" class="h-full bg-blue-500 progress-bar" style="width: 0%"></div>
+                            </div>
+                            <span id="xp-text" class="ml-2 text-white">0/100</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-900 px-4 py-2 rounded-lg text-white">
+                            <span class="font-bold">Level:</span> <span id="level">1</span>
+                        </div>
+                        <div class="bg-yellow-600 px-4 py-2 rounded-lg text-white">
+                            <span class="font-bold">Stars:</span> <span id="stars">0/0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-10 gap-1 mb-4" id="game-board">
+                    <!-- Game tiles will be generated by JavaScript -->
+                </div>
+                
+                <div class="controls bg-gray-800 p-4 rounded-lg">
+                    <div class="grid grid-cols-3 gap-2 mb-2">
+                        <button onclick="movePlayer('left')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">← Left</button>
+                        <button onclick="movePlayer('up')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">↑ Up</button>
+                        <button onclick="movePlayer('right')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">→ Right</button>
+                    </div>
+                    <button onclick="movePlayer('down')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded w-full">↓ Down</button>
+                </div>
+            </div>
+            
+            <!-- Knowledge Journal and Inventory -->
+            <div class="w-full lg:w-1/3 flex flex-col gap-6">
+                <div class="bg-gray-800 rounded-lg shadow-lg p-4">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Knowledge Journal</h2>
+                    <div id="knowledge-journal" class="space-y-2 max-h-96 overflow-y-auto">
+                        <div class="text-gray-400 italic">Your collected knowledge will appear here...</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg shadow-lg p-4">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400 border-b border-gray-700 pb-2">Inventory</h2>
+                    <div id="inventory" class="flex flex-wrap gap-2">
+                        <div class="text-gray-400 italic">Your items will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Knowledge -->
+    <div id="knowledge-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden modal">
+        <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4 border border-blue-500">
+            <h3 id="knowledge-title" class="text-xl font-bold mb-4 text-blue-400"></h3>
+            <div id="knowledge-content" class="mb-4 text-gray-300"></div>
+            <button onclick="closeKnowledgeModal()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Continue</button>
+        </div>
+    </div>
+    
+    <!-- Modal for Test -->
+    <div id="test-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden modal">
+        <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4 border border-blue-500">
+            <h3 id="test-question" class="text-xl font-bold mb-4 text-blue-400"></h3>
+            <div id="test-options" class="space-y-2 mb-4"></div>
+            <div id="test-feedback" class="hidden mb-4 p-3 rounded"></div>
+            <button id="test-continue" onclick="continueAfterTest()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded hidden">Continue</button>
+        </div>
+    </div>
+    
+    <!-- Modal for Game Over -->
+    <div id="gameover-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden modal">
+        <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4 border border-red-500 text-center">
+            <h3 class="text-2xl font-bold mb-4 text-red-500">Game Over</h3>
+            <p class="mb-6 text-gray-300">You've run out of health! Better luck next time.</p>
+            <button onclick="resetGame()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Start Again</button>
+        </div>
+    </div>
+    
+    <!-- Victory Modal -->
+    <div id="victory-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-8 rounded-lg max-w-md w-full mx-4 text-center relative">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="fireworks absolute inset-0"></div>
+                <div class="decorative-trees absolute inset-0 pointer-events-none"></div>
+            </div>
+            <div class="victory-content relative z-20">
+                <h2 class="text-4xl font-bold text-green-400 mb-6">Congratulations!</h2>
+                <p class="text-xl text-white mb-4">You've mastered all the essential skills and completed your training with excellence!</p>
+                <p class="text-lg text-gray-300 mb-6">Your dedication to learning and problem-solving has proven you're ready for any challenge.</p>
+                <div class="text-2xl text-yellow-400 mb-6">
+                    <span class="mr-2">🏆</span>
+                    Final Level: <span id="final-level" class="font-bold">1</span>
+                    <span class="ml-2">🌟</span>
+                </div>
+                <div class="text-sm text-blue-300 mb-6">
+                    "Success is not final, failure is not fatal: it is the courage to continue that counts."
+                </div>
+                <button onclick="resetGame()" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg font-bold">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Button -->
+    <button id="help-button" class="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full shadow-lg flex items-center">
+        <i class="fas fa-question-circle mr-2"></i>
+        How to Play
+    </button>
+
+    <!-- Instructions Modal -->
+    <div id="instructions-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden modal">
+        <div class="bg-gray-800 rounded-lg p-6 max-w-2xl w-full mx-4 border border-blue-500 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-blue-400">Corporate Adventure - Training Game</h2>
+                <button onclick="closeInstructionsModal()" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="text-gray-300 space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">About the Game</h3>
+                    <p>You play as a wizard (🧙‍♂️) who must collect all stars (⭐) and reach the portal by applying knowledge and using magical artifacts.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Controls</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Click on a tile to select a destination</li>
+                        <li>Click again on the selected destination to start moving</li>
+                        <li>Use arrow keys or on-screen buttons for direct movement</li>
+                        <li>↑ - move up</li>
+                        <li>↓ - move down</li>
+                        <li>← - move left</li>
+                        <li>→ - move right</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Game Elements</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">1. Scrolls (📜)</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Contain important company information</li>
+                                <li>Required for passing tests</li>
+                                <li>Added to your Knowledge Journal</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">2. Enemies (💀)</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Represent tests</li>
+                                <li>Require studying corresponding scroll before attempting</li>
+                                <li>Give magical artifacts for correct answers</li>
+                                <li>Reduce HP for wrong answers</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">3. Chests (⭐)</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Contain stars</li>
+                                <li>Require specific artifacts to access</li>
+                                <li>Must collect all to complete the game</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">4. Obstacles and Artifacts</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Water (🌊) - requires Magic Boat</li>
+                                <li>Mountains (⛰️) - requires Climbing Gear</li>
+                                <li>Forest (🌲) - requires Forest Medallion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Gameplay Process</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">1. Beginning</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Study the "Company Values" scroll</li>
+                                <li>Pass the test to get Magic Boat</li>
+                                <li>Use the boat to access first star chest</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">2. Middle Path</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Study the "Safety Protocols" scroll</li>
+                                <li>Pass the test to get Climbing Gear</li>
+                                <li>Use the gear to access mountain chest</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">3. Final Part</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Study the "Customer Service" scroll</li>
+                                <li>Pass the test to get Forest Medallion</li>
+                                <li>Use the medallion to access forest chest</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-blue-300">4. Completion</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Collect all three stars</li>
+                                <li>Reach the portal to win</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-2">Tips</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Collect and study scrolls first</li>
+                        <li>Don't attempt tests without studying corresponding materials</li>
+                        <li>Watch your HP - wrong answers reduce it</li>
+                        <li>Use Knowledge Journal to review materials</li>
+                        <li>Check inventory to track obtained artifacts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <button onclick="closeInstructionsModal()" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* More specific game styles */
+        .grid {
+            display: grid;
+        }
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-cols-10 {
+            grid-template-columns: repeat(10, 1fr);
+        }
+        .gap-1 {
+            gap: 0.25rem;
+        }
+        .gap-2 {
+            gap: 0.5rem;
+        }
+        .gap-4 {
+            gap: 1rem;
+        }
+        .border {
+            border-width: 1px;
+        }
+        .border-blue-500 {
+            border-color: #3b82f6;
+        }
+        .border-red-500 {
+            border-color: #ef4444;
+        }
+        .border-gray-700 {
+            border-color: #374151;
+        }
+        .pb-2 {
+            padding-bottom: 0.5rem;
+        }
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .fixed {
+            position: fixed;
+        }
+        .absolute {
+            position: absolute;
+        }
+        .relative {
+            position: relative;
+        }
+        .hidden {
+            display: none;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .z-20 {
+            z-index: 20;
+        }
+        .bg-black {
+            background-color: #000;
+        }
+        .bg-opacity-50 {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .list-disc {
+            list-style-type: disc;
+        }
+        .list-inside {
+            list-style-position: inside;
+        }
+
+        /* Font Awesome icons replacement */
+        .fa-question-circle:before {
+            content: "❓";
+        }
+        .fa-times:before {
+            content: "✖";
+        }
+        .fa-scroll:before {
+            content: "📜";
+        }
+        .fa-chest:before {
+            content: "📦";
+        }
+        .fa-skull:before {
+            content: "💀";
+        }
+
+        /* Game-specific styles */
+        .game-tile {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            transition: all 0.2s ease;
+            background-size: cover;
+        }
+
+        /* Terrain styles */
+        .grass {
+            background-color: #7cba6b;
+            background-image: radial-gradient(circle, #9ed98b 10%, transparent 10%), 
+                            radial-gradient(circle, #9ed98b 10%, transparent 10%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .dirt {
+            background-color: #b88c64;
+            background-image: linear-gradient(45deg, #c99e76 25%, transparent 25%, transparent 75%, #c99e76 75%),
+                            linear-gradient(45deg, #c99e76 25%, transparent 25%, transparent 75%, #c99e76 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .sand {
+            background-color: #e3c9a5;
+            background-image: radial-gradient(circle, #f0d9b8 20%, transparent 20%);
+            background-size: 15px 15px;
+        }
+        .water {
+            background: linear-gradient(45deg, #4d9be6, #2a6fc9);
+            position: relative;
+            overflow: hidden;
+            animation: waterFlow 3s linear infinite;
+        }
+        .deep-water {
+            background-color: #2a6fc9;
+            background-image: linear-gradient(45deg, #3a7bd9 25%, transparent 25%, transparent 75%, #3a7bd9 75%),
+                            linear-gradient(45deg, #3a7bd9 25%, transparent 25%, transparent 75%, #3a7bd9 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            animation: waterFlow 2s linear infinite;
+        }
+        .forest {
+            background-color: #2d5a30;
+            position: relative;
+            overflow: hidden;
+        }
+        .forest::before {
+            content: '🌲';
+            position: absolute;
+            font-size: 24px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .rock {
+            background-color: #8a8a8a;
+            background-image: linear-gradient(45deg, #9e9e9e 25%, transparent 25%, transparent 75%, #9e9e9e 75%),
+                            linear-gradient(45deg, #9e9e9e 25%, transparent 25%, transparent 75%, #9e9e9e 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .mountain {
+            background: linear-gradient(45deg, #6d6d6d, #8a8a8a);
+            position: relative;
+            overflow: hidden;
+        }
+        .mountain::before {
+            content: '⛰️';
+            position: absolute;
+            font-size: 24px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .magic-barrier {
+            background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ff00cc);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+        }
+
+        /* Game elements */
+        .player {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            background-color: transparent;
+            border-radius: 50%;
+            top: 7px;
+            left: 7px;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+        }
+
+        .player:hover {
+            transform: scale(1.1) rotate(-5deg);
+            filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
+        }
+
+        .scroll {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #9333ea;
+            border: 2px solid #7e22ce;
+            border-radius: 5px;
+            top: 10px;
+            left: 10px;
+            z-index: 5;
+            animation: float 2s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .scroll::before {
+            content: '📜';
+            font-size: 20px;
+        }
+
+        .chest {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #fbbf24;
+            border: 2px solid #d97706;
+            border-radius: 5px;
+            top: 10px;
+            left: 10px;
+            z-index: 5;
+            animation: bounce 2s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #92400e;
+        }
+
+        .chest::before {
+            content: '⭐';
+            font-size: 20px;
+        }
+
+        .enemy {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #ef4444;
+            border: 2px solid #dc2626;
+            border-radius: 50%;
+            top: 10px;
+            left: 10px;
+            z-index: 5;
+            animation: shake 0.5s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .enemy::before {
+            content: '💀';
+            font-size: 20px;
+        }
+
+        .portal {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: conic-gradient(from 0deg, #8b5cf6, #3b82f6, #10b981, #8b5cf6);
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+            z-index: 5;
+            animation: rotate 3s linear infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portal::before {
+            content: '🌀';
+            font-size: 24px;
+            color: white;
+        }
+
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+
+        #knowledge-journal {
+            color: #d1d5db;
+        }
+
+        .knowledge-item {
+            background-color: #374151;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            border-left: 4px solid #4f46e5;
+            margin-bottom: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .knowledge-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .inventory-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .inventory-item:hover::after {
+            content: attr(data-description);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            width: max-content;
+            max-width: 300px;
+            z-index: 100;
+            pointer-events: none;
+            white-space: normal;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .fireworks {
+            background-color: transparent;
+        }
+
+        .fireworks::before,
+        .fireworks::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            animation: fireworks 2s ease-out infinite;
+            animation-delay: calc(var(--d, 0) * 0.1s);
+            transform-origin: center;
+        }
+
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .bottom-4 {
+            bottom: 1rem;
+        }
+
+        .right-4 {
+            right: 1rem;
+        }
+
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+    </style>
+</body>
+
+<script>
+// Game state
+const gameState = {
+    player: {
+        x: 1,
+        y: 1,
+        hp: 100,
+        maxHp: 100,
+        xp: 0,
+        xpToNextLevel: 100,
+        level: 1,
+        inventory: [],
+        stars: 0,
+        totalStars: 0
+    },
+    map: [],
+    terrain: [],
+    knowledge: [],
+    obstacles: [
+        { x: 4, y: 1, type: 'river', requires: 'magic-boat', name: 'Deep River', description: 'A magical boat can help you cross this river' },
+        { x: 7, y: 3, type: 'mountain', requires: 'climbing-gear', name: 'High Mountain', description: 'Special climbing gear will help you scale this mountain' },
+        { x: 3, y: 7, type: 'forest', requires: 'forest-medallion', name: 'Enchanted Forest', description: 'A forest medallion will guide you through this magical forest' }
+    ],
+    scrolls: [
+        { 
+            x: 2, y: 1, 
+            title: 'Company Values', 
+            content: 'Our core values define who we are: 1. Innovation - We embrace new ideas and technologies. 2. Integrity - We always do what is right. 3. Teamwork - We achieve more together. 4. Excellence - We strive for the highest quality in everything we do.',
+            unlocks: 'values-test'
+        },
+        { 
+            x: 5, y: 2, 
+            title: 'Safety Protocols', 
+            content: 'Safety is our top priority. Key protocols: 1. Always wear proper safety equipment. 2. Report any incidents immediately. 3. Follow emergency procedures. 4. Maintain clean workspace.',
+            unlocks: 'safety-test'
+        },
+        { 
+            x: 8, y: 4, 
+            title: 'Customer Service', 
+            content: 'Exceptional customer service principles: 1. Listen actively to customer needs. 2. Respond promptly and professionally. 3. Take ownership of issues. 4. Follow up to ensure satisfaction.',
+            unlocks: 'service-test'
+        }
+    ],
+    chests: [
+        { x: 4, y: 1, stars: 1, requires: 'magic-boat', description: 'Use the Magic Boat to reach this chest' },
+        { x: 7, y: 3, stars: 1, requires: 'climbing-gear', description: 'Use the Climbing Gear to reach this chest' },
+        { x: 3, y: 7, stars: 1, requires: 'forest-medallion', description: 'Use the Forest Medallion to reach this chest' }
+    ],
+    enemies: [
+        { 
+            x: 3, y: 2,
+            id: 'values-test',
+            question: 'Which of these is NOT one of our core values?', 
+            options: ['Innovation', 'Profit', 'Integrity', 'Teamwork'], 
+            answer: 1,
+            reward: 'magic-boat',
+            rewardName: 'Magic Boat',
+            rewardDescription: 'A mystical boat that can safely navigate any water',
+            attempts: 0,
+            maxAttempts: 3,
+            requires: 'Company Values'
+        },
+        { 
+            x: 6, y: 2,
+            id: 'safety-test',
+            question: 'What should you do first when encountering a workplace incident?', 
+            options: ['Ignore it', 'Report it immediately', 'Wait and see', 'Handle it yourself'], 
+            answer: 1,
+            reward: 'climbing-gear',
+            rewardName: 'Climbing Gear',
+            rewardDescription: 'Professional equipment for scaling mountains safely',
+            attempts: 0,
+            maxAttempts: 3,
+            requires: 'Safety Protocols'
+        },
+        { 
+            x: 8, y: 5,
+            id: 'service-test',
+            question: 'What is the first step in providing excellent customer service?', 
+            options: ['Solve the problem quickly', 'Listen actively', 'Give a refund', 'Escalate to manager'], 
+            answer: 1,
+            reward: 'forest-medallion',
+            rewardName: 'Forest Medallion',
+            rewardDescription: 'An ancient medallion that guides you through enchanted forests',
+            attempts: 0,
+            maxAttempts: 3,
+            requires: 'Customer Service'
+        }
+    ],
+    portal: {
+        x: 8,
+        y: 8,
+        requiredStars: 3,
+        name: 'Victory Portal',
+        description: 'Collect 3 stars to activate the portal and complete your training'
+    },
+    gameSize: 10,
+    currentTest: null,
+    path: [],
+    isPathSelected: false,
+    isMoving: false,
+    moveInterval: null
+};
+
+// Terrain types
+const terrainTypes = [
+    'grass', 'grass', 'grass', 'grass', 'grass', 
+    'dirt', 'dirt', 'sand', 'forest', 'rock'
+];
+
+// Initialize game
+function initGame() {
+    addPathStyles();
+    
+    // Create base terrain (all grass)
+    gameState.terrain = Array(gameState.gameSize).fill().map(() => 
+        Array(gameState.gameSize).fill('grass')
+    );
+    
+    // Add event listener for help button
+    document.getElementById('help-button').addEventListener('click', showInstructionsModal);
+    
+    // Add decorative elements
+    const decorativeForest = [
+        [0, 0], [0, 2], [0, 4], [0, 6], [0, 8],
+        [9, 0], [9, 2], [9, 4], [9, 6], [9, 8],
+        [2, 0], [4, 0], [6, 0], [8, 0],
+        [2, 9], [4, 9], [6, 9], [8, 9],
+        // Forest area around the third chest
+        [2, 6], [2, 7], [2, 8],
+        [3, 6], [3, 7], [3, 8],
+        [4, 6], [4, 7], [4, 8]
+    ];
+    
+    decorativeForest.forEach(([x, y]) => {
+        gameState.terrain[y][x] = 'forest';
+    });
+    
+    // Add mountains to create paths and barriers
+    const mountains = [
+        [5, 0], [5, 1], [5, 3], [5, 4],
+        [7, 2], [7, 3], [7, 4],
+        [2, 4], [3, 4], [4, 4],
+        [7, 3] // Add mountain for the Climbing Gear chest
+    ];
+    
+    mountains.forEach(([x, y]) => {
+        gameState.terrain[y][x] = 'mountain';
+    });
+    
+    // Add rivers
+    for (let x = 3; x < 7; x++) {
+        gameState.terrain[1][x] = 'water';
+    }
+    
+    // Create empty object map
+    gameState.map = Array(gameState.gameSize).fill().map(() => Array(gameState.gameSize).fill('empty'));
+    
+    // Place player at starting position
+    gameState.player.x = 1;
+    gameState.player.y = 1;
+    gameState.map[1][1] = 'player';
+    
+    // Calculate total stars
+    gameState.player.totalStars = gameState.chests.reduce((sum, chest) => sum + chest.stars, 0);
+    
+    // Place all game elements
+    gameState.scrolls.forEach(scroll => {
+        gameState.map[scroll.y][scroll.x] = 'scroll';
+    });
+    
+    gameState.enemies.forEach(enemy => {
+        gameState.map[enemy.y][enemy.x] = 'enemy';
+    });
+    
+    gameState.chests.forEach(chest => {
+        gameState.map[chest.y][chest.x] = 'chest';
+    });
+    
+    // Place portal
+    gameState.map[gameState.portal.y][gameState.portal.x] = 'portal';
+    
+    // Update stars display
+    document.getElementById('stars').textContent = `${gameState.player.stars}/${gameState.player.totalStars}`;
+    
+    // Сбрасываем состояние пути
+    gameState.path = [];
+    gameState.isPathSelected = false;
+    gameState.isMoving = false;
+    
+    // Render game board
+    renderGameBoard();
+    updateStatus();
+}
+
+// Render game board
+function renderGameBoard() {
+    const board = document.getElementById('game-board');
+    board.innerHTML = '';
+    
+    for (let y = 0; y < gameState.gameSize; y++) {
+        for (let x = 0; x < gameState.gameSize; x++) {
+            const tile = document.createElement('div');
+            tile.className = `game-tile ${gameState.terrain[y][x]}`;
+            
+            // Добавляем обработчик клика для выбора пути
+            tile.addEventListener('click', () => handleTileClick(x, y));
+            
+            // Добавляем класс для выделения пути
+            if (gameState.path.some(point => point.x === x && point.y === y)) {
+                tile.classList.add('path-tile');
+                
+                // Выделяем текущую клетку пути, если персонаж движется
+                if (gameState.isMoving && gameState.path[0].x === x && gameState.path[0].y === y) {
+                    tile.classList.add('current-path-tile');
+                }
+            }
+            
+            // Add terrain features
+            if (gameState.terrain[y][x] === 'forest' && gameState.map[y][x] !== 'enemy' && gameState.map[y][x] !== 'chest') {
+                const tree = document.createElement('div');
+                tree.className = 'tree';
+                tile.appendChild(tree);
+            }
+            
+            if (gameState.terrain[y][x] === 'rock' && gameState.map[y][x] !== 'enemy' && gameState.map[y][x] !== 'chest') {
+                const rock = document.createElement('div');
+                rock.className = 'rock-obstacle';
+                tile.appendChild(rock);
+            }
+            
+            // Add objects
+            switch (gameState.map[y][x]) {
+                case 'player':
+                    const player = document.createElement('div');
+                    player.className = 'player';
+                    player.innerHTML = '🧙‍♂️';
+                    tile.appendChild(player);
+                    break;
+                case 'scroll':
+                    const scroll = document.createElement('div');
+                    scroll.className = 'scroll';
+                    tile.appendChild(scroll);
+                    break;
+                case 'chest':
+                    const chest = document.createElement('div');
+                    chest.className = 'chest';
+                    tile.appendChild(chest);
+                    break;
+                case 'enemy':
+                    const enemy = document.createElement('div');
+                    enemy.className = 'enemy';
+                    tile.appendChild(enemy);
+                    break;
+                case 'portal':
+                    const portal = document.createElement('div');
+                    portal.className = 'portal';
+                    tile.appendChild(portal);
+                    break;
+            }
+            
+            board.appendChild(tile);
+        }
+    }
+}
+
+// Обработчик клика по тайлу
+function handleTileClick(x, y) {
+    // Если игрок уже движется, игнорируем клик
+    if (gameState.isMoving) return;
+    
+    // Если путь уже выбран и кликнули на последнюю точку пути, начинаем движение
+    if (gameState.isPathSelected && gameState.path.length > 0) {
+        const lastPoint = gameState.path[gameState.path.length - 1];
+        if (lastPoint.x === x && lastPoint.y === y) {
+            startMoving();
+            return;
+        }
+    }
+    
+    // Проверяем, можно ли дойти до этой точки
+    const path = findPath(gameState.player.x, gameState.player.y, x, y);
+    
+    if (path && path.length > 0) {
+        // Сохраняем путь и отмечаем, что путь выбран
+        gameState.path = path;
+        gameState.isPathSelected = true;
+        
+        // Обновляем отображение
+        renderGameBoard();
+    } else {
+        // Если путь не найден, показываем сообщение
+        showKnowledgeModal('Невозможно добраться', 'Невозможно найти путь до этой точки.');
+    }
+}
+
+// Начать движение по пути
+function startMoving() {
+    if (gameState.path.length === 0 || gameState.isMoving) return;
+    
+    gameState.isMoving = true;
+    let currentPathIndex = 0;
+    
+    // Очищаем предыдущий интервал, если он существует
+    if (gameState.moveInterval) {
+        clearInterval(gameState.moveInterval);
+    }
+    
+    // Устанавливаем интервал для движения
+    gameState.moveInterval = setInterval(() => {
+        if (currentPathIndex < gameState.path.length) {
+            const nextPoint = gameState.path[currentPathIndex];
+            
+            // Проверяем, можно ли двигаться к следующей точке
+            if (canMoveTo(nextPoint.x, nextPoint.y)) {
+                // Очищаем игрока с текущей позиции
+                gameState.map[gameState.player.y][gameState.player.x] = 'empty';
+                
+                // Проверяем, что находится в новой позиции
+                const objectAtNewPos = gameState.map[nextPoint.y][nextPoint.x];
+                
+                // Перемещаем игрока на новую позицию
+                gameState.player.x = nextPoint.x;
+                gameState.player.y = nextPoint.y;
+                gameState.map[nextPoint.y][nextPoint.x] = 'player';
+                
+                // Обновляем отображение
+                renderGameBoard();
+                
+                // Если на новой позиции есть объект, останавливаем движение и обрабатываем объект
+                if (objectAtNewPos !== 'empty') {
+                    clearInterval(gameState.moveInterval);
+                    gameState.isMoving = false;
+                    gameState.path = [];
+                    gameState.isPathSelected = false;
+                    
+                    // Обрабатываем объект
+                    switch (objectAtNewPos) {
+                        case 'scroll':
+                            collectScroll(nextPoint.x, nextPoint.y);
+                            break;
+                        case 'enemy':
+                            startTest(nextPoint.x, nextPoint.y);
+                            break;
+                        case 'chest':
+                            openChest(nextPoint.x, nextPoint.y);
+                            break;
+                        case 'portal':
+                            if (gameState.player.stars >= gameState.portal.requiredStars) {
+                                showVictoryModal();
+                            } else {
+                                showKnowledgeModal(gameState.portal.name, 
+                                    `You need to collect ${gameState.portal.requiredStars} stars to activate this portal. You currently have ${gameState.player.stars} stars.`);
+                            }
+                            break;
+                    }
+                    return;
+                }
+                
+                // Переходим к следующей точке пути
+                currentPathIndex++;
+            } else {
+                // Если не можем двигаться дальше, останавливаем движение
+                clearInterval(gameState.moveInterval);
+                gameState.isMoving = false;
+                gameState.path = [];
+                gameState.isPathSelected = false;
+                renderGameBoard();
+            }
+        } else {
+            // Достигли конца пути, останавливаем движение
+            clearInterval(gameState.moveInterval);
+            gameState.isMoving = false;
+            gameState.path = [];
+            gameState.isPathSelected = false;
+            renderGameBoard();
+        }
+    }, 800);
+}
+
+// Поиск пути с помощью алгоритма A*
+function findPath(startX, startY, endX, endY) {
+    // Если начальная и конечная точки совпадают, возвращаем пустой путь
+    if (startX === endX && startY === endY) {
+        return [];
+    }
+    
+    // Создаем открытый и закрытый списки
+    const openList = [];
+    const closedList = [];
+    
+    // Создаем начальный узел
+    const startNode = {
+        x: startX,
+        y: startY,
+        g: 0,
+        h: heuristic(startX, startY, endX, endY),
+        parent: null
+    };
+    
+    // Добавляем начальный узел в открытый список
+    openList.push(startNode);
+    
+    // Пока открытый список не пуст
+    while (openList.length > 0) {
+        // Находим узел с наименьшей стоимостью f = g + h
+        let currentNode = openList[0];
+        let currentIndex = 0;
+        
+        for (let i = 1; i < openList.length; i++) {
+            if (openList[i].g + openList[i].h < currentNode.g + currentNode.h) {
+                currentNode = openList[i];
+                currentIndex = i;
+            }
+        }
+        
+        // Если достигли конечной точки, строим путь и возвращаем его
+        if (currentNode.x === endX && currentNode.y === endY) {
+            const path = [];
+            let current = currentNode;
+            
+            while (current !== null) {
+                path.unshift({ x: current.x, y: current.y });
+                current = current.parent;
+            }
+            
+            return path;
+        }
+        
+        // Удаляем текущий узел из открытого списка и добавляем в закрытый
+        openList.splice(currentIndex, 1);
+        closedList.push(currentNode);
+        
+        // Проверяем соседние узлы
+        const neighbors = getNeighbors(currentNode.x, currentNode.y);
+        
+        for (const neighbor of neighbors) {
+            // Пропускаем узлы, которые уже в закрытом списке
+            if (closedList.some(node => node.x === neighbor.x && node.y === neighbor.y)) {
+                continue;
+            }
+            
+            // Вычисляем стоимость g для соседнего узла
+            const g = currentNode.g + 1;
+            
+            // Проверяем, есть ли соседний узел в открытом списке
+            const openNode = openList.find(node => node.x === neighbor.x && node.y === neighbor.y);
+            
+            if (openNode === undefined) {
+                // Если соседнего узла нет в открытом списке, добавляем его
+                const h = heuristic(neighbor.x, neighbor.y, endX, endY);
+                openList.push({
+                    x: neighbor.x,
+                    y: neighbor.y,
+                    g: g,
+                    h: h,
+                    parent: currentNode
+                });
+            } else if (g < openNode.g) {
+                // Если соседний узел уже в открытом списке и новый путь короче, обновляем его
+                openNode.g = g;
+                openNode.parent = currentNode;
+            }
+        }
+    }
+    
+    // Если путь не найден, возвращаем null
+    return null;
+}
+
+// Эвристическая функция для A*
+function heuristic(x1, y1, x2, y2) {
+    return Math.abs(x1 - x2) + Math.abs(y1 - y2);
+}
+
+// Получить соседние узлы
+function getNeighbors(x, y) {
+    const neighbors = [];
+    const directions = [
+        { x: 0, y: -1 }, // вверх
+        { x: 1, y: 0 },  // вправо
+        { x: 0, y: 1 },  // вниз
+        { x: -1, y: 0 }  // влево
+    ];
+    
+    for (const dir of directions) {
+        const newX = x + dir.x;
+        const newY = y + dir.y;
+        
+        // Проверяем, что новая позиция находится в пределах карты
+        if (newX >= 0 && newX < gameState.gameSize && newY >= 0 && newY < gameState.gameSize) {
+            // Проверяем, можно ли двигаться на эту позицию
+            if (canMoveTo(newX, newY)) {
+                neighbors.push({ x: newX, y: newY });
+            }
+        }
+    }
+    
+    return neighbors;
+}
+
+// Добавляем стили для отображения пути
+function addPathStyles() {
+    const style = document.createElement('style');
+    style.textContent = `
+        .path-tile {
+            position: relative;
+        }
+        
+        .path-tile::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 255, 0, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        
+        /* Стили для анимации движения персонажа */
+        .player {
+            transition: all 0.8s ease-in-out;
+        }
+        
+        /* Стили для выделения текущей клетки пути */
+        .current-path-tile::after {
+            background-color: rgba(255, 255, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Обновляем инструкции, чтобы включить информацию о новой механике перемещения
+function updateInstructions() {
+    const instructionsContent = document.querySelector('#instructions-modal .text-gray-300');
+    
+    // Находим раздел с контролами
+    const controlsSection = instructionsContent.querySelector('div:nth-child(2)');
+    
+    // Обновляем содержимое раздела с контролами
+    controlsSection.innerHTML = `
+        <h3 class="text-xl font-bold text-blue-400 mb-2">Controls</h3>
+        <ul class="list-disc list-inside">
+            <li>Click on a tile to select a destination</li>
+            <li>Click again on the selected destination to start moving</li>
+            <li>Use arrow keys or on-screen buttons for direct movement</li>
+            <li>↑ - move up</li>
+            <li>↓ - move down</li>
+            <li>← - move left</li>
+            <li>→ - move right</li>
+        </ul>
+    `;
+}
+
+// Вызываем обновление инструкций при инициализации игры
+document.addEventListener('DOMContentLoaded', () => {
+    initGame();
+    updateInstructions();
+});
+
+// Check if player can move to new position
+function canMoveTo(x, y) {
+    // Check terrain
+    const terrain = gameState.terrain[y][x];
+    if (terrain === 'mountain' || terrain === 'water' || terrain === 'forest') {
+        // Check if player has the required item for this type of terrain
+        const obstacle = gameState.obstacles.find(obs => 
+            (obs.type === 'mountain' && terrain === 'mountain') || 
+            (obs.type === 'river' && terrain === 'water') || 
+            (obs.type === 'forest' && terrain === 'forest')
+        );
+        
+        if (obstacle && !gameState.player.inventory.includes(obstacle.requires)) {
+            return false;
+        }
+    }
+    
+    // Check if position is within bounds
+    return x >= 0 && x < gameState.gameSize && y >= 0 && y < gameState.gameSize;
+}
+
+// Move player
+function movePlayer(direction) {
+    let newX = gameState.player.x;
+    let newY = gameState.player.y;
+    
+    switch (direction) {
+        case 'up':
+            newY--;
+            break;
+        case 'down':
+            newY++;
+            break;
+        case 'left':
+            newX--;
+            break;
+        case 'right':
+            newX++;
+            break;
+    }
+    
+    // Check if move is valid
+    if (canMoveTo(newX, newY)) {
+        // Clear player from old position
+        gameState.map[gameState.player.y][gameState.player.x] = 'empty';
+        
+        // Check if new position has an object
+        const objectAtNewPos = gameState.map[newY][newX];
+        
+        switch (objectAtNewPos) {
+            case 'scroll':
+                collectScroll(newX, newY);
+                break;
+            case 'enemy':
+                startTest(newX, newY);
+                break;
+            case 'chest':
+                openChest(newX, newY);
+                break;
+            case 'portal':
+                // Check if player has enough stars to enter portal
+                if (gameState.player.stars >= gameState.portal.requiredStars) {
+                    showVictoryModal();
+                } else {
+                    showKnowledgeModal(gameState.portal.name, 
+                        `You need to collect ${gameState.portal.requiredStars} stars to activate this portal. You currently have ${gameState.player.stars} stars.`);
+                }
+                break;
+            case 'empty':
+                // Move player to new position
+                gameState.player.x = newX;
+                gameState.player.y = newY;
+                gameState.map[newY][newX] = 'player';
+                break;
+        }
+        
+        // Render updated board
+        renderGameBoard();
+    }
+}
+
+// Collect scroll
+function collectScroll(x, y) {
+    const scroll = gameState.scrolls.find(s => s.x === x && s.y === y);
+    
+    if (scroll) {
+        // Add to knowledge
+        if (!gameState.knowledge.some(k => k.title === scroll.title)) {
+            gameState.knowledge.push({
+                title: scroll.title,
+                content: scroll.content
+            });
+            
+            // Update knowledge journal
+            updateKnowledgeJournal();
+            
+            // Show knowledge modal
+            showKnowledgeModal(scroll.title, scroll.content);
+            
+            // Award XP
+            gameState.player.xp += 20;
+            if (gameState.player.xp >= gameState.player.xpToNextLevel) {
+                gameState.player.level++;
+                gameState.player.xp = 0;
+                gameState.player.maxHp += 20;
+                gameState.player.hp = gameState.player.maxHp;
+            }
+            updateStatus();
+        }
+        
+        // Remove scroll from map
+        gameState.map[y][x] = 'empty';
+        
+        // Move player to this position
+        gameState.player.x = x;
+        gameState.player.y = y;
+        gameState.map[y][x] = 'player';
+    }
+}
+
+// Open chest
+function openChest(x, y) {
+    const chest = gameState.chests.find(c => c.x === x && c.y === y);
+    
+    if (chest) {
+        if (gameState.player.inventory.includes(chest.requires)) {
+            // Award stars
+            gameState.player.stars += chest.stars;
+            document.getElementById('stars').textContent = `${gameState.player.stars}/${gameState.player.totalStars}`;
+            
+            // Remove chest from map
+            gameState.map[y][x] = 'empty';
+            
+            // Move player to this position
+            gameState.player.x = x;
+            gameState.player.y = y;
+            gameState.map[y][x] = 'player';
+            
+            // Show knowledge modal
+            showKnowledgeModal('Star Collected!', `You found a star using the ${getItemName(chest.requires)}!`);
+            
+            // Award XP
+            gameState.player.xp += 30;
+            if (gameState.player.xp >= gameState.player.xpToNextLevel) {
+                gameState.player.level++;
+                gameState.player.xp = 0;
+                gameState.player.maxHp += 20;
+                gameState.player.hp = gameState.player.maxHp;
+            }
+            updateStatus();
+        } else {
+            showKnowledgeModal('Locked Chest', chest.description);
+        }
+    }
+}
+
+// Start a test
+function startTest(x, y) {
+    const enemy = gameState.enemies.find(e => e.x === x && e.y === y);
+    
+    if (enemy) {
+        const hasRequiredKnowledge = gameState.knowledge.some(k => k.title === enemy.requires);
+        
+        if (hasRequiredKnowledge) {
+            // Set current test
+            gameState.currentTest = enemy;
+            
+            // Show test modal
+            document.getElementById('test-question').textContent = enemy.question;
+            
+            // Create options
+            const optionsContainer = document.getElementById('test-options');
+            optionsContainer.innerHTML = '';
+            
+            enemy.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'w-full bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded mb-2 text-left';
+                button.textContent = option;
+                button.onclick = () => checkAnswer(index);
+                optionsContainer.appendChild(button);
+            });
+            
+            // Hide feedback and continue button
+            document.getElementById('test-feedback').classList.add('hidden');
+            document.getElementById('test-continue').classList.add('hidden');
+            
+            // Show test modal
+            document.getElementById('test-modal').classList.remove('hidden');
+        } else {
+            showKnowledgeModal('Knowledge Required', 
+                `You need to study "${enemy.requires}" before attempting this test. Find the scroll containing this knowledge first.`);
+        }
+    }
+}
+
+// Check answer
+function checkAnswer(answerIndex) {
+    const test = gameState.currentTest;
+    
+    if (test) {
+        const feedback = document.getElementById('test-feedback');
+        
+        if (answerIndex === test.answer) {
+            // Correct answer
+            feedback.textContent = `Correct! You've earned the ${test.rewardName}.`;
+            feedback.className = 'mb-4 p-3 rounded bg-green-800 text-white';
+            
+            // Add reward to inventory
+            if (!gameState.player.inventory.includes(test.reward)) {
+                gameState.player.inventory.push(test.reward);
+                updateInventory();
+            }
+            
+            // Remove enemy from map
+            gameState.map[test.y][test.x] = 'empty';
+            
+            // Award XP
+            gameState.player.xp += 50;
+            if (gameState.player.xp >= gameState.player.xpToNextLevel) {
+                gameState.player.level++;
+                gameState.player.xp = 0;
+                gameState.player.maxHp += 20;
+                gameState.player.hp = gameState.player.maxHp;
+            }
+            updateStatus();
+        } else {
+            // Wrong answer
+            test.attempts++;
+            
+            // Reduce HP
+            gameState.player.hp -= 20;
+            
+            if (gameState.player.hp <= 0) {
+                gameState.player.hp = 0;
+                showGameOverModal();
+            } else if (test.attempts >= test.maxAttempts) {
+                feedback.textContent = `Incorrect. You've used all your attempts. Answer: ${test.options[test.answer]}.`;
+                feedback.className = 'mb-4 p-3 rounded bg-red-800 text-white';
+            } else {
+                feedback.textContent = `Incorrect! Try again. Attempts left: ${test.maxAttempts - test.attempts}`;
+                feedback.className = 'mb-4 p-3 rounded bg-red-800 text-white';
+                
+                // Don't show continue button yet
+                document.getElementById('test-continue').classList.add('hidden');
+                feedback.classList.remove('hidden');
+                updateStatus();
+                return;
+            }
+            updateStatus();
+        }
+        
+        // Show feedback and continue button
+        feedback.classList.remove('hidden');
+        document.getElementById('test-continue').classList.remove('hidden');
+    }
+}
+
+// Continue after test
+function continueAfterTest() {
+    // Close modal
+    document.getElementById('test-modal').classList.add('hidden');
+    gameState.currentTest = null;
+}
+
+// Show knowledge modal
+function showKnowledgeModal(title, content) {
+    document.getElementById('knowledge-title').textContent = title;
+    document.getElementById('knowledge-content').innerHTML = `<p>${content}</p>`;
+    document.getElementById('knowledge-modal').classList.remove('hidden');
+}
+
+// Close knowledge modal
+function closeKnowledgeModal() {
+    document.getElementById('knowledge-modal').classList.add('hidden');
+}
+
+// Show game over modal
+function showGameOverModal() {
+    document.getElementById('gameover-modal').classList.remove('hidden');
+}
+
+// Show victory modal
+function showVictoryModal() {
+    // Set final level
+    document.getElementById('final-level').textContent = gameState.player.level;
+    
+    // Show modal
+    document.getElementById('victory-modal').classList.remove('hidden');
+    
+    // Add fireworks effect
+    const fireworks = document.querySelector('#victory-modal .fireworks');
+    for (let i = 0; i < 10; i++) {
+        const delay = Math.random() * 2;
+        fireworks.innerHTML += `<div style="--d: ${delay}"></div>`;
+    }
+}
+
+// Reset game
+function resetGame() {
+    // Reset game state
+    gameState.player = {
+        x: 1,
+        y: 1,
+        hp: 100,
+        maxHp: 100,
+        xp: 0,
+        xpToNextLevel: 100,
+        level: 1,
+        inventory: [],
+        stars: 0,
+        totalStars: 0
+    };
+    
+    gameState.knowledge = [];
+    gameState.map = [];
+    gameState.terrain = [];
+    
+    // Reset enemies
+    gameState.enemies.forEach(enemy => {
+        enemy.attempts = 0;
+    });
+    
+    // Close modals
+    document.getElementById('gameover-modal').classList.add('hidden');
+    document.getElementById('victory-modal').classList.add('hidden');
+    
+    // Clear UI
+    document.getElementById('knowledge-journal').innerHTML = `<div class="text-gray-400 italic">Your collected knowledge will appear here...</div>`;
+    document.getElementById('inventory').innerHTML = `<div class="text-gray-400 italic">Your items will appear here...</div>`;
+    
+    // Initialize game again
+    initGame();
+}
+
+// Update status
+function updateStatus() {
+    // Update HP bar
+    const hpPercent = (gameState.player.hp / gameState.player.maxHp) * 100;
+    document.getElementById('hp-bar').style.width = `${hpPercent}%`;
+    document.getElementById('hp-text').textContent = `${gameState.player.hp}/${gameState.player.maxHp}`;
+    
+    // Update XP bar
+    const xpPercent = (gameState.player.xp / gameState.player.xpToNextLevel) * 100;
+    document.getElementById('xp-bar').style.width = `${xpPercent}%`;
+    document.getElementById('xp-text').textContent = `${gameState.player.xp}/${gameState.player.xpToNextLevel}`;
+    
+    // Update level
+    document.getElementById('level').textContent = gameState.player.level;
+    
+    // Update stars
+    document.getElementById('stars').textContent = `${gameState.player.stars}/${gameState.player.totalStars}`;
+}
+
+// Update knowledge journal
+function updateKnowledgeJournal() {
+    const journalElement = document.getElementById('knowledge-journal');
+    
+    if (gameState.knowledge.length > 0) {
+        journalElement.innerHTML = '';
+        
+        gameState.knowledge.forEach(knowledge => {
+            const knowledgeItem = document.createElement('div');
+            knowledgeItem.className = 'knowledge-item';
+            
+            knowledgeItem.innerHTML = `
+                <div class="book-icon"></div>
+                <h4 class="topic-title text-blue-300 text-lg font-bold">${knowledge.title}</h4>
+                <p class="text-gray-400">${knowledge.content.substring(0, 60)}...</p>
+            `;
+            
+            knowledgeItem.addEventListener('click', () => {
+                showKnowledgeModal(knowledge.title, knowledge.content);
+            });
+            
+            journalElement.appendChild(knowledgeItem);
+        });
+    }
+}
+
+// Update inventory
+function updateInventory() {
+    const inventoryElement = document.getElementById('inventory');
+    
+    if (gameState.player.inventory.length > 0) {
+        inventoryElement.innerHTML = '';
+        
+        gameState.player.inventory.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'inventory-item bg-gray-700 p-2 rounded text-center';
+            
+            // Set item icon based on type
+            let icon = '🎁';
+            switch (item) {
+                case 'magic-boat':
+                    icon = '⛵';
+                    break;
+                case 'climbing-gear':
+                    icon = '🧗';
+                    break;
+                case 'forest-medallion':
+                    icon = '🏅';
+                    break;
+            }
+            
+            // Get item description
+            const itemData = getItemData(item);
+            
+            itemElement.innerHTML = `<span style="font-size: 24px;">${icon}</span>`;
+            itemElement.setAttribute('data-description', `${itemData.name}: ${itemData.description}`);
+            
+            inventoryElement.appendChild(itemElement);
+        });
+    }
+}
+
+// Get item name and description
+function getItemData(itemId) {
+    const enemy = gameState.enemies.find(e => e.reward === itemId);
+    
+    if (enemy) {
+        return {
+            name: enemy.rewardName,
+            description: enemy.rewardDescription
+        };
+    }
+    
+    return {
+        name: itemId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+        description: 'A mysterious item'
+    };
+}
+
+// Get item name
+function getItemName(itemId) {
+    const itemData = getItemData(itemId);
+    return itemData.name;
+}
+
+// Show instructions modal
+function showInstructionsModal() {
+    document.getElementById('instructions-modal').classList.remove('hidden');
+}
+
+// Close instructions modal
+function closeInstructionsModal() {
+    document.getElementById('instructions-modal').classList.add('hidden');
+}
+
+// Keyboard controls
+document.addEventListener('keydown', (e) => {
+    if (document.getElementById('test-modal').classList.contains('hidden') &&
+        document.getElementById('knowledge-modal').classList.contains('hidden') &&
+        document.getElementById('gameover-modal').classList.contains('hidden') &&
+        document.getElementById('victory-modal').classList.contains('hidden') &&
+        document.getElementById('instructions-modal').classList.contains('hidden')) {
+        
+        switch (e.key) {
+            case 'ArrowUp':
+                movePlayer('up');
+                break;
+            case 'ArrowDown':
+                movePlayer('down');
+                break;
+            case 'ArrowLeft':
+                movePlayer('left');
+                break;
+            case 'ArrowRight':
+                movePlayer('right');
+                break;
+        }
+    }
+});
+</script>
+
+</html> 

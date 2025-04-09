@@ -1,0 +1,22 @@
+﻿CREATE TABLE $tableName (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `entity_id` tinyint(3) unsigned DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `task_template_id` smallint(5) unsigned DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `task_id` mediumint(8) unsigned DEFAULT NULL,
+  `priority_id` tinyint(3) unsigned DEFAULT NULL,
+  `created_by` smallint(5) unsigned DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `task_request_entity_id_foreign` (`entity_id`),
+  KEY `task_request_task_template_id_foreign` (`task_template_id`),
+  KEY `task_request_task_id_foreign` (`task_id`),
+  KEY `task_request_priority_id_foreign` (`priority_id`),
+  KEY `task_request_created_by_foreign` (`created_by`),
+  CONSTRAINT `task_request_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `task_request_entity_id_foreign` FOREIGN KEY (`entity_id`) REFERENCES `entities` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `task_request_priority_id_foreign` FOREIGN KEY (`priority_id`) REFERENCES `priorities` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `task_request_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `task_request_task_template_id_foreign` FOREIGN KEY (`task_template_id`) REFERENCES `task_templates` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+)

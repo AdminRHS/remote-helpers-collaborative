@@ -1,0 +1,106 @@
+Plan Development Prompts Collection
+================================
+
+1. Plan Integration Prompt
+-------------------------
+Task: Integrate and expand draft plan with main plan
+Input: Two existing plans (Draft and Main)
+Context: Need to combine planning documents while maintaining structure and adding detail
+
+Prompt Template:
+```
+Analyze and integrate the following plan components:
+1. Main Plan structure focusing on:
+   - Onboarding Lesson Generation
+   - Workflow Control
+   - Task Manager Implementation
+   - Media Development
+
+2. Connect with existing systems:
+   - Memory Techniques Research
+   - LLM JSON Files Library
+   - CRM Structure
+   - Events Management
+
+3. Maintain hierarchy of:
+   - Task Collection
+   - Learning Process
+   - Milestone Management
+   - Results Tracking
+   - Sequential Flow
+```
+
+2. Social Media Integration Prompt
+--------------------------------
+Task: Structure social media milestone components
+Input: Existing social media requirements
+Context: Need to organize social media integration with learning system
+
+Prompt Template:
+```
+Develop social media integration plan addressing:
+1. Inner Client Analysis:
+   - Document company structure
+   - Map employee skills
+   - Track learning progress
+
+2. Content Development:
+   - Create visual templates (comics style)
+   - Design mascot system (30 objects limit)
+   - Establish video guidelines
+
+3. Template System:
+   - Website documentation
+   - API integration
+   - Course milestones
+   - Post type categorization
+```
+
+3. Professional Assessment Framework Prompt
+----------------------------------------
+Task: Design testing and evaluation system for different professions
+Input: Professional categories and assessment requirements
+Context: Need to create comprehensive testing framework with CV processing
+
+Prompt Template:
+```
+Design professional assessment system including:
+1. Profession Categories:
+   - IT Specialists (Dev, DevOps, QA, PM)
+   - AI/LLM Specialists (Prompt Eng, Integration, Analysis)
+   - Content Creation (Tech Writing, Documentation, Media)
+
+2. Evaluation Metrics:
+   - Technical proficiency
+   - Process knowledge
+   - AI interaction capabilities
+   - Tool usage expertise
+
+3. CV Processing Components:
+   - Skills extraction
+   - Experience evaluation
+   - Project analysis
+   - Learning path generation
+
+4. System Integration:
+   - Task management connection
+   - Learning process alignment
+   - Analytics integration
+   - Skill matrix updates
+```
+
+Usage Guidelines:
+----------------
+1. Each prompt should be customized based on specific implementation context
+2. Maintain consistent structure across different plan components
+3. Ensure integration points are clearly defined
+4. Update prompts based on feedback and results
+5. Document any modifications or expansions to the system
+
+Next Steps:
+-----------
+1. Test prompts with different LLM models
+2. Gather feedback on generated results
+3. Refine prompt structure based on outcomes
+4. Create specialized versions for different use cases
+5. Maintain version control for prompt iterations 

@@ -1,0 +1,122 @@
+https://preview--marys-memo-puzzle.lovable.app/#next-lessons 
+
+https://replit.com/@dd104/LeadLearningQuest 
+
+
+based on the guide on "how to create a google sheet for lead generation" I need to create a landing page further with the gamified elements of learning (to make teaching easier) ex. memory (cards) that need to be found in pairs, labyrinth where the core points are steps from the guide and wrong points (generated to mix the user) leads to the character death and force him to start from scratch to remember the material. And one more game is a drag-n-drop pipelines where you put elements in the right order to receive needed result (if the order is incorrect then element should fall apart again into wrong places for user to start again). Use the attached mascot. Follow the rules and structure from the attached file.
+
+Updated Landing Page Structure with Puzzle Collection for Mary
+This structure builds on the previous design, replacing badges with a puzzle collection mechanic. Each game, when completed correctly, awards a puzzle piece that assembles a new feature for Mary (e.g., a pretty hat, a piece of meat to eat). These features boost Mary’s "experience," visually enhancing her and unlocking a "Next Lessons" section to encourage further learning. The design retains the dark mode toggle, vibrant colors (electric purple, neon teal, fiery orange, lime green), and Mary as the central mascot, tailored for Replit AI visualization.
+
+Overall Design Principles
+Color Palette:
+Dark Mode Base: Deep charcoal (#1A1A1A)
+Light Mode Base: Soft off-white (#F5F5F5)
+Vibrant Accents: Electric purple (#9B59B6), neon teal (#00FFFF), fiery orange (#FF5733), lime green (#32CD32)
+Mascot Progression: Mary starts in her base form (light blue shirt, name tag). Completing each game adds a puzzle piece, assembling a new feature (e.g., a hat after Game 1, meat after Game 2, a scarf after Game 3), visually upgrading her.
+Reward Mechanic: Each feature boosts Mary’s "experience" (e.g., a progress bar fills), encouraging users to continue learning.
+Font: Poppins for a modern, friendly vibe.
+Content Blocks and Interactive Views with Mary’s Puzzle Collection
+1. Hero Section: Welcome and Introduction
+Purpose: Introduce the journey with Mary and the puzzle collection goal.
+Content:
+Headline: "Power Up Mary While Mastering Lead Gen!"
+Subheadline: "Play games, collect puzzle pieces, and boost Mary with cool upgrades – all while learning Google Sheets!"
+CTA: "Dive In" button with a neon glow.
+Interactive View:
+Animated Mascot: Mary stands on the right, pointing at the headline with a big smile. On page load, she waves, and a small puzzle piece icon (teal) floats above her head, hinting at the reward system.
+Background: Dark mode - starry night with neon streaks (teal/orange); Light mode - off-white to lime green gradient with floating triangles.
+Toggle: Sun/moon switch in the top-right corner, glowing faintly.
+Visual Notes for Replit AI:
+"Design a hero section with Mary pointing at the headline, waving on load, and a teal puzzle piece floating above her. Use a dark mode starry background with teal/orange streaks, light mode off-white/lime gradient with triangles, and a glowing purple ‘Dive In’ button. Add a sun/moon toggle."
+2. How It Works: Learning Overview
+Purpose: Explain the process and introduce the puzzle collection mechanic.
+Content:
+Title: "Level Up Mary with Every Game"
+Description: "Mary needs your help to grow stronger! Win each game to collect puzzle pieces and unlock awesome upgrades for her – like a stylish hat or tasty meat."
+Three Icons: Card (teal), Maze (orange), Puzzle (purple).
+Interactive View:
+Flip Cards: Three cards in a row, each framed with a glowing border (teal, orange, purple). On hover, they flip to reveal game descriptions.
+Mascot: Mary stands to the left, holding a glowing teal puzzle piece, nodding encouragingly as users hover over cards.
+Background Shape: A teal-to-purple gradient circle behind the cards.
+Visual Notes for Replit AI:
+"Create three horizontal flip cards with glowing frames (teal, orange, purple), Poppins font, and a pulsing outline on hover. Add Mary on the left holding a teal puzzle piece, nodding. Place over a teal-to-purple gradient circle on a dark charcoal/light off-white base."
+3. Game 1: Memory Match – "Know Your Terms"
+Purpose: Teach terms and award the first puzzle piece for Mary.
+Content:
+Title: "Match the Lead Gen Lingo with Mary"
+Instructions: "Help Mary pair terms and meanings – collect a puzzle piece for her new hat!"
+Game Area: 12 cards (6 pairs) in a 3x4 grid (e.g., "Data Validation" / "Ensures consistency").
+Interactive View:
+Turnover Cards: Cards start face-down with a lime green question mark, flipping to reveal text on a purple background with orange frames.
+Mascot: Mary stands on the right, cheering with a raised paw for correct matches, looking puzzled for mismatches.
+Feedback: Matches glow teal; mismatches flash red. A teal progress bar pulses.
+Completion: Mary jumps excitedly as orange/purple fireworks burst. A puzzle piece (1/3 of a hat) assembles over her head, and the hat (lime green with a purple ribbon) appears on her, boosting her "experience" (a teal progress bar fills slightly).
+Visual Notes for Replit AI:
+"Design a 3x4 grid of flip cards with lime green question marks, purple fronts, orange frames. Add Mary on the right cheering for matches, puzzled for errors. Include a teal glow for matches, red flash for errors, a pulsing teal progress bar, and fireworks. On completion, show a puzzle piece assembling a lime green hat with a purple ribbon on Mary, with a teal experience bar filling slightly."
+4. Game 2: Labyrinth – "Navigate the Setup"
+Purpose: Teach setup steps and award the second puzzle piece for Mary.
+Content:
+Title: "Conquer the Setup Maze with Mary"
+Instructions: "Guide Mary through the steps – dodge traps to collect a puzzle piece for her tasty meat!"
+Game Area: Maze with nodes for steps (e.g., "Freeze the Header Row") and traps (e.g., "Format too early").
+Interactive View:
+Animated Pathway: Mary navigates the maze, glowing teal. Correct nodes light up purple; traps flash orange, triggering a "zap" (Mary stumbles back to start).
+Background: Dark mode - cosmic grid with stars; Light mode - off-white with lime green grid lines.
+Feedback: Mary speaks via teal tooltips (e.g., "Headers first!").
+Completion: Mary wags her tail as a puzzle piece (1/2 of a meat piece) assembles beside her. She holds a juicy orange steak, "eating" it with a happy animation, boosting her experience bar further.
+Visual Notes for Replit AI:
+"Create a maze with Mary as a teal glowing character, purple nodes, orange traps on a cosmic dark/light grid background. Add a zap reset animation, teal tooltips with Mary’s face, and a tail-wagging Mary on completion. Show a puzzle piece assembling an orange steak, with Mary eating it happily, and a teal experience bar filling more."
+5. Game 3: Sequence Puzzle – "Formula Builder"
+Purpose: Teach formula construction and award the final puzzle piece for Mary.
+Content:
+Title: "Craft Epic Formulas with Mary"
+Instructions: "Help Mary build formulas – mess up, and they scatter! Collect a puzzle piece for her cozy scarf!"
+Game Area: Draggable pieces for =COUNTIF(H:H, "Connected") with a pipeline target.
+Interactive View:
+Drag-and-Drop Pipeline: Pieces are orange blocks with white text, glowing faintly. Drag into a teal pipeline.
+Mascot: Mary stands on the left, pointing at the pipeline, clapping for correct placements, looking concerned for errors.
+Feedback: Correct order locks with a lime green flash; incorrect order scatters with a purple explosion. Mary offers teal hints.
+Completion: Mary howls happily as the formula glows teal. A puzzle piece (1/3 of a scarf) assembles, and a purple scarf with teal patterns wraps around her neck, fully filling her experience bar.
+Visual Notes for Replit AI:
+"Design a drag-and-drop area with orange glowing blocks, a teal pipeline, on a dark charcoal/off-white base. Add Mary on the left pointing and clapping, a lime green lock effect, purple scatter animation, teal hints with Mary’s face. On completion, show a puzzle piece assembling a purple scarf with teal patterns on Mary, with a teal experience bar filling completely."
+6. Summary and Next Steps
+Purpose: Celebrate Mary’s upgrades and encourage further learning.
+Content:
+Title: "Mary’s Stronger Thanks to You!"
+Summary: "You’ve powered up Mary with a hat, meat, and scarf – she’s ready for more! Keep learning with new lessons."
+CTA: "Grab the Guide" button and "Next Lessons" link.
+Interactive View:
+Mascot Showcase: Mary stands on the right, now wearing her lime green hat, holding an orange steak, and wrapped in a purple scarf. She winks and spins, showing off her upgrades.
+Experience Bar: A fully filled teal bar below Mary, glowing with a "Level Up!" animation.
+Button: "Grab the Guide" pulses in teal with an orange outline.
+Background Shape: A purple-to-teal diagonal stripe.
+Visual Notes for Replit AI:
+"Create a summary with a purple-to-teal stripe, Poppins font. Add Mary on the right wearing a lime green hat, holding an orange steak, with a purple scarf, winking and spinning. Show a fully filled teal experience bar with a ‘Level Up!’ animation, and a pulsing teal button with orange outline."
+7. Next Lessons: Continue the Journey
+Purpose: Encourage users to explore more lessons to further boost Mary.
+Content:
+Title: "Boost Mary Even More!"
+Description: "Mary’s ready for new challenges! Take on more lessons to unlock additional upgrades for her."
+Lesson Previews: Three cards with titles like "Advanced Lead Analysis," "Automating Lead Entry," "Lead Gen Dashboards."
+Interactive View:
+Lesson Cards: Three cards in a row, each with a glowing border (teal, orange, purple). On hover, they tilt slightly and reveal a brief description (e.g., "Learn to analyze leads with formulas").
+Mascot: Mary appears above the cards, pointing at them with a curious expression, encouraging exploration.
+Background: Dark mode - charcoal with a faint purple glow; Light mode - off-white with a lime green base line.
+Visual Notes for Replit AI:
+"Design three lesson cards with glowing frames (teal, orange, purple), tilting on hover, on a dark charcoal/light off-white base. Add Mary above pointing curiously, with a faint purple glow in dark mode or lime green line in light mode."
+8. Footer: Resources and Contact
+Purpose: Provide support with Mary’s branding.
+Content:
+Links: "Full Guide," "Tutorials," "Get in Touch."
+Copyright: "© 2025 LeadGenMasters – Powered by Mary."
+Interactive View:
+Hover Links: Teal links glow brighter and bounce, framed by orange lines.
+Background: Dark mode - charcoal with purple glow; Light mode - off-white with a lime green base line.
+Visual Notes for Replit AI:
+"Design a footer with teal links that glow and bounce on hover, faint orange frames, on a charcoal/purple or off-white/lime base."
+Landing Page Flow and Visualization Tips
+Flow: Hero → How It Works → Game 1 → Game 2 → Game 3 → Summary → Next Lessons → Footer. Use vibrant scroll animations (e.g., sections fade in with color bursts).
+Dark Mode: Toggle switches to charcoal with neon accents; light mode uses off-white with bright overlays.
+Mary’s Progression: Mary starts in her base form, gaining a hat (Game 1), meat (Game 2), and scarf (Game 3), each tied to a puzzle piece collection, visually enhancing her and motivating users.
+Replit AI Prompt Example: "Build a landing page with a dark mode toggle (charcoal base, neon purple/teal/orange accents) and light mode (off-white, lime green shapes). Include a hero with Mary pointing, flip-card overview with Mary holding a puzzle piece, memory match grid (orange frames) with Mary cheering and gaining a hat, maze with Mary navigating and eating meat, formula drag-and-drop (teal pipeline) with Mary gaining a scarf, summary with upgraded Mary, lesson cards with Mary pointing, and glowing footer links. Use Poppins font."

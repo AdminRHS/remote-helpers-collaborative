@@ -1,0 +1,1629 @@
+﻿Detailed Backend Execution Prompt for Remote Work Platform
+Phase 1: Project Setup & Core Infrastructure
+1.1 Project Initialization
+# Create project directory and initialize
+mkdir -p remote-work-platform-api
+cd remote-work-platform-api
+
+
+# Initialize Node.js project
+npm init -y
+
+
+# Install core dependencies
+npm install @prisma/client next-auth bcrypt jsonwebtoken zod express cors multer
+
+
+# Install development dependencies
+npm install -D prisma typescript ts-node @types/node @types/express @types/bcrypt @types/jsonwebtoken nodemon
+
+
+# Initialize TypeScript
+npx tsc --init
+
+
+# Initialize Prisma
+npx prisma init --datasource-provider postgresql
+1.2 Configure TypeScript and Project Structure
+Create the following directory structure:
+src/
+  ├── config/           # Configuration settings
+  ├── constants/        # Constant values
+  ├── controllers/      # Request handlers
+  ├── middleware/       # Express middleware
+  ├── models/           # Data models
+  ├── routes/           # API routes
+  ├── services/         # Business logic
+  ├── types/            # TypeScript type definitions
+  ├── utils/            # Utility functions
+  └── app.ts            # Main application entry point
+prisma/
+  └── schema.prisma     # Database schema
+1.3 Database Schema Design with Prisma
+Implement the core entity architecture in prisma/schema.prisma:
+// Primary entity framework
+model EntityType {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  entities    Entity[]
+  blocks      Block[]
+}
+
+
+model Entity {
+  id           String    @id @default(cuid())
+  entityTypeId String
+  uniqueKey    String?
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  
+  entityType   EntityType @relation(fields: [entityTypeId], references: [id])
+  entityBlocks EntityBlock[]
+  
+  @@unique([entityTypeId, uniqueKey])
+}
+
+
+model Block {
+  id           String    @id @default(cuid())
+  entityTypeId String
+  name         String
+  displayName  String
+  description  String?
+  order        Int       @default(0)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  
+  entityType   EntityType @relation(fields: [entityTypeId], references: [id])
+  entityBlocks EntityBlock[]
+  fields       Field[]
+  
+  @@unique([entityTypeId, name])
+}
+
+
+model Field {
+  id           String    @id @default(cuid())
+  blockId      String
+  name         String
+  displayName  String
+  type         String    // text, number, date, select, multiselect, etc.
+  options      Json?     // For select/multiselect fields
+  required     Boolean   @default(false)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  
+  block        Block @relation(fields: [blockId], references: [id])
+  fieldValues  FieldValue[]
+  
+  @@unique([blockId, name])
+}
+
+
+model EntityBlock {
+  id        String    @id @default(cuid())
+  entityId  String
+  blockId   String
+  statusId  String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  
+  entity    Entity @relation(fields: [entityId], references: [id])
+  block     Block @relation(fields: [blockId], references: [id])
+  status    Status? @relation(fields: [statusId], references: [id])
+  
+  fieldValues FieldValue[]
+  
+  @@unique([entityId, blockId])
+}
+
+
+model FieldValue {
+  id            String    @id @default(cuid())
+  entityBlockId String
+  fieldId       String
+  value         Json?     // Store any type of value as JSON
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  entityBlock   EntityBlock @relation(fields: [entityBlockId], references: [id])
+  field         Field @relation(fields: [fieldId], references: [id])
+  
+  @@unique([entityBlockId, fieldId])
+}
+
+
+// Status and workflow system
+model Status {
+  id          String    @id @default(cuid())
+  workflowId  String
+  name        String
+  displayName String
+  description String?
+  color       String?
+  isStart     Boolean   @default(false)
+  isEnd       Boolean   @default(false)
+  order       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  workflow     Workflow @relation(fields: [workflowId], references: [id])
+  entityBlocks EntityBlock[]
+  fromTransitions StatusTransition[] @relation("FromStatus")
+  toTransitions   StatusTransition[] @relation("ToStatus")
+  
+  @@unique([workflowId, name])
+}
+
+
+model Workflow {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  statuses    Status[]
+  transitions StatusTransition[]
+}
+
+
+model StatusTransition {
+  id          String    @id @default(cuid())
+  workflowId  String
+  fromStatusId String
+  toStatusId   String
+  name        String?
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  workflow    Workflow @relation(fields: [workflowId], references: [id])
+  fromStatus  Status   @relation("FromStatus", fields: [fromStatusId], references: [id])
+  toStatus    Status   @relation("ToStatus", fields: [toStatusId], references: [id])
+  
+  @@unique([workflowId, fromStatusId, toStatusId])
+}
+
+
+// User authentication and authorization
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String
+  firstName     String?
+  lastName      String?
+  isActive      Boolean   @default(true)
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  roles         UserRole[]
+  sessions      Session[]
+  activities    Activity[]
+}
+
+
+model Role {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  isSystem    Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  userRoles   UserRole[]
+  permissions RolePermission[]
+}
+
+
+model UserRole {
+  id        String   @id @default(cuid())
+  userId    String
+  roleId    String
+  createdAt DateTime @default(now())
+  
+  user      User     @relation(fields: [userId], references: [id])
+  role      Role     @relation(fields: [roleId], references: [id])
+  
+  @@unique([userId, roleId])
+}
+
+
+model Permission {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  typeId      String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  type        PermissionType @relation(fields: [typeId], references: [id])
+  rolePermissions RolePermission[]
+}
+
+
+model PermissionType {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  permissions Permission[]
+}
+
+
+model RolePermission {
+  id           String   @id @default(cuid())
+  roleId       String
+  permissionId String
+  createdAt    DateTime @default(now())
+  
+  role         Role     @relation(fields: [roleId], references: [id])
+  permission   Permission @relation(fields: [permissionId], references: [id])
+  
+  @@unique([roleId, permissionId])
+}
+
+
+// Session management
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+
+// Activity tracking
+model Activity {
+  id           String   @id @default(cuid())
+  userId       String
+  entityId     String?
+  entityTypeId String?
+  action       String
+  details      Json?
+  ipAddress    String?
+  userAgent    String?
+  createdAt    DateTime @default(now())
+  
+  user         User     @relation(fields: [userId], references: [id])
+}
+
+
+// Library system
+model Library {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  parentId    String?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  parent      Library?  @relation("LibraryHierarchy", fields: [parentId], references: [id])
+  children    Library[] @relation("LibraryHierarchy")
+  items       LibraryItem[]
+}
+
+
+model LibraryItem {
+  id          String    @id @default(cuid())
+  libraryId   String
+  name        String
+  displayName String
+  content     Json
+  version     Int       @default(1)
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  library     Library   @relation(fields: [libraryId], references: [id])
+  
+  @@unique([libraryId, name])
+}
+Phase 2: Authentication and Authorization System
+2.1 Setup Auth System with NextAuth.js
+Implement authentication service in src/services/authService.ts:
+import { PrismaClient, User } from '@prisma/client';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { z } from 'zod';
+import config from '../config';
+
+
+const prisma = new PrismaClient();
+
+
+// Validation schemas
+const registerSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8),
+  firstName: z.string().min(1),
+  lastName: z.string().min(1),
+});
+
+
+const loginSchema = z.object({
+  email: z.string().email(),
+  password: z.string(),
+});
+
+
+export async function registerUser(userData: z.infer<typeof registerSchema>) {
+  // Validate input
+  const validatedData = registerSchema.parse(userData);
+  
+  // Check if user already exists
+  const existingUser = await prisma.user.findUnique({
+    where: { email: validatedData.email },
+  });
+  
+  if (existingUser) {
+    throw new Error('User already exists');
+  }
+  
+  // Hash password
+  const passwordHash = await bcrypt.hash(validatedData.password, 10);
+  
+  // Create user
+  const user = await prisma.user.create({
+    data: {
+      email: validatedData.email,
+      passwordHash,
+      firstName: validatedData.firstName,
+      lastName: validatedData.lastName,
+    },
+  });
+  
+  // Assign default role
+  await prisma.userRole.create({
+    data: {
+      userId: user.id,
+      roleId: 'candidate', // Default role id for new users
+    },
+  });
+  
+  // Return user without password
+  const { passwordHash: _, ...userWithoutPassword } = user;
+  return userWithoutPassword;
+}
+
+
+export async function loginUser(credentials: z.infer<typeof loginSchema>) {
+  // Validate input
+  const validatedData = loginSchema.parse(credentials);
+  
+  // Find user
+  const user = await prisma.user.findUnique({
+    where: { email: validatedData.email },
+    include: {
+      roles: {
+        include: {
+          role: {
+            include: {
+              permissions: {
+                include: {
+                  permission: true,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+  
+  if (!user) {
+    throw new Error('Invalid credentials');
+  }
+  
+  // Verify password
+  const isPasswordValid = await bcrypt.compare(validatedData.password, user.passwordHash);
+  
+  if (!isPasswordValid) {
+    throw new Error('Invalid credentials');
+  }
+  
+  // Create session
+  const token = jwt.sign(
+    { userId: user.id },
+    config.jwtSecret,
+    { expiresIn: '7d' },
+  );
+  
+  const expiresAt = new Date();
+  expiresAt.setDate(expiresAt.getDate() + 7);
+  
+  await prisma.session.create({
+    data: {
+      userId: user.id,
+      token,
+      expiresAt,
+    },
+  });
+  
+  // Get user permissions
+  const permissions = user.roles.flatMap(userRole => 
+    userRole.role.permissions.map(rp => rp.permission.name)
+  );
+  
+  // Return user and token
+  const { passwordHash: _, ...userWithoutPassword } = user;
+  return {
+    user: userWithoutPassword,
+    token,
+    permissions,
+  };
+}
+
+
+export async function verifyToken(token: string) {
+  try {
+    // Verify JWT
+    const decoded = jwt.verify(token, config.jwtSecret) as { userId: string };
+    
+    // Check if session exists and is valid
+    const session = await prisma.session.findUnique({
+      where: { token },
+      include: { user: true },
+    });
+    
+    if (!session || session.expiresAt < new Date() || !session.user.isActive) {
+      return null;
+    }
+    
+    return session.user;
+  } catch (error) {
+    return null;
+  }
+}
+
+
+export async function logoutUser(token: string) {
+  await prisma.session.delete({
+    where: { token },
+  });
+  
+  return { success: true };
+}
+2.2 Create Authorization Middleware
+Implement authorization middleware in src/middleware/auth.ts:
+import { Request, Response, NextFunction } from 'express';
+import { verifyToken } from '../services/authService';
+import { PrismaClient } from '@prisma/client';
+
+
+const prisma = new PrismaClient();
+
+
+// Extend Express Request type
+declare global {
+  namespace Express {
+    interface Request {
+      user?: any;
+      permissions?: string[];
+    }
+  }
+}
+
+
+export async function authenticate(req: Request, res: Response, next: NextFunction) {
+  try {
+    const authHeader = req.headers.authorization;
+    
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    
+    const token = authHeader.split(' ')[1];
+    const user = await verifyToken(token);
+    
+    if (!user) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    
+    // Get user roles and permissions
+    const userRoles = await prisma.userRole.findMany({
+      where: { userId: user.id },
+      include: {
+        role: {
+          include: {
+            permissions: {
+              include: {
+                permission: true,
+              },
+            },
+          },
+        },
+      },
+    });
+    
+    const permissions = userRoles.flatMap(userRole => 
+      userRole.role.permissions.map(rp => rp.permission.name)
+    );
+    
+    // Attach user and permissions to request
+    req.user = user;
+    req.permissions = permissions;
+    
+    next();
+  } catch (error) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+}
+
+
+export function authorize(...requiredPermissions: string[]) {
+  return (req: Request, res: Response, next: NextFunction) => {
+    if (!req.user || !req.permissions) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    
+    const hasAllPermissions = requiredPermissions.every(permission => 
+      req.permissions!.includes(permission)
+    );
+    
+    if (!hasAllPermissions) {
+      return res.status(403).json({ error: 'Forbidden' });
+    }
+    
+    next();
+  };
+}
+Phase 3: Entity Management Core
+3.1 Create Entity Service
+Implement the entity service in src/services/entityService.ts:
+import { PrismaClient } from '@prisma/client';
+import { z } from 'zod';
+
+
+const prisma = new PrismaClient();
+
+
+// Validation schemas
+const createEntitySchema = z.object({
+  entityTypeId: z.string(),
+  uniqueKey: z.string().optional(),
+  blocks: z.array(z.object({
+    blockId: z.string(),
+    status: z.string().optional(),
+    fields: z.array(z.object({
+      fieldId: z.string(),
+      value: z.any(),
+    })),
+  })).optional(),
+});
+
+
+export async function createEntity(data: z.infer<typeof createEntitySchema>) {
+  // Validate input
+  const validatedData = createEntitySchema.parse(data);
+  
+  // Create entity transaction
+  return prisma.$transaction(async (tx) => {
+    // Create the entity
+    const entity = await tx.entity.create({
+      data: {
+        entityTypeId: validatedData.entityTypeId,
+        uniqueKey: validatedData.uniqueKey,
+      },
+    });
+    
+    // Create entity blocks and field values if provided
+    if (validatedData.blocks && validatedData.blocks.length > 0) {
+      for (const block of validatedData.blocks) {
+        // Create entity block
+        const entityBlock = await tx.entityBlock.create({
+          data: {
+            entityId: entity.id,
+            blockId: block.blockId,
+            statusId: block.status,
+          },
+        });
+        
+        // Create field values
+        if (block.fields && block.fields.length > 0) {
+          for (const field of block.fields) {
+            await tx.fieldValue.create({
+              data: {
+                entityBlockId: entityBlock.id,
+                fieldId: field.fieldId,
+                value: field.value,
+              },
+            });
+          }
+        }
+      }
+    }
+    
+    // Return the created entity with blocks and fields
+    return getEntityById(entity.id);
+  });
+}
+
+
+export async function getEntityById(id: string) {
+  return prisma.entity.findUnique({
+    where: { id },
+    include: {
+      entityType: true,
+      entityBlocks: {
+        include: {
+          block: true,
+          status: true,
+          fieldValues: {
+            include: {
+              field: true,
+            },
+          },
+        },
+      },
+    },
+  });
+}
+
+
+export async function updateEntity(id: string, data: any) {
+  // Get existing entity
+  const existingEntity = await getEntityById(id);
+  
+  if (!existingEntity) {
+    throw new Error('Entity not found');
+  }
+  
+  // Update entity transaction
+  return prisma.$transaction(async (tx) => {
+    // Update entity basic properties if provided
+    if (data.uniqueKey !== undefined) {
+      await tx.entity.update({
+        where: { id },
+        data: { uniqueKey: data.uniqueKey },
+      });
+    }
+    
+    // Update blocks and fields
+    if (data.blocks && data.blocks.length > 0) {
+      for (const blockData of data.blocks) {
+        // Find existing entity block or create new one
+        let entityBlock = existingEntity.entityBlocks.find(
+          eb => eb.blockId === blockData.blockId
+        );
+        
+        if (entityBlock) {
+          // Update existing entity block
+          if (blockData.status) {
+            await tx.entityBlock.update({
+              where: { id: entityBlock.id },
+              data: { statusId: blockData.status },
+            });
+          }
+        } else {
+          // Create new entity block
+          entityBlock = await tx.entityBlock.create({
+            data: {
+              entityId: id,
+              blockId: blockData.blockId,
+              statusId: blockData.status,
+            },
+          });
+        }
+        
+        // Update fields
+        if (blockData.fields && blockData.fields.length > 0) {
+          for (const fieldData of blockData.fields) {
+            // Find existing field value or create new one
+            const existingFieldValue = entityBlock.fieldValues.find(
+              fv => fv.fieldId === fieldData.fieldId
+            );
+            
+            if (existingFieldValue) {
+              // Update existing field value
+              await tx.fieldValue.update({
+                where: { id: existingFieldValue.id },
+                data: { value: fieldData.value },
+              });
+            } else {
+              // Create new field value
+              await tx.fieldValue.create({
+                data: {
+                  entityBlockId: entityBlock.id,
+                  fieldId: fieldData.fieldId,
+                  value: fieldData.value,
+                },
+              });
+            }
+          }
+        }
+      }
+    }
+    
+    // Return updated entity
+    return getEntityById(id);
+  });
+}
+
+
+export async function listEntities(params: any) {
+  const {
+    entityTypeId,
+    page = 1,
+    limit = 10,
+    orderBy = 'createdAt',
+    orderDirection = 'desc',
+    filters = {},
+  } = params;
+  
+  // Build where conditions
+  const where: any = { isActive: true };
+  
+  if (entityTypeId) {
+    where.entityTypeId = entityTypeId;
+  }
+  
+  // Apply filters if provided
+  if (Object.keys(filters).length > 0) {
+    // Implement custom filtering logic based on field values
+    // This is a complex query that depends on your data model
+  }
+  
+  // Count total results
+  const total = await prisma.entity.count({
+    where,
+  });
+  
+  // Get paginated results
+  const entities = await prisma.entity.findMany({
+    where,
+    include: {
+      entityType: true,
+      entityBlocks: {
+        include: {
+          block: true,
+          status: true,
+          fieldValues: {
+            include: {
+              field: true,
+            },
+          },
+        },
+      },
+    },
+    orderBy: {
+      [orderBy]: orderDirection,
+    },
+    skip: (page - 1) * limit,
+    take: limit,
+  });
+  
+  return {
+    data: entities,
+    pagination: {
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+    },
+  };
+}
+3.2 Implement Block and Field Management
+Create block and field management services in src/services/blockService.ts:
+import { PrismaClient } from '@prisma/client';
+import { z } from 'zod';
+
+
+const prisma = new PrismaClient();
+
+
+// Validation schemas
+const createBlockSchema = z.object({
+  entityTypeId: z.string(),
+  name: z.string(),
+  displayName: z.string(),
+  description: z.string().optional(),
+  order: z.number().optional(),
+  fields: z.array(z.object({
+    name: z.string(),
+    displayName: z.string(),
+    type: z.string(),
+    options: z.any().optional(),
+    required: z.boolean().optional(),
+  })).optional(),
+});
+
+
+export async function createBlock(data: z.infer<typeof createBlockSchema>) {
+  // Validate input
+  const validatedData = createBlockSchema.parse(data);
+  
+  // Create block transaction
+  return prisma.$transaction(async (tx) => {
+    // Create the block
+    const block = await tx.block.create({
+      data: {
+        entityTypeId: validatedData.entityTypeId,
+        name: validatedData.name,
+        displayName: validatedData.displayName,
+        description: validatedData.description,
+        order: validatedData.order || 0,
+      },
+    });
+    
+    // Create fields if provided
+    if (validatedData.fields && validatedData.fields.length > 0) {
+      for (const fieldData of validatedData.fields) {
+        await tx.field.create({
+          data: {
+            blockId: block.id,
+            name: fieldData.name,
+            displayName: fieldData.displayName,
+            type: fieldData.type,
+            options: fieldData.options || null,
+            required: fieldData.required || false,
+          },
+        });
+      }
+    }
+    
+    // Return the created block with fields
+    return getBlockById(block.id);
+  });
+}
+
+
+export async function getBlockById(id: string) {
+  return prisma.block.findUnique({
+    where: { id },
+    include: {
+      entityType: true,
+      fields: true,
+    },
+  });
+}
+
+
+export async function updateBlock(id: string, data: any) {
+  // Get existing block
+  const existingBlock = await getBlockById(id);
+  
+  if (!existingBlock) {
+    throw new Error('Block not found');
+  }
+  
+  // Update block transaction
+  return prisma.$transaction(async (tx) => {
+    // Update block properties
+    await tx.block.update({
+      where: { id },
+      data: {
+        displayName: data.displayName || existingBlock.displayName,
+        description: data.description !== undefined ? data.description : existingBlock.description,
+        order: data.order || existingBlock.order,
+      },
+    });
+    
+    // Update fields if provided
+    if (data.fields && data.fields.length > 0) {
+      for (const fieldData of data.fields) {
+        if (fieldData.id) {
+          // Update existing field
+          await tx.field.update({
+            where: { id: fieldData.id },
+            data: {
+              displayName: fieldData.displayName,
+              type: fieldData.type,
+              options: fieldData.options || null,
+              required: fieldData.required || false,
+            },
+          });
+        } else {
+          // Create new field
+          await tx.field.create({
+            data: {
+              blockId: id,
+              name: fieldData.name,
+              displayName: fieldData.displayName,
+              type: fieldData.type,
+              options: fieldData.options || null,
+              required: fieldData.required || false,
+            },
+          });
+        }
+      }
+    }
+    
+    // Return updated block
+    return getBlockById(id);
+  });
+}
+
+
+export async function listBlocks(params: any) {
+  const {
+    entityTypeId,
+    isActive = true,
+    page = 1,
+    limit = 50,
+  } = params;
+  
+  // Build where conditions
+  const where: any = { isActive };
+  
+  if (entityTypeId) {
+    where.entityTypeId = entityTypeId;
+  }
+  
+  // Count total results
+  const total = await prisma.block.count({
+    where,
+  });
+  
+  // Get paginated results
+  const blocks = await prisma.block.findMany({
+    where,
+    include: {
+      fields: true,
+    },
+    orderBy: {
+      order: 'asc',
+    },
+    skip: (page - 1) * limit,
+    take: limit,
+  });
+  
+  return {
+    data: blocks,
+    pagination: {
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+    },
+  };
+}
+3.3 Implement Status and Workflow Management
+Create workflow and status management in src/services/workflowService.ts:
+import { PrismaClient } from '@prisma/client';
+import { z } from 'zod';
+
+
+const prisma = new PrismaClient();
+
+
+// Validation schemas
+const createWorkflowSchema = z.object({
+  name: z.string(),
+  displayName: z.string(),
+  description: z.string().optional(),
+  statuses: z.array(z.object({
+    name: z.string(),
+    displayName: z.string(),
+    description: z.string().optional(),
+    color: z.string().optional(),
+    isStart: z.boolean().optional(),
+    isEnd: z.boolean().optional(),
+    order: z.number().optional(),
+  })).optional(),
+  transitions: z.array(z.object({
+    fromStatusName: z.string(),
+    toStatusName: z.string(),
+    name: z.string().optional(),
+    description: z.string().optional(),
+  })).optional(),
+});
+
+
+export async function createWorkflow(data: z.infer<typeof createWorkflowSchema>) {
+  // Validate input
+  const validatedData = createWorkflowSchema.parse(data);
+  
+  // Create workflow transaction
+  return prisma.$transaction(async (tx) => {
+    // Create the workflow
+    const workflow = await tx.workflow.create({
+      data: {
+        name: validatedData.name,
+        displayName: validatedData.displayName,
+        description: validatedData.description,
+      },
+    });
+    
+    // Create statuses if provided
+    const statusMap = new Map();
+    if (validatedData.statuses && validatedData.statuses.length > 0) {
+      for (const statusData of validatedData.statuses) {
+        const status = await tx.status.create({
+          data: {
+            workflowId: workflow.id,
+            name: statusData.name,
+            displayName: statusData.displayName,
+            description: statusData.description,
+            color: statusData.color,
+            isStart: statusData.isStart || false,
+            isEnd: statusData.isEnd || false,
+            order: statusData.order || 0,
+          },
+        });
+        statusMap.set(statusData.name, status.id);
+      }
+    }
+    
+    // Create transitions if provided
+    if (validatedData.transitions && validatedData.transitions.length > 0) {
+      for (const transitionData of validatedData.transitions) {
+        const fromStatusId = statusMap.get(transitionData.fromStatusName);
+        const toStatusId = statusMap.get(transitionData.toStatusName);
+        
+        if (fromStatusId && toStatusId) {
+          await tx.statusTransition.create({
+            data: {
+              workflowId: workflow.id,
+              fromStatusId,
+              toStatusId,
+              name: transitionData.name,
+              description: transitionData.description,
+            },
+          });
+        }
+      }
+    }
+    
+    // Return the created workflow with statuses and transitions
+    return getWorkflowById(workflow.id);
+  });
+}
+
+
+export async function getWorkflowById(id: string) {
+  return prisma.workflow.findUnique({
+    where: { id },
+    include: {
+      statuses: {
+        orderBy: {
+          order: 'asc',
+        },
+      },
+      transitions: {
+        include: {
+          fromStatus: true,
+          toStatus: true,
+        },
+      },
+    },
+  });
+}
+
+
+export async function updateWorkflow(id: string, data: any) {
+  // Get existing workflow
+  const existingWorkflow = await getWorkflowById(id);
+  
+  if (!existingWorkflow) {
+    throw new Error('Workflow not found');
+  }
+  
+  // Update workflow transaction
+  return prisma.$transaction(async (tx) => {
+    // Update workflow properties
+    await tx.workflow.update({
+      where: { id },
+      data: {
+        displayName: data.displayName || existingWorkflow.displayName,
+        description: data.description !== undefined ? data.description : existingWorkflow.description,
+      },
+    });
+    
+    // Update statuses if provided
+    const statusMap = new Map();
+    
+    // Map existing statuses by name
+    existingWorkflow.statuses.forEach(status => {
+      statusMap.set(status.name, status.id);
+    });
+    
+    if (data.statuses && data.statuses.length > 0) {
+      for (const statusData of data.statuses) {
+        if (statusMap.has(statusData.name)) {
+          // Update existing status
+          await tx.status.update({
+            where: { id: statusMap.get(statusData.name) },
+            data: {
+              displayName: statusData.displayName,
+              description: statusData.description,
+              color: statusData.color,
+              isStart: statusData.isStart,
+              isEnd: statusData.isEnd,
+              order: statusData.order,
+            },
+          });
+        } else {
+          // Create new status
+          const status = await tx.status.create({
+            data: {
+              workflowId: id,
+              name: statusData.name,
+              displayName: statusData.displayName,
+              description: statusData.description,
+              color: statusData.color,
+              isStart: statusData.isStart || false,
+              isEnd: statusData.isEnd || false,
+              order: statusData.order || 0,
+            },
+          });
+          statusMap.set(statusData.name, status.id);
+        }
+      }
+    }
+    
+    // Update transitions if provided
+    if (data.transitions && data.transitions.length > 0) {
+      // Delete existing transitions
+      await tx.statusTransition.deleteMany({
+        where: { workflowId: id },
+      });
+      
+      // Create new transitions
+      for (const transitionData of data.transitions) {
+        const fromStatusId = statusMap.get(transitionData.fromStatusName);
+        const toStatusId = statusMap.get(transitionData.toStatusName);
+        
+        if (fromStatusId && toStatusId) {
+          await tx.statusTransition.create({
+            data: {
+              workflowId: id,
+              fromStatusId,
+              toStatusId,
+              name: transitionData.name,
+              description: transitionData.description,
+            },
+          });
+        }
+      }
+    }
+    
+    // Return updated workflow
+    return getWorkflowById(id);
+  });
+}
+Phase 4: Candidate Management System
+4.1 Implement Candidate Entity Schema
+Create the Candidate schema in prisma/schema.prisma:
+// Candidate management
+model Candidate {
+  id                String    @id @default(cuid())
+  userId            String    @unique
+  firstName         String
+  lastName          String
+  email             String    @unique
+  phoneNumber       String?
+  profilePictureUrl String?
+  videoIntroUrl     String?
+  currentStatus     String
+  englishLevel      String?
+  hourlyRate        Decimal?  @db.Decimal(10, 2)
+  availableFrom     DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  
+  user              User      @relation(fields: [userId], references: [id])
+  skills            CandidateSkill[]
+  languages         CandidateLanguage[]
+  experiences       WorkExperience[]
+  education         Education[]
+  applications      JobApplication[]
+  documents         CandidateDocument[]
+}
+
+
+model CandidateSkill {
+  id          String    @id @default(cuid())
+  candidateId String
+  skillId     String
+  level       Int       // 1-5 proficiency level
+  verified    Boolean   @default(false)
+  
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+  skill       Skill     @relation(fields: [skillId], references: [id])
+  
+  @@unique([candidateId, skillId])
+}
+
+
+model Skill {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  categoryId  String?
+  
+  category    SkillCategory? @relation(fields: [categoryId], references: [id])
+  candidates  CandidateSkill[]
+}
+
+
+model SkillCategory {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  parentId    String?
+  
+  parent      SkillCategory? @relation("SkillCategoryHierarchy", fields: [parentId], references: [id])
+  children    SkillCategory[] @relation("SkillCategoryHierarchy")
+  skills      Skill[]
+}
+
+
+model CandidateLanguage {
+  id          String    @id @default(cuid())
+  candidateId String
+  languageId  String
+  level       String    // e.g., "A1", "B2", "C1"
+  
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+  language    Language  @relation(fields: [languageId], references: [id])
+  
+  @@unique([candidateId, languageId])
+}
+
+
+model Language {
+  id          String    @id @default(cuid())
+  code        String    @unique
+  name        String
+  nativeName  String?
+  isActive    Boolean   @default(true)
+  
+  candidates  CandidateLanguage[]
+}
+
+
+model WorkExperience {
+  id          String    @id @default(cuid())
+  candidateId String
+  companyName String
+  position    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String?   @db.Text
+  
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+}
+
+
+model Education {
+  id            String    @id @default(cuid())
+  candidateId   String
+  institution   String
+  degree        String
+  fieldOfStudy  String
+  startDate     DateTime
+  endDate       DateTime?
+  
+  candidate     Candidate @relation(fields: [candidateId], references: [id])
+}
+
+
+model DocumentType {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  displayName String
+  description String?
+  isRequired  Boolean   @default(false)
+  
+  documents   CandidateDocument[]
+}
+
+
+model CandidateDocument {
+  id            String    @id @default(cuid())
+  candidateId   String
+  documentTypeId String
+  url           String
+  filename      String
+  status        String    // e.g., "Pending", "Verified", "Rejected"
+  uploadedAt    DateTime  @default(now())
+  
+  candidate     Candidate   @relation(fields: [candidateId], references: [id])
+  documentType  DocumentType @relation(fields: [documentTypeId], references: [id])
+}
+4.2 Implement Candidate Service
+Create the candidate service in src/services/candidateService.ts:
+import { PrismaClient } from '@prisma/client';
+import { z } from 'zod';
+
+
+const prisma = new PrismaClient();
+
+
+// Validation schemas
+const createCandidateSchema = z.object({
+  userId: z.string(),
+  firstName: z.string(),
+  lastName: z.string(),
+  email: z.string().email(),
+  phoneNumber: z.string().optional(),
+  profilePictureUrl: z.string().optional(),
+  videoIntroUrl: z.string().optional(),
+  currentStatus: z.string().default("new"),
+  englishLevel: z.string().optional(),
+  hourlyRate: z.number().optional(),
+  availableFrom: z.date().optional(),
+  skills: z.array(z.object({
+    skillId: z.string(),
+    level: z.number().min(1).max(5),
+  })).optional(),
+  languages: z.array(z.object({
+    languageId: z.string(),
+    level: z.string(),
+  })).optional(),
+  experiences: z.array(z.object({
+    companyName: z.string(),
+    position: z.string(),
+    startDate: z.date(),
+    endDate: z.date().optional(),
+    description: z.string().optional(),
+  })).optional(),
+  education: z.array(z.object({
+    institution: z.string(),
+    degree: z.string(),
+    fieldOfStudy: z.string(),
+    startDate: z.date(),
+    endDate: z.date().optional(),
+  })).optional(),
+});
+
+
+export async function createCandidate(data: z.infer<typeof createCandidateSchema>) {
+  // Validate input
+  const validatedData = createCandidateSchema.parse(data);
+  
+  // Check if candidate with this email already exists
+  const existingCandidate = await prisma.candidate.findUnique({
+    where: { email: validatedData.email },
+  });
+  
+  if (existingCandidate) {
+    throw new Error('Candidate with this email already exists');
+  }
+  
+  // Create candidate transaction
+  return prisma.$transaction(async (tx) => {
+    // Create the candidate
+    const candidate = await tx.candidate.create({
+      data: {
+        userId: validatedData.userId,
+        firstName: validatedData.firstName,
+        lastName: validatedData.lastName,
+        email: validatedData.email,
+        phoneNumber: validatedData.phoneNumber,
+        profilePictureUrl: validatedData.profilePictureUrl,
+        videoIntroUrl: validatedData.videoIntroUrl,
+        currentStatus: validatedData.currentStatus,
+        englishLevel: validatedData.englishLevel,
+        hourlyRate: validatedData.hourlyRate ? validatedData.hourlyRate : null,
+        availableFrom: validatedData.availableFrom,
+      },
+    });
+    
+    // Add skills if provided
+    if (validatedData.skills && validatedData.skills.length > 0) {
+      for (const skillData of validatedData.skills) {
+        await tx.candidateSkill.create({
+          data: {
+            candidateId: candidate.id,
+            skillId: skillData.skillId,
+            level: skillData.level,
+          },
+        });
+      }
+    }
+    
+    // Add languages if provided
+    if (validatedData.languages && validatedData.languages.length > 0) {
+      for (const languageData of validatedData.languages) {
+        await tx.candidateLanguage.create({
+          data: {
+            candidateId: candidate.id,
+            languageId: languageData.languageId,
+            level: languageData.level,
+          },
+        });
+      }
+    }
+    
+    // Add experiences if provided
+    if (validatedData.experiences && validatedData.experiences.length > 0) {
+      for (const experienceData of validatedData.experiences) {
+        await tx.workExperience.create({
+          data: {
+            candidateId: candidate.id,
+            companyName: experienceData.companyName,
+            position: experienceData.position,
+            startDate: experienceData.startDate,
+            endDate: experienceData.endDate,
+            description: experienceData.description,
+          },
+        });
+      }
+    }
+    
+    // Add education if provided
+    if (validatedData.education && validatedData.education.length > 0) {
+      for (const educationData of validatedData.education) {
+        await tx.education.create({
+          data: {
+            candidateId: candidate.id,
+            institution: educationData.institution,
+            degree: educationData.degree,
+            fieldOfStudy: educationData.fieldOfStudy,
+            startDate: educationData.startDate,
+            endDate: educationData.endDate,
+          },
+        });
+      }
+    }
+    
+    // Return the created candidate with related data
+    return getCandidateById(candidate.id);
+  });
+}
+
+
+export async function getCandidateById(id: string) {
+  return prisma.candidate.findUnique({
+    where: { id },
+    include: {
+      skills: {
+        include: {
+          skill: true,
+        },
+      },
+      languages: {
+        include: {
+          language: true,
+        },
+      },
+      experiences: true,
+      education: true,
+      documents: {
+        include: {
+          documentType: true,
+        },
+      },
+    },
+  });
+}
+
+
+export async function updateCandidate(id: string, data: any) {
+  // Get existing candidate
+  const existingCandidate = await getCandidateById(id);
+  
+  if (!existingCandidate) {
+    throw new Error('Candidate not found');
+  }
+  
+  // Update candidate transaction
+  return prisma.$transaction(async (tx) => {
+    // Update candidate basic properties
+    await tx.candidate.update({
+      where: { id },
+      data: {
+        firstName: data.firstName || existingCandidate.firstName,
+        lastName: data.lastName || existingCandidate.lastName,
+        phoneNumber: data.phoneNumber !== undefined ? data.phoneNumber : existingCandidate.phoneNumber,
+        profilePictureUrl: data.profilePictureUrl !== undefined ? data.profilePictureUrl : existingCandidate.profilePictureUrl,
+        videoIntroUrl: data.videoIntroUrl !== undefined ? data.videoIntroUrl : existingCandidate.videoIntroUrl,
+        currentStatus: data.currentStatus || existingCandidate.currentStatus,
+        englishLevel: data.englishLevel !== undefined ? data.englishLevel : existingCandidate.englishLevel,
+        hourlyRate: data.hourlyRate !== undefined ? data.hourlyRate : existingCandidate.hourlyRate,
+        availableFrom: data.availableFrom !== undefined ? data.availableFrom : existingCandidate.availableFrom,
+      },
+    });
+    
+    // Update skills if provided
+    if (data.skills) {
+      // Delete existing skills
+      await tx.candidateSkill.deleteMany({
+        where: { candidateId: id },
+      });
+      
+      // Add new skills
+      for (const skillData of data.skills) {
+        await tx.candidateSkill.create({
+          data: {
+            candidateId: id,
+            skillId: skillData.skillId,
+            level: skillData.level,
+          },
+        });
+      }
+    }
+    
+    // Update languages if provided
+    if (data.languages) {
+      // Delete existing languages
+      await tx.candidateLanguage.deleteMany({
+        where: { candidateId: id },
+      });
+      
+      // Add new languages
+      for (const languageData of data.languages) {
+        await tx.candidateLanguage.create({
+          data: {
+            candidateId: id,
+            languageId: languageData.languageId,
+            level: languageData.level,
+          },
+        });
+      }
+    }
+    
+    // Update experiences if provided
+    if (data.experiences) {
+      // Delete existing experiences
+      await tx.workExperience.deleteMany({
+        where: { candidateId: id },
+      });
+      
+      // Add new experiences
+      for (const experienceData of data.experiences) {
+        await tx.workExperience.create({
+          data: {
+            candidateId: id,
+            companyName: experienceData.companyName,
+            position: experienceData.position,
+            startDate: experienceData.startDate,
+            endDate: experienceData.endDate,
+            description: experienceData.description,
+          },
+        });
+      }
+    }
+    
+    // Update education if provided
+    if (data.education) {
+      // Delete existing education
+      await tx.education.deleteMany({
+        where: { candidateId: id },
+      });
+      
+      // Add new education
+      for (const educationData of data.education) {
+        await tx.education.create({
+          data: {
+            candidateId: id,
+            institution: educationData.institution,
+            degree: educationData.degree,
+            fieldOfStudy: educationData.fieldOfStudy,
+            startDate: educationData.startDate,
+            endDate: educationData.endDate,
+          },
+        });
+      }
+    }
+    
+    // Return updated candidate
+    return getCandidateById(id);
+  });
+}
+

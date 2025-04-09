@@ -1,0 +1,3414 @@
+{
+    "profession": "lead generator",
+    "department": "managers",
+    "tasks": [
+        {
+            "task_name": "review financial holdings",
+            "responsibilities": "managing client portfolios",
+            "objects": "accounts",
+            "checklists": [
+                "1. gather all financial documents,",
+                "2. analyze current investments,",
+                "3. note any significant changes in value"
+            ],
+            "type": "new",
+            "parameters": [
+                "initial response rate",
+                "conversion rate",
+                "engagement level"
+            ],
+            "tools": [
+                "quickbooks online",
+                "microsoft excel"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "assess risk levels",
+            "responsibilities": "managing client portfolios",
+            "objects": "accounts",
+            "checklists": [
+                "1. evaluate current market conditions,",
+                "2. compare portfolio against risk tolerance,",
+                "3. document risk factors"
+            ],
+            "type": "in work",
+            "parameters": [
+                "client interaction frequency",
+                "progress tracking",
+                "issue resolution rate"
+            ],
+            "tools": [
+                "bloomberg terminal",
+                "salesforce financial services cloud"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "recommend adjustments",
+            "responsibilities": "managing client portfolios",
+            "objects": "accounts",
+            "checklists": [
+                "1. identify underperforming assets,",
+                "2. propose alternatives based on risk assessment,",
+                "3. prepare adjustment report"
+            ],
+            "type": "sold",
+            "parameters": [
+                "revenue generated",
+                "sales cycle duration",
+                "customer satisfaction index"
+            ],
+            "tools": [
+                "morningstar direct",
+                "tableau desktop"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "review account activities",
+            "responsibilities": "updating account statuses",
+            "objects": "accounts",
+            "checklists": [
+                "1. log into account management system,",
+                "2. review recent transactions and activities,",
+                "3. check for any alerts or flags"
+            ],
+            "type": "banned",
+            "parameters": [
+                "reason for ban",
+                "ban appeal success rate",
+                "preventive measures taken"
+            ],
+            "tools": [
+                "salesforce crm",
+                "hubspot crm"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "update client records",
+            "responsibilities": "updating account statuses",
+            "objects": "accounts",
+            "checklists": [
+                "1. access client's personal and account information,",
+                "2. update any changes in client status or contact details,",
+                "3. confirm updates are saved correctly"
+            ],
+            "type": "problematic",
+            "parameters": [
+                "problem identification speed",
+                "resolution effectiveness",
+                "recurrence rate"
+            ],
+            "tools": [
+                "zoho crm",
+                "hubspot crm"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "ensure compliance",
+            "responsibilities": "updating account statuses",
+            "objects": "accounts",
+            "checklists": [
+                "1. review regulatory requirements,",
+                "2. compare current practices against regulations,",
+                "3. document any compliance gaps,",
+                "4. recommend changes to meet compliance standards"
+            ],
+            "type": "free",
+            "parameters": [
+                "upgrade conversion rate",
+                "engagement metrics",
+                "activity score"
+            ],
+            "tools": [
+                "thomson reuters compliance management",
+                "docusign"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "track transaction history",
+            "responsibilities": "monitoring account activities",
+            "objects": "accounts",
+            "checklists": [
+                "1. access transaction records,",
+                "2. organize transactions by date and type,",
+                "3. maintain a log for future audits"
+            ],
+            "type": "lead",
+            "parameters": [
+                "lead acquisition rate",
+                "initial contact success",
+                "follow-up efficiency"
+            ],
+            "tools": [
+                "microsoft access",
+                "google sheets"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze account trends",
+            "responsibilities": "monitoring account activities",
+            "objects": "accounts",
+            "checklists": [
+                "1. compile data from account transactions,",
+                "2. use analytical tools to identify trends,",
+                "3. create reports highlighting these trends"
+            ],
+            "type": "interested",
+            "parameters": [
+                "interest level",
+                "engagement actions",
+                "proposal acceptance rate"
+            ],
+            "tools": [
+                "google analytics",
+                "microsoft power bi"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "report anomalies",
+            "responsibilities": "monitoring account activities",
+            "objects": "accounts",
+            "checklists": [
+                "1. set benchmarks for usual transaction activities,",
+                "2. monitor transactions for deviations,",
+                "3. document and escalate any unusual activities"
+            ],
+            "type": "client",
+            "parameters": [
+                "client retention rate",
+                "average transaction value",
+                "satisfaction index"
+            ],
+            "tools": [
+                "nagios xi",
+                "splunk"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "collect industry data",
+            "responsibilities": "analyzing market trends",
+            "objects": "industries",
+            "checklists": [
+                "1. identify relevant data sources,",
+                "2. gather data using surveys, reports, and databases,",
+                "3. store collected data systematically for analysis"
+            ],
+            "type": "sector",
+            "parameters": [
+                "growth rate",
+                "market share",
+                "regulatory impact"
+            ],
+            "tools": [
+                "qualtrics",
+                "google forms",
+                "microsoft excel"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "perform trend analysis",
+            "responsibilities": "analyzing market trends",
+            "objects": "industries",
+            "checklists": [
+                "1. use statistical tools to process collected data,",
+                "2. identify patterns and trends in the data,",
+                "3. generate visual representations of trends for easier interpretation"
+            ],
+            "type": "industry",
+            "parameters": [
+                "innovation rate",
+                "competitor density",
+                "profit margins"
+            ],
+            "tools": [
+                "spss",
+                "tableau"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "generate reports",
+            "responsibilities": "analyzing market trends",
+            "objects": "industries",
+            "checklists": [
+                "1. compile analyzed data from trends,",
+                "2. format findings into structured report,",
+                "3. include graphs and charts for visualization,",
+                "4. review for accuracy before submission"
+            ],
+            "type": "market",
+            "parameters": [
+                "market penetration rate",
+                "demand fluctuation",
+                "customer loyalty"
+            ],
+            "tools": [
+                "tableau",
+                "microsoft power bi"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "research market segments",
+            "responsibilities": "identifying growth opportunities",
+            "objects": "industries",
+            "checklists": [
+                "1. define criteria for segmentation,",
+                "2. use data analytics to identify segments,",
+                "3. compile data on each segment"
+            ],
+            "type": "sector",
+            "parameters": [
+                "growth rate",
+                "market share",
+                "regulatory impact"
+            ],
+            "tools": [
+                "google analytics",
+                "hubspot marketing hub"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "evaluate investment options",
+            "responsibilities": "identifying growth opportunities",
+            "objects": "industries",
+            "checklists": [
+                "1. list potential investments within segments,",
+                "2. assess risk and return of each option,",
+                "3. use financial models to forecast potential outcomes"
+            ],
+            "type": "industry",
+            "parameters": [
+                "innovation rate",
+                "competitor density",
+                "profit margins"
+            ],
+            "tools": [
+                "bloomberg terminal",
+                "morningstar direct"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "propose strategies",
+            "responsibilities": "identifying growth opportunities",
+            "objects": "industries",
+            "checklists": [
+                "1. analyze findings from market research,",
+                "2. develop strategic recommendations,",
+                "3. prepare presentation of strategies for stakeholders"
+            ],
+            "type": "market",
+            "parameters": [
+                "market penetration rate",
+                "demand fluctuation",
+                "customer loyalty"
+            ],
+            "tools": [
+                "microsoft powerpoint",
+                "prezi"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "monitor key performance indicators",
+            "responsibilities": "tracking industry metrics",
+            "objects": "industries",
+            "checklists": [
+                "1. select kpis relevant to industry goals,",
+                "2. set up tracking tools for continuous monitoring,",
+                "3. regularly record and review kpi data"
+            ],
+            "type": "sector",
+            "parameters": [
+                "growth rate",
+                "market share",
+                "regulatory impact"
+            ],
+            "tools": [
+                "google analytics",
+                "kpi management software"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "update metric dashboards",
+            "responsibilities": "tracking industry metrics",
+            "objects": "industries",
+            "checklists": [
+                "1. collect latest metrics data,",
+                "2. input data into dashboard software,",
+                "3. ensure real-time update capability,",
+                "4. verify data accuracy and dashboard functionality"
+            ],
+            "type": "industry",
+            "parameters": [
+                "innovation rate",
+                "competitor density",
+                "profit margins"
+            ],
+            "tools": [
+                "salesforce",
+                "klipfolio"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze sector performance",
+            "responsibilities": "tracking industry metrics",
+            "objects": "industries",
+            "checklists": [
+                "1. aggregate data from industry metrics,",
+                "2. use analytical tools to interpret data,",
+                "3. draft analysis reports highlighting key insights"
+            ],
+            "type": "market",
+            "parameters": [
+                "market penetration rate",
+                "demand fluctuation",
+                "customer loyalty"
+            ],
+            "tools": [
+                "sas analytics",
+                "microsoft power bi"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "gather demographic data",
+            "responsibilities": "developing buyer profiles",
+            "objects": "customer persona",
+            "checklists": [
+                "1. identify target demographics for profiling,",
+                "2. use surveys and existing databases to collect data,",
+                "3. organize data into usable formats for profile creation"
+            ],
+            "type": "business",
+            "parameters": [
+                "needs assessment accuracy",
+                "decision-making speed",
+                "purchasing power"
+            ],
+            "tools": [
+                "qualtrics",
+                "salesforce"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "identify buying habits",
+            "responsibilities": "developing buyer profiles",
+            "objects": "customer persona",
+            "checklists": [
+                "1. review customer purchase history,",
+                "2. identify patterns and preferences in buying,",
+                "3. document recurring behaviors"
+            ],
+            "type": "individual",
+            "parameters": [
+                "buying behavior",
+                "brand loyalty",
+                "price sensitivity"
+            ],
+            "tools": [
+                "customer relationship management software",
+                "tableau"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "create persona outlines",
+            "responsibilities": "developing buyer profiles",
+            "objects": "customer persona",
+            "checklists": [
+                "1. compile demographic and behavioral data,",
+                "2. outline key characteristics of each persona,",
+                "3. validate outlines with team members"
+            ],
+            "type": "business",
+            "parameters": [
+                "needs assessment accuracy",
+                "decision-making speed",
+                "purchasing power"
+            ],
+            "tools": [
+                "google analytics",
+                "hubspot"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop targeted marketing campaigns",
+            "responsibilities": "customizing engagement strategies",
+            "objects": "customer persona",
+            "checklists": [
+                "1. define campaign goals based on persona insights,",
+                "2. select appropriate marketing channels,",
+                "3. create content tailored to each persona"
+            ],
+            "type": "individual",
+            "parameters": [
+                "buying behavior",
+                "brand loyalty",
+                "price sensitivity"
+            ],
+            "tools": [
+                "hubspot",
+                "hootsuite"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "adjust messaging",
+            "responsibilities": "customizing engagement strategies",
+            "objects": "customer persona",
+            "checklists": [
+                "1. review current messaging effectiveness,",
+                "2. tailor messages to better suit target persona,",
+                "3. test new messages with focus groups"
+            ],
+            "type": "business",
+            "parameters": [
+                "needs assessment accuracy",
+                "decision-making speed",
+                "purchasing power"
+            ],
+            "tools": [
+                "adobe marketo engage",
+                "surveymonkey"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "track engagement results",
+            "responsibilities": "customizing engagement strategies",
+            "objects": "customer persona",
+            "checklists": [
+                "1. set up tracking tools for campaign metrics,",
+                "2. monitor and record engagement over time,",
+                "3. analyze data to assess impact of messaging changes"
+            ],
+            "type": "individual",
+            "parameters": [
+                "buying behavior",
+                "brand loyalty",
+                "price sensitivity"
+            ],
+            "tools": [
+                "google analytics",
+                "salesforce marketing cloud"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "conduct surveys",
+            "responsibilities": "assessing needs analysis",
+            "objects": "customer persona",
+            "checklists": [
+                "1. design survey questions relevant to target personas,",
+                "2. distribute surveys through multiple channels,",
+                "3. collect and organize survey responses"
+            ],
+            "type": "business",
+            "parameters": [
+                "needs assessment accuracy",
+                "decision-making speed",
+                "purchasing power"
+            ],
+            "tools": [
+                "qualtrics",
+                "google forms"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze customer feedback",
+            "responsibilities": "assessing needs analysis",
+            "objects": "customer persona",
+            "checklists": [
+                "1. categorize feedback by topic and sentiment,",
+                "2. use analytical software to identify trends,",
+                "3. summarize key findings for strategy development"
+            ],
+            "type": "individual",
+            "parameters": [
+                "buying behavior",
+                "brand loyalty",
+                "price sensitivity"
+            ],
+            "tools": [
+                "sentiment analysis tools",
+                "microsoft power bi"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "refine product offerings",
+            "responsibilities": "assessing needs analysis",
+            "objects": "customer persona",
+            "checklists": [
+                "1. evaluate existing products against customer feedback,",
+                "2. propose modifications or new features,",
+                "3. consult with product teams to implement changes"
+            ],
+            "type": "business",
+            "parameters": [
+                "needs assessment accuracy",
+                "decision-making speed",
+                "purchasing power"
+            ],
+            "tools": [
+                "user feedback tools",
+                "jira"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "research relevant keywords",
+            "responsibilities": "generating seo keywords",
+            "objects": "search queries",
+            "checklists": [
+                "1. use seo tools to identify high-potential keywords,",
+                "2. analyze competitor keyword usage,",
+                "3. select keywords with optimal search volume and relevance"
+            ],
+            "type": "google",
+            "parameters": [
+                "search volume",
+                "click-through rate",
+                "keyword effectiveness"
+            ],
+            "tools": [
+                "semrush",
+                "moz pro"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze search volume",
+            "responsibilities": "generating seo keywords",
+            "objects": "search queries",
+            "checklists": [
+                "1. track historical data on selected keywords,",
+                "2. assess trends in search volume over time,",
+                "3. report on potential market interest based on volume changes"
+            ],
+            "type": "linkedin",
+            "parameters": [
+                "network expansion rate",
+                "profile engagement rate",
+                "lead conversion rate"
+            ],
+            "tools": [
+                "google analytics",
+                "ahrefs"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize content",
+            "responsibilities": "generating SEO keywords",
+            "objects": "search queries",
+            "checklists": [
+                "1. identify target keywords within content,",
+                "2. enhance keyword density and placement,",
+                "3. ensure content readability and seo friendliness"
+            ],
+            "type": "google",
+            "parameters": [
+                "search volume",
+                "click-through rate",
+                "keyword effectiveness"
+            ],
+            "tools": [
+                "yoast seo",
+                "clearscope"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "implement SEO best practices",
+            "responsibilities": "optimizing search strategies",
+            "objects": "search queries",
+            "checklists": [
+                "1. review current seo guidelines,",
+                "2. apply on-page and off-page seo techniques,",
+                "3. ensure all content is aligned with seo standards"
+            ],
+            "type": "linkedin",
+            "parameters": [
+                "network expansion rate",
+                "profile engagement rate",
+                "lead conversion rate"
+            ],
+            "tools": [
+                "yoast seo",
+                "moz pro"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "monitor SEO performance",
+            "responsibilities": "optimizing search strategies",
+            "objects": "search queries",
+            "checklists": [
+                "1. use analytics tools to track seo metrics,",
+                "2. regularly review performance indicators,",
+                "3. identify areas for improvement"
+            ],
+            "type": "google",
+            "parameters": [
+                "search volume",
+                "click-through rate",
+                "keyword effectiveness"
+            ],
+            "tools": [
+                "google analytics",
+                "semrush"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "adjust strategies as needed",
+            "responsibilities": "optimizing search strategies",
+            "objects": "search queries",
+            "checklists": [
+                "1. analyze seo data and trends,",
+                "2. update strategies based on performance insights,",
+                "3. test changes and monitor impact"
+            ],
+            "type": "linkedin",
+            "parameters": [
+                "network expansion rate",
+                "profile engagement rate",
+                "lead conversion rate"
+            ],
+            "tools": [
+                "ahrefs",
+                "google search console"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "track keyword rankings",
+            "responsibilities": "monitoring query performance",
+            "objects": "search queries",
+            "checklists": [
+                "1. set up tracking for specific keywords,",
+                "2. monitor changes in rankings over time,",
+                "3. document ranking fluctuations"
+            ],
+            "type": "google",
+            "parameters": [
+                "search volume",
+                "click-through rate",
+                "keyword effectiveness"
+            ],
+            "tools": [
+                "serpstat",
+                "moz pro"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze traffic data",
+            "responsibilities": "monitoring query performance",
+            "objects": "search queries",
+            "checklists": [
+                "1. collect web traffic data related to keywords,",
+                "2. analyze sources and behavior of traffic,",
+                "3. create reports on key findings"
+            ],
+            "type": "linkedin",
+            "parameters": [
+                "network expansion rate",
+                "profile engagement rate",
+                "lead conversion rate"
+            ],
+            "tools": [
+                "google analytics",
+                "kissmetrics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "report on SEO effectiveness",
+            "responsibilities": "monitoring query performance",
+            "objects": "search queries",
+            "checklists": [
+                "1. summarize performance metrics and trends,",
+                "2. align findings with business objectives,",
+                "3. present actionable insights to stakeholders"
+            ],
+            "type": "google",
+            "parameters": [
+                "search volume",
+                "click-through rate",
+                "keyword effectiveness"
+            ],
+            "tools": [
+                "microsoft power bi",
+                "tableau"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "compile professional histories",
+            "responsibilities": "creating professional profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. gather all relevant career documents,",
+                "2. chronologically organize professional milestones,",
+                "3. synthesize information into a cohesive history"
+            ],
+            "type": "company",
+            "parameters": [
+                "accuracy of company information",
+                "update frequency",
+                "user engagement"
+            ],
+            "tools": [
+                "linkedin",
+                "microsoft word"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "integrate skill assessments",
+            "responsibilities": "creating professional profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. collect results from skill and personality assessments,",
+                "2. correlate assessments with job roles,",
+                "3. embed assessments into profile sections"
+            ],
+            "type": "lead",
+            "parameters": [
+                "lead quality score",
+                "conversion potential",
+                "follow-up rate"
+            ],
+            "tools": [
+                "plum",
+                "gallup strengthsfinder"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "design layout",
+            "responsibilities": "creating professional profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. choose a professional template,",
+                "2. customize layout to highlight key information,",
+                "3. ensure the design is visually appealing and easy to navigate"
+            ],
+            "type": "linkedin",
+            "parameters": [
+                "connection growth rate",
+                "profile completeness",
+                "interaction rate"
+            ],
+            "tools": [
+                "adobe indesign",
+                "canva"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "refresh contact details",
+            "responsibilities": "updating profile information",
+            "objects": "profiles",
+            "checklists": [
+                "1. review current contact information on profile,",
+                "2. update phone numbers, email addresses, and mailing addresses,",
+                "3. confirm changes are saved properly"
+            ],
+            "type": "website",
+            "parameters": [
+                "visitor traffic",
+                "conversion rate",
+                "bounce rate"
+            ],
+            "tools": [
+                "zoho crm",
+                "hubspot crm"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "revise biography information",
+            "responsibilities": "updating profile information",
+            "objects": "profiles",
+            "checklists": [
+                "1. review existing biographical content,",
+                "2. update professional achievements and milestones,",
+                "3. ensure the biography reflects the current professional status"
+            ],
+            "type": "social media",
+            "parameters": [
+                "follower growth",
+                "engagement rate",
+                "content reach"
+            ],
+            "tools": [
+                "linkedin",
+                "microsoft word"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "ensure current affiliations",
+            "responsibilities": "updating profile information",
+            "objects": "profiles",
+            "checklists": [
+                "1. check for any outdated organizational ties,",
+                "2. update membership or association information,",
+                "3. verify all listed affiliations are current"
+            ],
+            "type": "company",
+            "parameters": [
+                "accuracy of company information",
+                "update frequency",
+                "user engagement"
+            ],
+            "tools": [
+                "linkedin",
+                "zoho crm"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "monitor viewer statistics",
+            "responsibilities": "analyzing profile interactions",
+            "objects": "profiles",
+            "checklists": [
+                "1. set up analytics tools to track profile views,",
+                "2. monitor views over a set period,",
+                "3. record and analyze trends in viewer data"
+            ],
+            "type": "lead",
+            "parameters": [
+                "lead quality score",
+                "conversion potential",
+                "follow-up rate"
+            ],
+            "tools": [
+                "google analytics",
+                "linkedin analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "evaluate engagement metrics",
+            "responsibilities": "analyzing profile interactions",
+            "objects": "profiles",
+            "checklists": [
+                "1. analyze data on likes, comments, and shares,",
+                "2. assess the impact of recent updates,",
+                "3. compile engagement reports for review"
+            ],
+            "type": "linkedin",
+            "parameters": [
+                "connection growth rate",
+                "profile completeness",
+                "interaction rate"
+            ],
+            "tools": [
+                "facebook insights",
+                "hootsuite analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "suggest interaction improvements",
+            "responsibilities": "analyzing profile interactions",
+            "objects": "profiles",
+            "checklists": [
+                "1. identify areas with low engagement,",
+                "2. propose new content or features to enhance interaction,",
+                "3. implement changes and monitor results"
+            ],
+            "type": "website",
+            "parameters": [
+                "visitor traffic",
+                "conversion rate",
+                "bounce rate"
+            ],
+            "tools": [
+                "buffer",
+                "sprout social"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "update contact entries",
+            "responsibilities": "managing contact databases",
+            "objects": "contacts",
+            "checklists": [
+                "1. review entries for completeness and accuracy,",
+                "2. make necessary updates or corrections,",
+                "3. ensure all entries are up-to-date"
+            ],
+            "type": "valid",
+            "parameters": [
+                "contact accuracy rate",
+                "response rate",
+                "update frequency"
+            ],
+            "tools": [
+                "microsoft excel",
+                "google sheets"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "verify database integrity",
+            "responsibilities": "managing contact databases",
+            "objects": "contacts",
+            "checklists": [
+                "1. perform regular audits to ensure data consistency,",
+                "2. check for duplicate entries,",
+                "3. resolve any inconsistencies found"
+            ],
+            "type": "active",
+            "parameters": [
+                "communication frequency",
+                "transaction rate",
+                "responsiveness"
+            ],
+            "tools": [
+                "data ladder",
+                "winpure clean & match"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "synchronize across platforms",
+            "responsibilities": "managing contact databases",
+            "objects": "contacts",
+            "checklists": [
+                "1. ensure contact data is consistent across all company platforms,",
+                "2. use synchronization tools to update information,",
+                "3. verify synchronization is successful"
+            ],
+            "type": "inactive",
+            "parameters": [
+                "reactivation success rate",
+                "dormancy period",
+                "last activity date"
+            ],
+            "tools": [
+                "zapier",
+                "syncari"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "check accuracy of details",
+            "responsibilities": "validating contact information",
+            "objects": "contacts",
+            "checklists": [
+                "1. cross-reference contact details with external sources,",
+                "2. confirm details with contacts directly,",
+                "3. update records with verified information"
+            ],
+            "type": "empty",
+            "parameters": [
+                "cleanup efficiency",
+                "data completeness",
+                "last audit date"
+            ],
+            "tools": [
+                "fullcontact",
+                "clearbit"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "correct data entries",
+            "responsibilities": "validating contact information",
+            "objects": "contacts",
+            "checklists": [
+                "1. review entries for errors or omissions,",
+                "2. make necessary corrections to names, addresses, or numbers,",
+                "3. save changes and verify accuracy"
+            ],
+            "type": "valid",
+            "parameters": [
+                "contact accuracy rate",
+                "response rate",
+                "update frequency"
+            ],
+            "tools": [
+                "salesforce",
+                "hubspot crm"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "confirm contact authenticity",
+            "responsibilities": "validating contact information",
+            "objects": "contacts",
+            "checklists": [
+                "1. cross-verify contact details through emails or calls,",
+                "2. check social media profiles for further validation,",
+                "3. update database with confirmed authentic contacts"
+            ],
+            "type": "active",
+            "parameters": [
+                "communication frequency",
+                "transaction rate",
+                "responsiveness"
+            ],
+            "tools": [
+                "linkedin",
+                "hunter.io"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "sort contacts by priority",
+            "responsibilities": "categorizing contact types",
+            "objects": "contacts",
+            "checklists": [
+                "1. define criteria for priority such as revenue potential,",
+                "2. classify contacts based on defined priority,",
+                "3. update contact management system with priority levels"
+            ],
+            "type": "inactive",
+            "parameters": [
+                "reactivation success rate",
+                "dormancy period",
+                "last activity date"
+            ],
+            "tools": [
+                "salesforce",
+                "pipedrive"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "label for segmentation",
+            "responsibilities": "categorizing contact types",
+            "objects": "contacts",
+            "checklists": [
+                "1. define segmentation labels such as industry, role,",
+                "2. apply labels to each contact in database,",
+                "3. review and adjust labels as necessary"
+            ],
+            "type": "empty",
+            "parameters": [
+                "cleanup efficiency",
+                "data completeness",
+                "last audit date"
+            ],
+            "tools": [
+                "hubspot crm",
+                "salesforce"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "organize for accessibility",
+            "responsibilities": "categorizing contact types",
+            "objects": "contacts",
+            "checklists": [
+                "1. create easily navigable categories in contact management system,",
+                "2. ensure all team members understand the categorization,",
+                "3. maintain up-to-date contact categories"
+            ],
+            "type": "valid",
+            "parameters": [
+                "contact accuracy rate",
+                "response rate",
+                "update frequency"
+            ],
+            "tools": [
+                "microsoft dynamics 365",
+                "salesforce"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "identify target companies",
+            "responsibilities": "researching potential clients",
+            "objects": "companies",
+            "checklists": [
+                "1. determine criteria for targeting such as market presence,",
+                "2. use business directories and online research,",
+                "3. compile a list of potential client companies"
+            ],
+            "type": "lead",
+            "parameters": [
+                "lead acquisition rate",
+                "initial contact success",
+                "follow-up efficiency"
+            ],
+            "tools": [
+                "linkedin sales navigator",
+                "zoominfo"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "gather business intelligence",
+            "responsibilities": "researching potential clients",
+            "objects": "companies",
+            "checklists": [
+                "1. collect data on company size, revenue, market share,",
+                "2. analyze industry news and reports,",
+                "3. summarize intelligence for strategic use"
+            ],
+            "type": "interested",
+            "parameters": [
+                "interest level",
+                "engagement actions",
+                "proposal acceptance rate"
+            ],
+            "tools": [
+                "bloomberg",
+                "ibisworld"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "prepare entry strategies",
+            "responsibilities": "researching potential clients",
+            "objects": "companies",
+            "checklists": [
+                "1. develop tailored pitches based on company needs,",
+                "2. outline steps for initial contact and follow-ups,",
+                "3. create strategy documents for team briefings"
+            ],
+            "type": "client",
+            "parameters": [
+                "client retention rate",
+                "average transaction value",
+                "satisfaction index"
+            ],
+            "tools": [
+                "google docs",
+                "microsoft onenote"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "update corporate profiles",
+            "responsibilities": "maintaining company databases",
+            "objects": "companies",
+            "checklists": [
+                "1. review and refresh corporate information annually,",
+                "2. include latest financials, leadership changes,",
+                "3. ensure all profiles are consistent and current"
+            ],
+            "type": "updated",
+            "parameters": [
+                "information accuracy rate",
+                "update frequency",
+                "relevance score"
+            ],
+            "tools": [
+                "salesforce",
+                "hubspot crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "ensure data accuracy",
+            "responsibilities": "maintaining company databases",
+            "objects": "companies",
+            "checklists": [
+                "1. audit profiles for discrepancies or outdated info,",
+                "2. cross-check with official corporate publications,",
+                "3. correct any inaccuracies found"
+            ],
+            "type": "not relevant",
+            "parameters": [
+                "disqualification reasons",
+                "alternative opportunities identified",
+                "re-engagement attempts"
+            ],
+            "tools": [
+                "sap master data governance",
+                "informatica"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage access permissions",
+            "responsibilities": "maintaining company databases",
+            "objects": "companies",
+            "checklists": [
+                "1. review who has access to sensitive corporate data,",
+                "2. adjust permissions based on roles and necessity,",
+                "3. regularly update access controls following security protocols"
+            ],
+            "type": "lead",
+            "parameters": [
+                "lead acquisition rate",
+                "initial contact success",
+                "follow-up efficiency"
+            ],
+            "tools": [
+                "okta",
+                "microsoft azure active directory"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "assess business requirements",
+            "responsibilities": "analyzing company needs",
+            "objects": "companies",
+            "checklists": [
+                "1. review company's strategic objectives,",
+                "2. analyze current operations and performance,",
+                "3. document key business needs and requirements"
+            ],
+            "type": "interested",
+            "parameters": [
+                "interest level",
+                "engagement actions",
+                "proposal acceptance rate"
+            ],
+            "tools": [
+                "microsoft power bi",
+                "tableau"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "identify service gaps",
+            "responsibilities": "analyzing company needs",
+            "objects": "companies",
+            "checklists": [
+                "1. compare current services with customer expectations,",
+                "2. highlight areas lacking in service delivery,",
+                "3. document specific gaps needing attention"
+            ],
+            "type": "client",
+            "parameters": [
+                "client retention rate",
+                "average transaction value",
+                "satisfaction index"
+            ],
+            "tools": [
+                "microsoft dynamics 365",
+                "qualtrics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "propose tailored solutions",
+            "responsibilities": "analyzing company needs",
+            "objects": "companies",
+            "checklists": [
+                "1. develop solutions based on identified service gaps,",
+                "2. tailor proposals to fit specific business requirements,",
+                "3. prepare presentation for company stakeholders"
+            ],
+            "type": "updated",
+            "parameters": [
+                "information accuracy rate",
+                "update frequency",
+                "relevance score"
+            ],
+            "tools": [
+                "microsoft powerpoint",
+                "prezi"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "identify prospects",
+            "responsibilities": "generating sales leads",
+            "objects": "leads",
+            "checklists": [
+                "1. define target demographics and industries,",
+                "2. use marketing data to locate potential leads,",
+                "3. compile a list of prospects for outreach"
+            ],
+            "type": "cold",
+            "parameters": [
+                "reactivation rate",
+                "initial interest level",
+                "follow-up response"
+            ],
+            "tools": [
+                "salesforce",
+                "hubspot marketing hub"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "engage through campaigns",
+            "responsibilities": "generating sales leads",
+            "objects": "leads",
+            "checklists": [
+                "1. design marketing campaigns tailored to target demographics,",
+                "2. execute campaigns via appropriate channels,",
+                "3. monitor engagement and interaction during the campaign"
+            ],
+            "type": "new",
+            "parameters": [
+                "freshness index",
+                "engagement rate",
+                "qualification speed"
+            ],
+            "tools": [
+                "mailchimp",
+                "adobe campaign"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "track lead sources",
+            "responsibilities": "generating sales leads",
+            "objects": "leads",
+            "checklists": [
+                "1. implement tracking mechanisms in all marketing materials,",
+                "2. collect data on lead origins,",
+                "3. analyze effectiveness of different lead sources"
+            ],
+            "type": "active",
+            "parameters": [
+                "progress tracking",
+                "conversion rate",
+                "interaction depth"
+            ],
+            "tools": [
+                "google analytics",
+                "hubspot crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "assess lead viability",
+            "responsibilities": "qualifying incoming leads",
+            "objects": "leads",
+            "checklists": [
+                "1. review lead information against qualification criteria,",
+                "2. determine the potential for conversion,",
+                "3. record viability assessment results"
+            ],
+            "type": "client",
+            "parameters": [
+                "client conversion rate",
+                "upsell rate",
+                "satisfaction level"
+            ],
+            "tools": [
+                "salesforce crm",
+                "zoho crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "prioritize based on potential",
+            "responsibilities": "qualifying incoming leads",
+            "objects": "leads",
+            "checklists": [
+                "1. score leads based on predefined metrics,",
+                "2. sort leads by score to prioritize outreach,",
+                "3. allocate resources according to lead priority"
+            ],
+            "type": "updated",
+            "parameters": [
+                "data accuracy",
+                "recency of interaction",
+                "relevance of information"
+            ],
+            "tools": [
+                "salesforce crm",
+                "microsoft excel"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "initiate contact",
+            "responsibilities": "qualifying incoming leads",
+            "objects": "leads",
+            "checklists": [
+                "1. prepare contact materials tailored to lead interests,",
+                "2. reach out via preferred communication method,",
+                "3. document interactions and responses"
+            ],
+            "type": "not relevant",
+            "parameters": [
+                "disqualification rate",
+                "reason analysis",
+                "follow-up actions"
+            ],
+            "tools": [
+                "salesforce crm",
+                "mailchimp"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "monitor sales funnel",
+            "responsibilities": "tracking lead conversion",
+            "objects": "leads",
+            "checklists": [
+                "1. set up monitoring tools for each stage of the sales funnel,",
+                "2. regularly review progression of leads through funnel,",
+                "3. adjust strategies based on conversion rates"
+            ],
+            "type": "cold",
+            "parameters": [
+                "reactivation rate",
+                "initial interest level",
+                "follow-up response"
+            ],
+            "tools": [
+                "hubspot crm",
+                "salesforce crm"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze conversion rates",
+            "responsibilities": "tracking lead conversion",
+            "objects": "leads",
+            "checklists": [
+                "1. collect data on lead responses and conversions,",
+                "2. calculate conversion percentages for different campaigns,",
+                "3. report findings to marketing and sales teams"
+            ],
+            "type": "new",
+            "parameters": [
+                "freshness index",
+                "engagement rate",
+                "qualification speed"
+            ],
+            "tools": [
+                "google analytics",
+                "tableau"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "refine sales tactics",
+            "responsibilities": "tracking lead conversion",
+            "objects": "leads",
+            "checklists": [
+                "1. review conversion rate findings,",
+                "2. identify areas for improvement in sales process,",
+                "3. implement new tactics and monitor results"
+            ],
+            "type": "active",
+            "parameters": [
+                "progress tracking",
+                "conversion rate",
+                "interaction depth"
+            ],
+            "tools": [
+                "mixpanel",
+                "optimizely"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "network at events",
+            "responsibilities": "establishing professional connections",
+            "objects": "connections",
+            "checklists": [
+                "1. identify relevant industry events and conferences,",
+                "2. prepare business cards and promotional materials,",
+                "3. actively engage with attendees and exchange contact information"
+            ],
+            "type": "personalized",
+            "parameters": [
+                "personalization effectiveness",
+                "response rate",
+                "engagement uplift"
+            ],
+            "tools": [
+                "eventbrite",
+                "canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "connect on social media",
+            "responsibilities": "establishing professional connections",
+            "objects": "connections",
+            "checklists": [
+                "1. identify key platforms for industry networking,",
+                "2. create engaging content and posts,",
+                "3. interact with followers and respond to comments to build connections"
+            ],
+            "type": "relevant",
+            "parameters": [
+                "relevance score",
+                "engagement level",
+                "conversion impact"
+            ],
+            "tools": [
+                "linkedin",
+                "twitter"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "foster industry relationships",
+            "responsibilities": "establishing professional connections",
+            "objects": "connections",
+            "checklists": [
+                "1. identify key industry leaders and influencers,",
+                "2. reach out for collaborations or endorsements,",
+                "3. maintain regular communication to strengthen relationships"
+            ],
+            "type": "old",
+            "parameters": [
+                "re-engagement success",
+                "historical value assessment",
+                "update needs"
+            ],
+            "tools": [
+                "linkedin",
+                "buzzsumo"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "regular check-ins",
+            "responsibilities": "maintaining ongoing relationships",
+            "objects": "connections",
+            "checklists": [
+                "1. schedule periodic meetings or calls,",
+                "2. discuss ongoing projects and potential opportunities,",
+                "3. document discussions and follow-up actions"
+            ],
+            "type": "personalized",
+            "parameters": [
+                "personalization effectiveness",
+                "response rate",
+                "engagement uplift"
+            ],
+            "tools": [
+                "google calendar",
+                "microsoft teams"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "update on relevant changes",
+            "responsibilities": "maintaining ongoing relationships",
+            "objects": "connections",
+            "checklists": [
+                "1. communicate any significant business or product updates,",
+                "2. use emails or newsletters to keep contacts informed,",
+                "3. ensure information is tailored to the interests of the audience"
+            ],
+            "type": "relevant",
+            "parameters": [
+                "relevance score",
+                "engagement level",
+                "conversion impact"
+            ],
+            "tools": [
+                "mailchimp",
+                "constant contact"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "provide consistent value",
+            "responsibilities": "maintaining ongoing relationships",
+            "objects": "connections",
+            "checklists": [
+                "1. share useful industry insights and resources,",
+                "2. offer assistance or advice when appropriate,",
+                "3. ensure interactions add tangible value to maintain engagement"
+            ],
+            "type": "old",
+            "parameters": [
+                "re-engagement success",
+                "historical value assessment",
+                "update needs"
+            ],
+            "tools": [
+                "hootsuite",
+                "feedly"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "identify key contacts",
+            "responsibilities": "prioritizing connection outreach",
+            "objects": "connections",
+            "checklists": [
+                "1. analyze contact list to identify high-value individuals,",
+                "2. categorize contacts based on potential business impact,",
+                "3. focus outreach efforts on these key contacts"
+            ],
+            "type": "personalized",
+            "parameters": [
+                "personalization effectiveness",
+                "response rate",
+                "engagement uplift"
+            ],
+            "tools": [
+                "salesforce crm",
+                "hubspot crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "customize communication",
+            "responsibilities": "prioritizing connection outreach",
+            "objects": "connections",
+            "checklists": [
+                "1. tailor messages based on the contact’s interests and past interactions,",
+                "2. use personalized emails or messages,",
+                "3. monitor responses to gauge the effectiveness of personalized outreach"
+            ],
+            "type": "relevant",
+            "parameters": [
+                "relevance score",
+                "engagement level",
+                "conversion impact"
+            ],
+            "tools": [
+                "mailchimp",
+                "hubspot marketing hub"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "schedule strategic meetings",
+            "responsibilities": "prioritizing connection outreach",
+            "objects": "connections",
+            "checklists": [
+                "1. identify objectives for each meeting,",
+                "2. coordinate schedules and send invites,",
+                "3. prepare agenda focused on strategic goals,",
+                "4. confirm attendance and set up meeting logistics"
+            ],
+            "type": "old",
+            "parameters": [
+                "re-engagement success",
+                "historical value assessment",
+                "update needs"
+            ],
+            "tools": [
+                "microsoft outlook",
+                "google calendar"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "design marketing content",
+            "responsibilities": "crafting promotional messages",
+            "objects": "messages",
+            "checklists": [
+                "1. develop content ideas that resonate with target demographics,",
+                "2. create engaging and visually appealing content,",
+                "3. review and revise content to ensure clarity and impact"
+            ],
+            "type": "received",
+            "parameters": [
+                "response rate",
+                "interaction quality",
+                "follow-up actions"
+            ],
+            "tools": [
+                "adobe creative cloud",
+                "canva"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "align with brand message",
+            "responsibilities": "crafting promotional messages",
+            "objects": "messages",
+            "checklists": [
+                "1. review brand guidelines and tone,",
+                "2. ensure all content reflects brand values and voice,",
+                "3. get approvals from brand management to maintain consistency"
+            ],
+            "type": "connection",
+            "parameters": [
+                "initial response quality",
+                "timeliness",
+                "conversion impact"
+            ],
+            "tools": [
+                "microsoft sharepoint",
+                "adobe experience manager"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "target audience needs",
+            "responsibilities": "crafting promotional messages",
+            "objects": "messages",
+            "checklists": [
+                "1. analyze audience data to understand preferences and needs,",
+                "2. tailor messages to address specific audience challenges,",
+                "3. create variations to cater to different segments"
+            ],
+            "type": "cold",
+            "parameters": [
+                "engagement rate",
+                "response quality",
+                "follow-up rate"
+            ],
+            "tools": [
+                "google analytics",
+                "hubspot crm"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "segment audience",
+            "responsibilities": "sending targeted communications",
+            "objects": "messages",
+            "checklists": [
+                "1. divide the audience based on demographics, psychographics, or behavior,",
+                "2. use marketing automation tools to manage segments,",
+                "3. continuously update segments based on new data"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "follow-up success rate",
+                "client feedback",
+                "deal closure rate"
+            ],
+            "tools": [
+                "hubspot crm",
+                "marketo"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "personalize messaging",
+            "responsibilities": "sending targeted communications",
+            "objects": "messages",
+            "checklists": [
+                "1. incorporate recipient names and relevant details in communications,",
+                "2. adjust content based on user behavior and past interactions,",
+                "3. ensure personalization is accurate and effective"
+            ],
+            "type": "presentation",
+            "parameters": [
+                "effectiveness rating",
+                "audience engagement",
+                "feedback quality"
+            ],
+            "tools": [
+                "mailchimp",
+                "hubspot marketing hub"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "schedule dispatches",
+            "responsibilities": "sending targeted communications",
+            "objects": "messages",
+            "checklists": [
+                "1. plan timing of communications to maximize impact,",
+                "2. use scheduling tools to automate dispatches,",
+                "3. monitor and adjust scheduling based on audience engagement"
+            ],
+            "type": "received",
+            "parameters": [
+                "response rate",
+                "interaction quality",
+                "follow-up actions"
+            ],
+            "tools": [
+                "hootsuite",
+                "buffer"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "track engagement",
+            "responsibilities": "analyzing message impact",
+            "objects": "messages",
+            "checklists": [
+                "1. set up metrics to measure interactions like clicks, shares, and views,",
+                "2. use analytics tools to gather data,",
+                "3. regularly review engagement reports"
+            ],
+            "type": "connection",
+            "parameters": [
+                "initial response quality",
+                "timeliness",
+                "conversion impact"
+            ],
+            "tools": [
+                "google analytics",
+                "sprout social"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "measure response rates",
+            "responsibilities": "analyzing message impact",
+            "objects": "messages",
+            "checklists": [
+                "1. define key performance indicators for response,",
+                "2. collect data on how many recipients respond to messages,",
+                "3. compare rates against industry benchmarks"
+            ],
+            "type": "cold",
+            "parameters": [
+                "engagement rate",
+                "response quality",
+                "follow-up rate"
+            ],
+            "tools": [
+                "google analytics",
+                "salesforce crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "adjust strategies based on analytics",
+            "responsibilities": "analyzing message impact",
+            "objects": "messages",
+            "checklists": [
+                "1. review analytics to identify successful and underperforming aspects,",
+                "2. brainstorm adjustments to improve message performance,",
+                "3. implement changes and monitor results"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "follow-up success rate",
+                "client feedback",
+                "deal closure rate"
+            ],
+            "tools": [
+                "google analytics",
+                "mixpanel"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "create email templates",
+            "responsibilities": "designing email campaigns",
+            "objects": "emails",
+            "checklists": [
+                "1. choose a template design that aligns with brand aesthetics,",
+                "2. incorporate elements such as headers, footers, and call-to-actions,",
+                "3. ensure templates are mobile-responsive"
+            ],
+            "type": "cold",
+            "parameters": [
+                "open rate",
+                "click-through rate",
+                "unsubscribe rate"
+            ],
+            "tools": [
+                "mailchimp",
+                "constant contact"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "develop content strategy",
+            "responsibilities": "designing email campaigns",
+            "objects": "emails",
+            "checklists": [
+                "1. define key messages and themes for the campaign,",
+                "2. plan content types and frequency,",
+                "3. align content with overall marketing objectives"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "response rate",
+                "engagement depth",
+                "conversion success"
+            ],
+            "tools": [
+                "hubspot marketing hub",
+                "hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "set campaign goals",
+            "responsibilities": "designing email campaigns",
+            "objects": "emails",
+            "checklists": [
+                "1. identify measurable objectives such as open rates, click-through rates,",
+                "2. set realistic targets based on past performance,",
+                "3. ensure goals are specific, measurable, and timely"
+            ],
+            "type": "presentation",
+            "parameters": [
+                "audience reach",
+                "engagement score",
+                "feedback quality"
+            ],
+            "tools": [
+                "google analytics",
+                "salesforce pardot"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "collect response data",
+            "responsibilities": "analyzing email responses",
+            "objects": "emails",
+            "checklists": [
+                "1. use email marketing tools to track opens, clicks, and conversions,",
+                "2. compile data for analysis,",
+                "3. store data securely for future reference"
+            ],
+            "type": "cold",
+            "parameters": [
+                "open rate",
+                "click-through rate",
+                "unsubscribe rate"
+            ],
+            "tools": [
+                "mailchimp",
+                "campaign monitor"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "gauge interest levels",
+            "responsibilities": "analyzing email responses",
+            "objects": "emails",
+            "checklists": [
+                "1. analyze which parts of the email receive the most engagement,",
+                "2. segment responses by demographic data,",
+                "3. use insights to identify trends in subscriber interest"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "response rate",
+                "engagement depth",
+                "conversion success"
+            ],
+            "tools": [
+                "google analytics",
+                "hubspot crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "modify future emails based on feedback",
+            "responsibilities": "analyzing email responses",
+            "objects": "emails",
+            "checklists": [
+                "1. review subscriber feedback and behavior patterns,",
+                "2. adjust email design, content, and call-to-action based on feedback,",
+                "3. test changes in small segments before full rollout"
+            ],
+            "type": "presentation",
+            "parameters": [
+                "audience reach",
+                "engagement score",
+                "feedback quality"
+            ],
+            "tools": [
+                "optimizely",
+                "mailchimp"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "categorize subscribers",
+            "responsibilities": "segmenting email lists",
+            "objects": "emails",
+            "checklists": [
+                "1. analyze subscriber data to identify distinct groups,",
+                "2. create categories based on criteria like purchase history or engagement level,",
+                "3. label and organize categories in database"
+            ],
+            "type": "cold",
+            "parameters": [
+                "open rate",
+                "click-through rate",
+                "unsubscribe rate"
+            ],
+            "tools": [
+                "salesforce crm",
+                "hubspot marketing hub"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "tailor messages to segments",
+            "responsibilities": "segmenting email lists",
+            "objects": "emails",
+            "checklists": [
+                "1. develop customized content that appeals to each segment,",
+                "2. use language and offers that resonate with the segment's preferences,",
+                "3. create variations to test within segments"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "response rate",
+                "engagement depth",
+                "conversion success"
+            ],
+            "tools": [
+                "adobe experience manager",
+                "marketo"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage list hygiene",
+            "responsibilities": "segmenting email lists",
+            "objects": "emails",
+            "checklists": [
+                "1. regularly review the list to remove inactive subscribers,",
+                "2. update subscriber information to avoid duplicates,",
+                "3. ensure compliance with data protection regulations"
+            ],
+            "type": "presentation",
+            "parameters": [
+                "audience reach",
+                "engagement score",
+                "feedback quality"
+            ],
+            "tools": [
+                "hubspot crm",
+                "constant contact"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "schedule events",
+            "responsibilities": "planning promotional events",
+            "objects": "promotions",
+            "checklists": [
+                "1. identify optimal dates and times for events,",
+                "2. check availability for desired venues,",
+                "3. secure bookings and confirm event dates"
+            ],
+            "type": "informational",
+            "parameters": [
+                "reach",
+                "engagement rate",
+                "knowledge uplift"
+            ],
+            "tools": [
+                "eventbrite",
+                "google calendar"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "coordinate with vendors",
+            "responsibilities": "planning promotional events",
+            "objects": "promotions",
+            "checklists": [
+                "1. select vendors based on budget and quality requirements,",
+                "2. negotiate contracts and terms,",
+                "3. finalize agreements and monitor compliance"
+            ],
+            "type": "trial-based",
+            "parameters": [
+                "conversion rate",
+                "trial success rate",
+                "subsequent purchase rate"
+            ],
+            "tools": [
+                "sap ariba",
+                "docuSign"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "market to target audience",
+            "responsibilities": "planning promotional events",
+            "objects": "promotions",
+            "checklists": [
+                "1. develop a marketing plan that targets the desired demographic,",
+                "2. utilize various channels for promotion,",
+                "3. monitor response rates and adjust tactics as needed"
+            ],
+            "type": "discounts",
+            "parameters": [
+                "redemption rate",
+                "sales increase",
+                "customer acquisition cost"
+            ],
+            "tools": [
+                "hubspot marketing hub",
+                "google analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "measure attendance",
+            "responsibilities": "evaluating promotion effectiveness",
+            "objects": "promotions",
+            "checklists": [
+                "1. set up systems to accurately count event attendees,",
+                "2. compare attendance against targets,",
+                "3. analyze deviations and gather insights for future events"
+            ],
+            "type": "interactive",
+            "parameters": [
+                "participant count",
+                "engagement depth",
+                "conversion rate"
+            ],
+            "tools": [
+                "eventbrite",
+                "google sheets"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze engagement",
+            "responsibilities": "evaluating promotion effectiveness",
+            "objects": "promotions",
+            "checklists": [
+                "1. track participant interaction during the event,",
+                "2. use feedback forms and digital tools to gauge engagement,",
+                "3. compile and review engagement data"
+            ],
+            "type": "informational",
+            "parameters": [
+                "reach",
+                "engagement rate",
+                "knowledge uplift"
+            ],
+            "tools": [
+                "surveymonkey",
+                "tableau"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "assess ROI",
+            "responsibilities": "evaluating promotion effectiveness",
+            "objects": "promotions",
+            "checklists": [
+                "1. calculate total costs versus profits from the event,",
+                "2. evaluate both direct and indirect returns,",
+                "3. report ROI to stakeholders and use findings for future planning"
+            ],
+            "type": "trial-based",
+            "parameters": [
+                "conversion rate",
+                "trial success rate",
+                "subsequent purchase rate"
+            ],
+            "tools": [
+                "microsoft excel",
+                "quickbooks"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "adjust offers based on customer feedback",
+            "responsibilities": "tailoring promotion strategies",
+            "objects": "promotions",
+            "checklists": [
+                "1. review customer feedback on previous offers,",
+                "2. identify trends and areas for improvement,",
+                "3. implement changes in new promotional offers"
+            ],
+            "type": "discounts",
+            "parameters": [
+                "redemption rate",
+                "sales increase",
+                "customer acquisition cost"
+            ],
+            "tools": [
+                "salesforce crm",
+                "hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "customize event themes",
+            "responsibilities": "tailoring promotion strategies",
+            "objects": "promotions",
+            "checklists": [
+                "1. design event themes that resonate with the target audience,",
+                "2. create unique, memorable branding for each event,",
+                "3. ensure theme consistency across all promotional materials"
+            ],
+            "type": "interactive",
+            "parameters": [
+                "participant count",
+                "engagement depth",
+                "conversion rate"
+            ],
+            "tools": [
+                "adobe creative suite",
+                "canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "adapt marketing materials",
+            "responsibilities": "tailoring promotion strategies",
+            "objects": "promotions",
+            "checklists": [
+                "1. revise marketing materials to reflect updated promotional strategies,",
+                "2. ensure all materials align with current branding and messaging,",
+                "3. distribute updated materials effectively"
+            ],
+            "type": "informational",
+            "parameters": [
+                "reach",
+                "engagement rate",
+                "knowledge uplift"
+            ],
+            "tools": [
+                "adobe indesign",
+                "mailchimp"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "identify client goals",
+            "responsibilities": "assessing client requirements",
+            "objects": "needs",
+            "checklists": [
+                "1. conduct meetings to discuss client's long-term objectives,",
+                "2. document specific goals and milestones,",
+                "3. confirm understanding and agreement on goals"
+            ],
+            "type": "immediate",
+            "parameters": [
+                "urgency identification",
+                "response time",
+                "resolution effectiveness"
+            ],
+            "tools": [
+                "microsoft teams",
+                "google docs"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "determine service needs",
+            "responsibilities": "assessing client requirements",
+            "objects": "needs",
+            "checklists": [
+                "1. analyze client’s current operations and pain points,",
+                "2. identify gaps in services provided,",
+                "3. document detailed service requirements"
+            ],
+            "type": "long-term",
+            "parameters": [
+                "planning accuracy",
+                "resource allocation efficiency",
+                "goal attainment"
+            ],
+            "tools": [
+                "microsoft power bi",
+                "salesforce"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "recommend solutions",
+            "responsibilities": "assessing client requirements",
+            "objects": "needs",
+            "checklists": [
+                "1. develop tailored solutions based on identified needs,",
+                "2. present options to client with pros and cons,",
+                "3. adjust recommendations based on client feedback"
+            ],
+            "type": "position",
+            "parameters": [
+                "demand accuracy",
+                "candidate fit",
+                "fulfillment duration"
+            ],
+            "tools": [
+                "microsoft powerpoint",
+                "google slides"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "address immediate concerns",
+            "responsibilities": "prioritizing urgent needs",
+            "objects": "needs",
+            "checklists": [
+                "1. identify and categorize immediate issues,",
+                "2. deploy quick response teams or resources,",
+                "3. document actions taken and results"
+            ],
+            "type": "skill",
+            "parameters": [
+                "skill gap analysis",
+                "training effectiveness",
+                "performance improvement"
+            ],
+            "tools": [
+                "atlassian jira",
+                "microsoft teams"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "allocate resources efficiently",
+            "responsibilities": "prioritizing urgent needs",
+            "objects": "needs",
+            "checklists": [
+                "1. review available resources and current allocations,",
+                "2. prioritize resource distribution based on urgency,",
+                "3. optimize resource use to ensure maximum impact"
+            ],
+            "type": "replacement",
+            "parameters": [
+                "replacement time",
+                "cost efficiency",
+                "performance continuity"
+            ],
+            "tools": [
+                "microsoft project",
+                "smartsheet"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage crisis situations",
+            "responsibilities": "prioritizing urgent needs",
+            "objects": "needs",
+            "checklists": [
+                "1. establish a crisis management team,",
+                "2. develop and follow a crisis response plan,",
+                "3. communicate effectively with all stakeholders during the crisis"
+            ],
+            "type": "project",
+            "parameters": [
+                "project alignment accuracy",
+                "resource utilization",
+                "outcome success"
+            ],
+            "tools": [
+                "everbridge",
+                "slack"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "predict market trends",
+            "responsibilities": "forecasting future needs",
+            "objects": "needs",
+            "checklists": [
+                "1. analyze historical market data and trends,",
+                "2. use predictive modeling tools,",
+                "3. report on predicted market movements and implications"
+            ],
+            "type": "immediate",
+            "parameters": [
+                "urgency identification",
+                "response time",
+                "resolution effectiveness"
+            ],
+            "tools": [
+                "ibm spss",
+                "tableau"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "anticipate client demands",
+            "responsibilities": "forecasting future needs",
+            "objects": "needs",
+            "checklists": [
+                "1. conduct trend analysis on client's industry,",
+                "2. survey clients for future needs,",
+                "3. compile findings to predict changes in client requirements"
+            ],
+            "type": "long-term",
+            "parameters": [
+                "planning accuracy",
+                "resource allocation efficiency",
+                "goal attainment"
+            ],
+            "tools": [
+                "google surveys",
+                "microsoft power bi"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "plan resource allocation",
+            "responsibilities": "forecasting future needs",
+            "objects": "needs",
+            "checklists": [
+                "1. estimate future resource requirements based on forecasts,",
+                "2. plan for scaling up or down resources as needed,",
+                "3. prepare budget allocations for future periods"
+            ],
+            "type": "position",
+            "parameters": [
+                "demand accuracy",
+                "candidate fit",
+                "fulfillment duration"
+            ],
+            "tools": [
+                "oracle netsuite",
+                "sap erp"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage internal communications",
+            "responsibilities": "coordinating communication efforts",
+            "objects": "communications",
+            "checklists": [
+                "1. establish clear communication protocols,",
+                "2. use internal communication tools effectively,",
+                "3. regularly update teams on key information"
+            ],
+            "type": "first connection",
+            "parameters": [
+                "contact quality",
+                "initial response time",
+                "relationship potential"
+            ],
+            "tools": [
+                "microsoft teams",
+                "slack"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "oversee external media interactions",
+            "responsibilities": "coordinating communication efforts",
+            "objects": "communications",
+            "checklists": [
+                "1. monitor and guide interactions with the media,",
+                "2. train spokespersons on company messaging,",
+                "3. review external communications for adherence to policy"
+            ],
+            "type": "basic correspondence",
+            "parameters": [
+                "message clarity",
+                "response timeliness",
+                "issue resolution rate"
+            ],
+            "tools": [
+                "cision",
+                "hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "ensure message consistency",
+            "responsibilities": "coordinating communication efforts",
+            "objects": "communications",
+            "checklists": [
+                "1. create a style guide for company communications,",
+                "2. review all outgoing messages for consistency,",
+                "3. train staff on the importance of maintaining a unified voice"
+            ],
+            "type": "event",
+            "parameters": [
+                "attendance rate",
+                "participant satisfaction",
+                "follow-up opportunities"
+            ],
+            "tools": [
+                "adobe indesign",
+                "microsoft word"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "upgrade systems",
+            "responsibilities": "enhancing communication channels",
+            "objects": "communications",
+            "checklists": [
+                "1. evaluate current communication infrastructure,",
+                "2. identify technology upgrades needed,",
+                "3. implement new systems and ensure integration"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "follow-up timeliness",
+                "issue resolution success",
+                "client retention impact"
+            ],
+            "tools": [
+                "cisco systems",
+                "zoom"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "introduce new platforms",
+            "responsibilities": "enhancing communication channels",
+            "objects": "communications",
+            "checklists": [
+                "1. research emerging communication platforms,",
+                "2. assess suitability for company needs,",
+                "3. roll out new platforms and train users"
+            ],
+            "type": "presentation",
+            "parameters": [
+                "audience engagement",
+                "clarity of information",
+                "actionable outcomes"
+            ],
+            "tools": [
+                "slack",
+                "discord"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "improve user experience",
+            "responsibilities": "enhancing communication channels",
+            "objects": "communications",
+            "checklists": [
+                "1. gather feedback on current system usability,",
+                "2. identify areas for improvement,",
+                "3. implement changes to enhance ease of use and accessibility"
+            ],
+            "type": "first connection",
+            "parameters": [
+                "contact quality",
+                "initial response time",
+                "relationship potential"
+            ],
+            "tools": [
+                "usabilityhub",
+                "hotjar"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "simplify message flow",
+            "responsibilities": "streamlining internal communications",
+            "objects": "communications",
+            "checklists": [
+                "1. map current communication flows,",
+                "2. identify bottlenecks or redundancies,",
+                "3. redesign workflows to streamline communication"
+            ],
+            "type": "basic correspondence",
+            "parameters": [
+                "message clarity",
+                "response timeliness",
+                "issue resolution rate"
+            ],
+            "tools": [
+                "microsoft visio",
+                "lucidchart"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "enhance information sharing",
+            "responsibilities": "streamlining internal communications",
+            "objects": "communications",
+            "checklists": [
+                "1. establish a central repository for important documents,",
+                "2. implement tools for easier access and distribution,",
+                "3. encourage an open culture of information sharing"
+            ],
+            "type": "event",
+            "parameters": [
+                "attendance rate",
+                "participant satisfaction",
+                "follow-up opportunities"
+            ],
+            "tools": [
+                "google drive",
+                "microsoft sharepoint"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "promote team collaboration",
+            "responsibilities": "streamlining internal communications",
+            "objects": "communications",
+            "checklists": [
+                "1. introduce collaborative tools and platforms,",
+                "2. organize regular team meetings and updates,",
+                "3. foster an environment that supports teamwork and joint problem-solving"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "follow-up timeliness",
+                "issue resolution success",
+                "client retention impact"
+            ],
+            "tools": [
+                "slack",
+                "microsoft teams"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "plan event logistics",
+            "responsibilities": "organizing networking events",
+            "objects": "events",
+            "checklists": [
+                "1. define the scope and format of the event,",
+                "2. determine necessary logistical requirements,",
+                "3. create a detailed timeline for event planning"
+            ],
+            "type": "scheduled",
+            "parameters": [
+                "scheduling efficiency",
+                "participant readiness",
+                "agenda relevance"
+            ],
+            "tools": [
+                "microsoft project",
+                "asana"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "invite participants",
+            "responsibilities": "organizing networking events",
+            "objects": "events",
+            "checklists": [
+                "1. compile a list of potential attendees,",
+                "2. send out invitations via email or physical mail,",
+                "3. track RSVPs and manage follow-ups"
+            ],
+            "type": "held",
+            "parameters": [
+                "attendance rate",
+                "participant engagement",
+                "feedback quality"
+            ],
+            "tools": [
+                "eventbrite",
+                "mailchimp"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "coordinate with hosts",
+            "responsibilities": "organizing networking events",
+            "objects": "events",
+            "checklists": [
+                "1. select and confirm host or speaker roles,",
+                "2. discuss and finalize the event schedule with hosts,",
+                "3. ensure hosts have necessary support and materials"
+            ],
+            "type": "transferred",
+            "parameters": [
+                "transfer reasons",
+                "re-scheduling efficiency",
+                "participant notification effectiveness"
+            ],
+            "tools": [
+                "google calendar",
+                "doodle"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage schedules",
+            "responsibilities": "coordinating event logistics",
+            "objects": "events",
+            "checklists": [
+                "1. develop a comprehensive event schedule,",
+                "2. coordinate timing with all participants and vendors,",
+                "3. adjust schedules as needed for optimal flow"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "follow-up action rate",
+                "participant conversion",
+                "feedback implementation"
+            ],
+            "tools": [
+                "asana",
+                "trello"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "oversee venue arrangements",
+            "responsibilities": "coordinating event logistics",
+            "objects": "events",
+            "checklists": [
+                "1. finalize the booking of the venue,",
+                "2. arrange venue layout to suit event needs,",
+                "3. confirm technical and facility requirements are met"
+            ],
+            "type": "ignored",
+            "parameters": [
+                "non-attendance rate",
+                "reasons for ignoring",
+                "re-engagement success"
+            ],
+            "tools": [
+                "cvent",
+                "venuefinder"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "handle onsite requirements",
+            "responsibilities": "coordinating event logistics",
+            "objects": "events",
+            "checklists": [
+                "1. ensure all necessary materials and equipment are available onsite,",
+                "2. coordinate staff and volunteer assignments,",
+                "3. address any immediate issues during the event"
+            ],
+            "type": "scheduled",
+            "parameters": [
+                "scheduling efficiency",
+                "participant readiness",
+                "agenda relevance"
+            ],
+            "tools": [
+                "smartsheet",
+                "volunteerlocal"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "gather participant feedback",
+            "responsibilities": "evaluating event success",
+            "objects": "events",
+            "checklists": [
+                "1. distribute feedback forms or surveys at the event,",
+                "2. collect responses at the end of the event,",
+                "3. compile feedback for analysis"
+            ],
+            "type": "held",
+            "parameters": [
+                "attendance rate",
+                "participant engagement",
+                "feedback quality"
+            ],
+            "tools": [
+                "surveymonkey",
+                "google forms"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "analyze event outcomes",
+            "responsibilities": "evaluating event success",
+            "objects": "events",
+            "checklists": [
+                "1. review collected feedback for positive and negative trends,",
+                "2. measure event success against predefined goals,",
+                "3. identify areas for improvement"
+            ],
+            "type": "transferred",
+            "parameters": [
+                "transfer reasons",
+                "re-scheduling efficiency",
+                "participant notification effectiveness"
+            ],
+            "tools": [
+                "tableau",
+                "microsoft excel"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "report findings to stakeholders",
+            "responsibilities": "evaluating event success",
+            "objects": "events",
+            "checklists": [
+                "1. prepare a detailed report including feedback and outcomes,",
+                "2. highlight key successes and challenges,",
+                "3. present findings in a meeting with stakeholders"
+            ],
+            "type": "follow up",
+            "parameters": [
+                "follow-up action rate",
+                "participant conversion",
+                "feedback implementation"
+            ],
+            "tools": [
+                "microsoft powerpoint",
+                "adobe pdf"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "deploy surveys",
+            "responsibilities": "collecting customer feedback",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. design surveys with relevant and concise questions,",
+                "2. choose appropriate distribution channels (email, social media, etc.),",
+                "3. ensure surveys are mobile-friendly and easy to complete"
+            ],
+            "type": "direct",
+            "parameters": [
+                "feedback authenticity",
+                "response action rate",
+                "issue identification"
+            ],
+            "tools": [
+                "surveymonkey",
+                "google forms"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "conduct interviews",
+            "responsibilities": "collecting customer feedback",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. prepare a set of open-ended questions,",
+                "2. schedule and conduct interviews with selected customers,",
+                "3. record responses accurately for further analysis"
+            ],
+            "type": "in-app",
+            "parameters": [
+                "user interaction rate",
+                "satisfaction rating",
+                "improvement suggestions"
+            ],
+            "tools": [
+                "zoom",
+                "microsoft teams"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "gather data from customer interactions",
+            "responsibilities": "collecting customer feedback",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. use CRM tools to track all customer interactions,",
+                "2. categorize interactions by type and outcome,",
+                "3. extract actionable data for analysis"
+            ],
+            "type": "live chat",
+            "parameters": [
+                "response time",
+                "resolution rate",
+                "customer satisfaction"
+            ],
+            "tools": [
+                "salesforce",
+                "hubspot crm"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "interpret responses",
+            "responsibilities": "analyzing feedback data",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. collate feedback from various sources,",
+                "2. use qualitative analysis to understand customer sentiments,",
+                "3. summarize key messages from feedback"
+            ],
+            "type": "product/service",
+            "parameters": [
+                "quality ratings",
+                "improvement suggestions",
+                "re-purchase rate"
+            ],
+            "tools": [
+                "nvivo",
+                "atlas.ti"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "identify patterns",
+            "responsibilities": "analyzing feedback data",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. analyze feedback data to find recurring themes or issues,",
+                "2. use data visualization tools to highlight patterns,",
+                "3. document findings for team review"
+            ],
+            "type": "price",
+            "parameters": [
+                "price sensitivity feedback",
+                "competitor price comparison",
+                "discount responsiveness"
+            ],
+            "tools": [
+                "tableau",
+                "microsoft power bi"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "report insights",
+            "responsibilities": "analyzing feedback data",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. compile insights into a comprehensive report,",
+                "2. include visual aids like charts and graphs,",
+                "3. present report to management and stakeholders"
+            ],
+            "type": "direct",
+            "parameters": [
+                "feedback authenticity",
+                "response action rate",
+                "issue identification"
+            ],
+            "tools": [
+                "microsoft powerpoint",
+                "adobe indesign"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "integrate customer suggestions",
+            "responsibilities": "implementing feedback improvements",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. review customer feedback for improvement ideas,",
+                "2. prioritize suggestions based on feasibility and impact,",
+                "3. plan the integration of these suggestions into current offerings"
+            ],
+            "type": "in-app",
+            "parameters": [
+                "user interaction rate",
+                "satisfaction rating",
+                "improvement suggestions"
+            ],
+            "tools": [
+                "trello",
+                "asana"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "adjust products/services",
+            "responsibilities": "implementing feedback improvements",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. evaluate existing products/services against feedback,",
+                "2. make necessary adjustments to better meet customer needs,",
+                "3. communicate changes to customers and staff"
+            ],
+            "type": "live chat",
+            "parameters": [
+                "response time",
+                "resolution rate",
+                "customer satisfaction"
+            ],
+            "tools": [
+                "zendesk",
+                "slack"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "monitor impact of changes",
+            "responsibilities": "implementing feedback improvements",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. set up metrics to assess the effectiveness of recent changes,",
+                "2. collect data on customer satisfaction and usage,",
+                "3. adjust strategies based on new feedback"
+            ],
+            "type": "product/service",
+            "parameters": [
+                "quality ratings",
+                "improvement suggestions",
+                "re-purchase rate"
+            ],
+            "tools": [
+                "google analytics",
+                "mixpanel"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "compile data",
+            "responsibilities": "generating performance reports",
+            "objects": "reports",
+            "checklists": [
+                "1. gather relevant data from multiple sources,",
+                "2. organize data into manageable categories,",
+                "3. use software tools to consolidate data for analysis"
+            ],
+            "type": "daily",
+            "parameters": [
+                "data accuracy",
+                "timeliness",
+                "actionable insights"
+            ],
+            "tools": [
+                "microsoft excel",
+                "tableau"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "create summaries",
+            "responsibilities": "generating performance reports",
+            "objects": "reports",
+            "checklists": [
+                "1. distill compiled data into key points,",
+                "2. write concise summaries highlighting major findings,",
+                "3. format summaries for clarity and readability"
+            ],
+            "type": "monthly",
+            "parameters": [
+                "trend analysis",
+                "performance metrics",
+                "strategic adjustments"
+            ],
+            "tools": [
+                "microsoft word",
+                "google docs"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "highlight key results",
+            "responsibilities": "generating performance reports",
+            "objects": "reports",
+            "checklists": [
+                "1. identify and emphasize the most significant results,",
+                "2. use charts and graphs to visually represent key data,",
+                "3. ensure highlights align with organizational goals"
+            ],
+            "type": "by countries",
+            "parameters": [
+                "regional performance",
+                "market trends",
+                "growth opportunities"
+            ],
+            "tools": [
+                "microsoft power bi",
+                "adobe illustrator"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "interpret statistics",
+            "responsibilities": "analyzing report data",
+            "objects": "reports",
+            "checklists": [
+                "1. apply statistical methods to analyze report data,",
+                "2. use analytics tools to aid in interpretation,",
+                "3. document significant statistical findings"
+            ],
+            "type": "by industries",
+            "parameters": [
+                "industry benchmarks",
+                "competitive analysis",
+                "market positioning"
+            ],
+            "tools": [
+                "spss",
+                "r studio"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "draw conclusions",
+            "responsibilities": "analyzing report data",
+            "objects": "reports",
+            "checklists": [
+                "1. review analyzed data to identify trends and outliers,",
+                "2. formulate conclusions based on data interpretation,",
+                "3. ensure conclusions are supported by data evidence"
+            ],
+            "type": "by manager",
+            "parameters": [
+                "managerial effectiveness",
+                "team performance",
+                "operational insights"
+            ],
+            "tools": [
+                "python (pandas",
+                "numpy)",
+                "sas"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "make informed decisions",
+            "responsibilities": "analyzing report data",
+            "objects": "reports",
+            "checklists": [
+                "1. use conclusions from the data to propose actions,",
+                "2. discuss potential decisions with team members,",
+                "3. finalize decisions based on collective input and data insights"
+            ],
+            "type": "by event",
+            "parameters": [
+                "event outcomes",
+                "ROI measurement",
+                "future recommendations"
+            ],
+            "tools": [
+                "slack",
+                "microsoft teams"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "share insights with stakeholders",
+            "responsibilities": "distributing reports internally",
+            "objects": "reports",
+            "checklists": [
+                "1. prepare presentation materials based on report findings,",
+                "2. schedule meetings to discuss insights with stakeholders,",
+                "3. deliver presentations and facilitate discussion"
+            ],
+            "type": "daily",
+            "parameters": [
+                "data accuracy",
+                "timeliness",
+                "actionable insights"
+            ],
+            "tools": [
+                "microsoft powerpoint",
+                "prezi"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "provide actionable recommendations",
+            "responsibilities": "distributing reports internally",
+            "objects": "reports",
+            "checklists": [
+                "1. formulate practical steps based on report conclusions,",
+                "2. tailor recommendations to specific departmental needs,",
+                "3. ensure recommendations are clear and feasible"
+            ],
+            "type": "monthly",
+            "parameters": [
+                "trend analysis",
+                "performance metrics",
+                "strategic adjustments"
+            ],
+            "tools": [
+                "asana",
+                "smartsheet"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "maintain records",
+            "responsibilities": "distributing reports internally",
+            "objects": "reports",
+            "checklists": [
+                "1. archive all generated reports and related communications,",
+                "2. categorize and index reports for easy retrieval,",
+                "3. ensure compliance with data management policies"
+            ],
+            "type": "by countries",
+            "parameters": [
+                "regional performance",
+                "market trends",
+                "growth opportunities"
+            ],
+            "tools": [
+                "dropbox",
+                "google drive"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "ensure data accuracy",
+            "responsibilities": "maintaining data integrity",
+            "objects": "databases",
+            "checklists": [
+                "1. conduct audits to identify any discrepancies,",
+                "2. cross-verify data entries with original sources,",
+                "3. correct any errors found to maintain accuracy"
+            ],
+            "type": "operational",
+            "parameters": [
+                "data integrity",
+                "access speed",
+                "update frequency"
+            ],
+            "tools": [
+                "acl analytics",
+                "ibm infosphere information server"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "perform regular backups",
+            "responsibilities": "maintaining data integrity",
+            "objects": "databases",
+            "checklists": [
+                "1. schedule automatic backup processes,",
+                "2. verify backups are complete and error-free,",
+                "3. store backups in secure, off-site locations"
+            ],
+            "type": "analytical",
+            "parameters": [
+                "query performance",
+                "insight generation rate",
+                "data coverage"
+            ],
+            "tools": [
+                "acronis true image",
+                "veeam"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "update records as needed",
+            "responsibilities": "maintaining data integrity",
+            "objects": "databases",
+            "checklists": [
+                "1. review records periodically for updates,",
+                "2. apply changes based on recent data or corrections,",
+                "3. log all updates for tracking purposes"
+            ],
+            "type": "operational",
+            "parameters": [
+                "data integrity",
+                "access speed",
+                "update frequency"
+            ],
+            "tools": [
+                "microsoft access",
+                "google sheets"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "modify information",
+            "responsibilities": "updating database entries",
+            "objects": "databases",
+            "checklists": [
+                "1. identify records requiring modification,",
+                "2. make changes accurately and promptly,",
+                "3. verify that modifications are correct and complete"
+            ],
+            "type": "analytical",
+            "parameters": [
+                "query performance",
+                "insight generation rate",
+                "data coverage"
+            ],
+            "tools": [
+                "oracle database",
+                "mysql"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "add new entries",
+            "responsibilities": "updating database entries",
+            "objects": "databases",
+            "checklists": [
+                "1. collect all necessary information for new records,",
+                "2. enter data into the appropriate database fields,",
+                "3. confirm that all new entries are complete and accurately inputted"
+            ],
+            "type": "operational",
+            "parameters": [
+                "data integrity",
+                "access speed",
+                "update frequency"
+            ],
+            "tools": [
+                "salesforce",
+                "zoho crm"
+            ],
+            "complexity": "low"
+        },
+        {
+            "task_name": "remove outdated data",
+            "responsibilities": "updating database entries",
+            "objects": "databases",
+            "checklists": [
+                "1. identify data that is no longer relevant or necessary,",
+                "2. delete outdated information securely,",
+                "3. confirm that deletions do not affect database integrity"
+            ],
+            "type": "analytical",
+            "parameters": [
+                "query performance",
+                "insight generation rate",
+                "data coverage"
+            ],
+            "tools": [
+                "microsoft sql server",
+                "mongodb"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "implement access controls",
+            "responsibilities": "securing database access",
+            "objects": "databases",
+            "checklists": [
+                "1. define access levels based on user roles,",
+                "2. configure database permissions accordingly,",
+                "3. regularly review and adjust access controls as needed"
+            ],
+            "type": "operational",
+            "parameters": [
+                "data integrity",
+                "access speed",
+                "update frequency"
+            ],
+            "tools": [
+                "apache hadoop",
+                "cassandra"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "monitor usage",
+            "responsibilities": "securing database access",
+            "objects": "databases",
+            "checklists": [
+                "1. use monitoring tools to track who accesses the database and when,",
+                "2. review access logs regularly,",
+                "3. investigate any unusual or unauthorized access"
+            ],
+            "type": "analytical",
+            "parameters": [
+                "query performance",
+                "insight generation rate",
+                "data coverage"
+            ],
+            "tools": [
+                "splunk",
+                "oracle audit vault"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "enforce security protocols",
+            "responsibilities": "securing database access",
+            "objects": "databases",
+            "checklists": [
+                "1. establish and communicate security guidelines,",
+                "2. ensure all users follow established protocols,",
+                "3. conduct training sessions on security best practices"
+            ],
+            "type": "operational",
+            "parameters": [
+                "data integrity",
+                "access speed",
+                "update frequency"
+            ],
+            "tools": [
+                "sophos",
+                "norton"
+            ],
+            "complexity": "medium"
+        }
+    ]
+}

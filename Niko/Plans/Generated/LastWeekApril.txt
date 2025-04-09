@@ -1,0 +1,411 @@
+Here's a thinking process to systematize the provided text:
+
+Understand the Goal: The user wants to "systematize" a large block of seemingly raw notes, ideas, tasks, and thoughts. This means organizing it into a logical structure, identifying key themes, and making it more understandable and actionable.
+
+Initial Scan & Identify Major Themes: Read through the entire text quickly to get a general sense of the topics. I see recurring themes like:
+
+AI (Models, Learning, Integration, Tools like GPT-4o, Gemini, Vertex AI)
+MCPs (Model Context Protocol) - integration, servers, library
+Lead Generation (LeadGen tool, LinkedIn, B2B, automation)
+CRM (Development, Laravel, HubSpot integration, structure)
+Desktop App/Environment (Combining tools, communication hub)
+Learning/Training (Employees, AI, exams, materials)
+Project Management/Task Management (Notion, AirTable, templates, workflows)
+Recruiting/HR (Interviews, CVs, onboarding, salaries, firing)
+Specific Projects (Exam App, Inner Clients like oa-i.com, lg-n.com)
+Personal Tasks (Apartment prep, errands, events, learning)
+Company Structure/Strategy (Regeneration, workflows, roles, data flow)
+SEO/Content (Keywords, strategy, website content)
+Tools (Specific mentions like Cursor, SupaBase, Discord, Google Drive, Dropbox, etc.)
+People/Calls (Lilia, Recruiters, Dima, Polina, Artyom, Sales)
+Choose a High-Level Structure: A good way to organize this might be by functional area or project type. Some potential top-level categories:
+
+AI Development & Exploration
+Lead Generation & Sales
+CRM & Tooling Development
+Project Management & Workflow
+Employee Management & Training
+Specific Projects
+Personal Tasks
+Company Strategy & Administration
+Process Section by Section (or Group Related Items): Go through the original text again, assigning each point or related group of points to one of the chosen categories.
+
+MCPs and Tools Integration: Belongs to CRM & Tooling Development or possibly AI Development. Let's put it under Tooling/CRM for now, specifically relating to automation.
+Learning ExPloaring AI: Clearly AI Development & Exploration.
+App (New Product - Desktop App): This is a major project. Create a Specific Projects category or a dedicated Desktop App Development category. Let's use Desktop App Development for clarity. Include all sub-points related to it (Hub, connections, environment tasks).
+CRM Development: Fits perfectly into CRM & Tooling Development.
+WorkDay Flow (Calls): Could be Project Management & Workflow or Employee Management. Let's put specific calls under the relevant project/area if possible (Lilia - Extension development? Recruiters - Recruiting). General workflow ideas go to Project Management & Workflow.
+Project Management in Our Sphere: Project Management & Workflow.
+SEO: Lead Generation & Sales or perhaps Content & Marketing. Let's make a Marketing & Content category.
+LLM (Match MCP, Closed Library): AI Development & Exploration and Project Management & Workflow (task library).
+Explore AI (Gemini, NotebookLM, Automation): AI Development & Exploration.
+Projects (Not Started, Paused, Inner Client): Clearly Specific Projects. Group them.
+Finishing Project: Exam App: Specific Projects.
+Fun Free Time/News Research: Can be grouped under Personal Tasks or Learning & Development. Let's use Learning & Development for AI news.
+Personal Tasks: Definitely Personal Tasks.
+PrePare Appartment: Personal Tasks.
+People Reviews (LeadGen, Irina, Agafonova): Lead Generation & Sales or Employee Management & Training. Seems more related to LeadGen tool usage and feedback. Let's put it under Lead Generation & Sales.
+Describe Tasks Generation and Verification Exams: Employee Management & Training or Project Management. Connects to exams, so Employee Management & Training.
+Voice Communication... We work on the go: Project Management & Workflow.
+Get Me Teachers... Generate Interview Text: Employee Management & Training / Recruiting.
+Search for AI Names App, Research Scrapping MCPs: AI Development & Exploration / Tooling Research.
+Add Task Type Library, Raise Salaries: Project Management & Workflow / Employee Management.
+WebUI with MCPs: CRM & Tooling Development.
+AirTable Token, Notion Key: Tooling & Infrastructure (Maybe create this category or put under CRM/Tooling Dev).
+Hire or Interview people to LLM Department...: Recruiting / Employee Management.
+Talk with sales...: Lead Generation & Sales.
+Create Projects DataBase in Notion: Project Management & Workflow.
+Sheets, Air Table as DataBase... Simplified Tasks Version: Project Management & Workflow / Tooling.
+Restructure Notion Page: Project Management & Workflow.
+Export Reports: Project Management & Workflow / Analytics.
+Admin Call (People leaving, New format): Company Strategy & Administration.
+Artyom WTF!? - Fire: Employee Management.
+Sales Don't Know Profession: Fire: Employee Management / Sales.
+LLM (Comparison, Structure, Messaging, Onboarding): AI Development & Exploration / Employee Management & Training (Onboarding).
+Automation Outreach Daily Company Lists: Lead Generation & Sales.
+Extensions: content Preparation: Marketing & Content / Tooling.
+Focus Points (Regenerate Company Model, Small App, Exam match): Company Strategy & Administration.
+Match MCPs (Rewrite Instructions - Recruiting/LG): AI Development & Exploration / Employee Management & Training.
+Test Abilities of MCP servers: AI Development & Exploration / Tooling.
+Collect all Needed Lessons: Employee Management & Training.
+Admin Call (Team Research, LGN focus): Company Strategy & Administration.
+Russian Text: Translate (Appears to be about accepting plan changes and focusing on improvement). Fits under Company Strategy & Administration or Workflow Philosophy.
+Sales Update (Custom Pricing): Lead Generation & Sales.
+LLM Dep (Match MCPs): AI Development & Exploration.
+LGN (Dedicated Team, Reorg, Website, LinkedIn tool): Lead Generation & Sales.
+Evening LG Managers (Meetings): Project Management & Workflow / Lead Generation.
+CRM APP (Content App, Bigger Notes/JSONs): CRM & Tooling Development.
+Integrate HubSpot: CRM & Tooling Development.
+Learn (Vector DBs, ABM, BPO, SDR): Learning & Development.
+Lessons For Employees: Employee Management & Training.
+Proposals (BZV, Catalog MCP, Reviews): Business Development / New Services.
+Discord Download: Tooling & Infrastructure.
+MCP Library (Export, Research, MVPs): AI Development & Exploration / Business Development.
+Me (Connect to SupaBase, Upload from Cursor): Personal Tasks / Tooling.
+Ai Enhanced Employee (Form Data Base of Tasks): Company Strategy & Administration / Employee Management.
+Expand Our CRm Structure: CRM & Tooling Development.
+How to work file instruction: Employee Management & Training.
+Promotion: Ai Integrated Employee: Marketing & Content / Company Strategy.
+Connect Wordpress to AI: Marketing & Content / Tooling.
+LLM-New Professions Research: AI Development & Exploration / Recruiting.
+Add to Daily Work Rules... Create LLMs by New Profession: Project Management & Workflow / AI Development.
+Game Scenario / Lists of Domains: Seems like specific project details, perhaps related to CRM or Exam App? Put under CRM & Tooling Development for now.
+Rewrite Instructions: Employee Management & Training.
+Discord Interviews: Recruiting.
+Processes Reviews (Managers No Code, Employee Tasks): Project Management & Workflow.
+Train 1 AI on DataBase Structure: AI Development & Exploration.
+Download and Practice WindSurf and Replit: Learning & Development / Personal Tasks.
+Clean Up Discord Server... Export Structure: Tooling & Infrastructure.
+Continue Deep Researches: General instruction, relates to multiple areas. Note it maybe.
+755 Bonus Company Compliance... small apps... my economics: Company Strategy & Administration / Personal Finance.
+24/03/25 Work On: High-priority list. Put at the top or in a dedicated Priorities section.
+Restructure Guide Formats: Employee Management & Training.
+inner client: New Product Development: Specific Projects.
+Possible Product: restore pictures: Business Development / New Services.
+bold3d, sync.so, etc... slipperygem: AI Development & Exploration (Tool discovery).
+General Plan (AI Tasks Review Process): Project Management & Workflow / Company Strategy.
+Prod CRM (Milestones, API connections, Guides, Score, Onboarding): CRM & Tooling Development.
+LLM (Squiz model): AI Development & Exploration.
+Create Comprehensive Job Posts Prompt: Recruiting.
+General Test (Professions, Scoring, CV): Employee Management & Training / Recruiting.
+Separate Lessons Onboarding Landings: Employee Management & Training / Marketing.
+Analyze and Describe Task Template Structure: Project Management & Workflow.
+Comprehensive Common plan: Company Strategy & Administration.
+Developers (LinkedIn API): CRM & Tooling Development.
+Run Deep Research on YouTube Chanel optimization: Marketing & Content.
+Exploration (Google Drive review, DropBox export): Tooling & Infrastructure / Data Management.
+Daily Work explanations needed: Employee Management & Training.
+Test new AI features and Announce: AI Development & Exploration / Internal Communication.
+Data Annotaition Chat / Tasks Verification: Project Management & Workflow / AI Development.
+Collect Rules (Feedback): Project Management & Workflow.
+Habitica Research, Employees Control: Employee Management & Training.
+Integrate DataBase JSON Structure into Olya: Specific task, possibly related to CRM or a project. Let's put under CRM & Tooling Development.
+Import Json With Skills: CRM & Tooling Development / Employee Management.
+MCP Scrapping: AI Development & Exploration / Lead Generation.
+Create Reports Templates: Project Management & Workflow / Analytics.
+Drive Export (Big Files): Data Management.
+Ксили конвертер: Tooling Research.
+Generate Plan B BZV: Business Development / New Services.
+LLM Upgrade Comon General Plan: AI Development & Exploration / Company Strategy.
+WorkFlow Control Recruiters: Employee Management / Recruiting.
+Fill In DashBoard of Execution: Project Management & Workflow.
+Types of Examination: Employee Management & Training.
+Focus (Plan A: Content, Rules, Analytics, Task Manager, Media, Exams, Events): This looks like a detailed plan for the Exam/Learning System. Place under Specific Projects (Exam App) or Employee Management & Training. Let's use the latter as it's broader.
+Execution Stage (Employees List, Test Results): Employee Management & Training.
+Tasks 1, 2, 3, 4, 5, 6, 7, 8, 9: Actionable list. Can be integrated into relevant categories or kept as a separate Action Items list derived from Plan A. Let's integrate them.
+Devlope Prompts Library: AI Development & Exploration.
+Download Drive to Cursor Files Analysis: Data Management / Tooling.
+Refine Categories and Structure: Review the populated categories. Are they logical? Is there overlap? Can things be grouped better?
+
+CRM & Tooling Development and Tooling & Infrastructure can be merged or kept separate. Let's merge into Infrastructure, Tools & CRM Development.
+AI Development & Exploration seems good.
+Lead Generation & Sales is okay.
+Marketing & Content is good.
+Project Management & Workflow is essential.
+Employee Management, Training & Recruiting covers HR aspects.
+Specific Projects holds distinct initiatives.
+Company Strategy & Administration covers high-level direction.
+Business Development / New Services captures potential new offerings.
+Personal Tasks remains separate.
+Add a section for Key Technologies/Platforms mentioned (MCP, Vertex AI, AirTable, Notion, etc.).
+Add a section for Actionable Priorities / Next Steps based on explicit mentions like "Work On: 24/03/25" and the numbered tasks list.
+Format and Write: Organize the points under the refined categories using clear headings and bullet points. Rephrase slightly for clarity and consistency. Add introductory and concluding remarks. Ensure all original points are captured. Highlight key items like API keys/tokens but add a security warning.
+
+Review and Edit: Read through the systematized output. Does it flow logically? Is it easy to understand? Is anything missing? Does it accurately reflect the input? Ensure formatting is correct. Add a disclaimer about sensitive info (API keys). Make sure the tone is neutral and organizational. Ensure all parts of the original prompt are addressed.
+
+Okay, let's systematize this comprehensive set of notes, tasks, ideas, and action items into a more structured format.
+
+Here's a breakdown by category:
+
+I. AI Development, Exploration & Integration
+
+Models & Platforms:
+Host own AI model in Vertex AI.
+Explore Gemini 2.5 capabilities.
+Explore GPT-4o image generation (specifically for Massages).
+Research model reinforcement techniques.
+Compare LLM Models: Determine which to use for specific tasks.
+Squeeze LLM model to fit within a single prompt if possible.
+Research and potentially integrate additional AI for automated research (uploading tasks, executing, updating statuses, preparing prompts).
+Train a dedicated AI on the company's Database Structure.
+MCPs (Model Context Protocol):
+Match MCPs to company tasks (starting with Recruiting and Lead Generation).
+Set up an MCP Server (potentially in Laravel).
+Test abilities of MCP servers (e.g., sending via email, uploading to Discord with images).
+Research scrapping MCPs (e.g., from github.com/modelcontextprotocol/servers, github.com/punkpeye/awesome-mcp-servers).
+Export, research, and match MCP Library to tasks.
+Develop WebUI incorporating MCPs.
+Use MCP scrapping for information collection.
+Create Business Catalog MCP (Proposal).
+Prompt Engineering:
+Develop a Prompts Library (Download and analyze existing libraries).
+Prepare prompts for embedding into systems.
+Develop Content Flow Strategy: Define main parameters of Data for prompts.
+Automatically generate prompts (Media Generation, Scenarios Generation).
+Create Comprehensive Job Posts Prompt.
+Teach employees "How to Write Prompt" (Lesson).
+Improve prompt generation process (Improve Prompt -> Generate Plan).
+New Tool Exploration:
+NotebookLM: Explore MindMap feature, Claude search, Gemini co-drawing.
+Research newly published AI apps with implementable code.
+Explore specific tools: bold3d (image to 3D), sync.so (multi-language sync), text-to-audio, video-to-audio/music, image generation with text, Vidu AI (video from reference), Krea AI (training video model), slipperygem.
+Research audio summary tools (Ксили конвертер).
+LLM Department:
+Hire or interview people for the LLM Department (possibly from LeadGen outreach).
+LLM Department Tasks: Match MCPs to initial tasks, research new professions, create LLMs by new profession, convert lessons to formats, explain LLM structure/logic, merge with CRM structure.
+II. Infrastructure, Tools & CRM Development
+
+CRM:
+Expand CRM structure significantly (add scenarios, media prompts, automation fields, tracking, materials storage).
+Develop CRM further: Download last prod version of Jobs to CRM, run locally, add MCPs.
+Build Content App within CRM based on Guides.
+Store API connections with tools in CRM.
+Change guide size/formats within CRM.
+Add task scoring to CRM.
+Add template onboarding to CRM.
+Integrate HubSpot into CRM.
+Add Milestones in DB (Prod CRM).
+Game Scenario / Domain Lists for CRM/Projects: Exm, Exm-api, pros, pros-api.
+Integrate DataBase JSON Structure into "Olya".
+Import JSON with skills into CRM.
+Desktop App / Environment:
+Develop Desktop App: Combine multiple tools (HubSpot, LinkedIn, Instagram, Facebook, Whatsapp, Gmail, Calendar) into one environment.
+Develop Desktop AI Central Communication Hub (Plan Doc: [link provided], Grok Research: [link provided]).
+Separate AirTable App from Notion App.
+Build iteration App between others.
+Sync App component.
+Convert Sync App to Desktop.
+Desktop Environment Tasks: Local connection to GCP from Cursor, add Workspace DriveScripts, investigate modifying Google Drive download limits (likely not possible directly).
+Data Management & Databases:
+Use Sheets, AirTable as starting databases.
+Consider using bigger notes or JSONs inside libraries for implementations/connections.
+Learn Vector Databases.
+Connect to SupaBase and upload data (from Cursor).
+Create Projects Database in Notion (Upload Libraries, Users, Modify Properties).
+Integrate rules into CRM structure.
+Review DB Structure.
+Export Google Drive documents (especially large video/archive files) to DropBox. Set up separate export for docs only.
+Download Drive contents for file analysis in Cursor (find similarities, rewrite).
+Tooling & Integration:
+Automate Lead Generation: Use LeadGen LinkedIn API for Messages.
+Integrate LinkedIn API Messages Import into CRM (store by account).
+Explore Lilia's extension abilities for further development.
+Set up MCP Server in Laravel.
+Connect WordPress to AI (remotemployees.com).
+Clean up Discord Server. Explore exporting Discord server structure to AI.
+Find and potentially integrate Facebook Ads API (manage ads from Cursor?).
+Use Cursor for local GCP connection and Drive file analysis.
+Investigate tools: WindSurf, Replit.
+Credentials:
+AirTable Token: pat0LrjdZQxYShwMx.[...]e0c (Security Note: Be extremely careful with sharing API keys/tokens.)
+Notion Key: ntn_476244265775ntpcDl[...]t8GZ (Security Note: Same caution applies.)
+III. Lead Generation (LGN) & Sales
+
+Strategy & Process:
+Focus LGN efforts on one company at a time (Admin Call point).
+Adopt Dedicated Team Model for LGN (Launch planned).
+Completely reorganize LGN instructions.
+Automate outreach with daily company lists. Define research parameters.
+People Reviews: Use LeadGen for scrapping (Kickstarter funded companies), integrate with HubSpot/Google Maps. Feedback noted (Irina, Agafonova Elena).
+Use Upwork as an alternative research platform.
+Execute new tasks for lg-n.com (B2B Lead Gen), post scenarios, measure parameters.
+Match MCPs to Lead Generation tasks.
+Use MCPs in LeadGen (Priority for 24/03/25 work).
+Tools & Automation:
+LeadGen LinkedIn API for messages.
+LinkedIn automation tool.
+Sales:
+Sales team needs profession knowledge (potential firing mentioned).
+Sales Update: Custom request price won't follow standard pricing.
+Talk with sales team.
+Create Job Request before setting up call with sales (LeadGen outreach).
+IV. Employee Management, Training & Recruiting
+
+Recruiting & Onboarding:
+Recruiters Call: Deep research on professions, match old descriptions, create long-read vacancies.
+Hire or interview people for LLM Department (possibly outreach via Slack, invite directly). Potentially drop prices.
+Find a Secretary (Workload control, shift management).
+Develop General Exam for initial CV construction.
+Plan Employee CV based on Exam results.
+Generate Interview Text for AI-generated VideoCV.
+Lead Generation Onboarding: Explain company idea, workflow, case studies.
+Create Tech CRM Registration Form on Rems SubDomain.
+Guide on Interview in Google Meet (Discord Interviews).
+Form list of required professions for General Test.
+Create Template Onboarding (combine all materials).
+Separate Lessons Onboarding Landings or MockUp.
+Training & Development:
+Provide lessons for employees: How To Work, MCP Setting Up ([link provided]).
+Collect all needed lessons.
+Rewrite instructions. Restructure Guide Formats (Prompts?).
+Learn: Deep Research.
+Plan A Focus (Exam/Learning System):
+Content: Learning Course (Milestone?), FlashCards, Quizzes, Test Tasks.
+Rules/Logic: Memory Techniques (Research delivery methods), Exam Complexity, Matching to Professions. Integrate rules into CRM/LLM.
+Analytics/Scoring: Gamification. Research employee control techniques (Habitica).
+Media: Landing Page, Social Media Images (Comics style, Mascot AI), Videos.
+Tasks for Learning System Development:
+Integrate Remembering Techniques (Visuals, Orders), prepare lessons, pass to LLM team. Lesson: How to Write Prompt/Plan Day.
+Finish LLM JSON files library, explain structure, merge with CRM.
+Performance & Workflow:
+Review how employee reviews would look.
+Add Task Type Library.
+Consider raising salaries.
+Fire underperformers (Artyom, Sales lacking knowledge).
+Admin Call: "Not People are leaving, but we let them Leave." Emphasize new format, learning, expansion, automation.
+Managers No Code Usage of Cursor and Claude.
+Employee Tasks: Required/Obligatory status.
+Track employee hours monthly (Bonus Compliance).
+Workload Management App (+/-).
+Control Recruiter Workflow: Daily Plans, Daily Reports vs. Goals, Dashboard.
+Daily Work Rules: Summarize chat, use Version Control.
+Daily Work explanations needed: Tools, methodology, assignments.
+Gathering feedback is a must (Rule).
+Exams & Verification:
+Describe Tasks Generation and Verification Exams.
+General Exam: Match only Lead Generation? Match needed lessons.
+Build upon GMAT Logic Exams System (Paused Project).
+Develop Types of Examination.
+Generate Exams (All version LLM JSON Files).
+General Test: Scoring System, generate CV from results.
+Execution Stage: Map Employee List to General Test Results (Know vs. Need to Learn).
+V. Project Management & Workflow
+
+Task Management:
+Develop Task Template View for People.
+Define Task Manager Tech (DB, Front Design).
+Add Task Scoring (in CRM).
+Automate Task Upload to AirTable/Notion, Execution, Status Updates.
+Add Task Request feature to CRM.
+Simplified Tasks Version: Create Calendar Event, Send Email, Send Discord Reminder.
+Workflow & Processes:
+Update Developers Workflow.
+Daily voice communication until automations are finished. "Work on the go."
+Describe the "Sphere" first for Project Management context.
+Establish AI Tasks Review Process (Which tasks? Steps? Results?).
+How to work file instruction: Use comments, update single file continuously.
+Data Annotation Chat: Verify AI Answers, use editable notes for feedback.
+Fill In Dashboard of Execution.
+Work Distribution by Employees / Integration into common plan.
+Tools & Platforms:
+Use Notion for Projects Database (Upload Libraries, Users, Modify Properties).
+Restructure Notion Page (Analyze structure, add columns, integrate).
+Use AirTable (Separate App from Notion mentioned).
+Reporting:
+Export Reports.
+Create Reports Templates.
+Last Days Summary Report: Recruiters (Daily).
+VI. Marketing & Content
+
+SEO:
+Find Keyword Research for Inner Clients.
+Come up With Keyword Research Analysis.
+Excel to JSON Conversion (likely for keyword data).
+Content Strategy & Creation:
+Develop Content Flow Strategy (Define data parameters).
+Prepare Content using Extensions.
+Create Website Content for LGN (Connect with WP?).
+Generate talking heads and company presentations (BZV proposal).
+Create Business Catalog (MCP proposal).
+Review Businesses for Expansion as Content (Proposal).
+Promotion: "AI Integrated Employee".
+Run Deep Research on YouTube Channel optimization.
+Social Media Publish Plans.
+Create Task Template Posts for Social Media (Full description on website, dedicated types).
+VII. Specific Projects & Clients
+
+Desktop App: (See Section II)
+Exam App / Learning System: (See Section IV - Plan A, Tasks 1-3, Exams)
+Finishing Project: Next stage - research User Flow, deep research existing data.
+Inner Client: oa-i.com:
+Connect Domain and Publish website.
+Define "Own AI" capabilities for the site.
+Inner Client: lg-n.com (B2B Lead Gen):
+Execute New Tasks.
+Write And Post Scenarios and Their Execution details.
+Measure parameters.
+Paused Project: Examination System based on GMAT Logic.
+Not Started Projects:
+Prompt Generation Automation.
+Develop Content Flow Strategy.
+Develop Task Template View for People.
+Potential New Product: Restore and improve personal pictures (sell to individuals).
+BZV Proposal: Generate talking heads/presentations for online businesses (€40).
+VIII. Company Strategy & Administration
+
+Overall Direction:
+Regenerate Company Model: Build small application with wider options (including Finance and Analytics).
+Focus on new work format, learning processes, company expansion, and automatization.
+Admin Call: Not doing team research is half the work. Focus on improvement ("how can we do our work better?").
+Define AI Enhanced Employee concept, form task database.
+Create General Company Structure Document.
+Research recent AI integration into company work.
+Comprehensive Common Plan: Explanation, executable tasks, steps.
+Philosophy:
+(Russian Text): Plans can change as needed until the prompt (goal) is achieved; focus on suggestions instead of complaining; improve current base/foundation.
+Priorities (Explicitly Mentioned for 24/03/25):
+Full Execution Plan.
+Create General Exam Rules.
+Review Task Manager.
+Review DB Structure.
+Split Software into Smaller Applications.
+Work Distribution by Employees / Integration Plan.
+Social Media Publish Plans.
+MCPs in LeadGen.
+Compliance & Finance:
+755 Bonus Company Compliance: Learning Tracking Bonus, Rules, Employee Hours Report.
+Personal Economics Management App (Income, Investment tracking).
+IX. Personal Tasks
+
+Set Advertising for Relax Ontario.
+Collect Events in Toronto, Add to calendar.
+Download Driving Exams.
+Find Dance Schools, Boxing or Jiu Jitsu in Toronto.
+Find Business Events in Toronto.
+Tinder App (mentioned).
+Massages? (mentioned).
+Check Option to manage Ads from Cursor (Facebook Ads API?).
+Store Images in DropBox.
+Prepare Apartment: Talk to Dima (Car/Things), Talk to Polina, Move summer clothes, Check black box fit, Teach Dima roof removal, Checkout (keys in mailbox), Confirm Airbnb account, Rent apartment in Poland.
+Connect personal SupaBase and upload from Cursor.
+This systematization groups related items, making the information more digestible and actionable. Remember to handle API keys and sensitive information securely.

@@ -1,0 +1,61 @@
+Scene 1:
+
+Voiceover: 
+"Hi there! I’m Sharky, your friendly AI guide! Today, I’ll show you what Artificial Intelligence is all about!"
+
+Graphics prompt: 
+A bright coral office room with sandy floors, smooth coral walls decorated with shell patterns, large windows showing colorful tropical fish outside, coral furniture and floating holographic screens; a sleek light grey and white anthropomorphic shark with big expressive eyes, a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands in the center waving both fins cheerfully. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, playful and professional. --ar 9:16 --s 250
+
+Video generation prompts: 
+Kling AI: 
+3D cartoon animation of a cheerful anthropomorphic shark mascot waving both fins in a bright underwater coral office with sandy floors and tropical fish outside. Pixar style, high detail.
+
+Hailuo AI: 
+Pixar-style animation of a smiling shark in a coral-themed underwater office, waving happily. Coral furniture, tropical fish visible through large windows.
+
+Scene 2:
+
+Voiceover: 
+"Artificial Intelligence means machines can learn and solve problems!"
+
+Graphics prompt: 
+A colorful underwater workspace with smooth pearl consoles, a sandy floor with shell patterns, and vibrant coral shelves. Floating holographic charts display three large glowing icons: a gear representing machine learning, a light bulb symbolizing ideas, and a puzzle piece representing problem-solving. A sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands by the console pointing at these icons with excitement. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, playful and professional. --ar 9:16 --s 250
+
+Video generation prompts: 
+Kling AI: 
+Animated shark points at floating holograms of a gear, light bulb, and puzzle piece in a coral-tech underwater room. Bright, educational, Pixar style.
+
+Hailuo AI: 
+Friendly shark in an underwater workspace, pointing at glowing holographic icons of learning and problem-solving. Pixar-like visual quality.
+
+[... Content for scenes 3 to 10 omitted in this message due to length limit...]
+
+Scene 11:
+
+Voiceover: 
+"AI isn’t here to take jobs, but to help us be more creative!"
+
+Graphics prompt: 
+A bright creative underwater workspace with smooth sandy floors decorated with shell patterns, floating holographic artboards displaying colorful illustrations and design layouts, coral shelves filled with digital brushes, swaying sea plants visible through large glass windows; a sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, stands with both fins open in a welcoming and inspiring gesture. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, creative and uplifting. --ar 9:16 --s 250
+
+Video generation prompts: 
+Kling AI: 
+Animated cheerful shark standing in a creative underwater workspace with floating colorful design boards and digital brushes. Pixar style, uplifting and friendly.
+
+Hailuo AI: 
+Shark presenting a creative underwater studio environment with artboards and digital tools, welcoming and inspiring. Pixar 3D quality.
+
+Scene 12 (Outro):
+
+Voiceover: 
+"See? AI is amazing and fun! And I’ll be here to show you even more!"
+
+Graphics prompt: 
+A festive underwater lounge with soft sandy floors, elegant coral couches, wide curved glass walls revealing colorful schools of fish and rays of sunlight; a sleek light grey and white anthropomorphic shark with big expressive eyes and a wide toothy smile, wearing a beige button-up short-sleeve shirt, denim cargo shorts, and brown work boots, waves both fins joyfully with excitement and positivity. Bright and clean lighting, Pixar-like 3D cartoon style, high detail, cheerful and celebratory. --ar 9:16 --s 250
+
+Video generation prompts: 
+Kling AI: 
+Joyful shark waving both fins in a festive underwater lounge with coral couches and bright sunlight streaming through glass walls. Pixar 3D style, cheerful and colorful.
+
+Hailuo AI: 
+Animated happy shark celebrating in a festive underwater lounge with fish swimming outside large windows. Bright, uplifting Pixar-style finale.

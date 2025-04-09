@@ -1,0 +1,1749 @@
+{
+    "profession": "smm",
+    "department": "marketers",
+    "tasks": [
+        {
+            "task_name": "optimize search ads targeting",
+            "responsibilities": "targeting ads",
+            "objects": "ads",
+            "checklists": [
+                "1. match the identity of your ad with the audience profile to ensure relevance, 2. adjust bids for keywords based on performance metrics and budget constraints, 3. tailor the offer to meet the expectations and needs of the potential customers, 4. implement geotagging to target ads more precisely based on geographical data, 5. review click map data to understand how users interact with your ads, 6. make necessary adjustments to improve user engagement and effectiveness of ads."
+            ],
+            "type": "search advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Ads",
+                "Google Trends",
+                "Google Maps"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "set up google ads campaigns",
+            "responsibilities": "targeting ads",
+            "objects": "ads",
+            "checklists": [
+                "1. determine what the primary objective of the google ads campaign is (e.g., increase website visits, promote product sales, generate leads), 2. utilize the 'audience' parameter to specify the demographics, interests, and behaviors of the audience you want to reach, 3 decide on the 'budget' for the campaign and set 'bid' amounts for each ad or ad group, 4. write engaging and clear 'text' for the ads that highlight the 'offer' and include a strong call-to-action, 5. apply 'geotag' to target ads to specific locations, 6. adjust other settings like 'click map' and 'Identity' to fine-tune how and to whom your ads are displayed."
+            ],
+            "type": "google ads",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Chat GPT",
+                "Google Keyword Planner",
+                "Google Analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage bids for paid search",
+            "responsibilities": "targeting ads",
+            "objects": "ads",
+            "checklists": [
+                "1. use Google Ads to define the target audience and set clear campaign goals based on the desired outcomes (e.g., conversions, click-through rate), 2. allocate the budget according to the campaign's scale and duration, set initial bids for keywords based on competitive analysis and historical data, 3. develop compelling ad text that includes the offer, a clear call to action, and geotagging to target specific locations, use a/b testing to optimize text and visuals, 4. regularly monitor the campaign’s performance metrics such as click-through rates and conversion rates, adjust bids accordingly to maximize budget efficiency and campaign impact, 5. evaluate the campaign effectiveness based on the defined goals and parameters (e.g., audience, goal, geotag), refine strategies using insights from the campaign analytics and adjust targeting as needed."
+            ],
+            "type": "paid search advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Chat GPT",
+                "Google Analytics"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "optimize paid search ad keywords",
+            "responsibilities": "targeting ads",
+            "objects": "ads",
+            "checklists": [
+                "1. review the performance of existing keywords in terms of click map data, bid effectiveness, and audience engagement, 2. use tools like google ads keyword planner to research potential keywords, 3. modify ad text to better align with the new keywords. ensure that the text reflects the campaign's goals, incorporates the offer clearly, and resonates with the target audience's identity, 4. set initial bids for new keywords based on estimated budget allocation and competitive bidding data, use the budget and bid parameters to optimize spending without sacrificing ad visibility, 5. continuously monitor the performance of the newly optimized keywords and adjust strategies based on analytical insights."
+            ],
+            "type": "paid search advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Keyword Planner"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "plan social media ad campaigns",
+            "responsibilities": "targeting ads",
+            "objects": "ads",
+            "checklists": [
+                "1. establish clear campaign goals and identify the target audience using social media analytics, 2. set the campaign budget and select the most effective social media platforms based on the audience and goals, 3. develop engaging ad text and visuals that align with the identified audience's preferences and the campaign’s goals, 4. apply a bidding strategy that fits the budget and maximizes ad visibility on chosen platforms, 5. launch the ads and continuously monitor performance metrics to adjust tactics for optimal results."
+            ],
+            "type": "social media advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Facebook Ads Manager",
+                "Instagram Ads",
+                "Twitter Ads"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize contextual targeting",
+            "responsibilities": "targeting ads",
+            "objects": "ads",
+            "checklists": [
+                "1. analyze current contextual ad placements and adjust based on audience engagement and relevance to page content. 2. update ad text to better match the content and keywords of the target websites, ensuring alignment with the audience's interests, 3. fine-tune audience targeting parameters and bid settings to improve ad placement and cost-effectiveness, 4. continuously monitor ad performance using metrics like click maps, adjusting strategies to enhance relevance and engagement, 5. use analytics and feedback to refine ad content and targeting, aiming for higher conversion rates and better alignment with page content."
+            ],
+            "type": "contextual advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Google Data Studio"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze search ad performance",
+            "responsibilities": "analyzing ads",
+            "objects": "ads",
+            "checklists": [
+                "1. evaluate the alignment of the campaign's performance with predefined goals (e.g., clicks, conversions, impressions) and budget utilization, 2. analyze audience response to the ads using parameters like click map, identity insights, and audience demographics to gauge effectiveness and relevance, 3. review the ad text and keywords for alignment with user queries and effectiveness in attracting the target audience, 4. evaluate bid settings for each keyword or ad group, adjust bids based on performance data to optimize spend and improve ad visibility, 5. compile detailed reports summarizing ad performance across different geotags and platforms, highlighting successful strategies and areas needing improvement."
+            ],
+            "type": "search advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "measure native ad engagement",
+            "responsibilities": "analyzing ads",
+            "objects": "ads",
+            "checklists": [
+                "1. assess how seamlessly the ad content integrates with the host platform, ensuring it complements the surrounding content, 2. use engagement metrics like click-through rates and time spent to understand audience interaction across various segments, 3. check budget efficiency and bid competitiveness to ensure optimal placement and cost-effectiveness, 4. analyze how well the ads meet the campaign goals, focusing on specific outcomes like engagement or conversions, 5. summarize performance insights and recommend changes to enhance future ad effectiveness."
+            ],
+            "type": "native advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze social media ad engagement",
+            "responsibilities": "analyzing ads",
+            "objects": "ads",
+            "checklists": [
+                "1. review engagement data such as likes, shares, comments, and click-through rates to assess how well the ads resonate with the target audience, 2. analyze budget spending against engagement outcomes to determine the cost-effectiveness of each ad placement, 3. evaluate the ad text and visuals for relevance and appeal to the target audience, using identity and demographic data to tailor content, 4. assess the performance of ads across different geotagged locations to identify regions with higher engagement and potential for increased targeting, 5. generate detailed reports that summarize engagement trends, budget allocation, and effectiveness, use these insights to suggest actionable improvements for future campaigns."
+            ],
+            "type": "social media advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Facebook Ads Manager",
+                "Instagram Ads",
+                "Twitter Ads"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "test video ad engagement",
+            "responsibilities": "analyzing ads",
+            "objects": "ads",
+            "checklists": [
+                "1. determine key performance indicators (KPIs) such as viewer retention and engagement rates that align with the campaign’s goals, 2. segment the audience based on detailed parameters (interests, behaviors) and customize video content for each segment to maximize relevance, 3. conduct A/B tests with different video versions to evaluate which elements (text, call to action) perform best, 4. track engagement through specific metrics like click maps and interaction rates, focusing on differences across audience segments and regions, 5. use the testing data to refine video content, bidding strategies, and audience targeting for enhanced performance."
+            ],
+            "type": "video ads",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "YouTube Analytics",
+                "Facebook Ads Manager"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop targeted video ads",
+            "responsibilities": "writing text",
+            "objects": "ads",
+            "checklists": [
+                "1. establish clear campaign goals and allocate a budget based on the expected reach and impact, 2. use audience insights to tailor the video content, ensuring it aligns with their interests and behaviors, 3. develop video content and accompanying text that effectively communicates the campaign’s offer and appeals to the target audience, 4. set up bidding strategies based on the campaign's goals and audience engagement metrics to maximize ad exposure, 5. monitor the campaign's performance, making adjustments to content, targeting, and bids to enhance effectiveness."
+            ],
+            "type": "video ads",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Ads",
+                "Facebook Ads Manager",
+                "YouTube"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "create banner ads",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. determine campaign goals and identify target audience characteristics, such as demographics and behaviors, 2. develop the visual and textual content of the banner ads, ensuring alignment with the campaign's objectives and audience preferences, 3. establish a budget for the campaign and configure bidding strategies to optimize ad placements across networks, 4. perform A/B testing to compare different ad variants, focusing on metrics like click-through rates and engagement, 5. deploy the banner ads and monitor performance, adjusting strategies based on real-time data to maximize effectiveness."
+            ],
+            "type": "banner ads",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Display Network",
+                "Adobe Photoshop",
+                "Figma"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "implement contextual ads",
+            "responsibilities": "crafting ad copy",
+            "objects": "ads",
+            "checklists": [
+                "1. establish campaign objectives and specify target audience characteristics. 2. develop ad text that matches the content and audience of the target website, 3. determine budget allocation and initial bid settings for effective ad placements, 4. apply geographic targeting and schedule ads for optimal times, 5. regularly review performance metrics and refine ad strategy based on results."
+            ],
+            "type": "contextual advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Display Network",
+                "Adobe Photoshop",
+                "Figma"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "evaluate banner ad effectiveness",
+            "responsibilities": "improving ad",
+            "objects": "ads",
+            "checklists": [
+                "1. review engagement metrics like click-through rates and analyze click map data to assess how the audience interacts with the ads, 2. examine the budget allocation versus the performance outcomes to ensure optimal use of resources, 3. Eevaluate the clarity and appeal of the ad text and visuals, and verify that the placement targets the correct geographical locations, 4. compare the performance against the campaign goals to determine success areas and aspects needing adjustment, 5. use collected data and feedback to refine ad content, targeting, and budgeting strategies for improved effectiveness."
+            ],
+            "type": "banner ads",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Display Network",
+                "Adobe Photoshop",
+                "Figma"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "integrate ads with native content",
+            "responsibilities": "improving ad",
+            "objects": "ads",
+            "checklists": [
+                "1. analyze the typical content format and style of the platforms where the ads will appear to ensure seamless integration. 2. adapt the ad text and visuals to mimic the native content's look and feel, ensuring they resonate well with the target audience and platform identity, 3. define audience targeting parameters based on platform-specific demographics and behaviors, allocate budget, 4. determine optimal ad placement within the content to enhance visibility and interaction, adjust bids to compete effectively, 5. track the performance of native ads using tools like click maps and analyze how well they integrate and perform."
+            ],
+            "type": "native advertising",
+            "parameters": [
+                "audience",
+                "budget",
+                "text",
+                "goal",
+                "geotag",
+                "bid",
+                "click map",
+                "identity",
+                "offer"
+            ],
+            "tools": [
+                "Google Display Network",
+                "Adobe Photoshop",
+                "Figma"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "identify partnership opportunities",
+            "responsibilities": "managing collaborations",
+            "objects": "collaborations",
+            "checklists": [
+                "1. use Chat GPT to generate potential brand partners, 2. analyze overlapping audience interests via Google Ads, 3. initiate contact via direct message or email."
+            ],
+            "type": "cross-industry collaborations",
+            "parameters": [
+                "giveaway",
+                "influencer",
+                "brand",
+                "event",
+                "livestream"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Ads",
+                "Mailchimp"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "coordinate creative projects",
+            "responsibilities": "managing collaborations",
+            "objects": "collaborations",
+            "checklists": [
+                "1. use project management software to outline project timelines, responsibilities, and checkpoints, 2. develop concepts that integrate the artist's style with the brand's messaging, ensuring that both parties' values are represented, 3. organize feedback loops using collaboration platforms like Slack or Trello to gather inputs and make necessary adjustments."
+            ],
+            "type": "brand-artist collaborations",
+            "parameters": [
+                "giveaway",
+                "influencer",
+                "brand",
+                "event",
+                "livestream"
+            ],
+            "tools": [
+                "Trello",
+                "Slack",
+                "Adobe Creative Suite"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze competitor collaboration benefits",
+            "responsibilities": "managing collaborations",
+            "objects": "collaborations",
+            "checklists": [
+                "1. utilize Chat GPT to identify key benefits from past successful competitor collaborations, 2. analyze data from Google Ads to understand audience crossover and potential reach, 3. conduct a SWOT analysis to evaluate potential risks and rewards, 4. document insights and recommendations for collaboration strategy."
+            ],
+            "type": "competitive collaborations",
+            "parameters": [
+                "giveaway",
+                "influencer",
+                "brand",
+                "event",
+                "livestream"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Ads",
+                "Microsoft Excel",
+                "Google Docs"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "strategize joint marketing efforts",
+            "responsibilities": "managing collaborations",
+            "objects": "collaborations",
+            "checklists": [
+                "1. use Chat GPT to generate creative campaign ideas, 2. create a timeline for campaign rollout using Google Calendar, 3. assign roles and tasks for campaign execution, 4. set up tracking in Google Ads and monitor campaign performance."
+            ],
+            "type": "competitive collaborations",
+            "parameters": [
+                "giveaway",
+                "influencer",
+                "brand",
+                "event",
+                "livestream"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Calendar",
+                "Google Ads"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "organize charity events",
+            "responsibilities": "managing collaborations",
+            "objects": "collaborations",
+            "checklists": [
+                "1. identify potential charity partners using Chat GPT, 2. plan event details and logistics using Google Calendar, 3. set up promotional campaigns in Google Ads to target specific demographics, 4. coordinate with influencers and brands via email for event participation, 5. livestream event through selected platforms to maximize engagement."
+            ],
+            "type": "charity collaborations",
+            "parameters": [
+                "giveaway",
+                "influencer",
+                "brand",
+                "event",
+                "livestream"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Calendar",
+                "Google Ads",
+                "Gmail",
+                "YouTube"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "optimize influencer campaign reach",
+            "responsibilities": "managing collaborations",
+            "objects": "collaborations",
+            "checklists": [
+                "1. use Google Ads to analyze previous influencer campaign performances, 2. identify high-performing influencers for upcoming campaigns, 3. track campaign reach and engagement through Google Analytics, 4. adjust strategies based on performance data to maximize reach."
+            ],
+            "type": "influencer collaborations",
+            "parameters": [
+                "giveaway",
+                "influencer",
+                "brand",
+                "event",
+                "livestream"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "respond promptly to client inquiries",
+            "responsibilities": "making communication",
+            "objects": "communications",
+            "checklists": [
+                "1. regularly check and prioritize incoming inquiries, including direct messages and feedback, ensuring no client query is missed, 2. categorize inquiries based on urgency and subject matter, use FAQs to address common questions efficiently, 3. compose clear and concise responses tailored to each inquiry, ensure that the communication reflects understanding and engagement with the client’s needs, 4. include a feedback loop in responses to encourage clients to confirm satisfaction with the solutions provided or to request further assistance, 5. track response times and client satisfaction levels to analyze the effectiveness of the communication strategy and make necessary adjustments."
+            ],
+            "type": "client correspondence        ",
+            "parameters": [
+                "direct message",
+                "feedback",
+                "faq",
+                "engagement"
+            ],
+            "tools": [
+                "Gmail",
+                "CRM",
+                "Google Forms"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "negotiate collaboration terms",
+            "responsibilities": "making communication",
+            "objects": "communications",
+            "checklists": [
+                "1. reach out to the influencer with a clear and concise message outlining the intent to collaborate and brief details of the proposal, 2. provide a detailed proposal via direct message or email, including potential content ideas, campaign duration, and expected deliverables, 3. review the influencer’s feedback, negotiate terms like compensation and content specifics, and adjust the proposal to align with both parties' expectations, 4. finalize and agree on key performance metrics, responsibilities, and timelines to ensure clarity and accountability, 5. draft and send a formal agreement to be signed by both parties, ensuring all negotiated terms are documented."
+            ],
+            "type": "influencer engagements",
+            "parameters": [
+                "direct message",
+                "feedback",
+                "faq",
+                "engagement"
+            ],
+            "tools": [
+                "Gmail",
+                "Google Drive",
+                "Zoom",
+                "Adobe Sign"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "manage ongoing influencer relationships",
+            "responsibilities": "making communication",
+            "objects": "communications",
+            "checklists": [
+                "1. engage in consistent direct messaging to keep influencers informed and involved in ongoing projects, 2. regularly exchange feedback to enhance content and campaign strategies, utilizing direct messages for prompt communication, 3. ensure influencers have access to updated FAQs and necessary resources to address common issues and questions efficiently, 4. monitor and discuss engagement metrics to evaluate the effectiveness of influencer collaborations and identify improvement opportunities, 5. acknowledge and appreciate influencers' contributions, fostering a supportive and mutually beneficial relationship."
+            ],
+            "type": "influencer engagements",
+            "parameters": [
+                "direct message",
+                "feedback",
+                "faq",
+                "engagement"
+            ],
+            "tools": [
+                "Instagram",
+                "Gmail",
+                "Google Drive",
+                "Google Analytics",
+                "Zoom"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "address customer support questions",
+            "responsibilities": "making communication",
+            "objects": "communications",
+            "checklists": [
+                "1. analyze incoming direct messages to fully understand each customer's issues, 2. use FAQs and other resources to find appropriate responses quickly, 3. provide clear, concise, and personalized answers to ensure customer understanding and satisfaction, 4. encourage customers to provide feedback to assess the quality of support and identify areas for improvement, 5. track response effectiveness and adapt strategies to improve customer support interactions continuously."
+            ],
+            "type": "support queries        ",
+            "parameters": [
+                "direct message",
+                "feedback",
+                "faq",
+                "engagement"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram",
+                "Zendesk",
+                "Gmail",
+                "SurveyMonkey",
+                "CRM"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "track reach and impressions",
+            "responsibilities": "tracking metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. access Google Ads to set up tracking for key metrics like reach and impressions, 2. utilize analytics tools to monitor real-time data, 3. review engagement rates and view stats to gauge initial impact, 4. compile data into a report using Google Data Studio."
+            ],
+            "type": "awareness",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Google Data Studio"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "track conversion rates",
+            "responsibilities": "tracking metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. access Google Ads to configure conversion tracking, 2. use Chat GPT to generate custom reports for conversion analysis, 3. analyze data using Google Analytics to understand conversion trends, 4. adjust marketing strategies based on conversion feedback, 5. compile and review conversion rate reports periodically."
+            ],
+            "type": "conversion",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Ads",
+                "Chat GPT",
+                "Google Analytics"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "measure new user acquisition rates",
+            "responsibilities": "tracking metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. set up user acquisition tracking in Google Analytics to monitor new users, 2. evaluate traffic sources and campaign effectiveness using analytics data, 3. create reports in Google Data Studio to visualize acquisition trends, 4. analyze engagement levels and feedback to optimize future campaigns, 5. regularly update acquisition strategies based on latest analytic"
+            ],
+            "type": "acquisition",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Data Studio"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "monitor interactions",
+            "responsibilities": "tracking metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. utilize Google Analytics to set up real-time monitoring of interactions, 2. regularly check engagement stats such as views and mentions using social media analytics tools, 3. use Chat GPT to derive insights from unprocessed interaction data, 4. adjust content strategy based on interaction trends, 5. document key interaction metrics."
+            ],
+            "type": "engagement",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Chat GPT",
+                "Hootsuite"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "evaluate engagement rates",
+            "responsibilities": "reporting metrics",
+            "objects": "metrics",
+            "checklists": [
+                "1. access Google Analytics to extract engagement rate data across all channels, 2. use Google Data Studio to visualize engagement trends and compare with historical benchmarks, 3. analyze feedback from social platforms to gauge audience sentiment, 4. plan adjustments in marketing efforts based on engagement analysis."
+            ],
+            "type": "engagement",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Data Studio"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze audience growth trends",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. use Google Analytics to extract data on views and mentions, 2. analyze traffic sources and user behavior to identify growth trends, 3. create visualizations in Google Data Studio to present audience growth over time, 4. review feedback mechanisms to correlate with engagement statistics, 5. report insights and recommendations for traffic optimization."
+            ],
+            "type": "awareness",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Google Data Studio"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "assess brand sentiment",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. review recent customer feedback across all channels to gauge overall sentiment, 2. use Google Analytics to track mentions and views related to brand-specific keywords, 3. analyze engagement metrics to understand depth of interaction and emotional response, 4. summarize findings in a report, highlighting key sentiments and areas for improvement."
+            ],
+            "type": "perception",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "review customer journey analytics",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. collect data from Google Analytics on user interactions and traffic across campaign touchpoints, 2. map out the customer journey highlighting stages with the highest and lowest engagement, 3. use Chat GPT to analyze open-ended feedback for insights into user experience, 4. compile a report on customer journey analytics with recommendations for enhancing the user experience."
+            ],
+            "type": "experience",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "identify engagement drop-off points",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. access Google Analytics to track user traffic and engagement, 2. review the engagement timeline for sudden drops or decreases, 3. analyze specific points or content where users disengage, 4. use Chat GPT to interpret complex data patterns, 5. recommend changes or further investigation based on findings."
+            ],
+            "type": "experience",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze effectiveness of lead generation efforts",
+            "responsibilities": "analyzing traffic",
+            "objects": "metrics",
+            "checklists": [
+                "1. use Google Ads to review lead generation campaign performance, 2. examine metrics such as view rates, mentions, and engagement, 3. analyze traffic data to determine conversion rates, 4. gather feedback via social media analytics tools, 5. propose optimization strategies for improving lead conversion."
+            ],
+            "type": "acquisition",
+            "parameters": [
+                "engagement",
+                "view",
+                "mention",
+                "traffic",
+                "feedback",
+                "analytics"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "create concept for video content",
+            "responsibilities": "creating content",
+            "objects": "posts",
+            "checklists": [
+                "1. brainstorm video themes that align with marketing goals, focusing on target audience engagement, 2. write a draft script that highlights the main offer and key messages, 3. finalize the content plan for distribution across appropriate social media channels."
+            ],
+            "type": "video post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Docs"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "oversee image design process",
+            "responsibilities": "refreshing content",
+            "objects": "posts",
+            "checklists": [
+                "1. define the visual objectives for the image content that aligns with campaign goals, 2. collaborate with designers to ensure the images reflect the campaign's tone and message, 3. review and provide feedback on image drafts, ensuring they meet engagement and aesthetic standards, 4. approve final designs and plan for their incorporation into larger content strategies, 5. schedule posts and monitor performance to gather feedback for future projects."
+            ],
+            "type": "image post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Google Docs",
+                "Adobe Photoshop",
+                "Slack"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze video engagement data",
+            "responsibilities": "analyzing posts",
+            "objects": "posts",
+            "checklists": [
+                "1. access engagement data such as views, likes, shares, and comments for recent video posts, 2. use data visualization tools to identify trends and patterns in viewer engagement, 3. compare video performance against set kpis to assess if the content meets the campaign goals, 4. analyze the audience's interaction at different points of the video to gauge content effectiveness, 5. prepare a report summarizing findings and suggest adjustments to improve future video content strategies."
+            ],
+            "type": "video post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Data Studio",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "track interaction rates on image posts",
+            "responsibilities": "analyzing posts",
+            "objects": "posts",
+            "checklists": [
+                "1. utilize social media analytics tools to monitor likes, comments, and shares for each image post, 2. record performance metrics and assess the correlation between engagement rates and post features such as text and visuals, 3. evaluate the effectiveness of hashtags and calls-to-action used in image posts, 4. generate engagement reports and identify best-performing images for insight into audience preferences."
+            ],
+            "type": "image post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "track carousel engagement rates",
+            "responsibilities": "analyzing posts",
+            "objects": "posts",
+            "checklists": [
+                "1. utilize social media analytics platforms to gather data on views, clicks, and interactions for carousel posts, 2. assess engagement trends over time and compare against other post formats, 3. analyze specific elements within each slide that contribute to higher or lower engagement rates, 4. compile engagement statistics in a report, highlighting performance peaks and troughs, 5. recommend content adjustments based on data insights to improve future carousel engagement."
+            ],
+            "type": "carousel post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "assemble carousel posts for product features",
+            "responsibilities": "publishing posts",
+            "objects": "posts",
+            "checklists": [
+                "1. select high-quality images and videos that highlight different features of the product, 2.arrange visuals in a logical sequence that tells a compelling story about the product, 3.write concise and engaging text for each slide to enhance the narrative and include clear calls-to-action, 4. schedule the carousel post during peak engagement times using insights from previous analytics, 5. monitor post-performance post-launch and gather feedback for continuous improvement."
+            ],
+            "type": "carousel post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Canva",
+                "Facebook Business Manager"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "draft engaging text for posts",
+            "responsibilities": "drafting text",
+            "objects": "posts",
+            "checklists": [
+                "1. identify the target audience and their preferences using social media analytics, 2. create a draft focusing on key messages and audience engagement triggers, 3. incorporate relevant keywords without compromising the natural flow of text, 4. use Chat GPT to generate creative text options and refine the selected content."
+            ],
+            "type": "text post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Keyword Planner"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize text for audience engagement",
+            "responsibilities": "optimizing text",
+            "objects": "posts",
+            "checklists": [
+                "1. analyze past performance of text-based posts to identify what content resonates most with the audience, 2. adjust text based on feedback and analytics to improve readability and engagement, 3. schedule the optimized posts during peak activity hours to maximize visibility, 4. continuously monitor the performance of updated posts to further refine content strategies."
+            ],
+            "type": "text post",
+            "parameters": [
+                "text",
+                "carousel",
+                "reels",
+                "shorts",
+                "cross posting",
+                "engagement",
+                "offer"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Facebook"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "update the business profile with latest company information",
+            "responsibilities": "updating profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. review and evaluate current elements like bio, avatar, and verified status for accuracy and relevance, 2. refresh the bio with recent achievements, update contact details, and ensure the main link reflects the latest website or important page, 3. update the profile picture and add or modify buttons that facilitate user engagement with new services, 4. link the profile to active social networks and renew verification status to boost credibility, 5. double-check all changes for consistency and accuracy before updating the profile publicly."
+            ],
+            "type": "business profile        ",
+            "parameters": [
+                "bio",
+                "highlight",
+                "link",
+                "verified status",
+                "connection social network",
+                "identity",
+                "contact information",
+                "button",
+                "personal brand",
+                "avatar"
+            ],
+            "tools": [
+                "Facebook Business Manager",
+                "LinkedIn"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "update the creator profile with recent achievements",
+            "responsibilities": "updating profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. collect recent significant achievements and prepare concise summaries and links for each, 2. revise the bio to include new achievements and update the highlights section to feature these prominently, 3. refresh the profile avatar and ensure the verified status is current, reflecting the creator's professional growth, 4. add new links to relevant work and expand connections to other social networks to broaden exposure, 5. ensure contact information is up-to-date and interactive elements like buttons are functional and useful."
+            ],
+            "type": "creator profile        ",
+            "parameters": [
+                "bio",
+                "highlight",
+                "link",
+                "verified status",
+                "connection social network",
+                "identity",
+                "contact information",
+                "button",
+                "personal brand",
+                "avatar"
+            ],
+            "tools": [
+                "LinkedIn",
+                "Instagram",
+                "Facebook"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "monitor the creator profile for audience interactions",
+            "responsibilities": "monitoring profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. ensure all profile elements such as bio, avatar, and links are current and reflect the creator's personal brand accurately, 2. confirm that social network links are functional and the profile's verified status is active, 3. review engagement data for clicks, views, and feedback on profile elements like highlights and links, 4. monitor and record feedback from comments and messages to understand audience perceptions and interactions, 5. use insights from engagement and feedback to optimize the profile and enhance audience engagement."
+            ],
+            "type": "creator profile\t",
+            "parameters": [
+                "bio",
+                "highlight",
+                "link",
+                "verified status",
+                "connection social network",
+                "identity",
+                "contact information",
+                "button",
+                "personal brand",
+                "avatar"
+            ],
+            "tools": [
+                "Instagram",
+                "Facebook Business Suite",
+                "Hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize the business profile to enhance visibility and reach",
+            "responsibilities": "optimizing profiles",
+            "objects": "profiles",
+            "checklists": [
+                "1. update the bio with clear, SEO-friendly text and ensure the avatar represents the brand effectively, 2. refresh highlights and ensure the profile’s visual elements like cover photo and avatar align with the personal brand, 3. check that all contact information is accurate, verify the profile if possible, and optimize any call-to-action buttons for user engagement, 4. integrate and check links to websites and social networks to ensure they are functional and relevant, 5. regularly assess engagement metrics and feedback, making adjustments to improve interaction and visibility."
+            ],
+            "type": "business profile        ",
+            "parameters": [
+                "bio",
+                "highlight",
+                "link",
+                "verified status",
+                "connection social network",
+                "identity",
+                "contact information",
+                "button",
+                "personal brand",
+                "avatar"
+            ],
+            "tools": [
+                "LinkedIn",
+                "Google My Business",
+                "Sprout Social"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "review the photo for story",
+            "responsibilities": "posting stories",
+            "objects": "stories",
+            "checklists": [
+                "1. analyze engagement data from previous posts, 2. use Chat GPT for text refinement are clear and align with the story's message, 3. ensure stickers and links are appropriately placed for maximum interaction, 4. select background music and effects that enhance the story's mood."
+            ],
+            "type": "photo story\t",
+            "parameters": [
+                "engagement",
+                "text overlays",
+                "sticker",
+                "link",
+                "background music",
+                "effects",
+                "interactions",
+                "options"
+            ],
+            "tools": [
+                "Instagram",
+                "Canva",
+                "Buffer"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "coordinate video story production",
+            "responsibilities": "posting stories",
+            "objects": "stories",
+            "checklists": [
+                "1. plan the video content by defining the core message and desired engagement outcomes using insights from Google Ads, 2. integrate interactive elements such as stickers or links that encourage viewer participation, 3. review the final production for quality and consistency with brand standards and previous successful stories."
+            ],
+            "type": "video story\t",
+            "parameters": [
+                "engagement",
+                "text overlays",
+                "sticker",
+                "link",
+                "background music",
+                "effects",
+                "interactions",
+                "options"
+            ],
+            "tools": [
+                "Google Ads",
+                "Adobe Premiere Pro",
+                "After Effects"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "analyze engagement metrics for a photo story",
+            "responsibilities": "analyzing stories",
+            "objects": "stories",
+            "checklists": [
+                "1. access Google Ads to gather data on views, clicks, and interaction rates for the specific photo story, 2. evaluate the effectiveness of text overlays and stickers in driving engagement, 3. analyze the click-through rates on links provided within the story, 4. review background music and effects to assess their impact on viewer retention and engagement, 5. compile a report summarizing the engagement levels."
+            ],
+            "type": "photo story\t",
+            "parameters": [
+                "engagement",
+                "text overlays",
+                "sticker",
+                "link",
+                "background music",
+                "effects",
+                "interactions",
+                "options"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Canva"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze engagement metrics for a video story",
+            "responsibilities": "analyzing stories",
+            "objects": "stories",
+            "checklists": [
+                "1. utilize tools like Google Ads to extract engagement statistics such as watch time, completion rates, and replay instances, 2. assess the impact of text overlays and visual effects on engagement, identifying elements that capture attention or distract the viewer, 3. examine interactions (e.g., likes, shares, comments) to gauge audience response and identify any trends or patterns, 4. investigate how effectively the stickers and links within the video story facilitate user interaction and conversion, 5. prepare a detailed analysis report."
+            ],
+            "type": "video story\t",
+            "parameters": [
+                "engagement",
+                "text overlays",
+                "sticker",
+                "link",
+                "background music",
+                "effects",
+                "interactions",
+                "options"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "YouTube Analytics"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "develop a posting strategy for upcoming campaigns",
+            "responsibilities": "developing strategies",
+            "objects": "strategies",
+            "checklists": [
+                "1. review competitor strategies and market trends to identify opportunities and inform the posting strategy, 2. define clear campaign goals and determine the target audience to tailor the content effectively, 3. develop a content plan aligned with goals, and schedule posts using a content calendar to ensure consistent delivery, 4. establish a budget for content distribution and create guidelines to maintain consistency and quality across posts, 5. implement the strategy according to the calendar, monitor performance, and make adjustments based on engagement metrics."
+            ],
+            "type": "posting strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram",
+                "Twitter",
+                "LinkedIn",
+                "TikTok",
+                "YouTube",
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop an engagement strategy to foster community interaction",
+            "responsibilities": "developing strategies",
+            "objects": "strategies",
+            "checklists": [
+                "1. define the engagement goals and understand the target audience through detailed analysis, 2. develop a content plan tailored to audience interests and schedule it using a content calendar, 3. allocate budget and perform competitor analysis to guide strategy formulation and resource allocation, 4. launch the strategy, using established guidelines to ensure content quality and consistency, 5. track engagement metrics and adjust the strategy based on community feedback and performance data."
+            ],
+            "type": "engagement strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram",
+                "Twitter",
+                "LinkedIn",
+                "TikTok",
+                "YouTube",
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop a promotional strategy for new product launches",
+            "responsibilities": "developing strategies",
+            "objects": "strategies",
+            "checklists": [
+                "1. define campaign objectives and identify key audience demographics and preferences, 2. analyze competitors’ strategies to inform differentiation and positioning, 3. outline a content plan and schedule key promotional activities in a content calendar, 4. distribute the budget effectively and create compelling offers to attract customers, 5. implement the campaign according to guidelines, monitor performance, and adjust as needed."
+            ],
+            "type": "promotional strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram",
+                "Twitter",
+                "LinkedIn",
+                "TikTok",
+                "YouTube",
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "develop a conversion strategy to boost sales",
+            "responsibilities": "developing strategies",
+            "objects": "strategies",
+            "checklists": [
+                "1. clearly establish sales targets and profile the target audience to tailor strategies effectively, 2. analyze competitors and market trends to identify opportunities and refine your strategy, 3. develop a targeted content plan and schedule it using a content calendar to ensure consistent engagement, 4. allocate budget and establish guidelines for campaign execution to maintain quality and consistency, 5. implement the strategy, monitor its effectiveness, and adjust tactics based on real-time feedback to enhance conversion rates."
+            ],
+            "type": "conversion strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Facebook",
+                "Instagram",
+                "Twitter",
+                "LinkedIn",
+                "TikTok",
+                "YouTube",
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Canva"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize the posting strategy to increase reach",
+            "responsibilities": "optimizing strategies",
+            "objects": "strategies",
+            "checklists": [
+                "1. assess the current content plan and calendar against goals and competitor strategies, make necessary adjustments to improve alignment and effectiveness, 2. refine the content to better resonate with the target audience and adjust posting times for optimal engagement based on analytics, 3. reallocate the budget to focus on high-performing platforms and content types, ensuring resources are used efficiently, 4. roll out the updated strategy, monitor the results in real-time, and quickly adapt to feedback and performance metrics, 5.use data-driven insights to continuously refine the content offering and posting schedule for sustained improvement in reach."
+            ],
+            "type": "posting strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Hootsuite",
+                "Buffer",
+                "Sprout Social"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "optimize the engagement strategy to increase comments and shares",
+            "responsibilities": "optimizing strategies",
+            "objects": "strategies",
+            "checklists": [
+                "1. review the existing content plan and analyze competitor engagement tactics to identify areas for improvement, 2. refine the content calendar and adjust content to increase relevance and appeal based on audience insights and competitive benchmarks, 3. clearly define engagement goals (comments, shares) and allocate budget to support targeted content distribution and promotion, 4. implement strategies to actively encourage user interaction, such as prompts for comments, share incentives, and engaging formats, 5. monitor engagement metrics and adapt strategies in real-time to optimize performance and achieve desired outcomes."
+            ],
+            "type": "engagement strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Hootsuite",
+                "Buffer",
+                "Sprout Social"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "schedule the deployment of the promotional strategy",
+            "responsibilities": "creating a calendar",
+            "objects": "strategies",
+            "checklists": [
+                "1. define clear promotional objectives and allocate an appropriate budget, 2. analyze competitors and understand the target audience to refine the promotional approach, 3. create a detailed content plan and incorporate it into a content calendar, scheduling key promotional activities, 4. define guidelines for content creation and promotional tactics to ensure consistency across platforms, 5. regularly review the strategy’s performance and the content calendar, making adjustments to optimize impact."
+            ],
+            "type": "promotional strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Facebook",
+                "Instagram",
+                "Twitter",
+                "Hootsuite",
+                "Buffer",
+                "Google Analytics",
+                "Fb pixel",
+                "Facebook Ads Manager"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "create a timeline to implement the conversion strategy",
+            "responsibilities": "creating a calendar",
+            "objects": "strategies",
+            "checklists": [
+                "1. specify the conversion goals and detail the offers involved, 2. create a content plan that aligns with your goals and audience needs, integrating this into a content calendar, 3. determine the budget for all planned activities and establish content creation and deployment guidelines, 4. begin executing according to the content calendar and continuously monitor progress against goals, 5. make necessary adjustments to the strategy based on performance metrics and audience feedback."
+            ],
+            "type": "conversion strategy",
+            "parameters": [
+                "content plan",
+                "goal",
+                "competitor analyze",
+                "сontent calendar",
+                "audience",
+                "guidelines",
+                "budget",
+                "offer"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Google Analytics",
+                "Facebook Ads Manager",
+                "Fb pixel",
+                "Instagram",
+                "Buffer",
+                "Hootsuite",
+                "Trello",
+                "Semrush",
+                "Serpstat"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "use animations in publications",
+            "responsibilities": "publishing visuals",
+            "objects": "visuals",
+            "checklists": [
+                "1. review the publication’s content strategy to determine where animations could enhance user engagement, 2. select appropriate animations from the existing library or request new animations from the design team, 3. use Chat GPT to draft engaging descriptions or captions that complement the animation, 4. schedule the animation posts during peak engagement times using insights from Google Ads analytics, 5. monitor and analyze viewer interactions with the animation post to assess effectiveness and make necessary adjustments."
+            ],
+            "type": "animation",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Chat GPT",
+                "Google Ads",
+                "Hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "schedule image posting",
+            "responsibilities": "publishing visuals",
+            "objects": "visuals",
+            "checklists": [
+                "1. review the content calendar to identify optimal posting times for images, 2.select images that align with the upcoming content themes, 3. use Google Ads to gather data on past image performance to predict the best times for engagement, 4. schedule posts using a social media management tool, 5. monitor the scheduled posts' performance through Google Ads analytics, 6. adjust future scheduling based on engagement metrics."
+            ],
+            "type": "images",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Ads",
+                "Hootsuite"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "coordinate image content creation",
+            "responsibilities": "creating a visual task",
+            "objects": "visuals",
+            "checklists": [
+                "1. set image themes, including stickers and animations, 2. generate initial concepts with Chat GPT, 3. delegate design tasks for boomerangs and animations, 4. track progress and ensure adherence to deadlines, 5. conduct final reviews and approve images for publication."
+            ],
+            "type": "images",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Photoshop",
+                "Canva",
+                "Google Slides"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "direct design team to create brand awareness videos",
+            "responsibilities": "creating a visual task",
+            "objects": "visuals",
+            "checklists": [
+                "1. outline the video’s goals and target audience using Google Ads data for insights, 2. assign animation and sticker design tasks to the creative team, 3. use Chat GPT to generate engaging scripts, 4. schedule review sessions to monitor progress and ensure brand alignment."
+            ],
+            "type": "video",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Premiere Pro",
+                "Google Ads",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "oversee infographic design",
+            "responsibilities": "creating a visual task",
+            "objects": "visuals",
+            "checklists": [
+                "1. assign tasks for data collection and illustration design, 2. utilize animation where appropriate to enhance data visualization, 3. review preliminary designs to ensure accuracy and appeal, 4. approve final designs for publishing across platforms."
+            ],
+            "type": "infographic",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Data Studio",
+                "Adobe XD"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "manage gif creation",
+            "responsibilities": "creating a visual task",
+            "objects": "visuals",
+            "checklists": [
+                "1. use Google Ads to analyze current trends and decide on gif themes, 2. monitor the creation process, 3. utilize Chat GPT to generate creative descriptions for each gif."
+            ],
+            "type": "gif",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Adobe After Effects",
+                "Google Ads",
+                "Chat GPT"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "guide animation projects",
+            "responsibilities": "creating a visual task",
+            "objects": "visuals",
+            "checklists": [
+                "1. define project goals and target audience insights with data from Google Ads, 2. schedule regular check-ins, 3. incorporate feedback mechanisms through livestream sessions, 4. approve the final animation for public release."
+            ],
+            "type": "animation",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Adobe After Effects",
+                "Google Ads",
+                "Google Meet"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze image engagement",
+            "responsibilities": "selecting media",
+            "objects": "visuals",
+            "checklists": [
+                "1. utilize Google Ads to gather data on image performance across various campaigns, 2. analyze engagement metrics such as likes, shares, and comments to determine image effectiveness, 3. use Chat GPT to interpret complex data and provide a clear summary of insights, 4. document findings and recommend future image strategies in a shared report."
+            ],
+            "type": "images",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze video ad metrics",
+            "responsibilities": "selecting media",
+            "objects": "visuals",
+            "checklists": [
+                "1. collect performance data from Google Ads focusing on key metrics like view count, click-through rates, and watch time, 2. evaluate the impact of different elements such as livestream integration or boomerangs on viewer engagement, 3. leverage analytical tools to dissect viewer interactions and feedback for each video segment, 4. synthesize data using Chat GPT to generate actionable insights, 5. present findings in a visually comprehensive format."
+            ],
+            "type": "video",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Data Studio",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "evaluate infographic effectiveness",
+            "responsibilities": "selecting media",
+            "objects": "visuals",
+            "checklists": [
+                "1. utilize Google Ads to track how many times the infographic has been viewed and shared across platforms, 2. analyze click-through rates to assess how effectively the infographic drives traffic to the intended destinations, 3. engage with Chat GPT to interpret user comments and feedback, 4. adjust infographic content and design elements based on analytical findings, 5. compile a report with all findings and suggestions for future infographic deployments."
+            ],
+            "type": "infographic",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        },
+        {
+            "task_name": "analyze gif metrics",
+            "responsibilities": "selecting media",
+            "objects": "visuals",
+            "checklists": [
+                "1. gather performance data from social media analytics tools, 2. assess key engagement metrics such as replay rate, shares, and interaction rates specific to gif content, 3. document the results and planned improvements in a detailed presentation for the media team."
+            ],
+            "type": "gif",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "PowerPoint"
+            ],
+            "complexity": "medium"
+        },
+        {
+            "task_name": "measure animation engagement",
+            "responsibilities": "selecting media",
+            "objects": "visuals",
+            "checklists": [
+                "1. track engagement metrics through Google Ads for animations, 2. examine specific elements such as the effectiveness of livestream integrations or the use of boomerangs in animations, 3. use Chat GPT to analyze complex engagement patterns and forecast trends, 4. optimize future animations based on analytical feedback."
+            ],
+            "type": "animation",
+            "parameters": [
+                "livestream",
+                "sticker",
+                "boomerang",
+                "sticker",
+                "illustration",
+                "animation"
+            ],
+            "tools": [
+                "Google Ads",
+                "Google Analytics",
+                "Chat GPT"
+            ],
+            "complexity": "high"
+        }
+    ]
+}

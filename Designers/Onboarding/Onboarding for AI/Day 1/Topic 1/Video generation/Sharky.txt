@@ -1,0 +1,82 @@
+Create prompt
+Prompt for creating a video character:
+
+"Create a 5-10 second animated video featuring a character named Sharky, an office worker shark. Sharky is an anthropomorphic shark with a big, friendly smile, sharp teeth, blue skin, large expressive eyes, and a sturdy build. He is dressed in a beige short-sleeved shirt, blue cargo shorts with pockets, a brown belt, and brown boots. The shirt has a small logo on the left side of the chest (the logo is a simple circular badge with a coral design). Sharky’s appearance must exactly match the reference: blue skin, rounded body, large head with sharp teeth, and a friendly smile, with no changes to his facial features or clothing.
+
+Sharky is in his underwater office, styled to resemble a coral reef. The office contains no futuristic objects, and all elements reflect a natural underwater environment: a desk made of coral branches, a chair made of seaweed, shelves with seashells, and papers made of algae. The color palette of the office is in warm tones—shades of coral, orange, pink, and sandy beige, with no blue colors used. The background of the office includes soft lighting that mimics sunlight filtering through water, with bubbles slowly rising.
+
+In the video, Sharky stands near his desk, actively gesturing with his hands (for example, pointing to an imaginary board or raising one hand as if explaining something) and speaking, opening his mouth with a friendly smile. His movements are energetic yet smooth, emphasizing his approachable personality. Sharky says in English, with a cheerful tone: 'Hello, I’m Sharky, and I’ll introduce you to working with artificial intelligence!' He is introducing the viewer to the topic of artificial intelligence, as if conducting a lesson: he can hold a sheet of algae with the text 'AI' written on it or point to it. The animation should be smooth, with clear character movements, and must maintain consistency in Sharky’s appearance for use in a series of videos."
+
+
+# Character Animation Brief: Sharky the Office Shark
+
+## Character Design
+- Name: Sharky
+- Type: Anthropomorphic shark office worker
+- Duration: 5-10 seconds animated sequence
+
+### Physical Appearance (Must match reference exactly)
+- Blue skin tone
+- Large, friendly smile with visible sharp teeth
+- Big, expressive purple eyes
+- Sturdy, rounded body structure
+- Short fins/arms
+
+### Outfit
+- Beige short-sleeved shirt with collar
+- Circular coral-design badge on left chest
+- Blue cargo shorts with functional pockets
+- Brown leather belt
+- Brown lace-up work boots
+
+## Environment Design
+### Office Setting
+- Underwater coral reef office theme
+- Traditional (non-futuristic) office elements reimagined:
+  * Desk: Constructed from coral branches
+  * Chair: Woven seaweed structure
+  * Shelves: Decorated with seashells
+  * Documents: Made from stylized algae sheets
+
+### Color Palette
+- Primary colors: Coral, orange, pink, sandy beige
+- Strict exclusion of blue tones in environment
+- Lighting: Soft, dappled sunlight effect filtering through water
+- Ambient effects: Gentle rising bubbles
+
+## Animation Sequence
+### Action Description
+1. Sharky stands confidently near his coral desk
+2. Performs friendly, professional gestures:
+   - Points towards an imaginary presentation board
+   - Raises hand in explanatory gesture
+   - Holds up an algae sheet with "AI" text
+3. Speaks with natural mouth movements and expressions
+
+### Dialogue
+- Line: "Hello, I'm Sharky, and I'll introduce you to working with artificial intelligence!"
+- Delivery: Cheerful, welcoming tone
+- Voice: Clear, professional, friendly English
+
+### Animation Requirements
+- Smooth, fluid movement transitions
+- Consistent character model throughout
+- Emphasis on expressive gestures while maintaining professional demeanor
+- Careful attention to mouth synchronization with dialogue
+
+## Technical Specifications
+- Format: High-quality 3D animation
+- Frame rate: Standard 24-30 fps
+- Character rigging: Full body with emphasis on facial expressions
+- Lighting: Underwater caustics and ambient occlusion
+
+## Usage Context
+- Part of an educational series about AI
+- Character must maintain consistent appearance for future videos
+- Design should allow for easy replication in subsequent content
+
+## Critical Notes
+1. Character design must exactly match the reference image without any modifications
+2. Maintain professional yet approachable personality
+3. Ensure all underwater elements feel natural and integrated
+4. Animation must be suitable for educational content

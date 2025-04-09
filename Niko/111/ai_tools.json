@@ -1,0 +1,235 @@
+{
+  "writing_tools": {
+    "ChatGPT_4.5": {
+      "advantages": [
+        "Works with images",
+        "Data analysis capabilities",
+        "Coding support",
+        "Strong reasoning skills",
+        "Advanced features"
+      ]
+    },
+    "Google_Gemini": {
+      "advantages": [
+        "Free to use",
+        "Similar features to ChatGPT",
+        "Good creative writing capabilities"
+      ]
+    },
+    "DeepSeek": {
+      "advantages": [
+        "Can run locally",
+        "Good reasoning capabilities",
+        "Supports data file uploads",
+        "Similar to O1 model"
+      ]
+    },
+    "Claude_3.7": {
+      "advantages": [
+        "Great hybrid reasoning",
+        "Solid accuracy",
+        "Low chance of hallucination",
+        "Vision support"
+      ]
+    },
+    "Grok_3": {
+      "advantages": [
+        "Reasoning capabilities",
+        "Image generation",
+        "Data analysis",
+        "Search functionality"
+      ]
+    },
+    "Jasper": {
+      "advantages": [
+        "Fine-tuned for marketing content",
+        "Human-like output",
+        "Creative control"
+      ]
+    },
+    "CopyAI": {
+      "advantages": [
+        "Creative writing",
+        "Persuasive content",
+        "Good for product descriptions",
+        "Identifies unique selling points"
+      ]
+    },
+    "CopySmith": {
+      "advantages": [
+        "E-commerce focused",
+        "Product description generation",
+        "Research capabilities",
+        "Article optimization"
+      ]
+    }
+  },
+  "image_generation": {
+    "Dall-E_3": {
+      "advantages": [
+        "Easy to prompt",
+        "Predictable results",
+        "ChatGPT integration"
+      ]
+    },
+    "Midjourney": {
+      "advantages": [
+        "Accurate text handling",
+        "Size and orientation control",
+        "Excellent photo realism",
+        "Accurate anatomy"
+      ]
+    },
+    "Stable_Diffusion": {
+      "advantages": [
+        "Free to use",
+        "Accurate results",
+        "Reliable output",
+        "Local installation option"
+      ]
+    },
+    "Adobe_Express": {
+      "advantages": [
+        "Good text handling",
+        "Object removal capability",
+        "Style controls",
+        "User-friendly interface"
+      ]
+    }
+  },
+  "video_tools": {
+    "Sora": {
+      "advantages": [
+        "High quality output",
+        "Accurate prompt following",
+        "Storyline feature",
+        "Complex sequence handling"
+      ]
+    },
+    "Runway_ML": {
+      "advantages": [
+        "Lip syncing",
+        "Background removal",
+        "Slow motion effects",
+        "Color grading",
+        "Object removal",
+        "Face blurring"
+      ]
+    },
+    "D-ID": {
+      "advantages": [
+        "Full video generation from prompts",
+        "Storyline creation",
+        "Narration generation",
+        "Subtitle creation"
+      ]
+    }
+  },
+  "speech_generators": {
+    "ElevenLabs": {
+      "advantages": [
+        "Advanced voice cloning",
+        "Fine-tuning control",
+        "Detailed intonation control",
+        "Emphasis customization"
+      ]
+    },
+    "MyVoiceAI": {
+      "advantages": [
+        "User-friendly",
+        "Great quality",
+        "Easy voice cloning"
+      ]
+    },
+    "Adobe_Podcast": {
+      "advantages": [
+        "Simple audio enhancement",
+        "Minimal settings",
+        "Good free version",
+        "Professional audio improvement"
+      ]
+    }
+  },
+  "music_tools": {
+    "Suno": {
+      "advantages": [
+        "Full song generation",
+        "Style specification",
+        "BPM control",
+        "Simple interface"
+      ]
+    },
+    "Beatoven": {
+      "advantages": [
+        "Customizable style",
+        "Emotion control",
+        "Length adjustment",
+        "More control options"
+      ]
+    },
+    "Soundraw": {
+      "advantages": [
+        "Mood-based generation",
+        "No prompt writing needed",
+        "Simple parameter selection"
+      ]
+    }
+  },
+  "business_productivity": {
+    "Notion_AI": {
+      "advantages": [
+        "Integration with Notion",
+        "Note summarization",
+        "Text generation",
+        "List creation",
+        "File analysis",
+        "Code writing"
+      ]
+    },
+    "NotebookLLM": {
+      "advantages": [
+        "Video analysis",
+        "Website analysis",
+        "File analysis",
+        "Note generation",
+        "Quiz creation"
+      ]
+    },
+    "Otter": {
+      "advantages": [
+        "Real-time meeting transcription",
+        "Image capture",
+        "Browser extension",
+        "Meeting recording"
+      ]
+    }
+  },
+  "development_tools": {
+    "TabnineAI": {
+      "advantages": [
+        "Predictive autocomplete",
+        "Function completion",
+        "VS Code integration",
+        "AI chat feature"
+      ]
+    },
+    "GitHub_Copilot_X": {
+      "advantages": [
+        "Generate from comments",
+        "Function generation",
+        "Code suggestions",
+        "Code completion"
+      ]
+    },
+    "Amazon_CodeWhisperer": {
+      "advantages": [
+        "Multiple language support",
+        "IDE integration",
+        "Real-time suggestions",
+        "Unit test generation",
+        "Security scanning",
+        "License awareness"
+      ]
+    }
+  }
+} 

@@ -1,0 +1,73 @@
+﻿Instruction Guide for Task Templates
+1. What are Task Templates?
+Task templates are repetitive activities that need to be accomplished within a defined period of time or by a deadline to work towards work-related goals. Task templates are created using Google Forms, that help employees follow standardized processes for tasks such as register job accounts, create job posts, or make job requests. These templates ensure that tasks are completed correctly, using the right tools and following company guidelines.
+Each template follows a strict structure to ensure uniformity across departments.
+2. Structure of Task Templates
+Each task template follows a consistent structure, which includes several key components:
+Task Template Components:
+1. Name: The name of the task, following the format Action + Object. This is essential for consistency.
+Actions - specific task that needs to be performed to achieve a goal. Use verbs in the present tense (e.g., Create, Develop, Generate). Choose verbs that indicate the start of a process or lead to a result, making them clear and directly related to your Objects.
+Objects -  plural noun, 1-2 words, representing the entities a profession works with or manages in its activities. These can be tangible items (e.g., "Clients" for a Sales Manager) or abstract concepts (e.g., "Tasks" for a Project Manager).
+2. Description: A concise summary (up to 500 symbols) of the task that needs to be completed.
+Example: "Register a company account on a job site, confirm the registration via email, complete the company profile, ensure login security, and upload the required documents."
+3. Profession: The specific profession or department responsible for the task.
+Example: Recruiter, HR, Sales manager.
+Example: Create job template (prof: recruiter, act: create, obj: job templates).
+Step Templates:
+Each task is broken down into individual steps, making it easier to tackle complex tasks. These steps consist of specific, simple, and clear actions, grouped together and requiring only one tool to complete.
+   1. Name: The title of the specific step (e.g., "Website Registration," "Registration Confirmation").
+   2. Tool: The tool required for the step (e.g., CRM, Gmail, ChatGPT).
+   3. Responsibility: Actions that can be performed with the object
+Checklist Items:
+These are the actionable items within each step, providing detailed instructions for employees.
+   1. Name: The name of the specific checklist item (e.g., "Open CRM," "Go to Job Sites").
+   2. Guide: A brief, step-by-step guide for completing the checklist item. It may include visual aids like screenshots.
+   1. Name: A concise description of the item, limited to 500 characters.
+   2. Tools:: The format of the guide, which could be text, pictures, or videos.
+   3. Items: Item is an detailed,specific object for a single guide (For example, Step Template: Enhance Portrait → Guide: Adjust Eye Color → Item: Eye Colors) 
+   4. Formats: Additional information about guide
+                        а. Link: Link to the Google Docs Guide
+                        b. Item: Item of the guide
+                        c. Format: Format of the Google Docs Guide (text, webp, image)
+                        d. Descriptions: Short and brief description of the guide (500 symbols)
+      3.   Placement: Placement defines where a task action occurs within a tool or platform. It ensures clarity by specifying the exact location needed for a task. (e.g., “Custom GPT Chat”, “Guides” section)
+   1. Placement Name: Specific area or section within the tool where the task occurs
+   2. Placement Link: The URL pointing to the task location
+   3. Placement Tool: The software, platform, or app where the task is performed
+   4. Placement Type: The type of item or feature within the tool being referenced
+   5. Placement Account: Indicates whether access requires a specific account or credentials
+________________
+
+
+3. Naming Conventions for Task Templates
+The Name of each Google Form should strictly follow the format:
+Action + Object + (prof: _____, act: _____, obj: _____).
+Example:
+Create job template (prof: recruiter, act: create, obj: job templates).
+   * Action: This is the specific task or action to be completed. Use present tense verbs that clearly indicate the start or completion of a process (e.g., Create, Develop, Generate). Make sure the action is directly related to the object.
+   * Object: A plural noun, consisting of one or two words, describing the entities the profession works with or manages. Objects can be tangible (e.g., "Clients" for Sales Manager) or abstract (e.g., "Tasks" for Project Manager).
+________________
+
+
+4. Definitions of Key Components
+   1. Task Template: A guide in the form of a Google Form that provides a structured method for completing specific tasks. It is used by employees across departments to ensure uniformity and accuracy when performing tasks.
+   2. Step Templates: Subsections of the task template that break the task into manageable steps. Each step provides the required tools and checklist items for execution.
+   3. Checklist Items: Detailed, actionable items within each step. These items provide specific instructions on how to complete each part of the task, using a clear and concise guide with options for text, pictures, or videos.
+   4. Action: A specific verb in the present tense that describes the task to be performed. Actions should be clear, goal-oriented, and directly tied to the object.
+   5. Object: A noun (1-2 words, plural) representing the entities or concepts that the profession works with. Objects should be directly relevant to the profession's tasks.
+   6. Items: A specific and detailed object for a guide (Guide: Upload Photo Reference → Item: Photo Reference)
+________________
+
+
+5. Relationships and Nesting Between Components
+The task template structure involves nested relationships to ensure clarity and efficiency:
+   * Task Template includes several Step Templates that represent the primary actions to be taken. Each step template outlines the required tools and associated checklist items.
+   * Step Templates consist of Checklist Items that provide detailed instructions for completing each step. 
+   * Tools are used within individual steps, with each step requiring only one tool. For example, Step 1 might involve opening the CRM to gather information, where the tool is the CRM. Step 2 would involve using ChatGPT to process or generate text, where the tool is ChatGPT. Each step should be completed with a single tool, even if multiple tools are needed across different steps.
+   * Checklist items - elements within a checklist that represent specific actions to be completed as part of the process. Each item includes an Action, an Object, and should contain a Guide in the form of brief instructions.
+   * Guides - concise instructions for completing a specific Checklist item. They may include a screenshot to provide visual support.
+   * Formats: Formats is a tab for linking guides from Google Docs in various formats (e.g., text or video) to specific Guides In CRM.
+   * Link: Link to a guide in a Google Docs format
+   * Items: Item of the guide
+   * Formats: Format of the Google Docs guide (text, image, webp)
+   * Description: Short and brief description of the guide (500 symbols)

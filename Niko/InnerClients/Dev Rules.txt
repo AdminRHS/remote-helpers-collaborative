@@ -1,0 +1,467 @@
+﻿Workflow Control System Rules for Cursor Code Generator
+File Naming Conventions
+1. Consistent Case: Use kebab-case for file names (e.g., auth-service.ts, user-profile.tsx).
+2. Component Files: React components should be named using PascalCase and match the component name (e.g., Button.tsx for a Button component).
+3. Utility Files: Utility/helper files should be descriptive and use kebab-case (e.g., date-formatter.ts).
+4. Service Files: Service files should end with -service.ts (e.g., auth-service.ts).
+5. Store Files: State management files should end with -store.ts (e.g., auth-store.ts).
+6. Type Definition Files:
+   * Files containing only type definitions should end with .types.ts (e.g., user.types.ts).
+   * Include types in implementation files when they're closely coupled with the implementation and not reused elsewhere.
+   * Use separate type files when types are shared across multiple components/services or when the type definitions are complex enough to warrant separation.
+7. Test Files: Test files should have the same name as the file they're testing, with .test or .spec suffix (e.g., auth-service.test.ts).
+8. Schema Files:
+   * Validation schemas should end with -schema.ts (e.g., login-schema.ts).
+   * Be consistent with schema technology: Use Zod for runtime validation, JSON Schema for API specifications, and Yup for form validations. Document the chosen approach in your project README.
+   * Follow consistent naming patterns regardless of the schema technology (e.g., user-schema.ts for Zod schemas, user-schema.json for JSON Schema).
+Directory Structure Requirements
+1. Feature-Based Organization: Group related files by feature rather than by file type.
+Component Structure: Each component should have its own directory when it has multiple files:
+Copy
+components/
+  button/
+    Button.tsx
+    Button.module.css
+2.     Button.test.tsx
+
+3. Directory Depth Guideline:
+   * Aim to keep directory nesting to 4 levels or less for most cases.
+   * For larger projects or specific feature areas requiring deeper organization, additional levels may be acceptable.
+   * When exceeding 4 levels, document the rationale in a README within the directory to explain the organizational decision.
+   * Consider whether deeper nesting can be avoided through better feature grouping or abstraction.
+   4. Separation of Concerns: Maintain clear boundaries between app layers:
+   * app/ - Next.js app router pages
+   * components/ - Reusable UI components
+   * hooks/ - Custom React hooks
+   * lib/ - Utility functions and core logic
+   * store/ - State management
+   * services/ - API and external service interactions
+   * types/ - TypeScript type definitions
+Code Organization Requirements
+   1. Single Responsibility Principle: Each file should have a single responsibility/purpose.
+   2. File Size Guideline: Aim to keep files under 300 lines of code. This is a guideline rather than a strict rule - if a file exceeds this limit but maintains clarity and cohesion, it may be acceptable. However, consider it a signal to evaluate whether the file could be logically split.
+   3. Exports:
+   * Each file should have a clear, explicit export (either named or default)
+   * Barrel files (index.ts) should be used to simplify imports from complex directories
+Object-Oriented Structure
+Class Usage: Use classes for complex services with internal state:
+typescript
+Copy
+// Example service class
+export class AuthenticationService {
+  private tokenStorage: TokenStorage;
+  
+  constructor(tokenStorage: TokenStorage) {
+    this.tokenStorage = tokenStorage;
+  }
+  
+  async login(credentials: LoginCredentials): Promise<User> {
+    // Implementation
+  }
+  
+  // Other methods
+   1. }
+
+Interface Definitions: Define interfaces for all public-facing services and components:
+typescript
+Copy
+export interface AuthService {
+  login(credentials: LoginCredentials): Promise<User>;
+  logout(): Promise<void>;
+  getCurrentUser(): User | null;
+      2. }
+
+      3. Dependency Injection: Services should accept their dependencies through constructors or parameters.
+      4. Inheritance: Use inheritance sparingly and prefer composition over inheritance.
+Component Structure
+         1. Component Size: Components should be small and focused on a single responsibility.
+Props Interface: Each component should have a defined props interface:
+typescript
+Copy
+interface ButtonProps {
+  variant?: 'primary' | 'secondary';
+  size?: 'small' | 'medium' | 'large';
+  onClick?: () => void;
+  children: React.ReactNode;
+}
+
+
+export function Button({ variant = 'primary', size = 'medium', onClick, children }: ButtonProps) {
+  // Component implementation
+         2. }
+
+         3. Component Organization: Organize component code in this order:
+            * Imports
+            * Types/Interfaces
+            * Component function
+            * Utility functions (if component-specific)
+State Management Guidelines
+            1. Store Structure: Each store should manage a specific domain (e.g., authentication, entities, UI state).
+            2. Store Size: Keep individual stores focused and small. Create multiple stores instead of one large store.
+Zustand Pattern: For Zustand stores, use a consistent pattern:
+typescript
+Copy
+import { create } from 'zustand';
+
+
+interface AuthState {
+  user: User | null;
+  isLoading: boolean;
+  error: string | null;
+  login: (credentials: LoginCredentials) => Promise<void>;
+  logout: () => Promise<void>;
+}
+
+
+export const useAuthStore = create<AuthState>((set, get) => ({
+  user: null,
+  isLoading: false,
+  error: null,
+  
+  login: async (credentials) => {
+    set({ isLoading: true, error: null });
+    try {
+      const user = await authService.login(credentials);
+      set({ user, isLoading: false });
+    } catch (error) {
+      set({ error: error.message, isLoading: false });
+    }
+  },
+  
+  logout: async () => {
+    // Implementation
+  }
+            3. }));
+
+API and Service Structure
+API Client: Create a centralized API client for making HTTP requests:
+typescript
+Copy
+// api-client.ts
+export class ApiClient {
+  private baseUrl: string;
+  private headers: Record<string, string>;
+  
+  constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
+    this.headers = {
+      'Content-Type': 'application/json'
+    };
+  }
+  
+  async get<T>(endpoint: string): Promise<T> {
+    // Implementation
+  }
+  
+  async post<T>(endpoint: string, data: any): Promise<T> {
+    // Implementation
+  }
+  
+  // Other methods
+               1. }
+
+Service Layer: Create service files that use the API client:
+typescript
+Copy
+// user-service.ts
+export class UserService {
+  private apiClient: ApiClient;
+  
+  constructor(apiClient: ApiClient) {
+    this.apiClient = apiClient;
+  }
+  
+  async getUsers(): Promise<User[]> {
+    return this.apiClient.get<User[]>('/users');
+  }
+  
+  // Other methods
+                  2. }
+
+Database and Model Structure
+Entity Models: Define clear, typed models that match your database schema:
+typescript
+Copy
+// user.model.ts
+export interface User {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  role: UserRole;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+
+                     1. export type UserRole = 'admin' | 'user' | 'guest';
+
+Repository Pattern: Use repositories for database interactions:
+typescript
+Copy
+// user-repository.ts
+export class UserRepository {
+  async findById(id: string): Promise<User | null> {
+    // Implementation
+  }
+  
+  async create(userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'>): Promise<User> {
+    // Implementation
+  }
+  
+  // Other methods
+                        2. }
+
+Error Handling
+Consistent Error Structure: Use consistent error handling throughout the application:
+typescript
+Copy
+// error.ts
+export class AppError extends Error {
+  constructor(
+    public message: string,
+    public statusCode: number = 500,
+    public code?: string
+  ) {
+    super(message);
+    this.name = 'AppError';
+  }
+}
+
+
+export function handleApiError(error: unknown): AppError {
+  if (error instanceof AppError) return error;
+  
+  // Handle different error types
+  if (axios.isAxiosError(error)) {
+    return new AppError(
+      error.response?.data?.message || 'API request failed',
+      error.response?.status || 500
+    );
+  }
+  
+  return new AppError('Unknown error occurred');
+                           1. }
+
+Utility Functions
+Pure Functions: Utility functions should be pure, with no side effects:
+typescript
+Copy
+// date-utils.ts
+export function formatDate(date: Date, format: string): string {
+  // Implementation
+}
+
+
+export function parseDate(dateString: string): Date {
+  // Implementation
+                              1. }
+
+                              2. Categorization: Group related utility functions in the same file.
+Testing Guidelines
+                                 1. Test Naming: Test files should be named after the file they test.
+Test Organization: Organize tests using the BDD pattern with descriptive blocks, regardless of test framework:
+typescript
+Copy
+// Using Jest/Vitest
+describe('AuthService', () => {
+  describe('login', () => {
+    it('should return a user when credentials are valid', async () => {
+      // Test implementation
+    });
+    
+    it('should throw an error when credentials are invalid', async () => {
+      // Test implementation
+    });
+  });
+});
+
+
+// Using Testing Library
+test('renders login form with email and password fields', () => {
+  render(<LoginForm />);
+  expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
+  expect(screen.getByLabelText(/password/i)).toBeInTheDocument();
+                                 2. });
+
+                                 3. Test Coverage: Aim for comprehensive test coverage:
+                                    * Unit tests for utilities, services, and hooks
+                                    * Component tests for UI behavior
+                                    * Integration tests for workflows
+                                    * End-to-end tests for critical paths
+                                    4. Test Isolation: Ensure tests are isolated and don't depend on each other's state.
+Test Fixtures: Use fixtures or factories for test data:
+typescript
+Copy
+// User factory
+function createUser(overrides = {}) {
+  return {
+    id: 'user-1',
+    name: 'Test User',
+    email: 'test@example.com',
+    ...overrides
+  };
+                                    5. }
+
+Performance Considerations
+Lazy Loading: Use dynamic imports for code splitting:
+typescript
+Copy
+const DashboardPage = dynamic(() => import('./DashboardPage'), {
+  loading: () => <LoadingSpinner />
+                                       1. });
+
+                                       2. Memoization: Use memoization for expensive operations:
+typescript
+Copy
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+Accessibility Requirements
+ARIA Attributes: Include appropriate ARIA attributes:
+tsx
+Copy
+<button 
+  aria-label="Close modal"
+  aria-pressed={isPressed}
+  onClick={handleClose}
+>
+  <CloseIcon />
+                                          1. </button>
+
+                                          2. Keyboard Navigation: Ensure components are keyboard navigable:
+                                             * All interactive elements should be focusable
+                                             * Implement keyboard shortcuts where appropriate
+                                             * Maintain logical tab order
+                                             * Provide focus indicators for keyboard users
+                                             3. Semantic HTML: Use the most appropriate HTML elements for their intended purpose:
+                                             * Use <button> for clickable actions, not <div> with click handlers
+                                             * Use heading tags (<h1> through <h6>) in a logical hierarchy
+                                             * Use <nav> for navigation, <main> for main content, etc.
+                                             4. Color Contrast: Ensure text has sufficient contrast with its background:
+                                             * Minimum contrast ratio of 4.5:1 for normal text
+                                             * Minimum contrast ratio of 3:1 for large text (18pt or 14pt bold)
+                                             5. Screen Reader Support:
+                                             * Provide alt text for images
+                                             * Use aria-live regions for dynamic content
+                                             * Ensure form inputs have associated labels
+                                             6. Responsive Design:
+                                             * Support text resizing up to 200%
+                                             * Ensure content is usable at various viewport sizes
+                                             * Support zoom and text-only zoom
+                                             7. Testing:
+                                             * Regularly test with keyboard-only navigation
+                                             * Use accessibility auditing tools (axe, Lighthouse)
+                                             * Consider including screen reader testing for critical flows
+Documentation Requirements
+Component Documentation: Include a brief description for each component:
+typescript
+Copy
+/**
+ * Button component with multiple variants and sizes.
+ * 
+ * @example
+ * <Button variant="primary" size="medium" onClick={handleClick}>
+ *   Click me
+ * </Button>
+ */
+export function Button({ ... }: ButtonProps) {
+  // Implementation
+                                             1. }
+
+Function Documentation: Document complex functions:
+typescript
+Copy
+/**
+ * Authenticates a user with the given credentials.
+ * 
+ * @param credentials - The login credentials
+ * @returns The authenticated user
+ * @throws {AppError} If authentication fails
+ */
+async function login(credentials: LoginCredentials): Promise<User> {
+  // Implementation
+                                                2. }
+
+Service Documentation: Document service classes and methods:
+typescript
+Copy
+/**
+ * Manages authentication operations including login, logout, and token refresh.
+ */
+export class AuthService {
+  /**
+   * Creates an instance of AuthService.
+   * @param apiClient - The API client to use for requests
+   * @param tokenStorage - Service for storing authentication tokens
+   */
+  constructor(apiClient: ApiClient, tokenStorage: TokenStorage) {
+    // Implementation
+  }
+  
+  /**
+   * Logs in a user with the provided credentials.
+   * Stores the authentication token upon success.
+   * 
+   * @param credentials - User login credentials
+   * @returns The logged in user
+   * @throws {AppError} With status code 401 if credentials are invalid
+   */
+  async login(credentials: LoginCredentials): Promise<User> {
+    // Implementation
+  }
+                                                   3. }
+
+                                                   4. README Documentation: Maintain READMEs at different levels:
+                                                      * Root-level README with project overview, setup instructions, and links to documentation
+                                                      * Directory-level READMEs for complex feature areas
+                                                      * Documentation for non-obvious architectural decisions
+API Documentation: Document API endpoints and their behavior:
+typescript
+Copy
+/**
+ * @api {post} /api/auth/login User Login
+ * @apiName LoginUser
+ * @apiGroup Authentication
+ * 
+ * @apiParam {String} email User's email
+ * @apiParam {String} password User's password
+ * 
+ * @apiSuccess {Object} user User information
+ * @apiSuccess {String} token Authentication token
+ * 
+ * @apiError {Object} error Error information
+ * @apiError {String} error.message Error message
+                                                      5.  */
+
+Library Usage Guidelines
+                                                         1. Dependencies: Minimize dependencies and prefer smaller, focused libraries.
+                                                         * Evaluate libraries using these criteria:
+                                                         * Bundle size: Prefer smaller libraries that won't impact performance
+                                                         * Maintenance: Check for recent updates and active maintainers
+                                                         * Community: Libraries with larger communities tend to have better support
+                                                         * Documentation: Good documentation reduces onboarding time
+                                                         * Types: Prefer libraries with TypeScript definitions
+                                                         * Document dependency choices in the project README
+                                                         2. Framework Patterns: Follow framework-specific best practices:
+                                                         * For Next.js: Use the App Router pattern (not Pages Router)
+                                                         * For React Query: Use the hooks pattern
+                                                         * For Zustand: Use the create-store pattern
+                                                         * For Tailwind: Use utility classes consistently
+                                                         3. Router Consistency: Ensure consistency in routing approach:
+                                                         * When using Next.js, use either App Router (app/ directory) or Pages Router (pages/ directory) exclusively throughout the application
+                                                         * Standardize on App Router for new projects, as it is the recommended approach by Next.js
+                                                         * Document the chosen router approach in the project README
+Version Control Guidelines
+Commit Message Format: Follow the conventional commits specification:
+Copy
+feat: add user authentication
+fix: resolve password reset issue
+                                                         1. docs: update README with setup instructions
+
+Branch Naming: Use a consistent branch naming convention:
+Copy
+feature/user-authentication
+bugfix/password-reset
+                                                            2. docs/readme-update
+
+These rules provide a comprehensive framework for generating and organizing code in your Cursor Code Generator. They promote clean architecture, maintainability, and consistency throughout your application.

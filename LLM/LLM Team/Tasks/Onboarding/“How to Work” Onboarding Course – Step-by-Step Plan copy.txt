@@ -1,0 +1,71 @@
+Based on the call discussion, here is a step-by-step plan for creating and delivering the onboarding course “How to Work.” This plan is designed as a one-day intensive course, but the content and steps can be adapted if spread over multiple days. Each step corresponds to a module or segment in the onboarding process.
+
+* Initial Setup and Environment *
+
+Goal: Ensure the new team member’s workstation and accounts are fully set up.
+
+Actions:
+- Welcome the new hire with a prepared document or email that contains their access credentials and a checklist of installations (e.g., VPN, code editor, necessary repositories).
+- Guide them through setting up their development environment: installing required software (IDE like Cursor, any SDKs, communication tools like Slack or email config). A senior team member or IT support should be on standby to assist with any technical issues.
+- Verify access to essential services: The new hire should log in to Dropbox, Google Drive, project management tools, and any internal portals. This step ensures they have all permissions needed from day one.
+Output: By the end of this module, the new member has a working development environment and access to all team resources. They have also been introduced to the IT support contact and their onboarding buddy.
+Tools Overview: Cursor, Dropbox, Google Drive, and More
+Goal: Familiarize the newcomer with the key tools the team uses and how to operate them effectively.
+Actions:
+Cursor IDE Introduction: Give a live demo of Cursor, showing how to open the project, use basic editor functions, and trigger the AI helper for coding. Demonstrate a simple use-case (e.g., writing a function with AI assistance). Then explain Cursor’s YOLO-mode: what it does and when (or if) to use it. Emphasize starting with guided mode before trying YOLO-mode, and always reviewing code suggestions.
+Dropbox vs. Google Drive: Explain what types of files or documents live in each. For example: “Project files and large assets are in Dropbox under Team Projects/, whereas Google Drive hosts documents like meeting notes, design docs, and the team handbook.” Show how to navigate the folder structures and search for content. If the team uses a naming convention for files, point that out.
+Communication Tools: Ensure the new hire knows where team communication happens (e.g., “We use Slack for instant messaging and Zoom for meetings; here are the key channels and email distribution lists to join”). This might have been partly covered in initial setup, but here we focus on usage norms (like Slack etiquette, or how we schedule meetings).
+Other Dev Tools: Briefly cover any other critical tools: code repository (and branching strategy), continuous integration system, testing frameworks, etc. The idea is not to train fully on each, but to make them aware these exist and will be learned gradually.
+Output: The new hire has seen the tools in action, knows how to perform basic operations in each, and has documentation references or cheat-sheets for later. They should feel confident in where to go for specific needs (coding, file access, communication).
+Best Practices in Documentation and Planning
+Goal: Instill good habits for documentation and task management from the start.
+Actions:
+Documentation Walkthrough: Show the new member the “Team Handbook” or equivalent main documentation repository. Go through an example page (like “How to deploy our app” or “Coding style guidelines”) to illustrate how information is structured. Reinforce that this is the first place to check when unsure about a process.
+Note-Taking & Updates: Encourage them to take notes during onboarding (or provide a template to do so). Clarify that it’s okay to update documentation if they spot something out of date or missing – in fact, this is welcomed. Perhaps assign a small task: “Update the onboarding doc with one thing you found confusing,” as a way to practice contributing to docs.
+Task Planning Overview: Explain how tasks are created and tracked. If using an Agile board, open it and show how user stories or tasks are written, what the columns mean (To Do, In Progress, Done, etc.). Also, describe how the team plans each sprint or iteration so they understand the context of their work.
+Prioritization & Time Management: Share any team norms on prioritizing work (e.g., high-priority bugs vs. new features) and how to manage their time. If there’s a daily stand-up, mention that they will be expected to share what they’re working on – which ties back to keeping tasks updated.
+Output: The new member now knows where to find documentation and how to contribute to it. They also understand the basics of the team’s planning process and what tools are used to track work (and perhaps have read access to the current project plans or backlog).
+Roles and Responsibilities of Team Members
+Goal: Clarify how the team is structured and who does what, so the new hire knows whom to go to for different needs.
+Actions:
+Team Structure Overview: Provide an org chart or verbally outline the team roles (e.g., “We have 5 developers, 1 designer, 1 product manager, etc. The team is led by [Name], and your direct supervisor is [Name].”). If available, share a document with pictures/names or a team directory.
+Responsibilities: Describe the key responsibilities of each role in the context of collaboration. For example: “Product Manager defines the requirements and is the go-to for questions about why we are building something. The Tech Lead reviews all critical code and can help with architectural questions. QA will test your work, so involve them early if you have doubts about a scenario,” etc.
+Your Role: Explain the expectations for the new hire’s role specifically. What are their initial tasks or project involvement? How do they fit into current projects? Make sure they know any immediate responsibilities they will take on after onboarding.
+Mentorship and Support: Reiterate that they have an onboarding buddy or mentor (mention that person by name) who will support them beyond this day. Encourage them to set up a regular sync with that person for the first few weeks.
+Output: The new team member can identify colleagues by name and role and understands the general workflow of who hands off to whom. They know at least one “go-to” person for different areas (e.g., who to ask about server infrastructure vs. who to ask about UI design).
+Single-Day Onboarding Schedule (Sample Agenda)
+Goal: Provide a structured timeline for the first day, integrating all the above modules in a coherent flow.
+Sample Agenda:
+09:00 – 09:30 | Welcome & Introduction: Meet with the team (either in-person or via video call). Each team member does a brief introduction. Outline the day’s schedule. HR or team lead covers any general orientation (company mission, team goals, etc. – briefly).
+09:30 – 10:45 | Initial Setup: IT setup and account logins as described in Step 1. Mentor or buddy sits with the new hire to ensure all installations are done.
+10:45 – 11:00 | Coffee Break: A short break, also a chance for informal chat to integrate socially.
+11:00 – 12:15 | Tools Walkthrough: Conduct the Tools Overview module (Step 2). This is interactive – the new hire can try performing some actions as the demo goes on (e.g., opening a file from Dropbox, running a small piece of code in Cursor).
+12:15 – 13:15 | Lunch Break: Ideally, a team lunch (if co-located) or a casual virtual lunch with the team to build rapport.
+13:15 – 14:00 | Documentation & Planning: Go through Step 3 content. Possibly have the new hire locate a piece of info in the docs to ensure they know how. They might also create their first task on the tracking system (like a “Hello World” task) just to see how it’s done.
+14:00 – 14:45 | Roles & Team Expectations: Cover Step 4 content. This can be more of a discussion led by the team lead or manager. Go over the org chart and clarify any company-level policies if needed.
+14:45 – 15:00 | Break: Another short break to stay fresh.
+15:00 – 16:30 | Hands-on Exercise: “First Task” activity. This could be a small, non-critical task designed for learning. For instance, fixing a minor bug or adding a simple feature in a sandbox environment. The new hire uses Cursor (and possibly tries AI assistance) to work on it. The mentor guides them, showing how to commit code, run tests, etc., as a practice run of real work.
+16:30 – 17:00 | Wrap-up and Q&A: Review what was covered. Answer any questions. The new hire shares one takeaway from the day. The mentor or manager discusses next steps (e.g., tasks for the rest of the week, setting up additional training if needed). Finally, ask the new hire for feedback on the onboarding day and note any improvements for next time.
+
+
+
+In practice, onboarding follows a sequence of events from pre-arrival preparation to first tasks on the job. The diagram above illustrates a generic onboarding process: after an offer is accepted, the company sends a welcome email and IT sets up accounts for the new hire. On the first day (center orange circle), the new team member goes through initial tasks like filling out paperwork and meeting their team. They are shown to their workstation and introduced to colleagues. A team lunch or informal meetup is common. The day continues with orientation and training sessions, and finally the new hire is assigned their first real tasks. Our one-day agenda is designed to cover these essentials in a structured way, ensuring no critical step is missed.
+Suggested Prompts, Tasks, and AI-Supported Workflows
+Goal: Provide examples of how new team members can leverage AI tools and follow prompts to learn and work effectively.
+Actions/Examples:
+During the Cursor demo, give the new hire a cheat-sheet of useful prompts. For example: “Explain this code…”, “Write a function to do X…”, or “Find the bug in the highlighted code.” Let them try these prompts on a sample code file. This shows how to interact with the AI assistant in Cursor to get help or generate code.
+Introduce a “YOLO-mode experiment”: on a trivial piece of code, allow the new hire to enable YOLO-mode and observe how the AI attempts to solve a simple problem (like sorting a list or generating a config file). Then discuss the outcome, reviewing what the AI did right or wrong. This will demystify autonomous AI actions and emphasize the need for human oversight.
+For documentation, provide a prompt example like “Summarize the decisions from today’s stand-up meeting.” If the team uses an AI integration for meeting notes, demonstrate it. Otherwise, use this as a thought exercise on how the new hire can use AI (like ChatGPT) to quickly draft summaries or outlines, which they can then refine.
+Assign a small task that involves AI support: e.g., “Using Cursor, create a basic README for our sample project.” The new hire can prompt the AI for an initial draft of the README, then edit it to fit the project’s specifics. This reinforces both documentation practice and AI usage.
+Output: The new team member gets hands-on experience with AI prompts and understands some effective patterns. They also see how AI can speed up tasks but learn to always review and edit the AI’s output. This sets a foundation for them to continue exploring AI tools in their daily work confidently and responsibly.
+Final Deliverables and Tracking Progress
+Goal: Ensure that the onboarding process has measurable outcomes and that the new hire’s progress is tracked through their early days.
+Deliverables for the New Hire:
+Completion of the hands-on exercise (from the onboarding day) with code or documentation they produced. This could be committing a tiny code change to a repo or writing a short report on something learned.
+An updated onboarding checklist. As they went through the day, they check off items. Any item not fully covered should be noted for follow-up (for example, if they didn’t get access to a system yet, or need more practice with a tool).
+A short reflection or feedback form. This might ask: What part of today was most helpful? What do you still feel unsure about? Their feedback helps the mentor address any gaps the next day and helps improve the onboarding program.
+Tracking Progress Post-Day-One:
+The mentor or manager should have a tracking document (or use the project management tool) to monitor the new hire’s integration. This might include setting goals for week 1, week 2, and the first month (e.g., “By end of Week 1: complete one small bug fix independently”).
+Schedule regular one-on-one meetings (perhaps weekly for the first month) to discuss progress, answer questions, and ensure the new team member is comfortable and on track with their responsibilities.
+If the company has formal probation or evaluation milestones (30-day or 90-day reviews), note these in the onboarding plan so the employee knows what to expect. Align the onboarding tasks to prepare them for these evaluations (for instance, ensuring they are exposed to all major areas of the codebase by 90 days).
+Output: A clear set of outcomes from the onboarding day and a plan for the new hire’s continued growth. Both the new hire and their manager have a shared understanding of what was accomplished and what the next steps are. Progress is documented, which also helps HR or team leads refine the onboarding process for future hires.

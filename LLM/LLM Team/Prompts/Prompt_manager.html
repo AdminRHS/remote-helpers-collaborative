@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конструктор промптов</title>
+  <style>
+    /* Основной iOS‑стайл и анимации */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9eff5);
+      margin: 0;
+      padding: 20px;
+      color: #1c1c1e;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007aff;
+      font-size: 28px;
+      animation: fadeInDown 0.8s ease;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea, button, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      transition: all 0.2s ease;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #007aff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0,122,255,0.5);
+    }
+    button {
+      background-color: #007aff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+    /* Стили для области сохранённых переменных (маленькие кнопочки) */
+    .savedVar {
+      margin: 5px;
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #e0f0ff;
+      color: #007aff;
+      cursor: grab;
+      transition: transform 0.2s ease;
+    }
+    .savedVar:active {
+      cursor: grabbing;
+      transform: scale(0.95);
+    }
+    /* Стили для области редактирования промпта */
+    #promptText {
+      min-height: 150px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Стили для сообщений об ошибке */
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Конструктор промптов</h1>
+  
+  <!-- Настройка вебхука n8n -->
+  <div class="container">
+    <label for="webhookURL">Webhook URL (n8n):</label>
+    <input type="url" id="webhookURL" placeholder="Введите URL вебхука n8n">
+    <button id="saveWebhook">Сохранить вебхук</button>
+  </div>
+  
+  <!-- Область сохранённых переменных -->
+  <div class="container">
+    <h3>Сохранённые переменные</h3>
+    <div id="savedVars"></div>
+    <p>Перетащите переменную в текст промпта для вставки плейсхолдера.</p>
+  </div>
+  
+  <!-- Ввод данных промпта -->
+  <div class="container">
+    <label for="promptTitle">Название промпта:</label>
+    <input type="text" id="promptTitle" placeholder="Введите название">
+    
+    <label for="folderSelect">Папка:</label>
+    <select id="folderSelect"></select>
+    <input type="text" id="newFolderInput" placeholder="Новая папка">
+    <button id="addFolderBtn">Добавить папку</button>
+    
+    <label for="promptText">Текст промпта:</label>
+    <!-- Используем contenteditable для возможности вставки плейсхолдеров -->
+    <div id="promptText" contenteditable="true"></div>
+  </div>
+  
+  <!-- Создание переменной -->
+  <div class="container">
+    <h3>Создать переменную</h3>
+    <input type="text" id="varNameInput" placeholder="Название переменной (без пробелов)">
+    <input type="text" id="varValueInput" placeholder="Значение переменной">
+    <button id="saveVar">Сохранить переменную</button>
+    <p id="varError" class="error"></p>
+  </div>
+  
+  <!-- Действия с промптом -->
+  <div class="container">
+    <button id="generatePrompt">Генерировать промпт</button>
+    <button id="copyPrompt">Копировать промпт</button>
+    <button id="savePrompt">Сохранить промпт</button>
+  </div>
+  
+  <!-- Результат -->
+  <div class="container">
+    <h3>Результат:</h3>
+    <pre id="result"></pre>
+  </div>
+  
+  <script>
+    // При загрузке страницы - загружаем сохранённый вебхук и папки
+    document.addEventListener("DOMContentLoaded", function() {
+      const savedWebhook = localStorage.getItem('n8nWebhook');
+      if (savedWebhook) {
+        document.getElementById('webhookURL').value = savedWebhook;
+      }
+      
+      // Загрузка папок из localStorage или установка дефолтной папки
+      let folders = JSON.parse(localStorage.getItem('folders')) || ["Default"];
+      const folderSelect = document.getElementById('folderSelect');
+      folderSelect.innerHTML = "";
+      folders.forEach(function(folder) {
+        let option = document.createElement('option');
+        option.value = folder;
+        option.textContent = folder;
+        folderSelect.appendChild(option);
+      });
+    });
+    
+    // Сохранение вебхука в localStorage
+    document.getElementById('saveWebhook').addEventListener('click', function() {
+      const webhookURL = document.getElementById('webhookURL').value;
+      if (webhookURL) {
+        localStorage.setItem('n8nWebhook', webhookURL);
+        alert('Webhook URL сохранён локально');
+      } else {
+        alert('Введите корректный URL');
+      }
+    });
+    
+    // Логика добавления новой папки
+    document.getElementById('addFolderBtn').addEventListener('click', function() {
+      const newFolderInput = document.getElementById('newFolderInput');
+      const newFolder = newFolderInput.value.trim();
+      if (!newFolder) {
+        alert("Введите название папки");
+        return;
+      }
+      const folderSelect = document.getElementById('folderSelect');
+      // Проверка на дублирование
+      for(let i = 0; i < folderSelect.options.length; i++) {
+        if(folderSelect.options[i].value === newFolder) {
+          alert("Папка с таким названием уже существует");
+          newFolderInput.value = "";
+          return;
+        }
+      }
+      let option = document.createElement('option');
+      option.value = newFolder;
+      option.textContent = newFolder;
+      folderSelect.appendChild(option);
+      newFolderInput.value = "";
+      
+      // Обновление списка папок в localStorage
+      let folders = JSON.parse(localStorage.getItem('folders')) || ["Default"];
+      folders.push(newFolder);
+      localStorage.setItem('folders', JSON.stringify(folders));
+    });
+    
+    // Функция для сохранения переменной
+    document.getElementById('saveVar').addEventListener('click', function() {
+      const varNameInput = document.getElementById('varNameInput');
+      const varValueInput = document.getElementById('varValueInput');
+      const errorElem = document.getElementById('varError');
+      let name = varNameInput.value.trim();
+      const value = varValueInput.value;
+      
+      // Валидация: имя не пустое и без пробелов
+      if (!name) {
+        errorElem.textContent = "Название переменной не может быть пустым.";
+        return;
+      }
+      if (name.indexOf(' ') !== -1) {
+        errorElem.textContent = "Название переменной не должно содержать пробелы.";
+        return;
+      }
+      errorElem.textContent = "";
+      
+      // Создаём маленькую кнопку для сохранённой переменной
+      const btn = document.createElement('button');
+      btn.textContent = name;
+      btn.className = 'savedVar';
+      btn.setAttribute('draggable', 'true');
+      // Сохраняем данные в dataset
+      btn.dataset.placeholder = `{${name}}`;
+      btn.dataset.value = value;
+      
+      // Обработчик события dragstart: передаём placeholder
+      btn.addEventListener('dragstart', function(e) {
+        e.dataTransfer.setData('text/plain', btn.dataset.placeholder);
+      });
+      
+      document.getElementById('savedVars').appendChild(btn);
+      
+      // Очистка полей ввода
+      varNameInput.value = "";
+      varValueInput.value = "";
+    });
+    
+    // Область редактирования промпта (contenteditable) - обработка drop
+    const promptTextDiv = document.getElementById('promptText');
+    promptTextDiv.addEventListener('dragover', function(e) {
+      e.preventDefault();
+    });
+    promptTextDiv.addEventListener('drop', function(e) {
+      e.preventDefault();
+      const placeholder = e.dataTransfer.getData('text/plain');
+      insertTextAtCursor(placeholder);
+    });
+    
+    // Функция вставки текста в текущую позицию курсора внутри contenteditable
+    function insertTextAtCursor(text) {
+      let sel, range;
+      if (window.getSelection) {
+        sel = window.getSelection();
+        if (sel.getRangeAt && sel.rangeCount) {
+          range = sel.getRangeAt(0);
+          range.deleteContents();
+          const textNode = document.createTextNode(text);
+          range.insertNode(textNode);
+          range.setStartAfter(textNode);
+          range.collapse(true);
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+      }
+    }
+    
+    // Генерация промпта: замена всех плейсхолдеров на соответствующие значения
+    document.getElementById('generatePrompt').addEventListener('click', function() {
+      let content = promptTextDiv.innerHTML;
+      // Для каждой сохранённой переменной ищем её плейсхолдер и заменяем на значение
+      const savedVars = document.querySelectorAll('.savedVar');
+      savedVars.forEach(function(btn) {
+        const varName = btn.textContent;
+        const placeholder = `{${varName}}`;
+        const varValue = btn.dataset.value || "";
+        // Экранируем спецсимволы для регулярного выражения
+        const escPlaceholder = placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(escPlaceholder, 'g');
+        content = content.replace(regex, varValue);
+      });
+      document.getElementById('result').textContent = content;
+    });
+    
+    // Копирование результата в буфер обмена
+    document.getElementById('copyPrompt').addEventListener('click', function() {
+      const text = document.getElementById('result').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Промпт скопирован');
+      });
+    });
+    
+    // Сохранение промпта на сервер и отправка на n8n
+    document.getElementById('savePrompt').addEventListener('click', function() {
+      const title = document.getElementById('promptTitle').value;
+      const folder = document.getElementById('folderSelect').value;
+      const promptHTML = promptTextDiv.innerHTML;
+      
+      // Собираем сохранённые переменные
+      const variables = [];
+      const savedVars = document.querySelectorAll('.savedVar');
+      savedVars.forEach(function(btn) {
+        variables.push({
+          name: btn.textContent,
+          value: btn.dataset.value || ""
+        });
+      });
+      
+      const data = {
+        title: title,
+        folder: folder,
+        prompt: promptHTML,
+        variables: variables,
+        generated: document.getElementById('result').textContent,
+        timestamp: new Date().toISOString()
+      };
+      
+      fetch('save_prompt.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(result => {
+        const webhookURL = localStorage.getItem('n8nWebhook');
+        if (webhookURL) {
+          fetch(webhookURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          })
+          .then(() => {
+            alert('Промпт сохранён и отправлен на n8n');
+          })
+          .catch(() => {
+            alert('Промпт сохранён, но ошибка при отправке на n8n');
+          });
+        } else {
+          alert('Промпт сохранён на сервере, но n8n вебхук не задан');
+        }
+      })
+      .catch(error => {
+        alert('Ошибка сохранения промпта');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>MCP Server Mastery: The AI Integration Journey</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .hidden { display: none; }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #007acc, #00c6ff);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #005f99, #0099cc);
+    }
+    .btn:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(45deg, #007acc, #00c6ff);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 20px;
+      margin: 15px 0 0;
+      padding: 0 20px;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 30%;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 2px solid #00c6ff;
+    }
+    .testimonial p { margin: 10px 0; }
+    .testimonial span { font-size: 24px; }
+    .course-header {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #007acc;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #007acc;
+    }
+    .course-page {
+      display: none;
+      padding: 20px;
+    }
+    .course-progress {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 240px;
+      z-index: 1000;
+    }
+    .progress-bar-container {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .progress-bar-fill {
+      background: linear-gradient(45deg, #007acc, #00c6ff);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    .star-icon {
+      color: gold;
+      font-size: 24px;
+      margin-left: 5px;
+    }
+    .toc {
+      margin: 20px 0;
+      background: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li {
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .toc li:hover { background: #00d6ff; }
+    .toc .active {
+      background: #00c6ff;
+      color: #fff;
+    }
+    .content-area {
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      min-height: 300px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="landing-page" class="container">
+    <div class="hero">
+      <h1>Practical Guide for AI</h1>
+      <p>Creating an MCP Server for Cursor AI with Email Functionality</p>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <span>💻</span>
+        <p>"This guide completely transformed my understanding of AI integration!"</p>
+        <p><strong>- Alex Dev</strong></p>
+      </div>
+      <div class="testimonial">
+        <span>🛠️</span>
+        <p>"An essential resource for any modern developer looking to harness AI."</p>
+        <p><strong>- Maria Tester</strong></p>
+      </div>
+      <div class="testimonial">
+        <span>🚀</span>
+        <p>"Practical, clear, and very interactive – highly recommended."</p>
+        <p><strong>- John Code</strong></p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <button class="btn" id="start-guide-btn">Start Guide</button>
+    </div>
+  </div>
+
+  <div id="course-page" class="container course-page">
+    <div class="course-header">Creating an MCP Server for Cursor AI with Email Functionality</div>
+    <div class="course-progress" id="course-progress">
+      <h3>Course Progress</h3>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+      <p id="progress-info"></p>
+      <p><strong>Stars:</strong> <span id="stars-count">0</span><span class="star-icon">★</span></p>
+    </div>
+    <div class="toc">
+      <ul id="toc-list"></ul>
+    </div>
+    <div class="content-area" id="content-area">
+      <h2 id="content-title"></h2>
+      <div id="content-text"></div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn" id="prev-btn">Previous</button>
+      <button class="btn" id="next-btn">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const sections = [
+      {
+        title: "Introduction",
+        content: `<p>Welcome to the MCP Server Integration Guide! This tutorial will teach you how to create and integrate an MCP server with Cursor AI, focusing on email functionality.</p>`
+      },
+      {
+        title: "Understanding MCP",
+        content: `<p>The Model Context Protocol (MCP) is a powerful way to extend AI capabilities. We'll explore how it works and why it's useful.</p>`
+      },
+      {
+        title: "Setting Up Your Environment",
+        content: `<p>Learn how to prepare your development environment for creating an MCP server.</p>`
+      },
+      {
+        title: "Creating the Server",
+        content: `<p>Step-by-step guide to building your MCP server with email capabilities.</p>`
+      },
+      {
+        title: "Testing and Deployment",
+        content: `<p>Learn how to test your server and deploy it for production use.</p>`
+      }
+    ];
+
+    let currentSection = 0;
+    const startBtn = document.getElementById('start-guide-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const contentTitle = document.getElementById('content-title');
+    const contentText = document.getElementById('content-text');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const progressInfo = document.getElementById('progress-info');
+    const tocList = document.getElementById('toc-list');
+
+    function updateContent(index) {
+      currentSection = index;
+      const section = sections[index];
+      contentTitle.textContent = section.title;
+      contentText.innerHTML = section.content;
+      updateProgress();
+      updateTOC();
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === sections.length - 1;
+    }
+
+    function updateProgress() {
+      const progress = ((currentSection + 1) / sections.length) * 100;
+      progressBarFill.style.width = progress + '%';
+      progressInfo.textContent = `Progress: ${currentSection + 1}/${sections.length}`;
+    }
+
+    function updateTOC() {
+      tocList.innerHTML = '';
+      sections.forEach((section, index) => {
+        const li = document.createElement('li');
+        li.textContent = section.title;
+        li.classList.toggle('active', index === currentSection);
+        li.onclick = () => updateContent(index);
+        tocList.appendChild(li);
+      });
+    }
+
+    startBtn.onclick = () => {
+      document.getElementById('landing-page').style.display = 'none';
+      document.getElementById('course-page').style.display = 'block';
+      updateContent(0);
+    };
+
+    prevBtn.onclick = () => {
+      if (currentSection > 0) updateContent(currentSection - 1);
+    };
+
+    nextBtn.onclick = () => {
+      if (currentSection < sections.length - 1) updateContent(currentSection + 1);
+    };
+  </script>
+</body>
+</html> 

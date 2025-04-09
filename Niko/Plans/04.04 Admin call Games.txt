@@ -1,0 +1,20 @@
+﻿ranslation to English and Summary:
+The text is a transcript of an admin call held on April 4, 2025, where participants showcased their projects involving AI-generated educational games and tools, primarily built using platforms like Replit, Cursor, Winserve, DeepSight, GenSpark AI, and others. The discussion revolves around creating interactive learning experiences, often gamified, to teach various skills or concepts, such as Google Sheets usage, coding, planning, onboarding processes, and more. Participants shared their progress, challenges, and ideas, often incorporating mascots (e.g., a wolf, shark, chameleon, squirrel) that evolve as users complete tasks.
+Summary:
+* Objective: Participants developed demo versions of educational games/tools using AI tools to enhance learning, targeting both internal team training and potential client/candidate engagement.
+* Projects:
+   * Katya: Created a Windows-like interface with games (Memory with word-definition pairs, Maze for sequence learning, Formula Builder) and a wolf mascot that upgrades (hat, glasses, meat) as lessons are completed. Includes a "Download Guide" feature and plans for video animations.
+   * Olya: Built a flexible backend system for tag-based lessons with draggable explanations and interactive elements like mazes and memory cards.
+   * Borya: Developed a quest game with a hero navigating a grid (trees, water, mountains) to collect scrolls (theory), pass tests (skulls), and earn rewards (stars), using DeepSight and Cursor.
+   * Kolya: Showed two apps: one with a shark mascot guiding a quiz (emotions change based on answers) and a mini-game (finding a key in chests), and another with an alien-themed drag-and-drop animation for a prompt engineering course.
+   * Sasha: Presented a planning tool with a Notion-sync app, workload analysis via a "Discover" feature, and a landing page with flashcards and Pomodoro timers, generated using GenSpark AI and Hugging Face.
+   * Nastya: Worked on infographics for onboarding (e.g., Google Chrome account setup) with a smoking squirrel mascot, plus a basic Snake game landing page.
+   * Lead Generation Team: Built a "Company Search with ChatGPT" lesson with theory, tests, and practical tasks on a landing page using Replit.
+   * Others: Projects included a cyberpunk-themed Cursor tutorial, an Instagram-swipe-style mobile app, and a city-driving game with theory and tests.
+* Tools Used: Replit, Cursor, Winserve, DeepSight, GenSpark AI, Hugging Face, ChatGPT, Android Studio, etc.
+* Challenges: Bugs (e.g., broken buttons, undefined errors), token limits in AI platforms, lack of version control, and incomplete features due to time constraints.
+* Next Steps: Create a catalog of projects, document processes, focus on mobile-friendly designs, and integrate into workflows (e.g., employee experience on the company site). Emphasis on collaboration and refining demos.
+Key Takeaways:
+* Participants leveraged AI to rapidly prototype educational games, reducing development time significantly (e.g., from weeks to days).
+* Gamification (mascots, rewards, mini-games) was a common theme to engage users.
+* The call highlighted the need for documentation, version control, and a unified structure for deployment, with a shift toward mobile ecosystems suggested for future iterations.

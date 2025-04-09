@@ -1,0 +1,941 @@
+{
+    "sheet_name": "Parameters",
+    "data": [
+        {
+            "Types": "new",
+            "Parameters": "initial response rate"
+        },
+        {
+            "Types": "new",
+            "Parameters": "conversion rate"
+        },
+        {
+            "Types": "new",
+            "Parameters": "engagement level"
+        },
+        {
+            "Types": "in work",
+            "Parameters": "client interaction frequency"
+        },
+        {
+            "Types": "in work",
+            "Parameters": "progress tracking"
+        },
+        {
+            "Types": "in work",
+            "Parameters": "issue resolution rate"
+        },
+        {
+            "Types": "sold",
+            "Parameters": "revenue generated"
+        },
+        {
+            "Types": "sold",
+            "Parameters": "sales cycle duration"
+        },
+        {
+            "Types": "sold",
+            "Parameters": "customer satisfaction index"
+        },
+        {
+            "Types": "banned",
+            "Parameters": "reason for ban"
+        },
+        {
+            "Types": "banned",
+            "Parameters": "ban appeal success rate"
+        },
+        {
+            "Types": "banned",
+            "Parameters": "preventive measures taken"
+        },
+        {
+            "Types": "problematic",
+            "Parameters": "problem identification speed"
+        },
+        {
+            "Types": "problematic",
+            "Parameters": "resolution effectiveness"
+        },
+        {
+            "Types": "problematic",
+            "Parameters": "recurrence rate"
+        },
+        {
+            "Types": "free",
+            "Parameters": "upgrade conversion rate"
+        },
+        {
+            "Types": "free",
+            "Parameters": "engagement metrics"
+        },
+        {
+            "Types": "free",
+            "Parameters": "activity score"
+        },
+        {
+            "Types": "sector",
+            "Parameters": "growth rate"
+        },
+        {
+            "Types": "sector",
+            "Parameters": "market share"
+        },
+        {
+            "Types": "sector",
+            "Parameters": "regulatory impact"
+        },
+        {
+            "Types": "industry",
+            "Parameters": "innovation rate"
+        },
+        {
+            "Types": "industry",
+            "Parameters": "competitor density"
+        },
+        {
+            "Types": "industry",
+            "Parameters": "profit margins"
+        },
+        {
+            "Types": "market",
+            "Parameters": "market penetration rate"
+        },
+        {
+            "Types": "market",
+            "Parameters": "demand fluctuation"
+        },
+        {
+            "Types": "market",
+            "Parameters": "customer loyalty"
+        },
+        {
+            "Types": "business",
+            "Parameters": "needs assessment accuracy"
+        },
+        {
+            "Types": "business",
+            "Parameters": "decision-making speed"
+        },
+        {
+            "Types": "business",
+            "Parameters": "purchasing power"
+        },
+        {
+            "Types": "individual",
+            "Parameters": "buying behavior"
+        },
+        {
+            "Types": "individual",
+            "Parameters": "brand loyalty"
+        },
+        {
+            "Types": "individual",
+            "Parameters": "price sensitivity"
+        },
+        {
+            "Types": "google",
+            "Parameters": "search volume"
+        },
+        {
+            "Types": "google",
+            "Parameters": "click-through rate"
+        },
+        {
+            "Types": "google",
+            "Parameters": "keyword effectiveness"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "network expansion rate"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "profile engagement rate"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "lead conversion rate"
+        },
+        {
+            "Types": "company",
+            "Parameters": "accuracy of company information"
+        },
+        {
+            "Types": "company",
+            "Parameters": "update frequency"
+        },
+        {
+            "Types": "company",
+            "Parameters": "user engagement"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "lead quality score"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "conversion potential"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "follow-up rate"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "connection growth rate"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "profile completeness"
+        },
+        {
+            "Types": "linkedin",
+            "Parameters": "interaction rate"
+        },
+        {
+            "Types": "website",
+            "Parameters": "visitor traffic"
+        },
+        {
+            "Types": "website",
+            "Parameters": "conversion rate"
+        },
+        {
+            "Types": "website",
+            "Parameters": "bounce rate"
+        },
+        {
+            "Types": "social media",
+            "Parameters": "follower growth"
+        },
+        {
+            "Types": "social media",
+            "Parameters": "engagement rate"
+        },
+        {
+            "Types": "social media",
+            "Parameters": "content reach"
+        },
+        {
+            "Types": "valid",
+            "Parameters": "contact accuracy rate"
+        },
+        {
+            "Types": "valid",
+            "Parameters": "response rate"
+        },
+        {
+            "Types": "valid",
+            "Parameters": "update frequency"
+        },
+        {
+            "Types": "active",
+            "Parameters": "communication frequency"
+        },
+        {
+            "Types": "active",
+            "Parameters": "transaction rate"
+        },
+        {
+            "Types": "active",
+            "Parameters": "responsiveness"
+        },
+        {
+            "Types": "inactive",
+            "Parameters": "reactivation success rate"
+        },
+        {
+            "Types": "inactive",
+            "Parameters": "dormancy period"
+        },
+        {
+            "Types": "inactive",
+            "Parameters": "last activity date"
+        },
+        {
+            "Types": "empty",
+            "Parameters": "cleanup efficiency"
+        },
+        {
+            "Types": "empty",
+            "Parameters": "data completeness"
+        },
+        {
+            "Types": "empty",
+            "Parameters": "last audit date"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "lead acquisition rate"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "initial contact success"
+        },
+        {
+            "Types": "lead",
+            "Parameters": "follow-up efficiency"
+        },
+        {
+            "Types": "interested",
+            "Parameters": "interest level"
+        },
+        {
+            "Types": "interested",
+            "Parameters": "engagement actions"
+        },
+        {
+            "Types": "interested",
+            "Parameters": "proposal acceptance rate"
+        },
+        {
+            "Types": "client",
+            "Parameters": "client retention rate"
+        },
+        {
+            "Types": "client",
+            "Parameters": "average transaction value"
+        },
+        {
+            "Types": "client",
+            "Parameters": "satisfaction index"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "information accuracy rate"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "update frequency"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "relevance score"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "disqualification reasons"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "alternative opportunities identified"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "re-engagement attempts"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "reactivation rate"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "initial interest level"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "follow-up response"
+        },
+        {
+            "Types": "new",
+            "Parameters": "freshness index"
+        },
+        {
+            "Types": "new",
+            "Parameters": "engagement rate"
+        },
+        {
+            "Types": "new",
+            "Parameters": "qualification speed"
+        },
+        {
+            "Types": "active",
+            "Parameters": "progress tracking"
+        },
+        {
+            "Types": "active",
+            "Parameters": "conversion rate"
+        },
+        {
+            "Types": "active",
+            "Parameters": "interaction depth"
+        },
+        {
+            "Types": "client",
+            "Parameters": "client conversion rate"
+        },
+        {
+            "Types": "client",
+            "Parameters": "upsell rate"
+        },
+        {
+            "Types": "client",
+            "Parameters": "satisfaction level"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "data accuracy"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "recency of interaction"
+        },
+        {
+            "Types": "updated",
+            "Parameters": "relevance of information"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "disqualification rate"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "reason analysis"
+        },
+        {
+            "Types": "not relevant",
+            "Parameters": "follow-up actions"
+        },
+        {
+            "Types": "personalized",
+            "Parameters": "personalization effectiveness"
+        },
+        {
+            "Types": "personalized",
+            "Parameters": "response rate"
+        },
+        {
+            "Types": "personalized",
+            "Parameters": "engagement uplift"
+        },
+        {
+            "Types": "relevant",
+            "Parameters": "relevance score"
+        },
+        {
+            "Types": "relevant",
+            "Parameters": "engagement level"
+        },
+        {
+            "Types": "relevant",
+            "Parameters": "conversion impact"
+        },
+        {
+            "Types": "old",
+            "Parameters": "re-engagement success"
+        },
+        {
+            "Types": "old",
+            "Parameters": "historical value assessment"
+        },
+        {
+            "Types": "old",
+            "Parameters": "update needs"
+        },
+        {
+            "Types": "received",
+            "Parameters": "response rate"
+        },
+        {
+            "Types": "received",
+            "Parameters": "interaction quality"
+        },
+        {
+            "Types": "received",
+            "Parameters": "follow-up actions"
+        },
+        {
+            "Types": "connection",
+            "Parameters": "initial response quality"
+        },
+        {
+            "Types": "connection",
+            "Parameters": "timeliness"
+        },
+        {
+            "Types": "connection",
+            "Parameters": "conversion impact"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "engagement rate"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "response quality"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "follow-up rate"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "follow-up success rate"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "client feedback"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "deal closure rate"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "effectiveness rating"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "audience engagement"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "feedback quality"
+        },
+        {
+            "Types": "sms",
+            "Parameters": "open rate"
+        },
+        {
+            "Types": "sms",
+            "Parameters": "response rate"
+        },
+        {
+            "Types": "sms",
+            "Parameters": "conversion from SMS"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "open rate"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "click-through rate"
+        },
+        {
+            "Types": "cold",
+            "Parameters": "unsubscribe rate"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "response rate"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "engagement depth"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "conversion success"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "audience reach"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "engagement score"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "feedback quality"
+        },
+        {
+            "Types": "informational",
+            "Parameters": "reach"
+        },
+        {
+            "Types": "informational",
+            "Parameters": "engagement rate"
+        },
+        {
+            "Types": "informational",
+            "Parameters": "knowledge uplift"
+        },
+        {
+            "Types": "trial-based",
+            "Parameters": "conversion rate"
+        },
+        {
+            "Types": "trial-based",
+            "Parameters": "trial success rate"
+        },
+        {
+            "Types": "trial-based",
+            "Parameters": "subsequent purchase rate"
+        },
+        {
+            "Types": "discounts",
+            "Parameters": "redemption rate"
+        },
+        {
+            "Types": "discounts",
+            "Parameters": "sales increase"
+        },
+        {
+            "Types": "discounts",
+            "Parameters": "customer acquisition cost"
+        },
+        {
+            "Types": "interactive",
+            "Parameters": "participant count"
+        },
+        {
+            "Types": "interactive",
+            "Parameters": "engagement depth"
+        },
+        {
+            "Types": "interactive",
+            "Parameters": "conversion rate"
+        },
+        {
+            "Types": "immediate",
+            "Parameters": "urgency identification"
+        },
+        {
+            "Types": "immediate",
+            "Parameters": "response time"
+        },
+        {
+            "Types": "immediate",
+            "Parameters": "resolution effectiveness"
+        },
+        {
+            "Types": "long-term",
+            "Parameters": "planning accuracy"
+        },
+        {
+            "Types": "long-term",
+            "Parameters": "resource allocation efficiency"
+        },
+        {
+            "Types": "long-term",
+            "Parameters": "goal attainment"
+        },
+        {
+            "Types": "position",
+            "Parameters": "demand accuracy"
+        },
+        {
+            "Types": "position",
+            "Parameters": "candidate fit"
+        },
+        {
+            "Types": "position",
+            "Parameters": "fulfillment duration"
+        },
+        {
+            "Types": "skill",
+            "Parameters": "skill gap analysis"
+        },
+        {
+            "Types": "skill",
+            "Parameters": "training effectiveness"
+        },
+        {
+            "Types": "skill",
+            "Parameters": "performance improvement"
+        },
+        {
+            "Types": "replacement",
+            "Parameters": "replacement time"
+        },
+        {
+            "Types": "replacement",
+            "Parameters": "cost efficiency"
+        },
+        {
+            "Types": "replacement",
+            "Parameters": "performance continuity"
+        },
+        {
+            "Types": "project",
+            "Parameters": "project alignment accuracy"
+        },
+        {
+            "Types": "project",
+            "Parameters": "resource utilization"
+        },
+        {
+            "Types": "project",
+            "Parameters": "outcome success"
+        },
+        {
+            "Types": "first connection",
+            "Parameters": "contact quality"
+        },
+        {
+            "Types": "first connection",
+            "Parameters": "initial response time"
+        },
+        {
+            "Types": "first connection",
+            "Parameters": "relationship potential"
+        },
+        {
+            "Types": "basic correspondence",
+            "Parameters": "message clarity"
+        },
+        {
+            "Types": "basic correspondence",
+            "Parameters": "response timeliness"
+        },
+        {
+            "Types": "basic correspondence",
+            "Parameters": "issue resolution rate"
+        },
+        {
+            "Types": "event",
+            "Parameters": "attendance rate"
+        },
+        {
+            "Types": "event",
+            "Parameters": "participant satisfaction"
+        },
+        {
+            "Types": "event",
+            "Parameters": "follow-up opportunities"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "follow-up timeliness"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "issue resolution success"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "client retention impact"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "audience engagement"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "clarity of information"
+        },
+        {
+            "Types": "presentation",
+            "Parameters": "actionable outcomes"
+        },
+        {
+            "Types": "scheduled",
+            "Parameters": "scheduling efficiency"
+        },
+        {
+            "Types": "scheduled",
+            "Parameters": "participant readiness"
+        },
+        {
+            "Types": "scheduled",
+            "Parameters": "agenda relevance"
+        },
+        {
+            "Types": "held",
+            "Parameters": "attendance rate"
+        },
+        {
+            "Types": "held",
+            "Parameters": "participant engagement"
+        },
+        {
+            "Types": "held",
+            "Parameters": "feedback quality"
+        },
+        {
+            "Types": "transferred",
+            "Parameters": "transfer reasons"
+        },
+        {
+            "Types": "transferred",
+            "Parameters": "re-scheduling efficiency"
+        },
+        {
+            "Types": "transferred",
+            "Parameters": "participant notification effectiveness"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "follow-up action rate"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "participant conversion"
+        },
+        {
+            "Types": "follow up",
+            "Parameters": "feedback implementation"
+        },
+        {
+            "Types": "ignored",
+            "Parameters": "non-attendance rate"
+        },
+        {
+            "Types": "ignored",
+            "Parameters": "reasons for ignoring"
+        },
+        {
+            "Types": "ignored",
+            "Parameters": "re-engagement success"
+        },
+        {
+            "Types": "direct",
+            "Parameters": "feedback authenticity"
+        },
+        {
+            "Types": "direct",
+            "Parameters": "response action rate"
+        },
+        {
+            "Types": "direct",
+            "Parameters": "issue identification"
+        },
+        {
+            "Types": "in-app",
+            "Parameters": "user interaction rate"
+        },
+        {
+            "Types": "in-app",
+            "Parameters": "satisfaction rating"
+        },
+        {
+            "Types": "in-app",
+            "Parameters": "improvement suggestions"
+        },
+        {
+            "Types": "live chat",
+            "Parameters": "response time"
+        },
+        {
+            "Types": "live chat",
+            "Parameters": "resolution rate"
+        },
+        {
+            "Types": "live chat",
+            "Parameters": "customer satisfaction"
+        },
+        {
+            "Types": "product/service",
+            "Parameters": "quality ratings"
+        },
+        {
+            "Types": "product/service",
+            "Parameters": "improvement suggestions"
+        },
+        {
+            "Types": "product/service",
+            "Parameters": "re-purchase rate"
+        },
+        {
+            "Types": "price",
+            "Parameters": "price sensitivity feedback"
+        },
+        {
+            "Types": "price",
+            "Parameters": "competitor price comparison"
+        },
+        {
+            "Types": "price",
+            "Parameters": "discount responsiveness"
+        },
+        {
+            "Types": "daily",
+            "Parameters": "data accuracy"
+        },
+        {
+            "Types": "daily",
+            "Parameters": "timeliness"
+        },
+        {
+            "Types": "daily",
+            "Parameters": "actionable insights"
+        },
+        {
+            "Types": "monthly",
+            "Parameters": "trend analysis"
+        },
+        {
+            "Types": "monthly",
+            "Parameters": "performance metrics"
+        },
+        {
+            "Types": "monthly",
+            "Parameters": "strategic adjustments"
+        },
+        {
+            "Types": "by countries",
+            "Parameters": "regional performance"
+        },
+        {
+            "Types": "by countries",
+            "Parameters": "market trends"
+        },
+        {
+            "Types": "by countries",
+            "Parameters": "growth opportunities"
+        },
+        {
+            "Types": "by industries",
+            "Parameters": "industry benchmarks"
+        },
+        {
+            "Types": "by industries",
+            "Parameters": "competitive analysis"
+        },
+        {
+            "Types": "by industries",
+            "Parameters": "market positioning"
+        },
+        {
+            "Types": "by manager",
+            "Parameters": "managerial effectiveness"
+        },
+        {
+            "Types": "by manager",
+            "Parameters": "team performance"
+        },
+        {
+            "Types": "by manager",
+            "Parameters": "operational insights"
+        },
+        {
+            "Types": "by event",
+            "Parameters": "event outcomes"
+        },
+        {
+            "Types": "by event",
+            "Parameters": "ROI measurement"
+        },
+        {
+            "Types": "by event",
+            "Parameters": "future recommendations"
+        },
+        {
+            "Types": "operational",
+            "Parameters": "data integrity"
+        },
+        {
+            "Types": "operational",
+            "Parameters": "access speed"
+        },
+        {
+            "Types": "operational",
+            "Parameters": "update frequency"
+        },
+        {
+            "Types": "analytical",
+            "Parameters": "query performance"
+        },
+        {
+            "Types": "analytical",
+            "Parameters": "insight generation rate"
+        },
+        {
+            "Types": "analytical",
+            "Parameters": "data coverage"
+        }
+    ]
+}

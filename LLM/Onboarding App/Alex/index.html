@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>MCP Server Mastery: The AI Integration Journey</title>
+  <style>
+    /* Общие стили */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .hidden { display: none; }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #007acc, #00c6ff);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #005f99, #0099cc);
+    }
+    .btn:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+    /* Главная страница (Landing Page) */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(45deg, #007acc, #00c6ff);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 20px;
+      margin: 15px 0 0;
+      padding: 0 20px;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 30%;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 2px solid #00c6ff;
+    }
+    .testimonial p { margin: 10px 0; }
+    .testimonial span { font-size: 24px; }
+    /* Страница курса */
+    .course-header {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #007acc;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #007acc;
+    }
+    .course-page {
+      display: none;
+      padding: 20px;
+    }
+    .course-progress {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 240px;
+      z-index: 1000;
+    }
+    .course-progress h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #007acc;
+    }
+    /* Прогресс-бар */
+    .progress-bar-container {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .progress-bar-fill {
+      background: linear-gradient(45deg, #007acc, #00c6ff);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    /* Стили для звездочки */
+    .star-icon {
+      color: gold;
+      font-size: 24px;
+      margin-left: 5px;
+    }
+    /* Стили для TOC */
+    .toc {
+      margin: 20px 0;
+      background: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li {
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .toc li:hover { background: #00d6ff; }
+    .toc .active {
+      background: #00c6ff;
+      color: #fff;
+    }
+    .toc .completed {
+      background: #80d4ff;
+      color: #fff;
+    }
+    .toc .completed::after {
+      content: "✓";
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+    .content-area {
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      min-height: 300px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .content-area h2 {
+      margin-top: 0;
+    }
+    .content-area p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    /* Accordion для сабтопиков */
+    .accordion-container {
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    .accordion-item {
+      margin-bottom: 15px;
+    }
+    .accordion-header {
+      background: #00c6ff;
+      color: #fff;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-header span.arrow {
+      font-size: 16px;
+      transition: transform 0.3s;
+    }
+    .accordion-content {
+      border: 1px solid #00c6ff;
+      padding: 10px;
+      display: none;
+    }
+    /* Тестовый модуль */
+    .test-module {
+      display: none;
+      padding: 20px;
+    }
+    .test-question {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .test-question li {
+      background: #e0e0e0;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .test-question li:hover { background: #d0d0d0; }
+    #quiz-feedback {
+      font-weight: bold;
+      margin-top: 10px;
+      min-height: 24px;
+    }
+    #feedback-character {
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    .nav-buttons { text-align: center; }
+    /* Кнопка завершения курса */
+    #finish-course-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    /* Экран завершения курса */
+    #finish-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(240,244,248,0.95);
+      display: none;
+      z-index: 2000;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #finish-screen h1 {
+      font-size: 48px;
+      color: #007acc;
+    }
+    #finish-screen p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    #joy-svg {
+      margin: 20px auto;
+      width: 200px;
+      height: 200px;
+    }
+    #restart-btn {
+      margin-top: 20px;
+    }
+    /* Конфетти */
+    #confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 9999;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      opacity: 0.8;
+      animation: confetti-fall 3s linear infinite;
+    }
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    /* Добавляем стиль для подсветки кнопки Next после квиза */
+    .btn.highlight {
+      animation: pulse 2s infinite;
+      background: linear-gradient(45deg, #00c6ff, #7a43ff);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    /* Улучшенные стили для квиза на соответствие */
+    .match-instructions {
+      background: #f0f8ff;
+      border-left: 4px solid #007acc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .match-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 768px) {
+      .match-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .match-column {
+      flex: 1;
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .match-column h3 {
+      text-align: center;
+      margin-top: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e9ecef;
+      color: #0056b3;
+    }
+    .match-slot {
+      margin: 10px 0;
+      padding: 12px;
+      border: 2px dashed #007acc;
+      border-radius: 6px;
+      background: rgba(0, 122, 204, 0.05);
+      transition: all 0.3s ease;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .match-slot.drag-over {
+      background: rgba(0, 198, 255, 0.2);
+      border-color: #00c6ff;
+      transform: scale(1.02);
+    }
+    .match-slot.filled {
+      border-style: solid;
+      background: rgba(0, 198, 255, 0.1);
+    }
+    .match-item {
+      margin: 10px 0;
+      padding: 12px;
+      background: white;
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+      cursor: move;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .match-item:hover {
+      background: #f1f9ff;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+    }
+    .match-item.dragging {
+      opacity: 0.5;
+      transform: scale(0.95);
+    }
+    .match-item.matched {
+      background: #e6f7ff;
+      color: #0056b3;
+      font-weight: bold;
+    }
+    .match-connection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .match-connection-line {
+      flex-grow: 1;
+      height: 2px;
+      background: #007acc;
+      margin: 0 10px;
+    }
+    .reset-matching {
+      display: block;
+      margin: 15px auto;
+      padding: 8px 15px;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      color: #6c757d;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .reset-matching:hover {
+      background: #e9ecef;
+      color: #495057;
+    }
+  </style>
+</head>
+<body>
+  <!-- Главная страница -->
+  <div id="landing-page" class="container">
+    <div class="hero">
+      <h1>Practical Guide for AI</h1>
+      <p style="padding: 0 20px;">Creating an MCP Server for Cursor AI with Email Functionality</p>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <span>💻</span>
+        <p>"This guide completely transformed my understanding of AI integration!"</p>
+        <p><strong>- Alex Dev</strong></p>
+      </div>
+      <div class="testimonial">
+        <span>🛠️</span>
+        <p>"An essential resource for any modern developer looking to harness AI."</p>
+        <p><strong>- Maria Tester</strong></p>
+      </div>
+      <div class="testimonial">
+        <span>🚀</span>
+        <p>"Practical, clear, and very interactive – highly recommended."</p>
+        <p><strong>- John Code</strong></p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <button class="btn" id="start-guide-btn">Start Guide</button>
+    </div>
+  </div>
+
+  <!-- Страница курса -->
+  <div id="course-page" class="container course-page">
+    <div class="course-header">Creating an MCP Server for Cursor AI with Email Functionality</div>
+    <div class="course-progress" id="course-progress">
+      <h3>Course Progress</h3>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+      <p id="progress-info"></p>
+      <p><strong>Stars:</strong> <span id="stars-count">0</span><span class="star-icon">★</span></p>
+      <small style="color:#555;">You earn stars by answering quiz questions correctly!</small>
+      <div id="congrats-msg" class="hidden" style="color: green; font-weight: bold; margin-top:10px;">
+        Congratulations! You have completed the course!
+      </div>
+    </div>
+    <!-- TOC -->
+    <div class="toc">
+      <ul id="toc-list"></ul>
+    </div>
+    <div class="content-area" id="content-area">
+      <h2 id="content-title"></h2>
+      <div id="content-text"></div>
+    </div>
+    <div class="nav-buttons" id="nav-buttons">
+      <button class="btn" id="prev-btn">Previous</button>
+      <button class="btn" id="next-btn">Next</button>
+    </div>
+    <!-- Кнопка Take Knowledge Test (скрываем для Introduction (0) и Conclusion (6)) -->
+    <div style="text-align:center; margin-top:20px;">
+      <button class="btn" id="take-test-btn">Take Knowledge Test</button>
+    </div>
+    <div id="finish-course-container" class="nav-buttons hidden">
+      <button class="btn" id="finish-course-btn">Finish Course!</button>
+    </div>
+  </div>
+
+  <!-- Тестовый модуль -->
+  <div id="quiz-module" class="container test-module">
+    <div id="feedback-character">😐</div>
+    <div class="test-question">
+      <p id="question-text"></p>
+      <div id="quiz-area"></div>
+      <div id="quiz-feedback"></div>
+    </div>
+    <div class="nav-buttons" id="quiz-nav">
+      <button class="btn" id="next-quiz-btn" disabled>Next Question</button>
+      <button class="btn hidden" id="finish-quiz-btn">Finish Quiz</button>
+      <button class="btn" id="back-to-course-btn">Back to Course</button>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+      <p id="quiz-result"></p>
+    </div>
+  </div>
+
+  <!-- Экран завершения курса -->
+  <div id="finish-screen" class="container hidden">
+    <div class="finish-message" style="text-align:center; padding:50px;">
+      <h1>Congratulations!</h1>
+      <p>You have completed the course and earned <strong><span id="final-stars"></span> <span class="star-icon">★</span></strong>!</p>
+      <div id="joy-svg" style="margin:20px auto; width:200px; height:200px;">
+        <svg viewBox="0 0 64 64" width="100%" height="100%">
+          <circle cx="32" cy="32" r="30" fill="#FFD700"/>
+          <circle cx="22" cy="24" r="4" fill="#000"/>
+          <circle cx="42" cy="24" r="4" fill="#000"/>
+          <path d="M20,44 C28,52 36,52 44,44" stroke="#000" stroke-width="2" fill="none" />
+        </svg>
+      </div>
+    </div>
+    <button class="btn" id="restart-btn">Restart Course</button>
+    <div id="confetti"></div>
+  </div>
+
+  <script>
+    /* ---------- Данные курса и квизов ---------- */
+    const sections = [
+      {
+        title: "Introduction",
+        content: `<p><strong>Overview:</strong></p>
+<p>Connecting AI coding assistants like Cursor AI to external tools such as email significantly enhances their workflow automation capabilities. Leveraging the Model Context Protocol (MCP), this guide walks you through the complete process: creating, connecting, securing, and deploying an email MCP server tailored for Cursor AI.</p>`
+      },
+      {
+        title: "MCP and Cursor for Automated Tasks",
+        accordion: [
+          { title: "Overview", content: `<p>The Model Context Protocol (MCP) is an open standard protocol designed to provide a universal method for AI applications to connect with and utilize external data sources and tools. It acts as a standardized intermediary, enabling secure and consistent structured API calls for enhanced AI automation capabilities.</p>` },
+          { title: "Key points", content: `<p>• Open standard for connecting AI with external systems.<br>
+• Enables structured API calls using JSON-RPC 2.0.<br>
+• Automates configuration and provides access to real-time data.<br>
+• Incorporates built-in security and access controls.<br>
+• Supports two-way communication and dynamic tool discovery.</p>` },
+          { title: "Usage", content: `<p>MCP is used by AI agents within code editors like Cursor to extend their functionality by integrating with various services and data, allowing for more intelligent and autonomous automation workflows.</p>` },
+          { title: "How to use", content: `<p>Developers build MCP servers to expose tools and resources. AI clients like Cursor connect to these servers via stdio or SSE, utilizing the exposed functionalities based on user prompts.</p>` },
+          { title: "Ideal for", content: `<p>Integrating AI models with specific applications, databases, or services to automate tasks, enhance context awareness, and streamline complex workflows.</p>` },
+          { title: "Associative Comparisons", content: `<p>MCP is like a universal plug for AI, enabling it to interface with a wide range of external services through a single protocol – akin to a translator for diverse APIs.</p>` }
+        ],
+        quiz: [
+          {
+            type: "mc-multi",
+            question: "Which of the following statements accurately describe the Model Context Protocol (MCP) and its role?",
+            options: [
+              { text: "MCP is a proprietary protocol exclusive to Cursor AI", isCorrect: false },
+              { text: "MCP enables AI agents like Cursor to connect with external tools and data sources", isCorrect: true },
+              { text: "MCP primarily uses plain text instead of structured formats like JSON-RPC", isCorrect: false },
+              { text: "Cursor AI can leverage MCP tools automatically in its Agent mode based on user prompts", isCorrect: true },
+              { text: "MCP's use cases are strictly limited to code development tasks", isCorrect: false },
+              { text: "Integrating MCP enhances development workflows by integrating external services", isCorrect: true }
+            ]
+          },
+          {
+            type: "seq",
+            question: "Arrange the following concepts related to MCP's role in the correct order:",
+            options: [
+              "MCP acts as an open standard for AI to connect with external systems",
+              "MCP facilitates structured API calls using JSON-RPC 2.0",
+              "MCP integration enhances code editors by providing access to tools",
+              "Cursor's Agent mode automatically uses available MCP tools",
+              "MCP allows AI to automate tasks beyond code, like interacting with CRMs or email systems"
+            ],
+            correctSequence: [
+              "MCP acts as an open standard for AI to connect with external systems",
+              "MCP facilitates structured API calls using JSON-RPC 2.0",
+              "MCP integration enhances code editors by providing access to tools",
+              "Cursor's Agent mode automatically uses available MCP tools",
+              "MCP allows AI to automate tasks beyond code, like interacting with CRMs or email systems"
+            ]
+          },
+          {
+            type: "match",
+            question: "Match each MCP concept with its description:",
+            left: ["Open Standard", "Structured API Calls", "Workflow Automation", "Cursor Integration"],
+            right: [
+              "A universal method for AI applications to interface with external tools",
+              "Uses JSON-RPC 2.0 for consistent communication",
+              "Simplifies tasks across platforms like email, Jira, GitHub",
+              "Enables connection to various transport types like SSE or stdio"
+            ],
+            correctMatch: {
+              "Open Standard": "A universal method for AI applications to interface with external tools",
+              "Structured API Calls": "Uses JSON-RPC 2.0 for consistent communication",
+              "Workflow Automation": "Simplifies tasks across platforms like email, Jira, GitHub",
+              "Cursor Integration": "Enables connection to various transport types like SSE or stdio"
+            }
+          }
+        ]
+      },
+      {
+        title: "Preparing the Project and Email Environment",
+        accordion: [
+          { title: "Overview", content: `<p>Establishing a robust development environment by selecting a programming language (e.g., Python), installing necessary tools, and planning the project structure.</p>` },
+          { title: "Key points", content: `<p>• Choosing a programming language (e.g., Python).<br>
+• Installing the Python interpreter (version 3.7+ recommended).<br>
+• Ensuring pip is installed and up-to-date.<br>
+• Setting up a virtual environment (using venv or conda).<br>
+• Installing the MCP Python SDK (e.g., fastmcp).<br>
+• Installing other libraries (smtplib, email, Flask, python-dotenv).<br>
+• Planning the project directory structure.</p>` },
+          { title: "Usage", content: `<p>A well-configured environment is essential for writing, testing, and debugging the MCP server code.</p>` },
+          { title: "How to use", content: `<p>- Install Python.<br>
+- Upgrade pip.<br>
+- Create and activate a virtual environment.<br>
+- Install required libraries.<br>
+- Create directories for code and configuration.</p>` },
+          { title: "Ideal for", content: `<p>Developers starting a new MCP server project.</p>` },
+          { title: "Associative Comparisons", content: `<p>Setting up the environment is like preparing a chef's kitchen with the right ingredients and tools.</p>` }
+        ],
+        quiz: [
+          {
+            type: "mc-multi",
+            question: "When setting up the development and email environment for an MCP server, which steps are typically involved?",
+            options: [
+              { text: "Choosing a programming language like Python", isCorrect: true },
+              { text: "Ignoring virtual environments", isCorrect: false },
+              { text: "Installing necessary libraries (MCP SDK, email packages)", isCorrect: true },
+              { text: "Hardcoding email credentials", isCorrect: false },
+              { text: "Gathering SMTP server details", isCorrect: true },
+              { text: "Generating an app password if needed", isCorrect: true },
+              { text: "Planning the project directory structure", isCorrect: true }
+            ]
+          },
+          {
+            type: "seq",
+            question: "Arrange the steps for setting up a basic Python development environment:",
+            options: [
+              "Install the Python interpreter (3.7+ recommended)",
+              "Ensure pip is installed and updated",
+              "Create and activate a virtual environment",
+              "Install the MCP Python SDK and other libraries",
+              "Create a project directory structure"
+            ],
+            correctSequence: [
+              "Install the Python interpreter (3.7+ recommended)",
+              "Ensure pip is installed and updated",
+              "Create and activate a virtual environment",
+              "Install the MCP Python SDK and other libraries",
+              "Create a project directory structure"
+            ]
+          },
+          {
+            type: "match",
+            question: "Match the component with its purpose:",
+            left: ["Virtual Environment", "pip", "SMTP Server Details", "python-dotenv"],
+            right: [
+              "Isolates project dependencies",
+              "Standard package manager for Python",
+              "Information to connect to the email provider",
+              "Loads credentials securely from a .env file"
+            ],
+            correctMatch: {
+              "Virtual Environment": "Isolates project dependencies",
+              "pip": "Standard package manager for Python",
+              "SMTP Server Details": "Information to connect to the email provider",
+              "python-dotenv": "Loads credentials securely from a .env file"
+            }
+          }
+        ]
+      },
+      {
+        title: "Building MCP-Compatible API with Email Logic",
+        accordion: [
+          { title: "Overview", content: `<p>Create the server's interface according to MCP standards using JSON-RPC 2.0 and define email actions as "tools" for Cursor AI.</p>` },
+          { title: "Key points", content: `<p>• Adhere to JSON-RPC 2.0 (jsonrpc, method, params, id, result/error).<br>
+• Understand MCP primitives (e.g. send_email, get_unread_emails).<br>
+• Define clear input parameters and output structures.<br>
+• Use MCP SDK features (e.g., @mcp.tool()).<br>
+• Choose an architecture: stdio or SSE.</p>` },
+          { title: "Usage", content: `<p>Define a standardized way for Cursor AI to request email operations and receive responses.</p>` },
+          { title: "How to use", content: `<p>- Structure responses/requests per JSON-RPC 2.0.<br>
+- Define Python functions for email actions.<br>
+- Register functions as MCP tools using decorators.<br>
+- Specify input/output formats.<br>
+- Choose transport based on needs.</p>` },
+          { title: "Ideal for", content: `<p>Developers designing the interaction layer of the MCP server.</p>` },
+          { title: "Associative Comparisons", content: `<p>Designing the API is like creating a detailed service menu for your email server.</p>` }
+        ],
+        quiz: [
+          {
+            type: "mc-multi",
+            question: "When building an MCP-compatible API with email logic, which elements are involved?",
+            options: [
+              { text: "Defining server capabilities as MCP tools", isCorrect: true },
+              { text: "Using Python's smtplib for sending emails", isCorrect: true },
+              { text: "Ignoring JSON-RPC 2.0 specifications", isCorrect: false },
+              { text: "Using decorators like @mcp.tool()", isCorrect: true },
+              { text: "Constructing email messages with the email package", isCorrect: true },
+              { text: "Choosing between stdio or SSE transport", isCorrect: true }
+            ]
+          },
+          {
+            type: "seq",
+            question: "Arrange the steps for sending an email using Python's smtplib within an MCP tool function:",
+            options: [
+              "Import the smtplib library",
+              "Construct the email message",
+              "Establish a connection to the SMTP server",
+              "Log in to the SMTP server",
+              "Use the sendmail() method",
+              "Close the SMTP connection"
+            ],
+            correctSequence: [
+              "Import the smtplib library",
+              "Construct the email message",
+              "Establish a connection to the SMTP server",
+              "Log in to the SMTP server",
+              "Use the sendmail() method",
+              "Close the SMTP connection"
+            ]
+          },
+          {
+            type: "match",
+            question: "Match each protocol or library with its role:",
+            left: ["JSON-RPC 2.0", "smtplib", "email package", "imaplib"],
+            right: [
+              "Standard protocol for structuring requests/responses",
+              "Standard Python library for sending emails",
+              "Standard Python library for constructing email messages",
+              "Standard Python library for accessing emails via IMAP"
+            ],
+            correctMatch: {
+              "JSON-RPC 2.0": "Standard protocol for structuring requests/responses",
+              "smtplib": "Standard Python library for sending emails",
+              "email package": "Standard Python library for constructing email messages",
+              "imaplib": "Standard Python library for accessing emails via IMAP"
+            }
+          }
+        ]
+      },
+      {
+        title: "Connecting MCP Server to Cursor for Live Testing",
+        accordion: [
+          { title: "Overview", content: `<p>Set up Cursor AI to recognize and communicate with your MCP server using stdio or SSE.</p>` },
+          { title: "Key points", content: `<p>• Connection method depends on server type.<br>
+• Access Cursor Settings → MCP Servers.<br>
+• Enable MCP Servers and click "Add New MCP Server".<br>
+• Provide necessary details based on server type.</p>` },
+          { title: "Usage", content: `<p>Make the MCP server's tools available within Cursor AI for testing.</p>` },
+          { title: "How to use", content: `<p>- Open Cursor AI.<br>
+- Navigate to Settings → MCP Servers.<br>
+- Ensure MCP Servers is enabled.<br>
+- Click "Add New MCP Server" and fill in details.</p>` },
+          { title: "Ideal for", content: `<p>Anyone who has developed an MCP server and wants to integrate it with Cursor AI.</p>` },
+          { title: "Associative Comparisons", content: `<p>Configuring Cursor is like plugging in a new peripheral and installing its drivers.</p>` }
+        ],
+        quiz: [
+          {
+            type: "mc-multi",
+            question: "When configuring and testing an MCP server connection in Cursor AI, which statements are true?",
+            options: [
+              { text: "Both stdio and SSE servers require a URL in Cursor settings", isCorrect: false },
+              { text: "A green dot indicates a successful connection", isCorrect: true },
+              { text: "For stdio servers, you must specify the command to run the server", isCorrect: true },
+              { text: "Troubleshooting may involve checking the MCP server's logs", isCorrect: true },
+              { text: "Agent mode in Cursor is used for configuration only", isCorrect: false },
+              { text: "Testing an SSE server may involve accessing its URL in a browser", isCorrect: true }
+            ]
+          },
+          {
+            type: "seq",
+            question: "Arrange the steps for adding and initially testing a new SSE MCP server in Cursor:",
+            options: [
+              "Start your SSE MCP server externally",
+              "Navigate to Settings → MCP Servers",
+              "Click 'Add New MCP Server'",
+              "Enter the server Name, select Type 'SSE Server', and provide the server URL",
+              "Save the configuration in Cursor",
+              "Check for a green dot and listed tools",
+              "Switch to Agent mode and try a prompt"
+            ],
+            correctSequence: [
+              "Start your SSE MCP server externally",
+              "Navigate to Settings → MCP Servers",
+              "Click 'Add New MCP Server'",
+              "Enter the server Name, select Type 'SSE Server', and provide the server URL",
+              "Save the configuration in Cursor",
+              "Check for a green dot and listed tools",
+              "Switch to Agent mode and try a prompt"
+            ]
+          },
+          {
+            type: "match",
+            question: "Match the Cursor MCP configuration element with its description:",
+            left: ["URL Field", "Command Field", "Green Dot", "Agent Mode"],
+            right: [
+              "Primary configuration for an SSE server connection",
+              "Primary configuration for a stdio server connection",
+              "Indicates a successfully connected MCP server",
+              "Cursor mode used to interact with MCP tools via natural language"
+            ],
+            correctMatch: {
+              "URL Field": "Primary configuration for an SSE server connection",
+              "Command Field": "Primary configuration for a stdio server connection",
+              "Green Dot": "Indicates a successfully connected MCP server",
+              "Agent Mode": "Cursor mode used to interact with MCP tools via natural language"
+            }
+          }
+        ]
+      },
+      {
+        title: "Securing, Testing, and Deploying Your Email MCP Server",
+        accordion: [
+          { title: "Overview", content: `<p>Apply essential security practices to protect the MCP server, its data, and its users from threats like unauthorized access or injection attacks.</p>` },
+          { title: "Key points", content: `<p>• Authentication: Verifying client identity (e.g., API Keys, OAuth).<br>
+• Authorization: Controlling access to tools.<br>
+• Data Protection: Using environment variables for sensitive data.<br>
+• Input Sanitization: Cleaning client input to prevent injection attacks.<br>
+• Secure Communication: Using HTTPS for SSE servers.<br>
+• Logging: Recording server activity and errors.<br>
+• Email Specifics: Secure handling of credentials and email validation.</p>` },
+          { title: "Usage", content: `<p>Build trust and ensure the stability and integrity of the MCP server.</p>` },
+          { title: "How to use", content: `<p>- Store credentials in a .env file and load them securely.<br>
+- Implement access checks and sanitize all external input.<br>
+- Configure HTTPS with SSL/TLS certificates.<br>
+- Use Python's logging module to record events.</p>` },
+          { title: "Ideal for", content: `<p>Developers building MCP servers for production or multi-user environments.</p>` },
+          { title: "Associative Comparisons", content: `<p>Implementing security is like fortifying a castle with gatekeepers, vaults, and constant surveillance.</p>` }
+        ],
+        quiz: [
+          {
+            type: "mc-multi",
+            question: "Which security practices and deployment considerations are important for an email MCP server?",
+            options: [
+              { text: "Storing email credentials directly in version control", isCorrect: false },
+              { text: "Using environment variables to store sensitive data", isCorrect: true },
+              { text: "Implementing HTTPS for SSE servers", isCorrect: true },
+              { text: "Skipping input sanitization", isCorrect: false },
+              { text: "Using containerization like Docker", isCorrect: true },
+              { text: "Using Flask's built-in development server for production", isCorrect: false },
+              { text: "Performing security testing", isCorrect: true }
+            ]
+          },
+          {
+            type: "seq",
+            question: "Arrange the steps for developing and deploying a secure MCP server:",
+            options: [
+              "Implement core server functionality",
+              "Implement security measures",
+              "Write and run functional tests",
+              "Perform security testing",
+              "Deploy the server to the chosen environment",
+              "Configure monitoring and logging"
+            ],
+            correctSequence: [
+              "Implement core server functionality",
+              "Implement security measures",
+              "Write and run functional tests",
+              "Perform security testing",
+              "Deploy the server to the chosen environment",
+              "Configure monitoring and logging"
+            ]
+          },
+          {
+            type: "match",
+            question: "Match each security/deployment concept with its benefit:",
+            left: ["Authentication", "Input Sanitization", "Docker", "HTTPS (for SSE)"],
+            right: [
+              "Verifies the identity of the client",
+              "Protects against injection attacks",
+              "Packages application for consistent deployment",
+              "Encrypts communication"
+            ],
+            correctMatch: {
+              "Authentication": "Verifies the identity of the client",
+              "Input Sanitization": "Protects against injection attacks",
+              "Docker": "Packages application for consistent deployment",
+              "HTTPS (for SSE)": "Encrypts communication"
+            }
+          }
+        ]
+      },
+      {
+        title: "Conclusion",
+        content: `<p><strong>Overview:</strong></p>
+<p>Integrating external systems with AI coding assistants fundamentally transforms their capabilities, turning them into powerful automation engines for complex workflows. Use this guide's approach with the Model Context Protocol to connect functionalities like email, enhancing your tools and streamlining development tasks directly within Cursor AI.</p>`
+      }
+    ];
+
+    /* ---------- Логика прогресса и звезд ---------- */
+    const totalSections = sections.length;
+    let sectionsCompleted = Array(totalSections).fill(false);
+    let stars = 0;
+
+    /* ---------- DOM элементы ---------- */
+    const contentTitle = document.getElementById('content-title');
+    const contentText = document.getElementById('content-text');
+    const tocList = document.getElementById('toc-list');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const progressInfo = document.getElementById('progress-info');
+    const starsCount = document.getElementById('stars-count');
+    const congratsMsg = document.getElementById('congrats-msg');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const takeTestBtn = document.getElementById('take-test-btn');
+    const finishCourseBtn = document.getElementById('finish-course-btn');
+    const finishCourseContainer = document.getElementById('finish-course-container');
+
+    let currentSectionIndex = 0;
+    let quizPassed = false; // флаг, прошёл ли пользователь квиз текущего шага
+
+    /* ---------- Обновление контента ---------- */
+    function updateContent(index) {
+      currentSectionIndex = index;
+      const section = sections[index];
+      contentTitle.textContent = section.title;
+      // Если в разделе есть аккордеон, создаём его, иначе выводим обычный контент
+      if (section.accordion) {
+        contentText.innerHTML = "";
+        const acc = createAccordion(section.accordion);
+        contentText.appendChild(acc);
+      } else {
+        contentText.innerHTML = section.content;
+      }
+      // Обновляем TOC
+      Array.from(tocList.children).forEach((li, i) => {
+        li.classList.toggle('active', i === index);
+      });
+      // Скрываем кнопку "Take Knowledge Test" для Introduction (0) и Conclusion (6)
+      if (section.title === "Introduction" || section.title === "Conclusion") {
+        takeTestBtn.style.display = 'none';
+      } else {
+        takeTestBtn.style.display = 'inline-block';
+      }
+      
+      // Показываем кнопку Finish Course только на этапе Conclusion
+      if (section.title === "Conclusion") {
+        finishCourseContainer.classList.remove('hidden');
+        // На последнем этапе скрываем кнопки навигации
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+      } else {
+        finishCourseContainer.classList.add('hidden');
+        // На остальных этапах показываем кнопки навигации
+        prevBtn.style.display = 'inline-block';
+        nextBtn.style.display = 'inline-block';
+        
+        // Если это первый шаг, отключаем Previous
+        prevBtn.disabled = (index === 0);
+      }
+      
+      // Если раздел не содержит квиза, помечаем квиз как пройденный
+      if (!section.quiz) {
+        quizPassed = true;
+      } else {
+        quizPassed = false;
+      }
+      updateNextButtonState();
+      updateProgressBar();
+    }
+
+    function updateTOC() {
+      tocList.innerHTML = "";
+      const tocSteps = [
+        "Introduction",
+        "MCP and Cursor for Automated Tasks",
+        "Preparing the Project and Email Environment",
+        "Building MCP-Compatible API with Email Logic",
+        "Connecting MCP Server to Cursor for Live Testing",
+        "Securing, Testing, and Deploying Your Email MCP Server",
+        "Conclusion"
+      ];
+      tocSteps.forEach((step, index) => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        li.setAttribute('data-index', index);
+        if (index === 0) li.classList.add('active');
+        tocList.appendChild(li);
+      });
+    }
+
+    // Обработчик клика по TOC
+    Array.from(tocList.children).forEach(li => {
+      li.addEventListener('click', () => {
+        const index = parseInt(li.getAttribute('data-index'));
+        updateContent(index);
+      });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentSectionIndex > 0) {
+        updateContent(currentSectionIndex - 1);
+      }
+    });
+    nextBtn.addEventListener('click', () => {
+      // Для Introduction и Conclusion отмечаем раздел как завершённый сразу
+      if (currentSectionIndex === 0 || currentSectionIndex === totalSections - 1) {
+        sectionsCompleted[currentSectionIndex] = true;
+        quizPassed = true;
+      }
+      if (currentSectionIndex < totalSections - 1) {
+        updateContent(currentSectionIndex + 1);
+      }
+    });
+
+    function updateProgressBar() {
+      const completed = sectionsCompleted.filter(Boolean).length;
+      const percent = Math.round((completed / totalSections) * 100);
+      progressBarFill.style.width = percent + '%';
+      progressInfo.textContent = `Completed: ${completed}/${totalSections} sections`;
+      starsCount.textContent = stars;
+      
+      // Отображаем поздравление при завершении всех секций
+      if (percent === 100) {
+        congratsMsg.classList.remove('hidden');
+      } else {
+        congratsMsg.classList.add('hidden');
+      }
+      
+      // Пометка завершенных разделов в TOC
+      Array.from(tocList.children).forEach((li, i) => {
+        if (sectionsCompleted[i]) {
+          li.classList.add('completed');
+        } else {
+          li.classList.remove('completed');
+        }
+      });
+    }
+
+    // Блокировка перехода на следующий шаг, если квиз не пройден
+    function updateNextButtonState() {
+      if (currentSectionIndex >= totalSections - 1) {
+        nextBtn.disabled = false;
+        return;
+      }
+      nextBtn.disabled = !quizPassed;
+    }
+
+    document.getElementById('start-guide-btn').addEventListener('click', () => {
+      document.getElementById('landing-page').style.display = 'none';
+      document.getElementById('course-page').style.display = 'block';
+      updateTOC();
+      updateContent(0);
+    });
+
+    /* ---------- Функция создания аккордеона для сабтопиков ---------- */
+    function createAccordion(items) {
+      const container = document.createElement('div');
+      container.className = "accordion-container";
+      items.forEach(item => {
+        const accItem = document.createElement('div');
+        accItem.className = "accordion-item";
+        const header = document.createElement('div');
+        header.className = "accordion-header";
+        const arrow = document.createElement('span');
+        arrow.className = "arrow";
+        arrow.textContent = "\u25BE";
+        const titleText = document.createElement('span');
+        titleText.textContent = item.title;
+        header.appendChild(titleText);
+        header.appendChild(arrow);
+        header.addEventListener('click', () => {
+          const content = accItem.querySelector('.accordion-content');
+          if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.textContent = "\u25BE";
+          } else {
+            content.style.display = "block";
+            arrow.textContent = "\u25B4";
+          }
+        });
+        const content = document.createElement('div');
+        content.className = "accordion-content";
+        content.innerHTML = item.content;
+        content.style.display = "none";
+        accItem.appendChild(header);
+        accItem.appendChild(content);
+        accItem.style.marginBottom = "15px";
+        container.appendChild(accItem);
+      });
+      return container;
+    }
+
+    /* ---------- Квиз ---------- */
+    const coursePage = document.getElementById('course-page');
+    const quizModule = document.getElementById('quiz-module');
+    const nextQuizBtn = document.getElementById('next-quiz-btn');
+    const finishQuizBtn = document.getElementById('finish-quiz-btn');
+    const backToCourseBtn = document.getElementById('back-to-course-btn');
+    const quizFeedback = document.getElementById('quiz-feedback');
+    const feedbackCharacter = document.getElementById('feedback-character');
+    const quizResult = document.getElementById('quiz-result');
+    const quizArea = document.getElementById('quiz-area');
+    const questionTextElem = document.getElementById('question-text');
+
+    let currentQuizQuestion = 0;
+    let currentQuiz = [];
+    let answerSubmitted = false;
+
+    takeTestBtn.addEventListener('click', () => {
+      if (!sections[currentSectionIndex].quiz) return;
+      quizPassed = false;
+      currentQuiz = sections[currentSectionIndex].quiz;
+      // Перемешиваем варианты для вопросов mc и mc-multi (очки начисляются только при первом прохождении)
+      currentQuiz.forEach(q => {
+        if (q.type === "mc" || q.type === "mc-multi") {
+          q.shuffledOptions = shuffleArray(q.options.slice());
+        }
+      });
+      currentQuizQuestion = 0;
+      answerSubmitted = false;
+      nextQuizBtn.disabled = false;
+      finishQuizBtn.classList.add('hidden');
+      quizResult.textContent = "";
+      coursePage.style.display = 'none';
+      quizModule.style.display = 'block';
+      loadQuizQuestion();
+    });
+
+    backToCourseBtn.addEventListener('click', () => {
+      quizModule.style.display = 'none';
+      coursePage.style.display = 'block';
+      quizFeedback.textContent = "";
+      feedbackCharacter.textContent = "😐";
+      quizResult.textContent = "";
+      nextQuizBtn.disabled = false;
+      finishQuizBtn.classList.add('hidden');
+    });
+
+    nextQuizBtn.addEventListener('click', () => {
+      // Если пользователь не отправил ответ, фиксируем, что вопрос был пропущен
+      if (!answerSubmitted) {
+        quizFeedback.textContent = "No answer submitted.";
+        feedbackCharacter.textContent = "😐";
+        answerSubmitted = true;
+      }
+      currentQuizQuestion++;
+      if (currentQuizQuestion < currentQuiz.length) {
+        loadQuizQuestion();
+      } else {
+        questionTextElem.textContent = "Quiz Completed!";
+        quizArea.innerHTML = "";
+        quizFeedback.textContent = "";
+        feedbackCharacter.textContent = "😃";
+        quizResult.textContent = "You have completed the quiz for this section.";
+        nextQuizBtn.classList.add('hidden');
+        finishQuizBtn.classList.remove('hidden');
+      }
+      // Сбрасываем флаг для нового вопроса
+      answerSubmitted = false;
+    });
+
+    finishQuizBtn.addEventListener('click', () => {
+      // Завершаем квиз: если раздел ещё не был отмечен, начисляем очки только один раз
+      if (!sectionsCompleted[currentSectionIndex]) {
+        sectionsCompleted[currentSectionIndex] = true;
+      }
+      quizPassed = true;
+      quizModule.style.display = 'none';
+      coursePage.style.display = 'block';
+      quizFeedback.textContent = "";
+      feedbackCharacter.textContent = "😐";
+      quizResult.textContent = "";
+      nextQuizBtn.disabled = false;
+      nextQuizBtn.classList.remove('hidden');
+      finishQuizBtn.classList.add('hidden');
+      
+      // Обновляем прогресс-бар и содержимое без сброса состояния кнопки Next
+      updateProgressBar();
+      
+      // Принудительно активируем кнопку Next
+      nextBtn.style.pointerEvents = 'auto';
+      nextBtn.disabled = false;
+      nextBtn.style.cursor = 'pointer';
+      nextBtn.style.opacity = '1';
+      
+      // Добавим визуальную подсказку
+      nextBtn.classList.add('highlight');
+      setTimeout(() => {
+        nextBtn.classList.remove('highlight');
+      }, 2000);
+      
+      // Модифицируем updateContent, чтобы он сохранил состояние кнопки
+      const originalNextBtnDisabled = nextBtn.disabled;
+      updateContent(currentSectionIndex);
+      nextBtn.disabled = originalNextBtnDisabled;
+    });
+
+    function loadQuizQuestion() {
+      const question = currentQuiz[currentQuizQuestion];
+      questionTextElem.textContent = question.question;
+      quizFeedback.textContent = "";
+      feedbackCharacter.textContent = "😐";
+      quizArea.innerHTML = "";
+      nextQuizBtn.disabled = false;
+      
+      if (question.type === "mc" || question.type === "mc-multi") {
+        const options = question.shuffledOptions || question.options;
+        options.forEach((opt, idx) => {
+          const li = document.createElement('li');
+          if (question.type === "mc") {
+            li.innerHTML = `<label><input type="radio" name="quiz-option" value="${idx}"> ${opt.text}</label>`;
+            li.addEventListener('click', () => { 
+              checkMCAnswer(idx, question, options);
+            });
+          } else {
+            li.innerHTML = `<label><input type="checkbox" name="quiz-option" value="${idx}"> ${opt.text}</label>`;
+          }
+          quizArea.appendChild(li);
+        });
+        if (question.type === "mc-multi") {
+          const submitBtn = document.createElement('button');
+          submitBtn.textContent = "Submit Answer";
+          submitBtn.className = "btn";
+          submitBtn.addEventListener('click', () => {
+            const selected = Array.from(document.querySelectorAll('input[name="quiz-option"]:checked')).map(input => parseInt(input.value));
+            checkMCMultiAnswer(selected, question, question.shuffledOptions || question.options);
+          });
+          quizArea.appendChild(submitBtn);
+        }
+      } else if (question.type === "seq") {
+        const ul = document.createElement('ul');
+        ul.className = "draggable-list";
+        question.userSequence = [...question.options];
+        question.userSequence.forEach((item, idx) => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          li.setAttribute('draggable', 'true');
+          li.dataset.index = idx;
+          li.addEventListener('dragstart', dragStart);
+          li.addEventListener('dragover', dragOver);
+          li.addEventListener('dragleave', dragLeave);
+          li.addEventListener('drop', drop);
+          ul.appendChild(li);
+        });
+        quizArea.appendChild(ul);
+        const submitBtn = document.createElement('button');
+        submitBtn.textContent = "Submit Sequence";
+        submitBtn.className = "btn";
+        submitBtn.addEventListener('click', () => { 
+          checkSeqAnswer(getCurrentSequence(ul), question.correctSequence);
+        });
+        quizArea.appendChild(submitBtn);
+      } else if (question.type === "match") {
+        // Создаем более понятные инструкции для пользователя
+        const instructions = document.createElement('div');
+        instructions.className = 'match-instructions';
+        instructions.innerHTML = `
+          <p><strong>📝 Instructions:</strong></p>
+          <p>Match items from the right column with their corresponding matches in the left column by dragging and dropping.</p>
+          <ol>
+            <li>Click and hold an item from the right column</li>
+            <li>Drag it over the matching slot in the left column</li>
+            <li>Release to drop the item</li>
+            <li>When you've matched all items, click "Submit Matching"</li>
+          </ol>
+        `;
+        quizArea.appendChild(instructions);
+        
+        const container = document.createElement('div');
+        container.className = "match-container";
+        
+        // Левая колонка с ячейками для сопоставления
+        const leftDiv = document.createElement('div');
+        leftDiv.className = "match-column";
+        const leftHeader = document.createElement('h3');
+        leftHeader.textContent = "Match These Items";
+        leftDiv.appendChild(leftHeader);
+        
+        // Правая колонка с перетаскиваемыми элементами
+        const rightDiv = document.createElement('div');
+        rightDiv.className = "match-column";
+        const rightHeader = document.createElement('h3');
+        rightHeader.textContent = "Available Options";
+        rightDiv.appendChild(rightHeader);
+        
+        // Начальная инициализация хранилища соответствий
+        question.selectedMatches = {};
+        
+        // Создаем правую колонку с перетаскиваемыми элементами
+        const shuffledRightItems = shuffleArray([...question.right]);
+        shuffledRightItems.forEach(item => {
+          const dragItem = document.createElement('div');
+          dragItem.className = "match-item";
+          dragItem.textContent = item;
+          dragItem.setAttribute('draggable', 'true');
+          dragItem.setAttribute('data-value', item);
+          
+          // Обработчики для визуальных эффектов и Drag&Drop
+          dragItem.addEventListener('dragstart', e => {
+            e.dataTransfer.setData("text/plain", item);
+            dragItem.classList.add('dragging');
+            // Сохраняем ссылку на текущий перетаскиваемый элемент
+            question.currentDragItem = dragItem;
+          });
+          
+          dragItem.addEventListener('dragend', () => {
+            dragItem.classList.remove('dragging');
+            question.currentDragItem = null;
+          });
+          
+          rightDiv.appendChild(dragItem);
+        });
+        
+        // Создаем левую колонку с целевыми ячейками
+        question.left.forEach(item => {
+          const slot = document.createElement('div');
+          slot.className = "match-slot";
+          slot.textContent = item;
+          slot.dataset.key = item;
+          
+          // Обработчики для целевых ячеек
+          slot.addEventListener('dragover', e => {
+            e.preventDefault();
+            slot.classList.add('drag-over');
+          });
+          
+          slot.addEventListener('dragenter', e => {
+            e.preventDefault();
+            slot.classList.add('drag-over');
+          });
+          
+          slot.addEventListener('dragleave', () => {
+            slot.classList.remove('drag-over');
+          });
+          
+          slot.addEventListener('drop', function(e) {
+            e.preventDefault();
+            slot.classList.remove('drag-over');
+            
+            const data = e.dataTransfer.getData("text/plain");
+            
+            // Визуально показываем соответствие
+            slot.classList.add('filled');
+            
+            // Если элемент уже был в другом соответствии, очищаем его
+            for (let key in question.selectedMatches) {
+              if (question.selectedMatches[key] === data) {
+                // Найти и сбросить прежний слот
+                const prevSlot = leftDiv.querySelector(`[data-key="${key}"]`);
+                if (prevSlot) {
+                  prevSlot.textContent = key;
+                  prevSlot.classList.remove('filled');
+                  delete question.selectedMatches[key];
+                }
+              }
+            }
+            
+            // Обновляем отображение и данные
+            question.selectedMatches[item] = data;
+            
+            // Обновляем содержимое слота
+            this.innerHTML = `
+              <div class="match-connection">
+                <span>${item}</span>
+                <span class="match-connection-line"></span>
+                <span>${data}</span>
+              </div>
+            `;
+            
+            // Если перетаскиваемый элемент доступен, делаем его "matched"
+            if (question.currentDragItem) {
+              question.currentDragItem.classList.add('matched');
+            }
+            
+            checkMatchIfComplete(question);
+          });
+          
+          leftDiv.appendChild(slot);
+        });
+        
+        // Кнопка сброса соответствий
+        const resetBtn = document.createElement('button');
+        resetBtn.className = "reset-matching";
+        resetBtn.textContent = "Reset Matching";
+        resetBtn.addEventListener('click', () => {
+          // Сбрасываем все соответствия
+          question.selectedMatches = {};
+          
+          // Сбрасываем визуальное состояние слотов
+          leftDiv.querySelectorAll('.match-slot').forEach(slot => {
+            slot.textContent = slot.dataset.key;
+            slot.classList.remove('filled');
+          });
+          
+          // Сбрасываем визуальное состояние элементов
+          rightDiv.querySelectorAll('.match-item').forEach(item => {
+            item.classList.remove('matched');
+          });
+          
+          // Сбрасываем состояние квиза
+          quizFeedback.textContent = "";
+          feedbackCharacter.textContent = "😐";
+        });
+        
+        // Добавляем все элементы в контейнер
+        container.appendChild(leftDiv);
+        container.appendChild(rightDiv);
+        quizArea.appendChild(container);
+        quizArea.appendChild(resetBtn);
+        
+        // Кнопка отправки ответа
+        const submitBtn = document.createElement('button');
+        submitBtn.textContent = "Submit Matching";
+        submitBtn.className = "btn";
+        submitBtn.style.marginTop = "20px";
+        submitBtn.addEventListener('click', () => { 
+          checkMatchAnswer(question.selectedMatches, question.correctMatch);
+        });
+        quizArea.appendChild(submitBtn);
+      }
+    }
+
+    /* ---------- Функция перемешивания вариантов ---------- */
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    /* ---------- Drag & Drop для seq ---------- */
+    let dragSrcEl = null;
+    function dragStart(e) {
+      dragSrcEl = this;
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/html', this.innerHTML);
+      this.style.opacity = '0.4';
+    }
+    function dragOver(e) { e.preventDefault(); this.classList.add('drag-over'); }
+    function dragLeave(e) { this.classList.remove('drag-over'); }
+    function drop(e) {
+      e.stopPropagation();
+      this.classList.remove('drag-over');
+      if (dragSrcEl !== this) {
+        const temp = dragSrcEl.innerHTML;
+        dragSrcEl.innerHTML = this.innerHTML;
+        this.innerHTML = temp;
+      }
+      dragSrcEl.style.opacity = '1';
+      return false;
+    }
+    function getCurrentSequence(ul) {
+      const items = ul.querySelectorAll('li');
+      return Array.from(items).map(li => li.textContent);
+    }
+
+    /* ---------- Проверка ответов ---------- */
+    function checkMCAnswer(selectedIdx, question, options) {
+      if (options[selectedIdx].isCorrect) {
+        quizFeedback.textContent = "Correct!";
+        feedbackCharacter.textContent = "😃";
+        if (!sectionsCompleted[currentSectionIndex]) {
+          stars++;
+        }
+        answerSubmitted = true;
+      } else {
+        quizFeedback.textContent = "Incorrect! Please try again.";
+        feedbackCharacter.textContent = "😢";
+        document.querySelectorAll('input[name="quiz-option"]').forEach(input => input.checked = false);
+        answerSubmitted = false;
+      }
+      updateProgressBar();
+    }
+    function checkMCMultiAnswer(selectedIndices, question, options) {
+      const correctIndices = options.map((opt, idx) => opt.isCorrect ? idx : -1).filter(idx => idx !== -1);
+      const isCorrect = selectedIndices.length === correctIndices.length && selectedIndices.every(val => correctIndices.includes(val));
+      if (isCorrect) {
+        quizFeedback.textContent = "Correct!";
+        feedbackCharacter.textContent = "😃";
+        if (!sectionsCompleted[currentSectionIndex]) {
+          stars += correctIndices.length;
+        }
+        answerSubmitted = true;
+      } else {
+        quizFeedback.textContent = "Incorrect! Please try again.";
+        feedbackCharacter.textContent = "😢";
+        document.querySelectorAll('input[name="quiz-option"]').forEach(input => input.checked = false);
+        answerSubmitted = false;
+      }
+      updateProgressBar();
+    }
+    function checkSeqAnswer(userSeq, correctSeq) {
+      const isCorrect = JSON.stringify(userSeq) === JSON.stringify(correctSeq);
+      if (isCorrect) {
+        quizFeedback.textContent = "Correct sequence!";
+        feedbackCharacter.textContent = "😃";
+        if (!sectionsCompleted[currentSectionIndex]) {
+          stars++;
+        }
+        answerSubmitted = true;
+      } else {
+        quizFeedback.textContent = "Incorrect sequence! Please try again.";
+        feedbackCharacter.textContent = "😢";
+        answerSubmitted = false;
+      }
+      updateProgressBar();
+    }
+    function checkMatchIfComplete(question) {
+      const keys = Object.keys(question.selectedMatches);
+      if (keys.length === question.left.length) {
+        // Ждём нажатия кнопки "Submit Matching"
+      }
+    }
+    function checkMatchAnswer(selected, correct) {
+      let isCorrect = true;
+      let correctCount = 0;
+      for (let key in correct) {
+        if (selected[key] === correct[key]) {
+          correctCount++;
+        } else {
+          isCorrect = false;
+        }
+      }
+      if (isCorrect && correctCount === Object.keys(correct).length) {
+        quizFeedback.textContent = "Correct matching!";
+        feedbackCharacter.textContent = "😃";
+        if (!sectionsCompleted[currentSectionIndex]) {
+          stars += correctCount;
+        }
+        answerSubmitted = true;
+      } else {
+        quizFeedback.textContent = "Incorrect matching! Please try again.";
+        feedbackCharacter.textContent = "😢";
+        answerSubmitted = false;
+      }
+      updateProgressBar();
+    }
+
+    /* ---------- Финиш курса ---------- */
+    finishCourseBtn.addEventListener('click', () => {
+      document.getElementById('course-page').style.display = 'none';
+      document.getElementById('finish-screen').style.display = 'block';
+      document.getElementById('final-stars').textContent = stars;
+      launchConfetti();
+    });
+    document.getElementById('restart-btn').addEventListener('click', () => {
+      document.getElementById('finish-screen').style.display = 'none';
+      document.getElementById('course-page').style.display = 'block';
+      location.reload();
+    });
+
+    /* ---------- Конфетти ---------- */
+    function launchConfetti() {
+      const confettiContainer = document.getElementById('confetti');
+      confettiContainer.innerHTML = "";
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = "confetti-piece";
+        confetti.style.left = Math.random() * 100 + "%";
+        confetti.style.backgroundColor = randomColor();
+        confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
+        confetti.style.opacity = Math.random();
+        confettiContainer.appendChild(confetti);
+      }
+      setTimeout(() => { confettiContainer.innerHTML = ""; }, 5000);
+    }
+    function randomColor() {
+      const colors = ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#fbb1bd", "#f9bec7"];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+</body>
+</html>

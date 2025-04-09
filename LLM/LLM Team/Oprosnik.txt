@@ -1,0 +1,223 @@
+Perplexity -> SuperGrok -> Gemini
+
+### Key Points
+- It seems likely that a general test with five sections can effectively assess candidates across various professions 
+by evaluating personality, cognitive skills, technical knowledge, situational decision-making, and practical abilities.
+- Research suggests that tailoring questions to specific professions within each section enhances relevance and engagement, 
+while fixed weightages (e.g., 20% personality, 25% cognitive, 30% technical, 15% situational, 10% practical) provide a 
+balanced approach, though adjustments may be needed for certain roles.
+- The evidence leans toward using validated tools and clear scoring rubrics to ensure fairness and reliability, especially 
+for subjective sections like practical tasks.
+
+### Test Structure and Purpose
+The test is designed to comprehensively evaluate candidates for diverse professions, ensuring a holistic assessment 
+of both soft and hard skills. It includes five sections, each focusing on different aspects critical to job performance:
+
+- **Personality and Work Style Assessment (20%)**: Evaluates work preferences, communication, and adaptability, using 
+profession-specific questions like how a recruiter organizes tasks or a video editor prefers their work environment.
+- **Cognitive Test (25%)**: Measures analytical thinking and problem-solving, with examples like analyzing job descriptions 
+for recruiters or solving coding challenges for developers.
+- **Technical Knowledge Test (30%)**: Assesses proficiency in tools and domain knowledge, such as CRM tools for recruiters 
+or Adobe Premiere Pro for video editors.
+- **Situational Tasks Test (15%)**: Tests decision-making in real-world scenarios, like handling urgent hiring for recruiters 
+or motivating a sales team after missing targets.
+- **Practical Task or Simulation (10%)**: Evaluates hands-on skills through tasks like drafting a job post for recruiters 
+or building a webpage for developers.
+
+This structure ensures candidates are matched to roles based on their strengths, with recommendations for top three 
+career options.
+
+### Scoring and Matching
+Scores are normalized across sections, with weightages reflecting the importance of each area. For example, technical 
+knowledge has the highest weight (30%) due to its critical role in many professions. Candidates are then matched to 
+professions by comparing their performance to predefined skill profiles, ensuring a personalized fit.
+
+---
+
+### Survey Note: Detailed Framework for Developing a General Test with Five Sections
+
+This note provides an in-depth exploration of designing a general test with five sections to assess candidates across 
+various professions, building on the provided framework and aligning with best practices in assessment design. The test 
+aims to evaluate a broad range of skills and traits, ensuring comprehensive evaluation for roles such as recruiters, 
+video editors, UI/UX designers, sales managers, and front-end developers, among others.
+
+#### Background and Purpose
+The development of such a test is driven by the need to assess candidates holistically, considering both their technical 
+abilities and soft skills. This approach is particularly relevant in professional contexts where job performance depends 
+on a mix of cognitive capabilities, technical expertise, personality fit, and practical application. The test's general 
+nature allows it to be adapted across professions by tailoring questions and tasks, while maintaining a consistent structure.
+
+Research from sources like [Best Practices for Designing and Grading Exams](https://crlt.umich.edu/P8_0) and [Designing 
+Assessments of Student Learning](https://teaching.resources.osu.edu/teaching-topics/designing-assessments-student) 
+emphasizes the importance of aligning assessments with learning outcomes and ensuring they are authentic, reflecting 
+real-world tasks. This aligns with the user's framework, which includes sections that simulate professional scenarios 
+and measure relevant competencies.
+
+#### Detailed Test Sections
+The test comprises five sections, each with specific objectives and profession-specific examples, as outlined below:
+
+1. **Personality and Work Style Assessment (20%)**
+   - **Objective**: Evaluates candidates' work preferences, communication styles, and adaptability, which are crucial 
+   for team fit and job satisfaction.
+   - **Sample Questions**: 
+     - Recruiter: "Describe how you organize your daily tasks when managing multiple job applications."
+     - Video Editor: "What is your preferred work environment for creative tasks—structured or flexible?"
+     - UI/UX Designer: "How do you approach collaboration with developers during the design implementation phase?"
+     - Sales Manager: "Do you prefer setting long-term goals or focusing on short-term achievements?"
+     - Front-End Developer: "How do you stay motivated when debugging complex code?"
+   - **Scoring System**: Uses a Likert scale (1–5) based on alignment with desired traits (e.g., proactive, collaborative), 
+    ensuring consistency with best practices from [Personality Tests](https://www.opm.gov/policy-data-oversight/assessment-and-selection/other-assessment-methods/personality-tests/). 
+    This section is less weighted (20%) but vital for assessing cultural fit, as noted in [Assessment Types: Technical, 
+    Personality, Cognitive, and Behavioural Tests](https://www.alooba.com/assessment-types/).
+
+2. **Cognitive Test (25%)**
+   - **Objective**: Measures analytical thinking, problem-solving, attention to detail, and logical reasoning, which are 
+   predictors of job performance across professions.
+   - **Sample Questions**:
+     - Recruiter: "Analyze the following job descriptions and suggest improvements."
+     - Video Editor: "Identify inconsistencies in the storyboard provided."
+     - UI/UX Designer: "Interpret user feedback data and propose actionable design changes."
+     - Sales Manager: "Calculate the revenue impact of a 10% increase in sales volume."
+     - Front-End Developer: "Solve this coding challenge: Write a function to reverse an array without using built-in 
+     methods."
+   - **Scoring System**: Objective grading based on correctness, aligning with [Cognitive Ability Tests](https://www.opm.gov/policy-data-oversight/assessment-and-selection/other-assessment-methods/cognitive-ability-tests/), 
+    with a higher weightage (25%) reflecting its importance in complex roles.
+
+3. **Technical Knowledge Test (30%)**
+   - **Objective**: Assesses proficiency in tools, technologies, and domain-specific knowledge, critical for technical roles.
+   - **Sample Questions**:
+     - Recruiter: "Which CRM tools are best suited for managing candidate pipelines? Why?"
+     - Video Editor: "Explain how you would use Adobe Premiere Pro to color-grade footage."
+     - UI/UX Designer: "How would you create an interactive prototype using Figma?"
+     - Sales Manager: "What are the key metrics to track in Google Analytics for sales performance?"
+     - Front-End Developer: "Explain the difference between React and Angular frameworks."
+   - **Scoring System**: Assigns scores based on depth of knowledge and accuracy, with the highest weightage (30%) due to 
+   its direct impact on job performance, as supported by [Test construction basics](https://camosun.libguides.com/c.php?g=711496&p=5109328).
+
+4. **Situational Tasks Test (15%)**
+   - **Objective**: Evaluates decision-making and handling real-world scenarios, akin to situational judgment tests, which 
+    are effective for assessing practical judgment, as per [Understanding Different Types of Hiring Assessment Tests](https://corvirtus.com/blog/understanding-different-types-of-hiring-assessment-tests).
+   - **Sample Questions**:
+     - Recruiter: "How would you handle a situation where a client requests urgent hiring for a niche role?"
+     - Video Editor: "A client rejects your initial edit. How would you approach revisions?"
+     - UI/UX Designer: "You discover usability issues during testing. What steps would you take next?"
+     - Sales Manager: "Your team misses quarterly targets. How would you motivate them to improve performance?"
+     - Front-End Developer: "You encounter browser compatibility issues after deployment. What is your troubleshooting process?"
+   - **Scoring System**: Graded on creativity, practicality, and alignment with best practices, with a weightage of 15%, 
+   reflecting its importance but also the subjectivity, as noted in [Exam design best practices](https://isit.arts.ubc.ca/news/exam-design-best-practices/).
+
+5. **Practical Task or Simulation (10%)**
+   - **Objective**: Tests hands-on skills through real-world simulations, ensuring candidates can apply knowledge, 
+    aligning with [Authentic Assessment: Assessing Student Learning](https://citl.indiana.edu/teaching-resources/assessing-student-learning/authentic-assessment/index.html).
+   - **Sample Tasks**:
+     - Recruiter: Draft a job post based on provided requirements.
+     - Video Editor: Edit raw footage into a 30-second promotional video.
+     - UI/UX Designer: Create wireframes for an e-commerce website.
+     - Sales Manager: Develop a sales strategy for launching a new product.
+     - Front-End Developer: Build a responsive webpage using HTML/CSS/JavaScript.
+   - **Scoring System**: Evaluate based on quality, efficiency, and adherence to requirements, with the lowest weightage 
+    (10%) possibly due to resource intensity, as discussed in [Designing Assessments](https://www.buffalo.edu/catt/teach/develop/design/designing-assessments.html).
+
+#### Scoring System and Weightages
+The scoring system is structured as follows, with fixed weightages for each section to ensure consistency across professions:
+
+| Section                     | Weightage (%) |
+|-----------------------------|---------------|
+| Personality & Work Style    | 20            |
+| Cognitive Test              | 25            |
+| Technical Knowledge         | 30            |
+| Situational Tasks           | 15            |
+| Practical Task              | 10            |
+
+This distribution reflects the relative importance of technical knowledge (30%) and cognitive skills (25%), with personality 
+and practical tasks having lower weightages. However, for professions where practical skills are paramount, such as front-end 
+development, the 10% weightage for practical tasks might be reconsidered, as suggested by [4 Common Assessment Types and When 
+to Use Them](https://wonderlic.com/blog/assessments/4-common-assessment-types-and-when-to-use-them/).
+
+#### Recommendation System
+The recommendation system matches candidates to professions based on their normalized scores relative to the required skill 
+profile for each role. For example, a candidate excelling in analytical thinking and CRM tools might be recommended as a 
+Sales Manager first, followed by PPC Specialist or Financial Manager, as per the user's example. This approach ensures a 
+personalized fit, aligning with [Your Guide to the Types of Hiring Assessments | Harver](https://harver.com/blog/guide-to-hiring-assessments).
+
+#### Development Process
+To develop such a test, the following steps are recommended, based on best practices from [Designing an Assessment Strategy](https://www.opm.gov/policy-data-oversight/assessment-and-selection/assessment-strategy/) 
+and [Steps in Assessment Design Decisions](https://warwick.ac.uk/fac/cross_fac/academic-development/assessmentdesign/designdecisions/):
+
+1. **Define Purpose and Objectives**: Clearly articulate what the test aims to measure, ensuring alignment with professional 
+requirements.
+2. **Conduct Job Analysis**: Identify tasks and competencies for each profession to tailor questions, as per [Assessment and 
+Selection](https://www.opm.gov/policy-data-oversight/assessment-and-selection/).
+3. **Design Structure and Questions**: Create profession-specific questions for each section, ensuring clarity and fairness, 
+as per [Test construction basics](https://camosun.libguides.com/c.php?g=711496&p=5109328).
+4. **Validate Test**: Pilot with a sample group to ensure validity and reliability, addressing potential biases, as noted in 
+[Your Hiring Assessments Could Get You in Trouble](https://www.shrm.org/topics-tools/news/talent-acquisition/hiring-assessments-get-trouble).
+5. **Establish Scoring Criteria**: Develop rubrics, especially for subjective sections, ensuring consistency, as per [Best 
+Practices Related to Examination Item Construction and Post-hoc Review](https://pmc.ncbi.nlm.nih.gov/articles/PMC6788158/).
+6. **Implement and Match**: Administer the test and match candidates to roles based on scores, using predefined skill 
+profiles.
+
+#### Considerations and Challenges
+While the framework is comprehensive, challenges include ensuring accessibility and fairness, particularly for practical 
+tasks, which can be resource-intensive. The fixed weightages might not suit all professions, suggesting potential 
+adjustments based on role requirements. Additionally, the test should be periodically updated to reflect changes in 
+professions, as per [Designing a Comprehensive Assessment System – WestEd](https://www.wested.org/resource/designing-a-comprehensive-assessment-system/).
+
+#### Conclusion
+The provided framework for a general test with five sections is robust and aligns with best practices in assessment design, 
+offering a balanced approach to evaluating candidates across professions. By following a structured development process and 
+addressing potential challenges, this test can effectively match candidates to suitable roles, enhancing hiring outcomes.
+
+#### Key Citations
+- [Best Practices for Designing and Grading Exams](https://crlt.umich.edu/P8_0)
+- [6 tips for designing the perfect multiple-choice test](https://www.innerdrive.co.uk/blog/perfect-multiple-choice-test/)
+- [Designing an Assessment Strategy](https://www.opm.gov/policy-data-oversight/assessment-and-selection/assessment-strategy/)
+- [Multiple-Choice Testing in Education: Are the Best Practices for Assessment Also Good for Learning?](https://www.sciencedirect.com/science/article/abs/pii/S2211368118301426)
+- [Test construction basics](https://camosun.libguides.com/c.php?g=711496&p=5109328)
+- [Exam design best practices](https://isit.arts.ubc.ca/news/exam-design-best-practices/)
+- [Best Practices Related to Examination Item Construction and Post-hoc Review](https://pmc.ncbi.nlm.nih.gov/articles/PMC6788158/)
+- [Designing Assessments of Student Learning](https://teaching.resources.osu.edu/teaching-topics/designing-assessments-student)
+- [Should Teachers Use Multiple Choice Tests for Assessment?](https://njalternateroute.rutgers.edu/blog/should-teachers-use-multiple-choice-tests-assessment)
+- [Strategies for Different Test Formats](https://asc.tamu.edu/study-learning-handouts/strategies-for-different-test-formats)
+- [Assessment Types: Technical, Personality, Cognitive, and Behavioural Tests](https://www.alooba.com/assessment-types/)
+- [Cognitive Ability Tests](https://www.opm.gov/policy-data-oversight/assessment-and-selection/other-assessment-methods/cognitive-ability-tests/)
+- [Cognitive Test: What it is, what it tests](https://my.clevelandclinic.org/health/articles/22306-cognitive-test)
+- [Cognitive Assessment](https://www.ncbi.nlm.nih.gov/books/NBK556049/)
+- [Personality Tests](https://www.opm.gov/policy-data-oversight/assessment-and-selection/other-assessment-methods/personality-tests/)
+- [Personality Test for Work](https://blog.tcea.org/personality-test/)
+- [Designing a Comprehensive assessment system](https://www.wested.org/resource/designing-a-comprehensive-assessment-system/)
+- [What is included in a comprehensive mental health assessment](https://blog.proemhealth.com/what-is-included-in-a-comprehensive-mental-health-assessment)
+- [Forms of Continuous and Comprehensive Evaluation in Schools](https://teachers.institute/assessment-for-learning/continuous-comprehensive-evaluation-schools/)
+- [What does a comprehensive evaluation include?](https://www.askresource.org/resources/a-comprehensive-special-education-evaluation)
+- [Designing an Assessment System](https://nap.nationalacademies.org/read/18409/chapter/8)
+- [Formative and Summative Assessments](https://poorvucenter.yale.edu/Formative-Summative-Assessments)
+- [Ability Tests Measure Personality, Personality Tests Measure Ability](https://pmc.ncbi.nlm.nih.gov/articles/PMC6480781/)
+- [Personality assessment](https://www.britannica.com/science/personality-assessment)
+- [Psychometric assessments](https://www.psc.nsw.gov.au/workforce-management/recruitment/recruitment-and-selection-guide/planning-a-recruitment-and-selection-approach/psychometric-assessments)
+- [Autocad for Design and Drafting | Autodesket Certified Professional](https://www.autodesk.com/certification/all-certifications/autocad-design-drafting-professional)
+- [Designing exams](https://www.csu.edu.au/division/learning-teaching/assessments/assessment-types/exams/designing-exams)
+- [Autodesk certification](https://www.autodesk.com/certification/overview)
+- [Exam AZ-305: Designing Microsoft Azure infrastructure Solutions](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-305/)
+- [Adobe Certified Professional](https://www.creativebloq.com/features/the-designers-guide-to-becoming-adobe-certified)
+- [8 Web Design Certifications](https://www.indeed.com/career-advice/career-development/web-design-certifications)
+- [NCIDQ Exam](https://www.cidq.org/)
+- [Professional Level | 3DEXPERIENCE Edu – Dassault Systemes](https://www.3ds.com/edu/skills/certification/professional)
+- [NCIDQ EXAMS l Eligibility Requirements](https://www.cidq.org/paths)
+- [Designing assessment](https://itali.uq.edu.au/teaching-guidance/assessment/designing-assessment)
+- [Understand assessment design](https://www.education.vic.gov.au/school/teachers/teachingresources/practice/improve/Pages/eitunderstand.aspx)
+- [6 Designing an Assessment System](https://nap.nationalacademies.org/read/18409/chapter/8)
+- [Designing Assessments](https://www.buffalo.edu/catt/teach/develop/design/designing-assessments.html)
+- [Designing Professional Development for Assessment](https://www.educationaldesigner.org/ed/volume1/issue2/article6/?print=1)
+- [3 Assessment Design and Validation](https://nap.nationalacademies.org/read/18409/chapter/5)
+- [Authentic Assessment: Assessing Student Learning](https://citl.indiana.edu/teaching-resources/assessing-student-learning/authentic-assessment/index.html)
+- [Full article: Navigating formative assessment as professional development in digital contexts](https://www.tandfonline.com/doi/full/10.1080/13664530.2024.2382956)
+- [Steps in Assessment Design Decisions](https://warwick.ac.uk/fac/cross_fac/academic-development/assessmentdesign/designdecisions/)
+- [HHS Office of Human Resources Guidance, Hiring Assessment Strategies](https://www.hhs.gov/about/agencies/asa/ohr/hr-library/hiring-assessment-strategies.html)
+- [Assessment and Selection](https://www.opm.gov/policy-data-oversight/assessment-and-selection/)
+- [Understanding Different Types of Hiring Assessment Tests](https://corvirtus.com/blog/understanding-different-types-of-hiring-assessment-tests)
+- [7 Types of Assessment Tests for Jobs and What To Expect](https://www.indeed.com/career-advice/finding-a-job/assessment-tests-for-jobs)
+- [4 Common Assessment Types and When to Use Them](https://wonderlic.com/blog/assessments/4-common-assessment-types-and-when-to-use-them/)
+- [Convenient and Efficient Candidate Screening through Online Assessment - SkillRobo](https://www.skillrobo.com/types-of-assessment-organize-hiring-process/)
+- [Your Guide to the Types of Hiring Assessments | Harver](https://harver.com/blog/guide-to-hiring-assessments)
+- [A Step-By-Step Guide to Designing a Recruitment Assessment Centre](https://www.fitzgeraldhr.co.uk/design-a-recruitment-assessment-centre/)
+- [Your Hiring Assessments Could Get You in Trouble](https://www.shrm.org/topics-tools/news/talent-acquisition/hiring-assessments-get-trouble)

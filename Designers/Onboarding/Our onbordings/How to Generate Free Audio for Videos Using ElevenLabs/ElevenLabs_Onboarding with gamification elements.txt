@@ -1,0 +1,124 @@
+
+🎙️ Onboarding Module: Create Free Voiceovers with ElevenLabs
+
+🎯 Learning Goals
+By the end of this onboarding, you will:
+- Understand how to set up and use ElevenLabs for voiceovers and sound effects.
+- Be able to generate, customize, and integrate audio into videos.
+- Complete a practical project to demonstrate your knowledge.
+
+🧠 Level 1: Account Creation – “The Gateway Quest”
+🏆 Achievement Unlocked: The Voice Seeker Begins
+
+📝 What You’ll Learn
+- How to sign up for ElevenLabs and explore your free tier benefits.
+
+🧩 Memory Hook (Chunking)
+Think of this as joining a library for voices. Just like signing up for Netflix gives you access to a world of movies, ElevenLabs gives you voices to tell your stories.
+
+🔍 Step-by-Step
+1. Go to elevenlabs.io
+2. Choose how to sign up:
+   - 📧 Email (verify it)
+   - ☁ Google / Facebook / GitHub
+3. ✅ You now have access to:
+   - 10,000 free characters/month
+   - 60 sound effects/month
+   - No credit card needed
+
+🧠 Level 2: Voiceover Magic – “The TTS Workshop”
+🎯 Mission: Text-to-Speech Alchemist
+
+🧠 Memory Technique: Visualization
+Imagine writing your message on a scroll and handing it to a professional voice actor who reads it back with emotion. That’s what TTS is.
+
+🧩 Instructions
+1. Log in and open the Text-to-Speech tool.
+2. Type or paste your text.
+3. Choose a voice style (🎭 gender, accent, emotion, ready voices).
+4. Click “Generate Audio.”
+5. 🎧 Preview and download your voiceover.
+
+📝 Pro Tip: Test short scripts first to avoid wasting characters.
+
+🧠 Level 3: Sound Effects – “The Audio Wizardry Lab”
+🪄 Unlocked: Sound Sorcerer Skillset
+
+🧠 Memory Technique: Association
+Link sounds to visuals in your mind. “Waves crashing” = beach scene. “Footsteps” = suspense.
+
+🔧 Create Your Effects
+1. Go to the Sound Effects tool.
+2. Describe your sound (“cat meowing” or “explosion”).
+3. Click “Generate.”
+4. 🎧 Listen and download.
+
+💡 You get 60 effects per month – use them wisely.
+
+🧠 Level 4: Integration – “The Creator’s Forge”
+🧰 Toolmaster Badge Earned
+
+🧠 Memory Technique: Storybuilding
+Think of your video as a story puzzle – audio is the glue between visuals and emotions.
+
+🛠️ Steps
+1. Open your video editing software (e.g., Canva, Adobe Premiere).
+2. Import your video + ElevenLabs audio.
+3. Drag & drop audio into your timeline.
+4. Sync with visuals, adjust volume.
+5. Export your masterpiece.
+
+🧪 Final Practical Task – “The Voiceover Challenge”
+
+🎯 Your Mission:
+Create a voiceover using ElevenLabs Text-to-Speech (TTS) tool that meets the following requirements:
+- Length: 15–30 seconds of spoken content
+- Uses one of the free available voices with appropriate emotional tone
+- Create at least one relevant sound effect
+
+✅ Submission Checklist:
+- [ ] Voiceover created using ElevenLabs (MP3 format)
+- [ ] Generated sound effect
+
+
+📤 Upload your final audio file to the training portal or share the MP3 in your team chat.
+
+
+🧠 Recap Game – “Memory Sprint” (Optional Team Quiz)
+
+Use these questions in a team quiz format (Kahoot!, Quizizz, Google Forms, etc.) to reinforce the training.
+
+1. What is the monthly character limit for ElevenLabs' free plan?
+a) 1,000
+b) 10,000 ✅
+c) 100,000
+d) Unlimited
+
+2. Which tool in ElevenLabs allows you to convert written text into spoken audio?
+a) Audio Mixer
+b) Sound Lab
+c) Text-to-Speech ✅
+d) Voice Cloner
+
+3. How many sound effects can you generate per month with the free plan?
+a) 15
+b) 30
+c) 60 ✅
+d) Unlimited
+
+4. What format should your final voiceover file be submitted in?
+a) .mp4
+b) .avi
+c) .mp3 ✅
+d) .docx
+
+5. What happens if you exceed the 10,000 character limit on a free plan?
+a) You get billed automatically
+b) Your account is locked
+c) You must wait until the next monthly reset ✅
+d) You can request an emergency extension
+
+
+🏁 Conclusion
+
+👏 Great work! You’ve leveled up your content creation with the power of AI voice tools. Keep exploring, experimenting, and enhancing your videos with ElevenLabs.

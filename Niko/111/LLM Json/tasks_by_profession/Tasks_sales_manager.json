@@ -1,0 +1,1667 @@
+{
+    "profession": "sales manager",
+    "department": "managers",
+    "tasks": [
+        {
+            "task_name": "schedule first calls with potential clients",
+            "responsibilities": "scheduling calls",
+            "objects": "calls",
+            "checklists": [
+                "1. Review the client's profile and previous interactions using CRM to personalize the call and address relevant topics.",
+                "2. Contact the client to ask about a convenient time for the call and to obtain their email address for the invite.",
+                "3. Set up a Google Meet call using Google Calendar at the agreed time and send the invite via Gmail.",
+                "4. Prepare key points to discuss during the call, potentially using GPT chat for generating tailored sales pitches.",
+                "5. Send a reminder about the call via Gmail 15 minutes prior to the scheduled time."
+            ],
+            "type": "first call",
+            "parameters": [
+                "date",
+                "notification",
+                "follow-up",
+                "presentation",
+                "introduction",
+                "performance",
+                "skill",
+                "trial",
+                "test task",
+                "lead",
+                "sales assistant",
+                "trascribator",
+                "report",
+                "sales manager"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Gmail",
+                "Google Meet",
+                "Microsoft Teams",
+                "Skype"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "arrange second calls for follow-up",
+            "responsibilities": "scheduling calls",
+            "objects": "calls",
+            "checklists": [
+                "1. Review notes from the first call stored in CRM to refresh the context and details.",
+                "2. Use insights from the previous conversation, possibly enhanced with GPT chat, to determine the specific purpose of the follow-up call.",
+                "3. Contact the client to discuss and agree on a suitable time for the follow-up, then schedule it using Google Calendar.",
+                "4. Send a follow-up email via Gmail that includes a meeting recap and the invitation for the scheduled call.",
+                "5. Prepare solutions or answers to anticipated client queries using GPT chat for drafting responses."
+            ],
+            "type": "second call",
+            "parameters": [
+                "follow-up",
+                "notification",
+                "trascribator",
+                "candidate",
+                "task",
+                "CV",
+                "discussion",
+                "sales manager",
+                "sales assistant"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Gmail",
+                "GPT chat",
+                "Microsoft Teams",
+                "Skype"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "set up interview calls with candidates",
+            "responsibilities": "scheduling calls",
+            "objects": "calls",
+            "checklists": [
+                "1. Review candidate profiles and video introductions available on your website, selecting potential candidates based on CVs and skill tags.",
+                "2. Send CVs and links to candidate profiles to the potential client for preliminary selection.",
+                "3. Once selections are made, contact the client via Google Calendar to discuss and confirm a convenient time for the interview.",
+                "4. After agreeing on the time, send the Google Meet link for the interview to candidates via Discord and schedule the meeting in Google Calendar for the client.",
+                "5. Confirm all interview details with candidates and the client a day before the interview via Discord and Google Calendar reminders.",
+                "6. Ensure all participants have access to the necessary information and that the Google Meet environment is set up correctly and functioning prior to the interview."
+            ],
+            "type": "interview",
+            "parameters": [
+                "candidate",
+                "status",
+                "date",
+                "call",
+                "introduction",
+                "portfolio"
+            ],
+            "tools": [
+                "Website",
+                "Google Calendar",
+                "Google Meet",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "plan introductory calls with new clients",
+            "responsibilities": "scheduling calls",
+            "objects": "calls",
+            "checklists": [
+                "1. Contact the client to discuss and agree on a convenient time for the introductory call.",
+                "2. Schedule the Google Meet call using Google Calendar, ensuring all necessary participants, including the client, sales team, and selected candidates, are invited.",
+                "3. Send a detailed email via Gmail to all participants with the Google Meet link and a brief overview of the call's agenda, primarily focusing on the client explaining the project details and candidate roles.",
+                "4. Confirm the call setup a day before using Google Calendar reminders, ensuring all participants are prepared."
+            ],
+            "type": "introductory call",
+            "parameters": [
+                "candidate",
+                "client",
+                "instruction",
+                "date",
+                "onboarding"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Gmail",
+                "Google Meet",
+                "Microsoft Teams",
+                "Skype"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "organize project calls to discuss progress",
+            "responsibilities": "scheduling calls",
+            "objects": "calls",
+            "checklists": [
+                "1. Contact the client via email or WhatsApp group to update and confirm details for the upcoming project call.",
+                "2. Schedule the project call using Google Calendar and prepare a Google Meet link for the session.",
+                "3. Send the Google Meet link to all participants, including the client, sales team members, and the hired employee, through their respective communication channels (email for client and sales team, Discord for the hired employee).",
+                "4. Compile a brief agenda that outlines main discussion points, focusing on project progress and gathering client feedback.",
+                "5. Send a reminder to all participants the day before the call using Google Calendar notifications and ensure everyone is prepared with necessary documents or questions.",
+                "6. Conduct the call on Google Meet, facilitating the discussion to ensure all relevant updates are shared and feedback is collected effectively."
+            ],
+            "type": "project call",
+            "parameters": [
+                "candidate",
+                "client",
+                "performance",
+                "date",
+                "feedback"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Gmail",
+                "WhatsApp",
+                "Discord",
+                "Google Meet",
+                "Microsoft Teams",
+                "Skype"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "engage actively with hot leads",
+            "responsibilities": "nurturing leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Review lead data in CRM to customize interactions.",
+                "2. Use GPT chat to generate personalized communication strategies.",
+                "3. Contact leads through LinkedIn  for a more personalized approach.",
+                "4. Schedule follow-up activities using CRM.",
+                "5. Document interactions and feedback in CRM for ongoing tracking."
+            ],
+            "type": "hot leads",
+            "parameters": [
+                "interaction",
+                "source",
+                "candidate",
+                "skill",
+                "agreement",
+                "trial",
+                "test task",
+                "project",
+                "skill"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "LinkedIn",
+                "Viber",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "identify potential interested leads",
+            "responsibilities": "generating leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Use CRM to analyze past interactions and engagement levels.",
+                "2. Employ AI tools like GPT chat to analyze data patterns and predict lead interest.",
+                "3. Segment leads in CRM based on engagement likelihood.",
+                "4. Review social media activities on LinkedIn to identify engagement signals.",
+                "5. Prepare initial contact strategies using insights from Notion and GPT chat."
+            ],
+            "type": "interested leads",
+            "parameters": [
+                "CV",
+                "candidate",
+                "project",
+                "task",
+                "trial",
+                "agreement",
+                "interview"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "LinkedIn",
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "maintain communication with interested leads",
+            "responsibilities": "nurturing leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Schedule regular updates and communications in CRM.",
+                "2. Use personalized email templates from Gmail to send tailored messages.",
+                "3. Employ GPT chat to create engaging and relevant content.",
+                "4. Monitor communication effectiveness through CRM tracking.",
+                "5. Adjust strategies based on feedback and interactions stored in CRM."
+            ],
+            "type": "interested leads",
+            "parameters": [
+                "CV",
+                "candidate",
+                "project",
+                "task",
+                "trial",
+                "agreement",
+                "interview"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Gmail",
+                "GPT chat",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "generate initial contact with cold leads",
+            "responsibilities": "generating leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Identify target cold leads using CRM data segmentation.",
+                "2. Develop initial contact scripts using GPT chat tailored to lead interests.",
+                "3. Send out initial emails via Gmail with personalized messages.",
+                "4. Set reminders for follow-up using CRM.",
+                "5. Record lead responses and adjust approach in CRM."
+            ],
+            "type": "cold leads",
+            "parameters": [
+                "database",
+                "manager",
+                "assistant",
+                "status",
+                "follow-up"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "Gmail",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "nurture cold leads gradually to warm status",
+            "responsibilities": "nurturing leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Review interaction history in CRM to customize communication.",
+                "2. Plan a series of touch points using CRM.",
+                "3. Use GPT chat to create engaging content for periodic communications.",
+                "4. Monitor engagement metrics via CRM and adjust strategies accordingly.",
+                "5. Utilize LinkedIn for ongoing, informal interactions to build rapport."
+            ],
+            "type": "cold leads",
+            "parameters": [
+                "database",
+                "manager",
+                "assistant",
+                "status",
+                "follow-up"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Notion",
+                "GPT chat",
+                "LinkedIn"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "re-engage ignoring leads with new approaches",
+            "responsibilities": "generating leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Assess past interactions and feedback using CRM to understand disinterest causes.",
+                "2. Develop new engagement strategies tailored to their interests using AI insights from GPT chat.",
+                "3. Execute a re-engagement email campaign via Gmail, incorporating feedback and new value propositions.",
+                "4. Track engagement metrics through CRM and adjust strategies based on response.",
+                "5. Schedule follow-up actions using CRM to maintain engagement momentum."
+            ],
+            "type": "ignoring leads",
+            "parameters": [
+                "database",
+                "manager",
+                "assistant",
+                "message",
+                "follow-up"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "Gmail",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "attempt to re-nurture ignoring leads",
+            "responsibilities": "nurturing leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Analyze previous communications in CRM to pinpoint failure points.",
+                "2. Create personalized re-nurturing plans using GPT chat to address specific lead concerns.",
+                "3. Initiate outreach using varied communication channels like WhatsApp or LinkedIn for direct engagement or Gmail",
+                "4. Monitor interaction results and adapt strategies dynamically in CRM.",
+                "5. Continually refine messaging and approach using GPT chat based on real-time feedback and analytics."
+            ],
+            "type": "ignoring leads",
+            "parameters": [
+                "database",
+                "manager",
+                "assistant",
+                "message",
+                "follow-up"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "WhatsApp",
+                "LinkedIn",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "start nurturing processes with new leads",
+            "responsibilities": "nurturing leads",
+            "objects": "leads",
+            "checklists": [
+                "1. Enter lead data into CRM upon initial contact.",
+                "2. Segment leads in CRM based on interest level and product relevance.",
+                "3. Schedule first call using Google Calendar and Gmail.",
+                "4. Develop initial engagement content using GPT chat, tailored to lead segments.",
+                "5. Monitor lead responses and adjust nurturing strategies based on CRM analytics."
+            ],
+            "type": "new leads",
+            "parameters": [
+                "database",
+                "manager",
+                "assistant",
+                "message",
+                "status",
+                "contact",
+                "candidate"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Gmail",
+                "GPT chat"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update ex-client information",
+            "responsibilities": "updating clients",
+            "objects": "clients",
+            "checklists": [
+                "1. Review ex-client files in CRM to identify outdated information.",
+                "2. Contact ex-clients via email or LinkedIn to gather current data.",
+                "3. Update client profiles in CRM with new information and potential interests.",
+                "4. Analyze updated profiles to identify opportunities for re-engagement.",
+                "5. Set reminders in CRM for periodic updates and follow-ups."
+            ],
+            "type": "ex-clients",
+            "parameters": [
+                "date",
+                "project",
+                "interview",
+                "candidate",
+                "skill",
+                "full-time",
+                "part-time",
+                "40-hour"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail",
+                "LinkedIn",
+                "Google Calendar"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "identify new opportunities with ex-clients",
+            "responsibilities": "expanding clients",
+            "objects": "clients",
+            "checklists": [
+                "1. Analyze historical purchasing data and interaction logs in CRM to identify past interests and patterns.",
+                "2. Use GPT chat to generate insights and ideas for new opportunities based on analysis.",
+                "3. Create a tailored proposal using GPT chat highlighting new products or services.",
+                "4. Reach out via Gmail or LinkedIn with the proposal, inviting them for a discussion.",
+                "5. Schedule follow-up calls using CRM based on their feedback."
+            ],
+            "type": "ex-clients",
+            "parameters": [
+                "date",
+                "project",
+                "interview",
+                "candidate",
+                "skill",
+                "full-time",
+                "part-time",
+                "40-hour"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "Notion",
+                "Gmail",
+                "LinkedIn",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "refresh current client data",
+            "responsibilities": "updating clients",
+            "objects": "clients",
+            "checklists": [
+                "1. Conduct an audit of all current client profiles in CRM to ensure accuracy.",
+                "2. Send out a standardized feedback and update form via Email to gather current data.",
+                "3. Update CRM entries based on received information.",
+                "4. Analyze updated data to assess changes in client needs or potential upsell opportunities.",
+                "5. Set reminders in CRM for regular data refresh cycles."
+            ],
+            "type": "current clients",
+            "parameters": [
+                "status",
+                "upsell",
+                "project",
+                "candidate",
+                "invoice",
+                "follow-up",
+                "accounting"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail",
+                "Google Calendar"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "expand services offered to current clients",
+            "responsibilities": "expanding clients",
+            "objects": "clients",
+            "checklists": [
+                "1. Review current service usage and client satisfaction scores in CRM.",
+                "2. Identify potential service upgrades or additions using GPT chat for insight generation.",
+                "3. Develop tailored proposals for service expansion using GPT chat .",
+                "4. Present the proposal during a scheduled Zoom or Google meet meeting.",
+                "5. Follow up using Gmail to gauge interest and gather feedback."
+            ],
+            "type": "current clients",
+            "parameters": [
+                "status",
+                "upsell",
+                "project",
+                "candidate",
+                "invoice",
+                "follow-up",
+                "accounting"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "Google Docs",
+                "Zoom",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "enhance text message effectiveness",
+            "responsibilities": "improving communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Analyze current text message metrics for open and response rates using CRM.",
+                "2. Use A/B testing for message formats to determine the most effective approach.",
+                "3. Implement feedback loops using GPT chat to refine messaging based on client interactions.",
+                "4. Deploy improved messages through Gmail drafts.",
+                "5. Regularly review and update message strategies based on ongoing analytics."
+            ],
+            "type": "text communication",
+            "parameters": [
+                "response",
+                "follow-up",
+                "presentation",
+                "template",
+                "CV",
+                "candidate",
+                "report"
+            ],
+            "tools": [
+                "CRM",
+                "GPT chat",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "improve voice communication quality",
+            "responsibilities": "improving communications",
+            "objects": "communications",
+            "checklists": [
+                "1. Review and revise communication scripts regularly to enhance clarity and effectiveness.",
+                "2. Use call recording tools to capture voice communications.",
+                "3. Conduct peer listening sessions where team members listen to each other's calls and presentations to provide feedback.",
+                "4. Organize training sessions using Google meet to discuss best practices and areas for improvement identified during peer reviews.",
+                "5. Implement changes based on feedback and monitor improvements using CRM to track performance metrics."
+            ],
+            "type": "voice communication",
+            "parameters": [
+                "duration",
+                "software",
+                "status",
+                "agreement",
+                "report",
+                "date"
+            ],
+            "tools": [
+                "Notion",
+                "CRM",
+                "Google meet"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "present available employees for assignments",
+            "responsibilities": "presenting employees",
+            "objects": "employees",
+            "checklists": [
+                "1. Check the website for current employee profiles and availability.",
+                "2. Contact HR to refresh CVs and add missing information as needed.",
+                "3. Send direct links to updated profiles via Gmail to project managers.",
+                "4. Organize a meeting using Discord to discuss potential assignments with team leads.",
+                "5. Finalize assignments based on the discussion and update in CRM."
+            ],
+            "type": "available employee",
+            "parameters": [
+                "skill",
+                "availability",
+                "part-time",
+                "40-hour",
+                "full-time",
+                "presale",
+                "portfolio",
+                "department"
+            ],
+            "tools": [
+                "Website",
+                "Gmail",
+                "Google Meet",
+                "CRM",
+                "Discord"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "introduce presale employees to prospects",
+            "responsibilities": "presenting employees",
+            "objects": "employees",
+            "checklists": [
+                "1. Collect information on presale employees’ expertise and successful projects from the Website or a recruiter.",
+                "2. Create a document or presentation summarizing this information.",
+                "3. Share these profiles with prospects via email or during a live presentation on Zoom or Google meet.",
+                "4. Arrange a follow-up call using Google Calendar to answer any prospect questions and facilitate further discussions.",
+                "5. Document the outcomes of these introductions in CRM."
+            ],
+            "type": "presale employee",
+            "parameters": [
+                "experience",
+                "portfolio",
+                "skill",
+                "performance",
+                "availibility"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail",
+                "Zoom",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "include new hires to WhatsApp group",
+            "responsibilities": "hired employee",
+            "objects": "employees",
+            "checklists": [
+                "1. Confirm the mobile numbers of the client representative, the sales manager, and the newly hired employee.",
+                "2. Create a new WhatsApp group and add the confirmed numbers.",
+                "3. Introduce each member in the group, outlining their roles and the purpose of the group communication.",
+                "4. Share initial expectations and any immediate steps or necessary information to ensure a smooth start.",
+                "5. Encourage open communication within the group to address any initial questions or concerns."
+            ],
+            "type": "employees",
+            "parameters": [
+                "skill",
+                "contact information",
+                "availability",
+                "portfolio"
+            ],
+            "tools": [
+                "WhatsApp"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "add new hires to database",
+            "responsibilities": "evaluating employees",
+            "objects": "employees",
+            "checklists": [
+                "1. Collect essential information about the hired employee, including their contact details, job role, start date, and client information.",
+                "2. Enter this data into the CRM system to track placements and manage ongoing relationships.",
+                "3. Ensure that all relevant details such as the duration of the contract, any specific terms agreed upon with the client, and performance metrics are accurately recorded.",
+                "4. Set up reminders or follow-up actions in the CRM to monitor the employee’s integration and performance at the client site.",
+                "5. Confirm that all data entries have been completed correctly and are accessible to relevant team members for review or action."
+            ],
+            "type": "hired employee",
+            "parameters": [
+                "date",
+                "duration",
+                "department",
+                "employee",
+                "part-time",
+                "40-hour",
+                "full-time"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "organize project calls to discuss progress",
+            "responsibilities": "overseeing projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Schedule the project call using Google Calendar, ensuring all relevant parties, including clients, sales department members, and hired employees, are available.",
+                "2. Prepare an agenda before the call, outlining discussion points such as project progress, performance review, potential adjustments, and possible team expansion.",
+                "3. Use Google Meet to conduct the call, ensuring all participants can connect without issues.",
+                "4. During the call, actively listen to the client’s feedback and discuss detailed improvements or changes in team structure as needed.",
+                "5. Record key decisions and action items during the meeting and distribute minutes via email or a shared Google Drive document.",
+                "6. Update the CRM with new decisions regarding employee roles or project timelines based on the discussion.",
+                "7. Follow up with the client and internal teams to ensure that all agreed-upon actions are implemented promptly."
+            ],
+            "type": "project call",
+            "parameters": [
+                "candidate",
+                "client",
+                "performance",
+                "date",
+                "feedback"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Google Meet",
+                "CRM",
+                "Google Drive",
+                "Gmail"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "review progress in full-time projects",
+            "responsibilities": "reviewing projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Organize progress review meetings using Google Meet.",
+                "2. Prepare detailed progress reports using data from CRM, focusing on milestones.",
+                "3. Analyze project performance against planned timelines during review meetings.",
+                "4. Discuss any deviations and potential issues with the project team and devise corrective actions.",
+                "5. Update project plans and documentation in CRM based on review outcomes to reflect any new strategies or adjustments."
+            ],
+            "type": "full-time project",
+            "parameters": [
+                "duration",
+                "discount",
+                "department",
+                "price",
+                "tool",
+                "software",
+                "skill",
+                "language",
+                "task",
+                "instruction"
+            ],
+            "tools": [
+                "Google Meet",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "oversee part-time projects",
+            "responsibilities": "overseeing projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Schedule periodic check-ins with the client using Google Calendar to discuss project progress and any needs for assistance.",
+                "2. Conduct these check-ins via Google Meet to maintain direct and effective communication.",
+                "3. Use WhatsApp for regular and informal updates with the hired employee to ensure flexibility and quick responsiveness.",
+                "4. During check-ins, explicitly ask the client about their satisfaction with the employee's performance and any areas for improvement.",
+                "5. Address any issues or concerns raised by the client or employee promptly, facilitating necessary adjustments or interventions.",
+                "6. Document key points and outcomes from each check-in for internal records and follow-up actions."
+            ],
+            "type": "part-time project",
+            "parameters": [
+                "terms",
+                "employee",
+                "duration",
+                "price",
+                "department",
+                "status"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Google Meet",
+                "WhatsApp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "review outcomes of part-time projects",
+            "responsibilities": "reviewing projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Schedule end-of-project or periodic review sessions using Google Calendar and conduct them via Google Meet.",
+                "2. Directly collect feedback and performance evaluations from the client and the hired employee during the review session.",
+                "3. Prepare a summary report detailing achievements, challenges, and lessons learned, using Google Docs.",
+                "4. Discuss the report with the project team, the client, and other stakeholders during the review meeting to identify areas for improvement.",
+                "5. Document feedback and any agreed-upon action items in a shared document or internal records to guide future projects."
+            ],
+            "type": "part-time project",
+            "parameters": [
+                "terms",
+                "employee",
+                "duration",
+                "price",
+                "department",
+                "status"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Google Meet",
+                "Google Docs",
+                "Google Sheets"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "ensure coordination in 40-hour projects",
+            "responsibilities": "coordinating projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Add the client, sales manager, and hired employee to a dedicated WhatsApp group to facilitate immediate and ongoing communication.",
+                "2. Use the WhatsApp group to discuss project objectives, timelines, and roles informally as needed.",
+                "3. Schedule project calls using Google Meet to discuss progress, address any issues, and implement changes or additions such as adding new employees.",
+                "4. Monitor the communication in the WhatsApp group to ensure that all parties are aligned and that the project is progressing smoothly.",
+                "5. Document any significant decisions or changes discussed during project calls or in the WhatsApp group for future reference and action."
+            ],
+            "type": "40-hour project",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date"
+            ],
+            "tools": [
+                "WhatsApp",
+                "Google Meet"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "oversee 10-hour free projects",
+            "responsibilities": "overseeing projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Collect detailed task requirements from the potential client via Gmail.",
+                "2. Assign the task to an appropriate employee based on skill set and availability.",
+                "3. Monitor the employee’s progress to ensure timely completion within the 10-hour limit.",
+                "4. Review the completed task to ensure it meets the client’s specifications and quality standards.",
+                "5. Send the final results to the potential client via Gmail, along with a summary of the work done and any relevant explanations or insights."
+            ],
+            "type": "10-hour free project",
+            "parameters": [
+                "test",
+                "trial",
+                "skill",
+                "project",
+                "performance"
+            ],
+            "tools": [
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "evaluate the effectiveness of 10-hour free projects",
+            "responsibilities": "reviewing projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Request feedback from the client regarding the quality and relevance of the delivered task via Gmail.",
+                "2. Analyze the feedback to assess client satisfaction and the effectiveness of the trial in meeting client expectations.",
+                "3. Document the feedback and any lessons learned to improve future 10-hour free projects.",
+                "4. Share insights from the project review with the team to refine processes.",
+                "5. Offer a full time agreement to a client."
+            ],
+            "type": "10-hour free project",
+            "parameters": [
+                "test",
+                "trial",
+                "skill",
+                "project",
+                "performance"
+            ],
+            "tools": [
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "coordinate efforts in test task projects",
+            "responsibilities": "coordinating projects",
+            "objects": "projects",
+            "checklists": [
+                "1. Define project objectives and expected outcomes clearly to all involved team members.",
+                "2. Use Google Meet to conduct initial project planning meetings.",
+                "3. Assign specific roles and tasks to team members, documenting these in Gmail.",
+                "4. Establish a schedule for project milestones and check-ins, using Google Calendar for reminders.",
+                "5. Facilitate ongoing communication and project updates through Gmail, ensuring all team members stay informed and engaged.",
+                "6. Review and consolidate project results, preparing a final report."
+            ],
+            "type": "test task project",
+            "parameters": [
+                "trial",
+                "agreement",
+                "candidate",
+                "candidate",
+                "skill"
+            ],
+            "tools": [
+                "Google Meet",
+                "Gmail",
+                "Google Calendar"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "collect feedback from clients",
+            "responsibilities": "collecting feedbacks",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Send out structured email via Gmail immediately following the conclusion of a project or service delivery.",
+                "2. Use Google Meet for follow-up meetings if detailed discussion is needed.",
+                "3. Compile and analyze the feedback in a centralized document, identifying key areas of satisfaction and areas for improvement.",
+                "4. Share summarized feedback and actionable insights with relevant departments to facilitate continuous improvement.",
+                "5. Add all feedback in CRM for future reference and ongoing monitoring of client satisfaction trends."
+            ],
+            "type": "clients feedback",
+            "parameters": [
+                "positive",
+                "negative",
+                "reference",
+                "NDA",
+                "portfolio"
+            ],
+            "tools": [
+                "Gmail",
+                "Google Meet",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "gather feedback from candidates",
+            "responsibilities": "collecting feedbacks",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Initiate a feedback request in Discord, directing messages to candidates involved in the project to share their insights on project progress and experiences.",
+                "2. Organize a detailed discussion in a dedicated Discord channel to facilitate real-time feedback and address any immediate queries.",
+                "3. Compile and analyze the feedback to assess project progress and candidate performance, noting key insights and possible improvements.",
+                "4. Share summarized feedback with project managers and relevant team members to adjust project strategies as necessary."
+            ],
+            "type": "candidates feedback",
+            "parameters": [
+                "positive",
+                "negative",
+                "task",
+                "portfolio"
+            ],
+            "tools": [
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "collect reference feedbacks",
+            "responsibilities": "collecting feedbacks",
+            "objects": "feedbacks",
+            "checklists": [
+                "1. Send an email to clients via Gmail post-project to request permission to include the project work in the candidate's portfolio and to inquire if they are willing to provide a reference for future potential clients.",
+                "2. Follow up with a consent form if email responses are affirmative, ensuring all legal and privacy aspects are covered.",
+                "3. Update the candidate’s portfolio and reference records in your CRM system based on the client’s approval.",
+                "4. Maintain a list of client contacts who have agreed to act as references, ensuring they are readily available for future verification by potential clients."
+            ],
+            "type": "references",
+            "parameters": [
+                "client",
+                "country",
+                "NDA",
+                "portfolio",
+                "ex-client"
+            ],
+            "tools": [
+                "Gmail",
+                "CRM",
+                "Google drive"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "distribute client instructions with hired employees",
+            "responsibilities": "issuing instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Gather client instructions and consolidate them into a clear and comprehensive document.",
+                "2. Distribute the instructions via email or directly through a Discord  to all hired employees involved in the project.",
+                "3. Organize a briefing session via Google Meet to explain the instructions and ensure all employees understand their roles and responsibilities.",
+                "4. Provide a communication channel, such as Discord, for any immediate questions or clarifications related to the instructions.",
+                "5. Monitor the implementation of instructions and provide support as needed to ensure compliance."
+            ],
+            "type": "client instructions",
+            "parameters": [
+                "online",
+                "written",
+                "video",
+                "clear",
+                "unclear"
+            ],
+            "tools": [
+                "Gmail",
+                "CRM",
+                "Google Meet",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "discuss client instructions if needed",
+            "responsibilities": "revising instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Schedule a meeting via Google Meet when a need for revising instructions is identified, involving all relevant stakeholders.",
+                "2. Discuss the current instructions and gather feedback from the hired employees about challenges or potential improvements.",
+                "3. Update the instructions based on feedback and discussions during the meeting.",
+                "4. Redistribute the updated instructions through email or CRM, ensuring all team members receive the latest updates.",
+                "5. Follow up with a Google Meet call to ensure all changes are understood and correctly implemented."
+            ],
+            "type": "client instructions",
+            "parameters": [
+                "online",
+                "written",
+                "video",
+                "clear",
+                "unclear"
+            ],
+            "tools": [
+                "Google Meet",
+                "Gmail",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "review and update company instructions",
+            "responsibilities": "revising instructions",
+            "objects": "instructions",
+            "checklists": [
+                "1. Schedule a review session via Google Meet to gather input from key stakeholders on existing company instructions.",
+                "2. Compile all feedback and suggestions for updates in a shared document accessible via Google Drive.",
+                "3. Revise the instructions based on the collective feedback and legal compliance checks.",
+                "4. Distribute the updated instructions via Discord to all employees, ensuring they acknowledge receipt and understanding.",
+                "5. Archive the previous versions and the update process documentation in Google Drive for auditing purposes."
+            ],
+            "type": "company instructions",
+            "parameters": [
+                "written",
+                "call",
+                "interection",
+                "software",
+                "task"
+            ],
+            "tools": [
+                "Google Meet",
+                "Google Drive",
+                "Gmail",
+                "Discord"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "notify clients about sent invoices if needed",
+            "responsibilities": "reviewing documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Review the status of sent invoices using your CRM system to track which clients have been billed and who has acknowledged receipt.",
+                "2. For invoices that have not been acknowledged, send a follow-up notification via Gmail, and a reminder of payment terms.",
+                "3. Use CRM to set reminders for further follow-up if necessary.",
+                "4. Document all communications and responses regarding invoices in CRM to maintain a comprehensive financial record.",
+                "5. Provide regular updates to the finance department on the status of invoice acknowledgements and payments."
+            ],
+            "type": "invoices",
+            "parameters": [
+                "terms",
+                "date",
+                "price",
+                "part-time",
+                "40-hour",
+                "full-time",
+                "client",
+                "employee"
+            ],
+            "tools": [
+                "CRM",
+                "Gmail",
+                "Google Calendar"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "fill in general agreements",
+            "responsibilities": "updating documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Retrieve the latest template for general agreements from your Google drive.",
+                "2. Update the template with relevant project details and client information using Google docs.",
+                "3. Review the updated agreement for accuracy and compliance with current regulations.",
+                "4.Store the finalized agreement in your Google drive system for easy access and management."
+            ],
+            "type": "agreements",
+            "parameters": [
+                "terms",
+                "NDA",
+                "client",
+                "date",
+                "price",
+                "part-time",
+                "40-hour",
+                "full-time"
+            ],
+            "tools": [
+                "Google drive",
+                "CRM",
+                "DocuSign"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "revise scripts to current standards",
+            "responsibilities": "updating documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Retrieve the existing scripts that require updates from Notion.",
+                "2. Review the current industry standards, guidelines, or regulations that impact the scripts.",
+                "3. Update the scripts directly in Notion, ensuring all changes reflect the latest standards.",
+                "4. Share the updated scripts with key stakeholders through Notion for feedback, leveraging Notion’s collaborative features.",
+                "5. Finalize the scripts based on feedback and maintain the updated versions in Notion for easy access and future reference"
+            ],
+            "type": "scripts",
+            "parameters": [
+                "template",
+                "written",
+                "instruction",
+                "sales",
+                "call",
+                "message"
+            ],
+            "tools": [
+                "Notion"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update full-time employment agreements",
+            "responsibilities": "updating documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Retrieve the current full-time employment agreement templates from Google Drive.",
+                "2. Update the agreement with necessary changes, such as adjustments in terms, benefits, or other employment conditions, using Google Docs.",
+                "3. Send the updated agreement for review. 4. Incorporate any feedback and finalize the document.",
+                "5.Send the approved agreement via DOcusign to a client.",
+                "6. Store the signed agreement back in Google Drive and ensure the employee records are updated accordingly."
+            ],
+            "type": "full-time agreement",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date",
+                "project",
+                "discount"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs",
+                "Gmail",
+                "DocuSign"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "modify part-time agreements if required",
+            "responsibilities": "updating documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Retrieve the current part-time agreement from Google Drive.",
+                "2. Use Google Docs to make necessary modifications based on new project requirements or changes in part-time employment terms.",
+                "3. Review the revised agreement and send for approval",
+                "4. Secure necessary approvals and signatures via DocuSign.",
+                "5. Update the agreement details in CRM and re-upload the finalized document to Google Drive."
+            ],
+            "type": "part-time agreement",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date",
+                "project"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs",
+                "DocuSign",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "inspect part-time agreements for accuracy",
+            "responsibilities": "reviewing documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Access the latest part-time agreements stored on Google Drive.",
+                "2. Conduct a thorough review of each agreement using Google Docs to ensure all details are accurate and reflect current terms.",
+                "3. Check for compliance with relevant employment regulations.",
+                "4. Note any discrepancies or required updates and initiate the modification process.",
+                "5. Update records in CRM to reflect the current status of each agreement."
+            ],
+            "type": "part-time agreement",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date",
+                "project"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "send 40-hour agreements for signing",
+            "responsibilities": "updating documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Retrieve the 40-hour agreement template from Google Drive.",
+                "2. Ensure that all details are correct and that the document is ready for signing, using Google Docs for any last-minute adjustments.",
+                "3. Send the agreement to all relevant parties for digital signatures via DocuSign.",
+                "4. Track the signing status and follow up as necessary to ensure timely completion.",
+                "5. Once signed, store the finalized agreement back in Google Drive and update records in CRM."
+            ],
+            "type": "40-hour agreement",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date",
+                "project"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs",
+                "DocuSign",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "fill in 40-hour agreements",
+            "responsibilities": "reviewing documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Access the 40-hour agreement template stored on Google Drive.",
+                "2. Fill in the necessary details such as client information, project scope, and hourly commitments using Google Docs.",
+                "3. Review the completed agreement for accuracy and compliance.",
+                "4. Secure preliminary approval from internal management before proceeding to the signing process.",
+                "5. Update the document status in CRM once it's ready for signing."
+            ],
+            "type": "40-hour agreement",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date",
+                "project"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "review 10-hour free agreements for accuracy",
+            "responsibilities": "reviewing documents",
+            "objects": "documents",
+            "checklists": [
+                "1. Access the 10-hour free agreement template from Google Drive.",
+                "2. Thoroughly review the document using Google Docs to ensure all details such as project scope, client obligations, and terms are correctly stated.",
+                "3. Check for compliance with legal standards and promotional policies.",
+                "4. Make any necessary corrections or updates.",
+                "5. Confirm the updated agreement with internal stakeholders before sending it back to the client for acknowledgment."
+            ],
+            "type": "10-hour free agreement",
+            "parameters": [
+                "price",
+                "department",
+                "employee",
+                "status",
+                "client",
+                "date",
+                "project"
+            ],
+            "tools": [
+                "Google Drive",
+                "Google Docs"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "negotiate employees personal performance with the client",
+            "responsibilities": "negotiating performance",
+            "objects": "performance",
+            "checklists": [
+                "1. Prepare for the negotiation by reviewing the employee's performance data and feedback in CRM.",
+                "2. Schedule a negotiation meeting with the client using Google Calendar and conduct it via Google Meet.",
+                "3. Discuss the employee's contributions, strengths, and areas for improvement based on documented evidence.",
+                "4. Propose adjustments or development plans as needed, based on the discussion.",
+                "5. Finalize the negotiation details and update the employee's performance records in CRM."
+            ],
+            "type": "personal perfomance",
+            "parameters": [
+                "email",
+                "upsell",
+                "conversion",
+                "lead",
+                "call",
+                "interview"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Google Meet"
+            ],
+            "complexity": "High"
+        },
+        {
+            "task_name": "discuss performance expectations with candidates",
+            "responsibilities": "negotiating performance",
+            "objects": "performance",
+            "checklists": [
+                "1. Prepare detailed performance criteria and expectations using information stored in CRM.",
+                "2. Schedule a discussion session with the candidate using Google Calendar, and conduct it via Google Meet.",
+                "3. Clearly outline the performance expectations and how they align with organizational goals during the meeting.",
+                "4. Allow the candidate to ask questions and provide input to ensure mutual understanding.",
+                "5. Document the agreed-upon expectations in CRM and follow up with a summary email via Gmail."
+            ],
+            "type": "candidate performance",
+            "parameters": [
+                "assessment",
+                "feedback",
+                "report",
+                "tracking",
+                "project",
+                "portfolio"
+            ],
+            "tools": [
+                "CRM",
+                "Google Calendar",
+                "Google Meet",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "negotiate project performance targets",
+            "responsibilities": "negotiating performance",
+            "objects": "performance",
+            "checklists": [
+                "1. Schedule a negotiation meeting with the client using Google Calendar to discuss performance expectations.",
+                "2. Conduct the meeting via Google Meet to facilitate a direct discussion about what performance is required and whether the hired employee can meet these expectations.",
+                "3. Prepare points for discussion based on the employee’s current capabilities and potential areas for growth.",
+                "4. Adjust performance targets based on the client's feedback and realistic assessments of employee capabilities during the meeting.",
+                "5. Document the agreed performance targets and any action items or training needs that arise from the discussion.",
+                "6. Communicate the finalized targets and follow-up actions to both the client and the hired employee via email."
+            ],
+            "type": "project performance",
+            "parameters": [
+                "feedback",
+                "client",
+                "employee",
+                "result"
+            ],
+            "tools": [
+                "Google Calendar",
+                "Google Meet",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "generate comprehensive daily reports",
+            "responsibilities": "generating reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Access CRM at the end of each day to enter and compile data on daily activities, including tasks completed, number of leads contacted, emails sent, and other relevant metrics.",
+                "2. Use CRM's built-in reporting tools to format and organize the data into a comprehensive report.",
+                "3. Review the report within CRM to ensure accuracy and completeness of all recorded information."
+            ],
+            "type": "daily report",
+            "parameters": [
+                "message",
+                "call",
+                "interested",
+                "sales",
+                "interview"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "monitor employee performance reports",
+            "responsibilities": "generating reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Receive daily performance updates from hired employees in the designated WhatsApp group, where the client, management, and sales manager are present.",
+                "."
+            ],
+            "type": "employee report",
+            "parameters": [
+                "project",
+                "tracking",
+                "document",
+                "status"
+            ],
+            "tools": [
+                "Whatsapp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "review reports on project progress and outcomes",
+            "responsibilities": "generating reports",
+            "objects": "reports",
+            "checklists": [
+                "1. Regularly monitor the WhatsApp group where hired employees share their daily reports on project activities.",
+                "2. Analyze the summarized data to assess overall project health and identify any trends or areas needing attention."
+            ],
+            "type": "project report",
+            "parameters": [
+                "feedback",
+                "result",
+                "performance",
+                "database"
+            ],
+            "tools": [
+                "Whatsapp"
+            ],
+            "complexity": "Low"
+        },
+        {
+            "task_name": "manage linkedin accounts for networking",
+            "responsibilities": "managing accounts",
+            "objects": "accounts",
+            "checklists": [
+                "1. Regularly update LinkedIn profiles with current company news, employee achievements, and relevant industry articles.",
+                "2. Engage with other industry professionals and companies by liking, commenting, and sharing their posts.",
+                "3. Monitor the effectiveness of engagement and outreach strategies directly through LinkedIn's post insights.",
+                "4. Adjust networking strategies based on feedback and engagement rates to optimize account performance.",
+                "5. Schedule regular posts and content updates directly within LinkedIn."
+            ],
+            "type": "linkedin accounts",
+            "parameters": [
+                "connection",
+                "message",
+                "follow-up",
+                "call set-up"
+            ],
+            "tools": [
+                "LinkedIn"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "utilize linkedin accounts for sending follow-ups",
+            "responsibilities": "utilizing accounts",
+            "objects": "accounts",
+            "checklists": [
+                "1. Identify key contacts from recent interactions or connections who require follow-ups.",
+                "2. Draft personalized follow-up messages tailored to each contact’s recent engagement or interest.",
+                "3. Send the follow-up messages directly through LinkedIn’s messaging feature.",
+                "4. Monitor responses and further engage based on the replies received.",
+                "5. Document significant interactions and outcomes within your CRM to track engagement history and results."
+            ],
+            "type": "linkedin accounts",
+            "parameters": [
+                "connection",
+                "message",
+                "follow-up",
+                "call set-up"
+            ],
+            "tools": [
+                "LinkedIn",
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "use email accounts for communication and marketing",
+            "responsibilities": "utilizing accounts",
+            "objects": "accounts",
+            "checklists": [
+                "1. Develop a content calendar for marketing communications, including newsletters, promotions, and general updates.",
+                "2. Create engaging email content using Gmail.",
+                "3. Segment email lists in Gmail to target specific audiences effectively.",
+                "4. Schedule and send out emails according to the content calendar."
+            ],
+            "type": "email accounts",
+            "parameters": [
+                "status",
+                "template",
+                "spam",
+                "personal",
+                "corporate"
+            ],
+            "tools": [
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "manage whatsapp group accounts for client engagement",
+            "responsibilities": "managing accounts",
+            "objects": "accounts",
+            "checklists": [
+                "1. Create dedicated WhatsApp groups for different clients or projects to maintain organized communication channels.",
+                "2. Add relevant team members and clients to the appropriate groups, ensuring everyone involved has access.",
+                "3. Set clear guidelines for communication within the groups to maintain professionalism and clarity.",
+                "4. Monitor the groups regularly to facilitate discussions, address any concerns, and ensure engagement remains high.",
+                "5. Use the group to share important updates, seek feedback, and make announcements to keep all parties informed."
+            ],
+            "type": "whatsapp group accounts",
+            "parameters": [
+                "message",
+                "report",
+                "feed back",
+                "project",
+                "client",
+                "employee"
+            ],
+            "tools": [
+                "WhatsApp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "use whatsapp groups for updates and quick responses",
+            "responsibilities": "utilizing accounts",
+            "objects": "accounts",
+            "checklists": [
+                "1. Establish specific WhatsApp groups for instant communication needs, such as quick project updates or immediate team responses.",
+                "2. Use these groups to send real-time updates on project progress, changes in schedules, or urgent issues.",
+                "3. Encourage team members and clients to use these groups for fast, efficient communications.",
+                "4. Ensure that responses are timely by setting expectations for group activity and monitoring participation.",
+                ""
+            ],
+            "type": "whatsapp group accounts",
+            "parameters": [
+                "message",
+                "report",
+                "feed back",
+                "project",
+                "client",
+                "employee"
+            ],
+            "tools": [
+                "WhatsApp"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "offer new outstaffing services to potential clients",
+            "responsibilities": "offering new services",
+            "objects": "services",
+            "checklists": [
+                "1. Identify market trends and client demands through market research and feedback collected via CRM.",
+                "2. Develop a proposal for new outstaffing services that align with identified needs",
+                "3. Present the proposal to potential clients via email or during virtual meetings on Google Meet.",
+                "4. Follow up with potential clients to discuss any questions or customization of services.",
+                "5. Update CRM with client interactions and status of proposals."
+            ],
+            "type": "outstaff",
+            "parameters": [
+                "price",
+                "agreement",
+                "profession",
+                "responsibility",
+                "department",
+                "skill",
+                "candidate",
+                "part-time",
+                "40-hour",
+                "full-time",
+                "trial"
+            ],
+            "tools": [
+                "CRM",
+                "Google Docs",
+                "Gmail",
+                "Google Meet"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "review employee database for clients needs",
+            "responsibilities": "maintaining databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Access the employee database within CRM to extract current data on employee skills, availability, and project history.",
+                "2. Analyze specific client requirements and match them with appropriate employee profiles using data filtering tools in CRM and on the Website."
+            ],
+            "type": "employees database",
+            "parameters": [
+                "skill",
+                "contact information",
+                "availability",
+                "portfolio"
+            ],
+            "tools": [
+                "CRM",
+                "Google Sheets",
+                "Google Docs",
+                "Gmail"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "regularly refresh client information in the database",
+            "responsibilities": "updating databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Regular review the client information in CRM to ensure data remains current.",
+                "2. Verify client details such as contact information, company updates, and interaction history.",
+                "3. Make necessary updates in CRM based on the latest interactions or changes reported by sales or service teams.",
+                "4. Confirm accuracy of the data with direct client communication when required.",
+                "5. Document any changes or updates made to ensure traceability and compliance."
+            ],
+            "type": "clients database",
+            "parameters": [
+                "client",
+                "ex-client",
+                "affiliate",
+                "status",
+                "manager",
+                "assistant"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        },
+        {
+            "task_name": "update leads data for accuracy",
+            "responsibilities": "updating databases",
+            "objects": "databases",
+            "checklists": [
+                "1. Perform periodic audits of lead data stored in CRM to identify any inaccuracies or outdated information.",
+                "2. Update lead details such as contact info, engagement history, and status changes based on recent interactions or market developments.",
+                "3. Review lead data with external sources if available to validate accuracy.",
+                "4. Re-engage inactive leads with new information or updates to re-assess their interest.",
+                "5. Record and track updates in CRM to maintain a clean and efficient database."
+            ],
+            "type": "leads database",
+            "parameters": [
+                "status",
+                "manager",
+                "assistant",
+                "follow-up",
+                "messages"
+            ],
+            "tools": [
+                "CRM"
+            ],
+            "complexity": "Medium"
+        }
+    ]
+}

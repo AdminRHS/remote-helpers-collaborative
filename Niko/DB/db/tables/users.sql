@@ -1,0 +1,23 @@
+﻿CREATE TABLE $tableName (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `entity_id` tinyint(3) unsigned DEFAULT NULL,
+  `is_active` enum('active','inactive') NOT NULL DEFAULT 'active',
+  `is_confirmed` tinyint(1) NOT NULL DEFAULT 0,
+  `image` varchar(255) DEFAULT NULL,
+  `google_id` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `task_assigned` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `task_done` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `hourly_cost` tinyint(3) unsigned DEFAULT NULL,
+  `currency_id` tinyint(3) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`),
+  UNIQUE KEY `users_google_id_unique` (`google_id`),
+  KEY `users_entity_id_foreign` (`entity_id`),
+  KEY `users_currency_id_foreign` (`currency_id`),
+  CONSTRAINT `users_currency_id_foreign` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `users_entity_id_foreign` FOREIGN KEY (`entity_id`) REFERENCES `entities` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+)

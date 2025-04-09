@@ -1,0 +1,79 @@
+Slide 1: Mila’s Studio Wall (Title: “AI Portrait Adventure”)
+Scene: Mila is pinning a big colorful poster on her studio wall titled “AI Portrait Adventure.” Around her are tools like a camera, pencil, and laptop. A corkboard has pinned notes like "MidJourney", "Face Swap", and "Retouch Magic."
+Caption: 🎨 Welcome to Mila’s Studio! Our favorite bird illustrator is about to show you how to turn a simple photo into a polished AI portrait! Ready to fly into the creative sky? 🕊️
+Prompt: Pixar-style 3D hummingbird named Mila wearing a white lab coat and purple shirt, pinning a colorful poster titled “AI Portrait Adventure” on a corkboard in her cozy studio full of artistic tools. Lively lighting, whimsical setup. --ar 9:16
+
+Slide 2: Choose Reference Photo (Title integrated into label on screen)
+Scene: Mila stands next to a glowing screen showing a headshot photo labeled “Choose Reference Photo.” She gestures toward it proudly.
+Caption: 📸 Step 1: Start with a clear, front-facing photo of the person. Mila chirps: “This is your star image!”
+Prompt: 3D Pixar-style hummingbird Mila, wearing a lab coat and purple shirt, pointing to a glowing screen labeled “Choose Reference Photo,” which displays a business-style headshot of a woman. Warm, creative studio lighting. --ar 9:16
+
+Slide 3: Enter MidJourney (Title on glowing login screen)
+Scene: Mila is seated at a desk, logging into Discord. The monitor shows “Enter MidJourney” on a welcome screen with stylized UI.
+Caption: 💻 Step 2: Log into the MidJourney Discord server. It’s where the magic begins!
+Prompt: Pixar-style hummingbird Mila, wearing a lab coat over a purple shirt, sitting at a computer with a Discord screen that says “Enter MidJourney” in glowing text. Cozy lighting with a tech-artsy vibe. --ar 9:16
+
+Slide 4: Craft Your Prompt (Title handwritten in her open notebook)
+Scene: Mila is writing in her oversized sketchbook with “Craft Your Prompt” as the title on the top of the page. Prompt fragments float around her.
+Caption: ✍️ Step 3: Describe the look! Mention expression, outfit, background, lighting — everything matters.
+Prompt: Pixar-style hummingbird Mila in a white lab coat and purple shirt, writing in a large sketchbook with “Craft Your Prompt” handwritten at the top. Floating sample prompts hover nearby. Whimsical lighting and mood. --ar 9:16
+
+Slide 5: Add Reference Link (Title appears on a tag near the prompt input)
+Scene: Mila is dragging a glowing photo link into a prompt field. A floating tag reads “Add Reference Link.”
+Caption: 🔗 Step 4: Add the photo URL so MidJourney knows who to draw!
+Prompt: 3D Pixar-style hummingbird Mila wearing a lab coat and purple shirt, dropping a glowing image link into a prompt box. A floating sticky tag says “Add Reference Link.” Creative workspace background. --ar 9:16
+
+Slide 6: Apply Prompt Settings (Title engraved on the dials)
+Scene: Mila is in a command room adjusting three dials: “--iw”, “--cw”, and “--no”. One of the dials is engraved with the phrase “Apply Prompt Settings.”
+Caption: 🎛️ Step 5: Tweak the settings to control likeness and remove unwanted details. Fine-tune your prompt!
+Prompt: Pixar-style hummingbird Mila in a lab coat and purple shirt adjusting sci-fi dials labeled “--iw”, “--cw”, and “--no”, with one dial engraved “Apply Prompt Settings.” Bright, futuristic studio atmosphere. --ar 9:16
+
+Slide 7: Pick The Best of Generated Variants (Title on a sticky note on the corkboard)
+Scene: Mila is pointing at one of four generated portraits pinned to a corkboard. A sticky note above says “Pick The Best of Generated Variants.”
+Caption: 🖼️ Step 6: Choose the portrait that best matches the subject’s look. Don’t be afraid to retry!
+Prompt: 3D Pixar-style hummingbird Mila in a lab coat and purple shirt pointing at one of four portraits on a corkboard, with a sticky note above that says “Pick The Best of Generated Variants.” Studio environment. --ar 9:16
+
+Slide 8: Face Swap Magic (Title engraved on the wand)
+Scene: Mila casts a glowing spell with a wand engraved “Face Swap Spell.” Two face images swirl into a combined result.
+Caption: ✨ Step 7: If the likeness is off, do a face swap. Mila’s magic will help!
+Prompt: Pixar-style hummingbird Mila in a white lab coat and purple shirt casting a glowing spell with a wand labeled “Face Swap Spell.” Two facial photos swirl into one. Magical lighting. --ar 9:16
+
+Slide 9: Final Touches (Title etched on her glowing brush)
+Scene: Mila applies adjustments to a portrait using a glowing brush labeled “Final Touches.”
+Caption: 🖌️ Step 8: Adjust brightness, shadows, color tones — tiny tweaks bring big results.
+Prompt: Pixar-style Mila in a white lab coat and purple shirt painting over a portrait canvas with a glowing brush labeled “Final Touches.” Artistic background with soft lighting. --ar 9:16
+
+Slide 10: Transparent Now! (Title appears as a UI tag on screen)
+Scene: Mila is erasing the background from a portrait. A glowing UI tag nearby says “Transparent Now!”
+Caption: 🧽 Step 9: Remove the background to make a clean PNG file for design use.
+Prompt: Pixar-style hummingbird Mila in lab coat and purple shirt erasing a portrait background to reveal a checkerboard. A floating tag on screen says “Transparent Now!”. --ar 9:16
+
+Slide 11: Center And Size in Figma (Title appears on the Figma frame label)
+Scene: Mila is placing a portrait inside a frame in Figma. The frame is labeled “Center And Size in Figma”.
+Caption: 🔲 Step 10: Frame your portrait inside a 1000x1000 layout for perfect alignment!
+Prompt: Pixar-style hummingbird Mila in a lab coat and purple shirt working in Figma, dragging a portrait into a frame labeled “Center And Size in Figma.” Interface guides and snapping shown. --ar 9:16
+
+Slide 12: Create Signature For an Email (Title shown in the header of the email box)
+Scene: Mila is inserting the portrait into a company email signature box. The header reads “Create Signature For an Email.”
+Caption: ✉️ Step 11: Add the background-free portrait into the email signature layout. Professional and personal!
+Prompt: Pixar-style hummingbird Mila in a lab coat and purple shirt placing a portrait into an email signature UI, which has a header text reading “Create Signature For an Email.” Office-style background. --ar 9:16
+
+Slide 13: Style Swap — Add Vyshyvanka (Title stitched on the new shirt)
+Scene: Mila sews a red embroidered vyshyvanka shirt onto the portrait. The fabric tag on the shirt reads “Style Swap.”
+Caption: 🎭 Step 12: Want to honor culture? Add a Ukrainian vyshyvanka to the portrait.
+Prompt: Pixar-style hummingbird Mila in lab coat and purple shirt sewing a vyshyvanka shirt onto a portrait. The shirt has a stitched label that reads “Style Swap.” Colorful embroidery decor and tools in the background. --ar 9:16
+
+Slide 14: Before & After Wall (Title engraved on a wooden plaque)
+Scene: A framed before-and-after portrait hangs on a gallery wall. Mila proudly gestures to it. The wooden plaque below says “Your Masterpiece.”
+Caption: 🖼️ From reference photo to AI-crafted beauty—it’s a masterpiece!
+Prompt: Pixar-style hummingbird Mila in a lab coat and purple shirt standing beside a wooden-framed split portrait labeled “Before” and “After”, with a plaque below that reads “Your Masterpiece.” Soft lighting and gallery backdrop. --ar 9:16
+
+Slide 15: Share Time (Title glows on the phone screen as “Posted!”)
+Scene: Mila cheers while holding a phone showing an Instagram post. The screen says “Posted!”
+Caption: 📱 Step 13: Post your result, tag your colleague, and show off your skills!
+Prompt: Pixar-style hummingbird Mila in lab coat and purple shirt holding up a phone with a glowing “Posted!” label on the screen showing the portrait shared on social media. --ar 9:16
+
+Slide 16: Final Bow (Title printed on a stage banner)
+Scene: Mila takes a bow under a curtain-call stage banner that reads “Thanks for Flying With Me.” Confetti rains from above.
+Caption: 🎉 You’ve finished the whole process! Mila hopes you enjoyed the ride. Follow for more creative tips!
+Prompt: Pixar-style hummingbird Mila in a lab coat and purple shirt bowing on a small stage under a fabric banner that says “Thanks for Flying With Me.” Confetti falling, celebratory setting. --ar 9:16

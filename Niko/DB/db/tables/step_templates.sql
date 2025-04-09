@@ -1,0 +1,23 @@
+﻿CREATE TABLE $tableName (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `action_id` bigint(20) unsigned DEFAULT NULL,
+  `object_id` bigint(20) unsigned DEFAULT NULL,
+  `tool_id` smallint(5) unsigned DEFAULT NULL,
+  `is_draft` tinyint(1) NOT NULL DEFAULT 0,
+  `description` varchar(2000) DEFAULT NULL,
+  `entity_id` tinyint(3) unsigned NOT NULL,
+  `hours_planned` time NOT NULL DEFAULT '00:00:00',
+  `created_by` smallint(5) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `step_templates_entity_id_foreign` (`entity_id`),
+  KEY `step_templates_created_by_foreign` (`created_by`),
+  KEY `step_templates_action_id_foreign` (`action_id`),
+  KEY `step_templates_object_id_foreign` (`object_id`),
+  KEY `step_templates_tool_id_foreign` (`tool_id`),
+  CONSTRAINT `step_templates_action_id_foreign` FOREIGN KEY (`action_id`) REFERENCES `actions` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `step_templates_created_by_foreign` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `step_templates_entity_id_foreign` FOREIGN KEY (`entity_id`) REFERENCES `entities` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `step_templates_object_id_foreign` FOREIGN KEY (`object_id`) REFERENCES `objects` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `step_templates_tool_id_foreign` FOREIGN KEY (`tool_id`) REFERENCES `tools` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+)

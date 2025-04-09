@@ -1,0 +1,39 @@
+📘 SLIDE 1: "What is Artificial Intelligence?"
+🖼️ Prompt:
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, standing upright, holding notebook and pencil, friendly smile showing teeth, front view, professional 3D rendering. Shark mascot is underwater, pointing at a glowing treasure chest labeled "AI", surrounded by glowing circuits, digital elements, and floating data bubbles. Bright, colorful underwater environment with soft light rays. Title text at the top in white: "What is Artificial Intelligence?"
+
+🖼️ Aspect Ratio: 9:16
+🧠 Theme: Introduction to AI
+🎯 Focus: Curiosity, discovery, learning
+
+📘 SLIDE 2: "Machines That Think Like Us?"
+🖼️ Prompt:
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, standing upright, holding notebook and pencil, friendly smile showing teeth, front view, professional 3D rendering. Sharky is underwater, curiously observing a robotic fish made of gears and glowing tech components. The background features bubbles, marine life, and circuit patterns. A glowing clamshell assistant floats nearby. Title text at the top in white: "Machines That Think Like Us?"
+
+🖼️ Aspect Ratio: 9:16
+🧠 Theme: AI capability & curiosity
+🎯 Focus: Narrow AI and intelligence comparison
+
+📘 SLIDE 3: "Where You’ve Seen AI!"
+🖼️ Prompt:
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, standing upright, holding notebook and pencil, friendly smile showing teeth, front view, professional 3D rendering. Sharky is underwater, pointing toward wooden coral signposts labeled “Siri Coral”, “Netflix Reef”, and “Google Cavern”. Bright colorful corals surround the signs with soft rays shining through water. Title text at the top in white: "Where You’ve Seen AI!"
+
+🖼️ Aspect Ratio: 9:16
+🧠 Theme: Real-world AI applications
+🎯 Focus: Relatability and recognizability
+
+📘 SLIDE 4: "AI Makes Life Easier"
+🖼️ Prompt:
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, relaxing in a coral hammock underwater. Sharky is smiling, holding a phone, with a glowing AI-powered seashell assistant nearby. Colorful coral reef around, soft underwater lighting, bubbles rising. Title text at the top in white: "AI Makes Life Easier"
+
+🖼️ Aspect Ratio: 9:16
+🧠 Theme: Benefits of AI
+🎯 Focus: Everyday help & relaxation
+
+📘 SLIDE 5: "Follow Sharky to explore more AI treasures! 🦈💡"
+🖼️ Prompt:
+3D cartoon shark mascot, anthropomorphic, friendly blue shark with expressive eyes, wearing beige short-sleeve button-up shirt with name badge "SHARKY", blue cargo shorts, brown work boots, standing upright, holding notebook and pencil, smiling and waving. Clean underwater background with bubbles. Title text at the top in white: "Follow Sharky to explore more AI treasures! 🦈💡"
+
+🖼️ Aspect Ratio: 9:16
+🧠 Theme: Call-to-action
+🎯 Focus: Engagement & follow-through
