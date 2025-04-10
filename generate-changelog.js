@@ -2,17 +2,17 @@ const { Octokit } = require("@octokit/rest");
 const fs = require("fs-extra");
 const config = require("./config");
 
-// Получаем токен из переменных окружения (в GitHub Actions используется secrets)
+// Get the token from environment variables (secrets are used in GitHub Actions)
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 if (!GITHUB_TOKEN) {
-  console.error("GITHUB_TOKEN не найден. Завершаем выполнение.");
+  console.error("GITHUB_TOKEN not found. Exiting.");
   process.exit(1);
 }
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 /**
- * Форматирование коммита в Markdown.
+ * Format commit into Markdown.
  */
 function formatCommitEntry(commitData) {
   const { sha, commit, html_url, files } = commitData;
@@ -20,11 +20,11 @@ function formatCommitEntry(commitData) {
   const commitDate = new Date(commit.author.date).toLocaleString();
 
   let entry = `### [\`${shortSha}\`](${html_url}) - ${commitDate}\n\n`;
-  entry += `**Автор:** ${commit.author.name} (${commit.author.email})\n\n`;
-  entry += `**Сообщение:** ${commit.message}\n\n`;
+  entry += `**Author:** ${commit.author.name} (${commit.author.email})\n\n`;
+  entry += `**Commit Message:** ${commit.message}\n\n`;
 
   if (files && files.length) {
-    entry += `**Изменения:**\n`;
+    entry += `**Changes:**\n`;
     files.forEach(file => {
       let icon = '';
       switch (file.status) {
@@ -53,7 +53,7 @@ function formatCommitEntry(commitData) {
 }
 
 /**
- * Получение последних N коммитов из основной ветки.
+ * Retrieve the last N commits from the main branch.
  */
 async function getRecentCommits() {
   const { owner, repo, commitsToProcess } = config;
@@ -61,13 +61,13 @@ async function getRecentCommits() {
     owner,
     repo,
     per_page: commitsToProcess,
-    sha: "main" // замените на нужную ветку, если требуется
+    sha: "main" // replace with the desired branch if necessary
   });
   return response.data;
 }
 
 /**
- * Получаем подробности выбранного коммита.
+ * Retrieve details of the selected commit.
  */
 async function getCommitDetails(sha) {
   const { owner, repo } = config;
@@ -80,15 +80,15 @@ async function getCommitDetails(sha) {
 }
 
 /**
- * Генерация и обновление CHANGELOG.md.
+ * Generate and update CHANGELOG.md.
  */
 async function generateChangelog() {
-  console.log("Получаем последние коммиты...");
+  console.log("Retrieving the latest commits...");
   const commits = await getRecentCommits();
   let changelogEntries = "";
 
   for (let commit of commits) {
-    // При необходимости фильтровать коммиты, например, пропускать те, что содержат [skip changelog]
+    // If necessary, filter commits, for example, skip those that contain [skip changelog]
     if (commit.commit.message.includes("[skip changelog]")) continue;
     
     const commitDetails = await getCommitDetails(commit.sha);
@@ -99,12 +99,12 @@ async function generateChangelog() {
   try {
     currentChangelog = await fs.readFile(config.changelogPath, "utf8");
   } catch (err) {
-    console.warn("CHANGELOG.md не найден, будет создан новый файл.");
+    console.warn("CHANGELOG.md not found, a new file will be created.");
   }
   
   const newChangelog = changelogEntries + currentChangelog;
   await fs.writeFile(config.changelogPath, newChangelog, "utf8");
-  console.log("Файл CHANGELOG.md успешно обновлён.");
+  console.log("CHANGELOG.md file successfully updated.");
 }
 
 (async () => {
@@ -112,7 +112,7 @@ async function generateChangelog() {
     await generateChangelog();
     process.exit(0);
   } catch (err) {
-    console.error("Ошибка генерации CHANGELOG:", err);
+    console.error("Error generating CHANGELOG:", err);
     process.exit(1);
   }
 })();
