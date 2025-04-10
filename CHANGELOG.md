@@ -1,3 +1,118 @@
+### [`dc44805`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/dc44805069fe8aa0bb684e3b1efe19137bcd49dd) - 4/10/2025, 7:36:55 PM
+
+**Author:** AdminRHS (admin@rh-s.com)
+
+**Commit Message:** generate-changelog.js: Removed all non-english terms and phrases and translated all into English
+
+**Changes:**
+- ✏️ **MODIFIED**: `generate-changelog.js`  ( +15 / -15 )
+
+---
+
+### [`6b5617a`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/6b5617a4a34475fa07be131d33a622dc23b19045) - 4/10/2025, 6:22:43 PM
+
+**Author:** Changelog Bot (actions@github.com)
+
+**Commit Message:** 🔄 Update CHANGELOG [skip ci]
+
+**Changes:**
+- ✏️ **MODIFIED**: `CHANGELOG.md`  ( +115 / -0 )
+
+---
+
+### [`9a80134`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/9a80134bb4f26fbc3cdd6aa42e460272ec29ae29) - 4/10/2025, 6:22:09 PM
+
+**Author:** oleksandrmoskalenko (moskalenko.developer@gmail.com)
+
+**Commit Message:** Merge branch 'main' of https://github.com/AdminRHS/remote-helpers-collaborative
+
+**Changes:**
+- ✏️ **MODIFIED**: `CHANGELOG.md`  ( +115 / -0 )
+
+---
+
+### [`ccd8c2a`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/ccd8c2a1583a25bc3806b96aea010ea1f66b56e5) - 4/10/2025, 6:21:45 PM
+
+**Author:** oleksandrmoskalenko (moskalenko.developer@gmail.com)
+
+**Commit Message:** deleted test TXT
+
+**Changes:**
+- ❌ **REMOVED**: `test-change-log.txt`  ( +0 / -1 )
+
+---
+
+### [`0a815a7`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/0a815a700c02bfebce6a27308fd333b887dc00db) - 4/10/2025, 3:30:08 PM
+
+**Author:** Changelog Bot (actions@github.com)
+
+**Commit Message:** 🔄 Update CHANGELOG [skip ci]
+
+**Changes:**
+- ✏️ **MODIFIED**: `CHANGELOG.md`  ( +115 / -0 )
+
+---
+
+### [`94dc5ce`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/94dc5ce43c711e5696e04a724ec6a3a1fd4575b4) - 4/10/2025, 3:29:34 PM
+
+**Author:** oleksandrmoskalenko (moskalenko.developer@gmail.com)
+
+**Commit Message:** Merge branch 'main' of https://github.com/AdminRHS/remote-helpers-collaborative
+
+**Changes:**
+- ➕ **ADDED**: `.github/workflows/update-changelog.yml`  ( +38 / -0 )
+- ➕ **ADDED**: `CHANGELOG.md`  ( +623 / -0 )
+- ➕ **ADDED**: `config.js`  ( +9 / -0 )
+- ➕ **ADDED**: `generate-changelog.js`  ( +118 / -0 )
+- ➕ **ADDED**: `package.json`  ( +13 / -0 )
+- ➕ **ADDED**: `random_file.txt`  ( +12 / -0 )
+
+---
+
+### [`420f254`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/420f254a874f378276a5e9b657341204354be2b7) - 4/10/2025, 3:29:19 PM
+
+**Author:** oleksandrmoskalenko (moskalenko.developer@gmail.com)
+
+**Commit Message:** added test change log TXT file
+
+**Changes:**
+- ➕ **ADDED**: `test-change-log.txt`  ( +1 / -0 )
+
+---
+
+### [`f6975ac`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/f6975ac222afba925c92a74755604796b01fa5f6) - 4/10/2025, 3:27:14 PM
+
+**Author:** Changelog Bot (actions@github.com)
+
+**Commit Message:** 🔄 Update CHANGELOG [skip ci]
+
+**Changes:**
+- ✏️ **MODIFIED**: `CHANGELOG.md`  ( +108 / -0 )
+
+---
+
+### [`8023d72`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/8023d72ab2fae5e6958e2907ea18964d9a8676a1) - 4/10/2025, 3:26:48 PM
+
+**Author:** Test User (test@example.com)
+
+**Commit Message:** Добавлен случайный текстовый файл с интересными фактами
+
+**Changes:**
+- ➕ **ADDED**: `random_file.txt`  ( +12 / -0 )
+
+---
+
+### [`54baa30`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/54baa30c15eae46a9da90affe8e43e34a11e1f46) - 4/10/2025, 3:06:27 PM
+
+**Author:** Changelog Bot (actions@github.com)
+
+**Commit Message:** 🔄 Update CHANGELOG [skip ci]
+
+**Changes:**
+- ✏️ **MODIFIED**: `CHANGELOG.md`  ( +108 / -0 )
+
+---
+
 ### [`9a80134`](https://github.com/AdminRHS/remote-helpers-collaborative/commit/9a80134bb4f26fbc3cdd6aa42e460272ec29ae29) - 4/10/2025, 6:22:09 PM
 
 **Автор:** oleksandrmoskalenko (moskalenko.developer@gmail.com)
