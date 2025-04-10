@@ -26,16 +26,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run generate
       - name: Commit and push updated CHANGELOG.md
-        env:
-          MY_GITHUB_PAT: ${{ secrets.MY_GITHUB_PAT }}
         run: |
           git config user.name "Changelog Bot"
           git config user.email "actions@github.com"
           git add CHANGELOG.md
           if ! git diff-index --quiet HEAD; then
             git commit -m "🔄 Update CHANGELOG [skip ci]"
-            # Переопределяем удалённый URL origin, чтобы использовать PAT
-            git remote set-url origin https://$MY_GITHUB_PAT@github.com/AdminRHS/remote-helpers-collaborative.git
             git push origin HEAD:main
           else
             echo "Нет изменений для пуша."
