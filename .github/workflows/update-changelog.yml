@@ -25,8 +25,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run generate
       - name: Commit and push updated CHANGELOG.md
+        env:
+          MY_GITHUB_PAT: ${{ secrets.MY_GITHUB_PAT }}
         run: |
           git config user.name "Changelog Bot"
           git config user.email "actions@github.com"
           git add CHANGELOG.md
-          git diff-index --quiet HEAD || (git commit -m "🔄 Update CHANGELOG [skip ci]" && git push origin HEAD)
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "🔄 Update CHANGELOG [skip ci]"
+            # Пушим, вставляя токен в URL для аутентификации
+            git push https://$MY_GITHUB_PAT@github.com/AdminRHS/remote-helpers-collaborative.git HEAD:main
+          else
+            echo "Нет изменений для пуша."
+          fi
+
