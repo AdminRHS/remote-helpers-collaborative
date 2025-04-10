@@ -1,0 +1,38 @@
+name: Update CHANGELOG
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'CHANGELOG.md'
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.MY_GITHUB_PAT }}
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Generate CHANGELOG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run generate
+      - name: Commit and push updated CHANGELOG.md
+        run: |
+          git config user.name "Changelog Bot"
+          git config user.email "actions@github.com"
+          git add CHANGELOG.md
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "🔄 Update CHANGELOG [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "Нет изменений для пуша."
+          fi

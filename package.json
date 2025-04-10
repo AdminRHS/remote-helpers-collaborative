@@ -1,0 +1,13 @@
+{
+  "name": "changelog-generator",
+  "version": "1.0.0",
+  "description": "Автогенерация CHANGELOG на основе данных коммитов GitHub",
+  "main": "generate-changelog.js",
+  "scripts": {
+    "generate": "node generate-changelog.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^19.0.0",
+    "fs-extra": "^10.1.0"
+  }
+}
