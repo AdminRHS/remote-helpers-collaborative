@@ -5,18 +5,29 @@ const config = require("./config");
 // Get the token from environment variables (secrets are used in GitHub Actions)
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 if (!GITHUB_TOKEN) {
-  console.error("GITHUB_TOKEN not found. Exiting.");
+  console.error("❌ GITHUB_TOKEN not found. Exiting.");
   process.exit(1);
 }
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
+// Patterns to skip commits
+const skipPatterns = [
+  /\[skip changelog\]/i,
+  /Update CHANGELOG \[skip ci\]/i,
+];
+
+const shouldSkipCommit = (message) => skipPatterns.some(pattern => pattern.test(message));
+
 /**
  * Process patch information to extract code changes.
+ *
+ * @param {string} patch - The patch string from the commit file.
+ * @returns {Array|null} Array of hunks with removed and added lines, or null if no patch is provided.
  */
 function processPatch(patch) {
   if (!patch) return null;
-  
+
   const changes = [];
   const lines = patch.split('\n');
   let currentHunk = null;
@@ -32,71 +43,68 @@ function processPatch(patch) {
         removedLines: [],
         addedLines: [],
       };
-    } 
-    // Removed line
-    else if (line.startsWith('-') && currentHunk && !line.startsWith('---')) {
+      continue;
+    }
+    if (!currentHunk) continue; // Safety check
+
+    // Removed line (ignore hunk separator lines)
+    if (line.startsWith('-') && !line.startsWith('---')) {
       currentHunk.removedLines.push(line.substring(1));
-    } 
-    // Added line
-    else if (line.startsWith('+') && currentHunk && !line.startsWith('+++')) {
+      continue;
+    }
+    // Added line (ignore hunk separator lines)
+    if (line.startsWith('+') && !line.startsWith('+++')) {
       currentHunk.addedLines.push(line.substring(1));
     }
   }
-
   if (currentHunk) {
     changes.push(currentHunk);
   }
-
   return changes;
 }
 
 /**
- * Format commit into Markdown with detailed code changes.
+ * Format commit data into Markdown with detailed code changes.
+ *
+ * @param {object} commitData - The detailed commit data.
+ * @returns {string} Formatted Markdown entry.
  */
 function formatCommitEntry(commitData) {
   const { sha, commit, html_url, files } = commitData;
   const shortSha = sha.substring(0, 7);
-  const commitDate = new Date(commit.author.date).toLocaleString();
+  const commitDate = new Date(commit.author.date).toLocaleString("en-GB", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  });
 
-  let entry = `### [\`${shortSha}\`](${html_url}) - ${commitDate}\n\n`;
-  entry += `**Author:** ${commit.author.name} (${commit.author.email})\n\n`;
-  entry += `**Commit Message:** ${commit.message}\n\n`;
+  let entry = `### [\`${shortSha}\`](${html_url}) – ${commitDate}\n\n` +
+              `**Author:** ${commit.author.name} (${commit.author.email})\n\n` +
+              `**Commit Message:** ${commit.message}\n\n`;
 
   if (files && files.length) {
     entry += `**Changes:**\n`;
     files.forEach(file => {
-      let icon = '';
-      switch (file.status) {
-        case 'added':
-          icon = '➕';
-          break;
-        case 'modified':
-          icon = '✏️';
-          break;
-        case 'removed':
-          icon = '❌';
-          break;
-        default:
-          icon = '🔄';
-      }
-      
-      entry += `- ${icon} **${file.status.toUpperCase()}**: \`${file.filename}\` `;
+      const statusIcons = { added: '➕', modified: '✏️', removed: '❌' };
+      const icon = statusIcons[file.status] || '🔄';
+
+      entry += `- ${icon} **${file.status.toUpperCase()}**: \`${file.filename}\``;
       if (file.additions !== undefined && file.deletions !== undefined) {
         entry += ` ( +${file.additions} / -${file.deletions} )\n`;
       } else {
         entry += `\n`;
       }
-      
-      // Add detailed code changes if we have a patch
+
+      // Include detailed code changes if a patch is available
       if (file.patch) {
         const changes = processPatch(file.patch);
         if (changes && changes.length > 0) {
           entry += `  <details>\n  <summary>View detailed changes</summary>\n\n`;
-          
-          // Format each hunk of changes
           changes.forEach((hunk, index) => {
             entry += `  **Hunk ${index + 1}:** ${hunk.header}\n\n`;
-            
             if (hunk.removedLines.length > 0) {
               entry += "  ```diff\n";
               entry += "  # Removed lines:\n";
@@ -105,7 +113,6 @@ function formatCommitEntry(commitData) {
               });
               entry += "  ```\n\n";
             }
-            
             if (hunk.addedLines.length > 0) {
               entry += "  ```diff\n";
               entry += "  # Added lines:\n";
@@ -114,13 +121,11 @@ function formatCommitEntry(commitData) {
               });
               entry += "  ```\n\n";
             }
-            
             // Side-by-side comparison for modified hunks
             if (hunk.removedLines.length > 0 && hunk.addedLines.length > 0) {
               entry += "  **Before → After:**\n\n";
               entry += "  | Before | After |\n";
               entry += "  |--------|-------|\n";
-              
               const maxLines = Math.max(hunk.removedLines.length, hunk.addedLines.length);
               for (let i = 0; i < maxLines; i++) {
                 const beforeLine = i < hunk.removedLines.length ? hunk.removedLines[i] : "";
@@ -130,7 +135,6 @@ function formatCommitEntry(commitData) {
               entry += "\n";
             }
           });
-          
           entry += "  </details>\n\n";
         }
       }
@@ -141,7 +145,9 @@ function formatCommitEntry(commitData) {
 }
 
 /**
- * Retrieve the last N commits from the main branch.
+ * Retrieve the latest N commits from the main branch.
+ *
+ * @returns {Promise<Array>} A promise that resolves to an array of commit objects.
  */
 async function getRecentCommits() {
   const { owner, repo, commitsToProcess } = config;
@@ -149,13 +155,16 @@ async function getRecentCommits() {
     owner,
     repo,
     per_page: commitsToProcess,
-    sha: "main" // replace with the desired branch if necessary
+    sha: "main" // Replace with the desired branch if necessary
   });
   return response.data;
 }
 
 /**
- * Retrieve details of the selected commit.
+ * Retrieve detailed information about a commit using its SHA.
+ *
+ * @param {string} sha - The commit SHA.
+ * @returns {Promise<object>} A promise that resolves to the commit details.
  */
 async function getCommitDetails(sha) {
   const { owner, repo } = config;
@@ -168,40 +177,33 @@ async function getCommitDetails(sha) {
 }
 
 /**
- * Generate and update CHANGELOG.md.
+ * Generate and update the CHANGELOG.md file.
  */
 async function generateChangelog() {
-  console.log("Retrieving the latest commits...");
+  console.log("🚀 Retrieving the latest commits...");
   const commits = await getRecentCommits();
   let changelogEntries = "# Changelog\n\n";
 
-  for (let commit of commits) {
-    // Skip commits that contain [skip changelog] in the message
-    if (commit.commit.message.includes("[skip changelog]")) continue;
-    
-    // Skip commits that are themselves changelog updates
-    if (commit.commit.message.includes("Update CHANGELOG [skip ci]")) continue;
-    
-    console.log(`Processing commit: ${commit.sha.substring(0, 7)}`);
+  for (const commit of commits) {
+    if (shouldSkipCommit(commit.commit.message)) continue;
+
+    console.log(`🚀 Processing commit: ${commit.sha.substring(0, 7)}`);
     const commitDetails = await getCommitDetails(commit.sha);
     changelogEntries += formatCommitEntry(commitDetails);
   }
 
   let currentChangelog = "";
   try {
-    currentChangelog = await fs.readFile(config.changelogPath, "utf8");
-    
-    // Extract existing entries (skip the title if it exists)
+    currentChangelog = await fs.readFile(config.changelogPath, { encoding: "utf8" });
+    // Remove the header if it exists and append new entries before the existing content
     const existingEntries = currentChangelog.replace(/^# Changelog\n\n/, '');
-    
-    // Combine new and existing entries
     changelogEntries += existingEntries;
   } catch (err) {
-    console.warn("CHANGELOG.md not found, a new file will be created.");
+    console.warn("⚠️ CHANGELOG.md not found, a new file will be created.");
   }
-  
-  await fs.writeFile(config.changelogPath, changelogEntries, "utf8");
-  console.log("CHANGELOG.md file successfully updated.");
+
+  await fs.writeFile(config.changelogPath, changelogEntries, { encoding: "utf8" });
+  console.log("✅ CHANGELOG.md file successfully updated.");
 }
 
 (async () => {
@@ -209,7 +211,7 @@ async function generateChangelog() {
     await generateChangelog();
     process.exit(0);
   } catch (err) {
-    console.error("Error generating CHANGELOG:", err);
+    console.error("❌ Error generating CHANGELOG:", err);
     process.exit(1);
   }
 })();
